@@ -281,11 +281,15 @@ setup_git_hooks() {
         local source_hook="${source_hooks_dir}/${hook}"
         local target_hook="${hooks_dir}/${hook}"
 
-        # 既存フックのバックアップ
+        # 既存フックのバックアップ（内容が異なる場合のみ）
         if [ -f "${target_hook}" ] && [ ! -L "${target_hook}" ]; then
-            local backup_name="${target_hook}.backup-$(date +%Y%m%d-%H%M%S)"
-            mv "${target_hook}" "${backup_name}"
-            warning "既存のフックをバックアップしました: $(basename ${backup_name})"
+            # ファイル内容を比較
+            if ! cmp -s "${source_hook}" "${target_hook}"; then
+                # 内容が異なる場合のみバックアップ
+                local backup_name="${target_hook}.backup-$(date +%Y%m%d-%H%M%S)"
+                mv "${target_hook}" "${backup_name}"
+                warning "既存のフックをバックアップしました: $(basename ${backup_name})"
+            fi
         fi
 
         # フックのインストール
