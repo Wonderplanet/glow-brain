@@ -168,23 +168,26 @@ function classifyMessage(msg) {
   }
 
   if (msg.type === 'user') {
-    const hasParent = msg.parentUuid !== null;
+    // 要約コンテキストは実際のユーザーメッセージではないのでスキップ
+    if (msg.isCompactSummary === true) {
+      return { category: 'compact_summary' };
+    }
+
     const msgContent = typeof msg.message === 'string' ? msg.message : msg.message?.content;
 
-    if (!hasParent) {
-      return {
-        category: 'user_prompt',
-        hasSystemReminder: typeof msgContent === 'string' && msgContent.includes('<system-reminder>')
-      };
-    } else {
-      if (Array.isArray(msgContent)) {
-        const hasToolResult = msgContent.some(item => item.type === 'tool_result');
-        if (hasToolResult) {
-          return { category: 'tool_result' };
-        }
+    // tool_result かどうかを判定
+    if (Array.isArray(msgContent)) {
+      const hasToolResult = msgContent.some(item => item.type === 'tool_result');
+      if (hasToolResult) {
+        return { category: 'tool_result' };
       }
-      return { category: 'other_context' };
     }
+
+    // tool_result でなければ user_prompt（parentUuid に関係なく）
+    return {
+      category: 'user_prompt',
+      hasSystemReminder: typeof msgContent === 'string' && msgContent.includes('<system-reminder>')
+    };
   }
 
   return { category: 'unknown' };
@@ -285,6 +288,14 @@ function groupToolResults(messages) {
     } else if (classification.category === 'tool_result' && currentGroup) {
       // ツール実行結果をグループに追加
       currentGroup.toolResults.push(msg);
+    } else if (classification.category === 'compact_summary') {
+      // 要約コンテキストはスキップ
+      // グループがあれば保存
+      if (currentGroup && currentGroup.toolResults.length > 0) {
+        grouped.push({ type: 'tool_group', data: currentGroup });
+        currentGroup = null;
+      }
+      // メッセージ自体は追加しない（スキップ）
     } else {
       // グループを保存して新しいメッセージを処理
       if (currentGroup && currentGroup.toolResults.length > 0) {
