@@ -12,7 +12,27 @@ GLOWの3つのプロジェクト（サーバー、マスターデータ、クラ
 - ✅ 最新のコードに更新
 - ✅ 軽量化されたクライアントコード（約100MB）
 
-**注意:** このプロジェクトは**参照専用**です。コードを見るためのもので、変更はできません。
+## 重要な注意事項
+
+このプロジェクトは**完全に参照専用**です。Gitフックにより、以下の操作は自動的にブロックされます：
+
+**❌ 禁止されている操作:**
+- コミット（`git commit`）
+- プッシュ（`git push`）
+- マージ（`git merge`）
+- リベース（`git rebase`）
+
+**✅ 許可されている操作:**
+- コードの閲覧・検索・参照
+- バージョンの切り替え（`./scripts/setup.sh <version>`）
+- 最新コードへの更新（`git pull`、`./scripts/setup.sh`）
+
+**コードを変更したい場合:**
+本来のリポジトリを直接クローンして作業してください：
+```bash
+# glow-serverの例
+git clone git@github.com:Wonderplanet/glow-server.git
+```
 
 ## クイックスタート
 
@@ -72,6 +92,34 @@ cat config/versions.json | grep current_version
 ```
 
 ## トラブルシューティング
+
+### 「この操作は禁止されています」と表示される
+
+このリポジトリは参照専用のため、`git commit`、`git push`、`git merge`などの
+変更操作はできません。
+
+**コードを変更したい場合:**
+本来のリポジトリを直接クローンして作業してください：
+```bash
+# glow-serverの例
+git clone git@github.com:Wonderplanet/glow-server.git
+
+# glow-clientの例
+git clone git@github.com:Wonderplanet/glow-client.git
+
+# glow-masterdataの例
+git clone git@github.com:Wonderplanet/glow-masterdata.git
+```
+
+**間違えて変更してしまった場合:**
+以下のコマンドで元に戻せます：
+```bash
+# 例：glow-serverを元に戻す
+cd projects/glow-server
+git reset --hard HEAD
+git clean -fd
+cd ../..
+```
 
 ### 「jq コマンドが見つかりません」と表示される
 

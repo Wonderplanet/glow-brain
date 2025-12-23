@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# glow-brain 参照専用リポジトリ保護フック
+
+cat <<'EOF' >&2
+
+════════════════════════════════════════════════════════════
+⚠️  この操作は禁止されています
+════════════════════════════════════════════════════════════
+
+git merge が実行されようとしています。
+
+このリポジトリは glow-brain の管理下にあり、参照専用です。
+
+【禁止されている操作】
+  • コミット (git commit)
+  • プッシュ (git push)
+  • マージ (git merge)
+  • リベース (git rebase)
+
+【理由】
+glow-brain は複数のバージョンを横断的に参照するための
+読み取り専用プロジェクトです。
+
+【コードを変更したい場合】
+本来のリポジトリを直接クローンして作業してください：
+  • glow-server: git@github.com:Wonderplanet/glow-server.git
+  • glow-client: git@github.com:Wonderplanet/glow-client.git
+  • glow-masterdata: git@github.com:Wonderplanet/glow-masterdata.git
+
+【間違えて変更してしまった場合】
+以下のコマンドで元に戻せます：
+  git reset --hard HEAD
+  git clean -fd
+
+════════════════════════════════════════════════════════════
+EOF
+
+exit 1

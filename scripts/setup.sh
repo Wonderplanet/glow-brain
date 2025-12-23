@@ -248,6 +248,42 @@ process_repository() {
     else
         clone_repository "${repo_name}" "${branch}" "${repo_url}"
     fi
+
+    # Gitフックのセットアップ
+    setup_git_hooks "${repo_name}"
+}
+
+# ====================================
+# Gitフックセットアップ関数
+# ====================================
+setup_git_hooks() {
+    local repo_name="$1"
+    local repo_path="${PROJECTS_DIR}/${repo_name}"
+    local hooks_dir="${repo_path}/.git/hooks"
+    local source_hooks_dir="${SCRIPT_DIR}/hooks"
+
+    info "${repo_name} に保護用Gitフックを設定しています..."
+
+    # フックファイル一覧
+    local hooks=("pre-commit" "pre-push" "pre-merge-commit")
+
+    for hook in "${hooks[@]}"; do
+        local source_hook="${source_hooks_dir}/${hook}"
+        local target_hook="${hooks_dir}/${hook}"
+
+        # 既存フックのバックアップ
+        if [ -f "${target_hook}" ] && [ ! -L "${target_hook}" ]; then
+            local backup_name="${target_hook}.backup-$(date +%Y%m%d-%H%M%S)"
+            mv "${target_hook}" "${backup_name}"
+            warning "既存のフックをバックアップしました: $(basename ${backup_name})"
+        fi
+
+        # フックのインストール
+        cp "${source_hook}" "${target_hook}"
+        chmod +x "${target_hook}"
+    done
+
+    success "${repo_name} の保護用Gitフックを設定しました"
 }
 
 # ====================================
