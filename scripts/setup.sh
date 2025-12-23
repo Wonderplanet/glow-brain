@@ -202,11 +202,6 @@ update_repository() {
             git merge --ff-only "origin/${target_branch}"
         fi
 
-        # 履歴削減
-        git reflog expire --expire=all --all
-        git gc --aggressive --prune=all
-        git lfs prune 2>/dev/null || true
-
         success "${repo_name} の更新が完了しました（軽量化版）"
     else
         # glow-server と glow-masterdata の通常更新
