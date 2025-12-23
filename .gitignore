@@ -17,5 +17,8 @@ projects/
 .idea/
 *.sublime-*
 
+# VSCode workspace
+*.code-workspace
+
 # Claude Codeセッションエクスポート
 .claude/session_exports/
