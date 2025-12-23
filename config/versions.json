@@ -1,0 +1,20 @@
+{
+  "current_version": "1.4.1",
+  "versions": {
+    "1.4.1": {
+      "glow-server": "develop/v1.4.1",
+      "glow-client": "release/v1.4.1",
+      "glow-masterdata": "release/dev-ld"
+    },
+    "1.5.0": {
+      "glow-server": "develop/v1.5.0",
+      "glow-client": "release/v1.5.0",
+      "glow-masterdata": "release/dev-ld"
+    }
+  },
+  "repositories": {
+    "glow-server": "git@github.com:Wonderplanet/glow-server.git",
+    "glow-client": "git@github.com:Wonderplanet/glow-client.git",
+    "glow-masterdata": "git@github.com:Wonderplanet/glow-masterdata.git"
+  }
+}

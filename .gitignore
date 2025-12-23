@@ -1,0 +1,18 @@
+# glow-brain-2 .gitignore
+
+# クローンされたリポジトリ（参照専用、git管理外）
+projects/
+
+# macOS
+.DS_Store
+
+# 一時ファイル
+*.tmp
+*.swp
+*.swo
+*~
+
+# エディタ設定
+.vscode/
+.idea/
+*.sublime-*
