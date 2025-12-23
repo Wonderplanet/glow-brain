@@ -131,6 +131,33 @@ if (!fs.existsSync(exportDir)) {
 
 // ======= 新規追加: メッセージ分類機能 =======
 
+// 色の定義
+const COLORS = {
+  user: '#e8f4f8',        // 淡い青 - ユーザープロンプト
+  assistant: '#e8f5e9',   // 淡い緑 - Assistant応答
+  toolExecution: '#fff3e0' // 淡いオレンジ - ツール実行結果
+};
+
+// 背景色より少し濃い色をボーダーに使用
+function darkenColor(hexColor) {
+  // #rrggbb から rgb 値を取得して、少し暗くする
+  const r = parseInt(hexColor.slice(1, 3), 16);
+  const g = parseInt(hexColor.slice(3, 5), 16);
+  const b = parseInt(hexColor.slice(5, 7), 16);
+
+  const factor = 0.7; // 30%暗くする
+  const newR = Math.floor(r * factor);
+  const newG = Math.floor(g * factor);
+  const newB = Math.floor(b * factor);
+
+  return `#${newR.toString(16).padStart(2, '0')}${newG.toString(16).padStart(2, '0')}${newB.toString(16).padStart(2, '0')}`;
+}
+
+// コンテンツをHTMLのdivタグで囲んで色を付ける
+function wrapWithColor(content, backgroundColor) {
+  return `<div style="background-color: ${backgroundColor}; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid ${darkenColor(backgroundColor)};">\n\n${content}\n\n</div>\n\n`;
+}
+
 // メッセージタイプを分類する関数
 function classifyMessage(msg) {
   if (msg.type === 'assistant') {
@@ -299,7 +326,7 @@ function formatUserPrompt(msg, timestamp) {
     markdown += `</details>\n\n`;
   }
 
-  return markdown;
+  return wrapWithColor(markdown, COLORS.user);
 }
 
 // Assistantメッセージをフォーマットする関数
@@ -335,7 +362,7 @@ function formatAssistant(msg, timestamp) {
     markdown += `\n</details>\n\n`;
   }
 
-  return markdown;
+  return wrapWithColor(markdown, COLORS.assistant);
 }
 
 // ツール実行結果をフォーマットする関数
@@ -373,7 +400,7 @@ function formatToolExecution(toolGroup, timestamp) {
     }
   });
 
-  return markdown;
+  return wrapWithColor(markdown, COLORS.toolExecution);
 }
 
 // ファイルをマークダウンに変換する関数（全面書き換え）
