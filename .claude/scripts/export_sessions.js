@@ -173,6 +173,11 @@ function classifyMessage(msg) {
       return { category: 'compact_summary' };
     }
 
+    // サイドチェーンメッセージ（エージェントのウォームアップなど）もスキップ
+    if (msg.isSidechain === true) {
+      return { category: 'sidechain' };
+    }
+
     const msgContent = typeof msg.message === 'string' ? msg.message : msg.message?.content;
 
     // tool_result かどうかを判定
@@ -263,6 +268,29 @@ function getToolName(assistantMsg, toolUseId) {
         return `🌐 WebFetch: ${toolUse.input.url || ''}`;
       } else if (toolUse.name === 'WebSearch') {
         return `🔎 WebSearch: ${toolUse.input.query || ''}`;
+      } else if (toolUse.name === 'LSP') {
+        const operation = toolUse.input.operation || '';
+        return `🔧 LSP: ${operation}`;
+      } else if (toolUse.name === 'AskUserQuestion') {
+        return `❓ AskUserQuestion`;
+      } else if (toolUse.name === 'NotebookEdit') {
+        const path = toolUse.input.notebook_path || '';
+        const displayPath = path.length > 60 ? '...' + path.substring(path.length - 57) : path;
+        return `📓 NotebookEdit: ${displayPath}`;
+      } else if (toolUse.name === 'TodoWrite') {
+        return `✅ TodoWrite`;
+      } else if (toolUse.name === 'Skill') {
+        const skillName = toolUse.input.skill || '';
+        return `⚡ Skill: ${skillName}`;
+      } else if (toolUse.name === 'EnterPlanMode') {
+        return `📋 EnterPlanMode`;
+      } else if (toolUse.name === 'ExitPlanMode') {
+        return `✓ ExitPlanMode`;
+      } else if (toolUse.name === 'TaskOutput') {
+        const taskId = toolUse.input.task_id || '';
+        return `📤 TaskOutput: ${taskId}`;
+      } else if (toolUse.name === 'KillShell') {
+        return `🛑 KillShell`;
       }
       return `🔧 ${toolUse.name}`;
     }
@@ -290,6 +318,14 @@ function groupToolResults(messages) {
       currentGroup.toolResults.push(msg);
     } else if (classification.category === 'compact_summary') {
       // 要約コンテキストはスキップ
+      // グループがあれば保存
+      if (currentGroup && currentGroup.toolResults.length > 0) {
+        grouped.push({ type: 'tool_group', data: currentGroup });
+        currentGroup = null;
+      }
+      // メッセージ自体は追加しない（スキップ）
+    } else if (classification.category === 'sidechain') {
+      // サイドチェーンメッセージもスキップ
       // グループがあれば保存
       if (currentGroup && currentGroup.toolResults.length > 0) {
         grouped.push({ type: 'tool_group', data: currentGroup });
