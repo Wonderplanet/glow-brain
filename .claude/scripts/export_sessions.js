@@ -352,7 +352,16 @@ function groupToolResults(messages) {
 
 // ユーザープロンプトをフォーマットする関数
 function formatUserPrompt(msg, timestamp) {
-  const msgContent = typeof msg.message === 'string' ? msg.message : msg.message?.content;
+  let msgContent = typeof msg.message === 'string' ? msg.message : msg.message?.content;
+
+  // contentが配列の場合（例: [{type: "text", text: "..."}]）、textプロパティを抽出
+  if (Array.isArray(msgContent)) {
+    msgContent = msgContent
+      .filter(item => item.type === 'text')
+      .map(item => item.text)
+      .join('\n');
+  }
+
   const systemReminders = extractSystemReminder(msgContent);
   const cleanContent = removeSystemReminder(msgContent);
 
