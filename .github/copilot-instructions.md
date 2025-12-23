@@ -1,72 +1,72 @@
-# glow-brain AI Agent Instructions
+# glow-brain AI エージェント向けガイド
 
-## What is this project?
+## このプロジェクトとは？
 
-**glow-brain** is a **read-only reference workspace** for browsing multiple versions of the GLOW game project. It orchestrates three separate repositories (glow-server, glow-masterdata, glow-client) via version-controlled checkout, enabling cross-version code inspection without modifying any code.
+**glow-brain** は、GLOWゲームプロジェクトの複数バージョンを参照するための**読み取り専用ワークスペース**です。3つの独立したリポジトリ（glow-server、glow-masterdata、glow-client）をバージョン管理されたチェックアウトで統合し、コードを変更することなくバージョン間のコード比較を可能にします。
 
-## Critical: This is a Read-Only Repository
+## 重要：これは読み取り専用リポジトリです
 
-**DO NOT attempt to modify code in `projects/` directories.**
+**`projects/` ディレクトリ内のコードを変更しないでください。**
 
-- All `git commit`, `git push`, `git merge`, and `git rebase` operations are **blocked by Git hooks** ([scripts/hooks/](../scripts/hooks/))
-- The setup script enforces uncommitted change detection before updates
-- Changes must be made in the original repositories:
+- すべての `git commit`、`git push`、`git merge`、`git rebase` 操作は **Git フックでブロック**されます（[scripts/hooks/](../scripts/hooks/)）
+- セットアップスクリプトは更新前に未コミット変更を検出します
+- 変更は元のリポジトリで行う必要があります：
   - `git@github.com:Wonderplanet/glow-server.git`
   - `git@github.com:Wonderplanet/glow-client.git`
   - `git@github.com:Wonderplanet/glow-masterdata.git`
 
-## Architecture Overview
+## アーキテクチャ概要
 
-### Repository Structure
+### リポジトリ構造
 ```
 glow-brain/
-├── config/versions.json       # Version-to-branch mappings
+├── config/versions.json       # バージョンとブランチのマッピング
 ├── scripts/
-│   ├── setup.sh               # Main orchestration script
-│   └── hooks/                 # Git hooks to prevent modifications
-└── projects/                  # Managed repositories (DO NOT EDIT)
-    ├── glow-server/           # Server code (full clone)
-    ├── glow-masterdata/       # Master data CSVs (full clone)
-    └── glow-client/           # Unity client (sparse checkout)
+│   ├── setup.sh               # メイン統合スクリプト
+│   └── hooks/                 # 変更防止用Gitフック
+└── projects/                  # 管理対象リポジトリ（編集禁止）
+    ├── glow-server/           # サーバーコード（完全クローン）
+    ├── glow-masterdata/       # マスターデータCSV（完全クローン）
+    └── glow-client/           # Unityクライアント（sparse checkout）
 ```
 
-### Version Management Model
+### バージョン管理モデル
 
-Version configuration in [config/versions.json](../config/versions.json):
-- Maps semantic versions (`1.4.1`, `1.5.0`) to specific branch names per repository
-- Tracks `current_version` to maintain workspace state
-- Each repository may target different branch naming conventions (e.g., `develop/v1.4.1` vs `release/v1.4.1`)
+[config/versions.json](../config/versions.json) のバージョン設定：
+- セマンティックバージョン（`1.4.1`、`1.5.0`）をリポジトリごとの特定ブランチ名にマッピング
+- `current_version` でワークスペースの状態を追跡
+- 各リポジトリは異なるブランチ命名規則を使用可能（例：`develop/v1.4.1` vs `release/v1.4.1`）
 
-### Client Repository Optimization
+### クライアントリポジトリの最適化
 
-**glow-client uses aggressive size reduction**:
-- Sparse checkout limited to `Assets/GLOW/Scripts` and `Assets/Framework/Scripts`
-- Git LFS is skipped (`GIT_LFS_SKIP_SMUDGE=1`)
-- Shallow clone with `--depth 1` and `--filter=blob:none`
-- Results in ~100MB vs full repository size
+**glow-client は積極的なサイズ削減を実施**：
+- Sparse checkout で `Assets/GLOW/Scripts` と `Assets/Framework/Scripts` のみに限定
+- Git LFS をスキップ（`GIT_LFS_SKIP_SMUDGE=1`）
+- `--depth 1` と `--filter=blob:none` でシャロークローン
+- 結果として完全版に比べて約100MBに削減
 
-## Essential Workflows
+## 重要なワークフロー
 
-### Setup/Version Switching
+### セットアップ・バージョン切り替え
 
 ```bash
-# Setup default version (from config/versions.json)
+# デフォルトバージョンでセットアップ（config/versions.json から）
 ./scripts/setup.sh
 
-# Switch to specific version
+# 特定バージョンに切り替え
 ./scripts/setup.sh 1.5.0
 ```
 
-**What happens:**
-1. Checks for `jq` prerequisite (macOS: `brew install jq`)
-2. Validates version exists in `config/versions.json`
-3. For each repository:
-   - Clones if missing (with client-specific optimizations)
-   - Updates to target branch if existing (force-resets if diverged)
-   - Installs protective Git hooks
-4. Updates `current_version` in config
+**実行される処理：**
+1. `jq` の前提条件をチェック（macOS: `brew install jq`）
+2. `config/versions.json` にバージョンが存在するか検証
+3. 各リポジトリに対して：
+   - 存在しない場合はクローン（クライアント専用最適化を適用）
+   - 存在する場合は対象ブランチに更新（分岐している場合は強制リセット）
+   - 保護用Gitフックをインストール
+4. 設定ファイルの `current_version` を更新
 
-### Recovering from Accidental Changes
+### 誤った変更からのリカバリ
 
 ```bash
 cd projects/glow-server
@@ -74,9 +74,9 @@ git reset --hard HEAD
 git clean -fd
 ```
 
-### Adding New Versions
+### 新しいバージョンの追加
 
-Edit [config/versions.json](../config/versions.json):
+[config/versions.json](../config/versions.json) を編集：
 ```json
 {
   "versions": {
@@ -89,66 +89,66 @@ Edit [config/versions.json](../config/versions.json):
 }
 ```
 
-## Project-Specific Conventions
+## プロジェクト固有の規約
 
-### Bash Scripting Patterns
+### Bashスクリプトパターン
 
-[scripts/setup.sh](../scripts/setup.sh) demonstrates the project's shell conventions:
-- Uses `set -euo pipefail` for strict error handling
-- Color-coded logging functions (`info`, `success`, `error`, `warning`)
-- `readonly` variables for paths (`PROJECT_ROOT`, `CONFIG_FILE`)
-- Defensive `jq` usage with null checks for JSON parsing
+[scripts/setup.sh](../scripts/setup.sh) はプロジェクトのシェル規約を示します：
+- 厳格なエラー処理のため `set -euo pipefail` を使用
+- カラーコード付きログ関数（`info`、`success`、`error`、`warning`）
+- パス用の `readonly` 変数（`PROJECT_ROOT`、`CONFIG_FILE`）
+- nullチェック付きの防御的な `jq` 使用
 
-### Force-Push Handling
+### Force-Push の処理
 
-The update logic ([setup.sh:205-228](../scripts/setup.sh#L205-L228)) handles upstream force-pushes:
+更新ロジック（[setup.sh:205-228](../scripts/setup.sh#L205-L228)）は上流の force-push を処理します：
 ```bash
 if ! git merge --ff-only "origin/${target_branch}" 2>/dev/null; then
     warning "履歴が分岐しています。リモートに強制的に合わせます..."
     git reset --hard "origin/${target_branch}"
 fi
 ```
-This is intentional for read-only mode—always match remote state.
+これは読み取り専用モードでの意図的な動作で、常にリモート状態に合わせます。
 
-### Git Hook Protection
+### Gitフック保護
 
-Hooks in [scripts/hooks/](../scripts/hooks/) provide multi-layered protection:
-- `pre-commit`: Blocks commits with Japanese error messages
-- `pre-push`: Prevents pushes
-- `pre-merge-commit`: Stops merge operations
+[scripts/hooks/](../scripts/hooks/) のフックは多層的な保護を提供：
+- `pre-commit`: 日本語エラーメッセージでコミットをブロック
+- `pre-push`: プッシュを防止
+- `pre-merge-commit`: マージ操作を停止
 
-## Common Operations (DO and DON'T)
+## 一般的な操作（推奨・非推奨）
 
-### ✅ DO
-- Browse code in `projects/` with any editor/IDE
-- Search across versions for code evolution
-- Compare implementations between versions
-- Update to latest code: `./scripts/setup.sh`
+### ✅ 推奨
+- 任意のエディタ/IDEで `projects/` 内のコードを閲覧
+- バージョン間でコードの変遷を検索
+- バージョン間で実装を比較
+- 最新コードへの更新：`./scripts/setup.sh`
 
-### ❌ DON'T
-- Create branches in `projects/` subdirectories
-- Commit changes (hooks will block, but avoid triggering)
-- Add new files to managed repositories
-- Assume standard git workflows work (this is not a normal workspace)
+### ❌ 非推奨
+- `projects/` サブディレクトリ内でのブランチ作成
+- 変更のコミット（フックがブロックしますが、トリガーを避ける）
+- 管理対象リポジトリへの新しいファイルの追加
+- 標準的なgitワークフローが動作すると想定すること（これは通常のワークスペースではありません）
 
-## Key Files to Understand
+## 理解すべき重要なファイル
 
-- [config/versions.json](../config/versions.json): Single source of truth for version mappings
-- [scripts/setup.sh](../scripts/setup.sh): All orchestration logic (397 lines)
-- [README.md](../README.md): User-facing documentation in Japanese
-- [scripts/hooks/pre-commit](../scripts/hooks/pre-commit): Example protection mechanism
+- [config/versions.json](../config/versions.json): バージョンマッピングの唯一の信頼できる情報源
+- [scripts/setup.sh](../scripts/setup.sh): すべての統合ロジック（397行）
+- [README.md](../README.md): 日本語のユーザー向けドキュメント
+- [scripts/hooks/pre-commit](../scripts/hooks/pre-commit): 保護メカニズムの例
 
-## Troubleshooting
+## トラブルシューティング
 
 **"jq コマンドが見つかりません"**
-- Install: `brew install jq` (macOS)
+- インストール：`brew install jq`（macOS）
 
 **"未コミットの変更があります"**
-- Reset: `cd projects/<repo> && git reset --hard HEAD && git clean -fd`
+- リセット：`cd projects/<repo> && git reset --hard HEAD && git clean -fd`
 
-**Wrong version checked out**
-- Re-run: `./scripts/setup.sh <version>` (idempotent operation)
+**間違ったバージョンがチェックアウトされている**
+- 再実行：`./scripts/setup.sh <version>`（冪等な操作）
 
-**Client repository too large**
-- Expected behavior if LFS assets were pulled
-- Delete and re-setup: `rm -rf projects/glow-client && ./scripts/setup.sh`
+**クライアントリポジトリが大きすぎる**
+- LFSアセットが取得された場合の予期される動作
+- 削除して再セットアップ：`rm -rf projects/glow-client && ./scripts/setup.sh`
