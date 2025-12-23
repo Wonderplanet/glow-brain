@@ -131,11 +131,11 @@ if (!fs.existsSync(exportDir)) {
 
 // ======= 新規追加: メッセージ分類機能 =======
 
-// 色の定義
+// 色の定義（カスタム配色）
 const COLORS = {
-  user: '#e8f4f8',        // 淡い青 - ユーザープロンプト
-  assistant: '#e8f5e9',   // 淡い緑 - Assistant応答
-  toolExecution: '#fff3e0' // 淡いオレンジ - ツール実行結果
+  user: '#E1B941',        // ゴールド - ユーザープロンプト
+  assistant: '#9AADEF',   // 薄い青 - Assistant応答
+  toolExecution: '#4169E1' // ロイヤルブルー - ツール実行結果
 };
 
 // 背景色より少し濃い色をボーダーに使用
@@ -155,7 +155,7 @@ function darkenColor(hexColor) {
 
 // コンテンツをHTMLのdivタグで囲んで色を付ける
 function wrapWithColor(content, backgroundColor) {
-  return `<div style="background-color: ${backgroundColor}; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 4px solid ${darkenColor(backgroundColor)};">\n\n${content}\n\n</div>\n\n`;
+  return `<div style="background-color: ${backgroundColor}; color: #1a1a1a; padding: 15px; margin: 10px 0; border-radius: 8px; border-left: 6px solid ${darkenColor(backgroundColor)};">\n\n${content}\n\n</div>\n\n`;
 }
 
 // メッセージタイプを分類する関数
