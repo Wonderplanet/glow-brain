@@ -1,6 +1,0 @@
-[submodule "glow-server"]
-	path = glow-server
-	url = git@github.com:Wonderplanet/glow-server.git
-[submodule "glow-masterdata"]
-	path = glow-masterdata
-	url = git@github.com:Wonderplanet/glow-masterdata.git
