@@ -199,7 +199,12 @@ update_repository() {
         else
             info "最新の変更を取得しています..."
             git fetch origin "${target_branch}" --depth 1
-            git merge --ff-only "origin/${target_branch}"
+
+            # 参照専用のため、リモートに強制的に合わせる（force pushに対応）
+            if ! git merge --ff-only "origin/${target_branch}" 2>/dev/null; then
+                warning "履歴が分岐しています。リモートに強制的に合わせます..."
+                git reset --hard "origin/${target_branch}"
+            fi
         fi
 
         success "${repo_name} の更新が完了しました（軽量化版）"
@@ -215,12 +220,17 @@ update_repository() {
         info "最新の変更を取得しています..."
         git fetch origin "${target_branch}"
 
-        # Fast-forward のみで更新
+        # Fast-forward のみで更新を試行し、失敗したらリモートに強制的に合わせる
         if git merge-base --is-ancestor HEAD "origin/${target_branch}"; then
             git merge --ff-only "origin/${target_branch}"
             success "${repo_name} の更新が完了しました"
-        else
+        elif git merge-base --is-ancestor "origin/${target_branch}" HEAD; then
             warning "${repo_name} は既に最新です"
+        else
+            # 履歴が分岐している場合（force pushされた場合）
+            warning "履歴が分岐しています。リモートに強制的に合わせます..."
+            git reset --hard "origin/${target_branch}"
+            success "${repo_name} の更新が完了しました"
         fi
     fi
 }
