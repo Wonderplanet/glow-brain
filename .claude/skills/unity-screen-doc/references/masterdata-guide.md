@@ -19,11 +19,11 @@ public class GachaContentUseCase
 
 ### 2. Repository名からDBテーブル名を特定
 
-- `IOprGachaRepository` → `OprGacha` → `opr_gacha`
+- `IOprGachaRepository` → `OprGacha` → `opr_gachas`
 - `IMstCharacterDataRepository` → `MstCharacter` → `mst_units`
 - `IMstItemDataRepository` → `MstItem` → `mst_items`
 
-**注意**: `DataRepository`を除外してテーブル名を特定
+**注意**: `DataRepository`を除外してテーブル名を特定。DBテーブル名は必ず複数形。
 
 ### 3. Modelのプロパティからカラムを特定
 
@@ -35,19 +35,41 @@ var gachaModel = OprGachaRepository.GetOprGachaModelFirstOrDefaultById(gachaId);
 
 ### 4. DBスキーマを確認（正確なカラム情報の取得）
 
+#### マスタデータのDDL確認
+
 `projects/glow-server/api/database/schema/master_tables_ddl.sql`で実際のカラム定義を確認：
 
 ```sql
-CREATE TABLE `opr_gacha` (
-  `id` varchar(255) NOT NULL COMMENT 'UUID',
-  `gacha_type` enum(...) NOT NULL COMMENT 'ガチャタイプ',
-  `start_at` timestamp NOT NULL COMMENT '開始日時',
-  `end_at` timestamp NOT NULL COMMENT '終了日時',
+CREATE TABLE `opr_gachas` (
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT 'UUID',
+  `gacha_type` enum('Normal','Premium','Pickup','Free','Ticket','Festival','PaidOnly','Medal','Tutorial') CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'ガシャのタイプ',
+  `upper_group` varchar(255) COLLATE utf8mb4_bin NOT NULL DEFAULT 'None' COMMENT '天井設定区分',
+  `enable_ad_play` tinyint(1) NOT NULL DEFAULT '0' COMMENT '広告で回せるか',
+  `multi_draw_count` int unsigned NOT NULL DEFAULT '1' COMMENT 'N連の指定',
+  `daily_play_limit_count` int unsigned DEFAULT NULL COMMENT '１日に回すことができる上限数',
   ...
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='ガチャ設定';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 ```
 
-**DDLファイルの活用**:
+#### ユーザーデータのDDL確認
+
+`projects/glow-server/api/database/schema/user_tables_ddl.sql`で実際のカラム定義を確認：
+
+```sql
+CREATE TABLE `usr_gachas` (
+  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'UUID',
+  `usr_user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'usr_users.id',
+  `opr_gacha_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'opr_gachas.id',
+  `ad_played_at` timestamp NULL DEFAULT NULL COMMENT '広告で回した時間',
+  `played_at` timestamp NULL DEFAULT NULL COMMENT '回した時間',
+  `count` int unsigned NOT NULL DEFAULT '0' COMMENT 'ガチャを回した回数',
+  `expires_at` timestamp NULL DEFAULT NULL COMMENT '終了日時',
+  ...
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
+
+#### DDLファイルの活用
+
 - カラムの正確なデータ型を確認
 - COMMENTから日本語の説明を取得
 - NOT NULL制約などの制約情報を確認
@@ -88,5 +110,5 @@ CREATE TABLE `opr_gacha` (
 |-----------|---------|-----------|
 | mst_units | MstCharacterModel | IMstCharacterDataRepository |
 | mst_items | MstItemModel | IMstItemDataRepository |
-| opr_gacha | OprGachaModel | IOprGachaRepository |
-| opr_gacha_upper | OprGachaUpperModel | IOprGachaUpperRepository |
+| opr_gachas | OprGachaModel | IOprGachaRepository |
+| opr_gacha_uppers | OprGachaUpperModel | IOprGachaUpperRepository |
