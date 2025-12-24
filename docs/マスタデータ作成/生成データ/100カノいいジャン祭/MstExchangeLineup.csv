@@ -1,0 +1,11 @@
+ENABLE,id,group_id,tradable_count,display_order,release_key
+e,event_kim_00001_01_lineup_00001,event_kim_00001_01_lineup,1,1,202602010
+e,event_kim_00001_01_lineup_00002,event_kim_00001_01_lineup,1,2,202602010
+e,event_kim_00001_01_lineup_00003,event_kim_00001_01_lineup,14,3,202602010
+e,event_kim_00001_01_lineup_00004,event_kim_00001_01_lineup,1,4,202602010
+e,event_kim_00001_01_lineup_00005,event_kim_00001_01_lineup,10,5,202602010
+e,event_kim_00001_01_lineup_00006,event_kim_00001_01_lineup,15,6,202602010
+e,event_kim_00001_01_lineup_00007,event_kim_00001_01_lineup,9,7,202602010
+e,event_kim_00001_01_lineup_00008,event_kim_00001_01_lineup,15,8,202602010
+e,event_kim_00001_01_lineup_00009,event_kim_00001_01_lineup,15,9,202602010
+e,event_kim_00001_01_lineup_00010,event_kim_00001_01_lineup,15,10,202602010
