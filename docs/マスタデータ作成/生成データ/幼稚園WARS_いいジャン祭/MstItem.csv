@@ -1,0 +1,9 @@
+ENABLE,id,type,group_type,rarity,asset_key,effect_value,sort_order,start_date,end_date,release_key,item_type,destination_opr_product_id
+e,piece_you_00001,UnitFragment,Etc,UR,piece_you_00001,chara_you_00001,1001,"2026-02-02 15:00:00","2037-12-31 23:59:59",202601010,UnitFragment,
+e,piece_you_00101,UnitFragment,Etc,SSR,piece_you_00101,chara_you_00101,1002,"2026-02-02 15:00:00","2037-12-31 23:59:59",202601010,UnitFragment,
+e,piece_you_00201,UnitFragment,Etc,SR,piece_you_00201,chara_you_00201,1003,"2026-02-02 15:00:00","2037-12-31 23:59:59",202601010,UnitFragment,
+e,piece_you_00301,UnitFragment,Etc,SR,piece_you_00301,chara_you_00301,1004,"2026-02-02 15:00:00","2037-12-31 23:59:59",202601010,UnitFragment,
+e,piece_enemy_you_00001,UnitFragment,Etc,R,piece_enemy_you_00001,enemy_you_00001,1101,"2026-02-02 15:00:00","2037-12-31 23:59:59",202601010,UnitFragment,
+e,piece_enemy_you_00002,UnitFragment,Etc,R,piece_enemy_you_00002,enemy_you_00002,1102,"2026-02-02 15:00:00","2037-12-31 23:59:59",202601010,UnitFragment,
+e,emblem_you_00001,Emblem,Etc,UR,emblem_you_00001,EventClear,2001,"2026-02-02 15:00:00","2037-12-31 23:59:59",202601010,Emblem,
+e,artwork_you_00001,Artwork,Etc,UR,artwork_you_00001,EventReward,3001,"2026-02-02 15:00:00","2037-12-31 23:59:59",202601010,Artwork,

@@ -1,0 +1,5 @@
+ENABLE,id,release_key,group_id,resource_type,resource_id,resource_amount,sort_order,備考
+e,mission_reward_you_00001,202601010,you_00001_limited_term_1,Coin,,2000,1,降臨バトル5回報酬
+e,mission_reward_you_00002,202601010,you_00001_limited_term_2,FreeDiamond,prism_glo_00001,20,1,降臨バトル10回報酬
+e,mission_reward_you_00003,202601010,you_00001_limited_term_3,Coin,,3000,1,降臨バトル20回報酬
+e,mission_reward_you_00004,202601010,you_00001_limited_term_4,FreeDiamond,prism_glo_00001,30,1,降臨バトル30回報酬

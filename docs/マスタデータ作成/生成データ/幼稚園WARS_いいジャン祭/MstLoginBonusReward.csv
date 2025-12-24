@@ -1,0 +1,17 @@
+ENABLE,id,release_key,reward_group_id,resource_type,resource_id,resource_amount,sort_order
+e,you_login_reward_001_01,202601010,you_login_reward_group_001,Coin,,1000,1
+e,you_login_reward_002_01,202601010,you_login_reward_group_002,FreeDiamond,prism_glo_00001,10,1
+e,you_login_reward_003_01,202601010,you_login_reward_group_003,Item,stamina_recovery_glo_00001,5,1
+e,you_login_reward_004_01,202601010,you_login_reward_group_004,Coin,,1500,1
+e,you_login_reward_005_01,202601010,you_login_reward_group_005,FreeDiamond,prism_glo_00001,20,1
+e,you_login_reward_006_01,202601010,you_login_reward_group_006,Item,memory_glo_00001,3,1
+e,you_login_reward_007_01,202601010,you_login_reward_group_007,GachaTicket,gacha_ticket_special_glo_00001,1,1
+e,you_login_reward_008_01,202601010,you_login_reward_group_008,Coin,,2000,1
+e,you_login_reward_009_01,202601010,you_login_reward_group_009,FreeDiamond,prism_glo_00001,30,1
+e,you_login_reward_010_01,202601010,you_login_reward_group_010,Item,piece_you_00001,1,1
+e,you_login_reward_011_01,202601010,you_login_reward_group_011,Coin,,2500,1
+e,you_login_reward_012_01,202601010,you_login_reward_group_012,FreeDiamond,prism_glo_00001,50,1
+e,you_login_reward_013_01,202601010,you_login_reward_group_013,Item,memory_glo_00002,5,1
+e,you_login_reward_014_01,202601010,you_login_reward_group_014,GachaTicket,gacha_ticket_special_glo_00001,2,1
+e,you_login_reward_015_01,202601010,you_login_reward_group_015,FreeDiamond,prism_glo_00001,100,1
+e,you_login_reward_015_02,202601010,you_login_reward_group_015,Item,emblem_you_00001,1,2

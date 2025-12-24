@@ -1,0 +1,10 @@
+ENABLE,id,group_id,rule_type,rule_value,release_key
+e,you_daily_00001_rule_01,you_daily_00001,LimitUnitCount,5,202601010
+e,you_story_dag_00001_rule_01,you_story_dag_00001,LimitUnitCount,5,202601010
+e,you_story_dag_00002_rule_01,you_story_dag_00002,LimitUnitCount,5,202601010
+e,you_story_dag_00003_rule_01,you_story_dag_00003,LimitUnitCount,5,202601010
+e,you_story_hana_00001_rule_01,you_story_hana_00001,LimitUnitCount,5,202601010
+e,you_story_hana_00002_rule_01,you_story_hana_00002,LimitUnitCount,5,202601010
+e,you_story_hana_00003_rule_01,you_story_hana_00003,LimitUnitCount,5,202601010
+e,you_challenge_00001_rule_01,you_challenge_00001,LimitUnitCount,5,202601010
+e,you_hard_00001_rule_01,you_hard_00001,LimitUnitCount,5,202601010

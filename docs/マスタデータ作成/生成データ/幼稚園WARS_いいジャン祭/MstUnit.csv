@@ -1,0 +1,7 @@
+ENABLE,id,fragment_mst_item_id,role_type,color,attack_range_type,unit_label,has_specific_rank_up,mst_series_id,asset_key,rarity,sort_order,summon_cost,summon_cool_time,special_attack_initial_cool_time,special_attack_cool_time,min_hp,max_hp,damage_knock_back_count,move_speed,well_distance,min_attack_power,max_attack_power,mst_unit_ability_id1,ability_unlock_rank1,mst_unit_ability_id2,ability_unlock_rank2,mst_unit_ability_id3,ability_unlock_rank3,is_encyclopedia_special_attack_position_right,release_key
+e,chara_you_00001,piece_you_00001,Attack,Red,Middle,PremiumUR,0,you,chara_you_00001,UR,1,985,1010,530,1045,2800,28000,2,75,0.34,4900,49000,ability_you_00001_01,0,ability_you_00001_02,4,,0,0,202601010
+e,chara_you_00101,piece_you_00101,Defense,Blue,Short,PremiumSSR,0,you,chara_you_00101,SSR,2,330,255,120,520,850,8500,2,35,0.16,1100,11000,ability_you_00101_01,0,,0,,0,0,202601010
+e,chara_you_00201,piece_you_00201,Support,Green,Long,PremiumSR,0,you,chara_you_00201,SR,3,250,180,100,450,620,6200,1,40,0.45,800,8000,,0,,0,,0,0,202601010
+e,chara_you_00301,piece_you_00301,Attack,Yellow,Middle,PremiumSR,0,you,chara_you_00301,SR,4,250,180,100,450,680,6800,2,42,0.38,850,8500,,0,,0,,0,0,202601010
+e,enemy_you_00001,piece_enemy_you_00001,Attack,Red,Short,Enemy,0,you,enemy_you_00001,R,101,0,0,0,0,1200,12000,2,50,0.16,1500,15000,,0,,0,,0,0,202601010
+e,enemy_you_00002,piece_enemy_you_00002,Defense,Blue,Middle,Enemy,0,you,enemy_you_00002,R,102,0,0,0,0,1500,15000,1,45,0.20,1200,12000,,0,,0,,0,0,202601010

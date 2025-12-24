@@ -1,0 +1,4 @@
+ENABLE,id,product_sub_id,discount_rate,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,is_first_time_free,cost_amount,is_recommend,asset_key,pack_decoration,release_key
+e,you_event_pack_001,201,30,__NULL__,0,,1,Event,1,Cash,0,4900,1,pack_you_00001,EventBanner,202601010
+e,you_event_pack_002,202,0,__NULL__,0,,1,Event,1,Cash,0,1480,0,pack_you_00002,__NULL__,202601010
+e,you_event_pack_003,203,0,__NULL__,0,,1,Event,1,Cash,0,980,0,pack_you_00003,__NULL__,202601010
