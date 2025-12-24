@@ -357,30 +357,27 @@
         /* サイドバー（目次）スタイル */
         .sidebar {
             width: 280px;
-            background: #2c3e50;
-            color: white;
+            background: #f8f9fa;
+            border-right: 1px solid #dee2e6;
             overflow-y: auto;
             position: sticky;
             top: 0;
             height: 100vh;
-            display: none;
+            display: block;
             flex-shrink: 0;
         }
 
-        .sidebar.visible {
-            display: block;
-        }
-
         .sidebar-header {
-            background: #1a252f;
+            background: #e9ecef;
             padding: 20px;
-            border-bottom: 2px solid #34495e;
+            border-bottom: 2px solid #dee2e6;
         }
 
         .sidebar-title {
             font-size: 16px;
             font-weight: 600;
             margin: 0;
+            color: #495057;
         }
 
         .toc-list {
@@ -390,7 +387,7 @@
         }
 
         .toc-item {
-            border-bottom: 1px solid #34495e;
+            border-bottom: 1px solid #e9ecef;
         }
 
         .toc-item:last-child {
@@ -400,7 +397,7 @@
         .toc-link {
             display: block;
             padding: 12px 20px;
-            color: #ecf0f1;
+            color: #495057;
             text-decoration: none;
             font-size: 13px;
             transition: all 0.2s;
@@ -408,20 +405,20 @@
         }
 
         .toc-link:hover {
-            background: #34495e;
-            border-left-color: #3498db;
-            color: white;
+            background: #e9ecef;
+            border-left-color: #007bff;
+            color: #007bff;
         }
 
         .toc-link.formatted {
-            background: #f39c12;
-            color: white;
+            background: #fff3cd;
+            color: #856404;
             font-weight: 600;
-            border-left-color: #e67e22;
+            border-left-color: #ffc107;
         }
 
         .toc-link.formatted:hover {
-            background: #e67e22;
+            background: #ffe69c;
         }
 
         @media (max-width: 1200px) {
@@ -1070,14 +1067,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
         // 目次を更新する関数
         function updateTOC() {
             const tocList = document.getElementById('tocList');
-            const sidebar = document.getElementById('sidebar');
             const tableNames = Object.keys(csvRawData).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
-
-            if (tableNames.length === 0 && !document.getElementById('formatted-data')) {
-                sidebar.classList.remove('visible');
-                tocList.innerHTML = '';
-                return;
-            }
 
             let tocHTML = '';
 
@@ -1104,7 +1094,6 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             });
 
             tocList.innerHTML = tocHTML;
-            sidebar.classList.add('visible');
         }
 
         // スムーススクロール関数
