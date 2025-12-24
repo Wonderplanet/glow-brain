@@ -1,0 +1,6 @@
+ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key
+e,quest_event_jig1_daily,Daily,event_jig_00001,1,jig_daily_1,"2026-01-16 15:00:00","2026-02-02 3:59:59",jig1_daily,Normal,202601010
+e,quest_event_jig1_charaget01,EventStory,event_jig_00001,2,jig_story_1,"2026-01-16 15:00:00","2026-02-16 10:59:59",jig1_charaget01,Normal,202601010
+e,quest_event_jig1_charaget02,EventStory,event_jig_00001,3,jig_story_2,"2026-01-21 15:00:00","2026-02-16 10:59:59",jig1_charaget02,Normal,202601010
+e,quest_event_jig1_challenge01,EventChallenge,event_jig_00001,4,jig_challenge_1,"2026-01-16 15:00:00","2026-02-16 10:59:59",jig1_challenge,Normal,202601010
+e,quest_event_jig1_savage,EventSavage,event_jig_00001,5,jig_savage_1,"2026-01-16 15:00:00","2026-02-16 10:59:59",jig1_savage,Extra,202601010
