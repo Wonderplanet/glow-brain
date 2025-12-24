@@ -67,6 +67,22 @@
             border: 1px solid #e0e0e0;
             border-radius: 6px;
             overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .csv-container.highlight {
+            animation: highlight-flash 1.5s ease-out;
+        }
+
+        @keyframes highlight-flash {
+            0% {
+                box-shadow: 0 0 0 4px #ffc107;
+                background: #fff9e6;
+            }
+            100% {
+                box-shadow: 0 0 0 0 transparent;
+                background: transparent;
+            }
         }
 
         .csv-header {
@@ -345,6 +361,11 @@
             border-radius: 6px;
             overflow: hidden;
             background: white;
+            transition: box-shadow 0.3s;
+        }
+
+        .formatted-container.highlight {
+            animation: highlight-flash 1.5s ease-out;
         }
 
         .info-text {
@@ -1096,15 +1117,24 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             tocList.innerHTML = tocHTML;
         }
 
-        // スムーススクロール関数
+        // 瞬時ジャンプ＆ハイライトエフェクト
         function smoothScroll(event, targetId) {
             event.preventDefault();
             const target = document.getElementById(targetId);
             if (target) {
+                // 瞬時にジャンプ
                 target.scrollIntoView({
-                    behavior: 'smooth',
+                    behavior: 'auto',
                     block: 'start'
                 });
+
+                // ハイライトエフェクトを追加
+                target.classList.add('highlight');
+
+                // アニメーション終了後にクラスを削除
+                setTimeout(() => {
+                    target.classList.remove('highlight');
+                }, 1500);
             }
         }
     </script>
