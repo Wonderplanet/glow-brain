@@ -277,6 +277,14 @@
             color: #6c757d;
         }
 
+        th .unique-count {
+            display: block;
+            margin-top: 2px;
+            font-size: 11px;
+            color: #6c757d;
+            font-weight: 400;
+        }
+
         th.sorted {
             background: #d3d9df;
         }
@@ -786,6 +794,12 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             // テーブルHTML作成（ソート機能付きヘッダー）
             const tableEnums = enumDefinitions[tableName] || {};
 
+            // 各列のユニーク数を計算
+            const uniqueCounts = headers.map((header, index) => {
+                const values = dataRows.map(row => row[index] || '');
+                return new Set(values).size;
+            });
+
             let tableHTML = '<table><thead><tr>';
             headers.forEach((header, index) => {
                 const isSorted = state.sort.column === header;
@@ -793,9 +807,11 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                     ? (state.sort.order === 'asc' ? '<span class="sort-icon">▲</span>' : '<span class="sort-icon">▼</span>')
                     : '<span class="sort-icon" style="opacity:0.3">⇅</span>';
                 const sortedClass = isSorted ? ' class="sorted"' : '';
+                const uniqueCount = uniqueCounts[index];
 
                 tableHTML += `<th${sortedClass} onclick="toggleSort('${tableName}', '${escapeHTML(header)}')" title="クリックでソート">
                     ${escapeHTML(header)}${sortIcon}
+                    <span class="unique-count">(${uniqueCount})</span>
                 </th>`;
             });
             tableHTML += '</tr></thead><tbody>';
