@@ -1,0 +1,17 @@
+ENABLE,id,mst_advent_battle_id,rank_type,rank_level,required_lower_score,asset_key,release_key
+e,quest_raid_kim1_00001_rank_01,quest_raid_kim1_00001,Bronze,1,1000,,202602010
+e,quest_raid_kim1_00001_rank_02,quest_raid_kim1_00001,Bronze,2,2000,,202602010
+e,quest_raid_kim1_00001_rank_03,quest_raid_kim1_00001,Bronze,3,3000,,202602010
+e,quest_raid_kim1_00001_rank_04,quest_raid_kim1_00001,Bronze,4,4000,,202602010
+e,quest_raid_kim1_00001_rank_05,quest_raid_kim1_00001,Silver,1,5000,,202602010
+e,quest_raid_kim1_00001_rank_06,quest_raid_kim1_00001,Silver,2,7500,,202602010
+e,quest_raid_kim1_00001_rank_07,quest_raid_kim1_00001,Silver,3,10000,,202602010
+e,quest_raid_kim1_00001_rank_08,quest_raid_kim1_00001,Silver,4,12500,,202602010
+e,quest_raid_kim1_00001_rank_09,quest_raid_kim1_00001,Gold,1,15000,,202602010
+e,quest_raid_kim1_00001_rank_10,quest_raid_kim1_00001,Gold,2,30000,,202602010
+e,quest_raid_kim1_00001_rank_11,quest_raid_kim1_00001,Gold,3,50000,,202602010
+e,quest_raid_kim1_00001_rank_12,quest_raid_kim1_00001,Gold,4,75000,,202602010
+e,quest_raid_kim1_00001_rank_13,quest_raid_kim1_00001,Master,1,100000,,202602010
+e,quest_raid_kim1_00001_rank_14,quest_raid_kim1_00001,Master,2,250000,,202602010
+e,quest_raid_kim1_00001_rank_15,quest_raid_kim1_00001,Master,3,500000,,202602010
+e,quest_raid_kim1_00001_rank_16,quest_raid_kim1_00001,Master,4,1000000,,202602010
