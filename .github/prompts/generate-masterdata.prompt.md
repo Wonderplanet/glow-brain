@@ -2,8 +2,6 @@
 description: 要件に基づいてGLOWマスタデータを生成
 argument-hint: '要件の説明'
 agent: 'agent'
-model: 'GPT-4o'
-tools: ['githubRepo', 'search/codebase']
 ---
 
 # GLOW マスタデータ生成プロンプト
