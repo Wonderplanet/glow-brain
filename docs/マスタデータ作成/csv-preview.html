@@ -185,11 +185,12 @@
         }
 
         .control-btn.reset {
-            background: #dc3545;
+            background: #95a5a6;
+            color: white;
         }
 
         .control-btn.reset:hover {
-            background: #c82333;
+            background: #7f8c8d;
         }
 
         .table-wrapper {
@@ -218,6 +219,23 @@
             position: sticky;
             top: 0;
             z-index: 10;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        th:hover {
+            background: #dee2e6;
+        }
+
+        th .sort-icon {
+            margin-left: 4px;
+            font-size: 10px;
+            color: #6c757d;
+        }
+
+        th.sorted {
+            background: #d3d9df;
         }
 
         tbody tr:nth-child(even) {
@@ -626,7 +644,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             // テーブル状態を初期化
             if (!tableStates[tableName]) {
                 tableStates[tableName] = {
-                    filter: { column: '', value: '', operator: 'contains' },
+                    filter: { column: '', value: '', operator: 'equals' },
                     sort: { column: '', order: '' }
                 };
             }
@@ -705,12 +723,20 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                 }
             }
 
-            // テーブルHTML作成（enum警告付き）
+            // テーブルHTML作成（ソート機能付きヘッダー）
             const tableEnums = enumDefinitions[tableName] || {};
 
             let tableHTML = '<table><thead><tr>';
-            headers.forEach(header => {
-                tableHTML += `<th>${escapeHTML(header)}</th>`;
+            headers.forEach((header, index) => {
+                const isSorted = state.sort.column === header;
+                const sortIcon = isSorted
+                    ? (state.sort.order === 'asc' ? '<span class="sort-icon">▲</span>' : '<span class="sort-icon">▼</span>')
+                    : '<span class="sort-icon" style="opacity:0.3">⇅</span>';
+                const sortedClass = isSorted ? ' class="sorted"' : '';
+
+                tableHTML += `<th${sortedClass} onclick="toggleSort('${tableName}', '${escapeHTML(header)}')" title="クリックでソート">
+                    ${escapeHTML(header)}${sortIcon}
+                </th>`;
             });
             tableHTML += '</tr></thead><tbody>';
 
@@ -765,19 +791,8 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                             placeholder="検索値" value="${escapeHTML(state.filter.value)}"
                             onkeypress="if(event.key==='Enter') applyFilter('${tableName}')">
                         <button class="control-btn" onclick="applyFilter('${tableName}')">🔍 検索</button>
+                        <button class="control-btn reset" onclick="resetTable('${tableName}')">🔄 リセット</button>
                     </div>
-                    <div class="control-group">
-                        <span class="control-label">ソート:</span>
-                        <select class="control-select" id="sort-column-${tableName}" onchange="updateSort('${tableName}')">
-                            <option value="">列を選択</option>
-                            ${headers.map(h => `<option value="${escapeHTML(h)}" ${state.sort.column === h ? 'selected' : ''}>${escapeHTML(h)}</option>`).join('')}
-                        </select>
-                        <button class="control-btn ${state.sort.order === 'asc' ? 'asc' : ''}"
-                            onclick="setSortOrder('${tableName}', 'asc')">▲ 昇順</button>
-                        <button class="control-btn ${state.sort.order === 'desc' ? 'desc' : ''}"
-                            onclick="setSortOrder('${tableName}', 'desc')">▼ 降順</button>
-                    </div>
-                    <button class="control-btn reset" onclick="resetTable('${tableName}')">🔄 リセット</button>
                 </div>
             `;
 
@@ -822,36 +837,29 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             refreshTable(tableName);
         }
 
-        function updateSort(tableName) {
-            const column = document.getElementById(`sort-column-${tableName}`).value;
+        function toggleSort(tableName, column) {
+            const currentSort = tableStates[tableName].sort;
 
-            if (column) {
-                if (!tableStates[tableName].sort.order) {
-                    tableStates[tableName].sort.order = 'asc';
+            // 同じ列をクリックした場合: なし → 昇順 → 降順 → なし
+            // 別の列をクリックした場合: 昇順から開始
+            if (currentSort.column === column) {
+                if (currentSort.order === 'asc') {
+                    tableStates[tableName].sort = { column, order: 'desc' };
+                } else if (currentSort.order === 'desc') {
+                    tableStates[tableName].sort = { column: '', order: '' };
+                } else {
+                    tableStates[tableName].sort = { column, order: 'asc' };
                 }
             } else {
-                tableStates[tableName].sort.order = '';
+                tableStates[tableName].sort = { column, order: 'asc' };
             }
 
-            tableStates[tableName].sort.column = column;
-            refreshTable(tableName);
-        }
-
-        function setSortOrder(tableName, order) {
-            const column = document.getElementById(`sort-column-${tableName}`).value;
-
-            if (!column) {
-                alert('ソート列を選択してください');
-                return;
-            }
-
-            tableStates[tableName].sort = { column, order };
             refreshTable(tableName);
         }
 
         function resetTable(tableName) {
             tableStates[tableName] = {
-                filter: { column: '', value: '', operator: 'contains' },
+                filter: { column: '', value: '', operator: 'equals' },
                 sort: { column: '', order: '' }
             };
             refreshTable(tableName);
