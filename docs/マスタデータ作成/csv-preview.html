@@ -14,16 +14,23 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
             background: #f5f5f5;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .app-layout {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
+            flex: 1;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             padding: 30px;
+            overflow-y: auto;
         }
 
         h1 {
@@ -143,6 +150,10 @@
             min-width: 150px;
         }
 
+        .control-select.operator {
+            min-width: 120px;
+        }
+
         .control-input {
             min-width: 200px;
         }
@@ -217,6 +228,20 @@
             background: #e7f3ff;
         }
 
+        td.enum-warning {
+            background: #fff3cd !important;
+            border: 2px solid #ffc107 !important;
+            position: relative;
+        }
+
+        td.enum-warning::after {
+            content: '⚠️';
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            font-size: 10px;
+        }
+
         .empty-state {
             padding: 60px 20px;
             text-align: center;
@@ -247,6 +272,7 @@
 
         .header-formatter {
             margin-top: 30px;
+            margin-bottom: 40px;
             padding: 20px;
             background: #fff3cd;
             border-radius: 6px;
@@ -310,35 +336,33 @@
             line-height: 1.5;
         }
 
-        /* 目次スタイル */
-        .toc-container {
-            position: fixed;
-            right: 20px;
-            top: 20px;
-            width: 250px;
-            background: white;
-            border: 2px solid #007bff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            max-height: calc(100vh - 40px);
+        /* サイドバー（目次）スタイル */
+        .sidebar {
+            width: 280px;
+            background: #2c3e50;
+            color: white;
             overflow-y: auto;
-            z-index: 1000;
+            position: sticky;
+            top: 0;
+            height: 100vh;
             display: none;
+            flex-shrink: 0;
         }
 
-        .toc-container.visible {
+        .sidebar.visible {
             display: block;
         }
 
-        .toc-header {
-            background: #007bff;
-            color: white;
-            padding: 12px 15px;
+        .sidebar-header {
+            background: #1a252f;
+            padding: 20px;
+            border-bottom: 2px solid #34495e;
+        }
+
+        .sidebar-title {
+            font-size: 16px;
             font-weight: 600;
-            font-size: 14px;
-            position: sticky;
-            top: 0;
-            z-index: 10;
+            margin: 0;
         }
 
         .toc-list {
@@ -348,7 +372,7 @@
         }
 
         .toc-item {
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 1px solid #34495e;
         }
 
         .toc-item:last-child {
@@ -357,59 +381,57 @@
 
         .toc-link {
             display: block;
-            padding: 10px 15px;
-            color: #495057;
+            padding: 12px 20px;
+            color: #ecf0f1;
             text-decoration: none;
             font-size: 13px;
-            transition: background 0.2s;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
         }
 
         .toc-link:hover {
-            background: #e7f3ff;
-            color: #007bff;
+            background: #34495e;
+            border-left-color: #3498db;
+            color: white;
         }
 
         .toc-link.formatted {
-            background: #fff3cd;
-            color: #856404;
+            background: #f39c12;
+            color: white;
             font-weight: 600;
+            border-left-color: #e67e22;
         }
 
         .toc-link.formatted:hover {
-            background: #ffe69c;
-        }
-
-        .main-content {
-            margin-right: 290px;
+            background: #e67e22;
         }
 
         @media (max-width: 1200px) {
-            .main-content {
-                margin-right: 0;
+            .app-layout {
+                flex-direction: column;
             }
-            .toc-container {
-                position: relative;
-                right: auto;
-                top: auto;
+            .sidebar {
                 width: 100%;
-                max-height: 400px;
-                margin-bottom: 20px;
-            }
-            .toc-container.visible {
-                display: block;
+                height: auto;
+                max-height: 300px;
+                position: relative;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 目次 -->
-    <div class="toc-container" id="toc">
-        <div class="toc-header">📑 目次</div>
-        <ul class="toc-list" id="tocList"></ul>
-    </div>
+    <div class="app-layout">
+        <!-- 左サイドバー（目次） -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">📑 目次</h2>
+            </div>
+            <ul class="toc-list" id="tocList"></ul>
+        </aside>
 
-    <div class="container main-content">
-        <h1>📊 マスタデータCSVプレビューツール</h1>
+        <!-- メインコンテンツ -->
+        <div class="container">
+            <h1>📊 マスタデータCSVプレビューツール</h1>
 
         <div class="file-input-area">
             <div class="input-row">
@@ -444,16 +466,72 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                 <p>CSVファイルを選択してください</p>
             </div>
         </div>
+        </div>
     </div>
 
     <script>
         // データを保存するグローバル変数
         let csvDataStore = [];
         let csvRawData = {}; // {filename: {headers, dataRows}}
-        let tableStates = {}; // {tableName: {filter: {column, value}, sort: {column, order}}}
+        let tableStates = {}; // {tableName: {filter: {column, value, operator}, sort: {column, order}}}
+        let enumDefinitions = {}; // {tableName: {columnName: [values]}}
 
         document.getElementById('csvFiles').addEventListener('change', handleFiles);
         document.getElementById('csvFolder').addEventListener('change', handleFiles);
+
+        // 初期化：DDLファイルからenum定義を読み込み
+        async function loadEnumDefinitions() {
+            try {
+                const response = await fetch('../../projects/glow-server/api/database/schema/master_tables_ddl.sql');
+                if (!response.ok) {
+                    console.warn('DDLファイルの読み込みに失敗しました');
+                    return;
+                }
+
+                const ddlContent = await response.text();
+                parseEnumDefinitions(ddlContent);
+            } catch (error) {
+                console.warn('Enum定義の読み込みエラー:', error);
+            }
+        }
+
+        function parseEnumDefinitions(ddlContent) {
+            // テーブルごとにパース
+            const tableRegex = /CREATE TABLE `(\w+)`\s*\(([\s\S]*?)\)\s*ENGINE/gi;
+            let tableMatch;
+
+            while ((tableMatch = tableRegex.exec(ddlContent)) !== null) {
+                const tableName = tableMatch[1];
+                const tableBody = tableMatch[2];
+
+                // CamelCaseに変換（例: mst_item -> MstItem）
+                const camelTableName = tableName.split('_').map(part =>
+                    part.charAt(0).toUpperCase() + part.slice(1)
+                ).join('');
+
+                // enum型の列を抽出
+                const enumRegex = /`(\w+)`\s+enum\((.*?)\)/gi;
+                let enumMatch;
+
+                while ((enumMatch = enumRegex.exec(tableBody)) !== null) {
+                    const columnName = enumMatch[1];
+                    const enumValues = enumMatch[2]
+                        .split(',')
+                        .map(v => v.trim().replace(/^['"]|['"]$/g, ''));
+
+                    if (!enumDefinitions[camelTableName]) {
+                        enumDefinitions[camelTableName] = {};
+                    }
+
+                    enumDefinitions[camelTableName][columnName] = enumValues;
+                }
+            }
+
+            console.log('Enum定義を読み込みました:', enumDefinitions);
+        }
+
+        // ページロード時にenum定義を読み込み
+        loadEnumDefinitions();
 
         async function handleFiles(event) {
             const files = Array.from(event.target.files).filter(f => f.name.endsWith('.csv'));
@@ -548,7 +626,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             // テーブル状態を初期化
             if (!tableStates[tableName]) {
                 tableStates[tableName] = {
-                    filter: { column: '', value: '' },
+                    filter: { column: '', value: '', operator: 'contains' },
                     sort: { column: '', order: '' }
                 };
             }
@@ -565,13 +643,40 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
 
             // フィルタ適用
             let filteredRows = dataRows;
-            if (state.filter.column && state.filter.value) {
+            if (state.filter.column) {
                 const columnIndex = headers.indexOf(state.filter.column);
                 if (columnIndex !== -1) {
-                    const filterValue = state.filter.value.toLowerCase();
-                    filteredRows = dataRows.filter(row =>
-                        row[columnIndex] && row[columnIndex].toLowerCase().includes(filterValue)
-                    );
+                    const operator = state.filter.operator || 'contains';
+                    const filterValue = state.filter.value;
+
+                    filteredRows = dataRows.filter(row => {
+                        const cellValue = row[columnIndex] || '';
+
+                        switch (operator) {
+                            case 'equals':
+                                return cellValue === filterValue;
+                            case 'contains':
+                                return cellValue.toLowerCase().includes(filterValue.toLowerCase());
+                            case 'startsWith':
+                                return cellValue.toLowerCase().startsWith(filterValue.toLowerCase());
+                            case 'endsWith':
+                                return cellValue.toLowerCase().endsWith(filterValue.toLowerCase());
+                            case 'gt':
+                                return parseFloat(cellValue) > parseFloat(filterValue);
+                            case 'lt':
+                                return parseFloat(cellValue) < parseFloat(filterValue);
+                            case 'gte':
+                                return parseFloat(cellValue) >= parseFloat(filterValue);
+                            case 'lte':
+                                return parseFloat(cellValue) <= parseFloat(filterValue);
+                            case 'isEmpty':
+                                return cellValue === '';
+                            case 'isNotEmpty':
+                                return cellValue !== '';
+                            default:
+                                return cellValue.toLowerCase().includes(filterValue.toLowerCase());
+                        }
+                    });
                 }
             }
 
@@ -600,7 +705,9 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                 }
             }
 
-            // テーブルHTML作成
+            // テーブルHTML作成（enum警告付き）
+            const tableEnums = enumDefinitions[tableName] || {};
+
             let tableHTML = '<table><thead><tr>';
             headers.forEach(header => {
                 tableHTML += `<th>${escapeHTML(header)}</th>`;
@@ -609,8 +716,17 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
 
             sortedRows.forEach(row => {
                 tableHTML += '<tr>';
-                row.forEach(cell => {
-                    tableHTML += `<td>${escapeHTML(cell)}</td>`;
+                row.forEach((cell, cellIndex) => {
+                    const columnName = headers[cellIndex];
+                    const enumValues = tableEnums[columnName];
+
+                    // enum警告チェック
+                    let warningClass = '';
+                    if (enumValues && cell && !enumValues.includes(cell)) {
+                        warningClass = ' class="enum-warning" title="警告: この値はenum定義に含まれていません。許可される値: ' + enumValues.join(', ') + '"';
+                    }
+
+                    tableHTML += `<td${warningClass}>${escapeHTML(cell)}</td>`;
                 });
                 tableHTML += '</tr>';
             });
@@ -632,6 +748,18 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                         <select class="control-select" id="filter-column-${tableName}">
                             <option value="">列を選択</option>
                             ${headers.map(h => `<option value="${escapeHTML(h)}" ${state.filter.column === h ? 'selected' : ''}>${escapeHTML(h)}</option>`).join('')}
+                        </select>
+                        <select class="control-select operator" id="filter-operator-${tableName}">
+                            <option value="equals" ${state.filter.operator === 'equals' ? 'selected' : ''}>= 等しい</option>
+                            <option value="contains" ${state.filter.operator === 'contains' ? 'selected' : ''}>⊃ 含む</option>
+                            <option value="startsWith" ${state.filter.operator === 'startsWith' ? 'selected' : ''}>始まる</option>
+                            <option value="endsWith" ${state.filter.operator === 'endsWith' ? 'selected' : ''}>終わる</option>
+                            <option value="gt" ${state.filter.operator === 'gt' ? 'selected' : ''}>&gt; より大きい</option>
+                            <option value="gte" ${state.filter.operator === 'gte' ? 'selected' : ''}>≥ 以上</option>
+                            <option value="lt" ${state.filter.operator === 'lt' ? 'selected' : ''}>&lt; より小さい</option>
+                            <option value="lte" ${state.filter.operator === 'lte' ? 'selected' : ''}>≤ 以下</option>
+                            <option value="isEmpty" ${state.filter.operator === 'isEmpty' ? 'selected' : ''}>空</option>
+                            <option value="isNotEmpty" ${state.filter.operator === 'isNotEmpty' ? 'selected' : ''}>空でない</option>
                         </select>
                         <input type="text" class="control-input" id="filter-value-${tableName}"
                             placeholder="検索値" value="${escapeHTML(state.filter.value)}"
@@ -674,14 +802,23 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
 
         function applyFilter(tableName) {
             const column = document.getElementById(`filter-column-${tableName}`).value;
+            const operator = document.getElementById(`filter-operator-${tableName}`).value;
             const value = document.getElementById(`filter-value-${tableName}`).value;
+
+            // 演算子が「空」「空でない」の場合は値不要
+            const needsValue = !['isEmpty', 'isNotEmpty'].includes(operator);
 
             if (!column && value) {
                 alert('フィルタ列を選択してください');
                 return;
             }
 
-            tableStates[tableName].filter = { column, value };
+            if (column && needsValue && !value) {
+                alert('検索値を入力してください');
+                return;
+            }
+
+            tableStates[tableName].filter = { column, value, operator };
             refreshTable(tableName);
         }
 
@@ -714,7 +851,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
 
         function resetTable(tableName) {
             tableStates[tableName] = {
-                filter: { column: '', value: '' },
+                filter: { column: '', value: '', operator: 'contains' },
                 sort: { column: '', order: '' }
             };
             refreshTable(tableName);
@@ -925,11 +1062,11 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
         // 目次を更新する関数
         function updateTOC() {
             const tocList = document.getElementById('tocList');
-            const toc = document.getElementById('toc');
+            const sidebar = document.getElementById('sidebar');
             const tableNames = Object.keys(csvRawData).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
             if (tableNames.length === 0 && !document.getElementById('formatted-data')) {
-                toc.classList.remove('visible');
+                sidebar.classList.remove('visible');
                 tocList.innerHTML = '';
                 return;
             }
@@ -959,7 +1096,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             });
 
             tocList.innerHTML = tocHTML;
-            toc.classList.add('visible');
+            sidebar.classList.add('visible');
         }
 
         // スムーススクロール関数
