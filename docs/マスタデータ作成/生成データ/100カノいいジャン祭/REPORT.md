@@ -13,17 +13,19 @@
 
 ## 生成データ一覧
 
-### MstEvent.csv
+### 基本設定
+
+#### MstEvent.csv
 - **レコード数**: 1件
 - **主要カラム**: id, mst_series_id, start_at, end_at, asset_key
 - **データ概要**: イベント基本設定（event_kim_00001）
 
-### MstEventI18n.csv
+#### MstEventI18n.csv
 - **レコード数**: 1件
 - **主要カラム**: mst_event_id, language, name, balloon
 - **データ概要**: イベント名称の多言語設定（日本語）
 
-### MstEventBonusUnit.csv
+#### MstEventBonusUnit.csv
 - **レコード数**: 4件
 - **主要カラム**: mst_unit_id, bonus_percentage, event_bonus_group_id
 - **データ概要**: イベントボーナスキャラクター設定
@@ -32,7 +34,9 @@
   - 院田 唐音 (chara_kim_00201): 10%
   - 好本 静 (chara_kim_00301): 10%
 
-### MstAdventBattle.csv
+### ゲームシステム
+
+#### MstAdventBattle.csv
 - **レコード数**: 1件
 - **主要カラム**: id, mst_event_id, asset_key, event_bonus_group_id
 - **データ概要**: 降臨バトル設定（quest_raid_kim1_00001）
@@ -40,7 +44,23 @@
   - 挑戦回数: 3回/日
   - 広告挑戦: 2回/日
 
-### MstMissionEvent.csv
+#### MstStage.csv
+- **レコード数**: 6件
+- **主要カラム**: id, mst_quest_id, mst_in_game_id, cost_stamina
+- **データ概要**: イベントステージ設定
+  - 彼女ストーリー: 3ステージ
+  - 収集クエスト: 1ステージ
+  - チャレンジ: 1ステージ
+  - 高難易度: 1ステージ
+
+#### MstStageEventSetting.csv
+- **レコード数**: 6件
+- **主要カラム**: id, mst_stage_id, background_asset_key
+- **データ概要**: イベントステージの期間設定
+
+### ミッション・報酬
+
+#### MstMissionEvent.csv
 - **レコード数**: 39件
 - **主要カラム**: id, criterion_type, criterion_count, mst_mission_reward_group_id
 - **データ概要**: イベントミッション設定
@@ -48,7 +68,7 @@
   - クエストクリアミッション: 4件
   - 通常敵撃破ミッション: 13件（10体〜300体）
 
-### MstMissionReward.csv
+#### MstMissionReward.csv
 - **レコード数**: 39件
 - **主要カラム**: group_id, resource_type, resource_id, resource_amount
 - **データ概要**: ミッション報酬設定
@@ -58,22 +78,24 @@
   - キャラかけら: 各キャラ10個ずつ
   - メモリーフラグメント: 初級×30、中級×20、上級×3
 
-### MstExchange.csv
+### 交換所
+
+#### MstExchange.csv
 - **レコード数**: 1件
 - **主要カラム**: id, mst_event_id, exchange_trade_type, lineup_group_id
 - **データ概要**: 100カノ交換所の基本設定
 
-### MstExchangeLineup.csv
+#### MstExchangeLineup.csv
 - **レコード数**: 10件
 - **主要カラム**: group_id, tradable_count, display_order
 - **データ概要**: 交換所ラインナップ設定
 
-### MstExchangeCost.csv
+#### MstExchangeCost.csv
 - **レコード数**: 10件
 - **主要カラム**: mst_exchange_lineup_id, cost_type, cost_amount
 - **データ概要**: 交換コスト設定（赤メダル使用）
 
-### MstExchangeReward.csv
+#### MstExchangeReward.csv
 - **レコード数**: 10件
 - **主要カラム**: mst_exchange_lineup_id, resource_type, resource_id, resource_amount
 - **データ概要**: 交換報酬設定
@@ -81,6 +103,47 @@
   - プリズム×700（14回×50）
   - イベントSRキャラ（chara_kim_00401）×1
   - キャラかけら、メモリーフラグメント等
+
+### ガチャ
+
+#### OprGacha.csv
+- **レコード数**: 2件
+- **主要カラム**: id, gacha_type, prize_group_id, start_at, end_at
+- **データ概要**: ピックアップガチャA/B設定
+  - 天井: 100回（10枠目確定）
+  - 10連ガチャ、SR以上1体確定
+
+#### OprGachaI18n.csv
+- **レコード数**: 2件
+- **主要カラム**: opr_gacha_id, language, name, description
+- **データ概要**: ガチャ名称・説明の多言語設定
+
+#### OprGachaPrize.csv
+- **レコード数**: 88件
+- **主要カラム**: group_id, resource_id, weight, pickup
+- **データ概要**: ガチャ排出設定
+  - ガチャA: 花園羽々里（UR）、花園羽香里（SSR）ピックアップ
+  - ガチャB: 花園羽々里（UR）、院田唐音（SSR）ピックアップ
+  - 排出率: UR 3%, SSR 10%, SR 35%, R 52%
+
+### ショップ
+
+#### MstStoreProduct.csv
+- **レコード数**: 1件
+- **主要カラム**: id, product_id_ios, product_id_android
+- **データ概要**: ストア商品ID設定
+
+#### OprProduct.csv
+- **レコード数**: 1件
+- **主要カラム**: id, mst_store_product_id, product_type, purchasable_count
+- **データ概要**: いいジャン祭パック設定
+  - 購入制限: 1回
+  - 販売期間: イベント期間中
+
+#### OprProductI18n.csv
+- **レコード数**: 1件
+- **主要カラム**: opr_product_id, language, name, description
+- **データ概要**: パック名称・説明の多言語設定
 
 ## データ設計の詳細
 
@@ -138,45 +201,47 @@
 
 ## 追加で必要となるマスタデータ
 
-以下のマスタデータは、本イベントを完全に実装するために別途作成が必要です：
+以下のマスタデータは、仕様書に詳細がないため生成していません。別途作成が必要です：
 
-### 1. ガチャ関連
-- **OprGacha.csv**: ピックアップガチャA/B（Pickup_kim_001, Pickup_kim_002）
-- **OprGachaI18n.csv**: ガチャ名称の多言語設定
-- **OprGachaPrize.csv**: ガチャ排出設定（ピックアップキャラ含む）
-- **OprGachaUpper.csv**: 天井設定（100回で確定）
-
-### 2. キャラクター関連
-- **MstUnit.csv**: 新規キャラクター4体の基本設定
-  - chara_kim_00001（花園 羽々里・フェス限）
+### 1. キャラクター詳細設定
+- **MstUnit.csv**: 新規キャラクター5体の詳細設定（ステータス、スキル等）
+  - chara_kim_00001（花園 羽々里・フェス限UR）
   - chara_kim_00101（花園 羽香里・ピックアップUR）
   - chara_kim_00201（院田 唐音・ピックアップUR）
   - chara_kim_00301（好本 静・ピックアップSSR）
   - chara_kim_00401（交換所報酬SR）
+- **MstUnitI18n.csv**: キャラクター名称・説明の多言語設定
 
-### 3. ステージ関連
-- **MstStage.csv**: イベントクエストステージ設定
-  - quest_event_kim1_charaget01（彼女ストーリー）
-  - quest_event_kim1_collection01（収集クエスト）
-  - quest_event_kim1_challenge01（チャレンジ）
-  - quest_event_kim1_savage（高難易度）
-- **MstStageEventSetting.csv**: イベントステージの期間設定
-- **MstInGame.csv**: 降臨バトルのインゲーム設定（raid_kim1_00001）
+### 2. インゲーム設定
+- **MstInGame.csv**: 降臨バトル、各ステージのインゲーム詳細設定
+  - raid_kim1_00001（降臨バトル）
+  - event_kim1_charaget01_00001〜00003（彼女ストーリー）
+  - event_kim1_collection01_00001（収集クエスト）
+  - event_kim1_challenge01_00001（チャレンジ）
+  - event_kim1_savage_00001（高難易度）
 
-### 4. ショップパック関連
-- **OprProduct.csv**: いいジャン祭パックの商品設定
-- **OprProductI18n.csv**: パック名称の多言語設定
-- **MstStoreProduct.csv**: ストア商品基本設定
+### 3. クエスト設定
+- **MstQuest.csv**: イベントクエストの基本設定
+  - quest_event_kim1_charaget01
+  - quest_event_kim1_collection01
+  - quest_event_kim1_challenge01
+  - quest_event_kim1_savage
+- **MstQuestI18n.csv**: クエスト名称の多言語設定
 
-### 5. アイテム関連
-- **MstItem.csv**: イベント固有アイテム
-  - item_glo_00001（赤メダル）
-  - ticket_kim_10000（100カノガチャチケット）
-  - その他イベント報酬アイテム
-
-### 6. バナー・UI関連
-- **MstBanner.csv**: ホーム画面バナー設定
+### 4. バナー・UI
+- **MstBanner.csv**: ホーム画面バナー、イベントTOPバナー設定
 - **MstEventDisplayUnit.csv**: イベント表示ユニット設定
+
+### 5. アイテム
+※既存のitem_glo_00001（赤メダル）、ticket_glo_00003（ピックアップチケット）等を使用する想定のため、
+新規アイテムが必要な場合のみ作成：
+- **MstItem.csv**: イベント固有の新規アイテム（必要に応じて）
+- **MstItemI18n.csv**: アイテム名称の多言語設定
+
+### 6. その他
+- **MstQuestEventBonusSchedule.csv**: イベントボーナスのスケジュール設定
+- **MstAdventBattleI18n.csv**: 降臨バトル名称の多言語設定
+- **OprGachaUpper.csv**: ガチャ天井設定の詳細
 
 ## 使用方法
 

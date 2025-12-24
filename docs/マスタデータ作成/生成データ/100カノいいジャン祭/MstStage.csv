@@ -1,0 +1,7 @@
+ENABLE,id,mst_quest_id,mst_in_game_id,stage_number,recommended_level,cost_stamina,exp,coin,prev_mst_stage_id,mst_stage_tips_group_id,auto_lap_type,max_auto_lap_count,sort_order,asset_key,mst_stage_limit_status_id,release_key,mst_artwork_fragment_drop_group_id,start_at,end_at
+e,event_kim1_charaget01_00001,quest_event_kim1_charaget01,event_kim1_charaget01_00001,1,1,5,50,75,,1,__NULL__,1,1,event_kim1_00001,,202602010,event_kim_a_0001,"2026-02-16 15:00:00","2026-03-16 10:59:59"
+e,event_kim1_charaget01_00002,quest_event_kim1_charaget01,event_kim1_charaget01_00002,2,3,5,50,75,event_kim1_charaget01_00001,1,__NULL__,1,2,general_diamond,,202602010,event_kim_a_0002,"2026-02-16 15:00:00","2026-03-16 10:59:59"
+e,event_kim1_charaget01_00003,quest_event_kim1_charaget01,event_kim1_charaget01_00003,3,5,5,50,75,event_kim1_charaget01_00002,1,__NULL__,1,3,general_diamond,,202602010,event_kim_a_0003,"2026-02-16 15:00:00","2026-03-16 10:59:59"
+e,event_kim1_collection01_00001,quest_event_kim1_collection01,event_kim1_collection01_00001,1,5,5,50,75,,1,__NULL__,1,1,event_kim1_00002,,202602010,event_kim_c_0001,"2026-02-16 15:00:00","2026-03-16 10:59:59"
+e,event_kim1_challenge01_00001,quest_event_kim1_challenge01,event_kim1_challenge01_00001,1,10,8,100,150,,1,__NULL__,1,1,event_kim1_00003,,202602010,__NULL__,"2026-02-16 15:00:00","2026-03-16 10:59:59"
+e,event_kim1_savage_00001,quest_event_kim1_savage,event_kim1_savage_00001,1,15,10,150,200,,1,__NULL__,1,1,event_kim1_00004,,202602010,__NULL__,"2026-02-16 15:00:00","2026-03-16 10:59:59"
