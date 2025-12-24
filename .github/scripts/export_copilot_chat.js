@@ -62,6 +62,20 @@ ${content}
 `;
 }
 
+// URLデコード関数（file://のパスをデコード）
+function decodeFileUrls(text) {
+  if (typeof text !== 'string') return text;
+
+  // file:// で始まるURLをデコード
+  return text.replace(/file:\/\/\/[^\s)]+/g, (url) => {
+    try {
+      return decodeURIComponent(url);
+    } catch (e) {
+      return url;
+    }
+  });
+}
+
 // 安全なフォーマット関数
 function safeFormat(content, maxLines = 100, maxChars = 20000) {
   try {
@@ -187,8 +201,12 @@ function formatToolExecutions(responseItems, timestamp) {
     if (item.kind === 'toolInvocationSerialized') {
       const toolIcon = getToolIcon(item.toolId);
       const toolName = item.toolId || 'Unknown Tool';
-      const invocationMsg = item.invocationMessage?.value || item.invocationMessage || '';
-      const pastMsg = item.pastTenseMessage?.value || item.pastTenseMessage || '';
+      let invocationMsg = item.invocationMessage?.value || item.invocationMessage || '';
+      let pastMsg = item.pastTenseMessage?.value || item.pastTenseMessage || '';
+
+      // URLエンコードされたパスをデコード
+      invocationMsg = decodeFileUrls(invocationMsg);
+      pastMsg = decodeFileUrls(pastMsg);
 
       markdown += `<details>\n`;
       markdown += `<summary>${toolIcon} ${toolName}</summary>\n\n`;

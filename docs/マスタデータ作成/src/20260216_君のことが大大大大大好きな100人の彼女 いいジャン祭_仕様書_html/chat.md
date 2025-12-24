@@ -74,9 +74,9 @@ Follow instructions in [generate-masterdata.prompt.md](file:///Users/junki.mizut
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) の読み取り
 
 ✅ 完了
 
@@ -96,9 +96,9 @@ Follow instructions in [generate-masterdata.prompt.md](file:///Users/junki.mizut
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) の読み取り
 
 ✅ 完了
 
@@ -121,9 +121,9 @@ Follow instructions in [generate-masterdata.prompt.md](file:///Users/junki.mizut
 <details>
 <summary>📁 copilot_listDirectory</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) の読み取り
 
 ✅ 完了
 
@@ -148,9 +148,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📁 copilot_listDirectory</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) の読み取り
 
 ✅ 完了
 
@@ -212,20 +212,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📁 copilot_listDirectory</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/01_%E6%A6%82%E8%A6%81.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/01_%E6%A6%82%E8%A6%81.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) の読み取り
 
 ✅ 完了
 
@@ -234,20 +223,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/01_概要.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/03_%E9%99%8D%E8%87%A8%E3%83%90%E3%83%88%E3%83%AB.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/03_%E9%99%8D%E8%87%A8%E3%83%90%E3%83%88%E3%83%AB.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/01_概要.html) の読み取り
 
 ✅ 完了
 
@@ -256,20 +234,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/06_%E3%82%AC%E3%82%B7%E3%83%A3%E5%9F%BA%E6%9C%AC%E4%BB%95%E6%A7%98.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/06_%E3%82%AC%E3%82%B7%E3%83%A3%E5%9F%BA%E6%9C%AC%E4%BB%95%E6%A7%98.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) の読み取り
 
 ✅ 完了
 
@@ -278,9 +245,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/100%E3%82%AB%E3%83%8E%E4%BA%A4%E6%8F%9B%E6%89%80.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/03_降臨バトル.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/100%E3%82%AB%E3%83%8E%E4%BA%A4%E6%8F%9B%E6%89%80.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/03_降臨バトル.html) の読み取り
 
 ✅ 完了
 
@@ -289,9 +256,42 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/07_%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%91%E3%83%83%E3%82%AF_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/07_%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%91%E3%83%83%E3%82%AF_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/06_ガシャ基本仕様.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/06_ガシャ基本仕様.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/100カノ交換所.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/100カノ交換所.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/07_いいジャン祭パック_設計書.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/07_いいジャン祭パック_設計書.html) の読み取り
 
 ✅ 完了
 
@@ -300,20 +300,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📁 copilot_listDirectory</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) の読み取り
 
 ✅ 完了
 
@@ -322,20 +311,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/05_%E5%A0%B1%E9%85%AC%E4%B8%80%E8%A6%A7.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/05_%E5%A0%B1%E9%85%AC%E4%B8%80%E8%A6%A7.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3A_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3A_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) の読み取り
 
 ✅ 完了
 
@@ -344,9 +322,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/01_%E6%A6%82%E8%A6%81.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/05_報酬一覧.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/01_%E6%A6%82%E8%A6%81.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/05_報酬一覧.html) の読み取り
 
 ✅ 完了
 
@@ -355,9 +333,31 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/03_%E9%99%8D%E8%87%A8%E3%83%90%E3%83%88%E3%83%AB.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャA_設計書.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/03_%E9%99%8D%E8%87%A8%E3%83%90%E3%83%88%E3%83%AB.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャA_設計書.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/01_概要.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/01_概要.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/03_降臨バトル.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/03_降臨バトル.html) の読み取り
 
 ✅ 完了
 
@@ -366,20 +366,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📁 copilot_listDirectory</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) の読み取り
 
 ✅ 完了
 
@@ -388,20 +377,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/06_%E3%82%AC%E3%82%B7%E3%83%A3%E5%9F%BA%E6%9C%AC%E4%BB%95%E6%A7%98.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/06_%E3%82%AC%E3%82%B7%E3%83%A3%E5%9F%BA%E6%9C%AC%E4%BB%95%E6%A7%98.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/07_%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%91%E3%83%83%E3%82%AF_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/07_%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%91%E3%83%83%E3%82%AF_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) の読み取り
 
 ✅ 完了
 
@@ -410,9 +388,31 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/100%E3%82%AB%E3%83%8E%E4%BA%A4%E6%8F%9B%E6%89%80.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/06_ガシャ基本仕様.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/100%E3%82%AB%E3%83%8E%E4%BA%A4%E6%8F%9B%E6%89%80.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/06_ガシャ基本仕様.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/07_いいジャン祭パック_設計書.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/07_いいジャン祭パック_設計書.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/100カノ交換所.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/100カノ交換所.html) の読み取り
 
 ✅ 完了
 
@@ -437,9 +437,9 @@ td><td class="s0"></td><td class="s0"></td><td class="s0"></td><td class="s0"></
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E4%BB%95%E6%A7%98%E6%8A%BD%E5%87%BA%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88.md) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/仕様抽出レポート.md) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E4%BB%95%E6%A7%98%E6%8A%BD%E5%87%BA%E3%83%AC%E3%83%9D%E3%83%BC%E3%83%88.md) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/仕様抽出レポート.md) が作成されました
 
 ✅ 完了
 
@@ -755,9 +755,9 @@ yuw
 <details>
 <summary>🔧 copilot_createDirectory</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭) が作成されました
 
 ✅ 完了
 
@@ -766,9 +766,9 @@ yuw
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstEvent.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstEvent.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstEvent.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstEvent.csv) が作成されました
 
 ✅ 完了
 
@@ -4575,9 +4575,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstEventI18n.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstEventI18n.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstEventI18n.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstEventI18n.csv) が作成されました
 
 ✅ 完了
 
@@ -4595,20 +4595,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📁 copilot_listDirectory</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) の読み取り
 
 ✅ 完了
 
@@ -4617,20 +4606,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/05_%E5%A0%B1%E9%85%AC%E4%B8%80%E8%A6%A7.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/05_%E5%A0%B1%E9%85%AC%E4%B8%80%E8%A6%A7.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/100%E3%82%AB%E3%83%8E%E4%BA%A4%E6%8F%9B%E6%89%80.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/100%E3%82%AB%E3%83%8E%E4%BA%A4%E6%8F%9B%E6%89%80.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) の読み取り
 
 ✅ 完了
 
@@ -4639,20 +4617,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3A_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/05_報酬一覧.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3A_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3B_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3B_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/05_報酬一覧.html) の読み取り
 
 ✅ 完了
 
@@ -4661,20 +4628,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/07_%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%91%E3%83%83%E3%82%AF_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/100カノ交換所.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/07_%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%91%E3%83%83%E3%82%AF_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/100カノ交換所.html) の読み取り
 
 ✅ 完了
 
@@ -4683,9 +4639,53 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/05_%E5%A0%B1%E9%85%AC%E4%B8%80%E8%A6%A7.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャA_設計書.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/05_%E5%A0%B1%E9%85%AC%E4%B8%80%E8%A6%A7.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャA_設計書.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャB_設計書.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャB_設計書.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/07_いいジャン祭パック_設計書.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/07_いいジャン祭パック_設計書.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/05_報酬一覧.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/05_報酬一覧.html) の読み取り
 
 ✅ 完了
 
@@ -4694,9 +4694,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📁 copilot_listDirectory</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) の読み取り
 
 ✅ 完了
 
@@ -4782,20 +4782,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstEventBonusUnit.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstEventBonusUnit.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstEventBonusUnit.csv) が作成されました
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📝 copilot_createFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattle.csv) を作成しています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattle.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstEventBonusUnit.csv) が作成されました
 
 ✅ 完了
 
@@ -4804,9 +4793,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstMissionEvent.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattle.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstMissionEvent.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattle.csv) が作成されました
 
 ✅ 完了
 
@@ -4815,9 +4804,20 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstMissionReward.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstMissionEvent.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstMissionReward.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstMissionEvent.csv) が作成されました
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📝 copilot_createFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstMissionReward.csv) を作成しています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstMissionReward.csv) が作成されました
 
 ✅ 完了
 
@@ -4848,20 +4848,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstExchange.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstExchange.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstExchange.csv) が作成されました
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📝 copilot_createFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstExchangeLineup.csv) を作成しています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstExchangeLineup.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstExchange.csv) が作成されました
 
 ✅ 完了
 
@@ -4870,9 +4859,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstExchangeCost.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstExchangeLineup.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstExchangeCost.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstExchangeLineup.csv) が作成されました
 
 ✅ 完了
 
@@ -4881,9 +4870,20 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstExchangeReward.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstExchangeCost.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstExchangeReward.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstExchangeCost.csv) が作成されました
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📝 copilot_createFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstExchangeReward.csv) を作成しています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstExchangeReward.csv) が作成されました
 
 ✅ 完了
 
@@ -4903,9 +4903,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/REPORT.md) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/REPORT.md) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/REPORT.md) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/REPORT.md) が作成されました
 
 ✅ 完了
 
@@ -9633,9 +9633,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprGacha.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprGacha.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprGacha.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprGacha.csv) が作成されました
 
 ✅ 完了
 
@@ -9644,9 +9644,9 @@ HTMLから情報を抽出するために、関連ファイルを読んでいき�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprGachaI18n.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprGachaI18n.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprGachaI18n.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprGachaI18n.csv) が作成されました
 
 ✅ 完了
 
@@ -9699,9 +9699,9 @@ e,Pickup_sur_001_20,Pickup_sur_001,Unit,chara_aha_00101,1,8840,0,202512010
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprGachaPrize.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprGachaPrize.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprGachaPrize.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprGachaPrize.csv) が作成されました
 
 ✅ 完了
 
@@ -9728,20 +9728,9 @@ e,event_kai1_charaget01_00004,quest_event_kai1_charaget01,event_kai1_charaget01_
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstStage.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstStage.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstStage.csv) が作成されました
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📝 copilot_createFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstStageEventSetting.csv) を作成しています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstStageEventSetting.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstStage.csv) が作成されました
 
 ✅ 完了
 
@@ -9750,9 +9739,20 @@ e,event_kai1_charaget01_00004,quest_event_kai1_charaget01,event_kai1_charaget01_
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstEventI18n.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstStageEventSetting.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstEventI18n.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstStageEventSetting.csv) が作成されました
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📝 copilot_createFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstEventI18n.csv) を作成しています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstEventI18n.csv) が作成されました
 
 ✅ 完了
 
@@ -9790,20 +9790,9 @@ e,18,18,Pack,__NULL__,,16,"2025-09-22 11:00:00","2034-01-01 00:00:00",202509010
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstStoreProduct.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstStoreProduct.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstStoreProduct.csv) が作成されました
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📝 copilot_createFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprProduct.csv) を作成しています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprProduct.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstStoreProduct.csv) が作成されました
 
 ✅ 完了
 
@@ -9812,9 +9801,20 @@ e,18,18,Pack,__NULL__,,16,"2025-09-22 11:00:00","2034-01-01 00:00:00",202509010
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprProductI18n.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprProduct.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprProductI18n.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprProduct.csv) が作成されました
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📝 copilot_createFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprProductI18n.csv) を作成しています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprProductI18n.csv) が作成されました
 
 ✅ 完了
 
@@ -11681,20 +11681,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📁 copilot_listDirectory</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/01_%E6%A6%82%E8%A6%81.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/01_%E6%A6%82%E8%A6%81.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html) の読み取り
 
 ✅ 完了
 
@@ -11703,20 +11692,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/01_概要.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/03_%E9%99%8D%E8%87%A8%E3%83%90%E3%83%88%E3%83%AB.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/03_%E9%99%8D%E8%87%A8%E3%83%90%E3%83%88%E3%83%AB.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/01_概要.html) の読み取り
 
 ✅ 完了
 
@@ -11725,20 +11703,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/05_%E5%A0%B1%E9%85%AC%E4%B8%80%E8%A6%A7.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/05_%E5%A0%B1%E9%85%AC%E4%B8%80%E8%A6%A7.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) の読み取り
 
 ✅ 完了
 
@@ -11747,20 +11714,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/06_%E3%82%AC%E3%82%B7%E3%83%A3%E5%9F%BA%E6%9C%AC%E4%BB%95%E6%A7%98.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/03_降臨バトル.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/06_%E3%82%AC%E3%82%B7%E3%83%A3%E5%9F%BA%E6%9C%AC%E4%BB%95%E6%A7%98.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/06_%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3A_%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/06_%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3A_%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/03_降臨バトル.html) の読み取り
 
 ✅ 完了
 
@@ -11769,20 +11725,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/07_%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%91%E3%83%83%E3%82%AF_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/07_%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%91%E3%83%83%E3%82%AF_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/100%E3%82%AB%E3%83%8E%E4%BA%A4%E6%8F%9B%E6%89%80.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/100%E3%82%AB%E3%83%8E%E4%BA%A4%E6%8F%9B%E6%89%80.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) の読み取り
 
 ✅ 完了
 
@@ -11791,20 +11736,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3A_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/05_報酬一覧.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3A_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/03_%E9%99%8D%E8%87%A8%E3%83%90%E3%83%88%E3%83%AB.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/03_%E9%99%8D%E8%87%A8%E3%83%90%E3%83%88%E3%83%AB.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/05_報酬一覧.html) の読み取り
 
 ✅ 完了
 
@@ -11813,20 +11747,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/06_ガシャ基本仕様.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/04_%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/01_%E6%A6%82%E8%A6%81.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/01_%E6%A6%82%E8%A6%81.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/06_ガシャ基本仕様.html) の読み取り
 
 ✅ 完了
 
@@ -11835,20 +11758,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/06_ピックアップガシャA_注意事項.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/02_%E6%96%BD%E7%AD%96.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/05_%E5%A0%B1%E9%85%AC%E4%B8%80%E8%A6%A7.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/05_%E5%A0%B1%E9%85%AC%E4%B8%80%E8%A6%A7.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/06_ピックアップガシャA_注意事項.html) の読み取り
 
 ✅ 完了
 
@@ -11857,20 +11769,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/06_%E3%82%AC%E3%82%B7%E3%83%A3%E5%9F%BA%E6%9C%AC%E4%BB%95%E6%A7%98.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/07_いいジャン祭パック_設計書.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/06_%E3%82%AC%E3%82%B7%E3%83%A3%E5%9F%BA%E6%9C%AC%E4%BB%95%E6%A7%98.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/100%E3%82%AB%E3%83%8E%E4%BA%A4%E6%8F%9B%E6%89%80.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/100%E3%82%AB%E3%83%8E%E4%BA%A4%E6%8F%9B%E6%89%80.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/07_いいジャン祭パック_設計書.html) の読み取り
 
 ✅ 完了
 
@@ -11879,20 +11780,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/07_%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%91%E3%83%83%E3%82%AF_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/100カノ交換所.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/07_%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%91%E3%83%83%E3%82%AF_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) の読み取り
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📖 copilot_readFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3A_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) を読み取っています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD%E3%83%94%E3%83%83%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%B7%E3%83%A3A_%E8%A8%AD%E8%A8%88%E6%9B%B8.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/100カノ交換所.html) の読み取り
 
 ✅ 完了
 
@@ -11901,9 +11791,119 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📖 copilot_readFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/03_%E9%99%8D%E8%87%A8%E3%83%90%E3%83%88%E3%83%AB.html) を読み取っています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャA_設計書.html) を読み取っています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/src/20260216_%E5%90%9B%E3%81%AE%E3%81%93%E3%81%A8%E3%81%8C%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%AA100%E4%BA%BA%E3%81%AE%E5%BD%BC%E5%A5%B3%20%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD_%E4%BB%95%E6%A7%98%E6%9B%B8_html/03_%E9%99%8D%E8%87%A8%E3%83%90%E3%83%88%E3%83%AB.html) の読み取り
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャA_設計書.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/03_降臨バトル.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/03_降臨バトル.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/04_ミッション.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/01_概要.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/01_概要.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/02_施策.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/05_報酬一覧.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/05_報酬一覧.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/06_ガシャ基本仕様.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/06_ガシャ基本仕様.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/100カノ交換所.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/100カノ交換所.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/07_いいジャン祭パック_設計書.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/07_いいジャン祭パック_設計書.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャA_設計書.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャA_設計書.html) の読み取り
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📖 copilot_readFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/03_降臨バトル.html) を読み取っています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/src/20260216_君のことが大大大大大好きな100人の彼女 いいジャン祭_仕様書_html/03_降臨バトル.html) の読み取り
 
 ✅ 完了
 
@@ -11956,20 +11956,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstQuest.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstQuest.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstQuest.csv) が作成されました
-
-✅ 完了
-
-</details>
-
-<details>
-<summary>📝 copilot_createFile</summary>
-
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstQuestI18n.csv) を作成しています
-
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstQuestI18n.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstQuest.csv) が作成されました
 
 ✅ 完了
 
@@ -11978,9 +11967,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattleI18n.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstQuestI18n.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattleI18n.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstQuestI18n.csv) が作成されました
 
 ✅ 完了
 
@@ -11989,9 +11978,20 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstMissionEventI18n.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattleI18n.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstMissionEventI18n.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattleI18n.csv) が作成されました
+
+✅ 完了
+
+</details>
+
+<details>
+<summary>📝 copilot_createFile</summary>
+
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstMissionEventI18n.csv) を作成しています
+
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstMissionEventI18n.csv) が作成されました
 
 ✅ 完了
 
@@ -12033,9 +12033,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattleRank.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattleRank.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattleRank.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattleRank.csv) が作成されました
 
 ✅ 完了
 
@@ -12044,9 +12044,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattleClearReward.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattleClearReward.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattleClearReward.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattleClearReward.csv) が作成されました
 
 ✅ 完了
 
@@ -12066,9 +12066,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattleRewardGroup.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattleRewardGroup.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattleRewardGroup.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattleRewardGroup.csv) が作成されました
 
 ✅ 完了
 
@@ -12077,9 +12077,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattleReward.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattleReward.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/MstAdventBattleReward.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/MstAdventBattleReward.csv) が作成されました
 
 ✅ 完了
 
@@ -12099,9 +12099,9 @@ HTMLから抽出できる情報に基づいて、これら残りのマスタデ�
 <details>
 <summary>📝 copilot_createFile</summary>
 
-**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprGachaUpper.csv) を作成しています
+**実行**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprGachaUpper.csv) を作成しています
 
-**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF%E4%BD%9C%E6%88%90/%E7%94%9F%E6%88%90%E3%83%87%E3%83%BC%E3%82%BF/100%E3%82%AB%E3%83%8E%E3%81%84%E3%81%84%E3%82%B8%E3%83%A3%E3%83%B3%E7%A5%AD/OprGachaUpper.csv) が作成されました
+**結果**: [](file:///Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ/100カノいいジャン祭/OprGachaUpper.csv) が作成されました
 
 ✅ 完了
 
