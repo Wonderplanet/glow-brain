@@ -229,10 +229,106 @@
             margin-bottom: 10px;
             line-height: 1.5;
         }
+
+        /* 目次スタイル */
+        .toc-container {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            width: 250px;
+            background: white;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+
+        .toc-container.visible {
+            display: block;
+        }
+
+        .toc-header {
+            background: #007bff;
+            color: white;
+            padding: 12px 15px;
+            font-weight: 600;
+            font-size: 14px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-item {
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .toc-item:last-child {
+            border-bottom: none;
+        }
+
+        .toc-link {
+            display: block;
+            padding: 10px 15px;
+            color: #495057;
+            text-decoration: none;
+            font-size: 13px;
+            transition: background 0.2s;
+        }
+
+        .toc-link:hover {
+            background: #e7f3ff;
+            color: #007bff;
+        }
+
+        .toc-link.formatted {
+            background: #fff3cd;
+            color: #856404;
+            font-weight: 600;
+        }
+
+        .toc-link.formatted:hover {
+            background: #ffe69c;
+        }
+
+        .main-content {
+            margin-right: 290px;
+        }
+
+        @media (max-width: 1200px) {
+            .main-content {
+                margin-right: 0;
+            }
+            .toc-container {
+                position: relative;
+                right: auto;
+                top: auto;
+                width: 100%;
+                max-height: 400px;
+                margin-bottom: 20px;
+            }
+            .toc-container.visible {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- 目次 -->
+    <div class="toc-container" id="toc">
+        <div class="toc-header">📑 目次</div>
+        <ul class="toc-list" id="tocList"></ul>
+    </div>
+
+    <div class="container main-content">
         <h1>📊 CSVプレビューツール</h1>
 
         <div class="file-input-area">
@@ -249,14 +345,7 @@
             <div class="file-count" id="fileCount"></div>
         </div>
 
-        <div id="csvDisplay">
-            <div class="empty-state">
-                <div class="empty-state-icon">📁</div>
-                <p>CSVファイルを選択してください</p>
-            </div>
-        </div>
-
-        <div class="header-formatter">
+        <div class="header-formatter" id="headerFormatter">
             <h2>🔧 Spreadsheetヘッダー整形プレビュー</h2>
             <div class="info-text">
                 Spreadsheetのヘッダー（TABLE行とカラム名行）をペーストして、読み込んだCSVデータを整形できます。<br>
@@ -267,6 +356,13 @@ TABLE    MstItem    MstItem    MstItem    MstItemI18n    MstItemI18n
 ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             <button class="format-btn" onclick="formatWithHeader()">📋 プレビュー生成</button>
             <div id="formattedDisplay"></div>
+        </div>
+
+        <div id="csvDisplay">
+            <div class="empty-state">
+                <div class="empty-state-icon">📁</div>
+                <p>CSVファイルを選択してください</p>
+            </div>
         </div>
     </div>
 
@@ -289,6 +385,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                     </div>
                 `;
                 document.getElementById('fileCount').textContent = '';
+                updateTOC();
                 return;
             }
 
@@ -299,7 +396,14 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             csvRawData = {};
             const displayHTML = [];
 
-            for (const file of files) {
+            // ファイルをアルファベット順にソート
+            const sortedFiles = files.sort((a, b) => {
+                const nameA = a.name.replace(/\.csv$/i, '').toLowerCase();
+                const nameB = b.name.replace(/\.csv$/i, '').toLowerCase();
+                return nameA.localeCompare(nameB);
+            });
+
+            for (const file of sortedFiles) {
                 const content = await file.text();
                 const html = createCSVPreview(file.name, content);
                 displayHTML.push(html);
@@ -310,6 +414,9 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
 
             // 整形プレビューをクリア
             document.getElementById('formattedDisplay').innerHTML = '';
+
+            // 目次を更新
+            updateTOC();
         }
 
         function createCSVPreview(filename, csvContent) {
@@ -382,7 +489,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             csvDataStore.push(dataOnlyTSV);
 
             return `
-                <div class="csv-container">
+                <div class="csv-container" id="table-${escapeHTML(tableName)}">
                     <div class="csv-header">
                         <div class="csv-filename">${escapeHTML(displayName)}</div>
                         <button class="copy-btn" data-index="${dataIndex}">
@@ -573,7 +680,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
 
             // 表示
             document.getElementById('formattedDisplay').innerHTML = `
-                <div class="formatted-container">
+                <div class="formatted-container" id="formatted-data">
                     <div class="csv-header">
                         <div class="csv-filename">整形済みデータ（${outputRows.length}行）</div>
                         <button class="copy-btn" data-index="${dataIndex}">
@@ -585,6 +692,61 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                     </div>
                 </div>
             `;
+
+            // 目次を更新
+            updateTOC();
+        }
+
+        // 目次を更新する関数
+        function updateTOC() {
+            const tocList = document.getElementById('tocList');
+            const toc = document.getElementById('toc');
+            const tableNames = Object.keys(csvRawData).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+            if (tableNames.length === 0 && !document.getElementById('formatted-data')) {
+                toc.classList.remove('visible');
+                tocList.innerHTML = '';
+                return;
+            }
+
+            let tocHTML = '';
+
+            // 整形済みデータへのリンク
+            if (document.getElementById('formatted-data')) {
+                tocHTML += `
+                    <li class="toc-item">
+                        <a href="#formatted-data" class="toc-link formatted" onclick="smoothScroll(event, 'formatted-data')">
+                            🔧 整形済みデータ
+                        </a>
+                    </li>
+                `;
+            }
+
+            // 各テーブルへのリンク
+            tableNames.forEach(tableName => {
+                tocHTML += `
+                    <li class="toc-item">
+                        <a href="#table-${escapeHTML(tableName)}" class="toc-link" onclick="smoothScroll(event, 'table-${escapeHTML(tableName)}')">
+                            ${escapeHTML(tableName)}
+                        </a>
+                    </li>
+                `;
+            });
+
+            tocList.innerHTML = tocHTML;
+            toc.classList.add('visible');
+        }
+
+        // スムーススクロール関数
+        function smoothScroll(event, targetId) {
+            event.preventDefault();
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
     </script>
 </body>
