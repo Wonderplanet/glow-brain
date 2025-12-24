@@ -62,11 +62,26 @@ cat projects/glow-masterdata/[ModelName].csv | head -10
 grep -r "class [ModelName]" projects/glow-client/Assets/GLOW/Scripts/
 ```
 
-#### サーバー側のデータモデル
+#### サーバー側のテーブル定義（DDL）
+
+**重要**: テーブル名は以下のルールで変換されます：
+- モデル名（PascalCase）→ テーブル名（snake_case + 複数形）
+- 例: `OprGacha` → `opr_gachas`
+- 例: `MstUnit` → `mst_units`
+- 例: `MstAdventBattle` → `mst_advent_battles`
+
 ```bash
-# サーバー側のモデル定義を検索
-find projects/glow-server/app -name "[ModelName].php"
+# サーバー側のテーブルスキーマを確認（テーブル名は小文字+アンダースコア+複数形）
+# 例: OprGacha → opr_gachas, MstUnit → mst_units
+grep -A 30 "CREATE TABLE \`[table_name]\`" projects/glow-server/api/database/schema/master_tables_ddl.sql
 ```
+
+DDLから以下を確認：
+- カラム名とデータ型（ENUM型の選択肢も含む）
+- PRIMARY KEY、UNIQUE制約
+- NOT NULL制約、DEFAULT値
+- COMMENT（カラムの説明）
+- インデックス定義
 
 ### 3. データの設計
 
@@ -240,7 +255,7 @@ docs/
 
 - 既存マスタデータ: `projects/glow-masterdata/*.csv`
 - クライアントモデル: `projects/glow-client/Assets/GLOW/Scripts/`
-- サーバーモデル: `projects/glow-server/app/Models/`
+- サーバーテーブル定義: `projects/glow-server/api/database/schema/master_tables_ddl.sql`
 - バージョン設定: `config/versions.json`
 
 ## 例: 新ガチャのマスタデータ生成
