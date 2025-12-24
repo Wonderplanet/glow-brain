@@ -1,5 +1,6 @@
 ---
 description: GitHub Copilot用プロンプトファイルを作成
+allowed-tools: Bash(ls:*), Bash(mkdir:*), Bash(cat:*)
 ---
 
 # GitHub Copilotプロンプトファイル作成
@@ -23,50 +24,116 @@ GitHub Copilot Chatでスラッシュコマンドとして使用できるプロ�
 
 ### 1. 要件の収集
 
-AskUserQuestionツールを使用して、以下の情報を収集してください：
+まず、AskUserQuestionツールを使って、プロンプトファイルの詳細を収集してください。
 
-**質問1: プロンプトの目的**
-- header: "目的"
-- question: "このプロンプトは何を実行するためのものですか？"
-- options:
-  - コード生成: 新しいコードを生成
-  - コードレビュー: 既存コードをレビュー
-  - リファクタリング: コードの改善
-  - ドキュメント生成: コメントやドキュメントを作成
-  - テスト生成: ユニットテストやE2Eテストを作成
-  - その他: カスタム用途
-  - multiSelect: false
+以下の質問を一度に提示してください：
 
-**質問2: 対象言語/フレームワーク**
-- header: "対象"
-- question: "どの言語やフレームワークを対象としますか？"
-- options:
-  - 汎用: 言語非依存
-  - TypeScript/JavaScript: Web開発全般
-  - Python: Python関連
-  - PHP/Laravel: Laravel開発
-  - C#/Unity: Unity開発
-  - multiSelect: false
-
-**質問3: プロンプトの範囲**
-- header: "範囲"
-- question: "プロンプトが処理する範囲は？"
-- options:
-  - 現在のファイル: アクティブなファイルのみ
-  - 選択範囲: ユーザーが選択したコード
-  - プロジェクト全体: リポジトリ全体を対象
-  - カスタム: 特定のディレクトリやパターン
-  - multiSelect: false
-
-**質問4: 出力形式**
-- header: "出力"
-- question: "期待される出力形式は？"
-- options:
-  - コードブロック: 新しいコードを生成
-  - Markdown: ドキュメントやレポート
-  - 提案リスト: 複数の改善案
-  - 差分表示: 変更前後の比較
-  - multiSelect: false
+```json
+{
+  "questions": [
+    {
+      "question": "このプロンプトは何を実行するためのものですか？",
+      "header": "目的",
+      "multiSelect": false,
+      "options": [
+        {
+          "label": "コード生成",
+          "description": "新しいコードを生成"
+        },
+        {
+          "label": "コードレビュー",
+          "description": "既存コードをレビュー"
+        },
+        {
+          "label": "リファクタリング",
+          "description": "コードの改善"
+        },
+        {
+          "label": "ドキュメント生成",
+          "description": "コメントやドキュメントを作成"
+        },
+        {
+          "label": "テスト生成",
+          "description": "ユニットテストやE2Eテストを作成"
+        }
+      ]
+    },
+    {
+      "question": "どの言語やフレームワークを対象としますか？",
+      "header": "対象",
+      "multiSelect": false,
+      "options": [
+        {
+          "label": "汎用",
+          "description": "言語非依存"
+        },
+        {
+          "label": "TypeScript/JavaScript",
+          "description": "Web開発全般"
+        },
+        {
+          "label": "Python",
+          "description": "Python関連"
+        },
+        {
+          "label": "PHP/Laravel",
+          "description": "Laravel開発"
+        },
+        {
+          "label": "C#/Unity",
+          "description": "Unity開発"
+        }
+      ]
+    },
+    {
+      "question": "プロンプトが処理する範囲は？",
+      "header": "範囲",
+      "multiSelect": false,
+      "options": [
+        {
+          "label": "現在のファイル",
+          "description": "アクティブなファイルのみ"
+        },
+        {
+          "label": "選択範囲",
+          "description": "ユーザーが選択したコード"
+        },
+        {
+          "label": "プロジェクト全体",
+          "description": "リポジトリ全体を対象"
+        },
+        {
+          "label": "カスタム",
+          "description": "特定のディレクトリやパターン"
+        }
+      ]
+    },
+    {
+      "question": "期待される出力形式は？",
+      "header": "出力",
+      "multiSelect": false,
+      "options": [
+        {
+          "label": "コードブロック",
+          "description": "新しいコードを生成"
+        },
+        {
+          "label": "Markdown",
+          "description": "ドキュメントやレポート"
+        },
+        {
+          "label": "提案リスト",
+          "description": "複数の改善案"
+        },
+        {
+          "label": "差分表示",
+          "description": "変更前後の比較"
+        }
+      ]
+    }
+  ]
+}
+```
 
 ### 2. プロンプトファイルの生成
 
@@ -152,35 +219,62 @@ tools: ['githubRepo', 'search/codebase']  # 利用可能なツール（オプシ
 
 ### 3. ファイル名の決定
 
-プロンプトの目的に基づいて、適切なファイル名を提案してください：
+収集した情報に基づいて、適切なファイル名を決定してください。
 
+**命名パターン**：
 - コード生成: `generate-[feature].prompt.md`
 - レビュー: `review-[aspect].prompt.md`
 - リファクタリング: `refactor-[target].prompt.md`
 - ドキュメント: `document-[type].prompt.md`
 - テスト: `test-[scope].prompt.md`
 
-### 4. ファイルの作成
+**重要**: ファイル名は小文字とハイフンのみを使用してください（例: `create-readme.prompt.md`, `review-security.prompt.md`）
 
-`.github/prompts/` ディレクトリにプロンプトファイルを作成してください。
+### 4. ディレクトリの確認と作成
 
-ディレクトリが存在しない場合は、以下のパスで作成してください：
-```
-.github/
-└── prompts/
-    └── [filename].prompt.md
-```
+プロンプトファイルは `.github/prompts/` ディレクトリに配置します。
 
-**注意**: ファイル名は小文字とハイフンを使用してください（例: `create-readme.prompt.md`, `review-security.prompt.md`）
+1. まず、Bashツールで `.github/prompts` ディレクトリが存在するか確認してください：
+   ```bash
+   ls -la .github/prompts 2>/dev/null || echo "ディレクトリが存在しません"
+   ```
 
-### 5. 使用例の提示
+2. ディレクトリが存在しない場合は、作成してください：
+   ```bash
+   mkdir -p .github/prompts
+   ```
+
+### 5. プロンプトファイルの作成
+
+Writeツールを使用して、`.github/prompts/[filename].prompt.md` にプロンプトファイルを作成してください。
+
+**作成時の注意**：
+- フロントマターのYAML構文が正しいか確認
+- コードブロック内のバッククォートが正しくエスケープされているか確認
+- 動的変数（`${input:variableName}`など）の構文が正しいか確認
+
+### 6. 確認と使用方法の提示
 
 ファイル作成後、以下の情報をユーザーに提供してください：
 
-1. 作成されたファイルのパス
-2. GitHub Copilot Chatでの使用方法
-3. プロンプトの実行例
-4. カスタマイズ方法
+1. **作成されたファイルのパス**
+   ```
+   .github/prompts/[filename].prompt.md
+   ```
+
+2. **GitHub Copilot Chatでの使用方法**
+   - VS Codeの場合: Copilot Chatを開いて `/[prompt-name]` と入力
+   - 例: `/generate-react-component`
+
+3. **プロンプトの確認方法**
+   ```bash
+   cat .github/prompts/[filename].prompt.md
+   ```
+
+4. **カスタマイズ方法**
+   - フロントマターのフィールドを調整（`model`, `tools`など）
+   - 動的入力変数を追加して柔軟性を向上
+   - ベストプラクティスセクションをプロジェクト固有の内容に更新
 
 ## GitHub Copilot プロンプトのベストプラクティス
 
