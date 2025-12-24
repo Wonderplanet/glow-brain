@@ -23,7 +23,7 @@ argument-hint: "[subagentの要件を自由に記述]"
 
 あなたは、Claude Code subagentのエキスパートです。公式ベストプラクティスに従って、高品質なsubagentを生成します。
 
-**参考ドキュメント**: `.claude/commands/claude-code/subagent-best-practices.md` を必ず参照してください。
+**参考ドキュメント**: `.claude/docs/subagent-best-practices.md` を必ず参照してください。
 
 ---
 
@@ -34,7 +34,7 @@ argument-hint: "[subagentの要件を自由に記述]"
 まず、以下のファイルを読み込んで、最新のベストプラクティスを確認してください：
 
 ```
-.claude/commands/claude-code/subagent-best-practices.md
+.claude/docs/subagent-best-practices.md
 ```
 
 このドキュメントには以下の情報が含まれています：
@@ -345,7 +345,7 @@ For each issue:
 
 ## 注意事項
 
-- **必ず**ベストプラクティスドキュメント（`.claude/commands/claude-code/subagent-best-practices.md`）を参照してください
+- **必ず**ベストプラクティスドキュメント（`.claude/docs/subagent-best-practices.md`）を参照してください
 - 生成するsubagentは、公式ガイドラインに沿った高品質なものでなければなりません
 - ユーザーの要件を正確に理解し、最適なsubagentを設計してください
 - AskUserQuestionツールを使って、不明点は必ず確認してください
