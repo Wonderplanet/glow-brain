@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSVプレビューツール</title>
+    <title>マスタデータCSVプレビューツール</title>
     <style>
         * {
             margin: 0;
@@ -77,6 +77,13 @@
             color: #212529;
         }
 
+        .csv-record-count {
+            font-size: 14px;
+            color: #6c757d;
+            margin-left: 10px;
+            font-weight: 400;
+        }
+
         .copy-btn {
             padding: 8px 16px;
             background: #007bff;
@@ -99,6 +106,79 @@
 
         .copy-btn.copied {
             background: #28a745;
+        }
+
+        .table-controls {
+            padding: 12px 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .control-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .control-select,
+        .control-input {
+            padding: 6px 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 13px;
+            background: white;
+        }
+
+        .control-select {
+            min-width: 150px;
+        }
+
+        .control-input {
+            min-width: 200px;
+        }
+
+        .control-btn {
+            padding: 6px 12px;
+            background: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .control-btn:hover {
+            background: #5a6268;
+        }
+
+        .control-btn.asc,
+        .control-btn.desc {
+            background: #17a2b8;
+        }
+
+        .control-btn.asc:hover,
+        .control-btn.desc:hover {
+            background: #138496;
+        }
+
+        .control-btn.reset {
+            background: #dc3545;
+        }
+
+        .control-btn.reset:hover {
+            background: #c82333;
         }
 
         .table-wrapper {
@@ -329,7 +409,7 @@
     </div>
 
     <div class="container main-content">
-        <h1>📊 CSVプレビューツール</h1>
+        <h1>📊 マスタデータCSVプレビューツール</h1>
 
         <div class="file-input-area">
             <div class="input-row">
@@ -370,6 +450,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
         // データを保存するグローバル変数
         let csvDataStore = [];
         let csvRawData = {}; // {filename: {headers, dataRows}}
+        let tableStates = {}; // {tableName: {filter: {column, value}, sort: {column, order}}}
 
         document.getElementById('csvFiles').addEventListener('change', handleFiles);
         document.getElementById('csvFolder').addEventListener('change', handleFiles);
@@ -464,6 +545,61 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                 dataRows: dataRows
             };
 
+            // テーブル状態を初期化
+            if (!tableStates[tableName]) {
+                tableStates[tableName] = {
+                    filter: { column: '', value: '' },
+                    sort: { column: '', order: '' }
+                };
+            }
+
+            return renderTable(tableName);
+        }
+
+        function renderTable(tableName) {
+            const data = csvRawData[tableName];
+            if (!data) return '';
+
+            const { headers, dataRows } = data;
+            const state = tableStates[tableName];
+
+            // フィルタ適用
+            let filteredRows = dataRows;
+            if (state.filter.column && state.filter.value) {
+                const columnIndex = headers.indexOf(state.filter.column);
+                if (columnIndex !== -1) {
+                    const filterValue = state.filter.value.toLowerCase();
+                    filteredRows = dataRows.filter(row =>
+                        row[columnIndex] && row[columnIndex].toLowerCase().includes(filterValue)
+                    );
+                }
+            }
+
+            // ソート適用
+            let sortedRows = [...filteredRows];
+            if (state.sort.column && state.sort.order) {
+                const columnIndex = headers.indexOf(state.sort.column);
+                if (columnIndex !== -1) {
+                    sortedRows.sort((a, b) => {
+                        const aVal = a[columnIndex] || '';
+                        const bVal = b[columnIndex] || '';
+
+                        // 数値として比較できる場合は数値比較
+                        const aNum = parseFloat(aVal);
+                        const bNum = parseFloat(bVal);
+
+                        let comparison = 0;
+                        if (!isNaN(aNum) && !isNaN(bNum)) {
+                            comparison = aNum - bNum;
+                        } else {
+                            comparison = aVal.localeCompare(bVal);
+                        }
+
+                        return state.sort.order === 'asc' ? comparison : -comparison;
+                    });
+                }
+            }
+
             // テーブルHTML作成
             let tableHTML = '<table><thead><tr>';
             headers.forEach(header => {
@@ -471,7 +607,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             });
             tableHTML += '</tr></thead><tbody>';
 
-            dataRows.forEach(row => {
+            sortedRows.forEach(row => {
                 tableHTML += '<tr>';
                 row.forEach(cell => {
                     tableHTML += `<td>${escapeHTML(cell)}</td>`;
@@ -481,26 +617,115 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
 
             tableHTML += '</tbody></table>';
 
-            // データ部分のみのTSV（タブ区切り）を作成
-            const dataOnlyTSV = dataRows.map(row => row.join('\t')).join('\n');
+            // データ部分のみのTSV（タブ区切り）を作成（フィルタ・ソート後）
+            const dataOnlyTSV = sortedRows.map(row => row.join('\t')).join('\n');
 
             // データストアに保存してインデックスを取得
             const dataIndex = csvDataStore.length;
             csvDataStore.push(dataOnlyTSV);
 
+            // コントロールHTML作成
+            const controlsHTML = `
+                <div class="table-controls">
+                    <div class="control-group">
+                        <span class="control-label">フィルタ:</span>
+                        <select class="control-select" id="filter-column-${tableName}">
+                            <option value="">列を選択</option>
+                            ${headers.map(h => `<option value="${escapeHTML(h)}" ${state.filter.column === h ? 'selected' : ''}>${escapeHTML(h)}</option>`).join('')}
+                        </select>
+                        <input type="text" class="control-input" id="filter-value-${tableName}"
+                            placeholder="検索値" value="${escapeHTML(state.filter.value)}"
+                            onkeypress="if(event.key==='Enter') applyFilter('${tableName}')">
+                        <button class="control-btn" onclick="applyFilter('${tableName}')">🔍 検索</button>
+                    </div>
+                    <div class="control-group">
+                        <span class="control-label">ソート:</span>
+                        <select class="control-select" id="sort-column-${tableName}" onchange="updateSort('${tableName}')">
+                            <option value="">列を選択</option>
+                            ${headers.map(h => `<option value="${escapeHTML(h)}" ${state.sort.column === h ? 'selected' : ''}>${escapeHTML(h)}</option>`).join('')}
+                        </select>
+                        <button class="control-btn ${state.sort.order === 'asc' ? 'asc' : ''}"
+                            onclick="setSortOrder('${tableName}', 'asc')">▲ 昇順</button>
+                        <button class="control-btn ${state.sort.order === 'desc' ? 'desc' : ''}"
+                            onclick="setSortOrder('${tableName}', 'desc')">▼ 降順</button>
+                    </div>
+                    <button class="control-btn reset" onclick="resetTable('${tableName}')">🔄 リセット</button>
+                </div>
+            `;
+
             return `
                 <div class="csv-container" id="table-${escapeHTML(tableName)}">
                     <div class="csv-header">
-                        <div class="csv-filename">${escapeHTML(displayName)}</div>
+                        <div>
+                            <span class="csv-filename">${escapeHTML(tableName)}</span>
+                            <span class="csv-record-count">(${sortedRows.length}件${sortedRows.length !== dataRows.length ? ` / 全${dataRows.length}件` : ''})</span>
+                        </div>
                         <button class="copy-btn" data-index="${dataIndex}">
                             📋 データをコピー
                         </button>
                     </div>
+                    ${controlsHTML}
                     <div class="table-wrapper">
                         ${tableHTML}
                     </div>
                 </div>
             `;
+        }
+
+        function applyFilter(tableName) {
+            const column = document.getElementById(`filter-column-${tableName}`).value;
+            const value = document.getElementById(`filter-value-${tableName}`).value;
+
+            if (!column && value) {
+                alert('フィルタ列を選択してください');
+                return;
+            }
+
+            tableStates[tableName].filter = { column, value };
+            refreshTable(tableName);
+        }
+
+        function updateSort(tableName) {
+            const column = document.getElementById(`sort-column-${tableName}`).value;
+
+            if (column) {
+                if (!tableStates[tableName].sort.order) {
+                    tableStates[tableName].sort.order = 'asc';
+                }
+            } else {
+                tableStates[tableName].sort.order = '';
+            }
+
+            tableStates[tableName].sort.column = column;
+            refreshTable(tableName);
+        }
+
+        function setSortOrder(tableName, order) {
+            const column = document.getElementById(`sort-column-${tableName}`).value;
+
+            if (!column) {
+                alert('ソート列を選択してください');
+                return;
+            }
+
+            tableStates[tableName].sort = { column, order };
+            refreshTable(tableName);
+        }
+
+        function resetTable(tableName) {
+            tableStates[tableName] = {
+                filter: { column: '', value: '' },
+                sort: { column: '', order: '' }
+            };
+            refreshTable(tableName);
+        }
+
+        function refreshTable(tableName) {
+            const tableElement = document.getElementById(`table-${tableName}`);
+            if (tableElement) {
+                const newHTML = renderTable(tableName);
+                tableElement.outerHTML = newHTML;
+            }
         }
 
         function escapeHTML(str) {
