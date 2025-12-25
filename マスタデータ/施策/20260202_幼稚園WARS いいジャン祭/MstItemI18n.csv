@@ -1,9 +1,0 @@
-memo
-TABLE,MstItemI18n
-ENABLE,id,release_key,mst_item_id,language,name,description
-e,piece_you_00201_ja,202602010,piece_you_00201,ja,ダグのかけら,ダグのかけら
-e,piece_you_00301_ja,202602010,piece_you_00301,ja,ハナのかけら,ハナのかけら
-e,memory_chara_you_00201_ja,202602010,memory_chara_you_00201,ja,ダグのメモリー,ダグ専用のカラーメモリー
-e,memory_chara_you_00301_ja,202602010,memory_chara_you_00301,ja,ハナのメモリー,ハナ専用のカラーメモリー
-e,emblem_event_you_00001_ja,202602010,emblem_event_you_00001,ja,ブラック幼稚園園章,幼稚園WARS いいジャン祭イベント記念エンブレム
-e,emblem_event_you_00002_ja,202602010,emblem_event_you_00002,ja,幼稚園WARSエンブレム,幼稚園WARS いいジャン祭達成記念エンブレム

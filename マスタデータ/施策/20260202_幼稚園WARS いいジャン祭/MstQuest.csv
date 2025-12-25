@@ -1,7 +1,7 @@
 memo
-TABLE,MstQuest
-ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key
-e,quest_event_you_story_dag,Story,event_you_00001,1,quest_event_you_story_dag,"2026-02-02 15:00:00","2026-03-02 10:59:59",you_story_dag,Normal,202602010
-e,quest_event_you_story_hana,Story,event_you_00001,2,quest_event_you_story_hana,"2026-02-02 15:00:00","2026-03-02 10:59:59",you_story_hana,Normal,202602010
-e,quest_event_you_challenge,Challenge,event_you_00001,3,quest_event_you_challenge,"2026-02-02 15:00:00","2026-03-02 10:59:59",you_challenge,Normal,202602010
-e,quest_event_you_hard,Challenge,event_you_00001,4,quest_event_you_hard,"2026-02-02 15:00:00","2026-03-02 10:59:59",you_hard,Hard,202602010
+TABLE,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuestI18n,MstQuestI18n,MstQuestI18n
+ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key,name.ja,category_name.ja,flavor_text.ja
+e,quest_event_you_story_dag,Story,event_you_00001,1,quest_event_you_story_dag,"2026-02-02 15:00:00","2026-03-02 10:59:59",you_story_dag,Normal,202602010,ダグのストーリー,ストーリークエスト,ブラック幼稚園のダグの物語
+e,quest_event_you_story_hana,Story,event_you_00001,2,quest_event_you_story_hana,"2026-02-02 15:00:00","2026-03-02 10:59:59",you_story_hana,Normal,202602010,ハナのストーリー,ストーリークエスト,ブラック幼稚園のハナの物語
+e,quest_event_you_challenge,Challenge,event_you_00001,3,quest_event_you_challenge,"2026-02-02 15:00:00","2026-03-02 10:59:59",you_challenge,Normal,202602010,チャレンジクエスト,チャレンジ,腕試しのチャレンジクエスト
+e,quest_event_you_hard,Challenge,event_you_00001,4,quest_event_you_hard,"2026-02-02 15:00:00","2026-03-02 10:59:59",you_hard,Hard,202602010,高難易度クエスト,高難易度,超高難易度のクエスト

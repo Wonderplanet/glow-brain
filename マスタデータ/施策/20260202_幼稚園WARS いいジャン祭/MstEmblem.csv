@@ -1,5 +1,5 @@
 memo
-TABLE,MstEmblem
-ENABLE,id,release_key,asset_key,rarity,sort_order
-e,emblem_event_you_00001,202602010,emblem_event_you_00001,__NULL__,1001
-e,emblem_event_you_00002,202602010,emblem_event_you_00002,__NULL__,1002
+TABLE,MstEmblem,MstEmblem,MstEmblem,MstEmblem,MstEmblem,MstEmblemI18n,MstEmblemI18n
+ENABLE,id,emblemType,mstSeriesId,assetKey,release_key,name.ja,description.ja
+e,emblem_event_you_00001,Normal,you,emblem_event_you_00001,202602010,ブラック幼稚園園章,幼稚園WARS いいジャン祭イベント記念エンブレム
+e,emblem_event_you_00002,Achievement,you,emblem_event_you_00002,202602010,幼稚園WARSエンブレム,幼稚園WARS いいジャン祭達成記念エンブレム
