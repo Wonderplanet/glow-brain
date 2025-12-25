@@ -617,9 +617,9 @@
         <div class="header-row-setting">
             <label for="headerRowCount">📋 ヘッダー行数:</label>
             <select id="headerRowCount" onchange="handleHeaderRowCountChange()">
-                <option value="1" selected>1行</option>
+                <option value="1">1行</option>
                 <option value="2">2行</option>
-                <option value="3">3行</option>
+                <option value="3" selected>3行</option>
                 <option value="4">4行</option>
                 <option value="5">5行</option>
             </select>
@@ -658,7 +658,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
         let enumDefinitions = {}; // {tableName: {columnName: [values]}}
         let currentFolderInfo = null; // {name: string, path: string}
         let csvFileContents = {}; // {filename: csvContent} - 元のCSVコンテンツを保存
-        let headerRowCount = 1; // ヘッダー行数（デフォルト: 1行）
+        let headerRowCount = 3; // ヘッダー行数（デフォルト: 3行）
 
         document.getElementById('csvFiles').addEventListener('change', handleFiles);
         document.getElementById('csvFolder').addEventListener('change', handleFiles);
