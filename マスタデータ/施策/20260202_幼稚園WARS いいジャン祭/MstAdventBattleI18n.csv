@@ -1,0 +1,4 @@
+memo
+TABLE,MstAdventBattleI18n
+ENABLE,id,release_key,mst_advent_battle_id,language,name,description
+e,advent_you_001_ja,202602010,advent_you_001,ja,誰の依頼だ？,幼稚園WARS いいジャン祭降臨バトル

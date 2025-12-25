@@ -1,0 +1,11 @@
+memo
+TABLE,MstStage
+ENABLE,id,mst_quest_id,mst_in_game_id,stage_number,recommended_level,cost_stamina,exp,coin,prev_mst_stage_id,mst_stage_tips_group_id,auto_lap_type,max_auto_lap_count,sort_order,asset_key,mst_artwork_fragment_drop_group_id,start_at,end_at,release_key
+e,stage_you_story_dag_001,quest_event_you_story_dag,ingame_you_001,1,10,5,20,100,__NULL__,__NULL__,Normal,10,1,stage_you_story_dag_001,__NULL__,"2026-02-02 15:00:00","2026-03-02 10:59:59",202602010
+e,stage_you_story_dag_002,quest_event_you_story_dag,ingame_you_002,2,12,5,22,110,stage_you_story_dag_001,__NULL__,Normal,10,2,stage_you_story_dag_002,__NULL__,"2026-02-02 15:00:00","2026-03-02 10:59:59",202602010
+e,stage_you_story_dag_003,quest_event_you_story_dag,ingame_you_003,3,15,6,25,120,stage_you_story_dag_002,__NULL__,Normal,10,3,stage_you_story_dag_003,__NULL__,"2026-02-02 15:00:00","2026-03-02 10:59:59",202602010
+e,stage_you_story_hana_001,quest_event_you_story_hana,ingame_you_004,1,10,5,20,100,__NULL__,__NULL__,Normal,10,1,stage_you_story_hana_001,__NULL__,"2026-02-02 15:00:00","2026-03-02 10:59:59",202602010
+e,stage_you_story_hana_002,quest_event_you_story_hana,ingame_you_005,2,12,5,22,110,stage_you_story_hana_001,__NULL__,Normal,10,2,stage_you_story_hana_002,__NULL__,"2026-02-02 15:00:00","2026-03-02 10:59:59",202602010
+e,stage_you_story_hana_003,quest_event_you_story_hana,ingame_you_006,3,15,6,25,120,stage_you_story_hana_002,__NULL__,Normal,10,3,stage_you_story_hana_003,__NULL__,"2026-02-02 15:00:00","2026-03-02 10:59:59",202602010
+e,stage_you_challenge_001,quest_event_you_challenge,ingame_you_007,1,20,8,30,150,__NULL__,__NULL__,None,0,1,stage_you_challenge_001,__NULL__,"2026-02-02 15:00:00","2026-03-02 10:59:59",202602010
+e,stage_you_hard_001,quest_event_you_hard,ingame_you_008,1,30,10,50,200,__NULL__,__NULL__,None,0,1,stage_you_hard_001,__NULL__,"2026-02-02 15:00:00","2026-03-02 10:59:59",202602010

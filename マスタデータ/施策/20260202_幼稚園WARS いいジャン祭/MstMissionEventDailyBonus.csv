@@ -1,3 +1,5 @@
+memo
+TABLE,MstMissionEventDailyBonus
 ENABLE,id,release_key,mst_event_id,mst_mission_reward_group_id,sort_order
 e,event_you_00001_daily_bonus_1,202602010,event_you_00001,event_you_00001_daily_bonus_1,1
 e,event_you_00001_daily_bonus_2,202602010,event_you_00001,event_you_00001_daily_bonus_2,2

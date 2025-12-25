@@ -1,3 +1,5 @@
+memo
+TABLE,MstMissionReward
 ENABLE,id,release_key,group_id,resource_type,resource_id,resource_amount,sort_order,備考
 e,you_mission_reward_01,202602010,you_00001_event_reward_01,Item,memory_chara_you_00201,200,1,幼稚園WARSいいジャン祭
 e,you_mission_reward_02,202602010,you_00001_event_reward_02,Item,memory_chara_you_00201,300,1,幼稚園WARSいいジャン祭

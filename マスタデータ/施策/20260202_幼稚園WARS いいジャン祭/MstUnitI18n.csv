@@ -1,3 +1,5 @@
+memo
+TABLE,MstUnitI18n
 ENABLE,id,release_key,mst_unit_id,language,name,description,detail
 e,chara_you_00201_ja,202602010,chara_you_00201,ja,ダグ,ブラック幼稚園の園児,原作1巻登場キャラ
 e,chara_you_00301_ja,202602010,chara_you_00301,ja,ハナ,ブラック幼稚園の園児,原作1巻登場キャラ

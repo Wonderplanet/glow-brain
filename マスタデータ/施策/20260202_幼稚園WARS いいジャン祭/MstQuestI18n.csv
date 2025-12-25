@@ -1,0 +1,7 @@
+memo
+TABLE,MstQuestI18n
+ENABLE,id,release_key,mst_quest_id,language,name,category_name,flavor_text
+e,quest_event_you_story_dag_ja,202602010,quest_event_you_story_dag,ja,ダグのストーリー,ストーリークエスト,ブラック幼稚園のダグの物語
+e,quest_event_you_story_hana_ja,202602010,quest_event_you_story_hana,ja,ハナのストーリー,ストーリークエスト,ブラック幼稚園のハナの物語
+e,quest_event_you_challenge_ja,202602010,quest_event_you_challenge,ja,チャレンジクエスト,チャレンジ,腕試しのチャレンジクエスト
+e,quest_event_you_hard_ja,202602010,quest_event_you_hard,ja,高難易度クエスト,高難易度,超高難易度のクエスト

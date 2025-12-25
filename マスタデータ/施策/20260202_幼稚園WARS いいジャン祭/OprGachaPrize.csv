@@ -1,3 +1,5 @@
+memo
+TABLE,OprGachaPrize
 ENABLE,id,group_id,resource_type,resource_id,resource_amount,weight,pickup,release_key
 e,Pickup_you_001_1,Pickup_you_001,Unit,chara_you_00001,1,702,1,202602010
 e,Pickup_you_001_2,Pickup_you_001,Unit,chara_spy_00101,1,162,0,202602010

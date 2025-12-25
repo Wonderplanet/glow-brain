@@ -1,3 +1,5 @@
+memo
+TABLE,MstMissionEvent
 ENABLE,id,release_key,mst_event_id,criterion_type,criterion_value,criterion_count,unlock_criterion_type,unlock_criterion_value,unlock_criterion_count,group_key,mst_mission_reward_group_id,sort_order,destination_scene
 e,event_you_00001_1,202602010,event_you_00001,SpecificUnitGradeUpCount,chara_you_00201,2,__NULL__,,0,,you_00001_event_reward_01,1,UnitList
 e,event_you_00001_2,202602010,event_you_00001,SpecificUnitGradeUpCount,chara_you_00201,3,__NULL__,,0,,you_00001_event_reward_02,2,UnitList

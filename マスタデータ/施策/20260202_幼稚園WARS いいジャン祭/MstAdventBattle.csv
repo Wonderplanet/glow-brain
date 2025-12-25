@@ -1,0 +1,4 @@
+memo
+TABLE,MstAdventBattle
+ENABLE,id,difficulty,wave_count,mst_event_id,asset_key,start_at,end_at,release_key
+e,advent_you_001,Normal,3,event_you_00001,advent_you_001,"2026-02-09 15:00:00","2026-02-15 23:59:59",202602010

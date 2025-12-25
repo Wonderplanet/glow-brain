@@ -1,3 +1,5 @@
+memo
+TABLE,MstItemI18n
 ENABLE,id,release_key,mst_item_id,language,name,description
 e,piece_you_00201_ja,202602010,piece_you_00201,ja,ダグのかけら,ダグのかけら
 e,piece_you_00301_ja,202602010,piece_you_00301,ja,ハナのかけら,ハナのかけら

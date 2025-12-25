@@ -1,2 +1,5 @@
-ENABLE,id,event_type,event_category,name,start_at,end_at,release_key
+memo
+TABLE,MstEvent
+ENABLE,id,mst_series_id,is_displayed_series_logo,is_displayed_jump_plus,start_at,end_at,asset_key,release_key
+e,event_you_00001,you,1,1,"2026-02-02 15:00:00","2026-03-02 10:59:59",event_you_00001,202602010
 e,event_you_00001,Collaboration,Collaboration,幼稚園WARS いいジャン祭,"2026-02-02 15:00:00","2026-03-02 10:59:59",202602010
