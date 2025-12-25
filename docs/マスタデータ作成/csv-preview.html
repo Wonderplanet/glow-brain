@@ -285,6 +285,17 @@
             font-weight: 400;
         }
 
+        th.header-sub-row {
+            background: #f8f9fa;
+            font-weight: 500;
+            color: #6c757d;
+            cursor: default;
+        }
+
+        th.header-sub-row:hover {
+            background: #f8f9fa;
+        }
+
         th.sorted {
             background: #d3d9df;
         }
@@ -326,6 +337,38 @@
             margin-top: 10px;
             font-size: 14px;
             color: #6c757d;
+        }
+
+        .header-row-setting {
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            background: #fff9e6;
+            border-radius: 8px;
+            border: 1px solid #f39c12;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-row-setting label {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+
+        .header-row-setting select {
+            padding: 6px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .header-row-note {
+            font-size: 12px;
+            color: #7f8c8d;
+            font-style: italic;
         }
 
         .folder-display {
@@ -571,6 +614,18 @@
             <div class="file-count" id="fileCount"></div>
         </div>
 
+        <div class="header-row-setting">
+            <label for="headerRowCount">📋 ヘッダー行数:</label>
+            <select id="headerRowCount" onchange="handleHeaderRowCountChange()">
+                <option value="1" selected>1行</option>
+                <option value="2">2行</option>
+                <option value="3">3行</option>
+                <option value="4">4行</option>
+                <option value="5">5行</option>
+            </select>
+            <span class="header-row-note">※CSVファイルの先頭から指定行数をヘッダーとして扱います</span>
+        </div>
+
         <div id="folderDisplay" class="folder-display" style="display: none;"></div>
 
         <div class="header-formatter" id="headerFormatter">
@@ -602,6 +657,8 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
         let tableStates = {}; // {tableName: {filter: {column, value, operator}, sort: {column, order}}}
         let enumDefinitions = {}; // {tableName: {columnName: [values]}}
         let currentFolderInfo = null; // {name: string, path: string}
+        let csvFileContents = {}; // {filename: csvContent} - 元のCSVコンテンツを保存
+        let headerRowCount = 1; // ヘッダー行数（デフォルト: 1行）
 
         document.getElementById('csvFiles').addEventListener('change', handleFiles);
         document.getElementById('csvFolder').addEventListener('change', handleFiles);
@@ -700,6 +757,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             // データストアをクリア
             csvDataStore = [];
             csvRawData = {};
+            csvFileContents = {};
             const displayHTML = [];
 
             // ファイルをアルファベット順にソート
@@ -711,6 +769,8 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
 
             for (const file of sortedFiles) {
                 const content = await file.text();
+                const displayName = file.name.replace(/\.csv$/i, '');
+                csvFileContents[displayName] = content; // 元のコンテンツを保存
                 const html = createCSVPreview(file.name, content);
                 displayHTML.push(html);
             }
@@ -758,8 +818,17 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                 return result.map(cell => cell.replace(/^"(.*)"$/, '$1'));
             };
 
-            const headers = parseCSVLine(lines[0]);
-            const dataRows = lines.slice(1).filter(line => line.trim()).map(parseCSVLine);
+            // ヘッダー行を複数行取得
+            const headerRows = [];
+            for (let i = 0; i < headerRowCount && i < lines.length; i++) {
+                headerRows.push(parseCSVLine(lines[i]));
+            }
+
+            // 最後のヘッダー行をカラム名として使用
+            const headers = headerRows[headerRows.length - 1];
+
+            // データ行はヘッダー行数の後から
+            const dataRows = lines.slice(headerRowCount).filter(line => line.trim()).map(parseCSVLine);
 
             // ファイル名から拡張子を除去（テーブル名として使用）
             const tableName = displayName;
@@ -767,6 +836,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             // 生データを保存
             csvRawData[tableName] = {
                 headers: headers,
+                headerRows: headerRows,
                 dataRows: dataRows
             };
 
@@ -785,7 +855,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             const data = csvRawData[tableName];
             if (!data) return '';
 
-            const { headers, dataRows } = data;
+            const { headers, headerRows, dataRows } = data;
             const state = tableStates[tableName];
 
             // フィルタ適用
@@ -861,21 +931,34 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                 return new Set(values).size;
             });
 
-            let tableHTML = '<table><thead><tr>';
-            headers.forEach((header, index) => {
-                const isSorted = state.sort.column === header;
-                const sortIcon = isSorted
-                    ? (state.sort.order === 'asc' ? '<span class="sort-icon">▲</span>' : '<span class="sort-icon">▼</span>')
-                    : '<span class="sort-icon" style="opacity:0.3">⇅</span>';
-                const sortedClass = isSorted ? ' class="sorted"' : '';
-                const uniqueCount = uniqueCounts[index];
+            let tableHTML = '<table><thead>';
 
-                tableHTML += `<th${sortedClass} onclick="toggleSort('${tableName}', '${escapeHTML(header)}')" title="クリックでソート">
-                    ${escapeHTML(header)}${sortIcon}
-                    <span class="unique-count">(${uniqueCount})</span>
-                </th>`;
+            // 複数行のヘッダーを表示
+            headerRows.forEach((row, rowIndex) => {
+                tableHTML += '<tr>';
+                row.forEach((cell, cellIndex) => {
+                    if (rowIndex === headerRows.length - 1) {
+                        // 最後の行にはソート機能とユニーク数を追加
+                        const isSorted = state.sort.column === cell;
+                        const sortIcon = isSorted
+                            ? (state.sort.order === 'asc' ? '<span class="sort-icon">▲</span>' : '<span class="sort-icon">▼</span>')
+                            : '<span class="sort-icon" style="opacity:0.3">⇅</span>';
+                        const sortedClass = isSorted ? ' class="sorted"' : '';
+                        const uniqueCount = uniqueCounts[cellIndex];
+
+                        tableHTML += `<th${sortedClass} onclick="toggleSort('${tableName}', '${escapeHTML(cell)}')" title="クリックでソート">
+                            ${escapeHTML(cell)}${sortIcon}
+                            <span class="unique-count">(${uniqueCount})</span>
+                        </th>`;
+                    } else {
+                        // 他の行は通常のth（ソート機能なし）
+                        tableHTML += `<th class="header-sub-row">${escapeHTML(cell)}</th>`;
+                    }
+                });
+                tableHTML += '</tr>';
             });
-            tableHTML += '</tr></thead><tbody>';
+
+            tableHTML += '</thead><tbody>';
 
             sortedRows.forEach(row => {
                 tableHTML += '<tr>';
@@ -1278,6 +1361,41 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             } else {
                 folderDisplay.style.display = 'none';
             }
+        }
+
+        // ヘッダー行数変更ハンドラ
+        function handleHeaderRowCountChange() {
+            const newCount = parseInt(document.getElementById('headerRowCount').value, 10);
+            headerRowCount = newCount;
+
+            // 既に読み込まれているファイルがあれば再レンダリング
+            if (Object.keys(csvFileContents).length > 0) {
+                reloadAllTables();
+            }
+        }
+
+        // 全テーブルを再読み込み
+        function reloadAllTables() {
+            csvDataStore = [];
+            csvRawData = {};
+            const displayHTML = [];
+
+            // ファイル名でソート
+            const sortedNames = Object.keys(csvFileContents).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+            for (const displayName of sortedNames) {
+                const content = csvFileContents[displayName];
+                const html = createCSVPreview(displayName + '.csv', content);
+                displayHTML.push(html);
+            }
+
+            document.getElementById('csvDisplay').innerHTML = displayHTML.join('');
+
+            // 整形プレビューをクリア
+            document.getElementById('formattedDisplay').innerHTML = '';
+
+            // 目次を更新
+            updateTOC();
         }
     </script>
 </body>
