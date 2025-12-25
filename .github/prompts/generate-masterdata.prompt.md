@@ -68,25 +68,34 @@ agent: 'agent'
 
 **必須**: 必ず以下のファイルを調査してください：
 
+#### CSVテンプレートファイルの取得（最優先）
+
+**重要**: CSV作成時は必ず対応するテンプレートファイルをコピーして使用してください：
+
+```bash
+# テンプレートファイルをコピー
+cp projects/glow-masterdata/sheet_schema/[ModelName].csv マスタデータ/施策/[要件を要約した日本語]/[ModelName].csv
+```
+
+テンプレートファイルの構造：
+- 1行目: `memo`（説明用）
+- 2行目: `TABLE,モデル名,モデル名,...`（各カラムが所属するテーブル）
+- 3行目: `ENABLE,カラム1,カラム2,...`（実際のヘッダー）
+
+**テンプレートファイルのヘッダー（3行目）に完全に従ってデータを作成してください。**
+
 #### 既存マスタデータの参照
 ```bash
-# 該当するマスタデータファイルを確認
+# 既存データの内容を確認（データパターンの参考に）
 cat projects/glow-masterdata/[ModelName].csv | head -10
 ```
 
 以下の情報を抽出：
-- カラム定義（1行目）
 - データ型と形式
 - 必須カラムとオプショナルカラム
 - デフォルト値やパターン
 
-#### クライアント側のデータモデル
-```bash
-# クライアント側のモデル定義を検索
-grep -r "class [ModelName]" projects/glow-client/Assets/GLOW/Scripts/
-```
-
-#### サーバー側のテーブル定義（DDL）
+#### サーバー側のテーブル定義（スキーマJSON）
 
 **重要**: テーブル名は以下のルールで変換されます：
 - モデル名（PascalCase）→ テーブル名（snake_case + 複数形）
@@ -94,18 +103,71 @@ grep -r "class [ModelName]" projects/glow-client/Assets/GLOW/Scripts/
 - 例: `MstUnit` → `mst_units`
 - 例: `MstAdventBattle` → `mst_advent_battles`
 
+**スキーマファイルの参照方法**:
+
+マスタテーブル：
 ```bash
-# サーバー側のテーブルスキーマを確認（テーブル名は小文字+アンダースコア+複数形）
-# 例: OprGacha → opr_gachas, MstUnit → mst_units
-grep -A 30 "CREATE TABLE \`[table_name]\`" projects/glow-server/api/database/schema/master_tables_ddl.sql
+# マスタテーブルの全テーブル一覧
+jq '.databases.mst.tables | keys' projects/glow-server/api/database/schema/exports/master_tables_schema.json
+
+# 特定テーブルのスキーマ全体を取得
+jq '.databases.mst.tables.opr_gachas' projects/glow-server/api/database/schema/exports/master_tables_schema.json
+
+# 特定テーブルのカラム一覧のみ取得
+jq '.databases.mst.tables.opr_gachas.columns | keys' projects/glow-server/api/database/schema/exports/master_tables_schema.json
+
+# 特定カラムの詳細情報（型、NULL可否、デフォルト値、コメント）
+jq '.databases.mst.tables.opr_gachas.columns.gacha_type' projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
-DDLから以下を確認：
+ユーザーテーブル：
+```bash
+# ユーザーテーブルの全テーブル一覧
+jq '.databases.usr.tables | keys' projects/glow-server/api/database/schema/exports/user_tables_schema.json
+
+# 特定テーブルのスキーマ取得
+jq '.databases.usr.tables.usr_users' projects/glow-server/api/database/schema/exports/user_tables_schema.json
+```
+
+**スキーマJSONの構造**:
+```json
+{
+  "databases": {
+    "mst": {
+      "tables": {
+        "テーブル名": {
+          "comment": "テーブル説明",
+          "columns": {
+            "カラム名": {
+              "type": "データ型 (例: varchar(255), enum('A','B'), int unsigned)",
+              "nullable": true/false,
+              "default": "デフォルト値",
+              "comment": "カラム説明"
+            }
+          },
+          "indexes": {
+            "PRIMARY": {...},
+            "インデックス名": {...}
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+スキーマから以下を確認：
 - カラム名とデータ型（ENUM型の選択肢も含む）
 - PRIMARY KEY、UNIQUE制約
 - NOT NULL制約、DEFAULT値
 - COMMENT（カラムの説明）
 - インデックス定義
+
+#### クライアント側のデータモデル（参考）
+```bash
+# クライアント側のモデル定義を検索
+grep -r "class [ModelName]" projects/glow-client/Assets/GLOW/Scripts/
+```
 
 ### 3. データの設計
 
@@ -142,11 +204,11 @@ e,value1,value2,value3,...
 生成したCSVファイルを以下のパスに保存：
 
 ```
-docs/マスタデータ作成/生成データ/[要件を要約した日本語]/[ModelName].csv
+マスタデータ/施策/[要件を要約した日本語]/[ModelName].csv
 ```
 
 **パス構成**:
-- `docs/マスタデータ作成/生成データ`: 固定パス
+- `マスタデータ/施策`: 固定パス
 - `[要件を要約した日本語]`: 要件を表す簡潔な日本語フォルダ名（例: `新春ガチャ`, `イベント第1弾`）
 - `[ModelName].csv`: クライアント定義のデータモデル名（例: `OprGacha.csv`, `MstUnit.csv`）
 
@@ -154,9 +216,9 @@ docs/マスタデータ作成/生成データ/[要件を要約した日本語]/[
 
 **必須**: 全てのCSVファイルを生成した後、DDLファイルと照合して整合性をチェックし、必要に応じて自動修正してください。
 
-#### 6-1. DDLファイルの参照
+#### 6-1. スキーマJSONファイルの参照
 
-各マスタデータに対応するテーブル定義をDDLファイルから取得：
+各マスタデータに対応するテーブル定義をスキーマJSONファイルから取得：
 
 ```bash
 # モデル名→テーブル名変換規則:
@@ -166,22 +228,27 @@ docs/マスタデータ作成/生成データ/[要件を要約した日本語]/[
 # 例: MstUnit → mst_units
 # 例: MstAdventBattle → mst_advent_battles
 
-# DDLからテーブル定義を取得
-grep -A 50 "CREATE TABLE \`[table_name]\`" projects/glow-server/api/database/schema/master_tables_ddl.sql
+# スキーマJSONからテーブル定義を取得（マスタテーブルの場合）
+jq '.databases.mst.tables.[table_name]' projects/glow-server/api/database/schema/exports/master_tables_schema.json
+
+# 例：OprGachaの場合
+jq '.databases.mst.tables.opr_gachas' projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
 #### 6-2. カラムの存在確認
 
-生成したCSVの1行目（カラム定義）とDDLのカラム定義を比較：
+生成したCSVのヘッダー行（テンプレートファイルの3行目）とスキーマJSONのカラム定義を比較：
 
 **チェック項目**:
-1. **CSVにあってDDLにないカラム**
-   - ❌ エラー: DDLに存在しないカラムは削除が必要
+1. **CSVにあってスキーマJSONにないカラム**
+   - ❌ エラー: スキーマJSONに存在しないカラムは削除が必要
    - 該当カラムをCSVから削除して再保存
+   - ⚠️ 注意：テンプレートファイルを使用している場合は通常発生しません
 
-2. **DDLにあってCSVにないカラム**
+2. **スキーマJSONにあってCSVにないカラム**
    - NOT NULL制約があるカラム: CSVに追加してデフォルト値を設定
    - NULL許可のカラム: `__NULL__`で追加（任意）
+   - ⚠️ 注意：テンプレートファイルを使用している場合は通常発生しません
 
 3. **カラムの順序**
    - 順序は問わないが、`ENABLE`は常に1列目
@@ -189,13 +256,16 @@ grep -A 50 "CREATE TABLE \`[table_name]\`" projects/glow-server/api/database/sch
 
 #### 6-3. データ型の検証
 
-各カラムの値がDDLのデータ型に適合しているか確認：
+各カラムの値がスキーマJSONのデータ型に適合しているか確認：
 
 **チェック項目**:
 1. **ENUM型**
-   ```sql
-   -- DDL例
-   `status` enum('active','inactive','pending') NOT NULL
+   ```json
+   // スキーマJSON例
+   {
+     "type": "enum('active','inactive','pending')",
+     "nullable": false
+   }
    ```
    - CSVの値が許可されたENUM値のみか確認
    - 不正な値があれば修正または削除
@@ -230,7 +300,7 @@ grep -A 50 "CREATE TABLE \`[table_name]\`" projects/glow-server/api/database/sch
 チェックで検出された問題を自動修正：
 
 1. **不正なカラムの削除**
-   - DDLに存在しないカラムをCSVから削除
+   - スキーマJSONに存在しないカラムをCSVから削除
    - 削除したカラム名を記録
 
 2. **不足カラムの追加**
@@ -249,14 +319,14 @@ grep -A 50 "CREATE TABLE \`[table_name]\`" projects/glow-server/api/database/sch
 修正内容を以下の形式で記録（後でREPORTに含める）：
 
 ```markdown
-## DDLスキーマ検証と修正
+## スキーマ検証と修正
 
 ### [ModelName1].csv
 - ✅ スキーマチェック完了: 問題なし
 
 ### [ModelName2].csv
 - ⚠️ 修正内容:
-  - 削除したカラム: `old_column` (DDLに存在しないため)
+  - 削除したカラム: `old_column` (スキーマJSONに存在しないため)
   - 追加したカラム: `new_required_field` (NOT NULL制約のため、デフォルト値: 0)
   - データ型修正: `status`カラムの不正値 "active_new" → "active"
 
@@ -271,7 +341,7 @@ grep -A 50 "CREATE TABLE \`[table_name]\`" projects/glow-server/api/database/sch
 **全てのマスタデータを生成した後に**、データ生成結果をMarkdown形式でレポートします：
 
 ```
-docs/マスタデータ作成/生成データ/[要件を要約した日本語]/REPORT.md
+マスタデータ/施策/[要件を要約した日本語]/REPORT.md
 ```
 
 ⚠️ **重要**: レポートを書く前に、要件に含まれる全てのマスタデータが生成されていることを確認してください。
@@ -312,9 +382,9 @@ docs/マスタデータ作成/生成データ/[要件を要約した日本語]/R
 - [既存ファイル名1]: [参照目的]
 - [既存ファイル名2]: [参照目的]
 
-## DDLスキーマ検証と修正
+## スキーマ検証と修正
 
-[ステップ6で実施したDDL検証の結果をここに記載]
+[ステップ6で実施したスキーマ検証の結果をここに記載]
 
 ### [ModelName1].csv
 - ✅ スキーマチェック完了: 問題なし
@@ -325,7 +395,8 @@ docs/マスタデータ作成/生成データ/[要件を要約した日本語]/R
 
 ## データ整合性チェック
 
-- [x] **DDLスキーマとの整合性を確認**
+- [x] **スキーマJSONとの整合性を確認**
+- [x] **CSVテンプレートファイルのヘッダーに完全に従っている**
 - [x] IDの重複がないことを確認
 - [x] 必須カラムがすべて埋まっている
 - [x] 日時形式が正しい
@@ -361,17 +432,26 @@ docs/マスタデータ作成/生成データ/[要件を要約した日本語]/R
 - **一貫性**: 命名規則やパターンを統一
 - **制約遵守**: PRIMARY KEY、UNIQUE、NOT NULL制約を満たす
 
-### DDLスキーマ検証の徹底 ⚠️
-- **必須ステップ**: CSV生成後、必ずDDLファイルと照合する
+### CSVテンプレートの活用 ✨
+- **最優先ルール**: CSVファイルは必ずテンプレートファイルをコピーして作成する
+- **ヘッダー厳守**: テンプレートファイルの3行目（ヘッダー行）に完全に従う
+- **テンプレートの構造理解**: 1行目（memo）、2行目（TABLE指定）、3行目（ヘッダー）を把握する
+- **カラム追加禁止**: テンプレートにないカラムを独自に追加しない
+
+### スキーマ検証の徹底 ⚠️
+- **必須ステップ**: CSV生成後、必ずスキーマJSONファイルと照合する
 - **自動修正**: 不正なカラムは自動削除、不足カラムは自動追加
 - **データ型チェック**: ENUM、INT、DATETIME型の値を厳密に検証
 - **制約チェック**: PRIMARY KEY重複、UNIQUE違反、NOT NULL違反を検出
 - **修正ログ**: 全ての修正内容をREPORTに記録
 
 ### 調査の徹底
+- **CSVテンプレートファイルを最優先で参照**: `projects/glow-masterdata/sheet_schema/`
 - 必ず既存のマスタデータを参照
-- クライアント・サーバー双方のモデル定義を確認
-- **DDLファイルを必ず参照**: `projects/glow-server/api/database/schema/master_tables_ddl.sql`
+- **スキーマJSONファイルを必ず参照**:
+  - マスタ: `projects/glow-server/api/database/schema/exports/master_tables_schema.json`
+  - ユーザー: `projects/glow-server/api/database/schema/exports/user_tables_schema.json`
+- **jqコマンドで効率的に参照**: テーブル一覧、カラム詳細、型情報を素早く取得
 - 関連するマスタデータも調査（外部キー参照など）
 - I18nファイルの存在も確認
 
@@ -398,13 +478,13 @@ e,unique_id_002,value1,value2,value3
 ### ディレクトリ構造
 
 ```
-docs/
-└── マスタデータ作成/
-    └── 生成データ/
-        └── [要件を要約した日本語]/
-            ├── REPORT.md
-            ├── [ModelName1].csv
-            └── [ModelName2].csv
+マスタデータ/
+└── 施策/
+    └── [要件を要約した日本語]/
+        ├── 施策ファイル構成.md
+        ├── REPORT.md
+        ├── [ModelName1].csv
+        └── [ModelName2].csv
 ```
 
 ## 注意事項
@@ -426,9 +506,15 @@ docs/
 - **外部キー**: 参照先のマスタデータが存在することを確認
 - **日付範囲**: `start_at`と`end_at`は重複や矛盾がないように設定
 
-### DDLスキーマとの整合性 ⚠️
-- **カラム検証必須**: CSV生成後、必ずDDLファイルと照合すること
-- **不正カラムの削除**: DDLに存在しないカラムは問答無用で削除
+### CSVテンプレートの活用 ⚠️
+- **テンプレートの使用必須**: CSV作成時は必ずテンプレートファイルをコピーして使用
+- **ヘッダー改変禁止**: テンプレートファイルのヘッダー（3行目）を勝手に変更しない
+- **カラム順序厳守**: テンプレートのカラム順序を保持する
+- **不要カラムの削除禁止**: テンプレートにあるカラムを独断で削除しない
+
+### スキーマJSONとの整合性 ⚠️
+- **カラム検証必須**: CSV生成後、必ずスキーマJSONファイルと照合すること
+- **不正カラムの削除**: スキーマJSONに存在しないカラムは問答無用で削除
 - **必須カラムの追加**: NOT NULL制約のあるカラムが不足している場合は追加
 - **データ型の厳守**: ENUM、INT、DATETIME型の値を厳格にチェック
 - **制約違反の修正**: PRIMARY KEY重複、UNIQUE違反は自動修正
@@ -448,9 +534,12 @@ docs/
 
 ## 関連ファイル
 
+- **CSVテンプレートファイル（最優先）**: `projects/glow-masterdata/sheet_schema/*.csv`
 - 既存マスタデータ: `projects/glow-masterdata/*.csv`
+- **スキーマJSONファイル**:
+  - マスタテーブル: `projects/glow-server/api/database/schema/exports/master_tables_schema.json`
+  - ユーザーテーブル: `projects/glow-server/api/database/schema/exports/user_tables_schema.json`
 - クライアントモデル: `projects/glow-client/Assets/GLOW/Scripts/`
-- サーバーテーブル定義: `projects/glow-server/api/database/schema/master_tables_ddl.sql`
 - バージョン設定: `config/versions.json`
 
 ## 例: 新ガチャのマスタデータ生成
@@ -460,7 +549,7 @@ docs/
 
 ### 生成されるファイル
 ```
-docs/マスタデータ作成/生成データ/新春限定ガチャ/
+マスタデータ/施策/新春限定ガチャ/
 ├── REPORT.md
 ├── OprGacha.csv
 ├── OprGachaI18n.csv
@@ -480,15 +569,16 @@ e,NewYear_2026_001,Premium,NewYear_2026,,,__NULL__,10,1,__NULL__,__NULL__,0,__NU
 このプロンプトを完了する前に、以下を必ず確認してください：
 
 1. ✅ 要件に記載された全てのマスタデータが生成されているか？
-2. ✅ 全てのCSVファイルが適切なパスに保存されているか？
-3. ✅ **DDLスキーマとの整合性チェックが完了しているか？**
-4. ✅ **DDLに存在しないカラムが削除されているか？**
-5. ✅ **必須カラムが全て含まれているか？**
-6. ✅ **データ型とENUM値が正しいか？**
-7. ✅ REPORTに「未作成のマスタデータ」セクションが存在しないか？
-8. ✅ REPORTに「DDLスキーマ検証と修正」セクションが含まれているか？
-9. ✅ データ整合性チェックが全て完了しているか？
-10. ✅ 全てのファイルが正しい形式で保存されているか？
+2. ✅ **全てのCSVファイルがテンプレートファイルからコピーして作成されているか？**
+3. ✅ 全てのCSVファイルが適切なパスに保存されているか？
+4. ✅ **スキーマJSONとの整合性チェックが完了しているか？**
+5. ✅ **スキーマJSONに存在しないカラムが削除されているか？**
+6. ✅ **必須カラムが全て含まれているか？**
+7. ✅ **データ型とENUM値が正しいか？**
+8. ✅ REPORTに「未作成のマスタデータ」セクションが存在しないか？
+9. ✅ REPORTに「スキーマ検証と修正」セクションが含まれているか？
+10. ✅ データ整合性チェックが全て完了しているか？
+11. ✅ 全てのファイルが正しい形式で保存されているか？
 
 **これら全てがYESになるまで、作業を継続してください。**
 
