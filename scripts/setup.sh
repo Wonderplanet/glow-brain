@@ -194,7 +194,8 @@ update_repository() {
         # ブランチ切り替えと更新
         if [ "${current_branch}" != "${target_branch}" ]; then
             info "ブランチを ${current_branch} から ${target_branch} に切り替えています..."
-            git fetch origin "${target_branch}:${target_branch}" --depth 1
+            # ローカルブランチを強制的に上書き（force pushに対応）
+            git fetch origin "+${target_branch}:${target_branch}" --depth 1
             git switch "${target_branch}"
         else
             info "最新の変更を取得しています..."
