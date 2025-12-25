@@ -202,9 +202,10 @@ update_repository() {
             git fetch origin "${target_branch}" --depth 1
 
             # 参照専用のため、リモートに強制的に合わせる（force pushに対応）
-            if ! git merge --ff-only "origin/${target_branch}" 2>/dev/null; then
+            # shallow cloneではリモートトラッキングブランチが作成されないため、FETCH_HEADを使用
+            if ! git merge --ff-only FETCH_HEAD 2>/dev/null; then
                 warning "履歴が分岐しています。リモートに強制的に合わせます..."
-                git reset --hard "origin/${target_branch}"
+                git reset --hard FETCH_HEAD
             fi
         fi
 
