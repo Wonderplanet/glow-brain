@@ -328,6 +328,37 @@
             color: #6c757d;
         }
 
+        .folder-display {
+            margin-bottom: 20px;
+            padding: 15px 20px;
+            background: #e8f5e9;
+            border-radius: 8px;
+            border: 1px solid #27ae60;
+        }
+
+        .folder-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .folder-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .folder-path {
+            display: block;
+            font-size: 12px;
+            color: #7f8c8d;
+            font-family: 'Courier New', monospace;
+            padding: 6px 10px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 4px;
+            word-break: break-all;
+        }
+
         .input-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -533,6 +564,8 @@
             <div class="file-count" id="fileCount"></div>
         </div>
 
+        <div id="folderDisplay" class="folder-display" style="display: none;"></div>
+
         <div class="header-formatter" id="headerFormatter">
             <h2>🔧 Spreadsheetヘッダー整形プレビュー</h2>
             <div class="info-text">
@@ -561,6 +594,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
         let csvRawData = {}; // {filename: {headers, dataRows}}
         let tableStates = {}; // {tableName: {filter: {column, value, operator}, sort: {column, order}}}
         let enumDefinitions = {}; // {tableName: {columnName: [values]}}
+        let currentFolderInfo = null; // {name: string, path: string}
 
         document.getElementById('csvFiles').addEventListener('change', handleFiles);
         document.getElementById('csvFolder').addEventListener('change', handleFiles);
@@ -623,6 +657,7 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
             const files = Array.from(event.target.files).filter(f => f.name.endsWith('.csv'));
 
             if (files.length === 0) {
+                currentFolderInfo = null;
                 document.getElementById('csvDisplay').innerHTML = `
                     <div class="empty-state">
                         <div class="empty-state-icon">📁</div>
@@ -630,9 +665,28 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                     </div>
                 `;
                 document.getElementById('fileCount').textContent = '';
+                updateFolderDisplay();
                 updateTOC();
                 return;
             }
+
+            // フォルダ情報を取得
+            if (files[0].webkitRelativePath) {
+                const parts = files[0].webkitRelativePath.split('/');
+                if (parts.length > 1) {
+                    const folderName = parts[0];
+                    const basePath = '/Users/junki.mizutani/Documents/workspace/glow/glow-brain/docs/マスタデータ作成/生成データ';
+                    const fullPath = `${basePath}/${folderName}`;
+                    currentFolderInfo = {
+                        name: folderName,
+                        path: fullPath
+                    };
+                }
+            } else {
+                currentFolderInfo = null;
+            }
+
+            updateFolderDisplay();
 
             document.getElementById('fileCount').textContent = `${files.length}個のファイルを読み込み中...`;
 
@@ -1193,6 +1247,24 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
                 setTimeout(() => {
                     target.classList.remove('highlight');
                 }, 1500);
+            }
+        }
+
+        // フォルダ情報を表示
+        function updateFolderDisplay() {
+            const folderDisplay = document.getElementById('folderDisplay');
+            if (currentFolderInfo) {
+                folderDisplay.innerHTML = `
+                    <div class="folder-info">
+                        <div class="folder-name">📁 ${escapeHTML(currentFolderInfo.name)}</div>
+                        <div class="folder-path">
+                            ${escapeHTML(currentFolderInfo.path)}
+                        </div>
+                    </div>
+                `;
+                folderDisplay.style.display = 'block';
+            } else {
+                folderDisplay.style.display = 'none';
             }
         }
     </script>
