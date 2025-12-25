@@ -1,0 +1,7 @@
+ENABLE,id,type,group_type,rarity,asset_key,effect_value,sort_order,start_date,end_date,release_key,item_type,mst_series_id,destination_opr_product_id
+e,piece_you_00201,Fragment,CharacterFragment,SR,piece_you_00201,__NULL__,4501,__NULL__,__NULL__,202602010,Fragment,you,__NULL__
+e,piece_you_00301,Fragment,CharacterFragment,SR,piece_you_00301,__NULL__,4502,__NULL__,__NULL__,202602010,Fragment,you,__NULL__
+e,memory_chara_you_00201,Memory,CharacterRankUp,SR,memory_chara_you_00201,__NULL__,4503,__NULL__,__NULL__,202602010,Memory,you,__NULL__
+e,memory_chara_you_00301,Memory,CharacterRankUp,SR,memory_chara_you_00301,__NULL__,4504,__NULL__,__NULL__,202602010,Memory,you,__NULL__
+e,emblem_event_you_00001,Emblem,Emblem,__NULL__,emblem_event_you_00001,__NULL__,4505,__NULL__,__NULL__,202602010,Emblem,you,__NULL__
+e,emblem_event_you_00002,Emblem,Emblem,__NULL__,emblem_event_you_00002,__NULL__,4506,__NULL__,__NULL__,202602010,Emblem,you,__NULL__
