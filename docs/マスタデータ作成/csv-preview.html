@@ -511,6 +511,13 @@
             color: white;
         }
 
+        .toc-count {
+            margin-left: 6px;
+            font-size: 11px;
+            color: rgba(236, 240, 241, 0.6);
+            font-weight: 400;
+        }
+
         .toc-link.formatted {
             background: rgba(52, 152, 219, 0.2);
             color: #3498db;
@@ -1206,10 +1213,13 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
 
             // 整形済みデータへのリンク
             if (document.getElementById('formatted-data')) {
+                const formattedTable = document.querySelector('#formatted-data tbody');
+                const formattedCount = formattedTable ? formattedTable.querySelectorAll('tr').length : 0;
                 tocHTML += `
                     <li class="toc-item">
                         <a href="#formatted-data" class="toc-link formatted" onclick="smoothScroll(event, 'formatted-data')">
                             🔧 整形済みデータ
+                            <span class="toc-count">(${formattedCount}件)</span>
                         </a>
                     </li>
                 `;
@@ -1217,10 +1227,12 @@ ENABLE    id    type    rarity    name.ja    description.ja"></textarea>
 
             // 各テーブルへのリンク
             tableNames.forEach(tableName => {
+                const recordCount = csvRawData[tableName].dataRows.length;
                 tocHTML += `
                     <li class="toc-item">
                         <a href="#table-${escapeHTML(tableName)}" class="toc-link" onclick="smoothScroll(event, 'table-${escapeHTML(tableName)}')">
                             ${escapeHTML(tableName)}
+                            <span class="toc-count">(${recordCount}件)</span>
                         </a>
                     </li>
                 `;
