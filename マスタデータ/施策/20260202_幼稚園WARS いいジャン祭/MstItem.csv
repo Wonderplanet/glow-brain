@@ -1,0 +1,11 @@
+memo,幼稚園WARSいいジャン祭の報酬アイテム
+TABLE,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItemI18n,MstItemI18n
+ENABLE,id,type,group_type,rarity,asset_key,effect_value,sort_order,start_date,end_date,release_key,item_type,mst_series_id,destination_opr_product_id,name.ja,description.ja
+e,piece_you_00201,CharacterFragment,Etc,R,piece_you_00201,,500,"2026-02-02 15:00:00","2030-01-01 00:00:00",202602010,CharacterFragment,8,,ダグのかけら,ダグのグレードアップに使用するアイテム
+e,piece_you_00301,CharacterFragment,Etc,R,piece_you_00301,,501,"2026-02-02 15:00:00","2030-01-01 00:00:00",202602010,CharacterFragment,8,,ハナのかけら,ハナのグレードアップに使用するアイテム
+e,unit_memory_you_00201,RankUpMaterial,Etc,R,unit_memory_you_00201,chara_you_00201,1100,"2026-02-02 15:00:00","2030-01-01 00:00:00",202602010,RankUpMaterial,8,,ダグのカラーメモリー,ダグのLv.上限開放に使用するアイテム
+e,unit_memory_you_00301,RankUpMaterial,Etc,R,unit_memory_you_00301,chara_you_00301,1101,"2026-02-02 15:00:00","2030-01-01 00:00:00",202602010,RankUpMaterial,8,,ハナのカラーメモリー,ハナのLv.上限開放に使用するアイテム
+e,piece_sur_00501,CharacterFragment,Etc,UR,piece_sur_00501,,502,"2026-02-02 15:00:00","2030-01-01 00:00:00",202602010,CharacterFragment,4,,空間を操る六番組組長 出雲 天花のかけら,出雲 天花のグレードアップに使用するアイテム
+e,piece_sur_00601,CharacterFragment,Etc,SSR,piece_sur_00601,,503,"2026-02-02 15:00:00","2030-01-01 00:00:00",202602010,CharacterFragment,4,,東 八千穂のかけら,東 八千穂のグレードアップに使用するアイテム
+e,ticket_you_00001,GachaTicket,Consumable,UR,ticket_you_00001,,400,"2026-02-02 15:00:00","2030-01-01 00:00:00",202602010,GachaTicket,8,,幼稚園WARSいいジャン祭 ピックアップガシャチケット,幼稚園WARSいいジャン祭 ピックアップガシャで使用できるチケット
+e,ticket_you_00002,GachaTicket,Consumable,SR,ticket_you_00002,,401,"2026-02-02 15:00:00","2030-01-01 00:00:00",202602010,GachaTicket,8,,スペシャルガシャチケット,スペシャルガシャで使用できるチケット
