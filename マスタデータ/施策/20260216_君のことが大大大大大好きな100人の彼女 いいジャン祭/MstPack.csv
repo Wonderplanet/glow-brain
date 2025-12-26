@@ -1,0 +1,2 @@
+ENABLE,id,product_sub_id,discount_rate,is_first_time_free,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,cost_amount,is_recommend,asset_key,pack_decoration,release_key
+e,event_item_pack_6,35,25.74,0,__NULL__,0,2026-02-16 15:00:00~2026-03-16 10:59:00,1,Normal,1,Cash,3000,1,100kano_pack,__NULL__,202602160

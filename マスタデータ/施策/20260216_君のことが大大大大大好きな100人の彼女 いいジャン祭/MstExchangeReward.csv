@@ -1,0 +1,13 @@
+memo
+TABLE,MstExchangeReward,MstExchangeReward,MstExchangeReward,MstExchangeReward,MstExchangeReward,MstExchangeReward
+ENABLE,id,mst_exchange_lineup_id,resource_type,resource_id,resource_amount,release_key
+e,100kano_reward_01,100kano_lineup_01,Ticket,ssr_gacha_ticket,1,202602160
+e,100kano_reward_02,100kano_lineup_02,Ticket,ssr_gacha_ticket,1,202602160
+e,100kano_reward_03,100kano_lineup_03,Item,prism,30,202602160
+e,100kano_reward_04,100kano_lineup_04,Item,prism,50,202602160
+e,100kano_reward_05,100kano_lineup_05,Ticket,pickup_gacha_ticket,1,202602160
+e,100kano_reward_06,100kano_lineup_06,Item,memory_fragment_low,50,202602160
+e,100kano_reward_07,100kano_lineup_07,Item,memory_fragment_mid,20,202602160
+e,100kano_reward_08,100kano_lineup_08,Item,memory_fragment_high,5,202602160
+e,100kano_reward_09,100kano_lineup_09,Item,color_memory_red,50,202602160
+e,100kano_reward_10,100kano_lineup_10,Item,color_memory_gray,50,202602160
