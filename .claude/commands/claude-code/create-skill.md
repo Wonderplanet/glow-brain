@@ -56,21 +56,41 @@ Claude Code skillsは、複雑なワークフローや複数のファイル、�
 
 ### ステップ2: skill-creatorスキルの起動
 
-Skillツールを使用して、公式のskill-creatorスキルを起動します：
+**重要な前提**:
+- このコマンドは `.claude/skills/[skill-name]/` ディレクトリ形式でスキルを完成させます
+- .skillパッケージファイルは作成しません
+- skill-creatorのStep 1-4のみを活用します
+
+Skillツールを使用して、skill-creatorスキルを起動します：
 
 ```
-Skill(skill: "example-skills:skill-creator", args: "[要件]")
+Skill(skill: "example-skills:skill-creator", args: "[要件]
+
+## 実装スコープ
+- Step 1-4（理解、計画、初期化、編集）を実行
+- スキルは.claude/skills/[skill-name]/ディレクトリ形式で完成
+- Step 5（Packaging）は不要です - package_skill.pyを実行しないでください")
 ```
 
-**重要**: 要件には以下を含めることを推奨してください：
+**skill-creatorへの明示的な指示**:
+1. Step 1: 具体例でスキルを理解
+2. Step 2: 再利用可能なコンテンツを計画
+3. Step 3: init_skill.pyでスキルを初期化（`.claude/skills/`配下）
+4. Step 4: SKILL.mdとリソースを編集・検証
+5. **Step 5はスキップ** - ディレクトリ形式で完成とします
+
+**要件に含めることを推奨**：
 - スキルが解決する問題
 - 対象となるファイル形式やユースケース
 - 必要な機能の概要
 
 ### ステップ3: skill-creatorに任せる
 
-skill-creatorスキルが自動的に以下を実行します：
+skill-creatorがStep 1-4を自動実行します。あなたは必要な情報を提供してください。
 
+**注意**: Step 5（パッケージング）の段階に到達したら、「ディレクトリ形式で完成しました」と報告し、package_skill.pyは実行しないでください。
+
+skill-creatorが実行する内容:
 1. 要件の詳細なヒアリング
 2. スキルの構造設計
 3. SKILL.mdの作成
@@ -85,9 +105,17 @@ skill-creatorスキルが自動的に以下を実行します：
 skill-creatorが完了したら、以下を確認してユーザーに報告します：
 
 - 作成されたスキルの配置場所（`.claude/skills/[skill-name]/`）
+- SKILL.mdの存在確認
 - スキルの起動方法
 - スキルの説明文（description）
 - 含まれるファイルの一覧
+
+**確認コマンド例**:
+```bash
+ls -la .claude/skills/[skill-name]/
+```
+
+**重要**: .skillパッケージファイルが作成されていないことを確認してください。ディレクトリ形式のみで完成です。
 
 ## ベストプラクティス
 
