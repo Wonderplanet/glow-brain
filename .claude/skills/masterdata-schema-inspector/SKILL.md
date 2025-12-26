@@ -1,13 +1,13 @@
 ---
 name: masterdata-schema-inspector
-description: GLOWマスタデータのスキーマ情報を調査・提示。モデル名からテーブル定義、ENUM選択肢、制約情報を抽出します。マスタデータのスキーマ、テーブル定義、CSV形式で使用。
+description: マスタデータのスキーマ情報を調査・提示。モデル名からテーブル定義、ENUM選択肢、制約情報を抽出します。マスタデータのスキーマ、テーブル定義、CSV形式で使用。
 allowed-tools: Read, Bash(jq:*), Bash(cat:*), Bash(head:*), Bash(tail:*), Grep, Glob
 argument-hint: モデル名（例: OprGacha, MstUnit, MstAdventBattle）
 ---
 
-# GLOW マスタデータ スキーマ調査スキル
+# マスタデータ スキーマ調査スキル
 
-このスキルは、GLOWプロジェクトのマスタデータモデルのスキーマ情報を調査し、以下の情報を提示します:
+このスキルは、プロジェクトのマスタデータモデルのスキーマ情報を調査し、以下の情報を提示します:
 
 - テーブル定義（カラム名、データ型、制約）
 - ENUM型の選択肢
@@ -322,4 +322,4 @@ head -5 projects/glow-masterdata/OprGacha.csv
 
 ---
 
-このスキルを使用することで、GLOWマスタデータのスキーマ情報を効率的に調査できます。
+このスキルを使用することで、マスタデータのスキーマ情報を効率的に調査できます。
