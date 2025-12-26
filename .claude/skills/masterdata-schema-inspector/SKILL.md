@@ -1,5 +1,5 @@
 ---
-name: glow-masterdata-schema-inspector
+name: masterdata-schema-inspector
 description: GLOWマスタデータのスキーマ情報を調査・提示。モデル名からテーブル定義、ENUM選択肢、制約情報を抽出します。マスタデータのスキーマ、テーブル定義、CSV形式で使用。
 allowed-tools: Read, Bash(jq:*), Bash(cat:*), Bash(head:*), Bash(tail:*), Grep, Glob
 argument-hint: モデル名（例: OprGacha, MstUnit, MstAdventBattle）
@@ -58,14 +58,14 @@ argument-hint: モデル名（例: OprGacha, MstUnit, MstAdventBattle）
 
 ```bash
 # モデル名をテーブル名に変換
-bash .claude/skills/glow-masterdata-schema-inspector/scripts/convert_model_to_table.sh <ModelName>
+bash .claude/skills/masterdata-schema-inspector/scripts/convert_model_to_table.sh <ModelName>
 ```
 
 ### ステップ2: スキーマJSONからテーブル定義を取得
 
 ```bash
 # テーブル定義をJSON形式で取得
-bash .claude/skills/glow-masterdata-schema-inspector/scripts/extract_schema.sh <table_name>
+bash .claude/skills/masterdata-schema-inspector/scripts/extract_schema.sh <table_name>
 ```
 
 ### ステップ3: カラム情報の解析
@@ -269,8 +269,8 @@ cp projects/glow-masterdata/sheet_schema/<ModelName>.csv マスタデータ/施�
 
 ## 関連ファイル
 
-- スクリプト1: `.claude/skills/glow-masterdata-schema-inspector/scripts/convert_model_to_table.sh`
-- スクリプト2: `.claude/skills/glow-masterdata-schema-inspector/scripts/extract_schema.sh`
+- スクリプト1: `.claude/skills/masterdata-schema-inspector/scripts/convert_model_to_table.sh`
+- スクリプト2: `.claude/skills/masterdata-schema-inspector/scripts/extract_schema.sh`
 - スキーマJSON（マスタ）: `projects/glow-server/api/database/schema/exports/master_tables_schema.json`
 - スキーマJSON（ユーザー）: `projects/glow-server/api/database/schema/exports/user_tables_schema.json`
 - CSVテンプレート: `projects/glow-masterdata/sheet_schema/*.csv`
@@ -282,11 +282,11 @@ cp projects/glow-masterdata/sheet_schema/<ModelName>.csv マスタデータ/施�
 
 ```bash
 # 1. テーブル名変換
-bash .claude/skills/glow-masterdata-schema-inspector/scripts/convert_model_to_table.sh OprGacha
+bash .claude/skills/masterdata-schema-inspector/scripts/convert_model_to_table.sh OprGacha
 # 出力: opr_gachas
 
 # 2. スキーマ取得
-bash .claude/skills/glow-masterdata-schema-inspector/scripts/extract_schema.sh opr_gachas
+bash .claude/skills/masterdata-schema-inspector/scripts/extract_schema.sh opr_gachas
 # 出力: JSON形式のテーブル定義
 
 # 3. テンプレートファイル確認

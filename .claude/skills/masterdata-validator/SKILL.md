@@ -1,5 +1,5 @@
 ---
-name: glow-masterdata-validator
+name: masterdata-validator
 description: 生成されたGLOWマスタデータCSVをスキーマJSONと照合し、整合性を検証・自動修正します。ENUM、NOT NULL、PRIMARY KEY制約をチェック。マスタデータの検証、スキーマとの整合性で使用。
 allowed-tools: Read, Edit, Write, Bash(jq:*), Bash(cat:*), Bash(sed:*), Grep
 argument-hint: CSVファイルパス モデル名
@@ -49,7 +49,7 @@ REPORT.mdの「スキーマ検証と修正」セクションに記載する内�
 ```bash
 # 補助スクリプトを使用してスキーマ取得の準備
 # モデル名→テーブル名変換
-bash .claude/skills/glow-masterdata-schema-inspector/scripts/convert_model_to_table.sh <ModelName>
+bash .claude/skills/masterdata-schema-inspector/scripts/convert_model_to_table.sh <ModelName>
 
 # スキーマJSONファイルのパス決定
 # - mst_*, opr_* で始まる場合: master_tables_schema.json
@@ -223,7 +223,7 @@ NOT_NULL_COLUMNS=$(echo "$TABLE_SCHEMA" | jq -r '.columns | to_entries[] | selec
 
 補助スクリプトを使用して効率的に検証を実行:
 ```bash
-bash .claude/skills/glow-masterdata-validator/scripts/validate_csv.sh <csv_file_path> <model_name>
+bash .claude/skills/masterdata-validator/scripts/validate_csv.sh <csv_file_path> <model_name>
 ```
 
 出力はJSON形式で、以下の情報を含みます:
@@ -329,10 +329,10 @@ CSV作成時に`projects/glow-masterdata/sheet_schema/<ModelName>.csv`をコピ�
 
 ## 関連ファイル
 
-- スクリプト: `.claude/skills/glow-masterdata-validator/scripts/validate_csv.sh`
+- スクリプト: `.claude/skills/masterdata-validator/scripts/validate_csv.sh`
 - スキーマJSON（マスタ）: `projects/glow-server/api/database/schema/exports/master_tables_schema.json`
 - スキーマJSON（ユーザー）: `projects/glow-server/api/database/schema/exports/user_tables_schema.json`
-- 依存スキル: `glow-masterdata-schema-inspector` (モデル名→テーブル名変換)
+- 依存スキル: `masterdata-schema-inspector` (モデル名→テーブル名変換)
 
 ## 例: OprGacha の検証
 
@@ -340,7 +340,7 @@ CSV作成時に`projects/glow-masterdata/sheet_schema/<ModelName>.csv`をコピ�
 
 ```bash
 # 補助スクリプトを使用した検証
-bash .claude/skills/glow-masterdata-validator/scripts/validate_csv.sh \
+bash .claude/skills/masterdata-validator/scripts/validate_csv.sh \
     マスタデータ/施策/新春ガチャ/OprGacha.csv \
     OprGacha
 ```

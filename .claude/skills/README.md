@@ -6,7 +6,7 @@
 
 ### 層1: 基盤スキル（独立実行可能）
 
-#### 1. `glow-masterdata-schema-inspector`
+#### 1. `masterdata-schema-inspector`
 **役割**: スキーマ情報の調査・提示（読み取り専用）
 
 - モデル名からテーブル定義、ENUM選択肢、制約情報を抽出
@@ -18,12 +18,12 @@
 
 **使用例**:
 ```
-Skill(skill: "glow-masterdata-schema-inspector", args: "OprGacha")
+Skill(skill: "masterdata-schema-inspector", args: "OprGacha")
 ```
 
 ---
 
-#### 2. `glow-masterdata-validator`
+#### 2. `masterdata-validator`
 **役割**: 生成済みCSVファイルの検証と自動修正
 
 - CSVヘッダーとスキーマJSONの照合
@@ -35,14 +35,14 @@ Skill(skill: "glow-masterdata-schema-inspector", args: "OprGacha")
 
 **使用例**:
 ```
-Skill(skill: "glow-masterdata-validator", args: "マスタデータ/施策/新春ガチャ/OprGacha.csv OprGacha")
+Skill(skill: "masterdata-validator", args: "マスタデータ/施策/新春ガチャ/OprGacha.csv OprGacha")
 ```
 
 ---
 
 ### 層2: ワークフロースキル
 
-#### 3. `glow-masterdata-requirement-analyzer`
+#### 3. `masterdata-requirement-analyzer`
 **役割**: 要件フォルダを分析してドキュメント生成
 
 - 要件フォルダのファイル一覧を取得
@@ -52,43 +52,43 @@ Skill(skill: "glow-masterdata-validator", args: "マスタデータ/施策/新�
 
 **使用例**:
 ```
-Skill(skill: "glow-masterdata-requirement-analyzer", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-requirement-analyzer", args: "マスタデータ/施策/新春ガチャ")
 ```
 
 ---
 
-#### 4. `glow-masterdata-generator`
+#### 4. `masterdata-generator`
 **役割**: 要件に基づくマスタデータ生成
 
 - 要件の分析とマスタデータリストアップ
-- `glow-masterdata-schema-inspector` でスキーマ調査
+- `masterdata-schema-inspector` でスキーマ調査
 - テンプレートファイルをコピーしてCSV生成
-- `glow-masterdata-validator` でスキーマ検証
+- `masterdata-validator` でスキーマ検証
 - REPORT.md生成
 - **トリガー**: マスタデータを生成、GLOWマスタデータ作成、要件からマスタデータ
-- **依存**: `glow-masterdata-schema-inspector`, `glow-masterdata-validator`
+- **依存**: `masterdata-schema-inspector`, `masterdata-validator`
 
 **使用例**:
 ```
-Skill(skill: "glow-masterdata-generator", args: "新春限定ガチャを追加。期間は2026年1月1日〜1月31日。10連ガチャで1回確定報酬あり。")
+Skill(skill: "masterdata-generator", args: "新春限定ガチャを追加。期間は2026年1月1日〜1月31日。10連ガチャで1回確定報酬あり。")
 ```
 
 ---
 
 ### 層3: 統合ワークフロースキル
 
-#### 5. `glow-masterdata-full-workflow`
+#### 5. `masterdata-full-workflow`
 **役割**: フル実行ワークフロー
 
-- `glow-masterdata-requirement-analyzer` を実行
-- `glow-masterdata-generator` を実行
+- `masterdata-requirement-analyzer` を実行
+- `masterdata-generator` を実行
 - 全成果物の確認
 - **トリガー**: マスタデータフル実行、施策のマスタデータを作成
-- **依存**: `glow-masterdata-requirement-analyzer`, `glow-masterdata-generator`
+- **依存**: `masterdata-requirement-analyzer`, `masterdata-generator`
 
 **使用例**:
 ```
-Skill(skill: "glow-masterdata-full-workflow", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-full-workflow", args: "マスタデータ/施策/新春ガチャ")
 ```
 
 ---
@@ -97,7 +97,7 @@ Skill(skill: "glow-masterdata-full-workflow", args: "マスタデータ/施策/�
 
 ```
 ┌─────────────────────────────────────────┐
-│ glow-masterdata-full-workflow (統合)     │
+│ masterdata-full-workflow (統合)     │
 │ - 要件分析→データ生成→検証を一括実行    │
 └──────────┬──────────────────┬───────────┘
            ↓                  ↓
@@ -123,7 +123,7 @@ Skill(skill: "glow-masterdata-full-workflow", args: "マスタデータ/施策/�
 施策ディレクトリに要件フォルダを準備済みの場合:
 
 ```
-Skill(skill: "glow-masterdata-full-workflow", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-full-workflow", args: "マスタデータ/施策/新春ガチャ")
 ```
 
 **出力**:
@@ -138,19 +138,19 @@ Skill(skill: "glow-masterdata-full-workflow", args: "マスタデータ/施策/�
 #### 2-1. スキーマ調査のみ
 
 ```
-Skill(skill: "glow-masterdata-schema-inspector", args: "OprGacha")
+Skill(skill: "masterdata-schema-inspector", args: "OprGacha")
 ```
 
 #### 2-2. データ生成のみ
 
 ```
-Skill(skill: "glow-masterdata-generator", args: "新春限定ガチャを追加...")
+Skill(skill: "masterdata-generator", args: "新春限定ガチャを追加...")
 ```
 
 #### 2-3. 検証のみ
 
 ```
-Skill(skill: "glow-masterdata-validator", args: "マスタデータ/施策/新春ガチャ/OprGacha.csv OprGacha")
+Skill(skill: "masterdata-validator", args: "マスタデータ/施策/新春ガチャ/OprGacha.csv OprGacha")
 ```
 
 ---
@@ -160,21 +160,21 @@ Skill(skill: "glow-masterdata-validator", args: "マスタデータ/施策/新�
 ### モデル名→テーブル名変換
 
 ```bash
-bash .claude/skills/glow-masterdata-schema-inspector/scripts/convert_model_to_table.sh OprGacha
+bash .claude/skills/masterdata-schema-inspector/scripts/convert_model_to_table.sh OprGacha
 # 出力: opr_gachas
 ```
 
 ### スキーマJSON抽出
 
 ```bash
-bash .claude/skills/glow-masterdata-schema-inspector/scripts/extract_schema.sh opr_gachas
+bash .claude/skills/masterdata-schema-inspector/scripts/extract_schema.sh opr_gachas
 # 出力: JSON形式のテーブル定義
 ```
 
 ### CSV検証
 
 ```bash
-bash .claude/skills/glow-masterdata-validator/scripts/validate_csv.sh \
+bash .claude/skills/masterdata-validator/scripts/validate_csv.sh \
     マスタデータ/施策/新春ガチャ/OprGacha.csv \
     OprGacha
 # 出力: JSON形式の検証結果
@@ -188,9 +188,9 @@ bash .claude/skills/glow-masterdata-validator/scripts/validate_csv.sh \
 
 | 既存プロンプト | 対応スキル |
 |---------------|----------|
-| マスタデータ-0.フル実行 | `glow-masterdata-full-workflow` |
-| マスタデータ-1.要件ファイル構成生成 | `glow-masterdata-requirement-analyzer` |
-| マスタデータ-2.データ生成 | `glow-masterdata-generator` |
+| マスタデータ-0.フル実行 | `masterdata-full-workflow` |
+| マスタデータ-1.要件ファイル構成生成 | `masterdata-requirement-analyzer` |
+| マスタデータ-2.データ生成 | `masterdata-generator` |
 
 既存プロンプトは削除されず、段階的に移行できます。
 
@@ -203,11 +203,11 @@ bash .claude/skills/glow-masterdata-validator/scripts/validate_csv.sh \
 - テンプレートの3行目（ヘッダー）を改変しない
 
 ### スキーマ検証の徹底
-- CSV生成後、必ず`glow-masterdata-validator`で検証
+- CSV生成後、必ず`masterdata-validator`で検証
 - ENUM型、NOT NULL制約、PRIMARY KEY制約を厳密にチェック
 
 ### タスク完遂駆動
-- `glow-masterdata-generator` は途中終了せず、全マスタデータを完成させる
+- `masterdata-generator` は途中終了せず、全マスタデータを完成させる
 - 「未作成のマスタデータ」セクションを作成しない
 - 不明点は既存データから推測して実装継続
 
@@ -234,8 +234,8 @@ chmod +x .claude/skills/*/scripts/*.sh
 ### 依存スキルが見つからない
 
 スキルの依存関係を確認:
-- `glow-masterdata-generator` → `schema-inspector`, `validator`
-- `glow-masterdata-full-workflow` → `requirement-analyzer`, `generator`
+- `masterdata-generator` → `schema-inspector`, `validator`
+- `masterdata-full-workflow` → `requirement-analyzer`, `generator`
 
 ---
 

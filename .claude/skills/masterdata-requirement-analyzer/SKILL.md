@@ -1,5 +1,5 @@
 ---
-name: glow-masterdata-requirement-analyzer
+name: masterdata-requirement-analyzer
 description: GLOW施策の要件フォルダを分析し、要件ファイル構成ドキュメントを生成。要件ファイル構成、要件を分析で使用。
 allowed-tools: Read, Write, Glob, Grep
 argument-hint: 施策ディレクトリパス
@@ -226,7 +226,7 @@ Markdownファイルとして出力
 
 スキルを起動:
 ```
-Skill(skill: "glow-masterdata-requirement-analyzer", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-requirement-analyzer", args: "マスタデータ/施策/新春ガチャ")
 ```
 
 この場合、以下のフォルダを分析:

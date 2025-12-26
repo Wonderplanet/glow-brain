@@ -1,5 +1,5 @@
 ---
-name: glow-masterdata-full-workflow
+name: masterdata-full-workflow
 description: GLOW施策のマスタデータ生成フルワークフロー。要件分析→データ生成→検証を一括実行。マスタデータフル実行、施策のマスタデータを作成で使用。
 allowed-tools: Skill
 argument-hint: 施策ディレクトリパス
@@ -38,10 +38,10 @@ argument-hint: 施策ディレクトリパス
 
 ### ステップ1: 要件ファイル構成ドキュメントの生成
 
-`glow-masterdata-requirement-analyzer` スキルを実行してください:
+`masterdata-requirement-analyzer` スキルを実行してください:
 
 ```
-Skill(skill: "glow-masterdata-requirement-analyzer", args: "<施策ディレクトリパス>")
+Skill(skill: "masterdata-requirement-analyzer", args: "<施策ディレクトリパス>")
 ```
 
 これにより、`[施策ディレクトリ]/要件ファイル構成.md` が生成されます。
@@ -53,16 +53,16 @@ Skill(skill: "glow-masterdata-requirement-analyzer", args: "<施策ディレク�
 
 ### ステップ2: マスタデータの生成
 
-ステップ1が完了したら、`glow-masterdata-generator` スキルを実行してください:
+ステップ1が完了したら、`masterdata-generator` スキルを実行してください:
 
 ```
-Skill(skill: "glow-masterdata-generator", args: "要件ファイル構成.mdと要件フォルダの内容から、マスタデータを生成してください。出力先は<施策ディレクトリ>直下。")
+Skill(skill: "masterdata-generator", args: "要件ファイル構成.mdと要件フォルダの内容から、マスタデータを生成してください。出力先は<施策ディレクトリ>直下。")
 ```
 
 または、より具体的な要件を指定:
 
 ```
-Skill(skill: "glow-masterdata-generator", args: "<具体的な要件の説明>")
+Skill(skill: "masterdata-generator", args: "<具体的な要件の説明>")
 ```
 
 これにより、施策ディレクトリ直下に全てのマスタデータCSVとREPORT.mdが生成されます。
@@ -140,12 +140,12 @@ Skill(skill: "glow-masterdata-generator", args: "<具体的な要件の説明>")
 
 このスキルは以下のスキルに依存します:
 
-- `glow-masterdata-requirement-analyzer`: 要件ファイル構成分析
-- `glow-masterdata-generator`: マスタデータ生成
+- `masterdata-requirement-analyzer`: 要件ファイル構成分析
+- `masterdata-generator`: マスタデータ生成
 
 間接的な依存:
-- `glow-masterdata-schema-inspector`: スキーマ情報調査（generatorから呼び出し）
-- `glow-masterdata-validator`: CSV検証（generatorから呼び出し）
+- `masterdata-schema-inspector`: スキーマ情報調査（generatorから呼び出し）
+- `masterdata-validator`: CSV検証（generatorから呼び出し）
 
 ## 使用例
 
@@ -153,7 +153,7 @@ Skill(skill: "glow-masterdata-generator", args: "<具体的な要件の説明>")
 
 スキルを起動:
 ```
-Skill(skill: "glow-masterdata-full-workflow", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-full-workflow", args: "マスタデータ/施策/新春ガチャ")
 ```
 
 ### 前提条件

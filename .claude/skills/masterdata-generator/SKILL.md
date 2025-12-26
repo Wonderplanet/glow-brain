@@ -1,5 +1,5 @@
 ---
-name: glow-masterdata-generator
+name: masterdata-generator
 description: 要件に基づいてGLOWマスタデータを生成。スキーマ調査、CSV生成、検証、レポート作成を一括実行。マスタデータを生成、GLOWマスタデータ作成で使用。
 allowed-tools: Read, Write, Bash, Skill, TodoWrite, Task
 argument-hint: 要件の説明
@@ -74,7 +74,7 @@ TodoWrite([
 **必須**: 必ず以下のスキルを使用してスキーマ情報を調査してください:
 
 ```
-Skill(skill: "glow-masterdata-schema-inspector", args: "<ModelName>")
+Skill(skill: "masterdata-schema-inspector", args: "<ModelName>")
 ```
 
 このスキルで取得する情報:
@@ -139,7 +139,7 @@ e,value1,value2,value3,...
 **必須**: 全てのCSVファイルを生成した後、以下のスキルで検証してください:
 
 ```
-Skill(skill: "glow-masterdata-validator", args: "<csv_file_path> <ModelName>")
+Skill(skill: "masterdata-validator", args: "<csv_file_path> <ModelName>")
 ```
 
 このスキルで実施される検証:
@@ -198,7 +198,7 @@ Skill(skill: "glow-masterdata-validator", args: "<csv_file_path> <ModelName>")
 
 ## スキーマ検証と修正
 
-[glow-masterdata-validator スキルで実施したスキーマ検証の結果をここに記載]
+[masterdata-validator スキルで実施したスキーマ検証の結果をここに記載]
 
 ### [ModelName1].csv
 - ✅ スキーマチェック完了: 問題なし
@@ -253,7 +253,7 @@ Skill(skill: "glow-masterdata-validator", args: "<csv_file_path> <ModelName>")
 - **カラム追加禁止**: テンプレートにないカラムを独自に追加しない
 
 ### スキーマ検証の徹底 ⚠️
-- **必須ステップ**: CSV生成後、必ずglow-masterdata-validatorスキルで検証する
+- **必須ステップ**: CSV生成後、必ずmasterdata-validatorスキルで検証する
 - **自動修正**: 不正なカラムは自動削除、不足カラムは自動追加
 - **データ型チェック**: ENUM、INT、DATETIME型の値を厳密に検証
 - **制約チェック**: PRIMARY KEY重複、UNIQUE違反、NOT NULL違反を検出
@@ -277,8 +277,8 @@ Skill(skill: "glow-masterdata-validator", args: "<csv_file_path> <ModelName>")
 
 このスキルは以下のスキルに依存します:
 
-- `glow-masterdata-schema-inspector`: スキーマ情報の調査
-- `glow-masterdata-validator`: CSV検証と自動修正
+- `masterdata-schema-inspector`: スキーマ情報の調査
+- `masterdata-validator`: CSV検証と自動修正
 
 ## ディレクトリ構造
 
@@ -299,7 +299,7 @@ Skill(skill: "glow-masterdata-validator", args: "<csv_file_path> <ModelName>")
 
 スキルを起動:
 ```
-Skill(skill: "glow-masterdata-generator", args: "新春限定ガチャを追加。期間は2026年1月1日〜1月31日。10連ガチャで1回確定報酬あり。")
+Skill(skill: "masterdata-generator", args: "新春限定ガチャを追加。期間は2026年1月1日〜1月31日。10連ガチャで1回確定報酬あり。")
 ```
 
 ### 期待される動作
