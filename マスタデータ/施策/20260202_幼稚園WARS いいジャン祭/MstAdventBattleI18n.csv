@@ -1,0 +1,5 @@
+memo
+TABLE,MstAdventBattleI18n,MstAdventBattleI18n,MstAdventBattleI18n,MstAdventBattleI18n,MstAdventBattleI18n,MstAdventBattleI18n
+ENABLE,id,mst_advent_battle_id,language,name,boss_description,release_key
+e,quest_you_00001_i18n_ja,quest_you_00001,ja,誰の依頼だ？,__NULL__,202602010
+e,quest_you_00001_i18n_en,quest_you_00001,en,Who's Request?,__NULL__,202602010

@@ -1,0 +1,9 @@
+memo
+TABLE,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward
+ENABLE,id,mst_advent_battle_id,reward_category,resource_type,resource_id,resource_amount,percentage,sort_order,release_key
+e,quest_you_00001_clear_reward_1,quest_you_00001,Always,Coin,__NULL__,300,100,1,202602010
+e,quest_you_00001_random_reward_1,quest_you_00001,Random,Item,item_color_memory_red,3,20,1,202602010
+e,quest_you_00001_random_reward_2,quest_you_00001,Random,Item,item_color_memory_green,3,20,2,202602010
+e,quest_you_00001_random_reward_3,quest_you_00001,Random,Item,item_color_memory_yellow,3,20,3,202602010
+e,quest_you_00001_random_reward_4,quest_you_00001,Random,Item,item_color_memory_blue,3,20,4,202602010
+e,quest_you_00001_random_reward_5,quest_you_00001,Random,Item,item_color_memory_gray,3,20,5,202602010
