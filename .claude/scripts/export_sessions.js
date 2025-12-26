@@ -372,14 +372,13 @@ function formatUserPrompt(msg, timestamp) {
   }
 
   if (systemReminders && systemReminders.length > 0) {
-    markdown += `<details>\n<summary>📋 システムコンテキスト (${systemReminders.length}件)</summary>\n\n`;
+    markdown += `#### 📋 システムコンテキスト (${systemReminders.length}件)\n\n`;
     systemReminders.forEach((reminder, idx) => {
       if (systemReminders.length > 1) {
-        markdown += `#### コンテキスト ${idx + 1}\n\n`;
+        markdown += `##### コンテキスト ${idx + 1}\n\n`;
       }
       markdown += `\`\`\`\n${reminder}\n\`\`\`\n\n`;
     });
-    markdown += `</details>\n\n`;
   }
 
   return wrapWithColor(markdown, COLORS.user);
@@ -406,7 +405,7 @@ function formatAssistant(msg, timestamp) {
   // 使用量情報
   if (msg.message?.usage) {
     const usage = msg.message.usage;
-    markdown += `<details>\n<summary>トークン使用量</summary>\n\n`;
+    markdown += `#### トークン使用量\n\n`;
     markdown += `- Input: ${usage.input_tokens || 0}\n`;
     markdown += `- Output: ${usage.output_tokens || 0}\n`;
     if (usage.cache_read_input_tokens) {
@@ -415,7 +414,7 @@ function formatAssistant(msg, timestamp) {
     if (usage.cache_creation_input_tokens) {
       markdown += `- Cache Creation: ${usage.cache_creation_input_tokens}\n`;
     }
-    markdown += `\n</details>\n\n`;
+    markdown += `\n`;
   }
 
   return wrapWithColor(markdown, COLORS.assistant);
@@ -434,8 +433,7 @@ function formatToolExecution(toolGroup, timestamp) {
           // ツール名を取得（対応するtool_useから）
           const toolName = getToolName(toolGroup.assistantMsg, item.tool_use_id);
 
-          markdown += `<details>\n`;
-          markdown += `<summary>${toolName}</summary>\n\n`;
+          markdown += `#### ${toolName}\n\n`;
 
           // コンテンツのタイプに応じた表示
           if (typeof item.content === 'string') {
@@ -449,8 +447,6 @@ function formatToolExecution(toolGroup, timestamp) {
           if (item.is_error) {
             markdown += `**⚠️ エラー**\n\n`;
           }
-
-          markdown += `</details>\n\n`;
         }
       });
     }
