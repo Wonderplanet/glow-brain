@@ -21,29 +21,32 @@
 
 ### 3層アーキテクチャ
 
-```
-┌─────────────────────────────────────────┐
-│          Layer 3: Integration            │
-│   masterdata-full-workflow               │
-│   (統合ワークフロー)                      │
-└──────────┬──────────────────┬───────────┘
-           ↓                  ↓
-┌─────────────────────┐  ┌──────────────────┐
-│   Layer 2: Workflow  │  │  Layer 2: Workflow│
-│   requirement-       │  │  masterdata-     │
-│   analyzer           │  │  generator       │
-│   (要件分析)         │  │  (データ生成)    │
-└─────────────────────┘  └────┬─────────────┘
-                              ↓
-                   ┌──────────┴─────────────┐
-                   ↓                        ↓
-           ┌───────────────┐      ┌────────────────┐
-           │  Layer 1:     │      │  Layer 1:      │
-           │  Foundation   │      │  Foundation    │
-           │  schema-      │      │  validator     │
-           │  inspector    │      │  (検証・修正)  │
-           │  (スキーマ調査)│      │                │
-           └───────────────┘      └────────────────┘
+```mermaid
+graph TB
+    subgraph Layer3["Layer 3: Integration"]
+        FW["masterdata-full-workflow<br/>(統合ワークフロー)"]
+    end
+
+    subgraph Layer2["Layer 2: Workflow"]
+        RA["requirement-analyzer<br/>(要件分析)"]
+        GEN["masterdata-generator<br/>(データ生成)"]
+    end
+
+    subgraph Layer1["Layer 1: Foundation"]
+        SI["schema-inspector<br/>(スキーマ調査)"]
+        VAL["validator<br/>(検証・修正)"]
+    end
+
+    FW --> RA
+    FW --> GEN
+    GEN --> SI
+    GEN --> VAL
+
+    style FW fill:#e1f5ff
+    style RA fill:#fff4e1
+    style GEN fill:#fff4e1
+    style SI fill:#f0f0f0
+    style VAL fill:#f0f0f0
 ```
 
 ### スキル一覧
@@ -429,12 +432,15 @@ Task(subagent_type: "general-purpose", prompt: """
 **説明**: スキルを順番に実行し、前のスキルの結果を次のスキルで利用する
 
 **例: full-workflow**
-```
-1. requirement-analyzer を実行
-   ↓ （要件ファイル構成.mdを生成）
-2. generator を実行
-   ↓ （要件ファイル構成.mdを参照してCSV生成）
-3. 完了
+
+```mermaid
+graph LR
+    A[requirement-analyzer] -->|要件ファイル構成.md生成| B[generator]
+    B -->|CSV + REPORT.md生成| C[完了]
+
+    style A fill:#fff4e1
+    style B fill:#fff4e1
+    style C fill:#d4edda
 ```
 
 **実装**:
@@ -451,14 +457,23 @@ Step 2: Skill(skill: "masterdata-generator", args: "...")
 **説明**: スキル内部で別のスキルを複数回呼び出す
 
 **例: generator**
-```
-generator
-├─ schema-inspector (OprGacha)
-├─ CSV生成
-├─ validator (OprGacha.csv)
-├─ schema-inspector (OprGachaI18n)
-├─ CSV生成
-└─ validator (OprGachaI18n.csv)
+
+```mermaid
+graph TD
+    A[generator] --> B[schema-inspector<br/>OprGacha]
+    B --> C[CSV生成<br/>OprGacha.csv]
+    C --> D[validator<br/>OprGacha.csv]
+    D --> E[schema-inspector<br/>OprGachaI18n]
+    E --> F[CSV生成<br/>OprGachaI18n.csv]
+    F --> G[validator<br/>OprGachaI18n.csv]
+    G --> H[REPORT.md生成]
+
+    style A fill:#fff4e1
+    style B fill:#f0f0f0
+    style D fill:#f0f0f0
+    style E fill:#f0f0f0
+    style G fill:#f0f0f0
+    style H fill:#d4edda
 ```
 
 **実装**:
@@ -477,12 +492,21 @@ For each モデル:
 **説明**: 複数のスキルを同時に実行（依存関係がない場合のみ）
 
 **例: 複数モデルのスキーマ調査**
-```
-# Taskツールで並列実行
-Task内で:
-├─ schema-inspector (Model1) ─┐
-├─ schema-inspector (Model2) ─┼→ 並列実行
-└─ schema-inspector (Model3) ─┘
+
+```mermaid
+graph LR
+    A[開始] --> B[schema-inspector<br/>Model1]
+    A --> C[schema-inspector<br/>Model2]
+    A --> D[schema-inspector<br/>Model3]
+    B --> E[完了]
+    C --> E
+    D --> E
+
+    style A fill:#e1f5ff
+    style B fill:#f0f0f0
+    style C fill:#f0f0f0
+    style D fill:#f0f0f0
+    style E fill:#d4edda
 ```
 
 **実装**:
@@ -502,14 +526,18 @@ Task内で:
 **説明**: 前のスキルの結果に応じて、次のスキルを実行するか判断
 
 **例: 検証結果に応じた再生成**
-```
-1. generator を実行
-   ↓
-2. validator を実行
-   ↓
-3. 検証結果を確認
-   ├─ OK → 完了
-   └─ NG → generatorを再実行
+
+```mermaid
+graph TD
+    A[generator実行] --> B[validator実行]
+    B --> C{検証結果}
+    C -->|OK| D[完了]
+    C -->|NG| A
+
+    style A fill:#fff4e1
+    style B fill:#f0f0f0
+    style C fill:#fff9c4
+    style D fill:#d4edda
 ```
 
 **実装**:
@@ -877,19 +905,24 @@ grep "^description:" .claude/skills/masterdata-*/SKILL.md
 
 ### スキル選択フローチャート
 
-```
-質問: 何をしたい？
-├─ スキーマ情報を調べたい
-│  └─→ schema-inspector
-├─ CSVを検証したい
-│  └─→ validator
-├─ 要件フォルダを分析したい
-│  └─→ requirement-analyzer
-├─ マスタデータを生成したい
-│  ├─ 要件フォルダあり + 全自動
-│  │  └─→ full-workflow
-│  └─ 要件が明確 + カスタマイズしたい
-│     └─→ generator
+```mermaid
+graph TD
+    A[何をしたい？] --> B{目的は?}
+    B -->|スキーマ情報を調べたい| C[schema-inspector]
+    B -->|CSVを検証したい| D[validator]
+    B -->|要件フォルダを分析したい| E[requirement-analyzer]
+    B -->|マスタデータを生成したい| F{実行方法は?}
+    F -->|要件フォルダあり<br/>+ 全自動| G[full-workflow]
+    F -->|要件が明確<br/>+ カスタマイズしたい| H[generator]
+
+    style A fill:#e1f5ff
+    style B fill:#fff9c4
+    style F fill:#fff9c4
+    style C fill:#f0f0f0
+    style D fill:#f0f0f0
+    style E fill:#fff4e1
+    style G fill:#e1f5ff
+    style H fill:#fff4e1
 ```
 
 ### 推奨ワークフロー
