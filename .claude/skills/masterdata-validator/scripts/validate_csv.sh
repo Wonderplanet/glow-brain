@@ -180,6 +180,32 @@ fi
 NOT_NULL_COLUMNS=$(echo "$TABLE_SCHEMA" | jq -r '.columns | to_entries[] | select(.value.nullable == false) | .key' | sort)
 log_message "INFO" "NOT NULL制約のカラム数: $(echo "$NOT_NULL_COLUMNS" | wc -l)"
 
+# __NULL__ の使用チェック
+log_message "INFO" "CSVデータ内の __NULL__ 使用をチェック中..."
+CSV_DATA_LINES=$(tail -n +4 "$CSV_FILE")  # ヘッダー3行をスキップ
+
+if [ -n "$CSV_DATA_LINES" ]; then
+    # 各カラムのnullable属性を確認
+    COLUMN_COUNT=$(sed -n '3p' "$CSV_FILE" | awk -F',' '{print NF}')
+
+    for col_index in $(seq 1 $COLUMN_COUNT); do
+        COL_NAME=$(sed -n '3p' "$CSV_FILE" | cut -d',' -f$col_index)
+
+        # スキーマからnullable属性を取得
+        NULLABLE=$(echo "$TABLE_SCHEMA" | jq -r ".columns.\"$COL_NAME\".nullable" 2>/dev/null)
+
+        if [ "$NULLABLE" == "false" ]; then
+            # NOT NULL列で __NULL__ が使用されているかチェック
+            NULL_COUNT=$(echo "$CSV_DATA_LINES" | awk -F',' -v col=$col_index '$col == "__NULL__" {print}' | wc -l | tr -d ' ')
+
+            if [ "$NULL_COUNT" -gt 0 ]; then
+                log_message "ERROR" "NOT NULL列 '$COL_NAME' に __NULL__ が使用されています (${NULL_COUNT}行)"
+                log_message "INFO" "  → 空文字列またはデフォルト値を使用してください"
+            fi
+        fi
+    done
+fi
+
 # 6-5. 自動修正の実施
 log_message "INFO" "ステップ6-5: 自動修正の実施"
 log_message "INFO" "（自動修正は慎重に行う必要があるため、手動確認を推奨）"
