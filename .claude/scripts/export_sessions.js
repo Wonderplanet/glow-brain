@@ -135,7 +135,8 @@ if (!fs.existsSync(exportDir)) {
 const COLORS = {
   user: '#E1B941',        // ゴールド - ユーザープロンプト
   assistant: '#9AADEF',   // 薄い青 - Assistant応答
-  toolExecution: '#4169E1' // ロイヤルブルー - ツール実行結果
+  toolExecution: '#4169E1', // ロイヤルブルー - ツール実行結果
+  thinking: '#E6D5F5'     // 薄い紫 - Thinking（思考プロセス）
 };
 
 // 背景色より少し濃い色をボーダーに使用
@@ -386,38 +387,69 @@ function formatUserPrompt(msg, timestamp) {
 
 // Assistantメッセージをフォーマットする関数
 function formatAssistant(msg, timestamp) {
-  let markdown = `### [${timestamp}] 🤖 Assistant\n\n`;
+  let markdown = '';
 
   const msgContent = msg.message?.content;
   if (Array.isArray(msgContent)) {
+    // まず thinking を処理
+    msgContent.forEach(item => {
+      if (item.type === 'thinking' && item.thinking) {
+        markdown += formatThinking(item.thinking, timestamp);
+        markdown += `---\n\n`;
+      }
+    });
+
+    // 次に通常の応答を処理
+    let assistantMarkdown = `### [${timestamp}] 🤖 Assistant\n\n`;
+
     msgContent.forEach(item => {
       if (item.type === 'text') {
-        markdown += `${item.text}\n\n`;
+        assistantMarkdown += `${item.text}\n\n`;
       } else if (item.type === 'tool_use') {
-        markdown += `**🔧 ツール使用**: \`${item.name}\`\n\n`;
+        assistantMarkdown += `**🔧 ツール使用**: \`${item.name}\`\n\n`;
         if (item.input) {
-          markdown += `\`\`\`json\n${JSON.stringify(item.input, null, 2)}\n\`\`\`\n\n`;
+          assistantMarkdown += `\`\`\`json\n${JSON.stringify(item.input, null, 2)}\n\`\`\`\n\n`;
         }
       }
     });
+
+    // 使用量情報
+    if (msg.message?.usage) {
+      const usage = msg.message.usage;
+      assistantMarkdown += `#### トークン使用量\n\n`;
+      assistantMarkdown += `- Input: ${usage.input_tokens || 0}\n`;
+      assistantMarkdown += `- Output: ${usage.output_tokens || 0}\n`;
+      if (usage.cache_read_input_tokens) {
+        assistantMarkdown += `- Cache Read: ${usage.cache_read_input_tokens}\n`;
+      }
+      if (usage.cache_creation_input_tokens) {
+        assistantMarkdown += `- Cache Creation: ${usage.cache_creation_input_tokens}\n`;
+      }
+      assistantMarkdown += `\n`;
+    }
+
+    markdown += wrapWithColor(assistantMarkdown, COLORS.assistant);
   }
 
-  // 使用量情報
-  if (msg.message?.usage) {
-    const usage = msg.message.usage;
-    markdown += `#### トークン使用量\n\n`;
-    markdown += `- Input: ${usage.input_tokens || 0}\n`;
-    markdown += `- Output: ${usage.output_tokens || 0}\n`;
-    if (usage.cache_read_input_tokens) {
-      markdown += `- Cache Read: ${usage.cache_read_input_tokens}\n`;
-    }
-    if (usage.cache_creation_input_tokens) {
-      markdown += `- Cache Creation: ${usage.cache_creation_input_tokens}\n`;
-    }
-    markdown += `\n`;
+  return markdown;
+}
+
+// Thinkingをフォーマットする関数
+function formatThinking(thinkingText, timestamp) {
+  // 空チェック
+  if (!thinkingText || thinkingText.trim() === '') {
+    return '';
   }
 
-  return wrapWithColor(markdown, COLORS.assistant);
+  let markdown = `### [${timestamp}] 🧠 Thinking\n\n`;
+
+  // thinking の内容を安全にフォーマット（長すぎる場合は省略）
+  const formattedThinking = safeFormat(thinkingText, 100, 5000);
+
+  // thinking の内容をそのまま表示
+  markdown += `${formattedThinking}\n\n`;
+
+  return wrapWithColor(markdown, COLORS.thinking);
 }
 
 // ツール実行結果をフォーマットする関数
