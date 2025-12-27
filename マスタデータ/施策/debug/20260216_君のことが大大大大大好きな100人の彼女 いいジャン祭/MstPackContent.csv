@@ -1,5 +1,0 @@
-ENABLE,id,mst_pack_id,resource_type,resource_id,resource_amount,is_bonus,display_order,release_key
-e,event_item_pack_6_1,event_item_pack_6,Item,memory_fragment_low,50,0,1,202602160
-e,event_item_pack_6_2,event_item_pack_6,Item,memory_fragment_mid,30,0,2,202602160
-e,event_item_pack_6_3,event_item_pack_6,Item,memory_fragment_high,3,0,3,202602160
-e,event_item_pack_6_4,event_item_pack_6,Ticket,pickup_gacha_ticket,10,0,4,202602160

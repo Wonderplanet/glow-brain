@@ -1,9 +1,0 @@
-memo
-TABLE,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItemI18n,MstItemI18n
-ENABLE,id,type,group_type,rarity,asset_key,effect_value,sort_order,start_date,end_date,release_key,item_type,mst_series_id,destination_opr_product_id,name.ja,description.ja
-e,piece_you_00201,Fragment,CharacterFragment,SR,piece_you_00201,__NULL__,4501,__NULL__,__NULL__,202602010,Fragment,you,__NULL__,ダグのかけら,ダグのかけら
-e,piece_you_00301,Fragment,CharacterFragment,SR,piece_you_00301,__NULL__,4502,__NULL__,__NULL__,202602010,Fragment,you,__NULL__,ハナのかけら,ハナのかけら
-e,memory_chara_you_00201,Memory,CharacterRankUp,SR,memory_chara_you_00201,__NULL__,4503,__NULL__,__NULL__,202602010,Memory,you,__NULL__,ダグのメモリー,ダグ専用のカラーメモリー
-e,memory_chara_you_00301,Memory,CharacterRankUp,SR,memory_chara_you_00301,__NULL__,4504,__NULL__,__NULL__,202602010,Memory,you,__NULL__,ハナのメモリー,ハナ専用のカラーメモリー
-e,emblem_event_you_00001,Emblem,Emblem,__NULL__,emblem_event_you_00001,__NULL__,4505,__NULL__,__NULL__,202602010,Emblem,you,__NULL__,ブラック幼稚園園章,幼稚園WARS いいジャン祭イベント記念エンブレム
-e,emblem_event_you_00002,Emblem,Emblem,__NULL__,emblem_event_you_00002,__NULL__,4506,__NULL__,__NULL__,202602010,Emblem,you,__NULL__,幼稚園WARSエンブレム,幼稚園WARS いいジャン祭達成記念エンブレム

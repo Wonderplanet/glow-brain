@@ -1,7 +1,0 @@
-memo
-TABLE,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent
-ENABLE,id,mst_pack_id,resource_type,resource_id,resource_amount,is_bonus,display_order,release_key
-e,113,iijan_fes_pack_20260202_youchi,Item,memoryfragment_glo_00001,50,0,1,202601010
-e,114,iijan_fes_pack_20260202_youchi,Item,memoryfragment_glo_00002,30,0,2,202601010
-e,115,iijan_fes_pack_20260202_youchi,Item,memoryfragment_glo_00003,3,0,3,202601010
-e,116,iijan_fes_pack_20260202_youchi,Item,ticket_glo_00003,10,0,4,202601010

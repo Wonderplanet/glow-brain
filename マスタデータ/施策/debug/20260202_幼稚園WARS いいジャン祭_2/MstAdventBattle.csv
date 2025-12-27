@@ -1,4 +1,0 @@
-memo
-TABLE,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle
-ENABLE,id,mst_event_id,mst_in_game_id,asset_key,advent_battle_type,initial_battle_point,mst_stage_rule_group_id,event_bonus_group_id,challengeable_count,ad_challengeable_count,display_mst_unit_id1,display_mst_unit_id2,display_mst_unit_id3,exp,coin,start_at,end_at,release_key,score_addition_type,score_additional_coef
-e,quest_you_00001,event_you_00001,__NULL__,you_00001,ScoreChallenge,300,you_00001,you_00001,5,2,chara_you_00301,__NULL__,__NULL__,100,0,2026-02-09 15:00:00,2026-02-15 14:59:00,202602010,AllEnemiesAndOutPost,0.050

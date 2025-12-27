@@ -1,7 +1,0 @@
-memo
-TABLE,MstPackContent
-ENABLE,id,release_key,mst_pack_id,resource_type,resource_id,amount,sort_order
-e,pack_event_you_00001_content_1,202602010,pack_event_you_00001,Item,memoryfragment_glo_00001,50,1
-e,pack_event_you_00001_content_2,202602010,pack_event_you_00001,Item,memoryfragment_glo_00002,30,2
-e,pack_event_you_00001_content_3,202602010,pack_event_you_00001,Item,memoryfragment_glo_00003,3,3
-e,pack_event_you_00001_content_4,202602010,pack_event_you_00001,Item,ticket_glo_00003,10,4

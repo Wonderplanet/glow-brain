@@ -1,4 +1,0 @@
-memo
-TABLE,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha,OprGacha
-ENABLE,id,gacha_type,upper_group,enable_ad_play,enable_add_ad_play_upper,ad_play_interval_time,multi_draw_count,multi_fixed_prize_count,daily_play_limit_count,total_play_limit_count,daily_ad_limit_count,total_ad_limit_count,prize_group_id,fixed_prize_group_id,appearance_condition,unlock_condition_type,unlock_duration_hours,start_at,end_at,display_information_id,display_gacha_caution_id,gacha_priority,release_key
-e,kindergarten_wars_pickup_20260202,Pickup,Pickup,1,1,0,10,1,__NULL__,__NULL__,3,__NULL__,kindergarten_wars_pickup_20260202_prize,kindergarten_wars_pickup_20260202_fixed,Always,None,__NULL__,"2026-02-02 15:00:00","2026-03-02 10:59:00",,4c341dda-20e1-42ff-8ade-b0fc02e07f8d,1,202601010
