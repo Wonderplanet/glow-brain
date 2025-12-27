@@ -1,0 +1,200 @@
+﻿Unnamed: 0,"クリエイティブ一覧
+https://docs.google.com/spreadsheets/d/1s-5R4ijjb7AXckYDBmqBgHFsZzbOPVe_SvX3hlK5Fdw/edit?gid=576303298#gid=5763032981",Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13,Unnamed: 14,Unnamed: 15,Unnamed: 16
+,"監修資料（監修ち提出後にリンクを貼る）
+",,,,,,,,,,,,,,,
+,項目,仕様/補足,数量,工数, 画像,規格,"アップ先
+S3/AB","画像ID
+（PLAN側に確認）
+！アイテムIDとは違うので記載注意！","監修
+ステータス","BNE様へ
+PSDデータ提出
+","デザイナー
+担当者",制作ステータス,"命名規則
+※[ ]内はマスターデータ・運用単位で命名が変化します",,,
+,新規アイテム,,,,,,,,,,,,,,,
+,【カラーメモリー】,"・のメモリー
+",,,,150×150,AB,,,提出不要,未定,,stage_icon_[:asset_key],,,
+,,"・のメモリー
+　",,,,150×150,AB,,,提出不要,未定,,stage_icon_[:asset_key],,,
+,【ガシャチケット】,"SSR彼女確定ガシャチケット
+item_icon_ticket_kim_00001",1,0.3,,150×150,AB,item_icon_ticket_kim_00001,,,江村,,,,,
+,【収集アイテム】,"打ち消しの薬
+item_icon_item_kim_00001",1,0.4,,150×150,AB,item_icon_item_kim_00001,,,江村,,,,,
+,エンブレム,,,,,,,,,,,,,,,
+,【降臨バトルエンブレム】,"恋愛勇者
+emblem_icon_adventbattle_kim_season01_00001",6,0.1,,120×120,AB,emblem_icon_adventbattle_kim_season01_00001,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,,emblem_icon_adventbattle_kim_season01_00002,,,,120×120,AB,emblem_icon_adventbattle_kim_season01_00002,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,,emblem_icon_adventbattle_kim_season01_00003,,,,120×120,AB,emblem_icon_adventbattle_kim_season01_00003,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,0.0
+,,emblem_icon_adventbattle_kim_season01_00004,,,,120×120,AB,emblem_icon_adventbattle_kim_season01_00004,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,0.0
+,,emblem_icon_adventbattle_kim_season01_00005,,,,120×120,AB,emblem_icon_adventbattle_kim_season01_00005,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,,emblem_icon_adventbattle_kim_season01_00006,,,,120×120,AB,emblem_icon_adventbattle_kim_season01_00006,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,【イベントエンブレム】,"神様
+emblem_icon_event_kim_00001
+(真正面構図)",1,1,,120×120,AB,emblem_icon_event_kim_00001,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,,"花園 羽々里の大好きな気持ち
+emblem_icon_event_kim_00002",1,1,,120×120,AB,emblem_icon_event_kim_00002,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,,"花園 羽香里の大好きな気持ち
+emblem_icon_event_kim_00003",1,1,,120×120,AB,emblem_icon_event_kim_00003,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,,"院田 唐音の大好きな気持ち
+emblem_icon_event_kim_00004",1,1,,120×120,AB,emblem_icon_event_kim_00004,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,,"好本 静の大好きな気持ち
+emblem_icon_event_kim_00005",1,1,,120×120,AB,emblem_icon_event_kim_00005,,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,原画のかけら,,,,,,,,,,,,,,,
+,【原画のかけら】,"【原画のかけら】a+b
+①※参照先：2巻133P
+artwork_event_kim_0001",2×2,0.2,,"524×524
+154×154",AB,artwork_event_kim_0001,,提出不要,江村,,"artwork_[:asset_key]a
+artwork_[:asset_key]b",,,
+,,"②※参照先：1巻017P
+artwork_event_kim_0002",,,,"524×524
+154×154",AB,artwork_event_kim_0002,,提出不要,江村,,,,,
+,プレハブ関連,,,,,,,,,,,,,,,
+,【コンテンツTOP】プレハブ,"【コンテンツTOP】 プレハブ
+・愛城 恋太郎
+・花園 羽々里
+・花園 羽香里
+・院田 唐音
+・好本 静
+※赤字は必須、残りは入れられたらでOK
+
+event_kim_00001_quest_select",1,1,,"プレハブ
+（画像は1000 × 520）",AB,event_kim_00001_quest_select,,"PNG/PSD提出必要
+※監修提出前にBNE側にPSDを提出",江村,,[:asset_key]_quest_select ※プレハブ名,,,
+,【クエストバナー】デイリー,"プリズム
+quest_event_kim1_1day",1,0.3,,334×115,AB,kim1_1day_quest_select_cell,,PNG提出必要,江村,,[:mst_quest.asset_key]_quest_select_cell,,,
+,【クエストバナー】収集クエスト,"【コンテンツTOP】
+・打ち消しの薬
+※推しの子テンプレなら、アイテムのみでも可
+quest_event_kim1_charaget01",1,,,334×115,AB,kim1_charaget01_quest_select_cell,,PNG提出必要,江村,,[:mst_quest.asset_key]_quest_select_cell,,,
+,【クエストバナー】ストーリー,"【コンテンツTOP】 Sバナーストリー
+【ストーリー】恋愛パートナー 編
+・プリズム
+・各種メモリーフラグメント
+quest_event_kim1_charaget02",1,,,334×115,AB,kim1_charaget02_quest_select_cell,,PNG提出必要,江村,,[:mst_quest.asset_key]_quest_select_cell,,,
+,【クエストバナー】チャレンジ,"【コンテンツTOP】 
+・溢れる母性 花園 羽々里のかけら
+・花園 羽香里のかけら
+・院田 唐音のかけら
+・好本 静のかけら
+
+quest_event_kim1_challenge01",1,,,334×115,AB,kim1_challenge01_quest_select_cell,,PNG提出必要,江村,,[:mst_quest.asset_key]_quest_select_cell,,,
+,【クエストバナー】高難度,"【コンテンツTOP】 
+・エンブレム_神様
+・プリズム
+・スペシャルガシャチケット
+
+quest_event_kim1_savage",1,,,334×115,AB,kim1_savage_quest_select_cell,,PNG提出必要,江村,,[:mst_quest.asset_key]_quest_select_cell,,,
+,【ステージサムネール】,"溢れる母性 花園 羽々里のかけら
+stage_icon_event_kim1_00001
+花園 羽香里のかけら        
+stage_icon_event_kim1_00002
+院田 唐音のかけら
+stage_icon_event_kim1_00003
+好本 静のかけら
+stage_icon_event_kim1_00004
+
+打ち消しの薬
+stage_icon_event_kim1_00005
+
+エンブレム神様
+stage_icon_event_kim1_00006",6,0.2,,126×102,AB,,,提出不要,江村,,stage_icon_[:asset_key],,,
+,バナー類,,,,,,,,,,,,,,,
+,【イベントミッションバナー】ログインボーナス,"【お知らせ】ログインボーナス_Mバナー
+君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス
+・プリズム
+・コイン
+・ピックアップガシャチケット
+event_kim_00001_loginbonus",1,0.3,,668×220,AB,event_kim_00001_loginbonus,,PNG提出必要,江村,,[:asset_key]_loginbonus,,,
+,"【イベントミッションバナー】ミッション
+","君のことが大大大大大好きな100人の彼女 いいジャン祭特別ミッション
+「特別ミッション」で名称は今後固定
+【お知らせ】ミッション_Mバナー
+・SSR彼女確定ガシャチケット
+・プリズム
+
+右側に花園 羽香里と院田 唐音を置く
+event_kim_00001_mission",1,0.3,,668×220,AB,event_kim_00001_mission,,PNG提出必要,江村,,[:asset_key]_mission,,,
+,【イベントTOPバナー】いいジャン祭,"報酬：変更なし
+
+「【コンテンツTOP】 プレハブ」の要素を流用して作成
+
+event_kim_00001_quest_select",1,0.1,,698×200,AB,event_kim_00001_banner,,PNG提出必要,江村,,[:asset_key]_banner,,,
+,【お知らせ_Mバナー】いいジャン祭,"キャラ
+花園 羽香里と院田 唐音
+notice_event_kim_00001",1,0.3,,668×220,不要,notice_event_kim_00001,,PNG/PSD提出必要,江村,,notice_[:png_name],,,
+,【ホームバナー】いいジャン祭,"「【お知らせ】いいジャン祭開催お知らせ_Mバナー」を流用して作成
+hometop_event_kim_00001",1,,,306×100,S3,hometop_event_kim_00001,,PNG提出必要,江村,,hometop_[:png_name],,,
+,【降臨バトル開催のお知らせ】,"ラブミッション：インポッシブル
+キャラあり",1,0.1,,668×220,不要,notice_advent_kim_00001,,,江村,,,,,
+,"【お知らせ_Mバナー】
+君のことが大大大大大好きな100人の彼女いいジャン祭 交換所","君のことが大大大大大好きな100人の彼女いいジャン祭交換所
+
+プリズム、コイン、カラーメモリー、メモリーフラグメント
+
+「打ち消しの薬を、豪華報酬と交換しよう！」",,0.3,,668×220,不要,notice_exchange_kim_00001,-,PNG提出必要,江村,,,,,
+,交換所TOP用_バナー(698×200),shop_kim_exchange_00001,,0.3,,698×200,AB,shop_kim_exchange_00001,-,PNG提出必要,江村,,,,,
+,ガシャバナー,,,,,,,,,,,,,,,
+,"【ガシャTOP_プレハブ】
+君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャ
+・
+・","UI改修の影響でバナーではなくガシャ画面のプレハブの作成が必要になりました
+
+こちら現在UI側の方の作業が完了していないので、また詳細分かったら制作できればと思います",1,0.5,,,AB,,,,未定,,,,,
+,"【ガシャTOP_Lバナー】
+→ガシャ画面改修の影響でS3へ上げるのは不要になりました。SNSの広告などのために引き続きデザイン作成は行いたいと考えています。
+君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャ
+・溢れる母性 花園 羽々里　UR
+・花園 羽香里　SSR
+・院田 唐音　SSR
+・好本 静　SSR","・
+・
+
+gacha_banner_kim_00001",1,0.5,,668×370,不要,gacha_banner_kim_00001,,PNG提出必要,江村,,gacha_banner_[:banner_url],,,
+,"【お知らせ_Mバナー】
+君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャ
+","・
+・
+
+notice_gacha_kim_00001",1,,,668×220,不要,notice_gacha_kim_00001,,PNG提出必要,江村,,gacha_gacha_[:banner_url],,,
+,"【ホームバナー】
+君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャ
+・
+・","・
+・
+
+hometop_gacha_kim_00001",1,,,"  
+ 	
+306×100
+",S3,hometop_gacha_kim_00001,,PNG提出必要,江村,アップ済み,hometop_[:png_name],,,
+,"【お知らせ_Lバナー】
+SSR彼女確定チケットガシャ","SSR彼女確定チケットガシャ
+
+ガシャのラインナップを記載いただけますでしょうか…！
+→
+花園 羽香里
+院田 唐音
+好本 静
+でお願いします！",,0.3,,668×370,S3,gacha_banner_kim_00002,-,PNG提出必要,江村,,,,,
+,"【お知らせ_Mバナー】
+SSR彼女確定チケットガシャ",,,,,668×220,不要,notice_gacha_kim_00002,-,PNG提出必要,江村,,,,,
+,"【ガシャTOP_Lバナー】
+",,1,,,668×370,S3,,,PNG提出必要,未定,,gacha_banner_[:banner_url],,,
+,"【お知らせ_Mバナー】
+",,1,,,668×220,不要,,,PNG提出必要,未定,,gacha_gacha_[:banner_url],,,
+,"【ホームバナー】
+",,1,,,"  
+ 	
+306×100
+",S3,,,PNG提出必要,未定,アップ済み,hometop_[:png_name],,,
+,（不要）【図鑑_シリーズバナー】,,1,,,300×300,AB,,,,,,series_banner_[:asset_key],その他,都度,
+,（不要）【図鑑_シリーズロゴ),,1,,,350×245,AB,,,,,,series_logo_[:asset_key],その他,都度,
+,"（不要）クエストバナー降臨バトル
+","
+データ設定で済むか要確認",,,,,,,,,,,,,,
+,（不要）いいジャン祭パック,"既存バナーを流用
+",,,不要かも,,,,,,,,,,,
+,施策ロゴ_作成とチームメンバーへの共有(一番初めにやる),,,0.2,,,,,,PNG/PSD提出必要,江村,,,,,
+,,,,工数の合計値↓,,,,,,,,,,,,
+,,,,10.7,,,,,,,,,,,,
+,,,江村さん工数,10.2,,,,,,,,,,,,
+,,,望月さん工数,0,,,,,,,,,,,,
