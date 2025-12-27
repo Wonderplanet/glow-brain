@@ -181,6 +181,22 @@ function classifyMessage(msg) {
 
     const msgContent = typeof msg.message === 'string' ? msg.message : msg.message?.content;
 
+    // skill/command/subagent のファイル内容を含むメッセージをスキップ
+    if (typeof msgContent === 'string') {
+      if (msgContent.startsWith('Base directory for this skill:') ||
+          msgContent.startsWith('Base directory for this command:') ||
+          msgContent.startsWith('Base directory for this subagent:')) {
+        return { category: 'skill_file' };
+      }
+    } else if (Array.isArray(msgContent)) {
+      const textContent = msgContent.find(item => item.type === 'text')?.text || '';
+      if (textContent.startsWith('Base directory for this skill:') ||
+          textContent.startsWith('Base directory for this command:') ||
+          textContent.startsWith('Base directory for this subagent:')) {
+        return { category: 'skill_file' };
+      }
+    }
+
     // tool_result かどうかを判定
     if (Array.isArray(msgContent)) {
       const hasToolResult = msgContent.some(item => item.type === 'tool_result');
@@ -327,6 +343,14 @@ function groupToolResults(messages) {
       // メッセージ自体は追加しない（スキップ）
     } else if (classification.category === 'sidechain') {
       // サイドチェーンメッセージもスキップ
+      // グループがあれば保存
+      if (currentGroup && currentGroup.toolResults.length > 0) {
+        grouped.push({ type: 'tool_group', data: currentGroup });
+        currentGroup = null;
+      }
+      // メッセージ自体は追加しない（スキップ）
+    } else if (classification.category === 'skill_file') {
+      // skill/command/subagent のファイル内容もスキップ
       // グループがあれば保存
       if (currentGroup && currentGroup.toolResults.length > 0) {
         grouped.push({ type: 'tool_group', data: currentGroup });
