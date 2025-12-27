@@ -255,6 +255,12 @@
             white-space: nowrap;
         }
 
+        td {
+            white-space: pre-wrap;
+            max-width: 500px;
+            word-wrap: break-word;
+        }
+
         th {
             background: #e9ecef;
             font-weight: 600;
@@ -862,7 +868,7 @@
                         warningClass = ' class="enum-warning" title="警告: この値はenum定義に含まれていません。許可される値: ' + enumValues.join(', ') + '"';
                     }
 
-                    tableHTML += `<td${warningClass}>${escapeHTML(cell)}</td>`;
+                    tableHTML += `<td${warningClass}>${formatCellContent(cell)}</td>`;
                 });
                 tableHTML += '</tr>';
             });
@@ -987,6 +993,27 @@
             const div = document.createElement('div');
             div.textContent = str;
             return div.innerHTML;
+        }
+
+        // エスケープシーケンスを実際の文字に変換する関数
+        function unescapeNewlines(str) {
+            if (!str) return str;
+            return str
+                .replace(/\\n/g, '\n')   // \n -> 改行
+                .replace(/\\r/g, '\r')   // \r -> キャリッジリターン
+                .replace(/\\t/g, '\t')   // \t -> タブ
+                .replace(/\\"/g, '"')    // \" -> "
+                .replace(/\\'/g, "'")    // \' -> '
+                .replace(/\\\\/g, '\\'); // \\ -> \
+        }
+
+        // HTMLエスケープと改行変換を両方行う関数
+        function formatCellContent(str) {
+            // まずエスケープシーケンスを実際の文字に変換
+            const unescaped = unescapeNewlines(str);
+            // HTMLエスケープ
+            const escaped = escapeHTML(unescaped);
+            return escaped;
         }
 
         // イベントデリゲーションでコピーボタンのクリックを処理
