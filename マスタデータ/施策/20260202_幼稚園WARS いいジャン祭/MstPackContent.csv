@@ -1,0 +1,9 @@
+memo
+TABLE,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent
+ENABLE,id,mst_pack_id,resource_type,resource_id,resource_amount,is_bonus,display_order,release_key
+e,enhancement_pack_20260202_1,enhancement_pack_daily_20260202,Item,memory_glo_00001,10,,1,1
+e,enhancement_pack_20260202_2,enhancement_pack_daily_20260202,Item,memory_glo_00002,10,,2,1
+e,enhancement_pack_20260202_3,enhancement_pack_daily_20260202,Item,memory_glo_00005,10,,3,1
+e,enhancement_pack_20260202_4,enhancement_pack_daily_20260202,Item,memory_glo_00003,10,,4,1
+e,enhancement_pack_20260202_5,enhancement_pack_daily_20260202,Item,memory_glo_00004,10,,5,1
+e,enhancement_pack_20260202_6,enhancement_pack_daily_20260202,Coin,0,1000,,6,1

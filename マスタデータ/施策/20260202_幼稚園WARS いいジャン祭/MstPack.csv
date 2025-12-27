@@ -1,0 +1,4 @@
+memo
+TABLE,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPackI18n
+ENABLE,id,product_sub_id,discount_rate,is_first_time_free,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,cost_amount,is_recommend,asset_key,pack_decoration,release_key,name.ja
+e,enhancement_pack_daily_20260202,enhancement_pack_daily_20260202,0,1,__NULL__,0,,0,Daily,2,Ad,0,1,enhancement_pack_daily,__NULL__,1,【毎日更新】強化パック
