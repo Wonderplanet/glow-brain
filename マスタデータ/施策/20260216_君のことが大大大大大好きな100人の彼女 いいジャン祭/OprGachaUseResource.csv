@@ -1,0 +1,11 @@
+memo
+TABLE,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource
+ENABLE,id,opr_gacha_id,cost_type,cost_id,cost_num,draw_count,cost_priority,release_key
+e,kim_gacha_a_single,gacha_kim_pickup_a,Diamond,__NULL__,150,1,1,1
+e,kim_gacha_a_multi,gacha_kim_pickup_a,Diamond,__NULL__,1500,10,2,1
+e,kim_gacha_a_ticket_single,gacha_kim_pickup_a,Item,ticket_glo_00003,1,1,3,1
+e,kim_gacha_a_ticket_multi,gacha_kim_pickup_a,Item,ticket_glo_00003,10,10,4,1
+e,kim_gacha_b_single,gacha_kim_pickup_b,Diamond,__NULL__,150,1,1,1
+e,kim_gacha_b_multi,gacha_kim_pickup_b,Diamond,__NULL__,1500,10,2,1
+e,kim_gacha_b_ticket_single,gacha_kim_pickup_b,Item,ticket_glo_00003,1,1,3,1
+e,kim_gacha_b_ticket_multi,gacha_kim_pickup_b,Item,ticket_glo_00003,10,10,4,1

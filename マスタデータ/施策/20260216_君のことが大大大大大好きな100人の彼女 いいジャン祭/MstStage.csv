@@ -1,0 +1,21 @@
+memo
+TABLE,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStageI18n
+ENABLE,id,mst_quest_id,mst_in_game_id,stage_number,recommended_level,cost_stamina,exp,coin,prev_mst_stage_id,mst_stage_tips_group_id,auto_lap_type,max_auto_lap_count,sort_order,asset_key,mst_artwork_fragment_drop_group_id,start_at,end_at,release_key,name.ja
+e,stage_kim_daily_00001_01,quest_kim_daily_00001,kim_daily_stage_01,1,1,1,100,1500,,,,0,1,kim_daily_01,,"2026-02-16 15:00:00","2026-03-02 03:59:00",1,kim_daily_stage_01話
+e,stage_kim_collection_00001_01,quest_kim_collection_00001,kim_collection_stage_01,1,5,5,50,100,,,,0,1,kim_collection_01,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_collection_stage_01話
+e,stage_kim_collection_00001_02,quest_kim_collection_00001,kim_collection_stage_02,2,10,7,70,100,stage_kim_collection_00001_01,,,0,2,kim_collection_02,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_collection_stage_02話
+e,stage_kim_collection_00001_03,quest_kim_collection_00001,kim_collection_stage_03,3,20,10,100,150,stage_kim_collection_00001_02,,,0,3,kim_collection_03,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_collection_stage_03話
+e,stage_kim_collection_00001_04,quest_kim_collection_00001,kim_collection_stage_04,4,30,15,150,150,stage_kim_collection_00001_03,,,0,4,kim_collection_04,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_collection_stage_04話
+e,stage_kim_story_00001_01,quest_kim_story_00001,kim_story_stage_01,1,10,5,50,100,,,,0,1,kim_story_01,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_story_stage_01話
+e,stage_kim_story_00001_02,quest_kim_story_00001,kim_story_stage_02,2,15,5,50,100,stage_kim_story_00001_01,,,0,2,kim_story_02,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_story_stage_02話
+e,stage_kim_story_00001_03,quest_kim_story_00001,kim_story_stage_03,3,20,7,70,150,stage_kim_story_00001_02,,,0,3,kim_story_03,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_story_stage_03話
+e,stage_kim_story_00001_04,quest_kim_story_00001,kim_story_stage_04,4,20,7,70,150,stage_kim_story_00001_03,,,0,4,kim_story_04,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_story_stage_04話
+e,stage_kim_story_00001_05,quest_kim_story_00001,kim_story_stage_05,5,25,10,100,200,stage_kim_story_00001_04,,,0,5,kim_story_05,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_story_stage_05話
+e,stage_kim_story_00001_06,quest_kim_story_00001,kim_story_stage_06,6,30,10,100,300,stage_kim_story_00001_05,,,0,6,kim_story_06,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_story_stage_06話
+e,stage_kim_challenge_00001_01,quest_kim_challenge_00001,kim_challenge_stage_01,1,30,10,100,150,,,,0,1,kim_challenge_01,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_challenge_stage_01話
+e,stage_kim_challenge_00001_02,quest_kim_challenge_00001,kim_challenge_stage_02,2,30,15,150,225,stage_kim_challenge_00001_01,,,0,2,kim_challenge_02,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_challenge_stage_02話
+e,stage_kim_challenge_00001_03,quest_kim_challenge_00001,kim_challenge_stage_03,3,40,15,150,225,stage_kim_challenge_00001_02,,,0,3,kim_challenge_03,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_challenge_stage_03話
+e,stage_kim_challenge_00001_04,quest_kim_challenge_00001,kim_challenge_stage_04,4,50,20,200,300,stage_kim_challenge_00001_03,,,0,4,kim_challenge_04,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_challenge_stage_04話
+e,stage_kim_extreme_00001_01,quest_kim_extreme_00001,kim_extreme_stage_01,1,70,25,700,375,,,,0,1,kim_extreme_01,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_extreme_stage_01話
+e,stage_kim_extreme_00001_02,quest_kim_extreme_00001,kim_extreme_stage_02,2,70,25,700,375,stage_kim_extreme_00001_01,,,0,2,kim_extreme_02,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_extreme_stage_02話
+e,stage_kim_extreme_00001_03,quest_kim_extreme_00001,kim_extreme_stage_03,3,80,50,1000,400,stage_kim_extreme_00001_02,,,0,3,kim_extreme_03,,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,kim_extreme_stage_03話

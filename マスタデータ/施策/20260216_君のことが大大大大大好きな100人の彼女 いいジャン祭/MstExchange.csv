@@ -1,0 +1,4 @@
+memo
+TABLE,MstExchange,MstExchange,MstExchange,MstExchange,MstExchange,MstExchange,MstExchange,MstExchange
+ENABLE,id,mst_event_id,exchange_trade_type,start_at,end_at,lineup_group_id,display_order,release_key
+e,exchange_kim_00001,event_kim_00001,EventExchangeTrade,"2026-02-16 15:00:00","2026-03-16 10:59:00",kim_exchange_lineup,1,1

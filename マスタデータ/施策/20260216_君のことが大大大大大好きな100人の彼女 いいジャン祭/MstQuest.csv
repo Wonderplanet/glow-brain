@@ -1,0 +1,8 @@
+memo
+TABLE,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuestI18n,MstQuestI18n,MstQuestI18n
+ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key,name.ja,category_name.ja,flavor_text.ja
+e,quest_kim_daily_00001,event,event_kim_00001,1,kim_daily_00001,"2026-02-16 15:00:00","2026-03-02 03:59:00",kim_daily,Normal,1,恋は盲目,【デイリー】,
+e,quest_kim_collection_00001,event,event_kim_00001,2,kim_collection_00001,"2026-02-16 15:00:00","2026-03-16 10:59:00",kim_collection,Normal,1,キスゾンビ♡パニック,【収集クエスト】,
+e,quest_kim_story_00001,event,event_kim_00001,3,kim_story_00001,"2026-02-16 15:00:00","2026-03-16 10:59:00",kim_story,Normal,1,最高の恋愛パートナー,【ストーリー】彼女ストーリー編,
+e,quest_kim_challenge_00001,event,event_kim_00001,4,kim_challenge_00001,"2026-02-16 15:00:00","2026-03-16 10:59:00",kim_challenge,Normal,1,恋太郎ファミリー,【チャレンジ】,
+e,quest_kim_extreme_00001,event,event_kim_00001,5,kim_extreme_00001,"2026-02-16 15:00:00","2026-03-16 10:59:00",kim_extreme,Normal,1,DEAD OR LOVE,【高難易度】,

@@ -1,0 +1,4 @@
+memo
+TABLE,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEventI18n,MstEventI18n
+ENABLE,id,mst_series_id,is_displayed_series_logo,is_displayed_jump_plus,start_at,end_at,asset_key,release_key,name.ja,balloon.ja
+e,event_kim_00001,3,1,1,"2026-02-16 15:00:00","2026-03-16 10:59:00",event_kim_00001,1,君のことが大大大大大好きな100人の彼女 いいジャン祭,"君のことが大大大大大好きな100人の彼女 いいジャン祭\n開催中！"
