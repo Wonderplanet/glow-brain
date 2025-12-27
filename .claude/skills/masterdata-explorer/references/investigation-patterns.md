@@ -34,33 +34,25 @@ jq '.databases.mst.tables | keys | map(select(test("event"; "i")))' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
-#### ステップ2: OprEventの構造を確認
+#### ステップ2: mst_eventsの構造を確認
 
 ```bash
-# OprEvent（イベント基本設定）の全カラムを確認
-jq '.databases.mst.tables.opr_events.columns | keys' \
+# mst_events（イベント基本設定）の全カラムを確認
+jq '.databases.mst.tables.mst_events.columns | keys' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
-#### ステップ3: イベントタイプを確認
+#### ステップ3: 既存イベントデータを参照
 
 ```bash
-# event_typeのenum値を確認（どんなイベントタイプがあるか）
-jq '.databases.mst.tables.opr_events.columns.event_type.enum' \
-  projects/glow-server/api/database/schema/exports/master_tables_schema.json
+# 既存のMstEvent.csvデータを確認（実例を学ぶ）
+head -n 10 projects/glow-masterdata/MstEvent.csv
 ```
 
-#### ステップ4: 既存イベントデータを参照
+#### ステップ4: 関連テーブルを確認
 
 ```bash
-# 既存のOprEventデータを確認（実例を学ぶ）
-head -n 10 projects/glow-masterdata/OprEvent.csv
-```
-
-#### ステップ5: 関連テーブルを確認
-
-```bash
-# OprEventを参照している全テーブルを逆引き
+# mst_eventsを参照している全テーブルを逆引き
 jq '.databases.mst.tables |
   to_entries |
   map({
@@ -68,7 +60,7 @@ jq '.databases.mst.tables |
     columns: (
       .value.columns |
       to_entries |
-      map(select(.value.foreign_key != null and (.value.foreign_key | test("opr_events")))) |
+      map(select(.value.foreign_key != null and (.value.foreign_key | test("mst_events")))) |
       map(.key)
     )
   }) |
@@ -78,13 +70,13 @@ jq '.databases.mst.tables |
 
 ### 必要なテーブル
 
-- **OprEvent**: イベントの基本設定
-- **OprEventI18n**: 多言語対応（イベント名、説明文）
-- **OprEventPoint**: ポイント報酬設定（ポイントイベントの場合）
-- **OprEventRanking**: ランキング報酬設定（ランキングイベントの場合）
-- **MstEventExchange**: イベント交換所設定
-- **MstEventStory**: イベントストーリー設定
-- **MstEventBoss**: イベントボス設定（レイドイベントの場合）
+**注**: DBスキーマではsnake_case（`mst_events`）、CSVファイル名はPascalCase（`MstEvent.csv`）を使用します。
+
+- **mst_events** (MstEvent.csv): イベントの基本設定
+- **mst_events_i18n** (MstEventI18n.csv): 多言語対応（イベント名、説明文）
+- **mst_event_bonus_units** (MstEventBonusUnit.csv): イベントボーナスユニット設定
+- **mst_event_display_rewards** (MstEventDisplayReward.csv): イベント表示報酬設定
+- **mst_mission_events** (MstMissionEvent.csv): ミッションイベント設定
 
 ### 参照ドキュメント
 
@@ -110,49 +102,54 @@ jq '.databases.mst.tables | keys | map(select(test("gacha"; "i")))' \
 #### ステップ2: OprGachaの構造を確認
 
 ```bash
-# OprGacha（ガチャ基本設定）の全カラムを確認
+# opr_gachas（ガチャ基本設定）の全カラムを確認
 jq '.databases.mst.tables.opr_gachas.columns | keys' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 
 # ガチャタイプを確認
-jq '.databases.mst.tables.opr_gachas.columns.gacha_type.enum' \
+jq '.databases.mst.tables.opr_gachas.columns.gacha_type' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
-#### ステップ3: ガチャラインナップの構造を確認
+#### ステップ3: ガチャ賞品の構造を確認
 
 ```bash
-# MstGachaLineup（提供アイテム）の構造を確認
-jq '.databases.mst.tables.mst_gacha_lineups' \
+# opr_gacha_prizes（ガチャ賞品）の構造を確認
+jq '.databases.mst.tables.opr_gacha_prizes.columns | keys' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
 #### ステップ4: 既存ガチャデータを参照
 
 ```bash
-# 既存のOprGachaデータを確認
+# 既存のOprGacha.csvデータを確認
 head -n 10 projects/glow-masterdata/OprGacha.csv
 
-# 既存のMstGachaLineupデータを確認
-head -n 10 projects/glow-masterdata/MstGachaLineup.csv
+# 既存のOprGachaPrize.csvデータを確認
+head -n 10 projects/glow-masterdata/OprGachaPrize.csv
 ```
 
-#### ステップ5: ステップアップガチャの仕組みを確認
+#### ステップ5: その他のガチャ関連テーブルを確認
 
 ```bash
-# OprGachaStepの構造を確認
-jq '.databases.mst.tables.opr_gacha_steps' \
+# ガチャで使用するリソース
+jq '.databases.mst.tables.opr_gacha_use_resources.columns | keys' \
+  projects/glow-server/api/database/schema/exports/master_tables_schema.json
+
+# ボックスガチャ（別タイプ）
+jq '.databases.mst.tables.mst_box_gachas.columns | keys' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
 ### 必要なテーブル
 
-- **OprGacha**: ガチャの基本設定
-- **OprGachaI18n**: 多言語対応
-- **MstGachaLineup**: 提供アイテム・キャラクター、排出率
-- **OprGachaStep**: ステップアップガチャの段階設定
-- **MstGachaPity**: 天井システム設定
-- **MstGachaAnimation**: ガチャ演出設定
+**注**: DBスキーマではsnake_case、CSVファイル名はPascalCaseを使用します。
+
+- **opr_gachas** (OprGacha.csv): ガチャの基本設定
+- **opr_gachas_i18n** (OprGachaI18n.csv): 多言語対応
+- **opr_gacha_prizes** (OprGachaPrize.csv): ガチャ賞品・排出率
+- **opr_gacha_use_resources** (OprGachaUseResource.csv): ガチャ使用リソース
+- **mst_box_gachas** (MstBoxGacha.csv): ボックスガチャ設定（通常ガチャとは別タイプ）
 
 ### 参照ドキュメント
 
@@ -241,18 +238,20 @@ grep -r "^12345," projects/glow-masterdata/*.csv
 #### ステップ2: テーブル名から推測
 
 IDのプレフィックスや桁数から推測：
-- `1000001` 〜 `1999999`: キャラクター系（MstCharacter）
-- `2000001` 〜 `2999999`: アイテム系（MstItem）
-- `3000001` 〜 `3999999`: ステージ系（MstStage）
-- `4000001` 〜 `4999999`: ミッション系（MstMission）
+- `1000001` 〜 `1999999`: ユニット系（mst_units）
+- `2000001` 〜 `2999999`: アイテム系（mst_items）
+- `3000001` 〜 `3999999`: ステージ系（mst_stages）
+- `4000001` 〜 `4999999`: ミッション系（mst_missions）
+
+**注意**: これは一般的なパターンであり、実際のID体系は異なる場合があります。
 
 #### ステップ3: 関連ドキュメントを確認
 
 仕様書やSlackで言及されているテーブル名を確認し、そのテーブルのCSVを直接参照：
 
 ```bash
-# MstCharacterの既存データを確認
-head -n 20 projects/glow-masterdata/MstCharacter.csv | grep "12345"
+# mst_unitsの既存データを確認（例）
+head -n 20 projects/glow-masterdata/MstUnit.csv | grep "12345" 2>/dev/null || echo "ファイルが存在しない、または該当IDなし"
 ```
 
 ### トラブルシューティング
@@ -344,25 +343,27 @@ jq '.databases.mst.tables | keys | map(select(test("_i18n$")))' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
-#### ステップ2: 代表例（MstCharacterI18n）の構造を確認
+#### ステップ2: 代表例（MstUnitsI18n）の構造を確認
 
 ```bash
-# MstCharacterI18nの全カラムを確認
-jq '.databases.mst.tables.mst_character_i18n.columns | keys' \
+# MstUnitsI18nの全カラムを確認
+jq '.databases.mst.tables.mst_units_i18n.columns | keys' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
 **共通カラム**:
-- `mst_character_id`: 親テーブルのID（外部キー）
+- `id`: I18nテーブル自身のID
+- `mst_unit_id`: 親テーブル（mst_units）のID（外部キー）
 - `language`: 言語コード
 - `name`: 多言語の名称
 - `description`: 多言語の説明文
+- `detail`: 詳細説明
 
 #### ステップ3: 対応言語を確認
 
 ```bash
 # languageカラムのenum値を確認
-jq '.databases.mst.tables.mst_character_i18n.columns.language.enum' \
+jq '.databases.mst.tables.mst_units_i18n.columns.language.enum' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
@@ -371,15 +372,15 @@ jq '.databases.mst.tables.mst_character_i18n.columns.language.enum' \
 #### ステップ4: 既存I18nデータを参照
 
 ```bash
-# 既存のMstCharacterI18nデータを確認
-head -n 20 projects/glow-masterdata/MstCharacterI18n.csv
+# 既存のMstUnitsI18nデータを確認（存在する場合）
+head -n 20 projects/glow-masterdata/MstUnitsI18n.csv 2>/dev/null || echo "ファイルが存在しない場合は、CSVテンプレートを確認: projects/glow-masterdata/sheet_schema/MstUnitsI18n.csv"
 ```
 
 ### I18nテーブルの設計パターン
 
-1. 親テーブル（例: MstCharacter）に`id`のみを持つ
-2. I18nテーブル（例: MstCharacterI18n）に多言語テキストを持つ
-3. I18nテーブルは`(親テーブルID, language)`の複合主キー
+1. 親テーブル（例: mst_units）に`id`とデータ本体を持つ
+2. I18nテーブル（例: mst_units_i18n）に多言語テキストを持つ
+3. I18nテーブルは`id`（主キー）と`mst_unit_id`（外部キー）、`language`を持つ
 4. 各言語ごとに1レコードずつ作成
 
 ## シナリオ7: 期間限定施策の設定方法を調べたい
@@ -398,11 +399,11 @@ jq '.databases.mst.tables | keys | map(select(test("^opr_")))' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
-#### ステップ2: 代表例（OprEvent）の構造を確認
+#### ステップ2: 代表例（opr_gachas）の構造を確認
 
 ```bash
-# OprEventの全カラムを確認
-jq '.databases.mst.tables.opr_events.columns | keys' \
+# opr_gachasの全カラムを確認
+jq '.databases.mst.tables.opr_gachas.columns | keys' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
@@ -413,23 +414,24 @@ jq '.databases.mst.tables.opr_events.columns | keys' \
 #### ステップ3: 既存Opr*データを参照
 
 ```bash
-# 既存のOprEventデータを確認
-head -n 10 projects/glow-masterdata/OprEvent.csv
+# 既存のOprGacha.csvデータを確認
+head -n 10 projects/glow-masterdata/OprGacha.csv
 ```
 
 ### Opr*テーブルの特徴
 
 - **期間限定**: `start_at`, `end_at`カラムで期間を設定
 - **運営データ**: 恒常データ（Mst*）と区別される
-- **参照関係**: Mst*テーブルを参照することが多い（例: OprEvent → MstEventType）
+- **参照関係**: Mst*テーブルを参照することが多い
 
 ### 主要なOpr*テーブル
 
-- **OprEvent**: 期間限定イベント
-- **OprGacha**: 期間限定ガチャ
-- **OprMission**: 期間限定ミッション
-- **OprProduct**: 期間限定商品
-- **OprBattlePass**: バトルパス
+**注**: DBスキーマではsnake_case、CSVファイル名はPascalCaseを使用します。
+
+- **opr_gachas** (OprGacha.csv): 期間限定ガチャ
+- **opr_products** (OprProduct.csv): 期間限定商品
+- **opr_campaigns** (OprCampaign.csv): キャンペーン設定
+- **mst_events** (MstEvent.csv): イベント設定（Mst側で定義）
 
 ## シナリオ8: 報酬グループの構造を理解したい
 
@@ -541,63 +543,72 @@ head -n 10 projects/glow-masterdata/MstDropGroup.csv
 ]
 ```
 
-## シナリオ10: キャラクターの育成要素を調べたい
+## シナリオ10: ユニットの育成要素を調べたい
 
 ### 背景
 
-キャラクターの育成システム（レベルアップ、覚醒、進化）を理解したい。
+ユニットの育成システム（レベルアップ、グレードアップ、ランクアップ）を理解したい。
 
 ### 調査手順
 
-#### ステップ1: MstCharacterの構造を確認
+#### ステップ1: MstUnitsの構造を確認
 
 ```bash
-# MstCharacterの全カラムを確認
-jq '.databases.mst.tables.mst_characters.columns | keys' \
+# MstUnitsの全カラムを確認
+jq '.databases.mst.tables.mst_units.columns | keys' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
 **育成関連カラム**:
-- `max_level`: 最大レベル
-- `base_hp`, `base_attack`, `base_defense`: 基礎ステータス
-- `growth_rate`: 成長率
+- `max_hp`: 最大HP
+- `min_hp`: 最小HP
+- `max_attack_power`: 最大攻撃力
+- `min_attack_power`: 最小攻撃力
+- `rarity`: レアリティ
+- `fragment_mst_item_id`: 欠片アイテムID
 
-#### ステップ2: 覚醒システムを確認
+#### ステップ2: グレードアップシステムを確認
 
 ```bash
-# MstCharacterAwakeningの構造を確認
-jq '.databases.mst.tables.mst_character_awakenings' \
+# MstUnitGradeUpsの構造を確認
+jq '.databases.mst.tables.mst_unit_grade_ups' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
-**覚醒設定**:
-- `mst_character_id`: キャラクターID
-- `awakening_level`: 覚醒レベル
-- `required_item_id`: 必要素材ID
-- `required_amount`: 必要数量
+**グレードアップ設定**:
+ユニットのグレード（ランク）を上げるための設定を定義
 
-#### ステップ3: 進化システムを確認
+#### ステップ3: ランクアップシステムを確認
 
 ```bash
-# MstCharacterEvolutionの構造を確認
-jq '.databases.mst.tables.mst_character_evolutions' \
+# MstUnitRankUpsの構造を確認
+jq '.databases.mst.tables.mst_unit_rank_ups' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
-**進化設定**:
-- `from_character_id`: 進化前キャラクターID
-- `to_character_id`: 進化後キャラクターID
-- `required_items`: 必要素材（JSON配列）
+**ランクアップ設定**:
+ユニットのランクを上げるための設定を定義
 
-### キャラクター育成の全体像
+#### ステップ4: レベルアップシステムを確認
+
+```bash
+# MstUnitLevelUpsの構造を確認
+jq '.databases.mst.tables.mst_unit_level_ups' \
+  projects/glow-server/api/database/schema/exports/master_tables_schema.json
+```
+
+**レベルアップ設定**:
+ユニットのレベルアップに必要な経験値や素材を定義
+
+### ユニット育成の全体像
 
 ```
-MstCharacter（基本情報）
-  ├─ レベルアップ（max_level, growth_rate）
-  ├─ MstCharacterAwakening（覚醒）
-  │    └─ 必要素材（MstItem）
-  └─ MstCharacterEvolution（進化）
-       └─ 必要素材（MstItem）
+mst_units（ユニット基本情報）
+  ├─ mst_unit_level_ups（レベルアップ）
+  ├─ mst_unit_grade_ups（グレードアップ）
+  ├─ mst_unit_rank_ups（ランクアップ）
+  ├─ mst_unit_specific_rank_ups（特定ユニットのランクアップ）
+  └─ mst_unit_abilities（ユニットアビリティ）
 ```
 
 ## シナリオ11: ショップ・課金パックの仕組みを調べたい
@@ -671,21 +682,21 @@ MstPack（課金パック）
 #### ステップ1: CSVテンプレートの列順を確認
 
 ```bash
-# MstCharacterのCSVテンプレート（列名定義行）
-sed -n '2p' projects/glow-masterdata/sheet_schema/MstCharacter.csv
+# MstUnitのCSVテンプレート（列名定義行）
+sed -n '2p' projects/glow-masterdata/sheet_schema/MstUnit.csv
 ```
 
 **CSVテンプレートの構造**:
 - 1行目: メモ行（`memo`から始まる）
-- 2行目: テーブル名行（`TABLE,MstCharacter`など）
+- 2行目: テーブル名行（`TABLE,MstUnit`など）
 - 3行目: ENABLE行（`ENABLE,1,1,1,...`）
-- 4行目: カラム名行（`id,name,rarity_id,...`）
+- 4行目: カラム名行（`id,name,rarity,...`）
 
 #### ステップ2: 既存データの実例を確認
 
 ```bash
-# 既存のMstCharacterデータ（先頭5行）
-head -n 9 projects/glow-masterdata/MstCharacter.csv
+# 既存のMstUnitデータ（先頭5行、存在する場合）
+head -n 9 projects/glow-masterdata/MstUnit.csv 2>/dev/null || echo "ファイルが存在しない場合は別のテーブルを参照"
 ```
 
 **確認ポイント**:
@@ -697,14 +708,14 @@ head -n 9 projects/glow-masterdata/MstCharacter.csv
 
 ```bash
 # NOT NULLカラムを確認
-jq '.databases.mst.tables.mst_characters.columns |
+jq '.databases.mst.tables.mst_units.columns |
   to_entries |
   map(select(.value.nullable == false)) |
   map(.key)' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 
 # enum値を確認
-jq '.databases.mst.tables.mst_characters.columns |
+jq '.databases.mst.tables.mst_units.columns |
   to_entries |
   map(select(.value.enum != null)) |
   map({column: .key, enum: .value.enum})' \
@@ -743,14 +754,14 @@ jq '.databases.mst.tables.mst_stages.columns |
 **例: MstStageを作成する場合**
 
 ```
-MstStage
-  ├─ MstQuest（先に作成が必要）
-  ├─ MstDropGroup（先に作成が必要）
-  │    └─ MstItem（先に作成が必要）
-  └─ MstRewardGroup（先に作成が必要）
-       ├─ MstCharacter（先に作成が必要）
-       ├─ MstItem（先に作成が必要）
-       └─ MstCurrency（先に作成が必要）
+mst_stages
+  ├─ mst_quests（先に作成が必要）
+  ├─ mst_drop_groups（先に作成が必要）
+  │    └─ mst_items（先に作成が必要）
+  └─ mst_reward_groups（先に作成が必要）
+       ├─ mst_units（先に作成が必要）
+       ├─ mst_items（先に作成が必要）
+       └─ mst_currencies（先に作成が必要）
 ```
 
 #### ステップ3: NULL許可の外部キーを確認
@@ -768,9 +779,9 @@ jq '.databases.mst.tables.mst_stages.columns |
 
 ### データ作成順序の決定方法
 
-1. **外部キーを持たないテーブル**を最初に作成（MstItem, MstCurrency, MstCharacter など）
-2. **1段階の依存関係**を持つテーブルを次に作成（MstRewardGroup, MstDropGroup など）
-3. **複数段階の依存関係**を持つテーブルを最後に作成（MstStage など）
+1. **外部キーを持たないテーブル**を最初に作成（mst_items, mst_currencies, mst_units など）
+2. **1段階の依存関係**を持つテーブルを次に作成（mst_reward_groups, mst_drop_groups など）
+3. **複数段階の依存関係**を持つテーブルを最後に作成（mst_stages など）
 4. **NULL許可の外部キー**は後回しにしても良い
 
 ## トラブルシューティング

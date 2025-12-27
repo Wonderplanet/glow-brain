@@ -16,17 +16,17 @@ GLOWプロジェクトの全165テーブルを10カテゴリに分類し、詳�
 
 | プレフィックス | 意味 | 特徴 | 例 |
 |-------------|------|------|-----|
-| `Mst*` | Master Data | 固定的なゲームデータ（154テーブル） | MstCharacter, MstStage |
-| `Opr*` | Operation Data | 運営施策・期間限定データ（11テーブル） | OprEvent, OprGacha |
+| `mst_*` | Master Data | 固定的なゲームデータ（154テーブル） | mst_units, mst_stages |
+| `opr_*` | Operation Data | 運営施策・期間限定データ（11テーブル） | opr_events, opr_gachas |
 
 ### サフィックスによる分類
 
 | サフィックス | 意味 | 特徴 | 例 |
 |-----------|------|------|-----|
-| `*I18n` | Internationalization | 多言語対応テーブル（約40テーブル） | MstCharacterI18n, MstStageI18n |
-| `*Group` | Group/Set | グループ化されたデータ | MstRewardGroup, MstDropGroup |
-| `*Content` | Content/Detail | 親テーブルの詳細データ | MstPackContent, MstEventContent |
-| `*Relation` | Relation/Mapping | 多対多の関連データ | MstCharacterSkillRelation |
+| `*_i18n` | Internationalization | 多言語対応テーブル（約40テーブル） | mst_units_i18n, mst_stages_i18n |
+| `*_groups` | Group/Set | グループ化されたデータ | mst_reward_groups, mst_drop_groups |
+| `*_contents` | Content/Detail | 親テーブルの詳細データ | mst_pack_contents, mst_event_contents |
+| `*_relations` | Relation/Mapping | 多対多の関連データ | （実際の関連テーブルで確認）|
 
 ### データベース分離
 
@@ -41,10 +41,10 @@ GLOWプロジェクトの全165テーブルを10カテゴリに分類し、詳�
 
 | # | カテゴリ | テーブル数 | 主要テーブル |
 |---|---------|----------|-----------|
-| 1 | キャラクター関連 | ~10 | MstCharacter, MstRarity, MstClass |
+| 1 | ユニット関連 | ~20 | mst_units, mst_unit_abilities, mst_enemy_characters |
 | 2 | 攻撃・スキル関連 | ~5 | MstSkill, MstAutoSkill, MstLeaderSkill |
 | 3 | クエスト・ステージ | ~8 | MstQuest, MstStage, MstEnemy |
-| 4 | ガチャ関連 | ~6 | OprGacha, OprGachaStep, MstGachaAnimation |
+| 4 | ガチャ関連 | ~9 | opr_gachas, opr_gacha_prizes, mst_box_gachas |
 | 5 | ミッション関連 | ~15 | MstMission*, OprMission* |
 | 6 | アイテム・報酬 | ~8 | MstItem, MstRewardGroup, MstDropGroup |
 | 7 | イベント関連 | ~8 | OprEvent, MstEvent*, OprEventPoint |
@@ -54,46 +54,51 @@ GLOWプロジェクトの全165テーブルを10カテゴリに分類し、詳�
 
 ## カテゴリ別詳細リスト
 
-### 1. キャラクター関連（~10テーブル）
+### 1. ユニット関連（~20テーブル）
 
-キャラクターの基本情報、ステータス、育成要素を管理。
+ユニットの基本情報、ステータス、育成要素を管理。
 
 #### 主要テーブル
 
-**MstCharacter**
-- 役割: キャラクターの基本情報
-- 主要カラム: `id`, `rarity_id`, `class_id`, `max_level`, `base_hp`, `base_attack`
-- 関連: MstRarity, MstClass, MstCharacterSkillRelation
-- 多言語: MstCharacterI18n（名前、説明文）
+**mst_units**
+- 役割: ユニットの基本情報
+- 主要カラム: `id`, `rarity`, `max_hp`, `min_hp`, `max_attack_power`, `min_attack_power`, `fragment_mst_item_id`
+- 関連: mst_unit_abilities, mst_unit_level_ups, mst_unit_grade_ups, mst_unit_rank_ups
+- 多言語: mst_units_i18n（名前、説明文）
 
-**MstRarity**
-- 役割: レアリティ定義（★1〜★5など）
-- 主要カラム: `id`, `sort_order`, `growth_rate`
-- 特徴: レアリティごとの成長率を定義
+**mst_unit_level_ups**
+- 役割: ユニットのレベルアップ設定
+- 主要カラム: レベルアップに必要な経験値や素材を定義
 
-**MstClass**
-- 役割: クラス・属性定義
-- 主要カラム: `id`, `class_type`, `element_type`
-- 多言語: MstClassI18n
+**mst_unit_grade_ups**
+- 役割: ユニットのグレードアップ設定
+- 主要カラム: グレードを上げるための設定を定義
 
-**MstCharacterSkillRelation**
-- 役割: キャラクターとスキルの紐付け
-- 主要カラム: `mst_character_id`, `mst_skill_id`, `unlock_level`
-- 特徴: 多対多の関連テーブル
+**mst_unit_rank_ups**
+- 役割: ユニットのランクアップ設定
+- 主要カラム: ランクを上げるための設定を定義
 
-**MstCharacterAwakening**
-- 役割: キャラクター覚醒設定
-- 主要カラム: `mst_character_id`, `awakening_level`, `required_item_id`
+**mst_unit_specific_rank_ups**
+- 役割: 特定ユニットのランクアップ設定
+- 主要カラム: 特定ユニット専用のランクアップ設定
 
-**MstCharacterEvolution**
-- 役割: キャラクター進化設定
-- 主要カラム: `from_character_id`, `to_character_id`, `required_items`
+**mst_unit_abilities**
+- 役割: ユニットアビリティ定義
+- 主要カラム: ユニットが持つアビリティの定義
+
+**mst_unit_fragment_converts**
+- 役割: ユニット欠片の変換設定
+- 主要カラム: ユニット欠片アイテムの変換ルールを定義
+
+**mst_enemy_characters**
+- 役割: 敵キャラクター定義
+- 主要カラム: 敵として登場するキャラクターの定義
+- 多言語: mst_enemy_characters_i18n
 
 #### 関連するI18nテーブル
 
-- MstCharacterI18n
-- MstClassI18n
-- MstCharacterAwakeningI18n
+- mst_units_i18n
+- mst_enemy_characters_i18n
 
 ### 2. 攻撃・スキル関連（~5テーブル）
 
@@ -185,21 +190,24 @@ GLOWプロジェクトの全165テーブルを10カテゴリに分類し、詳�
 - 特徴: 期間限定のため`Opr*`プレフィックス
 - 多言語: OprGachaI18n
 
-**OprGachaStep**
-- 役割: ステップアップガチャの段階設定
-- 主要カラム: `opr_gacha_id`, `step_number`, `cost_override`, `guaranteed_reward`
+**opr_gacha_prizes**
+- 役割: ガチャ賞品・排出率設定
+- 主要カラム: `id`, `opr_gacha_id`, `prize_type`, `rarity`, `weight`
+- 注: 実際のCSVファイル名は`OprGachaPrize.csv`
 
-**MstGachaAnimation**
-- 役割: ガチャ演出設定
-- 主要カラム: `id`, `rarity_id`, `animation_type`, `effect_id`
+**opr_gacha_use_resources**
+- 役割: ガチャで使用するリソース設定
+- 主要カラム: `id`, `opr_gacha_id`, `resource_type`, `amount`
+- 注: 実際のCSVファイル名は`OprGachaUseResource.csv`
 
-**MstGachaLineup**
-- 役割: ガチャ提供アイテム・キャラクター
-- 主要カラム: `opr_gacha_id`, `reward_type`, `reward_id`, `weight`, `is_pickup`
+**mst_box_gachas**
+- 役割: ボックスガチャ設定（通常ガチャとは別タイプ）
+- 主要カラム: `id`, `name`, `max_draw_count`
+- 注: 実際のCSVファイル名は`MstBoxGacha.csv`
 
-**MstGachaPity**
-- 役割: 天井システム設定
-- 主要カラム: `opr_gacha_id`, `pity_count`, `guaranteed_reward_id`
+**mst_box_gacha_prizes**
+- 役割: ボックスガチャの賞品設定
+- 主要カラム: `id`, `mst_box_gacha_id`, `prize_type`, `quantity`
 
 #### 関連するI18nテーブル
 
@@ -405,10 +413,9 @@ GLOWプロジェクトの全165テーブルを10カテゴリに分類し、詳�
 
 #### I18nテーブル一覧（抜粋）
 
-**キャラクター関連**:
-- MstCharacterI18n
-- MstClassI18n
-- MstRarityI18n
+**ユニット関連**:
+- mst_units_i18n
+- mst_enemy_characters_i18n
 
 **スキル関連**:
 - MstSkillI18n
@@ -553,18 +560,11 @@ GLOWプロジェクトの全165テーブルを10カテゴリに分類し、詳�
 
 #### その他多数
 
-- MstLoginBonus（ログインボーナス）
-- MstAchievement（実績）
-- MstTitle（称号）
-- MstVoice（ボイス）
-- MstBgm（BGM）
-- MstSe（効果音）
-- MstMovie（ムービー）
-- MstIllustration（イラスト）
-- MstStory（ストーリー）
-- MstCharacterProfile（キャラクタープロフィール）
-- MstTips（Tips）
-- MstHelp（ヘルプ）
+- mst_comeback_bonuses（復帰ボーナス）
+- mst_mission_achievements（実績）
+- mst_result_tips_i18n（リザルトTips）
+- mst_stage_tips（ステージTips）
+- mst_tutorial_tips_i18n（チュートリアルTips）
 - など約60テーブル
 
 ## テーブル関連図
@@ -572,25 +572,23 @@ GLOWプロジェクトの全165テーブルを10カテゴリに分類し、詳�
 ### 1. イベントシステム
 
 ```
-OprEvent（イベント基本設定）
-  ├─ OprEventI18n（多言語）
-  ├─ MstEventType（イベントタイプ）
-  ├─ OprEventPoint（ポイント報酬）
-  │    └─ MstRewardGroup（報酬グループ）
-  ├─ OprEventRanking（ランキング報酬）
-  │    └─ MstRewardGroup
-  ├─ MstEventExchange（イベント交換所）
-  │    └─ MstItem（アイテム）
-  ├─ MstEventStory（イベントストーリー）
-  ├─ OprEventBanner（バナー表示）
-  └─ MstEventBoss（イベントボス）
-       └─ MstEnemy（敵キャラクター）
+mst_events（イベント基本設定）
+  ├─ mst_events_i18n（多言語）
+  ├─ mst_event_bonus_units（ボーナスユニット）
+  │    └─ mst_units（ユニット参照）
+  ├─ mst_event_display_rewards（表示報酬）
+  │    └─ mst_reward_groups（報酬グループ）
+  ├─ mst_event_display_units（表示ユニット）
+  │    └─ mst_units
+  ├─ mst_mission_events（ミッションイベント）
+  │    └─ mst_mission_event_dailies（デイリーミッション）
+  └─ mst_quest_event_bonus_schedules（クエストイベントボーナス）
 ```
 
 **調査方法**:
 ```bash
-# OprEventテーブルの全カラム確認
-jq '.databases.mst.tables.opr_events' \
+# mst_eventsテーブルの全カラム確認
+jq '.databases.mst.tables.mst_events' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 
 # イベント関連テーブル一覧
@@ -601,16 +599,17 @@ jq '.databases.mst.tables | keys | map(select(test("event"; "i")))' \
 ### 2. ガチャシステム
 
 ```
-OprGacha（ガチャ基本設定）
-  ├─ OprGachaI18n（多言語）
-  ├─ OprGachaStep（ステップアップ）
-  ├─ MstGachaLineup（提供アイテム）
-  │    ├─ MstCharacter（キャラクター）
-  │    └─ MstItem（アイテム）
-  ├─ MstGachaPity（天井システム）
-  │    └─ MstRewardGroup（天井報酬）
-  └─ MstGachaAnimation（ガチャ演出）
-       └─ MstRarity（レアリティ）
+opr_gachas（ガチャ基本設定）
+  ├─ opr_gachas_i18n（多言語）
+  ├─ opr_gacha_prizes（ガチャ賞品・排出率）
+  │    ├─ mst_units（ユニット報酬）
+  │    └─ mst_items（アイテム報酬）
+  ├─ opr_gacha_use_resources（使用リソース）
+  │    └─ mst_currencies（通貨参照）
+  └─ opr_gacha_uppers（上昇設定）
+
+**別タイプ**: mst_box_gachas（ボックスガチャ）
+  └─ mst_box_gacha_prizes（ボックスガチャ賞品）
 ```
 
 **調査方法**:
@@ -713,42 +712,40 @@ jq '.databases.mst.tables.mst_stages.columns | to_entries | map(select(.value.fo
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
-### 6. キャラクター・スキルシステム
+### 6. ユニット・アビリティシステム
 
 ```
-MstCharacter（キャラクター）
-  ├─ MstCharacterI18n（多言語）
-  ├─ MstRarity（レアリティ）
-  ├─ MstClass（クラス・属性）
-  ├─ MstCharacterSkillRelation（スキル紐付け）
-  │    ├─ MstSkill（アクティブスキル）
-  │    ├─ MstAutoSkill（パッシブスキル）
-  │    └─ MstLeaderSkill（リーダースキル）
-  ├─ MstCharacterAwakening（覚醒）
-  │    └─ MstItem（必要素材）
-  └─ MstCharacterEvolution（進化）
-       └─ MstItem（必要素材）
+mst_units（ユニット）
+  ├─ mst_units_i18n（多言語）
+  ├─ mst_unit_abilities（アビリティ）
+  ├─ mst_unit_level_ups（レベルアップ）
+  ├─ mst_unit_grade_ups（グレードアップ）
+  ├─ mst_unit_rank_ups（ランクアップ）
+  └─ mst_unit_specific_rank_ups（特定ユニットのランクアップ）
+
+mst_enemy_characters（敵キャラクター）
+  └─ mst_enemy_characters_i18n（多言語）
 ```
 
 **調査方法**:
 ```bash
-# キャラクター関連テーブル一覧
-jq '.databases.mst.tables | keys | map(select(test("character|skill|class|rarity"; "i")))' \
+# ユニット関連テーブル一覧
+jq '.databases.mst.tables | keys | map(select(test("unit|enemy_character"; "i")))' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
 ### 7. 報酬・アイテムシステム
 
 ```
-MstRewardGroup（報酬グループ）
+mst_reward_groups（報酬グループ）
   └─ reward_items（JSON配列）
-       ├─ MstCharacter（キャラクター）
-       ├─ MstItem（アイテム）
-       └─ MstCurrency（通貨）
+       ├─ mst_units（ユニット）
+       ├─ mst_items（アイテム）
+       └─ mst_currencies（通貨）
 
-MstDropGroup（ドロップグループ）
+mst_drop_groups（ドロップグループ）
   └─ drop_items（JSON配列）
-       └─ MstItem（アイテム）
+       └─ mst_items（アイテム）
 ```
 
 **特徴**:
@@ -772,141 +769,46 @@ jq '.databases.mst.tables | to_entries[] |
 
 ### 主要なenum型
 
-#### MstCharacter
-
-**class_type**:
-```
-- warrior（戦士）
-- mage（魔法使い）
-- archer（弓使い）
-- healer（回復役）
-- tank（タンク）
-```
-
-**element_type**:
-```
-- fire（火）
-- water（水）
-- earth（土）
-- wind（風）
-- light（光）
-- dark（闇）
-```
-
-#### MstSkill
-
-**skill_type**:
-```
-- damage（ダメージ）
-- heal（回復）
-- buff（バフ）
-- debuff（デバフ）
-- special（特殊）
-```
-
-**target_type**:
-```
-- single（単体）
-- all_enemies（敵全体）
-- all_allies（味方全体）
-- random（ランダム）
-- self（自分）
-```
-
-#### MstQuest
-
-**quest_type**:
-```
-- main（メインクエスト）
-- event（イベントクエスト）
-- daily（デイリークエスト）
-- special（スペシャルクエスト）
-```
-
-#### OprGacha
+#### opr_gachas
 
 **gacha_type**:
 ```
-- normal（通常ガチャ）
-- step_up（ステップアップ）
-- limited（期間限定）
-- pickup（ピックアップ）
+- Normal（通常）
+- Premium（プレミアム）
+- Pickup（ピックアップ）
+- Free（無料）
+- Ticket（チケット）
+- Festival（フェス）
+- PaidOnly（有償限定）
+- Medal（メダル）
+- Tutorial（チュートリアル）
 ```
 
-#### MstMission
+**注**: enum型はスキーマJSONの`type`フィールドに`enum('value1','value2',...)`形式で定義されています。
 
-**mission_type**:
-```
-- daily（デイリー）
-- weekly（ウィークリー）
-- event（イベント）
-- achievement（実績）
-- beginner（初心者）
+**確認方法**:
+```bash
+jq '.databases.mst.tables.opr_gachas.columns.gacha_type' \
+  projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
-**target_type**:
-```
-- stage_clear（ステージクリア）
-- character_level（キャラクターレベル）
-- item_collect（アイテム収集）
-- login（ログイン）
-- gacha（ガチャ実行）
-```
-
-#### MstItem
-
-**item_type**:
-```
-- consumable（消費アイテム）
-- material（素材）
-- equipment（装備）
-- treasure_box（宝箱）
-- ticket（チケット）
-```
-
-**item_category**:
-```
-- enhancement（強化素材）
-- evolution（進化素材）
-- awakening（覚醒素材）
-- general（汎用）
-```
-
-#### MstCurrency
-
-**currency_type**:
-```
-- gem（ジェム・有償石）
-- free_gem（無償石）
-- coin（コイン）
-- event_point（イベントポイント）
-- gacha_ticket（ガチャチケット）
-```
-
-#### OprEvent
-
-**event_type**:
-```
-- point（ポイントイベント）
-- ranking（ランキングイベント）
-- raid（レイドイベント）
-- tower（タワーイベント）
-- collection（収集イベント）
-```
+**注**: 上記は実際のDBスキーマから取得した例です。他のテーブルのenum値を確認する場合は、同様にjqコマンドでスキーマJSONを参照してください。
 
 ### enum値の確認方法
 
 特定のテーブル・カラムのenum値を確認：
 
 ```bash
-# MstCharacterのelement_type enum値確認
-jq '.databases.mst.tables.mst_characters.columns.element_type.enum' \
+# OprGachaのガチャタイプenum値確認（実際に存在するテーブル）
+jq '.databases.mst.tables.opr_gachas.columns.gacha_type.enum' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 
-# MstSkillのskill_type enum値確認
-jq '.databases.mst.tables.mst_skills.columns.skill_type.enum' \
+# mst_unitsのrarity enum値確認（実際に存在するテーブル）
+jq '.databases.mst.tables.mst_units.columns.rarity.enum' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
+
+**注意**: 上記の「主要enum型」セクションの例は一般的なゲームシステムのパターンとして記載していますが、実際のDBスキーマとは異なる場合があります。実際のenum値は必ずDBスキーマで確認してください。
 
 ## 調査のヒント
 
@@ -945,15 +847,15 @@ jq '.databases.mst.tables | to_entries |
 #### 4. 既存データの例を確認
 
 ```bash
-# MstCharacterの実データ例（先頭5行）
-head -n 5 projects/glow-masterdata/MstCharacter.csv
+# mst_unitsの実データ例（先頭5行、存在する場合）
+head -n 5 projects/glow-masterdata/MstUnit.csv 2>/dev/null || echo "ファイルが存在しない場合は別のテーブルを参照"
 ```
 
 #### 5. CSVテンプレートの列順を確認
 
 ```bash
-# MstCharacterのCSVテンプレート（列名定義行）
-sed -n '2p' projects/glow-masterdata/sheet_schema/MstCharacter.csv
+# mst_unitsのCSVテンプレート（列名定義行）
+sed -n '2p' projects/glow-masterdata/sheet_schema/MstUnit.csv
 ```
 
 ## 関連ドキュメント

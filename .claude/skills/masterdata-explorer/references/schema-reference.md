@@ -26,10 +26,10 @@ projects/glow-server/api/database/schema/exports/master_tables_schema.json
   "databases": {
     "mst": {
       "tables": {
-        "mst_characters": {
+        "mst_units": {
           "columns": {
             "id": { ... },
-            "name": { ... },
+            "rarity": { ... },
             ...
           },
           "indexes": [ ... ],
@@ -48,7 +48,7 @@ projects/glow-server/api/database/schema/exports/master_tables_schema.json
 .databases
   └─ .mst（データベース名）
       └─ .tables（テーブル群）
-          ├─ .mst_characters（テーブル名）
+          ├─ .mst_units（テーブル名）
           │   ├─ .columns（カラム定義）
           │   │   ├─ .id（カラム名）
           │   │   │   ├─ .type（データ型）
@@ -58,7 +58,7 @@ projects/glow-server/api/database/schema/exports/master_tables_schema.json
           │   │   │   ├─ .foreign_key（外部キー参照先）
           │   │   │   ├─ .comment（コメント）
           │   │   │   └─ ...
-          │   │   ├─ .name
+          │   │   ├─ .rarity
           │   │   └─ ...
           │   ├─ .indexes（インデックス定義）
           │   └─ .comment（テーブルコメント）
@@ -95,7 +95,7 @@ jq '.databases.mst.tables | keys' \
 **出力例**:
 ```json
 [
-  "mst_characters",
+  "mst_units",
   "mst_stages",
   "opr_events",
   ...
@@ -114,14 +114,14 @@ jq '.databases.mst.tables | keys | length' \
 #### 3. 特定のテーブル構造を全て取得
 
 ```bash
-jq '.databases.mst.tables.mst_characters' \
+jq '.databases.mst.tables.mst_units' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
 #### 4. 特定のテーブルの全カラム名を取得
 
 ```bash
-jq '.databases.mst.tables.mst_characters.columns | keys' \
+jq '.databases.mst.tables.mst_units.columns | keys' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
@@ -129,11 +129,11 @@ jq '.databases.mst.tables.mst_characters.columns | keys' \
 ```json
 [
   "id",
-  "name",
-  "rarity_id",
-  "class_id",
-  "base_hp",
-  "base_attack",
+  "rarity",
+  "max_hp",
+  "min_hp",
+  "max_attack_power",
+  "min_attack_power",
   ...
 ]
 ```
@@ -141,7 +141,7 @@ jq '.databases.mst.tables.mst_characters.columns | keys' \
 #### 5. 特定のカラムの詳細情報を取得
 
 ```bash
-jq '.databases.mst.tables.mst_characters.columns.element_type' \
+jq '.databases.mst.tables.opr_gachas.columns.gacha_type' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
@@ -150,9 +150,9 @@ jq '.databases.mst.tables.mst_characters.columns.element_type' \
 {
   "type": "enum",
   "nullable": false,
-  "default": "fire",
-  "enum": ["fire", "water", "earth", "wind", "light", "dark"],
-  "comment": "キャラクターの属性"
+  "default": "normal",
+  "enum": ["normal", "step_up", "limited", "pickup"],
+  "comment": "ガチャのタイプ"
 }
 ```
 
@@ -232,7 +232,7 @@ jq '.databases.mst.tables.mst_stages.columns |
 #### 12. デフォルト値を持つカラムの一覧
 
 ```bash
-jq '.databases.mst.tables.mst_characters.columns |
+jq '.databases.mst.tables.opr_gachas.columns |
   to_entries |
   map(select(.value.default != null)) |
   map({column: .key, default: .value.default})' \
@@ -243,7 +243,7 @@ jq '.databases.mst.tables.mst_characters.columns |
 ```json
 [
   {"column": "is_enabled", "default": true},
-  {"column": "element_type", "default": "fire"},
+  {"column": "gacha_type", "default": "normal"},
   ...
 ]
 ```
@@ -251,7 +251,7 @@ jq '.databases.mst.tables.mst_characters.columns |
 #### 13. enum型カラムの一覧とenum値
 
 ```bash
-jq '.databases.mst.tables.mst_characters.columns |
+jq '.databases.mst.tables.opr_gachas.columns |
   to_entries |
   map(select(.value.enum != null)) |
   map({column: .key, enum: .value.enum})' \
@@ -262,12 +262,8 @@ jq '.databases.mst.tables.mst_characters.columns |
 ```json
 [
   {
-    "column": "element_type",
-    "enum": ["fire", "water", "earth", "wind", "light", "dark"]
-  },
-  {
-    "column": "class_type",
-    "enum": ["warrior", "mage", "archer", "healer", "tank"]
+    "column": "gacha_type",
+    "enum": ["normal", "step_up", "limited", "pickup"]
   }
 ]
 ```
@@ -294,7 +290,7 @@ jq '.databases.mst.tables.mst_stages.columns |
 #### 15. 主キーカラムの取得
 
 ```bash
-jq '.databases.mst.tables.mst_characters.columns |
+jq '.databases.mst.tables.mst_units.columns |
   to_entries |
   map(select(.value.primary_key == true)) |
   map(.key)' \
@@ -306,7 +302,7 @@ jq '.databases.mst.tables.mst_characters.columns |
 #### 16. 自動増分カラムの取得
 
 ```bash
-jq '.databases.mst.tables.mst_characters.columns |
+jq '.databases.mst.tables.mst_units.columns |
   to_entries |
   map(select(.value.auto_increment == true)) |
   map(.key)' \
@@ -425,7 +421,7 @@ jq '.databases.mst.tables |
 **出力例**:
 ```json
 [
-  {"table": "mst_characters", "column_count": 42},
+  {"table": "mst_units", "column_count": 30},
   {"table": "mst_stages", "column_count": 35},
   ...
 ]
@@ -481,14 +477,14 @@ jq '.databases.mst.tables |
 #### 24. テーブルコメントの取得
 
 ```bash
-jq '.databases.mst.tables.mst_characters.comment' \
+jq '.databases.mst.tables.mst_units.comment' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
 #### 25. カラムコメント一覧の取得
 
 ```bash
-jq '.databases.mst.tables.mst_characters.columns |
+jq '.databases.mst.tables.mst_units.columns |
   to_entries |
   map({column: .key, comment: .value.comment})' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
@@ -497,7 +493,7 @@ jq '.databases.mst.tables.mst_characters.columns |
 #### 26. コメントが未設定のカラムを検索
 
 ```bash
-jq '.databases.mst.tables.mst_characters.columns |
+jq '.databases.mst.tables.mst_units.columns |
   to_entries |
   map(select(.value.comment == null or .value.comment == "")) |
   map(.key)' \
@@ -509,7 +505,7 @@ jq '.databases.mst.tables.mst_characters.columns |
 #### 27. テーブルのインデックス一覧を取得
 
 ```bash
-jq '.databases.mst.tables.mst_characters.indexes' \
+jq '.databases.mst.tables.mst_units.indexes' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 ```
 
@@ -517,13 +513,13 @@ jq '.databases.mst.tables.mst_characters.indexes' \
 ```json
 [
   {
-    "name": "idx_mst_characters_rarity_id",
-    "columns": ["rarity_id"],
+    "name": "idx_mst_units_rarity",
+    "columns": ["rarity"],
     "unique": false
   },
   {
-    "name": "idx_mst_characters_class_id",
-    "columns": ["class_id"],
+    "name": "idx_mst_units_series_id",
+    "columns": ["mst_series_id"],
     "unique": false
   }
 ]
@@ -550,7 +546,7 @@ jq '.databases.mst.tables |
 #### 29. カラム定義をCSV形式で出力
 
 ```bash
-jq -r '.databases.mst.tables.mst_characters.columns |
+jq -r '.databases.mst.tables.mst_units.columns |
   to_entries |
   map([.key, .value.type, .value.nullable, .value.default // "NULL"] | @csv) |
   .[]' \
@@ -560,14 +556,14 @@ jq -r '.databases.mst.tables.mst_characters.columns |
 **出力例**:
 ```
 "id","bigint",false,"NULL"
-"name","varchar(255)",false,"NULL"
-"rarity_id","int",false,"NULL"
+"rarity","int",false,"NULL"
+"max_hp","int",false,"NULL"
 ```
 
 #### 30. マークダウンテーブル形式で出力
 
 ```bash
-jq -r '.databases.mst.tables.mst_characters.columns |
+jq -r '.databases.mst.tables.mst_units.columns |
   ["| カラム名 | 型 | NULL許可 | デフォルト値 |", "| --- | --- | --- | --- |"] +
   (to_entries | map("| \(.key) | \(.value.type) | \(.value.nullable) | \(.value.default // "NULL") |")) |
   .[]' \
@@ -579,8 +575,8 @@ jq -r '.databases.mst.tables.mst_characters.columns |
 | カラム名 | 型 | NULL許可 | デフォルト値 |
 | --- | --- | --- | --- |
 | id | bigint | false | NULL |
-| name | varchar(255) | false | NULL |
-| rarity_id | int | false | NULL |
+| rarity | int | false | NULL |
+| max_hp | int | false | NULL |
 ```
 
 ## 列情報の読み方
@@ -767,20 +763,20 @@ jq '.databases.mst.tables.opr_gachas.columns |
 
 ### 例3: イベントポイント報酬の仕組みを理解する
 
-**シナリオ**: イベントポイント報酬がどのように設定されているか調べたい
+**シナリオ**: イベント表示報酬がどのように設定されているか調べたい
 
 ```bash
-# 1. OprEventPointの構造を確認
-jq '.databases.mst.tables.opr_event_points' \
+# 1. mst_event_display_rewardsの構造を確認
+jq '.databases.mst.tables.mst_event_display_rewards' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 
 # 2. 外部キーを確認（どのテーブルと関連しているか）
-jq '.databases.mst.tables.opr_event_points.columns |
+jq '.databases.mst.tables.mst_event_display_rewards.columns |
   to_entries |
   map(select(.value.foreign_key != null)) |
   map({column: .key, references: .value.foreign_key})' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
-# 出力: opr_event_id → opr_events.id
+# 出力: mst_event_id → mst_events.id, mst_reward_group_id → mst_reward_groups.id
 #       reward_group_id → mst_reward_groups.id
 
 # 3. MstRewardGroupの構造を確認（報酬がどう定義されているか）
@@ -821,17 +817,17 @@ jq '.databases.mst.tables |
 jq '.databases.mst.tables | keys | map(select(test("_i18n$")))' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 
-# 2. MstCharacterI18nの構造を確認（代表例として）
-jq '.databases.mst.tables.mst_character_i18n' \
+# 2. mst_units_i18nの構造を確認（代表例として）
+jq '.databases.mst.tables.mst_units_i18n' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 
 # 3. I18nテーブル共通のカラムを確認
-jq '.databases.mst.tables.mst_character_i18n.columns | keys' \
+jq '.databases.mst.tables.mst_units_i18n.columns | keys' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
-# 期待: ["mst_character_id", "language", "name", "description", ...]
+# 期待: ["id", "mst_unit_id", "language", "name", "description", "detail", ...]
 
 # 4. languageカラムのenum値を確認（対応言語の一覧）
-jq '.databases.mst.tables.mst_character_i18n.columns.language.enum' \
+jq '.databases.mst.tables.mst_units_i18n.columns.language.enum' \
   projects/glow-server/api/database/schema/exports/master_tables_schema.json
 # 期待: ["ja", "en", "zh-CN", "zh-TW", ...]
 ```

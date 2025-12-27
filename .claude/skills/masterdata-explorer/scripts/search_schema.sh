@@ -24,13 +24,13 @@ Commands:
 
 Examples:
   $0 tables event               # 「event」を含むテーブルを検索
-  $0 columns mst_characters     # MstCharacterの全カラムを表示
+  $0 columns mst_units          # mst_unitsの全カラムを表示
   $0 search-column reward_group_id  # reward_group_idを持つテーブルを検索
-  $0 enum mst_characters element_type  # element_typeのenum値を表示
-  $0 foreign-keys mst_stages    # MstStageの外部キー一覧を表示
-  $0 references mst_reward_groups  # MstRewardGroupを参照しているテーブルを検索
-  $0 nullable mst_stages        # MstStageのNULL許可カラムを表示
-  $0 not-null mst_stages        # MstStageのNOT NULLカラムを表示
+  $0 enum opr_gachas gacha_type     # gacha_typeのenum値を表示
+  $0 foreign-keys mst_stages    # mst_stagesの外部キー一覧を表示
+  $0 references mst_reward_groups  # mst_reward_groupsを参照しているテーブルを検索
+  $0 nullable mst_stages        # mst_stagesのNULL許可カラムを表示
+  $0 not-null mst_stages        # mst_stagesのNOT NULLカラムを表示
 
 EOF
   exit 1
