@@ -1,0 +1,5 @@
+memo
+TABLE,OprGachaUpper,OprGachaUpper,OprGachaUpper,OprGachaUpper,OprGachaUpper
+ENABLE,id,upper_group,upper_type,count,release_key
+e,Pickup_you_001,Pickup_you_001,Pickup,100,1
+e,valentine_you_001,valentine_you_001,Pickup,100,1

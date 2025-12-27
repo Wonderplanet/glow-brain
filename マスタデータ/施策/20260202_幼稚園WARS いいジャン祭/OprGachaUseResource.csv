@@ -1,0 +1,9 @@
+memo
+TABLE,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource
+ENABLE,id,opr_gacha_id,cost_type,cost_id,cost_num,draw_count,cost_priority,release_key
+e,Pickup_you_001_ticket,Pickup_you_001,Item,ticket_glo_00003,1,1,1,1
+e,Pickup_you_001_single,Pickup_you_001,Diamond,,150,1,2,1
+e,Pickup_you_001_multi,Pickup_you_001,Diamond,,1500,10,3,1
+e,valentine_you_001_ticket,valentine_you_001,Item,ticket_glo_10002,1,1,1,1
+e,valentine_you_001_single,valentine_you_001,Diamond,,150,1,2,1
+e,valentine_you_001_multi,valentine_you_001,Diamond,,1500,10,3,1
