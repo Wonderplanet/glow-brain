@@ -532,6 +532,24 @@ function convertToMarkdown(file) {
             timestamp: data.timestamp
           };
         }
+      } else if (data.type === 'queue-operation' && data.operation === 'enqueue' && data.content) {
+        // queue-operation メッセージをユーザーメッセージとして扱う
+        messages.push({
+          type: 'user',
+          message: data.content,
+          timestamp: data.timestamp,
+          sessionId: data.sessionId,
+          uuid: data.uuid || `queue-${data.timestamp}`
+        });
+        if (!sessionInfo && data.sessionId) {
+          sessionInfo = {
+            sessionId: data.sessionId,
+            cwd: data.cwd || '',
+            gitBranch: data.gitBranch || '',
+            version: data.version || '',
+            timestamp: data.timestamp
+          };
+        }
       }
     } catch (e) {
       // パースエラーは無視
