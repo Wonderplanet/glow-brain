@@ -103,10 +103,22 @@ show_enum() {
     usage
   fi
 
-  jq -r ".databases.mst.tables.${table}.columns.${column}.enum | .[]" "$SCHEMA_FILE" 2>/dev/null || {
-    echo "Error: Table '$table' or column '$column' not found, or column is not an enum type"
+  # typeフィールドからenum値を抽出
+  local type_info=$(jq -r ".databases.mst.tables.${table}.columns.${column}.type" "$SCHEMA_FILE" 2>/dev/null)
+
+  if [ -z "$type_info" ] || [ "$type_info" = "null" ]; then
+    echo "Error: Table '$table' or column '$column' not found"
     exit 1
-  }
+  fi
+
+  # enum型かどうか確認
+  if ! echo "$type_info" | grep -q "^enum("; then
+    echo "Error: Column '$column' is not an enum type (type: $type_info)"
+    exit 1
+  fi
+
+  # enum値を抽出して1行ずつ表示
+  echo "$type_info" | sed -n "s/^enum('\(.*\)')$/\1/p" | tr ',' '\n' | sed "s/'//g"
 }
 
 # 指定テーブルの全外部キーを表示
