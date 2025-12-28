@@ -1,7 +1,0 @@
-memo
-TABLE,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTerm,MstMissionLimitedTermI18n
-ENABLE,id,release_key,progress_group_key,criterion_type,criterion_value,criterion_count,mission_category,mst_mission_reward_group_id,sort_order,destination_scene,start_at,end_at,description.ja
-e,mission_kim_advent_005,1,kim_advent_mission_group,AdventBattleChallengeCount,advent_battle_kim_00001,5,AdventBattle,mission_kim_advent_reward_001,1,AdventBattle,"2026-02-20 15:00:00","2026-02-26 14:59:00",降臨バトル「ラブミッション：インポッシブル」に5回挑戦しよう！
-e,mission_kim_advent_010,1,kim_advent_mission_group,AdventBattleChallengeCount,advent_battle_kim_00001,10,AdventBattle,mission_kim_advent_reward_002,2,AdventBattle,"2026-02-20 15:00:00","2026-02-26 14:59:00",降臨バトル「ラブミッション：インポッシブル」に10回挑戦しよう！
-e,mission_kim_advent_020,1,kim_advent_mission_group,AdventBattleChallengeCount,advent_battle_kim_00001,20,AdventBattle,mission_kim_advent_reward_003,3,AdventBattle,"2026-02-20 15:00:00","2026-02-26 14:59:00",降臨バトル「ラブミッション：インポッシブル」に20回挑戦しよう！
-e,mission_kim_advent_030,1,kim_advent_mission_group,AdventBattleChallengeCount,advent_battle_kim_00001,30,AdventBattle,mission_kim_advent_reward_004,4,AdventBattle,"2026-02-20 15:00:00","2026-02-26 14:59:00",降臨バトル「ラブミッション：インポッシブル」に30回挑戦しよう！

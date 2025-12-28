@@ -1,5 +1,0 @@
-memo
-TABLE,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPackI18n
-ENABLE,id,product_sub_id,discount_rate,is_first_time_free,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,cost_amount,is_recommend,asset_key,pack_decoration,release_key,name.ja
-e,pack_kim_event,kim_event_pack_001,25.74,0,__NULL__,0,,1,Normal,1,Cash,3000,1,kim_event_pack,Gold,1,【お一人様1回まで購入可】君のことが大大大大大好きな100人の彼女 いいジャン祭 開催記念パック
-e,pack_kim_daily,kim_daily_pack_001,0,1,__NULL__,0,,0,Daily,2,Free,0,1,kim_daily_pack,__NULL__,1,【毎日更新】強化パック
