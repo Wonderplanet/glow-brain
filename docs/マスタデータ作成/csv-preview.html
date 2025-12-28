@@ -28,6 +28,53 @@
             min-height: 100vh;
         }
 
+        .header-bar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            border-bottom: 3px solid #3498db;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            gap: 20px;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .hamburger-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .hamburger-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #3498db;
+            transform: scale(1.05);
+        }
+
+        .header-title {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.5px;
+            flex-grow: 1;
+        }
+
         .container {
             flex: 1;
             background: white;
@@ -431,12 +478,24 @@
             display: block;
             flex-shrink: 0;
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            z-index: 998;
+        }
+
+        .sidebar.collapsed {
+            width: 0;
+            min-width: 0;
+            overflow: hidden;
+            border-right: none;
         }
 
         .sidebar-header {
             background: rgba(52, 152, 219, 0.1);
             padding: 25px 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .sidebar-title {
@@ -446,6 +505,22 @@
             color: #ecf0f1;
             letter-spacing: 0.5px;
         }
+
+        .sidebar-toggle-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ecf0f1;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-toggle-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
 
         .toc-list {
             list-style: none;
@@ -495,6 +570,21 @@
                 max-height: 300px;
                 position: relative;
             }
+            .sidebar.collapsed {
+                max-height: 0;
+                padding: 0;
+            }
+            .header-bar {
+                padding: 0 15px;
+            }
+            .header-title {
+                font-size: 18px;
+            }
+            .hamburger-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -504,13 +594,18 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <h2 class="sidebar-title">📑 目次</h2>
+                <button class="sidebar-toggle-btn" onclick="toggleSidebar()">✕ 閉じる</button>
             </div>
             <ul class="toc-list" id="tocList"></ul>
         </aside>
 
         <!-- メインコンテンツ -->
         <div class="container">
-            <h1>📊 マスタデータCSVプレビューツール</h1>
+            <!-- ヘッダーバー -->
+            <div class="header-bar">
+                <button class="hamburger-btn" onclick="toggleSidebar()" title="目次を開く/閉じる">☰</button>
+                <h1 class="header-title">📊 マスタデータCSVプレビューツール</h1>
+            </div>
 
         <div class="file-input-area">
             <div class="input-row">
@@ -615,6 +710,28 @@
 
         // ページロード時にenum定義を読み込み
         loadEnumDefinitions();
+
+        // サイドバーの開閉状態を管理
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('collapsed');
+
+            // ローカルストレージに状態を保存
+            if (sidebar.classList.contains('collapsed')) {
+                localStorage.setItem('sidebarCollapsed', 'true');
+            } else {
+                localStorage.setItem('sidebarCollapsed', 'false');
+            }
+        }
+
+        // ページロード時に保存された状態を復元
+        window.addEventListener('DOMContentLoaded', function() {
+            const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+            if (isCollapsed) {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.add('collapsed');
+            }
+        });
 
         async function handleFiles(event) {
             const files = Array.from(event.target.files).filter(f => f.name.endsWith('.csv'));
