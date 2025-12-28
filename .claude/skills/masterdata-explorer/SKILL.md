@@ -175,6 +175,97 @@ jq '.databases.mst.tables | keys | map(select(test("gacha"; "i")))' \
 
 ---
 
+## 既存リソース確認パターン
+
+マスタデータ作成時に、報酬として設定するリソース（キャラクター、アイテム等）の存在を確認するためのパターン。
+
+### キャラクターID検索
+
+```bash
+# 全キャラクターのID一覧（先頭20件）
+head -20 projects/glow-masterdata/MstUnit.csv | cut -d',' -f2
+
+# 特定IDの存在確認（exactマッチ）
+grep "^e,chara_glo_00001," projects/glow-masterdata/MstUnit.csv
+
+# 部分一致検索（gloシリーズのキャラ全件）
+grep "^e,chara_glo_" projects/glow-masterdata/MstUnit.csv
+
+# 作品名を含むIDの検索
+grep "^e,chara_100kano_" projects/glow-masterdata/MstUnit.csv
+```
+
+### アイテムID検索
+
+```bash
+# かけらアイテム一覧
+grep "^e,piece_" projects/glow-masterdata/MstItem.csv
+
+# 特定タイプのアイテム検索（CharacterFragment）
+grep "CharacterFragment" projects/glow-masterdata/MstItem.csv
+
+# アイテムID存在確認
+grep "^e,piece_glo_00001," projects/glow-masterdata/MstItem.csv
+```
+
+### リソース検索の手順
+
+#### Step 1: 01_概要ファイルを確認
+
+```bash
+# 01_概要ファイルを確認
+cat "マスタデータ/施策/${施策名}/要件/${施策名}_仕様書_01_概要.csv"
+```
+
+#### Step 2: 報酬一覧ファイルを確認（存在する場合）
+
+```bash
+# 報酬一覧ファイルを確認
+cat "マスタデータ/施策/${施策名}/要件/${施策名}_仕様書_05_報酬一覧.csv"
+```
+
+#### Step 3: 他の要件CSVファイルを検索
+
+```bash
+# 施策ディレクトリ内の全要件CSVからキャラクターIDを検索
+grep -r "chara_100kano_00001" "マスタデータ/施策/${施策名}/要件/"
+
+# アイテムIDを検索
+grep -r "item_xxxxx" "マスタデータ/施策/${施策名}/要件/"*.csv
+```
+
+#### Step 4: 既存マスタデータを検索
+
+```bash
+# キャラクター
+grep "^e,chara_100kano_00001," projects/glow-masterdata/MstUnit.csv
+
+# アイテム
+grep "^e,item_xxxxx," projects/glow-masterdata/MstItem.csv
+```
+
+### 報酬設定で使える検索
+
+```bash
+# ガチャ報酬で使われているキャラクター一覧
+grep "^e," projects/glow-masterdata/OprGachaPrize.csv | cut -d',' -f5 | sort -u
+
+# ミッション報酬で使われているアイテム一覧
+grep "^e," projects/glow-masterdata/MstMissionEventReward.csv | cut -d',' -f4 | sort -u
+```
+
+### 類似IDの検索（リソースが見つからない場合）
+
+```bash
+# 作品名を含むIDを全検索（例: 100kano）
+grep "100kano" projects/glow-masterdata/MstUnit.csv
+
+# 特定のプレフィックスで検索
+grep "^e,chara_" projects/glow-masterdata/MstUnit.csv | grep "100kano"
+```
+
+---
+
 ## ヘルパースクリプト
 
 便利なスクリプトが用意されています：
