@@ -593,18 +593,18 @@
 | mst_in_game_special_rules | rule_type | なし |
 | mst_in_game_special_rules | rule_value | なし |
 | mst_in_game_special_rules | start_at | なし |
-| mst_in_game_special_rules | target_id | なし（ターゲット指定） |
+| mst_in_game_special_rules | target_id | content_typeに依存（stage→mst_stages.id, advent_battle→mst_advent_battles.id） |
 | mst_in_games | bgm_asset_key | なし |
 | mst_in_games | boss_bgm_asset_key | なし |
 | mst_in_games | boss_count | なし |
 | mst_in_games | boss_enemy_attack_coef | なし |
 | mst_in_games | boss_enemy_hp_coef | なし |
 | mst_in_games | boss_enemy_speed_coef | なし |
-| mst_in_games | boss_mst_enemy_stage_parameter_id | なし |
+| mst_in_games | boss_mst_enemy_stage_parameter_id | mst_enemy_stage_parameters.id |
 | mst_in_games | id | なし |
 | mst_in_games | loop_background_asset_key | なし |
 | mst_in_games | mst_auto_player_sequence_id | mst_auto_player_sequences.id |
-| mst_in_games | mst_auto_player_sequence_set_id | mst_auto_player_sequences.sequence_set_id |
+| mst_in_games | mst_auto_player_sequence_set_id | mst_auto_player_sequence_sets.id |
 | mst_in_games | mst_defense_target_id | mst_defense_targets.id |
 | mst_in_games | mst_enemy_outpost_id | mst_enemy_outposts.id |
 | mst_in_games | mst_page_id | mst_pages.id |
@@ -1152,7 +1152,7 @@
 | mst_stages | exp | なし |
 | mst_stages | id | なし |
 | mst_stages | max_auto_lap_count | なし |
-| mst_stages | mst_artwork_fragment_drop_group_id | mst_artwork_fragments.drop_group_id |
+| mst_stages | mst_artwork_fragment_drop_group_id | mst_artwork_fragment_drop_groups.id |
 | mst_stages | mst_in_game_id | mst_in_games.id |
 | mst_stages | mst_quest_id | mst_quests.id |
 | mst_stages | mst_stage_tips_group_id | mst_stage_tips.mst_stage_tips_group_id |
@@ -1353,7 +1353,7 @@
 | opr_campaigns | id | なし |
 | opr_campaigns | release_key | なし |
 | opr_campaigns | start_at | なし |
-| opr_campaigns | target_id | なし（ターゲット指定） |
+| opr_campaigns | target_id | target_id_typeに依存（Quest→mst_quests.id, Series→mst_series.id） |
 | opr_campaigns | target_id_type | なし |
 | opr_campaigns | target_type | なし |
 | opr_campaigns | updated_at | なし |
