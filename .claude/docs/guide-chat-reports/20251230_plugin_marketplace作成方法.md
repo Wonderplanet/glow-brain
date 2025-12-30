@@ -444,11 +444,184 @@ claude plugin validate .
 }
 ```
 
+## 既存の作成支援ツール
+
+### 11. Claude Code 提供の作成支援コマンド
+
+Claude Codeには、**プラグインコンポーネント（skills, commands, subagents）を作成するための支援ツール**が既に実装されています。これらは `example-skills:skill-creator` を活用したカスタムコマンドです。
+
+| コマンド | ファイルパス | 用途 |
+|---------|------------|------|
+| `/claude-code:create-skill` | `.claude/commands/claude-code/create-skill.md` | Claude Code Skillを対話的に作成 |
+| `/claude-code:create-command` | `.claude/commands/claude-code/create-command.md` | カスタムスラッシュコマンドを生成 |
+| `/claude-code:create-subagent` | `.claude/commands/claude-code/create-subagent.md` | Subagentを自動生成 |
+
+> 出典: [Claude Code Skills](https://code.claude.com/docs/en/skills.md)
+
+#### `/claude-code:create-skill` の使い方
+
+**基本的な使い方**:
+
+```bash
+# 対話的に作成
+/claude-code:create-skill
+
+# 要件を直接指定
+/claude-code:create-skill PDFファイルからテキストと表を抽出し、複数のPDFをマージする機能
+```
+
+**実装の流れ**:
+1. 要件の確認と分析
+2. `example-skills:skill-creator` スキルの起動
+3. `.claude/skills/[skill-name]/` ディレクトリの作成
+4. `SKILL.md` の生成（frontmatter + instructions）
+5. スキルの動作検証
+
+**生成されるファイル構造**:
+
+```
+.claude/skills/[skill-name]/
+├── SKILL.md                  # メインスキルファイル
+├── reference.md              # 参照ドキュメント（オプション）
+└── examples/                 # サンプル（オプション）
+```
+
+#### `/claude-code:create-command` の使い方
+
+**基本的な使い方**:
+
+```bash
+# 対話的に作成
+/claude-code:create-command
+
+# 要件を直接指定
+/claude-code:create-command 指定したイシューを修正するコマンドを作成
+```
+
+**対話内容（AskUserQuestionツール使用）**:
+1. **コマンド名**: `fix-issue`, `code-review`, `deploy-staging` など（kebab-case）
+2. **配置ディレクトリ**: general, backend, frontend, または新規カテゴリ
+3. **引数の有無**: 引数なし、1つの引数、複数の引数、`$ARGUMENTS`で一括
+4. **Bashツール許可**: 不要、Git操作のみ、ビルドツール、データベース、包括的
+
+**生成されるコマンドファイル**:
+
+```markdown
+---
+description: [30文字以内の簡潔な説明]
+argument-hint: [引数がある場合のヒント]
+allowed-tools: [許可するツールのリスト]
+---
+
+# [コマンドのタイトル]
+
+## タスク
+
+1. **ステップ1**
+   - 詳細な手順
+
+2. **ステップ2**
+   - 期待される動作
+
+## 注意事項
+
+[重要な注意点]
+```
+
+#### `/claude-code:create-subagent` の使い方
+
+**基本的な使い方**:
+
+```bash
+# 対話的に作成
+/claude-code:create-subagent
+
+# 要件を直接指定
+/claude-code:create-subagent テストを自動実行してエラーを修正するsubagent
+```
+
+**対話内容**:
+1. **Subagent名**: `test-runner`, `security-reviewer`, `performance-analyzer` など
+2. **使用ツール**: 全ツール継承、読み取りのみ、編集も可能、カスタム
+3. **モデル選択**: `inherit`（推奨）, `sonnet`, `haiku`, `opus`
+4. **積極的な自動呼び出し**: はい（descriptionに「PROACTIVELY」を含める）/ いいえ
+
+**生成されるSubagentファイル**:
+
+```markdown
+---
+name: [小文字とハイフンのみ]
+description: [具体的な説明。自動呼び出しの場合は「PROACTIVELY」を含める]
+tools: [指定されたツール]
+model: inherit
+---
+
+# あなたの役割
+
+You are a [具体的な専門性] specialized in [専門領域].
+
+## ミッション
+
+When invoked:
+1. [最初にやるべきこと]
+2. [次にやるべきこと]
+...
+```
+
+#### Skill vs Command vs Subagent の選択基準
+
+| 特性 | Skill | Command | Subagent |
+|------|-------|---------|----------|
+| **トリガー** | 自動検出（model-invoked） | 明示的（`/command`実行） | 自動または明示的 |
+| **複雑さ** | 複雑（複数ファイル） | シンプル | 非常に複雑（独立した文脈） |
+| **ベストユース** | 専門知識の共有 | 定型作業 | 並行処理・マルチステップ |
+| **ファイル数** | 複数（reference.md等） | 1ファイル | 1ファイル（独立実行） |
+| **例** | PDF処理、データ分析 | Issue修正、コード整形 | テスト実行、セキュリティレビュー |
+
+> 出典: [Skills - When to Use](https://code.claude.com/docs/en/skills.md#when-to-use-skills-versus-other-options)
+
+### 12. Plugin Marketplace作成における既存ツールの活用
+
+**重要な発見**: Plugin Marketplace自体の生成を自動化するビルトインツールは現時点では存在しません。
+
+**推奨される作成フロー**:
+
+```
+1. コンポーネント作成（既存ツール使用）
+   ├─ /claude-code:create-skill → プラグイン用スキルを作成
+   ├─ /claude-code:create-command → プラグイン用コマンドを作成
+   └─ /claude-code:create-subagent → プラグイン用subagentを作成
+
+2. プラグイン構造の構築
+   └─ 作成したコンポーネントを plugins/[plugin-name]/ に配置
+
+3. plugin.json の作成
+   └─ .claude-plugin/plugin.json でプラグイン定義
+
+4. marketplace.json の作成
+   └─ .claude-plugin/marketplace.json でカタログ定義
+
+5. 検証
+   └─ claude plugin validate . または /plugin validate
+
+6. ホスト＆配布
+   └─ GitHubやGitLabにプッシュ
+```
+
+**現状の制約**:
+- ✅ プラグイン内のコンポーネント（skills, commands, subagents）の作成は支援ツールあり
+- ❌ Marketplace構造全体（`marketplace.json`生成、ディレクトリ構造）の自動生成ツールはなし
+
+**解決策**: Marketplace作成を自動化するカスタムスキルの作成が有効
+
 ## 参照ドキュメント
 
 - [Plugin Marketplaces - Claude Code Documentation](https://code.claude.com/docs/en/plugin-marketplaces.md)
 - [Plugins Reference - Claude Code Documentation](https://code.claude.com/docs/en/plugins-reference.md)
 - [Plugin Creation - Claude Code Documentation](https://code.claude.com/docs/en/plugins.md)
+- [Claude Code Skills](https://code.claude.com/docs/en/skills.md)
+- [Common Workflows](https://code.claude.com/docs/en/common-workflows.md)
+- [Sub-Agents](https://code.claude.com/docs/en/sub-agents.md)
 
 ## 次のアクション
 
