@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "masterdata",
-      "source": "./masterdata",
+      "source": "./plugins/masterdata",
       "description": "マスタデータ調査・生成・分析の統合ツール",
       "version": "1.0.0",
       "strict": true

@@ -5,32 +5,6 @@
   "author": {
     "name": "Wonderplanet GLOW"
   },
-  "skills": [
-    {
-      "name": "masterdata-explorer",
-      "description": "GLOWマスタデータのDBスキーマとCSVファイルを調査・理解するためのスキル。jqコマンドでテーブル構造を確認し、既存データを参照する。",
-      "file": "${CLAUDE_PLUGIN_ROOT}/skills/masterdata-explorer/SKILL.md",
-      "location": "project"
-    }
-  ],
-  "commands": [
-    {
-      "name": "masterdata:create-master-data",
-      "description": "施策マスタデータCSVを作成",
-      "file": "${CLAUDE_PLUGIN_ROOT}/commands/create-master-data.md"
-    },
-    {
-      "name": "masterdata:masterdata-generator",
-      "description": "施策仕様書からマスタデータCSVを自動生成",
-      "file": "${CLAUDE_PLUGIN_ROOT}/commands/masterdata-generator.md"
-    },
-    {
-      "name": "masterdata:masterdata-relation",
-      "description": "機能関連マスタテーブルのリレーション図を生成",
-      "file": "${CLAUDE_PLUGIN_ROOT}/commands/masterdata-relation.md"
-    }
-  ],
   "license": "MIT",
-  "keywords": ["masterdata", "glow", "database", "csv", "schema"],
-  "category": "productivity"
+  "keywords": ["masterdata", "glow", "database", "csv", "schema"]
 }

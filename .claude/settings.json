@@ -1,12 +1,4 @@
 {
-  "extraKnownMarketplaces": {
-    "masterdata": {
-      "source": {
-        "source": "directory",
-        "path": "./.claude/marketplaces/masterdata"
-      }
-    }
-  },
   "enabledPlugins": {
     "masterdata@masterdata": true
   }
