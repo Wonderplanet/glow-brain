@@ -1,0 +1,20 @@
+{
+  "name": "masterdata",
+  "owner": {
+    "name": "Wonderplanet GLOW"
+  },
+  "metadata": {
+    "description": "GLOWプロジェクトのマスタデータ管理ツールセット。スキーマ調査、CSV生成、リレーション分析機能を提供します。",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "masterdata",
+      "source": "./masterdata",
+      "description": "マスタデータ調査・生成・分析の統合ツール",
+      "version": "1.0.0",
+      "strict": true
+    }
+  ]
+}
