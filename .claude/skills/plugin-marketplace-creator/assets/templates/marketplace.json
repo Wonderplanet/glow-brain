@@ -1,0 +1,25 @@
+{
+  "name": "my-marketplace",
+  "owner": {
+    "name": "Your Team Name",
+    "email": "team@example.com"
+  },
+  "metadata": {
+    "description": "Your marketplace description",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "example-plugin",
+      "source": "example-plugin",
+      "description": "An example plugin",
+      "version": "1.0.0",
+      "author": {
+        "name": "Plugin Author"
+      },
+      "category": "productivity",
+      "license": "MIT"
+    }
+  ]
+}
