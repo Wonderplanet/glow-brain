@@ -30,6 +30,31 @@ GLOWプロジェクトのマスタデータ管理ツールセットです。
 
 このMarketplaceは既にプロジェクトに含まれています。
 
+**設定手順**:
+
+1. `.claude/settings.json`を作成（まだない場合）
+2. 以下の設定を追加：
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "masterdata": {
+      "source": {
+        "source": "directory",
+        "path": "./.claude/marketplaces/masterdata"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "masterdata@masterdata": true
+  }
+}
+```
+
+3. Claude Codeを再起動
+
+詳細な手順は[USAGE.md](./USAGE.md)を参照してください。
+
 ### 他のプロジェクトで使用する場合
 
 ```bash
@@ -47,7 +72,7 @@ GLOWプロジェクトのマスタデータ管理ツールセットです。
   "extraKnownMarketplaces": {
     "masterdata": {
       "source": {
-        "source": "path",
+        "source": "directory",
         "path": "/path/to/masterdata"
       }
     }

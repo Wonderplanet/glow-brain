@@ -4,14 +4,20 @@
 
 ### このプロジェクトで使用する場合
 
-`.claude/settings.json`に以下を追加してください：
+**ステップ1**: `.claude/settings.json`を作成（既に存在する場合はスキップ）
+
+プロジェクトルートに`.claude/settings.json`がない場合は作成してください。
+
+**ステップ2**: `.claude/settings.json`に以下を追加
+
+既存の設定がある場合は、`extraKnownMarketplaces`と`enabledPlugins`セクションをマージしてください。
 
 ```json
 {
   "extraKnownMarketplaces": {
     "masterdata": {
       "source": {
-        "source": "path",
+        "source": "directory",
         "path": "./.claude/marketplaces/masterdata"
       }
     }
@@ -21,6 +27,10 @@
   }
 }
 ```
+
+**ステップ3**: Claude Codeを再起動
+
+設定を反映するために、Claude Codeセッションを再起動してください。
 
 ### 他のプロジェクトで使用する場合
 
