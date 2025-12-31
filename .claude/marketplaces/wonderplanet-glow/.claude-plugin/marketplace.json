@@ -6,12 +6,12 @@
   "metadata": {
     "description": "GLOWプロジェクトのマスタデータ管理ツールセット。スキーマ調査、CSV生成、リレーション分析機能を提供します。",
     "version": "1.0.0",
-    "pluginRoot": "./plugins"
+    "pluginRoot": "../plugins"
   },
   "plugins": [
     {
       "name": "wonderplanet-glow-masterdata",
-      "source": "./plugins/masterdata",
+      "source": "masterdata",
       "description": "マスタデータ調査・生成・分析の統合ツール",
       "version": "1.0.0",
       "strict": true
