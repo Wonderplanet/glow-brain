@@ -1,5 +1,0 @@
-ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
-e,1,chara_you_00001,30,raid_you_00001,,202601010
-e,2,chara_you_00101,30,raid_you_00001,,202601010
-e,3,chara_you_00201,30,raid_you_00001,,202601010
-e,4,chara_you_00301,30,raid_you_00001,,202601010

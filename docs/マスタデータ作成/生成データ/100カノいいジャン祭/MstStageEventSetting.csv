@@ -1,7 +1,0 @@
-ENABLE,id,mst_stage_id,reset_type,clearable_count,ad_challenge_count,mst_stage_rule_group_id,start_at,end_at,release_key,background_asset_key
-e,kim1_1,event_kim1_charaget01_00001,__NULL__,,0,__NULL__,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602010,kim_00001
-e,kim1_2,event_kim1_charaget01_00002,__NULL__,,0,__NULL__,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602010,kim_00001
-e,kim1_3,event_kim1_charaget01_00003,__NULL__,,0,__NULL__,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602010,kim_00001
-e,kim1_4,event_kim1_collection01_00001,__NULL__,,0,__NULL__,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602010,kim_00001
-e,kim1_5,event_kim1_challenge01_00001,__NULL__,,0,__NULL__,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602010,kim_00001
-e,kim1_6,event_kim1_savage_00001,__NULL__,,0,__NULL__,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602010,kim_00001

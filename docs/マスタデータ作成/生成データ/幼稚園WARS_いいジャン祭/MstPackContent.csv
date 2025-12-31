@@ -1,5 +1,0 @@
-ENABLE,id,mst_pack_id,resource_type,resource_id,resource_amount,sort_order,release_key
-e,you_event_pack_001_content_01,you_event_pack_001,FreeDiamond,prism_glo_00001,3000,1,202601010
-e,you_event_pack_001_content_02,you_event_pack_001,GachaTicket,gacha_ticket_special_glo_00001,10,2,202601010
-e,you_event_pack_002_content_01,you_event_pack_002,GachaTicket,gacha_ticket_special_glo_00001,5,1,202601010
-e,you_event_pack_003_content_01,you_event_pack_003,Item,stamina_recovery_glo_00001,30,1,202601010

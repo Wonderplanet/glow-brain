@@ -1,5 +1,0 @@
-ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key
-e,quest_event_kim1_charaget01,Event,event_kim_00001,1,kim_00001,"2026-02-16 15:00:00","2026-03-16 10:59:59",kim1,Normal,202602010
-e,quest_event_kim1_collection01,Event,event_kim_00001,2,kim_00002,"2026-02-16 15:00:00","2026-03-16 10:59:59",kim1,Normal,202602010
-e,quest_event_kim1_challenge01,Event,event_kim_00001,3,kim_00003,"2026-02-16 15:00:00","2026-03-16 10:59:59",kim1,Hard,202602010
-e,quest_event_kim1_savage,Event,event_kim_00001,4,kim_00004,"2026-02-16 15:00:00","2026-03-16 10:59:59",kim1,Extra,202602010
