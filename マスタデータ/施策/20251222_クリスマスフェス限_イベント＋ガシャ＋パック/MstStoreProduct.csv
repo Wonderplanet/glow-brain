@@ -1,0 +1,10 @@
+memo
+TABLE,MstStoreProduct,MstStoreProduct,MstStoreProduct,MstStoreProduct,MstStoreProduct,MstStoreProductI18n,MstStoreProductI18n
+ENABLE,id,release_key,product_id_ios,product_id_android,price,price_ios.ja,price_android.ja
+e,520,1,BNEI0434_0520,com.bandainamcoent.jumble_0520,980,¥980,¥980
+e,1680,1,BNEI0434_1680,com.bandainamcoent.jumble_1680,2980,¥2980,¥2980
+e,2820,1,BNEI0434_2820,com.bandainamcoent.jumble_2820,4980,¥4980,¥4980
+e,5580,1,BNEI0434_5580,com.bandainamcoent.jumble_5580,9800,¥9800,¥9800
+e,28,1,BNEI0434_0027,com.bandainamcoent.jumble_0027,980,¥980,¥980
+e,29,1,BNEI0434_0028,com.bandainamcoent.jumble_0028,2980,¥2980,¥2980
+e,30,1,BNEI0434_0029,com.bandainamcoent.jumble_0029,5000,¥5000,¥5000

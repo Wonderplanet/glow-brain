@@ -1,0 +1,10 @@
+memo
+TABLE,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProductI18n
+ENABLE,id,mst_store_product_id,product_type,purchasable_count,paid_amount,display_priority,start_date,end_date,release_key,asset_key.ja
+e,Xmas_prism_520,520,diamond,1,520,101,"2025-12-22 15:00:00","2025-12-31 23:59:00",1,xmas_prism_520
+e,Xmas_prism_1680,1680,diamond,1,1680,102,"2025-12-22 15:00:00","2025-12-31 23:59:00",1,xmas_prism_1680
+e,Xmas_prism_2820,2820,diamond,1,2820,103,"2025-12-22 15:00:00","2025-12-31 23:59:00",1,xmas_prism_2820
+e,Xmas_prism_5580,5580,diamond,1,5580,104,"2025-12-22 15:00:00","2025-12-31 23:59:00",1,xmas_prism_5580
+e,Xmas_pack_A,28,pack,1,__NULL__,105,"2025-12-22 15:00:00","2025-12-31 23:59:00",1,xmas_pack_a
+e,Xmas_pack_B,29,pack,1,__NULL__,106,"2025-12-22 15:00:00","2025-12-31 23:59:00",1,xmas_pack_b
+e,Xmas_pack_C,30,pack,1,__NULL__,107,"2025-12-22 15:00:00","2025-12-31 23:59:00",1,xmas_pack_c
