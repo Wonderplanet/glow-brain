@@ -1,0 +1,8 @@
+memo
+TABLE,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuestI18n,MstQuestI18n,MstQuestI18n
+ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key,name.ja,category_name.ja,flavor_text.ja
+e,quest_sur_christmas_daily_20251222,daily,event_sur_christmas_20251222,1,quest_sur_christmas_daily_20251222,"2025-12-22 12:00:00","2026-01-16 10:59:59",sur_christmas_20251222,Normal,1,フェス限ガシャ,デイリークエスト,毎日挑戦して報酬をゲット！
+e,quest_sur_christmas_story_pack_20251222,story,event_sur_christmas_20251222,2,quest_sur_christmas_story_pack_20251222,"2025-12-22 15:00:00","2025-12-31 23:59:59",sur_christmas_20251222,Normal,1,クリスマスパック,ストーリークエスト,無窮の鎖 和倉 優希を手に入れよう！
+e,quest_sur_christmas_story_battle_20251222,story,event_sur_christmas_20251222,3,quest_sur_christmas_story_battle_20251222,"2025-12-22 15:00:00","2025-12-31 23:59:59",sur_christmas_20251222,Normal,1,クリスマスバトル!!,ストーリークエスト,和倉 青羽を手に入れよう！
+e,quest_sur_christmas_challenge_20251222,challenge,event_sur_christmas_20251222,4,quest_sur_christmas_challenge_20251222,"2025-12-22 15:00:00","2025-12-31 23:59:59",sur_christmas_20251222,Normal,1,チャレンジクエスト,チャレンジクエスト,高難度のチャレンジに挑戦！
+e,quest_sur_christmas_highdifficulty_20251222,highdifficulty,event_sur_christmas_20251222,5,quest_sur_christmas_highdifficulty_20251222,"2025-12-22 15:00:00","2025-12-31 23:59:59",sur_christmas_20251222,Extra,1,クリスマス限定高難度クエスト,高難度クエスト,最高難度のクエストに挑戦！
