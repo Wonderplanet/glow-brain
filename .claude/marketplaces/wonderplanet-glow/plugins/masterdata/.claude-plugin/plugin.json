@@ -1,5 +1,5 @@
 {
-  "name": "wonderplanet-glow-masterdata",
+  "name": "glow-masterdata",
   "version": "1.0.0",
   "description": "GLOWプロジェクトのマスタデータ管理ツール集。DBスキーマ調査、CSV生成、リレーション分析機能を提供",
   "author": {
