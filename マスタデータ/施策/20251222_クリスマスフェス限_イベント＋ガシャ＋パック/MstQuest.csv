@@ -1,0 +1,5 @@
+memo,クリスマスフェス限ガシャ＋パック施策のクエスト設定
+TABLE,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuestI18n,MstQuestI18n,MstQuestI18n
+ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key,name.ja,category_name.ja,flavor_text.ja
+e,quest_christmas_00001_daily,daily,event_christmas_00001,1,christmas_daily_gacha,"2025-12-22 12:00:00","2026-01-16 10:59:59",christmas_daily,Normal,202512220,フェス限ガシャ,デイリークエスト,毎日挑戦してプリズムを獲得しよう
+e,quest_christmas_00001_story,event,event_christmas_00001,2,christmas_story_pack,"2025-12-22 15:00:00","2025-12-31 23:59:59",christmas_story,Normal,202512220,クリスマスパック,ストーリークエスト,無窮の鎖 和倉 優希を獲得しよう

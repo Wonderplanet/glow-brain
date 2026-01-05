@@ -1,0 +1,5 @@
+ENABLE,release_key,id,mst_item_id,language,name,description
+e,1,piece_sur_00701_ja,piece_sur_00701,ja,和倉 青羽のかけら,和倉 青羽の欠片
+e,1,piece_sur_00801_ja,piece_sur_00801,ja,無窮の鎖 和倉 優希のかけら,無窮の鎖 和倉 優希の欠片
+e,1,memory_chara_sur_00701_ja,memory_chara_sur_00701,ja,和倉 青羽のカラーメモリー,和倉 青羽専用のカラーメモリー
+e,1,memory_chara_sur_00801_ja,memory_chara_sur_00801,ja,無窮の鎖 和倉 優希のカラーメモリー,無窮の鎖 和倉 優希専用のカラーメモリー

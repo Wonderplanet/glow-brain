@@ -1,0 +1,6 @@
+memo
+TABLE,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource
+ENABLE,id,opr_gacha_id,cost_type,cost_id,cost_num,draw_count,cost_priority,release_key
+e,Fest_Xmas_001_single,Fest_Xmas_001,Diamond,,150,1,2,1
+e,Fest_Xmas_001_multi,Fest_Xmas_001,Diamond,,1500,10,1,1
+e,Fest_Xmas_001_ticket,Fest_Xmas_001,Item,ticket_glo_00004,1,1,1,1

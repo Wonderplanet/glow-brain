@@ -1,0 +1,5 @@
+memo,クリスマスフェス限ガシャ＋パック施策のステージ設定
+TABLE,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStageI18n
+ENABLE,id,mst_quest_id,mst_in_game_id,stage_number,recommended_level,cost_stamina,exp,coin,prev_mst_stage_id,mst_stage_tips_group_id,auto_lap_type,max_auto_lap_count,sort_order,asset_key,mst_artwork_fragment_drop_group_id,start_at,end_at,release_key,name.ja
+e,stage_christmas_00001_daily_01,quest_christmas_00001_daily,ingame_christmas_daily_01,1,1,1,100,1000,__NULL__,1,Initial,1,1,christmas_daily_01,__NULL__,"2025-12-22 12:00:00","2026-01-16 10:59:59",202512220,1話
+e,stage_christmas_00001_story_01,quest_christmas_00001_story,ingame_christmas_story_01,1,10,5,50,75,__NULL__,1,AfterClear,10,1,christmas_story_01,__NULL__,"2025-12-22 15:00:00","2025-12-31 23:59:59",202512220,1話
