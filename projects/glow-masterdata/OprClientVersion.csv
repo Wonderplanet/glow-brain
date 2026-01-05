@@ -1,0 +1,5 @@
+ENABLE,release_key,id,client_version,platform,is_force_update
+e,1,v1.0.0_ios_force_update,1.0.0,1,1
+e,1,v1.0.0_android_force_update,1.0.0,2,1
+e,1,v1.0.1_ios_force_update,1.0.1,1,0
+e,1,v1.0.1_android_force_update,1.0.1,2,0

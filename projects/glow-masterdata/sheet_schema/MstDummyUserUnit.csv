@@ -1,0 +1,3 @@
+memo
+TABLE,MstDummyUserUnit,MstDummyUserUnit,MstDummyUserUnit,MstDummyUserUnit,MstDummyUserUnit,MstDummyUserUnit,MstDummyUserUnit
+ENABLE,id,release_key,mst_dummy_user_id,mst_unit_id,level,rank,grade_level

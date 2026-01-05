@@ -1,0 +1,2 @@
+ENABLE,id,mst_unit_id,rank,amount,unit_memory_amount,require_level,sr_memory_fragment_amount,ssr_memory_fragment_amount,ur_memory_fragment_amount,release_key
+e,1,chara_glo_00140,1,0,1,10,2,3,0,1

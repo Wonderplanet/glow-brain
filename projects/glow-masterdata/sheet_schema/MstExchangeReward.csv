@@ -1,0 +1,3 @@
+memo
+TABLE,MstExchangeReward,MstExchangeReward,MstExchangeReward,MstExchangeReward,MstExchangeReward,MstExchangeReward
+ENABLE,id,mst_exchange_lineup_id,resource_type,resource_id,resource_amount,release_key

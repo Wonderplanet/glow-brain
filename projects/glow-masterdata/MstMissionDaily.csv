@@ -1,0 +1,15 @@
+ENABLE,id,release_key,criterion_type,criterion_value,criterion_count,group_key,bonus_point,mst_mission_reward_group_id,sort_order,destination_scene
+e,daily_1,1,LoginCount,,1,Daily1,10,,1,Home
+e,daily_2,1,StageClearCount,,1,Daily1,10,,2,StageSelect
+e,daily_3,1,StageClearCount,,3,Daily1,20,,3,StageSelect
+e,daily_4,1,UnitLevelUpCount,,1,Daily1,10,,4,UnitList
+e,daily_5,1,DefeatBossEnemyCount,,1,Daily1,10,,6,Home
+e,daily_6,1,DefeatBossEnemyCount,,3,Daily1,10,,8,Home
+e,daily_7,1,IdleIncentiveCount,,1,Daily1,10,,9,IdleIncentive
+e,daily_8,1,DefeatBossEnemyCount,,2,Daily1,10,,7,Home
+e,daily_9,1,UnitLevelUpCount,,3,Daily1,10,,5,UnitList
+e,daily_bonus_point_1,1,MissionBonusPoint,,20,,0,daily_reward_3,10,
+e,daily_bonus_point_2,1,MissionBonusPoint,,40,,0,daily_reward_4,11,
+e,daily_bonus_point_3,1,MissionBonusPoint,,60,,0,daily_reward_5,12,
+e,daily_bonus_point_4,1,MissionBonusPoint,,80,,0,daily_reward_6,13,
+e,daily_bonus_point_5,1,MissionBonusPoint,,100,,0,daily_reward_7,14,

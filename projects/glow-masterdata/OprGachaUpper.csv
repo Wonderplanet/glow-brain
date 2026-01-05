@@ -1,0 +1,12 @@
+ENABLE,id,upper_group,upper_type,count,release_key
+e,1,Premium,MaxRarity,80,1
+e,2,Pickup,MaxRarity,30,1
+e,3,Pickup,Pickup,60,1
+e,4,Festival,Pickup,150,1
+e,5,Medal1,MaxRarity,30,1
+e,6,Medal2,MaxRarity,10,1
+e,7,Medal2,Pickup,20,1
+e,12,Special_001,MaxRarity,100,1
+e,13,Pickup_kai_001,Pickup,100,1
+e,14,Pickup_kai_002,Pickup,100,1
+e,15,Pickup_kai_003,Pickup,100,1

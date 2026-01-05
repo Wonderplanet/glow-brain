@@ -1,0 +1,14 @@
+ENABLE,release_key,id,opr_gacha_id,language,name,description,max_rarity_upper_description,pickup_upper_description,fixed_prize_description,banner_url,logo_asset_key,logo_banner_url,gacha_background_color,gacha_banner_size
+e,1,2_ja,2,ja,プレミアムガシャ,ジャンプ+のヒーローが大集合！,最高レアリティ確定！,ピックアップキャラ確定！,,00008,special_00001,,Yellow,SizeL
+e,1,3_ja,3,ja,ピックアップガシャ,期間限定！「画眉丸」の出現率UP中！,最高レアリティ確定！,ピックアップキャラ確定！,,00009,pickup_00001,,Yellow,SizeL
+e,1,4_ja,4,ja,フェスガシャ,期間限定！SSRヒーロー獲得のチャンス！,最高レアリティ確定！,ピックアップキャラ確定！,,glo_00001,fes_00001,,Purple,SizeL
+e,1,fes_2_ja,fes_2,ja,フェスガシャ,期間限定！SSRヒーロー獲得のチャンス！_2,最高レアリティ確定！,ピックアップキャラ確定！,,glo_00002,fes_00001,,Purple,SizeL
+e,1,5_ja,5,ja,チケットガシャ,R以上ヒーロー1体確定！,最高レアリティ確定！,ピックアップキャラ確定！,,00011,ur_10_00001,,Blue,SizeL
+e,1,ticket_2_ja,ticket_2,ja,チケットガシャ,R以上ヒーロー1体確定！,最高レアリティ確定！,ピックアップキャラ確定！,,00011,ur_10_00001,,Blue,SizeL
+e,1,6_ja,6,ja,有償限定ガシャ,有償プリズム1500個で引ける！SSRヒーロー1体確定！,最高レアリティ確定！,ピックアップキャラ確定！,,00012,,,Purple,SizeL
+e,1,7_ja,7,ja,メダルガシャ,メダル限定キャラをGET!!,最高レアリティ確定！,ピックアップキャラ確定！,,00012,medal_00001,,Purple,SizeL
+e,1,8_ja,8,ja,メダルガシャ,メダル限定キャラをGET!!,最高レアリティ確定！,ピックアップキャラ確定！,,00011,medal_00001,,Purple,SizeL
+e,1,0_ja,0,ja,チュートリアルガシャ,チュートリアル限定!UR1体確定10連ガシャ!,,,,00014,tutorial_00001,,Yellow,SizeL
+e,1,9_ja,9,ja,チュートリアル後72時間限定ガシャ,"チュートリアル後72時間限定!! 有償限定ガシャ",,,,00014,startdash_00001,,Purple,SizeL
+e,1,Pickup_kai_001_ja,Pickup_kai_001,ja,タイトルテストデータ１２３４５６７８９１２３４５６７８９１２,訴求文言テストデータ１２３４５６７８９１２３４５,天井文言テストデータ１２３４５６,天井文言テストデータ１２３４５６,"天井枠タブ名\nテストテスト",00009,pickup_a_00001,,Yellow,SizeL
+e,1,test_normal_pickup_ja,test_normal_pickup,ja,キャラ吹き出し確認用,キャラ吹き出し確認用,,,,00007,pickup_00001,,Yellow,SizeL

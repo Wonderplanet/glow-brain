@@ -1,0 +1,4 @@
+ENABLE,id,opr_product_id,is_display_expiration,pass_duration_days,asset_key,shop_pass_cell_color,release_key
+e,test_pass_1,21,0,10,weekly,Silver,1
+e,test_pass_2,22,1,20,monthly,Purple,1
+e,test_pass_3,23,1,30,premium,Gold,1

@@ -1,0 +1,22 @@
+ENABLE,release_key,id,opr_gacha_id,mst_unit_id,language,sort_order,description
+e,1,3-1,3,chara_gom_00001,ja,1,必殺ワザで複数の敵に攻撃するキャラ！敵が複数いる時に大活躍！
+e,1,4-1,4,chara_gom_00001,ja,1,"<color=#EE3632>必殺ワザ</color>で<color=#EE3632>複数の敵</color>に\n攻撃するキャラ！ \n敵が複数いる時に\n<color=#EE3632>大活躍！</color>"
+e,1,4-2,4,chara_jig_00101,ja,2,"山田浅右ェ門佐切の説明\n"
+e,1,5-1,5,chara_gom_00001,ja,1,姫様の説明
+e,1,5-2,5,chara_jig_00101,ja,2,"山田浅右ェ門佐切の説明\n"
+e,1,6-1,6,chara_gom_00001,ja,1,姫様の説明
+e,1,6-2,6,chara_jig_00101,ja,2,"山田浅右ェ門佐切の説明\n"
+e,1,6-1,0,chara_gom_00001,ja,1,姫様の説明
+e,1,6-2,0,chara_jig_00101,ja,2,"山田浅右ェ門佐切の説明\n"
+e,1,6-1,9,chara_gom_00001,ja,1,姫様の説明
+e,1,6-2,9,chara_jig_00101,ja,2,"山田浅右ェ門佐切の説明\n"
+e,1,36,Pickup_kai_001,chara_kai_00201,ja,1,"キャラ文言１２３４５\n１２３４５６７８９０\n１２３４５６７８９０\n１２３４５６７８９０"
+e,1,37,Pickup_kai_002,chara_kai_00201,ja,1,遠距離から単体と範囲攻撃を使い分ける器用なアタッカー！
+e,1,38,Pickup_kai_002,chara_kai_00401,ja,2,近距離で素早く攻撃し、必殺ワザの連続攻撃で大ダメージ！
+e,1,39,Pickup_kai_003,chara_kai_00201,ja,1,遠距離から単体と範囲攻撃を使い分ける器用なアタッカー！
+e,1,40,Pickup_kai_003,chara_kai_00401,ja,2,近距離で素早く攻撃し、必殺ワザの連続攻撃で大ダメージ！
+e,1,41,Pickup_kai_004,chara_kai_00201,ja,1,遠距離から単体と範囲攻撃を使い分ける器用なアタッカー！
+e,1,42,Pickup_kai_004,chara_kai_00401,ja,2,近距離で素早く攻撃し、必殺ワザの連続攻撃で大ダメージ！
+e,1,43,test_normal_pickup,chara_kai_00401,ja,2,近距離で素早く攻撃し、必殺ワザの連続攻撃で大ダメージ！
+e,1,ticket_2_1,ticket_2,chara_gom_00001,ja,1,姫様の説明
+e,1,fes_2_1,fes_2,chara_gom_00001,ja,1,姫様の説明

@@ -1,0 +1,16 @@
+ENABLE,id,group_id,tradable_count,display_order,release_key
+e,normal_group_01,normal_lineup,1,0,1
+e,normal_group_02,normal_lineup,10,1,1
+e,normal_group_03,normal_lineup,10,2,1
+e,osh_group_01,event_spy_lineup,40,0,1
+e,osh_group_02,event_spy_lineup,50,1,1
+e,osh_group_03,event_spy_lineup,60,2,1
+e,osh_group_04,event_spy_lineup,70,3,1
+e,osh_group_05,event_spy_lineup,70,4,1
+e,osh_group_06,event_spy_lineup,70,5,1
+e,event_group02_01,event_02_lineup,__NULL__,0,1
+e,event_08_lineup_1,event_08_lineup,__NULL__,0,1
+e,event_08_lineup_2,event_08_lineup,__NULL__,0,1
+e,event_08_lineup_3,event_08_lineup,__NULL__,0,1
+e,event_07_lineup_1,event_07_lineup,__NULL__,0,1
+e,event_07_lineup_2,event_07_lineup,__NULL__,0,1

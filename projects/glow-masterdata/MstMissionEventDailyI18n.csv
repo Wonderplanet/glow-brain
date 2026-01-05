@@ -1,0 +1,14 @@
+ENABLE,release_key,id,mst_mission_event_daily_id,language,description
+e,1,event_daily_1_ja,event_daily_1,ja,ログインしよう
+e,1,event_daily_2_ja,event_daily_2,ja,ステージを1回クリアしよう
+e,1,event_daily_3_ja,event_daily_3,ja,ステージを3回クリアしよう
+e,1,event_daily_4_ja,event_daily_4,ja,キャラを1回強化しよう
+e,1,event_daily_5_ja,event_daily_5,ja,強敵を1回倒そう
+e,1,event_daily_6_ja,event_daily_6,ja,強敵を3回倒そう
+e,1,event_daily_7_ja,event_daily_7,ja,探索報酬を1回獲得しよう
+e,1,event_daily_8_ja,event_daily_8,ja,強敵を2回倒そう
+e,1,event_daily_9_ja,event_daily_9,ja,キャラを3回強化しよう
+e,1,event_daily_10_ja,event_daily_10,ja,(test2)ログインしよう
+e,1,event_daily_11_ja,event_daily_11,ja,(test2)ステージを1回クリアしよう
+e,1,event_daily_12_ja,event_daily_12,ja,(test2)ステージを3回クリアしよう
+e,1,event_daily_13_ja,event_daily_13,ja,(test2)キャラを1回強化しよう

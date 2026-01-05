@@ -1,0 +1,14 @@
+ENABLE,id,release_key,group_id,mst_mission_limited_term_id,unlock_order
+e,1,1,limited_term_dependency_1,limited_term_1,1
+e,2,1,limited_term_dependency_1,limited_term_2,2
+e,3,1,limited_term_dependency_1,limited_term_3,3
+e,4,1,limited_term_dependency_1,limited_term_4,4
+e,5,1,limited_term_dependency_1,limited_term_5,5
+e,6,1,limited_term_dependency_1,limited_term_6,6
+e,7,1,limited_term_dependency_1,limited_term_7,7
+e,8,1,limited_term_dependency_1,limited_term_8,8
+e,9,1,limited_term_dependency_1,limited_term_9,9
+e,10,1,limited_term_dependency_1,limited_term_10,10
+e,11,1,limited_term_dependency_1,limited_term_11,11
+e,12,1,limited_term_dependency_1,limited_term_12,12
+e,13,1,limited_term_dependency_1,limited_term_13,13

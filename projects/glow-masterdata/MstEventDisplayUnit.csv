@@ -1,0 +1,9 @@
+ENABLE,id,mst_quest_id,mst_unit_id,release_key
+e,event_test_fragment,event_test_fragment_n,chara_dan_00002,1
+e,event_test_artwork_1,event_test_artwork_n,chara_jig_00001,1
+e,event_test_artwork_2,event_test_artwork_n,chara_jig_00001,1
+e,event_test_artwork_3,event_test_artwork_n,chara_jig_00001,1
+e,event_test_speed_attack,event_test_speed_attack_n,chara_kai_00001,1
+e,quest_event_spy1_charaget011,quest_event_spy1_charaget01,chara_kai_00101,1
+e,quest_event_spy1_charaget012,quest_event_spy1_charaget01,chara_kai_00301,1
+e,quest_event_spy1_charaget013,quest_event_spy1_charaget01,chara_kai_00601,1

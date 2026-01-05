@@ -1,0 +1,13 @@
+ENABLE,id,mst_shop_pass_id,effect_type,effect_value,release_key
+e,test_pass_1_effect_1,test_pass_1,IdleIncentiveAddReward,2,1
+e,test_pass_1_effect_2,test_pass_1,IdleIncentiveMaxQuickReceiveByDiamond,3,1
+e,test_pass_1_effect_3,test_pass_1,IdleIncentiveMaxQuickReceiveByAd,5,1
+e,test_pass_1_effect_4,test_pass_1,StaminaAddRecoveryLimit,4,1
+e,test_pass_1_effect_5,test_pass_1,AdSkip,1,1
+e,test_pass_1_effect_6,test_pass_1,ChangeBattleSpeed,1,1
+e,test_pass_2_effect_1,test_pass_2,StaminaAddRecoveryLimit,20,1
+e,test_pass_2_effect_2,test_pass_2,AdSkip,1,1
+e,test_pass_2_effect_3,test_pass_2,ChangeBattleSpeed,1,1
+e,test_pass_3_effect_1,test_pass_3,IdleIncentiveAddReward,2,1
+e,test_pass_3_effect_2,test_pass_3,IdleIncentiveMaxQuickReceiveByDiamond,20,1
+e,test_pass_3_effect_3,test_pass_3,IdleIncentiveMaxQuickReceiveByAd,20,1

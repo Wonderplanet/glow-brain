@@ -1,0 +1,17 @@
+ENABLE,id,product_sub_id,discount_rate,is_first_time_free,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,cost_amount,is_recommend,asset_key,pack_decoration,release_key
+e,a2_release_pack_1,7,20,0,__NULL__,0,,1,Normal,0,Cash,0,1,weekly,__NULL__,1
+e,a2_release_pack_2,8,20,0,__NULL__,0,,0,Daily,1,Free,0,1,weekly,__NULL__,1
+e,a2_release_pack_3,9,20,0,__NULL__,0,,0,Daily,1,Ad,0,1,weekly,__NULL__,1
+e,level_pack_1,10,20,0,UserLevel,5,,0,Normal,0,Cash,0,0,ip,__NULL__,1
+e,level_pack_2,11,20,0,UserLevel,10,,0,Normal,0,Cash,0,0,ip,__NULL__,1
+e,level_pack_3,12,20,0,UserLevel,15,,0,Normal,0,Cash,0,0,ip,__NULL__,1
+e,level_pack_4,13,30,0,UserLevel,20,,0,Normal,0,Cash,0,0,ip,__NULL__,1
+e,stgclear_pack_dan_1,14,10,0,StageClear,2,,0,Normal,0,Cash,0,0,stageclear_pack,__NULL__,1
+e,stgclear_pack_dan_2,15,30,0,StageClear,10,,0,Normal,0,Cash,0,0,allstageclear_pack,Gold,1
+e,stgclear_pack_gom_1,16,10,0,StageClear,4,,0,Normal,0,Cash,0,0,stageclear_pack,__NULL__,1
+e,stgclear_pack_gom_2,17,30,0,StageClear,12,,0,Normal,0,Cash,0,0,allstageclear_pack,Gold,1
+e,stgclear_pack_jig_1,18,10,0,StageClear,6,,0,Normal,0,Cash,0,0,stageclear_pack,__NULL__,1
+e,stgclear_pack_jig_2,19,30,0,StageClear,14,,0,Normal,0,Cash,0,0,allstageclear_pack,Gold,1
+e,stgclear_pack_sur_1,20,10,0,StageClear,8,,0,Normal,0,Cash,0,0,stageclear_pack,__NULL__,1
+e,no_display_sample_pack,25,20,0,__NULL__,0,,0,Normal,0,Cash,0,1,weekly,__NULL__,1
+e,offer_FreeDiamond150_202512015,49,0,0,__NULL__,0,,1,Normal,0,Cash,0,0,weekly,__NULL__,1

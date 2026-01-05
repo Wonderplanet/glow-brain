@@ -1,0 +1,7 @@
+ENABLE,id,release_key,mst_event_id,start_at,end_at
+e,event_test_daily_bonus,1,event_spy_00001,"2025-11-01 12:00:00","2025-11-10 11:59:59"
+e,event_test_daily_bonus2,1,event_test_2,"2024-01-01 9:00:00","2025-10-21 9:00:00"
+e,event_test_daily_bonus3,1,event_spy_test_00002,"2025-11-10 12:00:00","2025-11-20 11:59:59"
+e,event_test_daily_bonus4,1,event_spy_test_00003,"2025-11-20 12:00:00","2025-11-30 11:59:59"
+e,event_test_daily_bonus5,1,event_spy_test_00004,"2025-11-30 12:00:00","2029-10-01 15:00:00"
+e,event_test_daily_bonus6,1,event_spy_test_00005,"2025-12-10 12:00:00","2025-12-20 11:59:59"

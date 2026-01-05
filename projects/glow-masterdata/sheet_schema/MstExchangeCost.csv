@@ -1,0 +1,3 @@
+memo
+TABLE,MstExchangeCost,MstExchangeCost,MstExchangeCost,MstExchangeCost,MstExchangeCost,MstExchangeCost
+ENABLE,id,mst_exchange_lineup_id,cost_type,cost_id,cost_amount,release_key

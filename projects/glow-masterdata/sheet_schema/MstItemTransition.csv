@@ -1,0 +1,3 @@
+memo
+TABLE,MstItemTransition,MstItemTransition,MstItemTransition,MstItemTransition,MstItemTransition,MstItemTransition,MstItemTransition
+ENABLE,id,mst_item_id,transition1,transition1_mst_id,transition2,transition2_mst_id,release_key

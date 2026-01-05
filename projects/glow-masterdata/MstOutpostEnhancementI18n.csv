@@ -1,0 +1,7 @@
+ENABLE,release_key,id,mst_outpost_enhancement_id,language,name
+e,1,enhance_1_2_ja,enhance_1_2,ja,RUSHゲージ加速
+e,1,enhance_1_3_ja,enhance_1_3,ja,リーダーP加速
+e,1,enhance_1_4_ja,enhance_1_4,ja,リーダーP上限値
+e,1,enhance_1_5_ja,enhance_1_5,ja,ゲートHP
+e,1,enhance_1_6_ja,enhance_1_6,ja,再召喚スピード
+e,1,enhance_1_7_ja,enhance_1_7,ja,リーダーP獲得量

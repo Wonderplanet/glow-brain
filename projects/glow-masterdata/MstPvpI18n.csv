@@ -1,0 +1,21 @@
+ENABLE,id,release_key,mst_pvp_id,language,name,description
+e,default_pvp,1,default_pvp,ja,hoge,"hogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge text"
+e,2025041,1,2025041,ja,hoge,"hogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge text"
+e,2025042,1,2025042,ja,hoge,"hogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge text"
+e,2025043,1,2025043,ja,hoge,"hogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge text"
+e,2025044,1,2025044,ja,hoge,"hogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge text"
+e,2025045,1,2025045,ja,hoge,"hogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge texthogehoge text"
+e,2025046,1,2025046,ja,hoge,"アタックタイプ：攻撃力 100%UP\n赤属性：HP 100%UP"
+e,2025047,1,2025047,ja,hoge,"テクニカルタイプ：攻撃力 100%UP\nディフェンスタイプ：HP 50% UP\n緑属性：HP 50% UP"
+e,2025048,1,2025048,ja,hoge,"サポートタイプ：攻撃力 100% UP\nテクニカルタイプ：HP 100% UP\n青属性：攻撃力 50% UP"
+e,2025049,1,2025049,ja,hoge,"サポートタイプ：攻撃力 50% UP\n黄属性：攻撃力 50% UP"
+e,2025050,1,2025050,ja,hoge,"全てのキャラ：HP 50% UP\n赤属性：攻撃力 50%UP"
+e,2025051,1,2025051,ja,hoge,
+e,2025052,1,2025052,ja,hoge,
+e,2026001,1,2026001,ja,hoge,
+e,2025002,1,2025002,ja,hoge,
+e,2025003,1,2025003,ja,hoge,
+e,2025004,1,2025004,ja,hoge,
+e,2025005,1,2025005,ja,hoge,
+e,2025006,1,2025006,ja,hoge,
+e,2025007,1,2025007,ja,hoge,

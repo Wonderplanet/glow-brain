@@ -1,0 +1,3 @@
+memo
+TABLE,MstUnitAbility,MstUnitAbility,MstUnitAbility,MstUnitAbility,MstUnitAbility,MstUnitAbility
+ENABLE,id,mst_ability_id,ability_parameter1,ability_parameter2,ability_parameter3,release_key

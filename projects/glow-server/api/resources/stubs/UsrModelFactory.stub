@@ -1,0 +1,27 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Domain\{{domainName}}\Models\{{tableName}};
+use Illuminate\Database\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Domain\{{domainName}}\Models\{{tableName}}>
+ */
+class {{tableName}}Factory extends Factory
+{
+    protected $model = {{tableName}}::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition()
+    {
+        return [
+            'id' => fake()->uuid(),
+            'usr_user_id' => fake()->uuid(),
+        ];
+    }
+}

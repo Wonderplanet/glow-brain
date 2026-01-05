@@ -1,0 +1,9 @@
+ENABLE,id,mst_item_id,mst_fragment_box_group_id,release_key
+e,fragment_box_1,box_glo_00001,fragment_box_1,1
+e,fragment_box_2,box_glo_00002,fragment_box_2,1
+e,fragment_box_3,box_glo_00003,fragment_box_3,1
+e,fragment_box_4,box_glo_00004,fragment_box_4,1
+e,fragment_box_5,box_glo_00005,fragment_box_5,1
+e,fragment_box_6,box_glo_00006,fragment_box_6,1
+e,fragment_box_7,box_glo_00007,fragment_box_7,1
+e,fragment_box_8,box_glo_00008,fragment_box_8,1

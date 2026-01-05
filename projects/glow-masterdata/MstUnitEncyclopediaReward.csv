@@ -1,0 +1,16 @@
+ENABLE,release_key,id,unit_encyclopedia_rank,resource_type,resource_id,resource_amount
+e,1,unit_encyclopedia_reward_rank_5,5,Coin,,100000
+e,1,unit_encyclopedia_reward_rank_10,10,Item,box_glo_00005,5
+e,1,unit_encyclopedia_reward_rank_15,15,Item,box_glo_00006,5
+e,1,unit_encyclopedia_reward_rank_20,20,FreeDiamond,,500
+e,1,unit_encyclopedia_reward_rank_25,25,Coin,,200000
+e,1,unit_encyclopedia_reward_rank_30,30,Item,box_glo_00006,10
+e,1,unit_encyclopedia_reward_rank_35,35,Item,box_glo_00007,10
+e,1,unit_encyclopedia_reward_rank_40,40,FreeDiamond,,700
+e,1,unit_encyclopedia_reward_rank_45,45,Coin,,300000
+e,1,unit_encyclopedia_reward_rank_50,50,Item,box_glo_00006,15
+e,1,unit_encyclopedia_reward_rank_55,55,Item,box_glo_00007,15
+e,1,unit_encyclopedia_reward_rank_60,60,FreeDiamond,,1000
+e,1,unit_encyclopedia_reward_rank_65,65,Coin,,400000
+e,1,unit_encyclopedia_reward_rank_70,70,Item,box_glo_00005,20
+e,1,unit_encyclopedia_reward_rank_75,75,Item,box_glo_00008,20

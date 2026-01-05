@@ -1,0 +1,12 @@
+ENABLE,id,mst_exchange_id,language,asset_key,name,release_key
+e,normal_i18n,normal_exchange,ja,glo_exchange_00001,ジャンブル交換所,1
+e,chara_i18n,chara_exchange,ja,glo_exchange_00002,キャラのかけらBOX交換所,1
+e,event_spy_i18n,event_spy_exchange,ja,osh_exchange_00001,推しの子交換所,1
+e,event_01_i18n,event_01_exchange,ja,osh_exchange_00001,交換所_復刻版,1
+e,event_02_i18n,event_02_exchange,ja,glo_exchange_00001,交換所02,1
+e,event_03_i18n,event_03_exchange,ja,glo_exchange_00001,交換所03,1
+e,event_04_i18n,event_04_exchange,ja,glo_exchange_00001,交換所04,1
+e,event_05_i18n,event_05_exchange,ja,glo_exchange_00001,交換所05,1
+e,event_06_i18n,event_06_exchange,ja,glo_exchange_00001,交換所06,1
+e,event_07_i18n,event_07_exchange,ja,glo_exchange_00001,交換所07,1
+e,event_08_i18n,event_08_exchange,ja,glo_exchange_00001,交換所08,1

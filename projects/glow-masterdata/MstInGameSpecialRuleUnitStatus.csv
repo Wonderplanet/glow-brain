@@ -1,0 +1,15 @@
+ENABLE,release_key,id,group_id,target_type,target_value,status_parameter_type,effect_value
+e,1,1,test,Unit,chara_glo_00001,Hp,100
+e,1,2,test,CharacterUnitRoleType,Attack,AttackPower,200
+e,1,3,test,CharacterColor,Red,AttackPower,300
+e,1,4,test,Unit,chara_jig_00301,Hp,100
+e,1,5,test2,CharacterUnitRoleType,Attack,AttackPower,100
+e,1,6,test2,CharacterColor,Red,Hp,100
+e,1,7,test3,CharacterUnitRoleType,Technical,AttackPower,100
+e,1,8,test3,CharacterUnitRoleType,Defense,Hp,50
+e,1,9,test3,CharacterColor,Green,Hp,50
+e,1,10,test4,CharacterUnitRoleType,Support,AttackPower,100
+e,1,11,test4,CharacterUnitRoleType,Technical,Hp,100
+e,1,14,test5,CharacterColor,Red,AttackPower,50
+e,1,15,test6,All,,Hp,50
+e,1,16,test6,CharacterColor,Red,AttackPower,50

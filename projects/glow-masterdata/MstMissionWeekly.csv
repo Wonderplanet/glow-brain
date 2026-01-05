@@ -1,0 +1,15 @@
+ENABLE,id,release_key,criterion_type,criterion_value,criterion_count,group_key,bonus_point,mst_mission_reward_group_id,sort_order,destination_scene
+e,weekly_1,1,LoginCount,,5,Weekly1,20,,1,Home
+e,weekly_2,1,DefeatBossEnemyCount,,5,Weekly1,10,,2,Home
+e,weekly_3,1,UnitLevelUpCount,,5,Weekly1,10,,3,UnitList
+e,weekly_4,1,StageClearCount,,10,Weekly1,20,,4,StageSelect
+e,weekly_5,1,StageClearCount,,15,Weekly1,20,,5,StageSelect
+e,weekly_6,1,SpecificUnitGradeUpCount,,5,Weekly1,10,,6,UnitList
+e,weekly_7,1,SpecificUnitGradeUpCount,,10,Weekly1,20,,7,UnitList
+e,weekly_8,1,CoinUsedCount,,50000,Weekly1,10,,8,Home
+e,weekly_9,1,IdleIncentiveCount,,10,Weekly1,10,,9,IdleIncentive
+e,weekly_bonus_point_1,1,MissionBonusPoint,,20,,0,weekly_reward_1,10,
+e,weekly_bonus_point_2,1,MissionBonusPoint,,40,,0,weekly_reward_2,11,
+e,weekly_bonus_point_3,1,MissionBonusPoint,,60,,0,weekly_reward_3,12,
+e,weekly_bonus_point_4,1,MissionBonusPoint,,80,,0,weekly_reward_4,13,
+e,weekly_bonus_point_5,1,MissionBonusPoint,,100,,0,weekly_reward_5,14,

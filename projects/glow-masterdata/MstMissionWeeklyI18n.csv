@@ -1,0 +1,15 @@
+ENABLE,release_key,id,mst_mission_weekly_id,language,description
+e,1,weekly_1_ja,weekly_1,ja,累計5日ログインしよう
+e,1,weekly_2_ja,weekly_2,ja,強敵を5回倒そう
+e,1,weekly_3_ja,weekly_3,ja,キャラを5回強化しよう
+e,1,weekly_4_ja,weekly_4,ja,ステージを10回クリアしよう
+e,1,weekly_5_ja,weekly_5,ja,ステージを15回クリアしよう
+e,1,weekly_6_ja,weekly_6,ja,キャラを5回覚醒しよう
+e,1,weekly_7_ja,weekly_7,ja,キャラを10回覚醒しよう
+e,1,weekly_8_ja,weekly_8,ja,"50,000コイン消費しよう"
+e,1,weekly_9_ja,weekly_9,ja,探索報酬を10回獲得しよう
+e,1,weekly_bonus_point_1_ja,weekly_bonus_point_1,ja,累計ポイントを20貯めよう
+e,1,weekly_bonus_point_2_ja,weekly_bonus_point_2,ja,累計ポイントを40貯めよう
+e,1,weekly_bonus_point_3_ja,weekly_bonus_point_3,ja,累計ポイントを60貯めよう
+e,1,weekly_bonus_point_4_ja,weekly_bonus_point_4,ja,累計ポイントを80貯めよう
+e,1,weekly_bonus_point_5_ja,weekly_bonus_point_5,ja,累計ポイントを100貯めよう

@@ -1,0 +1,3 @@
+memo
+TABLE,MstStoreProduct,MstStoreProduct,MstStoreProduct,MstStoreProduct,MstStoreProduct,MstStoreProductI18n,MstStoreProductI18n
+ENABLE,id,release_key,product_id_ios,product_id_android,price,price_ios.ja,price_android.ja

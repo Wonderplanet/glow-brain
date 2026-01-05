@@ -1,0 +1,61 @@
+ENABLE,release_key,id,mst_outpost_enhancement_level_id,language,description
+e,1,level1_1_11_ja,level1_1_11,ja,"JUMBLE RUSHのチャージスピードがアップします"
+e,1,level1_1_12_ja,level1_1_12,ja,"JUMBLE RUSHのチャージスピードがアップします"
+e,1,level1_1_13_ja,level1_1_13,ja,"JUMBLE RUSHのチャージスピードがアップします"
+e,1,level1_1_14_ja,level1_1_14,ja,"JUMBLE RUSHのチャージスピードがアップします"
+e,1,level1_1_15_ja,level1_1_15,ja,"JUMBLE RUSHのチャージスピードがアップします"
+e,1,level1_1_16_ja,level1_1_16,ja,"JUMBLE RUSHのチャージスピードがアップします"
+e,1,level1_1_17_ja,level1_1_17,ja,"JUMBLE RUSHのチャージスピードがアップします"
+e,1,level1_1_18_ja,level1_1_18,ja,"JUMBLE RUSHのチャージスピードがアップします"
+e,1,level1_1_19_ja,level1_1_19,ja,"JUMBLE RUSHのチャージスピードがアップします"
+e,1,level1_1_20_ja,level1_1_20,ja,"JUMBLE RUSHのチャージスピードがアップします"
+e,1,level1_1_21_ja,level1_1_21,ja,リーダーPの増加スピードがアップします
+e,1,level1_1_22_ja,level1_1_22,ja,リーダーPの増加スピードがアップします
+e,1,level1_1_23_ja,level1_1_23,ja,リーダーPの増加スピードがアップします
+e,1,level1_1_24_ja,level1_1_24,ja,リーダーPの増加スピードがアップします
+e,1,level1_1_25_ja,level1_1_25,ja,リーダーPの増加スピードがアップします
+e,1,level1_1_26_ja,level1_1_26,ja,リーダーPの増加スピードがアップします
+e,1,level1_1_27_ja,level1_1_27,ja,リーダーPの増加スピードがアップします
+e,1,level1_1_28_ja,level1_1_28,ja,リーダーPの増加スピードがアップします
+e,1,level1_1_29_ja,level1_1_29,ja,リーダーPの増加スピードがアップします
+e,1,level1_1_30_ja,level1_1_30,ja,リーダーPの増加スピードがアップします
+e,1,level1_1_31_ja,level1_1_31,ja,リーダーPの最大所持量がアップします
+e,1,level1_1_32_ja,level1_1_32,ja,リーダーPの最大所持量がアップします
+e,1,level1_1_33_ja,level1_1_33,ja,リーダーPの最大所持量がアップします
+e,1,level1_1_34_ja,level1_1_34,ja,リーダーPの最大所持量がアップします
+e,1,level1_1_35_ja,level1_1_35,ja,リーダーPの最大所持量がアップします
+e,1,level1_1_36_ja,level1_1_36,ja,リーダーPの最大所持量がアップします
+e,1,level1_1_37_ja,level1_1_37,ja,リーダーPの最大所持量がアップします
+e,1,level1_1_38_ja,level1_1_38,ja,リーダーPの最大所持量がアップします
+e,1,level1_1_39_ja,level1_1_39,ja,リーダーPの最大所持量がアップします
+e,1,level1_1_40_ja,level1_1_40,ja,リーダーPの最大所持量がアップします
+e,1,level1_1_41_ja,level1_1_41,ja,自身のゲートHPがアップします
+e,1,level1_1_42_ja,level1_1_42,ja,自身のゲートHPがアップします
+e,1,level1_1_43_ja,level1_1_43,ja,自身のゲートHPがアップします
+e,1,level1_1_44_ja,level1_1_44,ja,自身のゲートHPがアップします
+e,1,level1_1_45_ja,level1_1_45,ja,自身のゲートHPがアップします
+e,1,level1_1_46_ja,level1_1_46,ja,自身のゲートHPがアップします
+e,1,level1_1_47_ja,level1_1_47,ja,自身のゲートHPがアップします
+e,1,level1_1_48_ja,level1_1_48,ja,自身のゲートHPがアップします
+e,1,level1_1_49_ja,level1_1_49,ja,自身のゲートHPがアップします
+e,1,level1_1_50_ja,level1_1_50,ja,自身のゲートHPがアップします
+e,1,level1_1_51_ja,level1_1_51,ja,ヒーローの生産スピードがアップします
+e,1,level1_1_52_ja,level1_1_52,ja,ヒーローの生産スピードがアップします
+e,1,level1_1_53_ja,level1_1_53,ja,ヒーローの生産スピードがアップします
+e,1,level1_1_54_ja,level1_1_54,ja,ヒーローの生産スピードがアップします
+e,1,level1_1_55_ja,level1_1_55,ja,ヒーローの生産スピードがアップします
+e,1,level1_1_56_ja,level1_1_56,ja,ヒーローの生産スピードがアップします
+e,1,level1_1_57_ja,level1_1_57,ja,ヒーローの生産スピードがアップします
+e,1,level1_1_58_ja,level1_1_58,ja,ヒーローの生産スピードがアップします
+e,1,level1_1_59_ja,level1_1_59,ja,ヒーローの生産スピードがアップします
+e,1,level1_1_60_ja,level1_1_60,ja,ヒーローの生産スピードがアップします
+e,1,level1_1_61_ja,level1_1_61,ja,ファントムを倒す際に得られるリーダーP量がアップします
+e,1,level1_1_62_ja,level1_1_62,ja,ファントムを倒す際に得られるリーダーP量がアップします
+e,1,level1_1_63_ja,level1_1_63,ja,ファントムを倒す際に得られるリーダーP量がアップします
+e,1,level1_1_64_ja,level1_1_64,ja,ファントムを倒す際に得られるリーダーP量がアップします
+e,1,level1_1_65_ja,level1_1_65,ja,ファントムを倒す際に得られるリーダーP量がアップします
+e,1,level1_1_66_ja,level1_1_66,ja,ファントムを倒す際に得られるリーダーP量がアップします
+e,1,level1_1_67_ja,level1_1_67,ja,ファントムを倒す際に得られるリーダーP量がアップします
+e,1,level1_1_68_ja,level1_1_68,ja,ファントムを倒す際に得られるリーダーP量がアップします
+e,1,level1_1_69_ja,level1_1_69,ja,ファントムを倒す際に得られるリーダーP量がアップします
+e,1,level1_1_70_ja,level1_1_70,ja,ファントムを倒す際に得られるリーダーP量がアップします

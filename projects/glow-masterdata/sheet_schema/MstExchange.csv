@@ -1,0 +1,3 @@
+memo
+TABLE,MstExchange,MstExchange,MstExchange,MstExchange,MstExchange,MstExchange,MstExchange,MstExchange
+ENABLE,id,mst_event_id,exchange_trade_type,start_at,end_at,lineup_group_id,display_order,release_key

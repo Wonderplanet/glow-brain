@@ -1,0 +1,5 @@
+ENABLE,release_key,id,mst_event_id,language,name,balloon
+e,1,event_test_ja,event_test,ja,イベントテストデータ,特集祭開催中!!
+e,1,event_test_2_ja,event_test_2,ja,"イベントテストデータ 2つめ",特集祭開催中!!
+e,1,event_spy_00001_ja,event_spy_00001,ja,SPY×FAMILYいいジャン祭,"SPY×FAMILYいいジャン祭\n開催中！"
+e,1,event_spy_test_00004_ja,event_spy_test_00004,ja,SPY×FAMILYいいジャン祭,"SPY×FAMILYいいジャン祭\n開催中！"

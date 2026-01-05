@@ -1,0 +1,3 @@
+memo
+TABLE,MstExchangeLineup,MstExchangeLineup,MstExchangeLineup,MstExchangeLineup,MstExchangeLineup
+ENABLE,id,group_id,tradable_count,display_order,release_key

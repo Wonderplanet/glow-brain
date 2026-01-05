@@ -1,0 +1,3 @@
+memo
+TABLE,MstPvp,MstPvp,MstPvp,MstPvp,MstPvp,MstPvp,MstPvp,MstPvp
+ENABLE,id,release_key,ranking_min_pvp_rank_class,max_daily_challenge_count,max_daily_item_challenge_count,item_challenge_cost_amount,initial_battle_point,mst_in_game_id

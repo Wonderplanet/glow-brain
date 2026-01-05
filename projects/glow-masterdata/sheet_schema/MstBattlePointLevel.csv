@@ -1,0 +1,3 @@
+memo
+TABLE,MstBattlePointLevel,MstBattlePointLevel,MstBattlePointLevel,MstBattlePointLevel,MstBattlePointLevel,MstBattlePointLevel,MstBattlePointLevel
+ENABLE,id,release_key,level,required_level_up_battle_point,max_battle_point,charge_amount,charge_interval

@@ -1,0 +1,3 @@
+memo
+TABLE,MstIdleIncentiveItem,MstIdleIncentiveItem,MstIdleIncentiveItem,MstIdleIncentiveItem,MstIdleIncentiveItem
+ENABLE,id,release_key,mst_idle_incentive_item_group_id,mst_item_id,base_amount

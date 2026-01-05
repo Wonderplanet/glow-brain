@@ -1,0 +1,12 @@
+ENABLE,id,mst_event_id,exchange_trade_type,start_at,end_at,lineup_group_id,display_order,release_key
+e,normal_exchange,__NULL__,NormalExchangeTrade,"2025-11-01 12:00:00",__NULL__,normal_lineup,0,1
+e,chara_exchange,__NULL__,CharacterFragmentExchangeTrade,"2025-11-01 12:00:00",__NULL__,chara_lineup,10,1
+e,event_spy_exchange,event_spy_test_00004,EventExchangeTrade,"2025-11-01 12:00:00","2026-01-31 11:59:59",event_spy_lineup,1,1
+e,event_01_exchange,__NULL__,EventExchangeTrade,"2025-11-01 12:00:00","2026-01-31 11:59:59",event_spy_lineup,2,1
+e,event_02_exchange,__NULL__,EventExchangeTrade,"2025-11-01 12:00:00","2026-01-31 11:59:59",event_02_lineup,3,1
+e,event_03_exchange,__NULL__,EventExchangeTrade,"2025-11-01 12:00:00","2026-01-31 11:59:59",event_03_lineup,4,1
+e,event_04_exchange,__NULL__,EventExchangeTrade,"2025-11-01 12:00:00","2026-01-31 11:59:59",event_04_lineup,5,1
+e,event_05_exchange,__NULL__,EventExchangeTrade,"2025-11-01 12:00:00","2026-01-31 11:59:59",event_05_lineup,6,1
+e,event_06_exchange,__NULL__,EventExchangeTrade,"2025-11-01 12:00:00","2026-01-31 11:59:59",event_06_lineup,7,1
+e,event_07_exchange,__NULL__,EventExchangeTrade,"2025-11-01 12:00:00","2026-01-31 11:59:59",event_07_lineup,8,1
+e,event_08_exchange,__NULL__,EventExchangeTrade,"2025-11-01 12:00:00","2026-01-31 11:59:59",event_08_lineup,9,1

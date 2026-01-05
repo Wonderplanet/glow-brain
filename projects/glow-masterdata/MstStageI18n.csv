@@ -1,0 +1,136 @@
+ENABLE,release_key,id,mst_stage_id,language,name
+e,1,test_slipdamage_koma_ja,test_slipdamage_koma,ja,状態異常コマの挙動確認
+e,1,develop_001_ja,develop_001,ja,テストステージ001
+e,1,develop_002_ja,develop_002,ja,テストステージ002
+e,1,develop_003_ja,develop_003,ja,テストステージ003
+e,1,develop_004_ja,develop_004,ja,テストステージ004_スピードアタック
+e,1,develop_005_ja,develop_005,ja,エネミーFPA用
+e,1,develop_006_ja,develop_006,ja,キャラ確認用
+e,1,develop_qa_monshintest_stage_ja,develop_qa_monshintest_stage,ja,デカキャラ確認
+e,1,1_ja,1,ja,ダンダダン
+e,1,2_ja,2,ja,ダンダダン
+e,1,3_ja,3,ja,ダンダダン
+e,1,4_ja,4,ja,ダンダダン
+e,1,5_ja,5,ja,ダンダダン
+e,1,6_ja,6,ja,ダンダダン
+e,1,7_ja,7,ja,ダンダダン
+e,1,8_ja,8,ja,ダンダダン
+e,1,9_ja,9,ja,ダンダダン
+e,1,10_ja,10,ja,ダンダダン
+e,1,11_ja,11,ja,ダンダダン
+e,1,12_ja,12,ja,ダンダダン
+e,1,13_ja,13,ja,ダンダダン
+e,1,14_ja,14,ja,ダンダダン
+e,1,15_ja,15,ja,ダンダダン
+e,1,16_ja,16,ja,ダンダダン
+e,1,17_ja,17,ja,ダンダダン
+e,1,18_ja,18,ja,ダンダダン
+e,1,19_ja,19,ja,ダンダダン
+e,1,abi_dan_ja,abi_dan,ja,ダンダダン
+e,1,abi_burn_ja,abi_burn,ja,ダンダダン
+e,1,20_ja,20,ja,姫様拷問の時間です
+e,1,21_ja,21,ja,姫様拷問の時間です
+e,1,22_ja,22,ja,地獄楽
+e,1,23_ja,23,ja,地獄楽
+e,1,24_ja,24,ja,魔都精兵のスレイブ
+e,1,25_ja,25,ja,魔都精兵のスレイブ
+e,1,26_ja,26,ja,"ダンダダン hard"
+e,1,27_ja,27,ja,"ダンダダン hard"
+e,1,28_ja,28,ja,"姫様拷問の時間です hard"
+e,1,29_ja,29,ja,"姫様拷問の時間です hard"
+e,1,30_ja,30,ja,"地獄楽 hard"
+e,1,31_ja,31,ja,"地獄楽 hard"
+e,1,32_ja,32,ja,"魔都精兵のスレイブ hard (Test)"
+e,1,33_ja,33,ja,"魔都精兵のスレイブ hard (Test)"
+e,1,34_ja,34,ja,"ダンダダン Veryhard (Test)"
+e,1,35_ja,35,ja,"ダンダダン Veryhard (Test)"
+e,1,36_ja,36,ja,"姫様拷問の時間です Veryhard (Test)"
+e,1,37_ja,37,ja,"姫様拷問の時間です Veryhard (Test)"
+e,1,38_ja,38,ja,"地獄楽 Veryhard (Test)"
+e,1,39_ja,39,ja,"地獄楽 Veryhard (Test)"
+e,1,40_ja,40,ja,"魔都精兵のスレイブ Veryhard (Test)"
+e,1,41_ja,41,ja,"魔都精兵のスレイブ Veryhard (Test)"
+e,1,42_ja,42,ja,コイン獲得クエスト！
+e,1,43_ja,43,ja,"姫様拷問の時間です Veryhard (Test)"
+e,1,44_ja,44,ja,"姫様拷問の時間です Veryhard (Test)"
+e,1,test1_01_001_ja,test1_01_001,ja,QAテスト用ステージ1
+e,1,test1_02_001_ja,test1_02_001,ja,QAテスト用ステージ16
+e,1,test1_03_001_ja,test1_03_001,ja,QAテスト用ステージ17
+e,1,test2_01_001_ja,test2_01_001,ja,QAテスト用ステージ18
+e,1,test2_02_001_ja,test2_02_001,ja,QAテスト用ステージ19
+e,1,test2_03_001_ja,test2_03_001,ja,QAテスト用ステージ20
+e,1,test3_01_001_ja,test3_01_001,ja,QAテスト用ステージ21
+e,1,test3_02_001_ja,test3_02_001,ja,QAテスト用ステージ22
+e,1,test3_03_001_ja,test3_03_001,ja,QAテスト用ステージ23
+e,1,test4_01_001_ja,test4_01_001,ja,QAテスト用ステージ24
+e,1,test4_02_001_ja,test4_02_001,ja,QAテスト用ステージ25
+e,1,test4_03_001_ja,test4_03_001,ja,QAテスト用ステージ26
+e,1,test5_01_001_ja,test5_01_001,ja,QAテスト用ステージ27
+e,1,test5_02_001_ja,test5_02_001,ja,QAテスト用ステージ28
+e,1,test5_03_001_ja,test5_03_001,ja,QAテスト用ステージ29
+e,1,test6_01_001_ja,test6_01_001,ja,QAテスト用ステージ30
+e,1,test6_01_002_ja,test6_01_002,ja,QAテスト用ステージ31
+e,1,test6_01_003_ja,test6_01_003,ja,QAテスト用ステージ32
+e,1,test6_01_004_ja,test6_01_004,ja,QAテスト用ステージ33
+e,1,test6_01_005_ja,test6_01_005,ja,QAテスト用ステージ34
+e,1,test6_01_006_ja,test6_01_006,ja,QAテスト用ステージ35
+e,1,test6_01_007_ja,test6_01_007,ja,QAテスト用ステージ36
+e,1,test6_01_008_ja,test6_01_008,ja,QAテスト用ステージ37
+e,1,test6_01_009_ja,test6_01_009,ja,QAテスト用ステージ38
+e,1,test6_01_010_ja,test6_01_010,ja,QAテスト用ステージ39
+e,1,test6_01_011_ja,test6_01_011,ja,QAテスト用ステージ40
+e,1,test6_01_012_ja,test6_01_012,ja,QAテスト用ステージ41
+e,1,test6_01_013_ja,test6_01_013,ja,QAテスト用ステージ42
+e,1,test6_01_014_ja,test6_01_014,ja,QAテスト用ステージ43
+e,1,test6_01_015_ja,test6_01_015,ja,QAテスト用ステージ44
+e,1,test6_01_016_ja,test6_01_016,ja,QAテスト用ステージ45
+e,1,test6_01_017_ja,test6_01_017,ja,QAテスト用ステージ46
+e,1,test6_01_018_ja,test6_01_018,ja,QAテスト用ステージ47
+e,1,event_test_fragment_n1_ja,event_test_fragment_n1,ja,テストイベント_かけらn1
+e,1,event_test_fragment_n_no_release_ja,event_test_fragment_n_no_release,ja,テストイベント_かけらn1
+e,1,event_test_fragment_n2_ja,event_test_fragment_n2,ja,テストイベント
+e,1,event_test_fragment_n3_ja,event_test_fragment_n3,ja,テストイベント
+e,1,event_test_fragment_n4_ja,event_test_fragment_n4,ja,テストイベント
+e,1,event_test_fragment_n5_ja,event_test_fragment_n5,ja,テストイベント
+e,1,event_test_fragment_n6_ja,event_test_fragment_n6,ja,テストイベント
+e,1,event_test_fragment_n7_ja,event_test_fragment_n7,ja,テストイベント
+e,1,event_test_fragment_n8_ja,event_test_fragment_n8,ja,テストイベント
+e,1,event_test_fragment_n9_ja,event_test_fragment_n9,ja,テストイベント
+e,1,event_test_fragment_n10_ja,event_test_fragment_n10,ja,テストイベント
+e,1,event_test_fragment_n11_ja,event_test_fragment_n11,ja,テストイベント
+e,1,event_test_fragment_h1_ja,event_test_fragment_h1,ja,テストイベント
+e,1,event_test_fragment_vh1_ja,event_test_fragment_vh1,ja,テストイベント
+e,1,event_test_artwork_n1_ja,event_test_artwork_n1,ja,テストイベント
+e,1,event_test_artwork_n2_ja,event_test_artwork_n2,ja,テストイベント
+e,1,event_test_artwork_h1_ja,event_test_artwork_h1,ja,テストイベント
+e,1,event_test_artwork_vh1_ja,event_test_artwork_vh1,ja,テストイベント
+e,1,event_test_artwork_vh2_ja,event_test_artwork_vh2,ja,テストイベント
+e,1,event_test_speed_attack_n1_ja,event_test_speed_attack_n1,ja,テストイベント(スピードアタックN1)
+e,1,event_test_speed_attack_h1_ja,event_test_speed_attack_h1,ja,テストイベント(スピードアタックH1)
+e,1,event_test_speed_attack_vh1_ja,event_test_speed_attack_vh1,ja,テストイベント(スピードアタックVH1)
+e,1,event_view_test_release_at_ja,event_view_test_release_at,ja,開催前に関する表示テストクエスト
+e,1,event_view_test_end_at_ja,event_view_test_end_at,ja,開催終了に関する表示テストクエスト
+e,1,view_test_release_at_ja,view_test_release_at,ja,開催表示テスト
+e,1,tutorial_1_ja,tutorial_1,ja,チュートリアルステージ1
+e,1,tutorial_2_ja,tutorial_2,ja,チュートリアルステージ2
+e,1,tutorial_3_ja,tutorial_3,ja,チュートリアルステージ3
+e,1,plan_test_stage_004_one_buff_ja,plan_test_stage_004_one_buff,ja,プランテストステージ_単バフ
+e,1,plan_test_stage_004_everyone_buff_ja,plan_test_stage_004_everyone_buff,ja,プランテストステージ_範囲バフ
+e,1,plan_test_stage_004_one_heal_ja,plan_test_stage_004_one_heal,ja,プランテストステージ_単ヒール
+e,1,plan_test_stage_004_everyone_heal_ja,plan_test_stage_004_everyone_heal,ja,プランテストステージ_範囲ヒール
+e,1,plan_test_stage_004_one_debuff_ja,plan_test_stage_004_one_debuff,ja,プランテストステージ_単デバフ
+e,1,plan_test_stage_004_everyone_debuff_ja,plan_test_stage_004_everyone_debuff,ja,プランテストステージ_範囲デバフ
+e,1,event_test_fragment_n1_1_ja,event_test_fragment_n1_1,ja,クエスト期限挙動確認1_1
+e,1,event_test_fragment_n1_2_ja,event_test_fragment_n1_2,ja,クエスト期限挙動確認1_2
+e,1,event_test_fragment_n1_3_ja,event_test_fragment_n1_3,ja,クエスト期限挙動確認2_1
+e,1,event_test_fragment_n1_4_ja,event_test_fragment_n1_4,ja,クエスト期限挙動確認2_2
+e,1,test_darkness_koma_special_ja,test_darkness_koma_special,ja,暗闇コマのスペシャル挙動確認
+e,1,test_defense_target_scroll_ja,test_defense_target_scroll,ja,防衛オブジェクトスクロール挙動確認
+e,1,event_spy1_charaget01_00001_ja,event_spy1_charaget01_00001,ja,お似合いの親子じゃんか
+e,1,event_spy1_charaget01_00002_ja,event_spy1_charaget01_00002,ja,お似合いの親子じゃんか
+e,1,event_spy1_charaget01_00003_ja,event_spy1_charaget01_00003,ja,お似合いの親子じゃんか
+e,1,event_spy1_charaget01_00004_ja,event_spy1_charaget01_00004,ja,お似合いの親子じゃんか
+e,1,event_spy1_charaget01_00005_ja,event_spy1_charaget01_00005,ja,お似合いの親子じゃんか
+e,1,event_spy1_charaget01_00006_ja,event_spy1_charaget01_00006,ja,お似合いの親子じゃんか
+e,1,event_spy1_charaget01_00007_ja,event_spy1_charaget01_00007,ja,お似合いの親子じゃんか
+e,1,event_spy1_charaget01_00008_ja,event_spy1_charaget01_00008,ja,お似合いの親子じゃんか

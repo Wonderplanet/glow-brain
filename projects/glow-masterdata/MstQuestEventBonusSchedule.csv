@@ -1,0 +1,4 @@
+ENABLE,id,mst_quest_id,event_bonus_group_id,start_at,end_at,release_key
+e,1,13,bonus_enhance_01,"2024-01-01 0:00:00","2029-10-01 15:00:00",1
+e,1,quest_raid_kai_00001,raid_kai_00001,"2025-03-27 00:00:00","2025-06-13 00:00:00",1
+e,1,quest_raid_kai_00002,raid_kai_00001,"2025-06-13 0:00:01","2031-01-01 0:00:00",1

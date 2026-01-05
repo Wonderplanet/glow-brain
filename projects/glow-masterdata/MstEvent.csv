@@ -1,0 +1,5 @@
+ENABLE,id,mst_series_id,is_displayed_series_logo,is_displayed_jump_plus,start_at,end_at,asset_key,release_key
+e,event_test,3,1,1,"2024-01-01 00:00:00","2026-06-13 00:00:00",event_test,1
+e,event_test_2,3,1,1,"2023-01-01 00:00:00","2025-11-06 11:59:59",event_test,1
+e,event_spy_00001,3,1,1,"2025-11-01 12:00:00","2025-11-10 11:59:59",event_spy_00001,1
+e,event_spy_test_00004,3,1,1,"2025-11-30 12:00:00","2029-10-01 15:00:00",event_spy_00001,1

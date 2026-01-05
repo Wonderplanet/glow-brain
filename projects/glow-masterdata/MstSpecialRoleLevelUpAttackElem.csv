@@ -1,0 +1,6 @@
+ENABLE,release_key,id,mst_attack_element_id,min_power_parameter,max_power_parameter,min_effective_count,max_effective_count,min_effective_duration,max_effective_duration,min_effect_parameter,max_effect_parameter
+e,1,100141022_grade1a,100141022_grade1a,0,0,0,0,1,50,0.1,3
+e,1,100141022_grade2a,100141022_grade2a,0,0,0,0,1,50,0.1,3
+e,1,100141022_grade3a,100141022_grade3a,0,0,0,0,1,50,0.1,3
+e,1,100141022_grade4a,100141022_grade4a,0,0,0,0,1,50,0.1,3
+e,1,100141022_grade5a,100141022_grade5a,0,0,0,0,1,50,0.1,3

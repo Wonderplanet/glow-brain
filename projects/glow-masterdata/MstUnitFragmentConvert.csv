@@ -1,0 +1,10 @@
+ENABLE,id,unit_label,convert_amount,release_key
+e,1,DropR,1,1
+e,2,DropSR,2,1
+e,3,DropSSR,3,1
+e,4,DropUR,4,1
+e,5,PremiumR,5,1
+e,6,PremiumSR,6,1
+e,7,PremiumSSR,7,1
+e,8,PremiumUR,8,1
+e,9,PremiumUR,9,1

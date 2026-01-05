@@ -1,0 +1,3 @@
+memo
+TABLE,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward
+ENABLE,id,mst_stage_id,reward_category,resource_type,resource_id,percentage,sort_order,resource_amount,weight,release_key

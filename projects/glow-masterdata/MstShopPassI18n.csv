@@ -1,0 +1,4 @@
+ENABLE,release_key,id,mst_shop_pass_id,language,name
+e,1,test_pass_1_ja,test_pass_1,ja,10Daysパス
+e,1,test_pass_2_ja,test_pass_2,ja,20Daysパス
+e,1,test_pass_3_ja,test_pass_3,ja,30Daysパス

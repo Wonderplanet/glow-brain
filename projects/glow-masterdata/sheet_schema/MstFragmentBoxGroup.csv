@@ -1,0 +1,3 @@
+memo
+TABLE,MstFragmentBoxGroup,MstFragmentBoxGroup,MstFragmentBoxGroup,MstFragmentBoxGroup,MstFragmentBoxGroup,MstFragmentBoxGroup
+ENABLE,id,mst_fragment_box_group_id,mst_item_id,start_at,end_at,release_key

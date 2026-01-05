@@ -1,0 +1,5 @@
+ENABLE,id,destination,destination_path,asset_key,start_at,end_at,sort_order,release_key
+e,1,Pvp,,hometop_pvp_00001,"2024-01-01 00:00:00","2025-11-01 11:59:59",8,1
+e,8,Web,https://jumble-rush.bn-ent.net/,dummy_web_transit_banner,"2024-01-01 00:00:00","2026-01-01 00:00:00",101,1
+e,10,Web,https://survey.bandainamcoent.co.jp/jfe/form/SV_eXtadyJ4LcMCpBs,dummy_web_transit_banner,"2025-09-08 00:00:00","2026-01-01 00:00:00",102,1
+e,11,CreditShop,,hometop_campaign_00003,"2025-09-08 00:00:00","2026-01-01 00:00:00",8,1

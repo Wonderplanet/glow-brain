@@ -1,0 +1,16 @@
+ENABLE,release_key,id,mst_unit_encyclopedia_reward_id,effect_type,value
+e,1,unit_encyclopedia_effect_5,unit_encyclopedia_reward_rank_5,Hp,0.01
+e,1,unit_encyclopedia_effect_10,unit_encyclopedia_reward_rank_10,AttackPower,0.02
+e,1,unit_encyclopedia_effect_15,unit_encyclopedia_reward_rank_15,Heal,0.03
+e,1,unit_encyclopedia_effect_20,unit_encyclopedia_reward_rank_20,Hp,0.1
+e,1,unit_encyclopedia_effect_25,unit_encyclopedia_reward_rank_25,AttackPower,0.2
+e,1,unit_encyclopedia_effect_30,unit_encyclopedia_reward_rank_30,Heal,0.3
+e,1,unit_encyclopedia_effect_35,unit_encyclopedia_reward_rank_35,Hp,1
+e,1,unit_encyclopedia_effect_40,unit_encyclopedia_reward_rank_40,AttackPower,2
+e,1,unit_encyclopedia_effect_45,unit_encyclopedia_reward_rank_45,Heal,3
+e,1,unit_encyclopedia_effect_50,unit_encyclopedia_reward_rank_50,Hp,10
+e,1,unit_encyclopedia_effect_55,unit_encyclopedia_reward_rank_55,AttackPower,11
+e,1,unit_encyclopedia_effect_60,unit_encyclopedia_reward_rank_60,Heal,12
+e,1,unit_encyclopedia_effect_65,unit_encyclopedia_reward_rank_65,Hp,20
+e,1,unit_encyclopedia_effect_70,unit_encyclopedia_reward_rank_70,AttackPower,21
+e,1,unit_encyclopedia_effect_75,unit_encyclopedia_reward_rank_75,Heal,22

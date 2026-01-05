@@ -1,0 +1,16 @@
+ENABLE,id,release_key,mst_stage_id,base_coin_amount,base_exp_amount,base_rank_up_material_amount,mst_idle_incentive_item_group_id
+e,mst_idle_incentive_reward_1,1,1,50.0001,10,4,idle_incentive_group_1
+e,mst_idle_incentive_reward_2,1,2,70,12,4,idle_incentive_group_1
+e,mst_idle_incentive_reward_3,1,3,90,14,4,idle_incentive_group_2
+e,mst_idle_incentive_reward_4,1,4,110,16,4.5,idle_incentive_group_2
+e,mst_idle_incentive_reward_5,1,5,130,18,4.5,idle_incentive_group_3
+e,mst_idle_incentive_reward_6,1,6,150,20,4.5,idle_incentive_group_3
+e,mst_idle_incentive_reward_7,1,7,170,22,5,idle_incentive_group_4
+e,mst_idle_incentive_reward_8,1,8,190,24,5,idle_incentive_group_4
+e,mst_idle_incentive_reward_9,1,9,210,26,5,idle_incentive_group_5
+e,mst_idle_incentive_reward_10,1,10,230,28,5.5,idle_incentive_group_5
+e,mst_idle_incentive_reward_11,1,11,250,30,5.5,idle_incentive_group_6
+e,mst_idle_incentive_reward_12,1,12,270,32,5.5,idle_incentive_group_6
+e,mst_idle_incentive_reward_13,1,13,290,34,6,idle_incentive_group_7
+e,mst_idle_incentive_reward_14,1,14,310,36,6,idle_incentive_group_7
+e,mst_idle_incentive_reward_00,1,tutorial_2,50,0,0,idle_incentive_group_1

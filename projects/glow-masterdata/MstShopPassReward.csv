@@ -1,0 +1,12 @@
+ENABLE,id,mst_shop_pass_id,pass_reward_type,resource_type,resource_id,resource_amount,release_key
+e,test_pass_1_reward_1,test_pass_1,Daily,Coin,,100,1
+e,test_pass_1_reward_5,test_pass_1,Daily,FreeDiamond,,100,1
+e,test_pass_1_reward_6,test_pass_1,Immediately,FreeDiamond,,100,1
+e,test_pass_1_reward_10,test_pass_1,Immediately,Coin,,100,1
+e,test_pass_2_reward_1,test_pass_2,Immediately,Coin,,1000,1
+e,test_pass_2_reward_2,test_pass_2,Immediately,Item,box_glo_00002,1,1
+e,test_pass_2_reward_3,test_pass_2,Immediately,Item,box_glo_00003,2,1
+e,test_pass_2_reward_4,test_pass_2,Immediately,Item,box_glo_00004,3,1
+e,test_pass_3_reward_1,test_pass_3,Daily,FreeDiamond,,60,1
+e,test_pass_3_reward_2,test_pass_3,Daily,Item,box_glo_00007,2,1
+e,test_pass_3_reward_3,test_pass_3,Daily,Item,box_glo_00008,1,1

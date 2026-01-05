@@ -1,0 +1,16 @@
+ENABLE,id,mst_exchange_lineup_id,resource_type,resource_id,resource_amount,release_key
+e,1,normal_group_01,Unit,chara_osh_00001,10,1
+e,2,normal_group_02,Emblem,normal_gom_00001,1,1
+e,3,normal_group_03,FreeDiamond,__NULL__,1,1
+e,5,osh_group_01,Item,box_glo_00001,5,1
+e,6,osh_group_02,Unit,chara_osh_00001,1,1
+e,7,osh_group_03,Artwork,artwork_dan_0002,1,1
+e,8,osh_group_04,Emblem,emblem_event_gom_00001,5,1
+e,9,osh_group_05,FreeDiamond,__NULL__,6,1
+e,10,osh_group_06,Coin,__NULL__,7,1
+e,11,event_group02_01,Coin,__NULL__,100,1
+e,event_08_lineup_1,event_08_lineup_1,FreeDiamond,__NULL__,100,1
+e,event_08_lineup_2,event_08_lineup_2,FreeDiamond,__NULL__,100,1
+e,event_08_lineup_3,event_08_lineup_3,FreeDiamond,__NULL__,100,1
+e,event_07_lineup_1,event_07_lineup_1,FreeDiamond,__NULL__,100,1
+e,event_07_lineup_2,event_07_lineup_2,FreeDiamond,__NULL__,100,1

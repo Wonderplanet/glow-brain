@@ -1,0 +1,32 @@
+ENABLE,release_key,id,mst_tutorial_id,language,sort_order,title,asset_key
+e,1,1,TutorialStartIntroduction,ja,1,属性について,attribute_1
+e,1,2,TutorialStartIntroduction,ja,2,属性について,attribute_2
+e,1,3,TutorialStartIntroduction,ja,3,ロールについて,role_1
+e,1,4,TutorialStartIntroduction,ja,4,ロールについて,role_2
+e,1,5,InGame1,ja,1,特殊コマについて,koma_1
+e,1,6,InGame1,ja,2,特殊コマについて,koma_2
+e,1,11,Main2,ja,1,キャラ強化について,enhance_unit
+e,1,12,InGame2,ja,1,"JUMBLE RUSHについて",rush_1
+e,1,13,InGame2,ja,2,"JUMBLE RUSHについて",rush_2
+e,1,14,Main3,ja,1,イベントコンテンツについて,content
+e,1,15,OutpostEnhance,ja,1,ゲート強化について,outpost_enhance
+e,1,16,TransitAdventBattle,ja,1,降臨バトルについて,advent_battle_1
+e,1,17,TransitAdventBattle,ja,2,降臨バトルについて,advent_battle_2
+e,1,18,TransitRaidAdventBattle,ja,1,協力スコア報酬について,advent_battle_raid
+e,1,19,TransitEnhanceQuest,ja,1,コイン獲得クエストとは,enhance_quest
+e,1,20,ReleaseEnhanceQuest,ja,1,イベントコンテンツについて,content
+e,1,21,SpecialUnit,ja,1,ロールについて,role_2
+e,1,22,TransitOutpostEnhance,ja,1,ゲート強化について,outpost_enhance
+e,1,23,ArtworkFragment,ja,1,原画のかけらについて,kakera_1
+e,1,24,ArtworkFragment,ja,2,原画のかけらについて,kakera_2
+e,1,25,ArtworkFragment,ja,3,原画のかけらについて,kakera_3
+e,1,26,TransitPvp,ja,1,ランクマッチについて,pvp_1
+e,1,27,TransitPvp,ja,2,ランクマッチについて,pvp_2
+e,1,28,TransitPvp,ja,3,ランクマッチについて,pvp_3
+e,1,25,ReleaseAdventBattle,ja,2,降臨バトルについて,advent_battle_2
+e,1,26,ArtWorkFragment,ja,1,原画のかけらについて,kakera_1
+e,1,27,ArtWorkFragment,ja,2,原画のかけらについて,kakera_2
+e,1,28,ArtWorkFragment,ja,3,原画のかけらについて,kakera_3
+e,1,26,TransitPvp,ja,1,ランクマッチについて,pvp_1
+e,1,27,TransitPvp,ja,2,ランクマッチについて,pvp_2
+e,1,28,TransitPvp,ja,3,ランクマッチについて,pvp_3

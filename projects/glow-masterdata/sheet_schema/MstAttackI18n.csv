@@ -1,0 +1,3 @@
+memo
+TABLE,MstAttackI18n,MstAttackI18n,MstAttackI18n,MstAttackI18n,MstAttackI18n,MstAttackI18n
+ENABLE,id,mst_attack_id,language,description,grade_description,release_key

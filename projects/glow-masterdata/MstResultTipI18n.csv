@@ -1,0 +1,5 @@
+ENABLE,id,language,user_level,result_tips,release_key
+e,1,ja,5,"Tipsテスト 01",1
+e,2,ja,10,"Tipsテスト 02",1
+e,3,ja,15,"Tipsテスト 03",1
+e,4,ja,20,"Tipsテスト 04",1

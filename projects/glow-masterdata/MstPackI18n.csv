@@ -1,0 +1,17 @@
+ENABLE,release_key,id,mst_pack_id,language,name
+e,1,a2_release_pack_1_ja,a2_release_pack_1,ja,α2リリース記念パック1
+e,1,a2_release_pack_2_ja,a2_release_pack_2,ja,α2リリース記念パック2
+e,1,a2_release_pack_3_ja,a2_release_pack_3,ja,α2リリース記念パック3
+e,1,level_pack_1_ja,level_pack_1,ja,リーダーLv5達成パック
+e,1,level_pack_2_ja,level_pack_2,ja,リーダーLv10達成パック
+e,1,level_pack_3_ja,level_pack_3,ja,リーダーLv15達成パック
+e,1,level_pack_4_ja,level_pack_4,ja,リーダーLv20達成パック
+e,1,stgclear_pack_dan_1_ja,stgclear_pack_dan_1,ja,ダンダダンクリアパック
+e,1,stgclear_pack_dan_2_ja,stgclear_pack_dan_2,ja,ダンダダンhardクリアパック
+e,1,stgclear_pack_gom_1_ja,stgclear_pack_gom_1,ja,姫様“拷問”の時間ですクリアパック
+e,1,stgclear_pack_gom_2_ja,stgclear_pack_gom_2,ja,姫様“拷問”の時間ですhardクリアパック
+e,1,stgclear_pack_jig_1_ja,stgclear_pack_jig_1,ja,地獄楽クリアパック
+e,1,stgclear_pack_jig_2_ja,stgclear_pack_jig_2,ja,地獄楽hardクリアパック
+e,1,stgclear_pack_sur_1_ja,stgclear_pack_sur_1,ja,魔都精兵のスレイブクリアパック
+e,1,no_display_sample_pack_ja,no_display_sample_pack,ja,非表示テストパック
+e,1,offer_FreeDiamond150_202512015_ja,offer_FreeDiamond150_202512015,ja,オファーコード報酬アイテム

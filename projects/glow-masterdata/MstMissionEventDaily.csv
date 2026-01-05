@@ -1,0 +1,14 @@
+ENABLE,id,release_key,mst_event_id,criterion_type,criterion_value,criterion_count,group_key,mst_mission_reward_group_id,sort_order,destination_scene
+e,event_daily_1,1,event_test,LoginCount,,1,EventDaily1,event_daily_reward_1,1,Home
+e,event_daily_2,1,event_test,StageClearCount,,1,EventDaily2,event_daily_reward_2,2,StageSelect
+e,event_daily_3,1,event_test,StageClearCount,,3,EventDaily3,event_daily_reward_3,3,StageSelect
+e,event_daily_4,1,event_test,UnitLevelUpCount,,1,EventDaily4,event_daily_reward_4,4,UnitList
+e,event_daily_5,1,event_test,DefeatBossEnemyCount,,1,EventDaily5,event_daily_reward_5,6,Home
+e,event_daily_6,1,event_test,DefeatBossEnemyCount,,3,EventDaily6,event_daily_reward_6,8,Home
+e,event_daily_7,1,event_test,IdleIncentiveCount,,1,EventDaily7,event_daily_reward_7,9,IdleIncentive
+e,event_daily_8,1,event_test,DefeatBossEnemyCount,,2,EventDaily8,event_daily_reward_8,7,Home
+e,event_daily_9,1,event_test,UnitLevelUpCount,,3,EventDaily9,event_daily_reward_9,5,UnitList
+e,event_daily_10,1,event_test_2,LoginCount,,1,EventDaily1,event_daily_reward_1,1,Home
+e,event_daily_11,1,event_test_2,StageClearCount,,1,EventDaily2,event_daily_reward_2,2,StageSelect
+e,event_daily_12,1,event_test_2,StageClearCount,,3,EventDaily3,event_daily_reward_3,3,StageSelect
+e,event_daily_13,1,event_test_2,UnitLevelUpCount,,1,EventDaily4,event_daily_reward_4,4,UnitList

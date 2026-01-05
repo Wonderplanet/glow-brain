@@ -1,0 +1,4 @@
+ENABLE,id,asset_key,position,hp,release_key
+e,jig_01_chi_00001,chi_00001,1.2,700,1
+e,jig_02_chi_00001,chi_00001,4.4,1000,1
+e,test6_01,chi_00001,0.6,10000,1

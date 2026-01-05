@@ -1,0 +1,5 @@
+ENABLE,release_key,id,mst_advent_battle_id,language,name,boss_description
+e,1,advent_battle_test_ja,advent_battle_test,ja,降臨バトル,倒して高スコア獲得！！でいすでいすでいすでいすでいす
+e,1,advent_battle_test2_ja,advent_battle_test2,ja,降臨バトル2,倒して高スコア獲得！！
+e,1,quest_raid_kai_00001_ja,quest_raid_kai_00001,ja,怪獣退治の時間,ボスを倒して高スコア獲得！！
+e,1,quest_raid_kai_00002_ja,quest_raid_kai_00002,ja,怪獣退治の時間,ボスを倒して高スコア獲得！！でいす

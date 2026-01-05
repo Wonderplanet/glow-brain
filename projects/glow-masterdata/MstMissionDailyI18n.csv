@@ -1,0 +1,15 @@
+ENABLE,release_key,id,mst_mission_daily_id,language,description
+e,1,daily_1_ja,daily_1,ja,ログインしよう
+e,1,daily_2_ja,daily_2,ja,ステージを1回クリアしよう
+e,1,daily_3_ja,daily_3,ja,ステージを3回クリアしよう
+e,1,daily_4_ja,daily_4,ja,キャラを1回強化しよう
+e,1,daily_5_ja,daily_5,ja,強敵を1回倒そう
+e,1,daily_6_ja,daily_6,ja,強敵を3回倒そう
+e,1,daily_7_ja,daily_7,ja,探索報酬を1回獲得しよう
+e,1,daily_8_ja,daily_8,ja,強敵を2回倒そう
+e,1,daily_9_ja,daily_9,ja,キャラを3回強化しよう
+e,1,daily_bonus_point_1_ja,daily_bonus_point_1,ja,累計ポイントを20貯めよう
+e,1,daily_bonus_point_2_ja,daily_bonus_point_2,ja,累計ポイントを40貯めよう
+e,1,daily_bonus_point_3_ja,daily_bonus_point_3,ja,累計ポイントを60貯めよう
+e,1,daily_bonus_point_4_ja,daily_bonus_point_4,ja,累計ポイントを80貯めよう
+e,1,daily_bonus_point_5_ja,daily_bonus_point_5,ja,累計ポイントを100貯めよう

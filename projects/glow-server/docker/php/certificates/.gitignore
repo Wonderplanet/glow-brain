@@ -1,0 +1,6 @@
+# certificatesディレクトリ以下のファイルはすべてgitに登録しない
+*
+# gitignoreは登録する
+!.gitignore
+# README.mdは登録する
+!README.md

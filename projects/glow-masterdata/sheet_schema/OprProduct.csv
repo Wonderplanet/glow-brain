@@ -1,0 +1,3 @@
+memo
+TABLE,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProductI18n
+ENABLE,id,mst_store_product_id,product_type,purchasable_count,paid_amount,display_priority,start_date,end_date,release_key,asset_key.ja
