@@ -1,7 +1,8 @@
 ---
 description: GLOWプロジェクトの施策マスタデータCSVを生成
 agent: 'agent'
-argument-hint: 施策名 追加パラメータ...
+argument-hint: 施策名
+tools: ['githubRepo', 'search/codebase']
 ---
 
 # GLOW施策マスタデータ生成
