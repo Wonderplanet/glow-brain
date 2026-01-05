@@ -1,5 +1,5 @@
 {
-  "current_version": "1.4.1",
+  "current_version": "test_for_on_github_issue",
   "versions": {
     "1.4.1": {
       "glow-server": "develop/v1.4.1",
