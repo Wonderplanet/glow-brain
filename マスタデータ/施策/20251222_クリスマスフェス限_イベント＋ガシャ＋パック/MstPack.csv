@@ -1,0 +1,10 @@
+memo
+TABLE,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPackI18n
+ENABLE,id,product_sub_id,discount_rate,is_first_time_free,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,cost_amount,is_recommend,asset_key,pack_decoration,release_key,name.ja
+e,Xmas_prism_pack_1,520,5.77,0,Date,"2025-12-22 15:00:00",__NULL__,1,Normal,1,Cash,980,1,prism,__NULL__,1,お得プリズム 520個
+e,Xmas_prism_pack_2,1680,11.31,0,Date,"2025-12-22 15:00:00",__NULL__,1,Normal,1,Cash,2980,1,prism,__NULL__,1,お得プリズム 1680個
+e,Xmas_prism_pack_3,2820,11.70,0,Date,"2025-12-22 15:00:00",__NULL__,1,Normal,1,Cash,4980,1,prism,__NULL__,1,お得プリズム 2820個
+e,Xmas_prism_pack_4,5580,12.19,0,Date,"2025-12-22 15:00:00",__NULL__,1,Normal,1,Cash,9800,1,prism,__NULL__,1,お得プリズム 5580個
+e,Xmas_item_pack_1,28,73.33,0,Date,"2025-12-22 15:00:00",__NULL__,1,Normal,1,Cash,980,1,xmas_pack_a,__NULL__,1,クリスマス お得パックA
+e,Xmas_item_pack_2,29,27.32,0,Date,"2025-12-22 15:00:00",__NULL__,1,Normal,1,Cash,2980,1,xmas_pack_b,__NULL__,1,クリスマス お得パックB
+e,Xmas_item_pack_3,30,16.67,0,Date,"2025-12-22 15:00:00",__NULL__,1,Normal,1,Cash,5000,1,xmas_pack_c,__NULL__,1,クリスマス お得パックC
