@@ -1,0 +1,4 @@
+memo
+TABLE,MstQuestEventBonusSchedule,MstQuestEventBonusSchedule,MstQuestEventBonusSchedule,MstQuestEventBonusSchedule,MstQuestEventBonusSchedule,MstQuestEventBonusSchedule
+ENABLE,id,mst_quest_id,event_bonus_group_id,start_at,end_at,release_key
+e,xmas_coin_bonus_sched,13,bonus_coin_xmas_2025,"2025-12-22 15:00:00","2026-01-16 10:59:59",1

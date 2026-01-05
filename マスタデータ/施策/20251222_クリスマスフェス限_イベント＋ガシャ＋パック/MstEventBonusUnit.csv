@@ -1,0 +1,13 @@
+memo
+TABLE,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit
+ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
+e,xmas_bonus_unit_001,chara_sur_00001,30,bonus_advent_xmas_2025,0,1
+e,xmas_bonus_unit_002,chara_sur_00101,30,bonus_advent_xmas_2025,0,1
+e,xmas_bonus_unit_003,chara_sur_00201,30,bonus_advent_xmas_2025,0,1
+e,xmas_bonus_unit_004,chara_sur_00301,30,bonus_advent_xmas_2025,0,1
+e,xmas_bonus_unit_005,chara_sur_00401,30,bonus_advent_xmas_2025,0,1
+e,xmas_bonus_unit_006,chara_sur_00501,30,bonus_advent_xmas_2025,0,1
+e,xmas_bonus_unit_007,chara_sur_00601,30,bonus_advent_xmas_2025,0,1
+e,xmas_bonus_unit_008,chara_sur_00701,30,bonus_advent_xmas_2025,0,1
+e,xmas_bonus_unit_009,chara_sur_00801,30,bonus_advent_xmas_2025,0,1
+e,xmas_coin_bonus_001,chara_yuw_00102,30,bonus_coin_xmas_2025,1,1
