@@ -1,0 +1,31 @@
+memo
+TABLE,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEventI18n
+ENABLE,id,release_key,mst_event_id,criterion_type,criterion_value,criterion_count,unlock_criterion_type,unlock_criterion_value,unlock_criterion_count,group_key,mst_mission_reward_group_id,sort_order,event_category,destination_scene,description.ja
+e,xmas_mission_001,1,event_xmas_2025,UnitGradeUpCount,chara_sur_00801,2,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_001,1,General,Event,無窮の鎖 和倉 優希 をグレード2まで強化しよう
+e,xmas_mission_002,1,event_xmas_2025,UnitGradeUpCount,chara_sur_00801,3,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_002,2,General,Event,無窮の鎖 和倉 優希 をグレード3まで強化しよう
+e,xmas_mission_003,1,event_xmas_2025,UnitGradeUpCount,chara_sur_00801,4,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_003,3,General,Event,無窮の鎖 和倉 優希 をグレード4まで強化しよう
+e,xmas_mission_004,1,event_xmas_2025,UnitGradeUpCount,chara_sur_00801,5,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_004,4,General,Event,無窮の鎖 和倉 優希 をグレード5まで強化しよう
+e,xmas_mission_005,1,event_xmas_2025,UnitLevelUpCount,chara_sur_00801,20,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_005,5,General,Event,無窮の鎖 和倉 優希 をLv.20まで強化しよう
+e,xmas_mission_006,1,event_xmas_2025,UnitLevelUpCount,chara_sur_00801,30,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_006,6,General,Event,無窮の鎖 和倉 優希 をLv.30まで強化しよう
+e,xmas_mission_007,1,event_xmas_2025,UnitLevelUpCount,chara_sur_00801,40,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_007,7,General,Event,無窮の鎖 和倉 優希 をLv.40まで強化しよう
+e,xmas_mission_008,1,event_xmas_2025,UnitGradeUpCount,chara_sur_00701,2,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_008,8,General,Event,和倉 青羽 をグレード2まで強化しよう
+e,xmas_mission_009,1,event_xmas_2025,UnitGradeUpCount,chara_sur_00701,3,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_009,9,General,Event,和倉 青羽 をグレード3まで強化しよう
+e,xmas_mission_010,1,event_xmas_2025,UnitGradeUpCount,chara_sur_00701,4,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_010,10,General,Event,和倉 青羽 をグレード4まで強化しよう
+e,xmas_mission_011,1,event_xmas_2025,UnitGradeUpCount,chara_sur_00701,5,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_011,11,General,Event,和倉 青羽 をグレード5まで強化しよう
+e,xmas_mission_012,1,event_xmas_2025,UnitLevelUpCount,chara_sur_00701,20,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_012,12,General,Event,和倉 青羽 をLv.20まで強化しよう
+e,xmas_mission_013,1,event_xmas_2025,UnitLevelUpCount,chara_sur_00701,30,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_013,13,General,Event,和倉 青羽 をLv.30まで強化しよう
+e,xmas_mission_014,1,event_xmas_2025,UnitLevelUpCount,chara_sur_00701,40,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_014,14,General,Event,和倉 青羽 をLv.40まで強化しよう
+e,xmas_mission_015,1,event_xmas_2025,SpecificStageClearCount,stage_xmas_story1,1,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_015,15,StageSelect,StageSelect,ストーリークエスト「スレイブの誕生」をクリアしよう
+e,xmas_mission_016,1,event_xmas_2025,SpecificStageClearCount,stage_xmas_story2,1,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_016,16,StageSelect,StageSelect,ストーリークエスト「隠れ里の戦い」をクリアしよう
+e,xmas_mission_017,1,event_xmas_2025,SpecificStageClearCount,stage_xmas_challenge,1,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_017,17,StageSelect,StageSelect,チャレンジクエスト「魔都防衛隊」をクリアしよう
+e,xmas_mission_018,1,event_xmas_2025,SpecificStageClearCount,stage_xmas_savage,1,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_018,18,StageSelect,StageSelect,高難易度「スレイブと組長」をクリアしよう
+e,xmas_mission_019,1,event_xmas_2025,EnemyDefeatCount,en_phantom_glo_00001,10,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_019,19,General,Event,ファントムを10体撃破しよう
+e,xmas_mission_020,1,event_xmas_2025,EnemyDefeatCount,en_phantom_glo_00001,20,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_020,20,General,Event,ファントムを20体撃破しよう
+e,xmas_mission_021,1,event_xmas_2025,EnemyDefeatCount,en_phantom_glo_00001,30,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_021,21,General,Event,ファントムを30体撃破しよう
+e,xmas_mission_022,1,event_xmas_2025,EnemyDefeatCount,en_phantom_glo_00001,40,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_022,22,General,Event,ファントムを40体撃破しよう
+e,xmas_mission_023,1,event_xmas_2025,EnemyDefeatCount,en_phantom_glo_00001,50,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_023,23,General,Event,ファントムを50体撃破しよう
+e,xmas_mission_024,1,event_xmas_2025,EnemyDefeatCount,en_phantom_glo_00001,100,__NULL__,__NULL__,0,xmas_2025,xmas_mission_reward_024,24,General,Event,ファントムを100体撃破しよう
+e,xmas_advent_mission_001,1,event_xmas_2025,AdventBattleChallengeCount,advent_xmas_2025,5,__NULL__,__NULL__,0,xmas_advent,xmas_advent_mission_reward_001,101,AdventBattle,AdventBattle,降臨バトル「魔防隊と戦う者」に5回挑戦しよう！
+e,xmas_advent_mission_002,1,event_xmas_2025,AdventBattleChallengeCount,advent_xmas_2025,10,__NULL__,__NULL__,0,xmas_advent,xmas_advent_mission_reward_002,102,AdventBattle,AdventBattle,降臨バトル「魔防隊と戦う者」に10回挑戦しよう！
+e,xmas_advent_mission_003,1,event_xmas_2025,AdventBattleChallengeCount,advent_xmas_2025,20,__NULL__,__NULL__,0,xmas_advent,xmas_advent_mission_reward_003,103,AdventBattle,AdventBattle,降臨バトル「魔防隊と戦う者」に20回挑戦しよう！
+e,xmas_advent_mission_004,1,event_xmas_2025,AdventBattleChallengeCount,advent_xmas_2025,30,__NULL__,__NULL__,0,xmas_advent,xmas_advent_mission_reward_004,104,AdventBattle,AdventBattle,降臨バトル「魔防隊と戦う者」に30回挑戦しよう！
