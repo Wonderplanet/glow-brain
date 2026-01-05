@@ -10,6 +10,11 @@
       "glow-server": "develop/v1.5.0",
       "glow-client": "release/v1.5.0",
       "glow-masterdata": "release/dev-ld"
+    },
+    "test_for_on_github_issue": {
+      "glow-server": "v1.5.0/add_schema_yml_file_when_migrate_execution",
+      "glow-client": "release/v1.5.0",
+      "glow-masterdata": "junkiMizutani/local_debug_20251225"
     }
   },
   "repositories": {
