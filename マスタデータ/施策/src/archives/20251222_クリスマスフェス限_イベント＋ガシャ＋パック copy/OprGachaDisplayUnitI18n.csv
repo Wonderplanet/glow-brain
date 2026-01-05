@@ -1,4 +1,0 @@
-memo
-TABLE,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n
-ENABLE,release_key,id,opr_gacha_id,mst_unit_id,language,sort_order,description
-e,1,Fest_Xmas_001_unit_1,Fest_Xmas_001,chara_yuw_00102,ja,1,"広範囲の必殺ワザで\n相手にダメージを与え\nオブジェクトを\nランダムに生成する!"

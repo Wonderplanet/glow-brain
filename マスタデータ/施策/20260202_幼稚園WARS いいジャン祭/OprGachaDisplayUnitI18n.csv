@@ -1,9 +1,0 @@
-memo
-TABLE,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n
-ENABLE,release_key,id,opr_gacha_id,mst_unit_id,language,sort_order,description
-e,1,Pickup_you_001_1,Pickup_you_001,chara_you_00001,ja,1,"必殺ワザで\n連続攻撃する中距離\nアタックキャラ!\n緑属性に大ダメージ!"
-e,1,Pickup_you_001_2,Pickup_you_001,chara_you_00101,ja,2,"必殺ワザで複数体の\n相手にダメージを与え\n相手を毒状態にする\nテクニカルキャラ!"
-e,1,valentine_you_001_1,valentine_you_001,chara_sum_00101,ja,1,"前線の維持に特化した\nサポートキャラ!\n必殺ワザで味方の\n被ダメージを軽減!"
-e,1,valentine_you_001_2,valentine_you_001,chara_gom_00001,ja,2,"必殺ワザと特性で\n耐久性抜群の\nディフェンスキャラ!"
-e,1,valentine_you_001_3,valentine_you_001,chara_chi_00301,ja,3,"必殺ワザで複数の相手\nにダメージを与える!\n赤属性の相手に\n大ダメージ!"
-e,1,valentine_you_001_4,valentine_you_001,chara_dos_00001,ja,4,"前線を支える遠距離\nサポートキャラ!\n攻撃UPで戦況を有利\nに導くことができるぞ"

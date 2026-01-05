@@ -1,7 +1,0 @@
-memo
-TABLE,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit
-ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
-e,event_you_00001_bonus_001,chara_you_00001,0.3,event_you_00001,0,202602010
-e,event_you_00001_bonus_002,chara_you_00101,0.3,event_you_00001,0,202602010
-e,event_you_00001_bonus_003,chara_you_00201,0.3,event_you_00001,0,202602010
-e,event_you_00001_bonus_004,chara_you_00301,0.3,event_you_00001,0,202602010

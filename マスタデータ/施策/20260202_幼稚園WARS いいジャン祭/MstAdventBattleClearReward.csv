@@ -1,9 +1,0 @@
-memo
-TABLE,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward,MstAdventBattleClearReward
-ENABLE,id,mst_advent_battle_id,reward_category,resource_type,resource_id,resource_amount,percentage,sort_order,release_key
-e,advent_you_002_clear_001,advent_you_002,Always,Coin,__NULL__,300,__NULL__,1,202602010
-e,advent_you_002_clear_002,advent_you_002,Random,Item,memory_glo_00002,3,0.2,2,202602010
-e,advent_you_002_clear_003,advent_you_002,Random,Item,memory_glo_00005,3,0.2,3,202602010
-e,advent_you_002_clear_004,advent_you_002,Random,Item,memory_glo_00004,3,0.2,4,202602010
-e,advent_you_002_clear_005,advent_you_002,Random,Item,memory_glo_00003,3,0.2,5,202602010
-e,advent_you_002_clear_006,advent_you_002,Random,Item,memory_glo_00001,3,0.2,6,202602010

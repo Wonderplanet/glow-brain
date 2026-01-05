@@ -1,6 +1,0 @@
-memo,幼稚園WARSいいジャン祭のエンブレム
-TABLE,MstEmblem,MstEmblem,MstEmblem,MstEmblem,MstEmblem,MstEmblemI18n,MstEmblemI18n
-ENABLE,id,emblemType,mstSeriesId,assetKey,release_key,name.ja,description.ja
-e,emblem_event_you_00001,Event,8,emblem_event_you_00001,202602010,魔都防衛隊エンブレム,幼稚園WARSいいジャン祭の高難度クエストクリア報酬
-e,emblem_event_you_00002,Event,4,emblem_event_you_00002,202602010,羽前 京香エンブレム,幼稚園WARSいいジャン祭の高難度クエストクリア報酬
-e,emblem_event_you_00003,Event,4,emblem_event_you_00003,202602010,出雲 天花のエンブレム,幼稚園WARSいいジャン祭の高難度クエストクリア報酬
