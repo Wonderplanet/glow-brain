@@ -1,4 +1,4 @@
-# glow-brain-2 .gitignore
+# glow-brain .gitignore
 
 # クローンされたリポジトリ（参照専用、git管理外）
 !projects/.gitkeep
