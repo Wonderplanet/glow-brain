@@ -1,0 +1,7 @@
+memo
+TABLE,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit
+ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
+e,advent_battle_kim_bonus_01,chara_kim_00001,30,advent_battle_kim_bonus,1,1
+e,advent_battle_kim_bonus_02,chara_kim_00101,30,advent_battle_kim_bonus,1,1
+e,advent_battle_kim_bonus_03,chara_kim_00201,30,advent_battle_kim_bonus,1,1
+e,advent_battle_kim_bonus_04,chara_kim_00301,30,advent_battle_kim_bonus,1,1
