@@ -1,0 +1,7 @@
+memo
+TABLE,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent
+ENABLE,id,mst_pack_id,resource_type,resource_id,resource_amount,is_bonus,display_order,release_key
+e,pack_kim_content_001,pack_kim_001,Item,item_glo_00001,50,0,1,1
+e,pack_kim_content_002,pack_kim_001,Item,item_glo_00002,30,0,2,1
+e,pack_kim_content_003,pack_kim_001,Item,item_glo_00004,3,0,3,1
+e,pack_kim_content_004,pack_kim_001,Ticket,ticket_glo_00003,10,0,4,1

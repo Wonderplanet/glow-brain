@@ -1,0 +1,4 @@
+memo
+TABLE,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPackI18n
+ENABLE,id,product_sub_id,discount_rate,is_first_time_free,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,cost_amount,is_recommend,asset_key,pack_decoration,release_key,name.ja
+e,pack_kim_001,product_kim_pack_001,25.74,0,__NULL__,__NULL__,__NULL__,1,NormalPack,1,PaidGem,3000,0,pack_kim_001,__NULL__,1,いいジャン祭パック
