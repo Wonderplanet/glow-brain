@@ -1,0 +1,46 @@
+memo
+TABLE,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEvent,MstMissionEventI18n
+ENABLE,id,release_key,mst_event_id,criterion_type,criterion_value,criterion_count,unlock_criterion_type,unlock_criterion_value,unlock_criterion_count,group_key,mst_mission_reward_group_id,sort_order,event_category,destination_scene,description.ja
+e,hut_mission_001,1,event_hut_001,UnitGradeUp,chara_hut_00201,2,__NULL__,,0,,hut_mission_reward_001,1,__NULL__,UnitList,内田 桃 をグレード2まで強化しよう
+e,hut_mission_002,1,event_hut_001,UnitGradeUp,chara_hut_00201,3,__NULL__,,0,,hut_mission_reward_002,2,__NULL__,UnitList,内田 桃 をグレード3まで強化しよう
+e,hut_mission_003,1,event_hut_001,UnitGradeUp,chara_hut_00201,4,__NULL__,,0,,hut_mission_reward_003,3,__NULL__,UnitList,内田 桃 をグレード4まで強化しよう
+e,hut_mission_004,1,event_hut_001,UnitGradeUp,chara_hut_00201,5,__NULL__,,0,,hut_mission_reward_004,4,__NULL__,UnitList,内田 桃 をグレード5まで強化しよう
+e,hut_mission_005,1,event_hut_001,UnitLevelUp,chara_hut_00201,20,__NULL__,,0,,hut_mission_reward_005,5,__NULL__,UnitList,内田 桃 をLv.20まで強化しよう
+e,hut_mission_006,1,event_hut_001,UnitLevelUp,chara_hut_00201,30,__NULL__,,0,,hut_mission_reward_006,6,__NULL__,UnitList,内田 桃 をLv.30まで強化しよう
+e,hut_mission_007,1,event_hut_001,UnitLevelUp,chara_hut_00201,40,__NULL__,,0,,hut_mission_reward_007,7,__NULL__,UnitList,内田 桃 をLv.40まで強化しよう
+e,hut_mission_008,1,event_hut_001,UnitLevelUp,chara_hut_00201,50,__NULL__,,0,,hut_mission_reward_008,8,__NULL__,UnitList,内田 桃 をLv.50まで強化しよう
+e,hut_mission_009,1,event_hut_001,UnitLevelUp,chara_hut_00201,60,__NULL__,,0,,hut_mission_reward_009,9,__NULL__,UnitList,内田 桃 をLv.60まで強化しよう
+e,hut_mission_010,1,event_hut_001,UnitLevelUp,chara_hut_00201,70,__NULL__,,0,,hut_mission_reward_010,10,__NULL__,UnitList,内田 桃 をLv.70まで強化しよう
+e,hut_mission_011,1,event_hut_001,UnitLevelUp,chara_hut_00201,80,__NULL__,,0,,hut_mission_reward_011,11,__NULL__,UnitList,内田 桃 をLv.80まで強化しよう
+e,hut_mission_012,1,event_hut_001,UnitGradeUp,chara_hut_00301,2,__NULL__,,0,,hut_mission_reward_012,12,__NULL__,UnitList,藤井 彩目 をグレード2まで強化しよう
+e,hut_mission_013,1,event_hut_001,UnitGradeUp,chara_hut_00301,3,__NULL__,,0,,hut_mission_reward_013,13,__NULL__,UnitList,藤井 彩目 をグレード3まで強化しよう
+e,hut_mission_014,1,event_hut_001,UnitGradeUp,chara_hut_00301,4,__NULL__,,0,,hut_mission_reward_014,14,__NULL__,UnitList,藤井 彩目 をグレード4まで強化しよう
+e,hut_mission_015,1,event_hut_001,UnitGradeUp,chara_hut_00301,5,__NULL__,,0,,hut_mission_reward_015,15,__NULL__,UnitList,藤井 彩目 をグレード5まで強化しよう
+e,hut_mission_016,1,event_hut_001,UnitLevelUp,chara_hut_00301,20,__NULL__,,0,,hut_mission_reward_016,16,__NULL__,UnitList,藤井 彩目 をLv.20まで強化しよう
+e,hut_mission_017,1,event_hut_001,UnitLevelUp,chara_hut_00301,30,__NULL__,,0,,hut_mission_reward_017,17,__NULL__,UnitList,藤井 彩目 をLv.30まで強化しよう
+e,hut_mission_018,1,event_hut_001,UnitLevelUp,chara_hut_00301,40,__NULL__,,0,,hut_mission_reward_018,18,__NULL__,UnitList,藤井 彩目 をLv.40まで強化しよう
+e,hut_mission_019,1,event_hut_001,UnitLevelUp,chara_hut_00301,50,__NULL__,,0,,hut_mission_reward_019,19,__NULL__,UnitList,藤井 彩目 をLv.50まで強化しよう
+e,hut_mission_020,1,event_hut_001,UnitLevelUp,chara_hut_00301,60,__NULL__,,0,,hut_mission_reward_020,20,__NULL__,UnitList,藤井 彩目 をLv.60まで強化しよう
+e,hut_mission_021,1,event_hut_001,UnitLevelUp,chara_hut_00301,70,__NULL__,,0,,hut_mission_reward_021,21,__NULL__,UnitList,藤井 彩目 をLv.70まで強化しよう
+e,hut_mission_022,1,event_hut_001,UnitLevelUp,chara_hut_00301,80,__NULL__,,0,,hut_mission_reward_022,22,__NULL__,UnitList,藤井 彩目 をLv.80まで強化しよう
+e,hut_mission_023,1,event_hut_001,StageClear,,1,__NULL__,,0,,hut_mission_reward_023,23,__NULL__,StageSelect,収集クエスト「弾き語り修行をする」をクリアしよう
+e,hut_mission_024,1,event_hut_001,StageClear,,1,__NULL__,,0,,hut_mission_reward_024,24,__NULL__,StageSelect,ストーリークエスト「バンドを結成する」をクリアしよう
+e,hut_mission_025,1,event_hut_001,StageClear,,1,__NULL__,,0,,hut_mission_reward_025,25,__NULL__,StageSelect,チャレンジクエスト「文化祭が始まる」をクリアしよう
+e,hut_mission_026,1,event_hut_001,StageClear,,1,__NULL__,,0,,hut_mission_reward_026,26,__NULL__,StageSelect,高難易度「ステージに立つ」をクリアしよう
+e,hut_mission_027,1,event_hut_001,EnemyDefeat,,10,__NULL__,,0,,hut_mission_reward_027,27,__NULL__,StageSelect,敵を10体撃破しよう
+e,hut_mission_028,1,event_hut_001,EnemyDefeat,,20,__NULL__,,0,,hut_mission_reward_028,28,__NULL__,StageSelect,敵を20体撃破しよう
+e,hut_mission_029,1,event_hut_001,EnemyDefeat,,30,__NULL__,,0,,hut_mission_reward_029,29,__NULL__,StageSelect,敵を30体撃破しよう
+e,hut_mission_030,1,event_hut_001,EnemyDefeat,,40,__NULL__,,0,,hut_mission_reward_030,30,__NULL__,StageSelect,敵を40体撃破しよう
+e,hut_mission_031,1,event_hut_001,EnemyDefeat,,50,__NULL__,,0,,hut_mission_reward_031,31,__NULL__,StageSelect,敵を50体撃破しよう
+e,hut_mission_032,1,event_hut_001,EnemyDefeat,,60,__NULL__,,0,,hut_mission_reward_032,32,__NULL__,StageSelect,敵を60体撃破しよう
+e,hut_mission_033,1,event_hut_001,EnemyDefeat,,70,__NULL__,,0,,hut_mission_reward_033,33,__NULL__,StageSelect,敵を70体撃破しよう
+e,hut_mission_034,1,event_hut_001,EnemyDefeat,,80,__NULL__,,0,,hut_mission_reward_034,34,__NULL__,StageSelect,敵を80体撃破しよう
+e,hut_mission_035,1,event_hut_001,EnemyDefeat,,90,__NULL__,,0,,hut_mission_reward_035,35,__NULL__,StageSelect,敵を90体撃破しよう
+e,hut_mission_036,1,event_hut_001,EnemyDefeat,,100,__NULL__,,0,,hut_mission_reward_036,36,__NULL__,StageSelect,敵を100体撃破しよう
+e,hut_mission_037,1,event_hut_001,EnemyDefeat,,150,__NULL__,,0,,hut_mission_reward_037,37,__NULL__,StageSelect,敵を150体撃破しよう
+e,hut_mission_038,1,event_hut_001,EnemyDefeat,,200,__NULL__,,0,,hut_mission_reward_038,38,__NULL__,StageSelect,敵を200体撃破しよう
+e,hut_mission_039,1,event_hut_001,EnemyDefeat,,300,__NULL__,,0,,hut_mission_reward_039,39,__NULL__,StageSelect,敵を300体撃破しよう
+e,hut_mission_040,1,event_hut_001,EnemyDefeat,,400,__NULL__,,0,,hut_mission_reward_040,40,__NULL__,StageSelect,敵を400体撃破しよう
+e,hut_mission_041,1,event_hut_001,EnemyDefeat,,500,__NULL__,,0,,hut_mission_reward_041,41,__NULL__,StageSelect,敵を500体撃破しよう
+e,hut_mission_042,1,event_hut_001,EnemyDefeat,,750,__NULL__,,0,,hut_mission_reward_042,42,__NULL__,StageSelect,敵を750体撃破しよう
+e,hut_mission_043,1,event_hut_001,EnemyDefeat,,1000,__NULL__,,0,,hut_mission_reward_043,43,__NULL__,StageSelect,敵を1000体撃破しよう

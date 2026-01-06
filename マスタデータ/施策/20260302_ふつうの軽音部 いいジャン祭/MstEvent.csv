@@ -1,0 +1,4 @@
+memo
+TABLE,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEventI18n,MstEventI18n
+ENABLE,id,mst_series_id,is_displayed_series_logo,is_displayed_jump_plus,start_at,end_at,asset_key,release_key,name.ja,balloon.ja
+e,event_hut_001,series_hut,1,1,"2026-03-02 15:00:00","2026-04-03 10:59:59",event_hut_001,1,ふつうの軽音部 いいジャン祭,ふつうの軽音部の世界へようこそ！

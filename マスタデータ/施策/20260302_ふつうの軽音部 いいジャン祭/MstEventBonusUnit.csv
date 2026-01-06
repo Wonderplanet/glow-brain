@@ -1,0 +1,16 @@
+memo
+TABLE,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit,MstEventBonusUnit
+ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
+e,advent_bonus_hut_001_001,chara_hut_00001,30,advent_bonus_hut_001,1,1
+e,advent_bonus_hut_001_002,chara_hut_00101,30,advent_bonus_hut_001,1,1
+e,advent_bonus_hut_001_003,chara_hut_00201,30,advent_bonus_hut_001,0,1
+e,advent_bonus_hut_001_004,chara_hut_00301,30,advent_bonus_hut_001,0,1
+e,advent_bonus_hut_001_005,chara_sur_00001,30,advent_bonus_hut_001,0,1
+e,advent_bonus_hut_001_006,chara_sur_00101,30,advent_bonus_hut_001,0,1
+e,advent_bonus_hut_001_007,chara_sur_00201,30,advent_bonus_hut_001,0,1
+e,advent_bonus_hut_001_008,chara_sur_00301,30,advent_bonus_hut_001,0,1
+e,advent_bonus_hut_001_009,chara_sur_00401,30,advent_bonus_hut_001,0,1
+e,advent_bonus_hut_001_010,chara_sur_00501,30,advent_bonus_hut_001,0,1
+e,advent_bonus_hut_001_011,chara_sur_00601,30,advent_bonus_hut_001,0,1
+e,advent_bonus_hut_001_012,chara_sur_00701,30,advent_bonus_hut_001,0,1
+e,advent_bonus_hut_001_013,chara_sur_00801,30,advent_bonus_hut_001,0,1
