@@ -110,8 +110,11 @@
         "repository": "glow-brain",
         "title": "=[データ更新] {{ $json.spreadsheet_name }}",
         "body": "=## スプレッドシートデータのCSV変換完了\n\n**スプレッドシート**: [{{ $json.spreadsheet_name }}]({{ $json.spreadsheet_url }})\n**変換日時**: {{ $now.toISO() }}\n**シート数**: {{ $json.total_sheets }}\n**総データ行数**: {{ $json.total_rows }}\n\n### 変換されたCSVファイル\n\n{{ $json.csv_files.map(f => `- \\`${f.filename}\\` (${f.row_count}行)`).join('\\n') }}\n\n---\n各シートのCSVファイルは、このissueのコメントとして順次添付されます。\n\n**注意**: このワークフローは**完全に読み取り専用**です。元のスプレッドシートは一切変更されません。",
-        "labels": "data-update,automated",
-        "additionalFields": {}
+        "additionalFields": {
+          "labels": {
+            "labels": ["data-update", "automated"]
+          }
+        }
       },
       "id": "c9d0e1f2-a3b4-5c6d-7e8f-a9b0c1d2e3f4",
       "name": "Create GitHub Issue",
