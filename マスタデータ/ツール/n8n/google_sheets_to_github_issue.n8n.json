@@ -124,7 +124,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// Issue番号とCSVファイル情報を次のノードに渡す\nconst issueNumber = $input.first().json.number;\nconst csvFiles = $node[\"Prepare GitHub Issue Data\"].json.csv_files;\n\nreturn {\n  json: {\n    issue_number: issueNumber,\n    csv_files: csvFiles\n  }\n};"
+        "jsCode": "// Issue番号とCSVファイル情報を次のノードに渡す\nconst issueNumber = $input.first().json.number;\nconst csvFiles = $node[\"Prepare GitHub Issue Data\"].json.csv_files;\n\n// 各CSVファイルを個別のアイテムとして返す（ループ用）\nreturn csvFiles.map(csvFile => ({\n  json: {\n    issue_number: issueNumber,\n    csv_file: csvFile\n  }\n}));"
       },
       "id": "d0e1f2a3-b4c5-6d7e-8f9a-b0c1d2e3f4a5",
       "name": "Extract Issue Number",
@@ -145,7 +145,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// 現在のCSVファイル情報を取得\nconst issueNumber = $node[\"Extract Issue Number\"].json.issue_number;\nconst csvFiles = $node[\"Extract Issue Number\"].json.csv_files;\nconst batchIndex = $node[\"Loop Over CSV Files\"].context.currentRunIndex;\nconst currentFile = csvFiles[batchIndex];\n\nreturn {\n  json: {\n    issue_number: issueNumber,\n    csv_file: currentFile\n  }\n};"
+        "jsCode": "// splitInBatchesから渡された現在のCSVファイル情報をそのまま返す\nconst currentItem = $input.first().json;\n\nreturn {\n  json: {\n    issue_number: currentItem.issue_number,\n    csv_file: currentItem.csv_file\n  }\n};"
       },
       "id": "f1a2b3c4-d5e6-7f8a-9b0c-d1e2f3a4b5c6",
       "name": "Get Current CSV File",
