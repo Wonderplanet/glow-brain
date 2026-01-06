@@ -1,0 +1,7 @@
+memo
+TABLE,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n,OprGachaDisplayUnitI18n
+ENABLE,release_key,id,opr_gacha_id,mst_unit_id,language,sort_order,description
+e,1,gacha_kim_display_001,Pickup_kim_001,chara_kim_00001,ja,1,溢れる母性で仲間を守る強力なサポートキャラ！
+e,1,gacha_kim_display_002,Pickup_kim_001,chara_kim_00101,ja,2,花園 羽香里の魅力が光る攻撃型SSRキャラ！
+e,1,gacha_kim_display_003,Pickup_kim_001,chara_kim_00201,ja,3,院田 唐音の個性が際立つバランス型SSRキャラ！
+e,1,gacha_kim_display_004,Pickup_kim_001,chara_kim_00301,ja,4,好本 静の知性が活きるテクニカル型SSRキャラ！
