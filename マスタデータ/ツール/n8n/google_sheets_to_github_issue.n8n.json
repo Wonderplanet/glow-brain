@@ -1,5 +1,5 @@
 {
-  "name": "Google Sheets to GitHub Issue with CSV Attachments",
+  "name": "Google Sheets to GitHub Issue with CSV Attachments (Read-Only)",
   "nodes": [
     {
       "parameters": {},
@@ -11,39 +11,45 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
-        "resource": "spreadsheet",
-        "operation": "read",
-        "documentId": "={{ $json.spreadsheet_url }}",
-        "options": {}
+        "jsCode": "// スプレッドシートIDを抽出する関数\nfunction extractSpreadsheetId(url) {\n  const match = url.match(/\\/spreadsheets\\/d\\/([a-zA-Z0-9-_]+)/);\n  return match ? match[1] : url;\n}\n\nconst spreadsheetUrl = $input.first().json.spreadsheet_url;\nconst spreadsheetId = extractSpreadsheetId(spreadsheetUrl);\n\nreturn {\n  json: {\n    spreadsheet_url: spreadsheetUrl,\n    spreadsheet_id: spreadsheetId\n  }\n};"
       },
-      "id": "b2c3d4e5-f6a7-8b9c-0d1e-f2a3b4c5d6e7",
-      "name": "Get Spreadsheet Info",
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4,
+      "id": "b1c2d3e4-f5a6-7b8c-9d0e-a1f2b3c4d5e6",
+      "name": "Extract Spreadsheet ID",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
       "position": [550, 300]
     },
     {
       "parameters": {
         "authentication": "oAuth2",
-        "resource": "sheet",
-        "operation": "getMany",
-        "documentId": "={{ $json.spreadsheet_url }}",
-        "returnAll": true,
-        "options": {}
+        "requestMethod": "GET",
+        "url": "=https://sheets.googleapis.com/v4/spreadsheets/{{ $json.spreadsheet_id }}?fields=properties.title,sheets.properties",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
       },
-      "id": "c3d4e5f6-a7b8-9c0d-1e2f-a3b4c5d6e7f8",
-      "name": "Get All Sheet Names",
-      "type": "n8n-nodes-base.googleSheets",
+      "id": "b2c3d4e5-f6a7-8b9c-0d1e-f2a3b4c5d6e7",
+      "name": "Get Spreadsheet Metadata (API GET - READ ONLY)",
+      "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
-      "position": [850, 300]
+      "position": [850, 300],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "1",
+          "name": "Google Sheets account (readonly scope)"
+        }
+      }
     },
     {
       "parameters": {
-        "jsCode": "// スプレッドシートIDを抽出する関数\nfunction extractSpreadsheetId(url) {\n  const match = url.match(/\\/spreadsheets\\/d\\/([a-zA-Z0-9-_]+)/);\n  return match ? match[1] : url;\n}\n\nconst spreadsheetUrl = $input.first().json.spreadsheet_url;\nconst spreadsheetId = extractSpreadsheetId(spreadsheetUrl);\n\n// Get All Sheet Namesノードからシート情報を取得\nconst sheets = $input.all().map(item => item.json);\n\n// 各シートに対してスプレッドシートIDを付与\nconst outputData = sheets.map(sheet => ({\n  spreadsheet_id: spreadsheetId,\n  sheet_name: sheet.properties.title,\n  sheet_id: sheet.properties.sheetId\n}));\n\nreturn outputData;"
+        "jsCode": "// APIレスポンスから必要な情報を抽出\nconst response = $input.first().json;\nconst spreadsheetName = response.properties?.title || 'Unknown Spreadsheet';\nconst spreadsheetId = $node[\"Extract Spreadsheet ID\"].json.spreadsheet_id;\nconst spreadsheetUrl = $node[\"Extract Spreadsheet ID\"].json.spreadsheet_url;\n\n// 全シート情報を抽出\nconst sheets = response.sheets || [];\n\n// 各シートの情報を整形\nconst outputData = sheets.map(sheet => ({\n  spreadsheet_id: spreadsheetId,\n  spreadsheet_name: spreadsheetName,\n  spreadsheet_url: spreadsheetUrl,\n  sheet_name: sheet.properties?.title,\n  sheet_id: sheet.properties?.sheetId,\n  sheet_index: sheet.properties?.index\n}));\n\nreturn outputData;"
       },
-      "id": "d4e5f6a7-b8c9-0d1e-2f3a-b4c5d6e7f8a9",
-      "name": "Prepare Sheet Data",
+      "id": "c3d4e5f6-a7b8-9c0d-1e2f-a3b4c5d6e7f8",
+      "name": "Parse Sheet Names",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [1150, 300]
@@ -51,23 +57,31 @@
     {
       "parameters": {
         "authentication": "oAuth2",
-        "resource": "spreadsheet",
-        "operation": "read",
-        "documentId": "={{ $json.spreadsheet_id }}",
-        "sheetName": "={{ $json.sheet_name }}",
+        "requestMethod": "GET",
+        "url": "=https://sheets.googleapis.com/v4/spreadsheets/{{ $json.spreadsheet_id }}/values/{{ encodeURIComponent($json.sheet_name) }}",
         "options": {
-          "returnAllData": true
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
         }
       },
       "id": "e5f6a7b8-c9d0-1e2f-3a4b-c5d6e7f8a9b0",
-      "name": "Read Each Sheet",
-      "type": "n8n-nodes-base.googleSheets",
+      "name": "Read Each Sheet (API GET - READ ONLY)",
+      "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4,
-      "position": [1450, 300]
+      "position": [1450, 300],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "1",
+          "name": "Google Sheets account (readonly scope)"
+        }
+      }
     },
     {
       "parameters": {
-        "jsCode": "// CSVフォーマットに変換\nconst sheetName = $input.first().json.sheet_name;\nconst data = $input.all().map(item => item.json);\n\nif (data.length === 0) {\n  return {\n    json: {\n      sheet_name: sheetName,\n      csv_content: '',\n      filename: `${sheetName}.csv`\n    }\n  };\n}\n\n// ヘッダー行を作成\nconst headers = Object.keys(data[0]);\nconst csvRows = [];\n\n// ヘッダー\ncsvRows.push(headers.map(h => `\"${h}\"`).join(','));\n\n// データ行\ndata.forEach(row => {\n  const values = headers.map(header => {\n    const value = row[header] !== null && row[header] !== undefined ? String(row[header]) : '';\n    // CSVエスケープ処理\n    return `\"${value.replace(/\"/g, '\"\"')}\"`;\n  });\n  csvRows.push(values.join(','));\n});\n\nconst csvContent = csvRows.join('\\n');\n\nreturn {\n  json: {\n    sheet_name: sheetName,\n    csv_content: csvContent,\n    filename: `${sheetName}.csv`,\n    row_count: data.length\n  }\n};"
+        "jsCode": "// APIレスポンスからCSVフォーマットに変換\nconst sheetName = $node[\"Parse Sheet Names\"].json.sheet_name;\nconst response = $input.first().json;\nconst values = response.values || [];\n\nif (values.length === 0) {\n  return {\n    json: {\n      sheet_name: sheetName,\n      csv_content: '',\n      filename: `${sheetName}.csv`,\n      row_count: 0\n    }\n  };\n}\n\n// CSVフォーマットに変換\nconst csvRows = values.map(row => {\n  return row.map(cell => {\n    const value = cell !== null && cell !== undefined ? String(cell) : '';\n    // CSVエスケープ処理（ダブルクォートとカンマを含む値を処理）\n    if (value.includes(',') || value.includes('\"') || value.includes('\\n')) {\n      return `\"${value.replace(/\"/g, '\"\"')}\"`;\n    }\n    return value;\n  }).join(',');\n});\n\nconst csvContent = csvRows.join('\\n');\n\nreturn {\n  json: {\n    sheet_name: sheetName,\n    csv_content: csvContent,\n    filename: `${sheetName}.csv`,\n    row_count: values.length - 1, // ヘッダー行を除く\n    spreadsheet_id: $node[\"Parse Sheet Names\"].json.spreadsheet_id,\n    spreadsheet_name: $node[\"Parse Sheet Names\"].json.spreadsheet_name,\n    spreadsheet_url: $node[\"Parse Sheet Names\"].json.spreadsheet_url\n  }\n};"
       },
       "id": "f6a7b8c9-d0e1-2f3a-4b5c-d6e7f8a9b0c1",
       "name": "Convert to CSV",
@@ -78,7 +92,7 @@
     {
       "parameters": {
         "mode": "combine",
-        "combinationMode": "multiplex",
+        "combinationMode": "mergeByPosition",
         "options": {}
       },
       "id": "a7b8c9d0-e1f2-3a4b-5c6d-e7f8a9b0c1d2",
@@ -89,7 +103,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// 全CSVデータを集約\nconst allItems = $input.all();\nconst csvFiles = [];\nlet totalRows = 0;\n\nallItems.forEach(item => {\n  if (item.json.csv_content) {\n    csvFiles.push({\n      filename: item.json.filename,\n      content: item.json.csv_content,\n      sheet_name: item.json.sheet_name,\n      row_count: item.json.row_count || 0\n    });\n    totalRows += item.json.row_count || 0;\n  }\n});\n\n// スプレッドシート情報を取得（最初のアイテムから）\nconst firstItem = allItems[0].json;\nconst spreadsheetUrl = firstItem.spreadsheet_url || '';\nconst spreadsheetName = firstItem.spreadsheet_name || 'Unknown Spreadsheet';\n\nreturn {\n  json: {\n    csv_files: csvFiles,\n    spreadsheet_url: spreadsheetUrl,\n    spreadsheet_name: spreadsheetName,\n    total_sheets: csvFiles.length,\n    total_rows: totalRows\n  }\n};"
+        "jsCode": "// 全CSVデータを集約\nconst allItems = $input.all();\nconst csvFiles = [];\nlet totalRows = 0;\nlet spreadsheetUrl = '';\nlet spreadsheetName = '';\n\nallItems.forEach(item => {\n  if (item.json.csv_content !== undefined) {\n    csvFiles.push({\n      filename: item.json.filename,\n      content: item.json.csv_content,\n      sheet_name: item.json.sheet_name,\n      row_count: item.json.row_count || 0\n    });\n    totalRows += item.json.row_count || 0;\n    spreadsheetUrl = item.json.spreadsheet_url || spreadsheetUrl;\n    spreadsheetName = item.json.spreadsheet_name || spreadsheetName;\n  }\n});\n\nreturn {\n  json: {\n    csv_files: csvFiles,\n    spreadsheet_url: spreadsheetUrl,\n    spreadsheet_name: spreadsheetName,\n    total_sheets: csvFiles.length,\n    total_rows: totalRows\n  }\n};"
       },
       "id": "b8c9d0e1-f2a3-4b5c-6d7e-f8a9b0c1d2e3",
       "name": "Prepare GitHub Issue Data",
@@ -105,7 +119,7 @@
         "owner": "Wonderplanet",
         "repository": "glow-brain",
         "title": "=[データ更新] {{ $json.spreadsheet_name }}",
-        "body": "=## スプレッドシートデータのCSV変換完了\n\n**スプレッドシート**: [{{ $json.spreadsheet_name }}]({{ $json.spreadsheet_url }})\n**変換日時**: {{ $now.toISO() }}\n**シート数**: {{ $json.total_sheets }}\n**総行数**: {{ $json.total_rows }}\n\n### 変換されたCSVファイル\n\n{{ $json.csv_files.map(f => `- \\`${f.filename}\\` (${f.row_count}行)`).join('\\n') }}\n\n---\nこのissueには、各シートのCSVファイルがコメントとして添付されます。",
+        "body": "=## スプレッドシートデータのCSV変換完了\n\n**スプレッドシート**: [{{ $json.spreadsheet_name }}]({{ $json.spreadsheet_url }})\n**変換日時**: {{ $now.toISO() }}\n**シート数**: {{ $json.total_sheets }}\n**総データ行数**: {{ $json.total_rows }}\n\n### 変換されたCSVファイル\n\n{{ $json.csv_files.map(f => `- \\`${f.filename}\\` (${f.row_count}行)`).join('\\n') }}\n\n---\n各シートのCSVファイルは、このissueのコメントとして順次添付されます。\n\n**注意**: このワークフローは**完全に読み取り専用**です。元のスプレッドシートは一切変更されません。",
         "labels": "data-update,automated",
         "additionalFields": {}
       },
@@ -117,49 +131,34 @@
     },
     {
       "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "issue_number",
-              "name": "issue_number",
-              "value": "={{ $json.number }}",
-              "type": "number"
-            },
-            {
-              "id": "csv_files",
-              "name": "csv_files",
-              "value": "={{ $json.csv_files }}",
-              "type": "array"
-            }
-          ]
-        },
-        "options": {}
+        "jsCode": "// Issue番号とCSVファイル情報を次のノードに渡す\nconst issueNumber = $input.first().json.number;\nconst csvFiles = $node[\"Prepare GitHub Issue Data\"].json.csv_files;\n\nreturn {\n  json: {\n    issue_number: issueNumber,\n    csv_files: csvFiles\n  }\n};"
       },
       "id": "d0e1f2a3-b4c5-6d7e-8f9a-b0c1d2e3f4a5",
       "name": "Extract Issue Number",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.3,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
       "position": [2950, 300]
     },
     {
       "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "csv_file",
-              "name": "csv_file",
-              "value": "={{ $json }}",
-              "type": "object"
-            }
-          ]
-        },
+        "batchSize": 1,
         "options": {}
       },
       "id": "e1f2a3b4-c5d6-7e8f-9a0b-c1d2e3f4a5b6",
-      "name": "Split CSV Files",
+      "name": "Loop Over CSV Files",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [3250, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 現在のCSVファイル情報を取得\nconst issueNumber = $node[\"Extract Issue Number\"].json.issue_number;\nconst csvFiles = $node[\"Extract Issue Number\"].json.csv_files;\nconst batchIndex = $node[\"Loop Over CSV Files\"].context.currentRunIndex;\nconst currentFile = csvFiles[batchIndex];\n\nreturn {\n  json: {\n    issue_number: issueNumber,\n    csv_file: currentFile\n  }\n};"
+      },
+      "id": "f1a2b3c4-d5e6-7f8a-9b0c-d1e2f3a4b5c6",
+      "name": "Get Current CSV File",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [3550, 300]
     },
     {
       "parameters": {
@@ -169,13 +168,13 @@
         "owner": "Wonderplanet",
         "repository": "glow-brain",
         "issueNumber": "={{ $json.issue_number }}",
-        "body": "=### 📄 {{ $json.csv_file.filename }}\n\n**シート名**: {{ $json.csv_file.sheet_name }}\n**行数**: {{ $json.csv_file.row_count }}\n\n```csv\n{{ $json.csv_file.content }}\n```"
+        "body": "=### 📄 {{ $json.csv_file.filename }}\n\n**シート名**: {{ $json.csv_file.sheet_name }}\n**データ行数**: {{ $json.csv_file.row_count }}\n\n```csv\n{{ $json.csv_file.content }}\n```"
       },
       "id": "f2a3b4c5-d6e7-8f9a-0b1c-d2e3f4a5b6c7",
       "name": "Add CSV as Comment",
       "type": "n8n-nodes-base.github",
       "typeVersion": 1,
-      "position": [3550, 300]
+      "position": [3850, 300]
     },
     {
       "parameters": {
@@ -223,47 +222,47 @@
       "main": [
         [
           {
-            "node": "Get Spreadsheet Info",
+            "node": "Extract Spreadsheet ID",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Get Spreadsheet Info": {
+    "Extract Spreadsheet ID": {
       "main": [
         [
           {
-            "node": "Get All Sheet Names",
+            "node": "Get Spreadsheet Metadata (API GET - READ ONLY)",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Get All Sheet Names": {
+    "Get Spreadsheet Metadata (API GET - READ ONLY)": {
       "main": [
         [
           {
-            "node": "Prepare Sheet Data",
+            "node": "Parse Sheet Names",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Prepare Sheet Data": {
+    "Parse Sheet Names": {
       "main": [
         [
           {
-            "node": "Read Each Sheet",
+            "node": "Read Each Sheet (API GET - READ ONLY)",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Read Each Sheet": {
+    "Read Each Sheet (API GET - READ ONLY)": {
       "main": [
         [
           {
@@ -322,14 +321,25 @@
       "main": [
         [
           {
-            "node": "Split CSV Files",
+            "node": "Loop Over CSV Files",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Split CSV Files": {
+    "Loop Over CSV Files": {
+      "main": [
+        [
+          {
+            "node": "Get Current CSV File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Current CSV File": {
       "main": [
         [
           {
@@ -344,7 +354,7 @@
       "main": [
         [
           {
-            "node": "Split CSV Files",
+            "node": "Loop Over CSV Files",
             "type": "main",
             "index": 0
           }
@@ -362,7 +372,7 @@
       "createdAt": "2026-01-06T00:00:00.000Z",
       "updatedAt": "2026-01-06T00:00:00.000Z",
       "id": "1",
-      "name": "google-sheets"
+      "name": "google-sheets-readonly"
     },
     {
       "createdAt": "2026-01-06T00:00:00.000Z",
@@ -373,5 +383,5 @@
   ],
   "triggerCount": 0,
   "updatedAt": "2026-01-06T00:00:00.000Z",
-  "versionId": "1"
+  "versionId": "2"
 }
