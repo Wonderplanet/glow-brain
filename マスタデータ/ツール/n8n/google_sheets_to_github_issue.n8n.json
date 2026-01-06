@@ -71,7 +71,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// HTTPレスポンスと元のシート情報をマージ\nconst apiResponse = $input.first().json;\nconst sheetInfo = $node[\"Parse Sheet Names\"].json;\n\nreturn {\n  json: {\n    values: apiResponse.values || [],\n    sheet_name: sheetInfo.sheet_name,\n    spreadsheet_id: sheetInfo.spreadsheet_id,\n    spreadsheet_name: sheetInfo.spreadsheet_name,\n    spreadsheet_url: sheetInfo.spreadsheet_url\n  }\n};"
+        "jsCode": "// n8nは各入力アイテムに対してこのコードを自動実行する\n// $input.item で現在処理中のアイテムを取得\nconst currentItem = $input.item.json;\nconst itemIndex = $item(0).$itemIndex;\n\n// 対応するシート情報を取得（同じインデックス）\n// ※ $node[\"Parse Sheet Names\"].jsonは最初のアイテムのみ取得するため、\n//    インデックスベースで取得する方法を使用\nconst sheetInfoNode = $('Parse Sheet Names').item.json;\n\nreturn {\n  json: {\n    values: currentItem.values || [],\n    sheet_name: sheetInfoNode.sheet_name,\n    spreadsheet_id: sheetInfoNode.spreadsheet_id,\n    spreadsheet_name: sheetInfoNode.spreadsheet_name,\n    spreadsheet_url: sheetInfoNode.spreadsheet_url\n  }\n};"
       },
       "id": "e6f7a8b9-c0d1-2e3f-4a5b-c6d7e8f9a0b1",
       "name": "Merge Sheet Info with Data",
