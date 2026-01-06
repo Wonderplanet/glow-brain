@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# glow-brain セットアップ・更新スクリプト
+# glow-brain-2 セットアップ・更新スクリプト
 # バージョンごとの3つのリポジトリ（glow-server, glow-masterdata, glow-client）を管理します
 
 set -euo pipefail
@@ -21,11 +21,6 @@ readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 readonly CONFIG_FILE="${PROJECT_ROOT}/config/versions.json"
 readonly PROJECTS_DIR="${PROJECT_ROOT}/projects"
-
-# ====================================
-# グローバル変数
-# ====================================
-USE_GH_CLONE=false
 
 # ====================================
 # ログ出力関数
@@ -62,18 +57,6 @@ check_prerequisites() {
     if [ ! -f "${CONFIG_FILE}" ]; then
         error "設定ファイルが見つかりません: ${CONFIG_FILE}"
         exit 1
-    fi
-
-    # --use-gh が指定されている場合は gh コマンドの存在確認
-    if [ "${USE_GH_CLONE}" = true ]; then
-        if ! command -v gh &> /dev/null; then
-            error "gh コマンドが見つかりません"
-            error "インストール方法:"
-            error "  macOS: brew install gh"
-            error "  Ubuntu/Debian: https://github.com/cli/cli/blob/trunk/docs/install_linux.md"
-            exit 1
-        fi
-        info "gh コマンドを使用してクローンします"
     fi
 }
 
@@ -142,35 +125,14 @@ has_uncommitted_changes() {
 }
 
 # ====================================
-# URL から owner/repo 形式に変換
+# リポジトリクローン関数
 # ====================================
-convert_url_to_repo_spec() {
-    local url="$1"
-
-    # git@github.com:owner/repo.git 形式
-    if [[ "${url}" =~ ^git@github\.com:(.+/.+)(\.git)?$ ]]; then
-        echo "${BASH_REMATCH[1]%.git}"
-        return
-    fi
-
-    # https://github.com/owner/repo.git 形式
-    if [[ "${url}" =~ ^https://github\.com/(.+/.+)(\.git)?$ ]]; then
-        echo "${BASH_REMATCH[1]%.git}"
-        return
-    fi
-
-    # その他の形式はエラー
-    error "GitHub URL の変換に失敗しました: ${url}"
-    exit 1
-}
-
-# ====================================
-# リポジトリクローン関数（git clone版）
-# ====================================
-clone_repository_with_git() {
+clone_repository() {
     local repo_name="$1"
     local branch="$2"
     local repo_url="$3"
+
+    info "${repo_name} をクローンしています（ブランチ: ${branch}）..."
 
     if [ "${repo_name}" = "glow-client" ]; then
         # glow-client は軽量化クローン
@@ -195,58 +157,6 @@ clone_repository_with_git() {
             "${PROJECTS_DIR}/${repo_name}"
 
         success "${repo_name} のクローンが完了しました"
-    fi
-}
-
-# ====================================
-# リポジトリクローン関数（gh repo clone版）
-# ====================================
-clone_repository_with_gh() {
-    local repo_name="$1"
-    local branch="$2"
-    local repo_url="$3"
-
-    local repo_spec
-    repo_spec=$(convert_url_to_repo_spec "${repo_url}")
-
-    if [ "${repo_name}" = "glow-client" ]; then
-        # glow-client は軽量化クローン
-        # gh repo clone では sparse-checkout を事前に設定できないため
-        # クローン後に設定を行う
-        GIT_LFS_SKIP_SMUDGE=1 gh repo clone "${repo_spec}" "${PROJECTS_DIR}/${repo_name}" -- \
-            --depth 1 \
-            --filter=blob:none \
-            --sparse \
-            --branch "${branch}"
-
-        cd "${PROJECTS_DIR}/${repo_name}"
-        git sparse-checkout init --cone
-        git sparse-checkout set Assets/GLOW/Scripts Assets/Framework/Scripts
-
-        success "${repo_name} のクローンが完了しました（軽量化版）"
-    else
-        # glow-server と glow-masterdata は通常クローン
-        gh repo clone "${repo_spec}" "${PROJECTS_DIR}/${repo_name}" -- \
-            --branch "${branch}"
-
-        success "${repo_name} のクローンが完了しました"
-    fi
-}
-
-# ====================================
-# リポジトリクローン関数
-# ====================================
-clone_repository() {
-    local repo_name="$1"
-    local branch="$2"
-    local repo_url="$3"
-
-    info "${repo_name} をクローンしています（ブランチ: ${branch}）..."
-
-    if [ "${USE_GH_CLONE}" = true ]; then
-        clone_repository_with_gh "${repo_name}" "${branch}" "${repo_url}"
-    else
-        clone_repository_with_git "${repo_name}" "${branch}" "${repo_url}"
     fi
 }
 
@@ -420,62 +330,9 @@ show_current_configuration() {
 }
 
 # ====================================
-# 使用方法の表示
-# ====================================
-show_usage() {
-    cat <<EOF
-使用方法: $0 [OPTIONS] [VERSION]
-
-OPTIONS:
-    --use-gh        gh コマンドを使用してクローンします（GitHub Copilot Agents環境向け）
-    -h, --help      このヘルプメッセージを表示します
-
-VERSION:
-    切り替えるバージョンを指定します（省略時は current_version を使用）
-
-例:
-    $0                    # current_version を使用して更新
-    $0 1.5.0             # バージョン 1.5.0 に切り替え
-    $0 --use-gh          # gh コマンドを使用して current_version で更新
-    $0 --use-gh 1.5.0    # gh コマンドを使用してバージョン 1.5.0 に切り替え
-EOF
-}
-
-# ====================================
 # メイン処理
 # ====================================
 main() {
-    # 引数解析
-    local version=""
-
-    while [[ $# -gt 0 ]]; do
-        case "$1" in
-            --use-gh)
-                USE_GH_CLONE=true
-                shift
-                ;;
-            -h|--help)
-                show_usage
-                exit 0
-                ;;
-            -*)
-                error "不明なオプション: $1"
-                show_usage
-                exit 1
-                ;;
-            *)
-                if [ -z "${version}" ]; then
-                    version="$1"
-                else
-                    error "バージョンは1つのみ指定できます"
-                    show_usage
-                    exit 1
-                fi
-                shift
-                ;;
-        esac
-    done
-
     info "glow-brain-2 セットアップスクリプトを開始します"
     echo ""
 
@@ -483,6 +340,8 @@ main() {
     check_prerequisites
 
     # バージョン決定
+    local version="${1:-}"
+
     if [ -z "${version}" ]; then
         version=$(get_current_version)
         info "引数が指定されていないため、current_version (${version}) を使用します"

@@ -55,38 +55,16 @@ glow-brain/
 
 # 特定バージョンに切り替え
 ./scripts/setup.sh 1.5.0
-
-# GitHub Copilot Agents環境での実行（gh コマンドを使用）
-./scripts/setup.sh --use-gh
-./scripts/setup.sh --use-gh 1.5.0
 ```
 
 **実行される処理：**
 1. `jq` の前提条件をチェック（macOS: `brew install jq`）
-2. `--use-gh` 指定時は `gh` コマンドの存在を確認
-3. `config/versions.json` にバージョンが存在するか検証
-4. 各リポジトリに対して：
+2. `config/versions.json` にバージョンが存在するか検証
+3. 各リポジトリに対して：
    - 存在しない場合はクローン（クライアント専用最適化を適用）
    - 存在する場合は対象ブランチに更新（分岐している場合は強制リセット）
    - 保護用Gitフックをインストール
-5. 設定ファイルの `current_version` を更新
-
-### GitHub Copilot Agents環境での実行
-
-**GitHub Copilot Tasks や Issue Agent から実行する場合は `--use-gh` オプションを使用してください。**
-
-```bash
-./scripts/setup.sh --use-gh
-```
-
-**理由：**
-- GitHub Copilot Agents環境では通常の`git clone`では認証が通らない場合がある
-- `gh repo clone`を使用することでGitHub CLI経由で認証が自動処理される
-- SSH鍵やHTTPS認証情報の設定が不要
-
-**動作の違い：**
-- 通常モード：`git clone git@github.com:Wonderplanet/glow-server.git`
-- `--use-gh`モード：`gh repo clone Wonderplanet/glow-server`（URLを自動変換）
+4. 設定ファイルの `current_version` を更新
 
 ### 誤った変更からのリカバリ
 
@@ -120,33 +98,14 @@ git clean -fd
 - カラーコード付きログ関数（`info`、`success`、`error`、`warning`）
 - パス用の `readonly` 変数（`PROJECT_ROOT`、`CONFIG_FILE`）
 - nullチェック付きの防御的な `jq` 使用
-- `--use-gh` オプションによるクローン方法の切り替え（`git clone` vs `gh repo clone`）
-
-### クローン方法の選択ロジック
-
-スクリプト内でクローン方法を動的に切り替え（239-251行目）：
-```bash
-clone_repository() {
-    if [ "${USE_GH_CLONE}" = true ]; then
-        clone_repository_with_gh "${repo_name}" "${branch}" "${repo_url}"
-    else
-        clone_repository_with_git "${repo_name}" "${branch}" "${repo_url}"
-    fi
-}
-```
-
-**URL変換ロジック**（147-165行目）：
-- `git@github.com:owner/repo.git` → `owner/repo`
-- `https://github.com/owner/repo.git` → `owner/repo`
-- これにより既存の`config/versions.json`を変更せずに`gh`コマンドに対応
 
 ### Force-Push の処理
 
-更新ロジック（294-299行目、320-325行目）は上流の force-push を処理します：
+更新ロジック（[setup.sh:205-228](../scripts/setup.sh#L205-L228)）は上流の force-push を処理します：
 ```bash
-if ! git merge --ff-only FETCH_HEAD 2>/dev/null; then
+if ! git merge --ff-only "origin/${target_branch}" 2>/dev/null; then
     warning "履歴が分岐しています。リモートに強制的に合わせます..."
-    git reset --hard FETCH_HEAD
+    git reset --hard "origin/${target_branch}"
 fi
 ```
 これは読み取り専用モードでの意図的な動作で、常にリモート状態に合わせます。
