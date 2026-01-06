@@ -1,4 +1,4 @@
 memo
 TABLE,OprGachaUpper,OprGachaUpper,OprGachaUpper,OprGachaUpper,OprGachaUpper
 ENABLE,id,upper_group,upper_type,count,release_key
-e,gacha_kim_upper_001,Pickup_kim_001,MaxRarityPrize,100,1
+e,gacha_kim_upper_001,Pickup_kim_001,MaxRarity,100,1

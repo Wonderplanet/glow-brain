@@ -1,4 +1,4 @@
 memo
-TABLE,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProductI18n,OprProductI18n
-ENABLE,id,mst_store_product_id,product_type,purchasable_count,paid_amount,display_priority,start_date,end_date,release_key,asset_key.ja,name.ja
-e,product_kim_pack_001,35,NormalPack,1,3000,50,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,product_kim_pack_001,いいジャン祭パック
+TABLE,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProductI18n
+ENABLE,id,mst_store_product_id,product_type,purchasable_count,paid_amount,display_priority,start_date,end_date,release_key,asset_key.ja
+e,product_kim_pack_001,35,pack,1,3000,50,"2026-02-16 15:00:00","2026-03-16 10:59:00",1,product_kim_pack_001

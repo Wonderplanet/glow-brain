@@ -1,8 +1,8 @@
 memo
 TABLE,MstExchangeReward,MstExchangeReward,MstExchangeReward,MstExchangeReward,MstExchangeReward,MstExchangeReward
 ENABLE,id,mst_exchange_lineup_id,resource_type,resource_id,resource_amount,release_key
-e,exchange_kim_reward_01,exchange_kim_lineup_01,Gem,,30,1
-e,exchange_kim_reward_02,exchange_kim_lineup_02,Gem,,50,1
+e,exchange_kim_reward_01,exchange_kim_lineup_01,FreeDiamond,,30,1
+e,exchange_kim_reward_02,exchange_kim_lineup_02,FreeDiamond,,50,1
 e,exchange_kim_reward_03,exchange_kim_lineup_03,Item,piece_kim_00101,1,1
 e,exchange_kim_reward_04,exchange_kim_lineup_04,Item,piece_kim_00101,2,1
 e,exchange_kim_reward_05,exchange_kim_lineup_05,Item,piece_kim_00201,1,1
@@ -13,8 +13,8 @@ e,exchange_kim_reward_09,exchange_kim_lineup_09,Item,emblem_event_kim_00002,1,1
 e,exchange_kim_reward_10,exchange_kim_lineup_10,Item,emblem_event_kim_00003,1,1
 e,exchange_kim_reward_11,exchange_kim_lineup_11,Item,emblem_event_kim_00004,1,1
 e,exchange_kim_reward_12,exchange_kim_lineup_12,Item,emblem_event_kim_00005,1,1
-e,exchange_kim_reward_13,exchange_kim_lineup_13,Ticket,ticket_glo_00001,1,1
-e,exchange_kim_reward_14,exchange_kim_lineup_14,Ticket,ticket_glo_00003,1,1
+e,exchange_kim_reward_13,exchange_kim_lineup_13,Item,ticket_glo_00001,1,1
+e,exchange_kim_reward_14,exchange_kim_lineup_14,Item,ticket_glo_00003,1,1
 e,exchange_kim_reward_15,exchange_kim_lineup_15,Item,item_glo_00001,1,1
 e,exchange_kim_reward_16,exchange_kim_lineup_16,Item,item_glo_00002,1,1
 e,exchange_kim_reward_17,exchange_kim_lineup_17,Item,item_glo_00004,1,1
@@ -23,4 +23,4 @@ e,exchange_kim_reward_19,exchange_kim_lineup_19,Item,item_glo_00007,50,1
 e,exchange_kim_reward_20,exchange_kim_lineup_20,Item,item_glo_00010,50,1
 e,exchange_kim_reward_21,exchange_kim_lineup_21,Item,item_glo_00009,50,1
 e,exchange_kim_reward_22,exchange_kim_lineup_22,Item,item_glo_00008,50,1
-e,exchange_kim_reward_23,exchange_kim_lineup_23,Money,,100,1
+e,exchange_kim_reward_23,exchange_kim_lineup_23,Coin,,100,1
