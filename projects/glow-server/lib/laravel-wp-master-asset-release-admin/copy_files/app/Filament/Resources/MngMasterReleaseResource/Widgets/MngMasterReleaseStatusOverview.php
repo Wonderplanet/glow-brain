@@ -1,0 +1,9 @@
+<?php
+
+namespace App\Filament\Resources\MngMasterReleaseResource\Widgets;
+
+use WonderPlanet\Domain\MasterAssetReleaseAdmin\Filament\Resources\MngMasterReleaseResource\Widgets\MngMasterReleaseStatusOverview as BaseMngMasterReleaseStatusOverview;
+
+class MngMasterReleaseStatusOverview extends BaseMngMasterReleaseStatusOverview
+{
+}

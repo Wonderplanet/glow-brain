@@ -1,0 +1,5 @@
+init_config:
+
+instances:
+  - host: DD_REDIS_HOST
+    port: DD_REDIS_PORT

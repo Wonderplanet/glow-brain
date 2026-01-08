@@ -1,0 +1,7 @@
+namespace GLOW.Scenes.#SCRIPTNAME#.Domain
+{
+    public class #SCRIPTNAME#UseCase
+    {
+
+    }
+}

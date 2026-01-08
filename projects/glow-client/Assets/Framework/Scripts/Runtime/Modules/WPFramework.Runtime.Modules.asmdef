@@ -1,0 +1,33 @@
+{
+    "name": "WPFramework.Runtime.Modules",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ed9e5d88e44ea44e1bf3a03094ef8cec",
+        "GUID:2a2deac7912b046ef9de4b6eb8f2a9a8",
+        "GUID:cf1dbbb91341f40aba17ac5338b60766",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:84651a3751eca9349aac36a66bba901b",
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5",
+        "GUID:5c01796d064528144a599661eaab93a6",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b9a4756db390946ff9e28aa162f1977e",
+        "GUID:95866a960e0d146fc9b5f36843da00d0",
+        "GUID:35ed310df69db498b8cbb8b3b71543f4",
+        "GUID:e38b19fb6b34a4c3883d5471e99a0e2d",
+        "GUID:48a2c9a36ae24406b8e119abf35efd59",
+        "GUID:68765d262e2128e4ab49c983f3411946",
+        "GUID:ad480d5c001ce44088619944acf9ab28",
+        "GUID:420a50b249f61431daf91107ce3f2b93",
+        "GUID:c631f4fa26bda4045819d4f02d64801e",
+        "GUID:b8456e6ba4b7e478e9290abd0fa7f82a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
