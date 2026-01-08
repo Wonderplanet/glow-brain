@@ -24,8 +24,8 @@ argument-hint: 要件の説明
 **入力**: 要件の説明（例: 「新春ガチャを追加。期間は2026-01-01〜01-31。10連で確定報酬あり」）
 
 **出力**:
-- `マスタデータ/施策/[施策名]/[ModelName].csv` - 生成されたマスタデータ
-- `マスタデータ/施策/[施策名]/REPORT.md` - 生成レポート
+- `マスタデータ/運用仕様書/[施策名]/[ModelName].csv` - 生成されたマスタデータ
+- `マスタデータ/運用仕様書/[施策名]/REPORT.md` - 生成レポート
 
 ## ワークフロー
 
@@ -66,7 +66,7 @@ Skill(skill: "masterdata-schema-inspector", args: "<ModelName>")
 
 **テンプレートファイルのコピー**:
 ```bash
-cp projects/glow-masterdata/sheet_schema/[ModelName].csv マスタデータ/施策/[施策名]/[ModelName].csv
+cp projects/glow-masterdata/sheet_schema/[ModelName].csv マスタデータ/運用仕様書/[施策名]/[ModelName].csv
 ```
 
 テンプレートファイルは3行ヘッダー構造です:
@@ -124,7 +124,7 @@ Skill(skill: "masterdata-validator", args: "<csv_file_path> <ModelName>")
 
 **全てのマスタデータ生成後に** REPORT.md を作成します。
 
-ファイルパス: `マスタデータ/施策/[施策名]/REPORT.md`
+ファイルパス: `マスタデータ/運用仕様書/[施策名]/REPORT.md`
 
 レポートテンプレートは [references/report-template.md](references/report-template.md) を参照してください。
 

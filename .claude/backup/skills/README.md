@@ -35,7 +35,7 @@ Skill(skill: "masterdata-schema-inspector", args: "OprGacha")
 
 **使用例**:
 ```
-Skill(skill: "masterdata-validator", args: "マスタデータ/施策/新春ガチャ/OprGacha.csv OprGacha")
+Skill(skill: "masterdata-validator", args: "マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv OprGacha")
 ```
 
 ---
@@ -52,7 +52,7 @@ Skill(skill: "masterdata-validator", args: "マスタデータ/施策/新春ガ�
 
 **使用例**:
 ```
-Skill(skill: "masterdata-requirement-analyzer", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-requirement-analyzer", args: "マスタデータ/運用仕様書/新春ガチャ")
 ```
 
 ---
@@ -88,7 +88,7 @@ Skill(skill: "masterdata-generator", args: "新春限定ガチャを追加。期
 
 **使用例**:
 ```
-Skill(skill: "masterdata-full-workflow", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-full-workflow", args: "マスタデータ/運用仕様書/新春ガチャ")
 ```
 
 ---
@@ -123,7 +123,7 @@ Skill(skill: "masterdata-full-workflow", args: "マスタデータ/施策/新春
 施策ディレクトリに要件フォルダを準備済みの場合:
 
 ```
-Skill(skill: "masterdata-full-workflow", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-full-workflow", args: "マスタデータ/運用仕様書/新春ガチャ")
 ```
 
 **出力**:
@@ -150,7 +150,7 @@ Skill(skill: "masterdata-generator", args: "新春限定ガチャを追加...")
 #### 2-3. 検証のみ
 
 ```
-Skill(skill: "masterdata-validator", args: "マスタデータ/施策/新春ガチャ/OprGacha.csv OprGacha")
+Skill(skill: "masterdata-validator", args: "マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv OprGacha")
 ```
 
 ---
@@ -175,7 +175,7 @@ bash .claude/skills/masterdata-schema-inspector/scripts/extract_schema.sh opr_ga
 
 ```bash
 bash .claude/skills/masterdata-validator/scripts/validate_csv.sh \
-    マスタデータ/施策/新春ガチャ/OprGacha.csv \
+    マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv \
     OprGacha
 # 出力: JSON形式の検証結果
 ```
@@ -213,7 +213,7 @@ bash .claude/skills/masterdata-validator/scripts/validate_csv.sh \
 
 ### 参照専用リポジトリの尊重
 - `projects/` 配下は参照のみ
-- 生成データは `マスタデータ/施策/[施策名]/` に配置
+- 生成データは `マスタデータ/運用仕様書/[施策名]/` に配置
 
 ---
 

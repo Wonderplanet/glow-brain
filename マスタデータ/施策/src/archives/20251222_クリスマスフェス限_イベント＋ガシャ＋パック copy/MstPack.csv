@@ -1,6 +1,0 @@
-memo
-TABLE,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPackI18n
-ENABLE,id,product_sub_id,discount_rate,is_first_time_free,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,cost_amount,is_recommend,asset_key,pack_decoration,release_key,name.ja
-e,Xmas_item_pack_1,xmas_2025_pack_1,73,0,__NULL__,0,,1,Normal,0,Cash,0,1,xmas_pack_a,__NULL__,1,【お一人様1回まで購入可】クリスマス お得パックA
-e,Xmas_item_pack_2,xmas_2025_pack_2,27,0,__NULL__,0,,1,Normal,0,Cash,0,1,xmas_pack_b,__NULL__,1,【お一人様1回まで購入可】クリスマス お得パックB
-e,Xmas_item_pack_3,xmas_2025_pack_3,17,0,__NULL__,0,,1,Normal,0,Cash,0,1,xmas_pack_c,__NULL__,1,【お一人様1回まで購入可】クリスマス お得パックC

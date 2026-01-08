@@ -1,5 +1,0 @@
-ENABLE,id,type,group_type,rarity,asset_key,effect_value,sort_order,start_date,end_date,release_key,item_type,mst_series_id,destination_opr_product_id
-e,piece_sur_00701,CharacterFragment,Etc,SR,piece_sur_00701,,701,"2025-12-22 15:00:00","2030-01-01 00:00:00",1,CharacterFragment,4,
-e,piece_sur_00801,CharacterFragment,Etc,SR,piece_sur_00801,,801,"2025-12-22 15:00:00","2030-01-01 00:00:00",1,CharacterFragment,4,
-e,memory_chara_sur_00701,RankUpMaterial,Etc,SR,memory_chara_sur_00701,chara_sur_00701,701,"2025-12-22 15:00:00","2030-01-01 00:00:00",1,RankUpMaterial,4,
-e,memory_chara_sur_00801,RankUpMaterial,Etc,SR,memory_chara_sur_00801,chara_sur_00801,801,"2025-12-22 15:00:00","2030-01-01 00:00:00",1,RankUpMaterial,4,

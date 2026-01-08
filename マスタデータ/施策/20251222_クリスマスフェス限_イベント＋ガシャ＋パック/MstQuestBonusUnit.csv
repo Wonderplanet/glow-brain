@@ -1,4 +1,0 @@
-memo,コイン獲得クエストのキャラボーナス設定
-TABLE,MstQuestBonusUnit,MstQuestBonusUnit,MstQuestBonusUnit,MstQuestBonusUnit,MstQuestBonusUnit,MstQuestBonusUnit
-ENABLE,id,mst_quest_id,bonus_rate,mst_unit_id,start_at,end_at
-e,bonus_christmas_coin_00001,coin_quest,30,chara_yuw_00102,"2025-12-22 15:00:00","2026-01-16 10:59:59"

@@ -270,7 +270,7 @@ Skill(skill: "masterdata-schema-inspector", args: "NewModel")
 
 **前提条件**:
 ```
-マスタデータ/施策/新春ガチャ/
+マスタデータ/運用仕様書/新春ガチャ/
 └── 要件/
     ├── 01_概要.html
     ├── 02_ガチャ仕様.html
@@ -279,12 +279,12 @@ Skill(skill: "masterdata-schema-inspector", args: "NewModel")
 
 **実行**:
 ```
-Skill(skill: "masterdata-full-workflow", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-full-workflow", args: "マスタデータ/運用仕様書/新春ガチャ")
 ```
 
 **結果**:
 ```
-マスタデータ/施策/新春ガチャ/
+マスタデータ/運用仕様書/新春ガチャ/
 ├── 要件/
 ├── 要件ファイル構成.md       ← 新規生成
 ├── REPORT.md                ← 新規生成
@@ -306,7 +306,7 @@ Skill(skill: "masterdata-full-workflow", args: "マスタデータ/施策/新春
 
 **ステップ1: 要件分析**
 ```
-Skill(skill: "masterdata-requirement-analyzer", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-requirement-analyzer", args: "マスタデータ/運用仕様書/新春ガチャ")
 ```
 
 → `要件ファイル構成.md`を確認
@@ -373,7 +373,7 @@ Skill(skill: "masterdata-schema-inspector", args: "OprGacha")
 
 **実行**:
 ```
-Skill(skill: "masterdata-validator", args: "マスタデータ/施策/既存施策/OprGacha.csv OprGacha")
+Skill(skill: "masterdata-validator", args: "マスタデータ/運用仕様書/既存施策/OprGacha.csv OprGacha")
 ```
 
 **結果**:
@@ -569,7 +569,7 @@ graph TD
 
 **コマンド1つ**:
 ```
-Skill(skill: "masterdata-full-workflow", args: "マスタデータ/施策/新春ガチャ")
+Skill(skill: "masterdata-full-workflow", args: "マスタデータ/運用仕様書/新春ガチャ")
 ```
 
 ---
@@ -673,7 +673,7 @@ graph TD
 echo "ENABLE,id,name" > OprGacha.csv
 
 # ✅ 正しい: テンプレートをコピー
-cp projects/glow-masterdata/sheet_schema/OprGacha.csv マスタデータ/施策/新春ガチャ/OprGacha.csv
+cp projects/glow-masterdata/sheet_schema/OprGacha.csv マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv
 ```
 
 **理由**:
@@ -750,7 +750,7 @@ Skill(skill: "masterdata-schema-inspector", args: "projects/glow-masterdata/OprG
 **validator**:
 ```
 # ✅ CSVパス + モデル名
-Skill(skill: "masterdata-validator", args: "マスタデータ/施策/新春ガチャ/OprGacha.csv OprGacha")
+Skill(skill: "masterdata-validator", args: "マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv OprGacha")
 
 # ❌ モデル名のみ
 Skill(skill: "masterdata-validator", args: "OprGacha")
@@ -807,13 +807,13 @@ jq '.databases.mst.tables | keys' projects/glow-server/api/database/schema/expor
 **解決方法**:
 ```bash
 # 1. 最新のテンプレートファイルをコピー
-cp projects/glow-masterdata/sheet_schema/OprGacha.csv マスタデータ/施策/新春ガチャ/OprGacha.csv
+cp projects/glow-masterdata/sheet_schema/OprGacha.csv マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv
 
 # 2. データ行のみを既存CSVから移行
 # （ヘッダーはテンプレートのものを使用）
 
 # 3. validatorで再検証
-Skill(skill: "masterdata-validator", args: "マスタデータ/施策/新春ガチャ/OprGacha.csv OprGacha")
+Skill(skill: "masterdata-validator", args: "マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv OprGacha")
 ```
 
 ---
@@ -867,13 +867,13 @@ REPORTに「未作成のマスタデータ」セクションを作成しない�
 **解決方法**:
 ```bash
 # 要件フォルダの存在を確認
-ls マスタデータ/施策/新春ガチャ/要件/
+ls マスタデータ/運用仕様書/新春ガチャ/要件/
 
 # ファイルが存在するか確認
-find マスタデータ/施策/新春ガチャ/要件/ -type f
+find マスタデータ/運用仕様書/新春ガチャ/要件/ -type f
 
 # 要件ファイル構成.mdが生成されているか確認
-cat マスタデータ/施策/新春ガチャ/要件ファイル構成.md
+cat マスタデータ/運用仕様書/新春ガチャ/要件ファイル構成.md
 ```
 
 ---
