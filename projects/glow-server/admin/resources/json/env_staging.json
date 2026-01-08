@@ -1,0 +1,16 @@
+{
+    "environments": [
+        {
+            "env" : "staging",
+            "name": "ステージング環境",
+            "description": "ステージング環境に接続します",
+            "api": "https://api.staging.glow.nappers.jp",
+            "assetCdn": "https://asset.staging.glow.nappers.jp",
+            "MasterCdn": "https://master.staging.glow.nappers.jp",
+            "WebCdn": "https://staging-web.staging.glow.nappers.jp",
+            "AnnouncementCdn": "https://staging-information.staging.glow.nappers.jp",
+            "BannerCdn": "https://banner.staging.glow.nappers.jp",
+            "AgreementCdn": "https://sb-agrmt.channel.or.jp"
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+version: 0.2
+env:
+  variables:
+    DOCKER_BUILDKIT: 1
+  parameter-store:
+    DOCKER_USER: dockerhub-user
+    DOCKER_TOKEN: dockerhub-token
+    AWS_ACCOUNT_ID: account-id
+  secrets-manager:
+    MOMENTO_API_KEY: glow-${INFRA_ENV}-secrets:glow-momento-api-key
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com
+      - PHP_REPOSITORY=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${PJ_NAME}-${INFRA_ENV}-api2-php
+      - NGINX_REPOSITORY=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${PJ_NAME}-${INFRA_ENV}-api-nginx
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_USER} --password-stdin
+      - echo Pulling the Docker images...
+      - docker pull ${PHP_REPOSITORY}:latest-cache || true
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - |
+        docker build \
+          --build-arg MOMENTO_API_KEY="${MOMENTO_API_KEY}" \
+          --build-arg BUILDKIT_INLINE_CACHE=1 \
+          -f docker/envs/ecs/php/Dockerfile \
+          -t ${PHP_REPOSITORY}:latest \
+          -t ${PHP_REPOSITORY}:latest-cache \
+          -t ${PHP_REPOSITORY}:${COMMIT_HASH} \
+          --cache-from ${PHP_REPOSITORY}:latest-cache \
+        .
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker images...
+      - docker push ${PHP_REPOSITORY}:latest
+      - docker push ${PHP_REPOSITORY}:latest-cache
+      - docker push ${PHP_REPOSITORY}:${COMMIT_HASH}
+      - PJ_NAME2=$(echo ${PJ_NAME} | sed "s/\(.*\)/\U\1/")
+      - |
+        sed -i \
+          -e "s;<PHP_IMAGE>;${PHP_REPOSITORY}:${COMMIT_HASH};g" \
+          codebuild/artifacts/imagedefinitions2.json
+      - |
+        sed -i \
+          -e "s;<PHP_IMAGE>;${PHP_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<NGINX_IMAGE>;${NGINX_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<SECRET>;${SECRET};g" \
+          -e "s;<INFRA_ENV>;${INFRA_ENV};g" \
+          -e "s;<PJ_NAME>;${PJ_NAME};g" \
+          -e "s;<PJ_NAME2>;${PJ_NAME2};g" \
+          -e "s;<APP_ENV>;${APP_ENV};g" \
+          -e "s;<AWS_DEFAULT_REGION>;${AWS_DEFAULT_REGION};g" \
+          -e "s;<AWS_ACCOUNT_ID>;${AWS_ACCOUNT_ID};g" \
+          codebuild/artifacts/taskdefinitions2.json
+artifacts:
+    files: 
+        - codebuild/artifacts/*
