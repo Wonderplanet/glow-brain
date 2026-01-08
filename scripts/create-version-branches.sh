@@ -190,6 +190,16 @@ run_setup_for_version() {
     success "setup.sh の実行が完了しました"
 }
 
+remove_git_directories() {
+    info "projects/ 内の .git ディレクトリを削除しています..."
+    info "（サブモジュールではなく通常のファイルとしてコミットするため）"
+
+    # projects/ 内の全ての .git ディレクトリを削除
+    find "${PROJECTS_DIR}" -type d -name ".git" -exec rm -rf {} + 2>/dev/null || true
+
+    success "projects/ 内の .git ディレクトリを削除しました"
+}
+
 commit_projects_directory() {
     local version="$1"
 
@@ -304,6 +314,9 @@ process_single_version() {
 
     # setup.sh 実行
     run_setup_for_version "${version}"
+
+    # projects/ 内の .git ディレクトリを削除
+    remove_git_directories
 
     # projects/ コミット
     commit_projects_directory "${version}"
