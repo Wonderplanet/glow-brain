@@ -1,2 +1,0 @@
-ENABLE,id,release_key,asset_key,initial_reward_receive_minutes,reward_increase_interval_minutes,max_idle_hours,required_quick_receive_diamond_amount,max_daily_diamond_quick_receive_amount,max_daily_ad_quick_receive_amount,ad_interval_seconds,quick_idle_minutes
-e,idle_incentive_1,202509010,,10,10,24,30,3,1,60,120

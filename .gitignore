@@ -1,6 +1,7 @@
 # glow-brain-2 .gitignore
 
 # クローンされたリポジトリ（参照専用、git管理外）
+projects/
 !projects/.gitkeep
 
 # macOS

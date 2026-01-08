@@ -1,9 +1,0 @@
-ENABLE,id,release_key,content_type,cheat_type,cheat_value,is_excluded_ranking,start_at,end_at
-e,test_data,999999999,AdventBattle,BattleTime,120,1,"2024-08-23 11:00:00","2025-8-30 23:59:59"
-e,2,202509010,AdventBattle,MaxDamage,2000000,0,"2025-09-22 11:00:00","2037-12-30 23:59:59"
-e,3,202509010,AdventBattle,BattleStatusMismatch,1,0,"2025-09-22 11:00:00","2037-12-30 23:59:59"
-e,4,202509010,AdventBattle,MasterDataStatusMismatch,1,0,"2025-09-22 11:00:00","2037-12-30 23:59:59"
-e,5,202509010,Pvp,BattleTime,1,0,"2025-09-22 11:00:00","2037-12-30 23:59:59"
-e,6,202509010,Pvp,MaxDamage,2000000,0,"2025-09-22 11:00:00","2037-12-30 23:59:59"
-e,7,202509010,Pvp,BattleStatusMismatch,1,0,"2025-09-22 11:00:00","2037-12-30 23:59:59"
-e,8,202509010,Pvp,MasterDataStatusMismatch,1,0,"2025-09-22 11:00:00","2037-12-30 23:59:59"

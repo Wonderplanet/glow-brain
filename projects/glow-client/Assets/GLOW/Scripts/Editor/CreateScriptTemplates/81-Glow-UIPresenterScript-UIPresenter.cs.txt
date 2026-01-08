@@ -1,7 +1,0 @@
-namespace GLOW.Scenes.#SCRIPTNAME#.Presentation
-{
-    public class #SCRIPTNAME#Presenter : I#SCRIPTNAME#ViewDelegate
-    {
-        
-    }
-}

@@ -1,4 +1,0 @@
-ENABLE,id,mst_exchange_id,language,asset_key,name,release_key
-e,1,normal_01,ja,glo_exchange_00001,コイン交換所,202512015
-e,2,chara_piece,ja,glo_exchange_00002,キャラのかけらBOX交換所,202512015
-e,3,event_osh_00001_01,ja,osh_exchange_00001,いいジャン祭交換所,202512020

@@ -1,8 +1,0 @@
-ENABLE,id,release_key,group_id,resource_type,resource_id,resource_amount
-e,comeback_reward_1_1,202510010,comeback_reward_group_1,FreeDiamond,,150
-e,comeback_reward_1_2,202510010,comeback_reward_group_2,Coin,,5000
-e,comeback_reward_1_3,202510010,comeback_reward_group_3,FreeDiamond,,150
-e,comeback_reward_1_4,202510010,comeback_reward_group_4,Coin,,10000
-e,comeback_reward_1_5,202510010,comeback_reward_group_5,FreeDiamond,,200
-e,comeback_reward_1_6,202510010,comeback_reward_group_6,Coin,,15000
-e,comeback_reward_1_7,202510010,comeback_reward_group_7,Item,ticket_glo_00002,5
