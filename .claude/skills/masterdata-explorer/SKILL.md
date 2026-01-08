@@ -28,7 +28,13 @@ GLOWプロジェクトのマスタデータを効率的に調査・理解する�
 
 ### 2. データ分析（DuckDBでSQLクエリ）
 
+> **⚠️ 注意**: クエリを書く前に、必ず `search_schema.sh columns` でカラム名を確認してください。
+> 詳細は [DuckDBクエリを書く前の必須チェック](#duckdbクエリを書く前の必須チェック) を参照。
+
 ```bash
+# 例：MstUnitのカラム名を事前確認
+.claude/skills/masterdata-explorer/scripts/search_schema.sh columns mst_units
+
 # DuckDB起動
 duckdb -init .claude/skills/masterdata-explorer/.duckdbrc
 
@@ -100,6 +106,68 @@ ORDER BY units DESC;
 
 ---
 
+## DuckDBクエリを書く前の必須チェック
+
+### ⚠️ 重要：カラム名の事前確認は必須です
+
+DuckDBクエリを書く前に、**必ず実際のカラム名を確認してください**。カラム名の推測は禁止です。
+
+#### 推奨フロー
+
+```bash
+# ステップ1: テーブル名を確認（DBスキーマの形式: snake_case + 複数形）
+.claude/skills/masterdata-explorer/scripts/search_schema.sh tables unit
+
+# ステップ2: カラム名の一覧を取得
+.claude/skills/masterdata-explorer/scripts/search_schema.sh columns mst_units
+
+# ステップ3: 必要に応じてenum値を確認
+.claude/skills/masterdata-explorer/scripts/search_schema.sh enum mst_units rarity
+
+# ステップ4: CSVファイル名に変換（PascalCase + 単数形）して、DuckDBクエリを実行
+duckdb -init .claude/skills/masterdata-explorer/.duckdbrc -c "
+SELECT fragment_mst_item_id, rarity
+FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+WHERE ENABLE = 'e'
+LIMIT 10;
+"
+```
+
+### よくあるエラーパターンと回避方法
+
+| エラーパターン | 原因 | 回避方法 |
+|-------------|------|---------|
+| `Table does not have a column named "piece_asset_key"` | カラム名の推測ミス | `search_schema.sh columns` で実際のカラム名を確認 |
+| `Table does not have a column named "available_from"` | カラム名の推測ミス | DBスキーマでは `start_date` や `start_at` が使われることが多い |
+| `No files found that match the pattern` | CSVファイル名の誤り | DBスキーマ名（snake_case複数形）→ CSV名（PascalCase単数形）に変換 |
+| `Binder Error: Table "x" does not have a column` | JOINで存在しないカラムを参照 | 各テーブルのカラム名を個別に確認 |
+
+### カラム名確認のショートカット
+
+よく使うテーブルのカラム確認：
+
+```bash
+# ユニット（キャラクター）のカラム
+.claude/skills/masterdata-explorer/scripts/search_schema.sh columns mst_units
+
+# アイテムのカラム
+.claude/skills/masterdata-explorer/scripts/search_schema.sh columns mst_items
+
+# イベントのカラム
+.claude/skills/masterdata-explorer/scripts/search_schema.sh columns mst_events
+
+# ガチャのカラム
+.claude/skills/masterdata-explorer/scripts/search_schema.sh columns opr_gachas
+```
+
+### 安全なクエリ実行の3ステップ
+
+1. **スキーマ確認**: `search_schema.sh columns` でカラム名を取得
+2. **テスト実行**: `LIMIT 10` でまず少量のデータで動作確認
+3. **本番実行**: エラーがなければ、全データでクエリを実行
+
+---
+
 ## 詳細ドキュメント
 
 より詳細な情報については、以下を参照してください：
@@ -137,3 +205,23 @@ pwd
 
 - **DBスキーマ**: snake_case + 複数形（例: `mst_events`）
 - **CSVファイル**: PascalCase + 単数形（例: `MstEvent.csv`）
+
+### カラム名のエラー
+
+**エラー例**:
+```
+Binder Error: Table "u" does not have a column named "piece_asset_key"
+```
+
+**解決方法**:
+```bash
+# 1. 実際のカラム名を確認
+.claude/skills/masterdata-explorer/scripts/search_schema.sh columns mst_units | grep piece
+# または
+.claude/skills/masterdata-explorer/scripts/search_schema.sh columns mst_units | grep fragment
+
+# 2. 正しいカラム名でクエリを修正
+# 例: piece_asset_key → fragment_mst_item_id
+```
+
+**予防策**: クエリを書く前に必ず `search_schema.sh columns` でカラム名を確認する。
