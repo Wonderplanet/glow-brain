@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# glow-brain-2 セットアップ・更新スクリプト
+# glow-brain セットアップ・更新スクリプト
 # バージョンごとの3つのリポジトリ（glow-server, glow-masterdata, glow-client）を管理します
 
 set -euo pipefail
