@@ -72,11 +72,11 @@ get_all_versions() {
 # Git 操作関数
 # ====================================
 ensure_on_base_branch() {
-    info "version-env-base の最新を取得しています..."
+    info "${BASE_BRANCH} の最新を取得しています..."
 
     cd "${PROJECT_ROOT}"
 
-    # version-env-base に切り替え（git reset --hard で強制リセット）
+    # ${BASE_BRANCH} に切り替え（git reset --hard で強制リセット）
     git fetch origin "${BASE_BRANCH}"
     git checkout "${BASE_BRANCH}"
     git reset --hard "origin/${BASE_BRANCH}"
@@ -88,12 +88,12 @@ ensure_on_base_branch() {
         success "projects/ ディレクトリを削除しました"
     fi
 
-    # projects/.gitkeep を復元（version-env-base には .gitkeep が存在するため）
+    # projects/.gitkeep を復元（${BASE_BRANCH} には .gitkeep が存在するため）
     if [ ! -f "${PROJECTS_DIR}/.gitkeep" ]; then
         git checkout -- projects/.gitkeep 2>/dev/null || true
     fi
 
-    success "version-env-base に切り替わりました"
+    success "${BASE_BRANCH} に切り替わりました"
 }
 
 delete_remote_branch_if_exists() {
@@ -227,7 +227,7 @@ cleanup_on_error() {
 
     error "エラーが発生しました。クリーンアップを実行します..."
 
-    # 1. version-env-base に戻る
+    # 1. ${BASE_BRANCH} に戻る
     cd "${PROJECT_ROOT}"
     if git branch --list "${BASE_BRANCH}" &>/dev/null; then
         git checkout "${BASE_BRANCH}" 2>/dev/null || true
@@ -295,7 +295,7 @@ process_single_version() {
     # ローカルブランチ削除
     delete_local_branch_if_exists "${version}"
 
-    # version-env-base に切り替え
+    # ${BASE_BRANCH} に切り替え
     ensure_on_base_branch
 
     # 新ブランチ作成
@@ -389,9 +389,9 @@ main() {
         process_single_version "${version}"
     done
 
-    # version-env-base に戻る
+    # ${BASE_BRANCH} に戻る
     echo ""
-    info "version-env-base に戻っています..."
+    info "${BASE_BRANCH} に戻っています..."
     ensure_on_base_branch
 
     # 完了サマリー
