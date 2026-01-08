@@ -1,0 +1,5 @@
+ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
+e,event_kim_00001_bonus_1,chara_kim_00001,30,raid_kim1_00001,,202602020
+e,event_kim_00001_bonus_2,chara_kim_00101,30,raid_kim1_00001,,202602020
+e,event_kim_00001_bonus_3,chara_kim_00201,30,raid_kim1_00001,,202602020
+e,event_kim_00001_bonus_4,chara_kim_00301,30,raid_kim1_00001,,202602020
