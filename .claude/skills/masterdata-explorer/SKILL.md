@@ -224,4 +224,4 @@ Binder Error: Table "u" does not have a column named "piece_asset_key"
 # 例: piece_asset_key → fragment_mst_item_id
 ```
 
-**予防策**: クエリを書く前に必ず `search_schema.sh columns` でカラム名を確認する。
+**予防策**: [DuckDBクエリを書く前の必須チェック](#duckdbクエリを書く前の必須チェック) を参照して、クエリを書く前に必ずカラム名を確認してください。
