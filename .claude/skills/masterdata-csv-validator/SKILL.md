@@ -1,9 +1,9 @@
 ---
-name: masterdata-validator
+name: masterdata-csv-validator
 description: GLOWマスタデータCSVの検証スキル。作成したCSVファイルがDB投入可能か、server/client実装と整合性があるかをテンプレート、DBスキーマと照合してチェックします。マスタデータ、CSV検証、バリデーション、チェックで使用します。
 ---
 
-# GLOWマスタデータ検証スキル
+# GLOWマスタデータCSV検証スキル
 
 ## 概要
 
@@ -19,7 +19,7 @@ description: GLOWマスタデータCSVの検証スキル。作成したCSVファ
 ### 単一ファイルの検証
 
 ```bash
-python .claude/skills/masterdata-validator/scripts/validate_all.py \
+python .claude/skills/masterdata-csv-validator/scripts/validate_all.py \
   --csv path/to/MstEvent.csv
 ```
 
@@ -84,20 +84,20 @@ python .claude/skills/masterdata-validator/scripts/validate_all.py \
 
 **テンプレート検証のみ**:
 ```bash
-python .claude/skills/masterdata-validator/scripts/validate_template.py \
+python .claude/skills/masterdata-csv-validator/scripts/validate_template.py \
   --generated path/to/MstEvent.csv \
   --template projects/glow-masterdata/sheet_schema/MstEvent.csv
 ```
 
 **CSV形式検証のみ**:
 ```bash
-python .claude/skills/masterdata-validator/scripts/validate_csv_format.py \
+python .claude/skills/masterdata-csv-validator/scripts/validate_csv_format.py \
   path/to/MstEvent.csv
 ```
 
 **DBスキーマ検証のみ**:
 ```bash
-python .claude/skills/masterdata-validator/scripts/validate_schema.py \
+python .claude/skills/masterdata-csv-validator/scripts/validate_schema.py \
   --csv path/to/MstEvent.csv \
   --schema projects/glow-server/api/database/schema/exports/master_tables_schema.json \
   --table mst_events
@@ -110,7 +110,7 @@ python .claude/skills/masterdata-validator/scripts/validate_schema.py \
 マスタデータCSVを作成したら、DB投入前に必ず検証を実行します。
 
 ```bash
-python .claude/skills/masterdata-validator/scripts/validate_all.py \
+python .claude/skills/masterdata-csv-validator/scripts/validate_all.py \
   --csv path/to/<ファイル名>.csv
 ```
 
@@ -146,7 +146,7 @@ python .claude/skills/masterdata-validator/scripts/validate_all.py \
 ```bash
 for csv in path/to/masterdata/*.csv; do
   echo "Validating $csv..."
-  python .claude/skills/masterdata-validator/scripts/validate_all.py \
+  python .claude/skills/masterdata-csv-validator/scripts/validate_all.py \
     --csv "$csv"
 done
 ```
@@ -222,7 +222,7 @@ DBスキーマとの整合性を検証（型、enum値、NULL許可等）。
 `--table` オプションで明示的にテーブル名を指定します（snake_case + 複数形）:
 
 ```bash
-python .claude/skills/masterdata-validator/scripts/validate_schema.py \
+python .claude/skills/masterdata-csv-validator/scripts/validate_schema.py \
   --csv path/to/CustomFile.csv \
   --schema projects/glow-server/api/database/schema/exports/master_tables_schema.json \
   --table mst_custom_tables

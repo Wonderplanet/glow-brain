@@ -271,6 +271,6 @@ JSON内のダブルクォートを `""` でエスケープします。
 修正後、再度検証スクリプトを実行してエラーが解消されたか確認します。
 
 ```bash
-python .claude/skills/masterdata-validator/scripts/validate_all.py \
+python .claude/skills/masterdata-csv-validator/scripts/validate_all.py \
   --csv path/to/<ファイル名>.csv
 ```
