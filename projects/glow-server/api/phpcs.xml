@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<ruleset name="Laravel WP Standards">
+    <description>The coding standard based on PSR-12.</description>
+
+    <!-- 拡張子が.phpのファイルにのみ適用 -->
+    <arg name="extensions" value="php"/>
+
+    <!-- p:進捗表示 s:エラー表示時にルールを表示 -->
+    <arg value="ps"/>
+
+    <!-- 出力に色を付ける -->
+    <arg name="colors"/>
+
+    <!-- 適用対象のディレクトリ -->
+    <file>app/Http/Controllers</file>
+    <file>app/Domain</file>
+    <file>../local/lib/laravel-wp-billing/src</file>
+    <file>../local/lib/laravel-wp-currency/src</file>
+
+    <!-- PSR-12に関するルールを適用 -->
+    <rule ref="PSR12"/>
+
+    <!-- Internal.Exceptionを無視（PHP_CodeSnifferのバグ対策） -->
+    <rule ref="Internal.Exception">
+        <severity>0</severity>
+    </rule>
+
+    <config name="installed_paths" value="../../slevomat/coding-standard"/>
+
+    <!-- 以降は、slevomat/coding-standardの拡張ルールの適用 -->
+
+    <!-- 複数行のarrayの最後にカンマを付ける -->
+    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"></rule>
+
+    <!-- empty関数は使わない -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowEmpty"></rule>
+
+    <!-- ヨーダ記法は使わない -->
+    <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"></rule>
+
+    <!-- 名前空間のインポートはアルファベット順に指定する -->
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"></rule>
+
+    <!-- 未使用の名前空間のインポートは削除する -->
+    <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
+    <!-- PHPDocで使用していたら削除しない -->
+        <properties>
+            <property name="searchAnnotations" type="boolean" value="true"/>
+        </properties>
+    </rule>
+
+    <!-- 緩い比較「==」ではなく厳密な比較「===」を使用する -->
+    <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators"></rule>
+
+    <!-- コードの先頭に「declare(strict_types=1);」を付ける -->
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="linesCountBeforeDeclare" value="1" />
+            <property name="spacesCountAroundEqualsSign" type="int" value="0" />
+        </properties>
+    </rule>
+
+    <!-- デフォルト引数がnullの場合はnullableな型を指定する -->
+    <rule ref="SlevomatCodingStandard.TypeHints.NullableTypeForNullDefaultValue"></rule>
+</ruleset>
