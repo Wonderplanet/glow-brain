@@ -2,110 +2,82 @@
 
 ## 全体像
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        MstEvent（イベント）                        │
-│  ┌──────────────────────────────────────────────────────────┐   │
-│  │ id: event_100kano_202602                                 │   │
-│  │ 期間: 2026-02-01 〜 2026-02-28                           │   │
-│  └──────────────────────────────────────────────────────────┘   │
-└────────────────────────┬────────────────────────────────────────┘
-                         │ mst_event_id で紐づく
-                         ↓
-┌─────────────────────────────────────────────────────────────────┐
-│                   MstBoxGacha（BOXガシャ設定）                    │
-│  ┌──────────────────────────────────────────────────────────┐   │
-│  │ id: box_gacha_100kano_001                                │   │
-│  │ コスト: item_event_coin_100kano を 150個                │   │
-│  │ ループ: Last（最後の箱を繰り返す）                       │   │
-│  └──────────────────────────────────────────────────────────┘   │
-└────────────────────────┬────────────────────────────────────────┘
-                         │ mst_box_gacha_id で紐づく
-                         ↓
-         ┌───────────────┴───────────────┐
-         │                               │
-┌────────┴──────────┐         ┌──────────┴─────────┐
-│  MstBoxGachaGroup │         │  MstBoxGachaGroup  │  ...（BOX3、無限BOXも同様）
-│      (BOX1)       │         │      (BOX2)        │
-│  ┌──────────────┐ │         │  ┌───────────────┐ │
-│  │ box_level: 1 │ │         │  │ box_level: 2  │ │
-│  └──────────────┘ │         │  └───────────────┘ │
-└───────┬───────────┘         └──────────┬─────────┘
-        │                                │
-        │ mst_box_gacha_group_id         │ mst_box_gacha_group_id
-        │ で紐づく                       │ で紐づく
-        ↓                                ↓
-┌───────────────────────┐       ┌───────────────────────┐
-│  MstBoxGachaPrize     │       │  MstBoxGachaPrize     │
-│  （BOX1の中身）       │       │  （BOX2の中身）       │
-│  ┌─────────────────┐  │       │  ┌─────────────────┐  │
-│  │【目玉】キャラA  │  │       │  │【目玉】キャラB  │  │
-│  │ stock: 1個      │  │       │  │ stock: 1個      │  │
-│  ├─────────────────┤  │       │  ├─────────────────┤  │
-│  │ 強化石          │  │       │  │ レア強化石      │  │
-│  │ stock: 30個     │  │       │  │ stock: 40個     │  │
-│  ├─────────────────┤  │       │  ├─────────────────┤  │
-│  │ コイン          │  │       │  │ コイン          │  │
-│  │ stock: 20個     │  │       │  │ stock: 30個     │  │
-│  ├─────────────────┤  │       │  ├─────────────────┤  │
-│  │ その他          │  │       │  │ その他          │  │
-│  │ stock: 49個     │  │       │  │ stock: 29個     │  │
-│  └─────────────────┘  │       │  └─────────────────┘  │
-│  合計: 100個          │       │  合計: 100個          │
-└───────────────────────┘       └───────────────────────┘
+```mermaid
+graph TB
+    Event[MstEvent<br/>イベント<br/>━━━━━━━━━━━━━<br/>id: event_100kano_202602<br/>期間: 2026-02-01 ~ 2026-02-28]
+    
+    BoxGacha[MstBoxGacha<br/>BOXガシャ設定<br/>━━━━━━━━━━━━━<br/>id: box_gacha_100kano_001<br/>コスト: item_event_coin_100kano を 150個<br/>ループ: Last 最後の箱を繰り返す]
+    
+    Group1[MstBoxGachaGroup<br/>BOX1<br/>━━━━━━━━━━━━━<br/>box_level: 1]
+    Group2[MstBoxGachaGroup<br/>BOX2<br/>━━━━━━━━━━━━━<br/>box_level: 2]
+    Group3[MstBoxGachaGroup<br/>BOX3<br/>━━━━━━━━━━━━━<br/>box_level: 3]
+    
+    Prize1A[MstBoxGachaPrize<br/>BOX1の中身<br/>━━━━━━━━━━━━━<br/>★目玉 キャラA<br/>stock: 1個]
+    Prize1B[強化石<br/>stock: 30個]
+    Prize1C[コイン<br/>stock: 20個]
+    Prize1D[その他<br/>stock: 49個]
+    
+    Prize2A[MstBoxGachaPrize<br/>BOX2の中身<br/>━━━━━━━━━━━━━<br/>★目玉 キャラB<br/>stock: 1個]
+    Prize2B[レア強化石<br/>stock: 40個]
+    Prize2C[コイン<br/>stock: 30個]
+    Prize2D[その他<br/>stock: 29個]
+    
+    Event -->|mst_event_id で紐づく| BoxGacha
+    BoxGacha -->|mst_box_gacha_id で紐づく| Group1
+    BoxGacha -->|mst_box_gacha_id で紐づく| Group2
+    BoxGacha -.->|同様に| Group3
+    
+    Group1 -->|mst_box_gacha_group_id で紐づく| Prize1A
+    Group1 --> Prize1B
+    Group1 --> Prize1C
+    Group1 --> Prize1D
+    
+    Group2 -->|mst_box_gacha_group_id で紐づく| Prize2A
+    Group2 --> Prize2B
+    Group2 --> Prize2C
+    Group2 --> Prize2D
+    
+    style Event fill:#e1f5ff
+    style BoxGacha fill:#fff4e6
+    style Group1 fill:#f3e5f5
+    style Group2 fill:#f3e5f5
+    style Group3 fill:#f3e5f5
+    style Prize1A fill:#ffebee
+    style Prize2A fill:#ffebee
 ```
 
 ---
 
 ## データの流れ（プレイヤー視点）
 
-```
-1. プレイヤーがイベントクエストをクリア
-   ↓
-2. イベント通貨（100カノコイン）を獲得
-   ↓
-3. BOXガシャ画面を開く
-   ↓
-   ┌─────────────────────────────────────┐
-   │ 現在の箱: BOX1                       │
-   │ 残り: 100個                          │
-   │ コスト: 100カノコイン 150個で1回   │
-   │                                     │
-   │ 【目玉】                            │
-   │ ★★★ キャラA （残り1個）           │
-   │                                     │
-   │ 【その他】                          │
-   │ 強化石 （残り30個）                │
-   │ コイン1000枚 （残り20個）          │
-   │ 育成本 （残り49個）                │
-   └─────────────────────────────────────┘
-   ↓
-4. 「1回引く」または「10回引く」を選択
-   ↓
-5. 抽選実行（BOX1の残りアイテムからランダムに取得）
-   ↓
-   ┌─────────────────────────────────────┐
-   │ 【結果】                            │
-   │ ✓ 強化石 10個                       │
-   └─────────────────────────────────────┘
-   ↓
-   BOX1の残りが更新される
-   ┌─────────────────────────────────────┐
-   │ 現在の箱: BOX1                       │
-   │ 残り: 99個                           │
-   │                                     │
-   │ 【目玉】                            │
-   │ ★★★ キャラA （残り1個）           │
-   │                                     │
-   │ 【その他】                          │
-   │ 強化石 （残り29個）← 引いたので減った│
-   │ コイン1000枚 （残り20個）          │
-   │ 育成本 （残り49個）                │
-   └─────────────────────────────────────┘
-   ↓
-6. 目玉を引くまで or 箱が空になるまで繰り返す
-   ↓
-7. 箱をリセットしてBOX2へ進む
+```mermaid
+sequenceDiagram
+    participant P as プレイヤー
+    participant Q as イベントクエスト
+    participant G as BOXガシャ画面
+    participant S as サーバー
+    
+    P->>Q: クエストをクリア
+    Q->>P: イベント通貨（100カノコイン）獲得
+    P->>G: BOXガシャ画面を開く
+    
+    Note over G: 現在の箱: BOX1<br/>残り: 100個<br/>コスト: 100カノコイン 150個で1回<br/><br/>【目玉】<br/>★★★ キャラA （残り1個）<br/><br/>【その他】<br/>強化石 （残り30個）<br/>コイン1000枚 （残り20個）<br/>育成本 （残り49個）
+    
+    P->>G: 「1回引く」または「10回引く」を選択
+    G->>S: 抽選実行リクエスト
+    S->>S: BOX1の残りアイテムからランダムに取得
+    
+    Note over S: 【結果】<br/>✓ 強化石 10個
+    
+    S->>G: 抽選結果を返す
+    G->>P: 結果を表示
+    
+    Note over G: 現在の箱: BOX1<br/>残り: 99個<br/><br/>【目玉】<br/>★★★ キャラA （残り1個）<br/><br/>【その他】<br/>強化石 （残り29個）← 引いたので減った<br/>コイン1000枚 （残り20個）<br/>育成本 （残り49個）
+    
+    P->>P: 目玉を引くまで or<br/>箱が空になるまで繰り返す
+    P->>G: 箱をリセット
+    G->>S: リセット実行
+    S->>G: BOX2へ進む
 ```
 
 ---
@@ -114,87 +86,98 @@
 
 ### パターン1: BOXガシャを引くとき
 
-```
-1. クライアントからのリクエスト
-   「box_gacha_100kano_001 を 1回引く」
-   ↓
-2. MstBoxGachaを取得
-   「このBOXガシャのコストは item_event_coin_100kano が 150個」
-   ↓
-3. プレイヤーのアイテム所持数をチェック
-   「100カノコインを150個以上持っているか？」
-   ↓
-4. プレイヤーの現在のBOX番号を取得（UsrBoxGacha）
-   「現在 box_level = 1（BOX1）を引いている」
-   ↓
-5. MstBoxGachaGroupを取得
-   「box_level = 1 のグループIDは box_gacha_group_100kano_lv1」
-   ↓
-6. MstBoxGachaPrizeを取得
-   「box_gacha_group_100kano_lv1 に含まれる景品一覧」
-   ↓
-7. プレイヤーの残りアイテムを取得（UsrBoxGachaStock）
-   「BOX1の残りアイテム: キャラA 1個、強化石 29個、コイン 20個、育成本 49個」
-   ↓
-8. ランダム抽選
-   「残りアイテムの中からランダムに1個選ぶ → コイン1000枚」
-   ↓
-9. アイテムを配布 & 残りアイテムから削除
-   「プレイヤーにコイン1000枚を付与」
-   「BOX1の残りコインを20個→19個に減らす」
-   ↓
-10. レスポンス
-   「獲得アイテム: コイン1000枚、BOX1残り: 98個」
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as クライアント
+    participant API as サーバーAPI
+    participant MST as マスタDB
+    participant USR as ユーザーDB
+    
+    C->>API: box_gacha_100kano_001 を 1回引く
+    API->>MST: MstBoxGacha取得
+    Note over MST: コスト: item_event_coin_100kano が 150個
+    
+    API->>USR: プレイヤーのアイテム所持数チェック
+    Note over USR: 100カノコインを150個以上持っているか？
+    
+    API->>USR: プレイヤーの現在のBOX番号を取得<br/>UsrBoxGacha
+    Note over USR: 現在 box_level = 1（BOX1）
+    
+    API->>MST: MstBoxGachaGroup取得
+    Note over MST: box_level = 1 のグループID:<br/>box_gacha_group_100kano_lv1
+    
+    API->>MST: MstBoxGachaPrize取得
+    Note over MST: box_gacha_group_100kano_lv1<br/>に含まれる景品一覧
+    
+    API->>USR: プレイヤーの残りアイテムを取得<br/>UsrBoxGachaStock
+    Note over USR: BOX1残り:<br/>キャラA 1個、強化石 29個<br/>コイン 20個、育成本 49個
+    
+    API->>API: ランダム抽選
+    Note over API: 残りアイテムから1個選ぶ<br/>→ コイン1000枚
+    
+    API->>USR: アイテム配布 & 残りアイテム削除
+    Note over USR: ・プレイヤーにコイン1000枚付与<br/>・BOX1の残りコイン: 20個→19個
+    
+    API->>C: レスポンス
+    Note over C: 獲得: コイン1000枚<br/>BOX1残り: 98個
 ```
 
 ### パターン2: BOXをリセットするとき
 
-```
-1. クライアントからのリクエスト
-   「box_gacha_100kano_001 をリセット」
-   ↓
-2. プレイヤーの現在のBOX番号を取得（UsrBoxGacha）
-   「現在 box_level = 1（BOX1）」
-   ↓
-3. 次のBOX番号を計算
-   「box_level = 1 → 次は box_level = 2（BOX2）」
-   ↓
-4. MstBoxGachaGroupを取得
-   「box_level = 2 のグループIDは box_gacha_group_100kano_lv2」
-   ↓
-5. MstBoxGachaPrizeを取得
-   「box_gacha_group_100kano_lv2 に含まれる景品一覧」
-   ↓
-6. プレイヤーの残りアイテムを初期化（UsrBoxGachaStock）
-   「BOX2の中身をマスタからコピーして、残りアイテムとして設定」
-   ↓
-7. プレイヤーのBOX番号を更新（UsrBoxGacha）
-   「box_level = 2 に更新」
-   ↓
-8. レスポンス
-   「BOX2に進みました。残り: 100個」
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as クライアント
+    participant API as サーバーAPI
+    participant MST as マスタDB
+    participant USR as ユーザーDB
+    
+    C->>API: box_gacha_100kano_001 をリセット
+    
+    API->>USR: プレイヤーの現在のBOX番号を取得<br/>UsrBoxGacha
+    Note over USR: 現在 box_level = 1（BOX1）
+    
+    API->>API: 次のBOX番号を計算
+    Note over API: box_level = 1 → 次は box_level = 2（BOX2）
+    
+    API->>MST: MstBoxGachaGroup取得
+    Note over MST: box_level = 2 のグループID:<br/>box_gacha_group_100kano_lv2
+    
+    API->>MST: MstBoxGachaPrize取得
+    Note over MST: box_gacha_group_100kano_lv2<br/>に含まれる景品一覧
+    
+    API->>USR: プレイヤーの残りアイテムを初期化<br/>UsrBoxGachaStock
+    Note over USR: BOX2の中身をマスタからコピーして<br/>残りアイテムとして設定
+    
+    API->>USR: プレイヤーのBOX番号を更新<br/>UsrBoxGacha
+    Note over USR: box_level = 2 に更新
+    
+    API->>C: レスポンス
+    Note over C: BOX2に進みました<br/>残り: 100個
 ```
 
 ---
 
 ## マスタデータとユーザーデータの関係
 
-```
-【マスタデータ（変更されない）】
-┌────────────────────────┐
-│ MstBoxGacha            │ ← BOXガシャのルール
-├────────────────────────┤
-│ MstBoxGachaGroup       │ ← 箱の段階定義
-├────────────────────────┤
-│ MstBoxGachaPrize       │ ← 箱の初期状態（中身）
-└────────────────────────┘
-         ↓ コピー
-【ユーザーデータ（プレイごとに変化）】
-┌────────────────────────┐
-│ UsrBoxGacha            │ ← プレイヤーの進捗（現在のBOX番号、引いた回数等）
-├────────────────────────┤
-│ UsrBoxGachaStock       │ ← プレイヤーのBOX残りアイテム（引くたびに減る）
-└────────────────────────┘
+```mermaid
+graph TB
+    subgraph Master["マスタデータ（変更されない）"]
+        M1[MstBoxGacha<br/>BOXガシャのルール]
+        M2[MstBoxGachaGroup<br/>箱の段階定義]
+        M3[MstBoxGachaPrize<br/>箱の初期状態・中身]
+    end
+    
+    subgraph User["ユーザーデータ（プレイごとに変化）"]
+        U1[UsrBoxGacha<br/>プレイヤーの進捗<br/>現在のBOX番号、引いた回数等]
+        U2[UsrBoxGachaStock<br/>プレイヤーのBOX残りアイテム<br/>引くたびに減る]
+    end
+    
+    Master -->|BOX初回アクセス時<br/>コピー| User
+    
+    style Master fill:#e3f2fd
+    style User fill:#fff3e0
 ```
 
 **ポイント:**
@@ -250,47 +233,38 @@ UsrBoxGachaStock（AさんのBOX1残りアイテム）
 
 ### loop_type = "Last"（最も一般的）
 
-```
-BOX1（100個）→ 引き切る or リセット
-  ↓
-BOX2（100個）→ 引き切る or リセット
-  ↓
-BOX3（100個）→ 引き切る or リセット
-  ↓
-無限BOX（100個）→ 引き切る or リセット
-  ↓                      ↑
-  └──────────────────────┘
-     何度でもリセットして繰り返し
+```mermaid
+graph LR
+    B1[BOX1<br/>100個] --> B2[BOX2<br/>100個]
+    B2 --> B3[BOX3<br/>100個]
+    B3 --> INF[無限BOX<br/>100個]
+    INF -->|何度でもリセット| INF
+    
+    style INF fill:#ffe0b2
 ```
 
 ### loop_type = "All"（特殊ケース）
 
-```
-BOX1（100個）→ 引き切る or リセット
-  ↓
-BOX2（100個）→ 引き切る or リセット
-  ↓
-BOX3（100個）→ 引き切る or リセット
-  ↓
-無限BOX（100個）→ 引き切る or リセット
-  ↓                      ↑
-  └──────BOX1に戻る───────┘
-     BOX1〜無限BOXを何周もループ
+```mermaid
+graph LR
+    B1[BOX1<br/>100個] --> B2[BOX2<br/>100個]
+    B2 --> B3[BOX3<br/>100個]
+    B3 --> INF[無限BOX<br/>100個]
+    INF -->|BOX1に戻る| B1
+    
+    style INF fill:#fff9c4
 ```
 
 ### loop_type = "First"（ほぼ使わない）
 
-```
-BOX1（100個）→ 引き切る or リセット
-  ↓
-BOX2（100個）→ 引き切る or リセット
-  ↓
-BOX3（100個）→ 引き切る or リセット
-  ↓
-BOX1（100個）→ 引き切る or リセット
-  ↓                      ↑
-  └──────────────────────┘
-     BOX1だけを繰り返し
+```mermaid
+graph LR
+    B1[BOX1<br/>100個] --> B2[BOX2<br/>100個]
+    B2 --> B3[BOX3<br/>100個]
+    B3 -->|BOX1に戻る| B1
+    B1 -->|BOX1だけを繰り返し| B1
+    
+    style B1 fill:#ffccbc
 ```
 
 ---
@@ -299,19 +273,44 @@ BOX1（100個）→ 引き切る or リセット
 
 BOXガシャは以下の階層構造で管理されます：
 
-```
-イベント（MstEvent）
-  └─ BOXガシャ全体（MstBoxGacha）
-      ├─ BOX1（MstBoxGachaGroup）
-      │   ├─ 景品1（MstBoxGachaPrize）
-      │   ├─ 景品2（MstBoxGachaPrize）
-      │   └─ ...（合計100個）
-      ├─ BOX2（MstBoxGachaGroup）
-      │   └─ 景品... （合計100個）
-      ├─ BOX3（MstBoxGachaGroup）
-      │   └─ 景品... （合計100個）
-      └─ 無限BOX（MstBoxGachaGroup）
-          └─ 景品... （合計100個）
+```mermaid
+graph TB
+    Event[イベント<br/>MstEvent]
+    BoxGacha[BOXガシャ全体<br/>MstBoxGacha]
+    
+    Box1[BOX1<br/>MstBoxGachaGroup]
+    Box2[BOX2<br/>MstBoxGachaGroup]
+    Box3[BOX3<br/>MstBoxGachaGroup]
+    BoxInf[無限BOX<br/>MstBoxGachaGroup]
+    
+    Prize1A[景品1<br/>MstBoxGachaPrize]
+    Prize1B[景品2<br/>MstBoxGachaPrize]
+    Prize1C[...<br/>合計100個]
+    
+    Prize2[景品...<br/>合計100個]
+    Prize3[景品...<br/>合計100個]
+    PrizeInf[景品...<br/>合計100個]
+    
+    Event --> BoxGacha
+    BoxGacha --> Box1
+    BoxGacha --> Box2
+    BoxGacha --> Box3
+    BoxGacha --> BoxInf
+    
+    Box1 --> Prize1A
+    Box1 --> Prize1B
+    Box1 --> Prize1C
+    
+    Box2 --> Prize2
+    Box3 --> Prize3
+    BoxInf --> PrizeInf
+    
+    style Event fill:#e1f5ff
+    style BoxGacha fill:#fff4e6
+    style Box1 fill:#f3e5f5
+    style Box2 fill:#f3e5f5
+    style Box3 fill:#f3e5f5
+    style BoxInf fill:#ffe0b2
 ```
 
 各テーブルの役割：

@@ -174,42 +174,78 @@ BOX1の中身:
 
 ### 関係図（親子関係）
 
-```
-MstEvent（イベント）
-    ↓ 紐づく
-MstBoxGacha（BOXガシャ全体のルール）
-    ↓ 持つ
-MstBoxGachaGroup（箱の段階：BOX1、BOX2、BOX3...）
-    ↓ 含む
-MstBoxGachaPrize（箱の中身：景品）
+```mermaid
+graph TB
+    Event[MstEvent<br/>イベント]
+    BoxGacha[MstBoxGacha<br/>BOXガシャ全体のルール]
+    Group[MstBoxGachaGroup<br/>箱の段階: BOX1, BOX2, BOX3...]
+    Prize[MstBoxGachaPrize<br/>箱の中身: 景品]
+    
+    Event -->|紐づく| BoxGacha
+    BoxGacha -->|持つ| Group
+    Group -->|含む| Prize
+    
+    style Event fill:#e1f5ff
+    style BoxGacha fill:#fff4e6
+    style Group fill:#f3e5f5
+    style Prize fill:#ffebee
 ```
 
 ### 1対多の関係
 
-```
-1つのMstBoxGacha
-    ↓
-複数のMstBoxGachaGroup（BOX1、BOX2、BOX3、無限BOX）
-    ↓
-各MstBoxGachaGroupに対して複数のMstBoxGachaPrize（景品）
+```mermaid
+graph TB
+    subgraph One["1つのMstBoxGacha"]
+        BG[box_gacha_100kano_001]
+    end
+    
+    subgraph Many1["複数のMstBoxGachaGroup"]
+        G1[BOX1<br/>box_level: 1]
+        G2[BOX2<br/>box_level: 2]
+        G3[BOX3<br/>box_level: 3]
+        GInf[無限BOX<br/>box_level: 4]
+    end
+    
+    subgraph Many2["各MstBoxGachaGroupに対して<br/>複数のMstBoxGachaPrize"]
+        P1[景品]
+        P2[景品]
+        P3[...]
+    end
+    
+    BG --> G1
+    BG --> G2
+    BG --> G3
+    BG --> GInf
+    
+    G1 --> P1
+    G1 --> P2
+    G1 --> P3
 ```
 
 ### 具体的な数のイメージ
 
-```
-MstBoxGacha: 1件
-    ├─ MstBoxGachaGroup (BOX1): 1件
-    │    ├─ MstBoxGachaPrize (キャラA): 1件 (stock=1)
-    │    ├─ MstBoxGachaPrize (アイテムB): 1件 (stock=30)
-    │    ├─ MstBoxGachaPrize (コイン): 1件 (stock=20)
-    │    └─ MstBoxGachaPrize (その他): 1件 (stock=49)
-    │         → 合計4件の景品設定、中身は100個
-    ├─ MstBoxGachaGroup (BOX2): 1件
-    │    └─ MstBoxGachaPrize: 複数件（中身合計100個）
-    ├─ MstBoxGachaGroup (BOX3): 1件
-    │    └─ MstBoxGachaPrize: 複数件（中身合計100個）
-    └─ MstBoxGachaGroup (無限BOX): 1件
-         └─ MstBoxGachaPrize: 複数件（中身合計100個）
+```mermaid
+graph TB
+    MBG[MstBoxGacha: 1件]
+    
+    MBG --> G1[MstBoxGachaGroup BOX1: 1件]
+    MBG --> G2[MstBoxGachaGroup BOX2: 1件]
+    MBG --> G3[MstBoxGachaGroup BOX3: 1件]
+    MBG --> GInf[MstBoxGachaGroup 無限BOX: 1件]
+    
+    G1 --> P1A[MstBoxGachaPrize<br/>キャラA<br/>stock=1]
+    G1 --> P1B[MstBoxGachaPrize<br/>アイテムB<br/>stock=30]
+    G1 --> P1C[MstBoxGachaPrize<br/>コイン<br/>stock=20]
+    G1 --> P1D[MstBoxGachaPrize<br/>その他<br/>stock=49]
+    
+    G2 --> P2[MstBoxGachaPrize<br/>複数件<br/>中身合計100個]
+    G3 --> P3[MstBoxGachaPrize<br/>複数件<br/>中身合計100個]
+    GInf --> PInf[MstBoxGachaPrize<br/>複数件<br/>中身合計100個]
+    
+    style P1A fill:#ffebee
+    style P1B fill:#e8f5e9
+    style P1C fill:#fff9c4
+    style P1D fill:#f5f5f5
 ```
 
 ---
