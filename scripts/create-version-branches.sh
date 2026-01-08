@@ -323,6 +323,22 @@ process_single_version() {
 # メイン処理
 # ====================================
 main() {
+    # 引数パース
+    local auto_yes=false
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            --yes|-y)
+                auto_yes=true
+                shift
+                ;;
+            *)
+                error "不明なオプション: $1"
+                error "使用方法: $0 [--yes]"
+                exit 1
+                ;;
+        esac
+    done
+
     info "========================================="
     info "バージョン環境ブランチ作成スクリプト"
     info "========================================="
@@ -350,8 +366,13 @@ main() {
     done
     echo ""
 
-    # ユーザー確認
-    confirm_execution "${versions[@]}"
+    # ユーザー確認（--yes オプション指定時はスキップ）
+    if [ "${auto_yes}" = false ]; then
+        confirm_execution "${versions[@]}"
+    else
+        info "自動実行モード（確認をスキップします）"
+        echo ""
+    fi
 
     # 各バージョンを順次処理
     local total=${#versions[@]}
