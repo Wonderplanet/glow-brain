@@ -1,4 +1,0 @@
-namespace GLOW.Scenes.#SCRIPTNAME#.Domain
-{
-    public record #SCRIPTNAME#UseCaseModel(string Value);
-}
