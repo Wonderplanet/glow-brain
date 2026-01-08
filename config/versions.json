@@ -1,13 +1,18 @@
 {
-  "current_version": "1.5.0",
+  "current_version": "v1.5.0-devld",
   "versions": {
-    "v1.4.1-devld": {
-      "glow-server": "develop/v1.4.1",
-      "glow-client": "release/v1.4.1",
-      "glow-masterdata": "release/dev-ld"
-    },
     "v1.5.0-devld": {
       "glow-server": "develop/v1.5.0",
+      "glow-client": "release/v1.5.0",
+      "glow-masterdata": "release/dev-ld"
+    },
+    "v1.5.1-devld": {
+      "glow-server": "develop/v1.5.1",
+      "glow-client": "release/v1.5.0",
+      "glow-masterdata": "release/dev-ld"
+    },
+    "v1.6.0-devld": {
+      "glow-server": "develop/v1.6.0",
       "glow-client": "release/v1.5.0",
       "glow-masterdata": "release/dev-ld"
     }
