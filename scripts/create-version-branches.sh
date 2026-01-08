@@ -76,21 +76,7 @@ ensure_on_base_branch() {
 
     cd "${PROJECT_ROOT}"
 
-    # 未コミット変更チェック
-    if ! git diff-index --quiet HEAD -- 2>/dev/null; then
-        error "未コミットの変更があります"
-        error "変更をコミットするか、破棄してから再実行してください"
-        exit 1
-    fi
-
-    # Untrackedファイルをチェック
-    if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-        error "未追跡ファイルがあります"
-        error "ファイルを追加するか、削除してから再実行してください"
-        exit 1
-    fi
-
-    # version-env-base に切り替え
+    # version-env-base に切り替え（git reset --hard で強制リセット）
     git fetch origin "${BASE_BRANCH}"
     git checkout "${BASE_BRANCH}"
     git reset --hard "origin/${BASE_BRANCH}"
@@ -208,6 +194,7 @@ commit_projects_directory() {
 
     git add projects/
     git add .gitignore
+    git add "${CONFIG_FILE}"
 
     git commit -m "[バージョン環境] ${version} のプロジェクトファイルを追加
 
