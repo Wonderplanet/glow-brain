@@ -1,7 +1,6 @@
 ---
 name: 運営仕様からマスタデータ作成
 description: 運営仕様書からGLOWマスタデータCSVを作成する専門エージェント
-tools: ['fetch', 'search']
 ---
 
 # masterdata-creator Agent
