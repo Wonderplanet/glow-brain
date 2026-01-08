@@ -230,9 +230,13 @@ grep "^e,chara_" projects/glow-masterdata/MstUnit.csv | grep "100kano"
 
 ---
 
-## ヘルパースクリプト
+## ツール
 
-便利なスクリプトが用意されています：
+マスタデータ調査を支援するツールが用意されています。
+
+### スキーマ調査ツール（search_schema.sh）
+
+**用途**: DBスキーマの構造を調査する（jqベース）
 
 ```bash
 # テーブル検索
@@ -246,6 +250,224 @@ grep "^e,chara_" projects/glow-masterdata/MstUnit.csv | grep "100kano"
 ```
 
 詳細なjqパターンは [schema-reference.md](references/schema-reference.md) を参照してください。
+
+---
+
+## DuckDBによるSQL分析
+
+DuckDB CLIを使用すると、マスタデータCSVに対して高速かつ柔軟なSQL分析が可能です。
+
+### 特徴
+
+- ✅ **標準SQL**: 普遍的な知識で使える
+- ✅ **JOIN/集計/統計**: 複雑なクエリも自由自在
+- ✅ **対話モード**: REPL、ヒストリ、補完機能
+- ✅ **__NULL__ハンドリング**: CSVの`__NULL__`を真のNULLとして扱える
+
+### セットアップ
+
+**1. DuckDBのインストール**
+
+```bash
+# インストール確認
+which duckdb
+
+# インストール（未インストールの場合）
+brew install duckdb
+```
+
+**2. DuckDBの起動**
+
+```bash
+# glow-brainルートディレクトリで起動
+cd /Users/junki.mizutani/Documents/workspace/glow/glow-brain
+
+# 初期化ファイルを読み込んで起動（推奨）
+duckdb -init .claude/skills/masterdata-explorer/.duckdbrc
+
+# または、初期化なしで起動
+duckdb
+```
+
+初期化ファイル（`.duckdbrc`）を使用すると、便利な設定が自動で適用されます。
+
+### 基本的な使い方
+
+#### 対話モード（推奨）
+
+```bash
+# DuckDB起動
+$ duckdb -init .claude/skills/masterdata-explorer/.duckdbrc
+
+# URレア度のユニット一覧
+D SELECT * FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+  WHERE ENABLE = 'e' AND rarity = 'UR' LIMIT 10;
+
+# レア度別集計
+D SELECT rarity, COUNT(*) as count
+  FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+  WHERE ENABLE = 'e'
+  GROUP BY rarity
+  ORDER BY count DESC;
+
+# シリーズ別ユニット数（JOIN）
+D SELECT s.asset_key as series, COUNT(u.id) as units
+  FROM read_csv('projects/glow-masterdata/MstSeries.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') s
+  LEFT JOIN read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') u
+    ON s.id = u.mst_series_id AND u.ENABLE = 'e'
+  WHERE s.ENABLE = 'e'
+  GROUP BY s.asset_key
+  ORDER BY units DESC;
+
+# 終了
+D .quit
+```
+
+#### ワンライナー
+
+```bash
+# コマンドライン引数で直接実行
+duckdb -init .claude/skills/masterdata-explorer/.duckdbrc \
+  -c "SELECT rarity, COUNT(*) FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') WHERE ENABLE = 'e' GROUP BY rarity"
+```
+
+### DuckDB便利コマンド
+
+対話モード内で使える便利なコマンド（`.`で始まる）：
+
+```sql
+-- モード変更
+.mode csv               -- CSV出力（デフォルト）
+.mode table             -- テーブル形式
+.mode markdown          -- Markdown表形式
+
+-- ヘッダー表示
+.headers on             -- ヘッダー表示（デフォルト）
+.headers off            -- ヘッダー非表示
+
+-- タイマー
+.timer on               -- クエリ実行時間を表示
+
+-- ヘルプ
+.help                   -- コマンド一覧
+```
+
+### 実践的なクエリ例
+
+#### 基本的な検索
+
+```sql
+-- 特定IDの検索
+SELECT * FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+WHERE id = 'chara_dan_00001';
+
+-- 部分一致検索
+SELECT * FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+WHERE id LIKE 'chara_dan%';
+
+-- ユニーク値一覧
+SELECT DISTINCT rarity FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+WHERE ENABLE = 'e' ORDER BY rarity;
+
+-- レコード数
+SELECT COUNT(*) FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+WHERE ENABLE = 'e' AND rarity = 'UR';
+```
+
+#### JOIN分析
+
+```sql
+-- イベントとシリーズの紐付け
+SELECT e.id as event_id, e.start_at, s.asset_key as series
+FROM read_csv('projects/glow-masterdata/MstEvent.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') e
+JOIN read_csv('projects/glow-masterdata/MstSeries.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') s
+  ON e.mst_series_id = s.id
+WHERE e.ENABLE = 'e' AND s.ENABLE = 'e';
+
+-- ユニットとアビリティの結合
+SELECT u.id, u.rarity, a.mst_ability_id
+FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') u
+LEFT JOIN read_csv('projects/glow-masterdata/MstUnitAbility.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') a
+  ON u.mst_unit_ability_id1 = a.id
+WHERE u.ENABLE = 'e' AND u.rarity = 'UR';
+```
+
+#### 整合性チェック
+
+```sql
+-- 報酬アイテムの存在確認
+SELECT
+  r.resource_id,
+  CASE WHEN i.id IS NULL THEN '❌ NOT FOUND' ELSE '✅ OK' END as status
+FROM read_csv('projects/glow-masterdata/MstStageReward.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') r
+LEFT JOIN read_csv('projects/glow-masterdata/MstItem.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') i
+  ON r.resource_id = i.id AND r.resource_type = 'Item'
+WHERE r.ENABLE = 'e'
+GROUP BY r.resource_id, i.id
+HAVING status = '❌ NOT FOUND';
+```
+
+#### 集計・統計
+
+```sql
+-- レア度別分布（パーセンテージ付き）
+SELECT
+  rarity,
+  COUNT(*) as count,
+  ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) as percentage
+FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+WHERE ENABLE = 'e'
+GROUP BY rarity
+ORDER BY count DESC;
+
+-- ウィンドウ関数（ランキング）
+SELECT
+  id,
+  rarity,
+  max_attack_power,
+  RANK() OVER (PARTITION BY rarity ORDER BY max_attack_power DESC) as rank_in_rarity
+FROM read_csv('projects/glow-masterdata/MstUnit.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+WHERE ENABLE = 'e'
+ORDER BY rarity, rank_in_rarity
+LIMIT 20;
+```
+
+### マクロなしでの使い方
+
+初期化ファイルを使わない場合は、`read_csv()`を直接使用します：
+
+```sql
+SELECT * FROM read_csv(
+  'projects/glow-masterdata/MstUnit.csv',
+  AUTO_DETECT=TRUE,
+  nullstr='__NULL__'
+)
+WHERE ENABLE = 'e' AND rarity = 'UR';
+```
+
+### クエリパターン集
+
+20以上の実践的なクエリパターンは [duckdb-query-examples.md](references/duckdb-query-examples.md) を参照してください。
+
+---
+
+## 機能の使い分けガイド
+
+| 用途 | 推奨ツール | 理由 |
+|------|----------|------|
+| テーブル名検索 | `search_schema.sh tables` | スキーマJSONから検索、軽量 |
+| カラム名一覧 | `search_schema.sh columns` | スキーマ定義を参照 |
+| enum値の確認 | `search_schema.sh enum` | 許可値の確認に最適 |
+| 1-2行の確認 | `grep`/`head` | 高速、シンプル |
+| **条件検索** | **DuckDB** | WHERE句で柔軟な検索 |
+| **JOIN分析** | **DuckDB** | 複数テーブルの関連分析 |
+| **集計・統計** | **DuckDB** | COUNT、GROUP BY、ウィンドウ関数など |
+
+### 基本的な判断基準
+
+1. **スキーマ構造を知りたい** → `search_schema.sh`
+2. **データ内容を見たい** → DuckDB または `grep`/`head`
+3. **複数テーブルを分析したい** → DuckDB
 
 ---
 
@@ -271,6 +493,7 @@ grep "^e,chara_" projects/glow-masterdata/MstUnit.csv | grep "100kano"
 
 ## 詳細ドキュメント
 
-より詳細なjqパターンとスキーマ構造については：
+より詳細な情報については、以下を参照してください：
 
-[schema-reference.md](references/schema-reference.md)
+- [schema-reference.md](references/schema-reference.md) - jqパターンとスキーマ構造
+- [duckdb-query-examples.md](references/duckdb-query-examples.md) - DuckDBクエリパターン集（20+例）
