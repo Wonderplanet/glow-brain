@@ -272,6 +272,5 @@ JSON内のダブルクォートを `""` でエスケープします。
 
 ```bash
 python .claude/skills/masterdata-validator/scripts/validate_all.py \
-  --csv マスタデータ/運営仕様/<運営仕様名>/<ファイル名>.csv \
-  --level full
+  --csv path/to/<ファイル名>.csv
 ```
