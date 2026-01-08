@@ -1,0 +1,5 @@
+ENABLE,release_key,id,onomatopoeia1_asset_key,onomatopoeia2_asset_key,onomatopoeia3_asset_key,sound_effect_asset_key,killer_sound_effect_asset_key
+e,202509010,dageki_1,Do,Doka,Doka2,SSE_051_004,SSE_051_013
+e,202509010,dageki_2,Bishi,Don,Doka,SSE_051_004,SSE_051_013
+e,202509010,zangeki_1,Za,Zashu,Zuba,SSE_051_004,SSE_051_014
+e,202509010,shageki_1,Bishi,Doka2,Ga,SSE_051_004,SSE_051_013
