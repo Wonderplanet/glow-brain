@@ -1,5 +1,5 @@
 ---
-name: masterdata-creator
+name: 運営仕様書からマスタデータを作成する専門エージェント
 description: 運営仕様書からGLOWマスタデータCSVを作成する専門エージェント
 tools: ['fetch', 'search']
 ---
