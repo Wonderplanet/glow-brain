@@ -14,7 +14,7 @@ argument-hint: CSVファイルパス モデル名
 ## 入力
 
 以下の2つの引数を受け取ります:
-1. **CSVファイルパス**: 検証対象のCSVファイル（例: `マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv`）
+1. **CSVファイルパス**: 検証対象のCSVファイル（例: `マスタデータ/運営仕様/新春ガチャ/OprGacha.csv`）
 2. **モデル名**: モデル名（PascalCase形式、例: `OprGacha`, `MstUnit`）
 
 ## 出力
@@ -270,7 +270,7 @@ CSV作成時に`projects/glow-masterdata/sheet_schema/<ModelName>.csv`をコピ�
 ## 検証ステータス: ✅ 問題なし
 
 - **検証日時**: 2025-01-15 14:30:00
-- **対象ファイル**: マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv
+- **対象ファイル**: マスタデータ/運営仕様/新春ガチャ/OprGacha.csv
 - **モデル名**: OprGacha
 - **テーブル名**: opr_gachas
 
@@ -310,7 +310,7 @@ CSV作成時に`projects/glow-masterdata/sheet_schema/<ModelName>.csv`をコピ�
 ## 検証ステータス: ⚠️ 警告あり
 
 - **検証日時**: 2025-01-15 14:35:00
-- **対象ファイル**: マスタデータ/運用仕様書/新春ガチャ/MstUnit.csv
+- **対象ファイル**: マスタデータ/運営仕様/新春ガチャ/MstUnit.csv
 - **モデル名**: MstUnit
 - **テーブル名**: mst_units
 
@@ -346,7 +346,7 @@ CSV作成時に`projects/glow-masterdata/sheet_schema/<ModelName>.csv`をコピ�
 ```bash
 # 補助スクリプトを使用した検証
 bash .claude/skills/masterdata-validator/scripts/validate_csv.sh \
-    マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv \
+    マスタデータ/運営仕様/新春ガチャ/OprGacha.csv \
     OprGacha
 ```
 
@@ -355,7 +355,7 @@ bash .claude/skills/masterdata-validator/scripts/validate_csv.sh \
 JSON形式で検証結果が返されます:
 ```json
 [
-  {"level":"INFO","message":"CSV検証を開始します: マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv (モデル: OprGacha)"},
+  {"level":"INFO","message":"CSV検証を開始します: マスタデータ/運営仕様/新春ガチャ/OprGacha.csv (モデル: OprGacha)"},
   {"level":"INFO","message":"ステップ6-1: スキーマJSONファイルの参照"},
   {"level":"INFO","message":"テーブル名: opr_gachas"},
   ...

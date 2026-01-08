@@ -255,7 +255,7 @@ jq '.databases.usr.tables.usr_users' projects/glow-server/api/database/schema/ex
 
 CSV作成時は必ず以下のテンプレートファイルをコピーして使用してください:
 ```bash
-cp projects/glow-masterdata/sheet_schema/<ModelName>.csv マスタデータ/運用仕様書/<施策名>/<ModelName>.csv
+cp projects/glow-masterdata/sheet_schema/<ModelName>.csv マスタデータ/運営仕様/<施策名>/<ModelName>.csv
 ```
 
 テンプレートファイルのヘッダー（3行目）に完全に従うことが重要です。勝手にカラムを追加・削除しないでください。

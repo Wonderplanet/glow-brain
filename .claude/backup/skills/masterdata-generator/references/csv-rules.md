@@ -8,7 +8,7 @@
 
 ```bash
 # テンプレートファイルをコピー
-cp projects/glow-masterdata/sheet_schema/[ModelName].csv マスタデータ/運用仕様書/[施策名]/[ModelName].csv
+cp projects/glow-masterdata/sheet_schema/[ModelName].csv マスタデータ/運営仕様/[施策名]/[ModelName].csv
 ```
 
 ### テンプレートファイルの構造

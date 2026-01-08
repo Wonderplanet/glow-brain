@@ -26,7 +26,7 @@ Arguments:
   model_name     - モデル名（例: OprGacha, MstUnit）
 
 Example:
-  $0 マスタデータ/運用仕様書/新春ガチャ/OprGacha.csv OprGacha
+  $0 マスタデータ/運営仕様/新春ガチャ/OprGacha.csv OprGacha
 
 Output:
   検証結果と修正ログをJSON形式で標準出力
