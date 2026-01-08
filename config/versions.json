@@ -1,12 +1,12 @@
 {
   "current_version": "1.5.0",
   "versions": {
-    "1.4.1": {
+    "v1.4.1-devld": {
       "glow-server": "develop/v1.4.1",
       "glow-client": "release/v1.4.1",
       "glow-masterdata": "release/dev-ld"
     },
-    "1.5.0": {
+    "v1.5.0-devld": {
       "glow-server": "develop/v1.5.0",
       "glow-client": "release/v1.5.0",
       "glow-masterdata": "release/dev-ld"
