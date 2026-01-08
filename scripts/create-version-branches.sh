@@ -88,6 +88,11 @@ ensure_on_base_branch() {
         success "projects/ ディレクトリを削除しました"
     fi
 
+    # projects/.gitkeep を復元（version-env-base には .gitkeep が存在するため）
+    if [ ! -f "${PROJECTS_DIR}/.gitkeep" ]; then
+        git checkout -- projects/.gitkeep 2>/dev/null || true
+    fi
+
     success "version-env-base に切り替わりました"
 }
 
