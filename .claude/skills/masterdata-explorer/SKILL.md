@@ -208,42 +208,6 @@ grep "CharacterFragment" projects/glow-masterdata/MstItem.csv
 grep "^e,piece_glo_00001," projects/glow-masterdata/MstItem.csv
 ```
 
-### リソース検索の手順
-
-#### Step 1: 01_概要ファイルを確認
-
-```bash
-# 01_概要ファイルを確認
-cat "マスタデータ/運用仕様書/${施策名}/要件/${施策名}_仕様書_01_概要.csv"
-```
-
-#### Step 2: 報酬一覧ファイルを確認（存在する場合）
-
-```bash
-# 報酬一覧ファイルを確認
-cat "マスタデータ/運用仕様書/${施策名}/要件/${施策名}_仕様書_05_報酬一覧.csv"
-```
-
-#### Step 3: 他の要件CSVファイルを検索
-
-```bash
-# 施策ディレクトリ内の全要件CSVからキャラクターIDを検索
-grep -r "chara_100kano_00001" "マスタデータ/運用仕様書/${施策名}/要件/"
-
-# アイテムIDを検索
-grep -r "item_xxxxx" "マスタデータ/運用仕様書/${施策名}/要件/"*.csv
-```
-
-#### Step 4: 既存マスタデータを検索
-
-```bash
-# キャラクター
-grep "^e,chara_100kano_00001," projects/glow-masterdata/MstUnit.csv
-
-# アイテム
-grep "^e,item_xxxxx," projects/glow-masterdata/MstItem.csv
-```
-
 ### 報酬設定で使える検索
 
 ```bash
