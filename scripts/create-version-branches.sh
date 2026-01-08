@@ -21,7 +21,7 @@ readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 readonly CONFIG_FILE="${PROJECT_ROOT}/config/versions.json"
 readonly PROJECTS_DIR="${PROJECT_ROOT}/projects"
-readonly BASE_BRANCH="version-env-base"
+readonly BASE_BRANCH="main"
 
 # ====================================
 # ログ出力関数
