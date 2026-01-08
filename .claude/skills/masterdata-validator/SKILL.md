@@ -159,7 +159,7 @@ CSVファイル名から自動的にテーブル名を推測します：
 |-------------|-----------------|
 | `MstEvent.csv` | `mst_events` |
 | `OprGacha.csv` | `opr_gachas` |
-| `MstUnitI18n.csv` | `mst_unit_i18ns` |
+| `MstUnitI18n.csv` | `mst_units_i18n` |
 
 手動でテーブル名を指定する場合は `--table` オプションを使用します。
 
