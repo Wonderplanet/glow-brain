@@ -5,12 +5,7 @@
 全ての検証を実行して統合レポートを生成します。
 
 使用方法:
-    python validate_all.py \
-        --csv <CSVファイルパス> \
-        --level [basic|full]
-
-    basic: テンプレート一致、CSV形式、必須カラム
-    full: basic + DBスキーマ整合性（デフォルト）
+    python validate_all.py --csv <CSVファイルパス>
 """
 
 import sys
@@ -60,13 +55,12 @@ def run_validation_script(script_path: str, args: List[str]) -> Dict[str, Any]:
         }
 
 
-def validate_all(csv_path: str, level: str = 'full') -> Dict[str, Any]:
+def validate_all(csv_path: str) -> Dict[str, Any]:
     """
     統合検証を実行
 
     Args:
         csv_path: CSVファイルのパス
-        level: 検証レベル（basic or full）
 
     Returns:
         result: 統合検証結果
@@ -90,7 +84,6 @@ def validate_all(csv_path: str, level: str = 'full') -> Dict[str, Any]:
 
     results = {
         "file": csv_filename,
-        "validation_level": level,
         "validations": {},
         "summary": {
             "total_issues": 0,
@@ -122,21 +115,20 @@ def validate_all(csv_path: str, level: str = 'full') -> Dict[str, Any]:
     )
     results['validations']['format'] = format_result
 
-    # 3. DBスキーマ検証（fullレベルのみ）
-    if level == 'full':
-        if Path(schema_path).exists():
-            print(f"🔍 DBスキーマ検証中...", file=sys.stderr)
-            schema_result = run_validation_script(
-                str(script_dir / 'validate_schema.py'),
-                ['--csv', csv_path, '--schema', schema_path]
-            )
-            results['validations']['schema'] = schema_result
-        else:
-            results['validations']['schema'] = {
-                "valid": False,
-                "warning": f"スキーマファイルが見つかりません: {schema_path}",
-                "skipped": True
-            }
+    # 3. DBスキーマ検証
+    if Path(schema_path).exists():
+        print(f"🔍 DBスキーマ検証中...", file=sys.stderr)
+        schema_result = run_validation_script(
+            str(script_dir / 'validate_schema.py'),
+            ['--csv', csv_path, '--schema', schema_path]
+        )
+        results['validations']['schema'] = schema_result
+    else:
+        results['validations']['schema'] = {
+            "valid": False,
+            "warning": f"スキーマファイルが見つかりません: {schema_path}",
+            "skipped": True
+        }
 
     # サマリー集計
     for validation_name, validation_result in results['validations'].items():
@@ -171,17 +163,11 @@ def main():
         required=True,
         help='CSVファイルのパス'
     )
-    parser.add_argument(
-        '--level',
-        choices=['basic', 'full'],
-        default='full',
-        help='検証レベル（basic: 基本検証のみ, full: 完全検証）'
-    )
 
     args = parser.parse_args()
 
     # 検証実行
-    result = validate_all(args.csv, args.level)
+    result = validate_all(args.csv)
 
     # JSON出力
     print(json.dumps(result, ensure_ascii=False, indent=2))

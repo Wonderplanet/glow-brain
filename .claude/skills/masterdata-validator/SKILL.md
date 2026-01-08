@@ -7,24 +7,12 @@ description: GLOWマスタデータCSVの検証スキル。作成したCSVファ
 
 ## 概要
 
-運営仕様から作成したマスタデータCSVファイルを検証します。以下の検証を自動化：
+運営仕様から作成したマスタデータCSVファイルを検証します。以下の検証を自動実行：
 
 1. **テンプレート一致**: 列順・列名がテンプレートCSVと一致するか
 2. **CSV形式**: 改行エスケープ、ダブルクォート等の形式が正しいか
 3. **必須カラム**: NULL不可カラムに値が設定されているか
-4. **DBスキーマ整合性**: 型、enum値がスキーマと一致するか（fullレベルのみ）
-
-## 検証レベル
-
-### basic（基本検証）
-- テンプレート一致チェック
-- CSV形式チェック
-- 必須カラムチェック
-
-### full（完全検証、推奨）
-- basicの全て
-- DBスキーマとの整合性チェック
-- 型・enum値の検証
+4. **DBスキーマ整合性**: 型、enum値がスキーマと一致するか
 
 ## 基本的な使い方
 
@@ -32,15 +20,13 @@ description: GLOWマスタデータCSVの検証スキル。作成したCSVファ
 
 ```bash
 python .claude/skills/masterdata-validator/scripts/validate_all.py \
-  --csv マスタデータ/運営仕様/<運営仕様名>/MstEvent.csv \
-  --level full
+  --csv マスタデータ/運営仕様/<運営仕様名>/MstEvent.csv
 ```
 
 **出力例（成功）**:
 ```json
 {
   "file": "MstEvent.csv",
-  "validation_level": "full",
   "valid": true,
   "validations": {
     "template": {"valid": true, "issues": []},
@@ -59,7 +45,6 @@ python .claude/skills/masterdata-validator/scripts/validate_all.py \
 ```json
 {
   "file": "OprGacha.csv",
-  "validation_level": "full",
   "valid": false,
   "validations": {
     "template": {
@@ -125,10 +110,8 @@ python .claude/skills/masterdata-validator/scripts/validate_schema.py \
 運営仕様からマスタデータCSVを作成したら、すぐに検証を実行します。
 
 ```bash
-# 完全検証を実行
 python .claude/skills/masterdata-validator/scripts/validate_all.py \
-  --csv マスタデータ/運営仕様/<運営仕様名>/<ファイル名>.csv \
-  --level full
+  --csv マスタデータ/運営仕様/<運営仕様名>/<ファイル名>.csv
 ```
 
 ### Step 2: エラーの確認
@@ -164,8 +147,7 @@ python .claude/skills/masterdata-validator/scripts/validate_all.py \
 for csv in マスタデータ/運営仕様/<運営仕様名>/*.csv; do
   echo "Validating $csv..."
   python .claude/skills/masterdata-validator/scripts/validate_all.py \
-    --csv "$csv" \
-    --level full
+    --csv "$csv"
 done
 ```
 
