@@ -23,78 +23,70 @@ GitHub Copilot Chat で使えるカスタムエージェント（Claude CodeのS
 
 ### 1. 最新の公式ドキュメントを確認
 
-まず、GitHub Copilot Agent の最新の公式ドキュメントを参照して、現在のベストプラクティスを確認してください：
+WebFetch または WebSearch を使用して以下を調査：
+- GitHub Copilot Custom Agentの最新仕様
+- 推奨されるエージェントプロンプトパターン
+- ベストプラクティス
 
-- WebFetch または WebSearch を使用して以下を調査：
-  - GitHub Copilot Agent の基本構造
-  - 推奨されるプロンプトパターン
-  - ツール統合の方法
-  - エラーハンドリングのベストプラクティス
-  - セキュリティ考慮事項
+参考URL:
+- https://docs.github.com/en/copilot/reference/custom-agents-configuration
+- https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/
 
 ### 2. エージェントの要件を明確化
 
 AskUserQuestion ツールを使用して、以下の情報を収集してください：
 
 **質問1: エージェントの目的**
-- エージェントが解決する主な課題は何か
-- 対象となるユースケース（例: コードレビュー、テスト生成、ドキュメント作成）
+- このエージェントが解決する主な課題は何か
+- 対象となるユースケース（例: コードレビュー、テスト生成、実装計画）
 
-**質問2: 必要な機能**
-- ファイル読み取りが必要か
-- API呼び出しが必要か
-- データベースアクセスが必要か
-- その他の外部ツール統合が必要か
+**質問2: 必要な機能とツール**
+- 特定のツールに制限する必要があるか（例: read, search, editのみ）
+- 全ツールへのアクセスが必要か
 
 **質問3: 対象言語/フレームワーク**
 - 特定の言語に特化するか（例: TypeScript, Python, Go）
-- 特定のフレームワークに特化するか（例: React, Django, Laravel）
+- 特定のフレームワークに特化するか（例: React, Laravel）
 - 汎用的なエージェントか
 
-**質問4: 出力形式**
-- コード生成が主か
-- 分析結果のレポートが主か
-- インタラクティブな提案が主か
+**質問4: 境界線**
+- 絶対に実行してはいけない操作は何か（例: 本番コードの変更、設定ファイルの削除）
+- 確認が必要な操作は何か
 
-### 3. エージェントプロンプトファイルの作成
+### 3. エージェントファイルの作成
 
-`.github/copilot/agents/$1.md` にエージェントプロンプトファイルを作成します。
+`.github/agents/$1.agent.md` にエージェントファイルを作成します。
+
+必ず以下を含めてください：
+1. YAML frontmatter（name, descriptionは必須）
+2. Purpose（目的）
+3. Core Responsibilities（主要な責任）
+4. Guidelines（ガイドライン）
+5. Boundaries（境界線: ✅⚠️🚫）
+6. Workflow（ワークフロー）
+7. Commands（実行可能なコマンド）
+8. Examples（具体的な使用例）
+9. Limitations（制限事項）
+10. Security Considerations（セキュリティ考慮事項）
 
 #### ファイル構造（公式推奨フォーマット）
 
 ```markdown
-# $1 Agent
+---
+name: $1
+description: [エージェントの1行説明]
+# tools: []  # オプション: 特定ツールのみに制限する場合
+# model: Claude Sonnet 4  # オプション: 使用するAIモデルを指定
+# target: vscode  # オプション: vscode または github-copilot
+---
 
-[エージェントの1行説明]
+# $1 Agent
 
 ## Purpose
 
-[このエージェントの目的と解決する課題]
+このエージェントは[目的]を実現します。
 
-## Capabilities
-
-- [機能1]
-- [機能2]
-- [機能3]
-
-## Usage
-
-\`\`\`
-@copilot /$1 [command]
-\`\`\`
-
-### Examples
-
-\`\`\`
-@copilot /$1 review this PR
-@copilot /$1 generate tests for UserService
-\`\`\`
-
-## System Instructions
-
-You are a specialized GitHub Copilot agent focused on [specific domain].
-
-### Core Responsibilities
+## Core Responsibilities
 
 1. **[責任1]**
    - [詳細な説明]
@@ -104,47 +96,66 @@ You are a specialized GitHub Copilot agent focused on [specific domain].
    - [詳細な説明]
    - [期待される動作]
 
-### Guidelines
+## Guidelines
 
-- **Code Quality**: [コード品質基準]
-- **Best Practices**: [適用するベストプラクティス]
-- **Error Handling**: [エラー処理方針]
-- **Documentation**: [ドキュメント要件]
+### Code Quality
+[コード品質基準]
 
-### Workflow
+### Best Practices
+[適用するベストプラクティス]
 
-1. [ステップ1]
-2. [ステップ2]
-3. [ステップ3]
+### Boundaries
 
-### Tools and Context
+- ✅ **常に実行すべきこと**:
+  - [項目1]
+  - [項目2]
 
-- **File Access**: [ファイルアクセスパターン]
-- **API Usage**: [API使用方法]
-- **External Tools**: [外部ツール統合]
+- ⚠️ **確認が必要なこと**:
+  - [項目1]
+  - [項目2]
 
-### Response Format
+- 🚫 **絶対に実行してはいけないこと**:
+  - [項目1]
+  - [項目2]
 
-[期待される応答形式]
+## Workflow
 
-### Examples
+1. [ステップ1の説明]
+2. [ステップ2の説明]
+3. [ステップ3の説明]
 
-#### Example 1: [ユースケース1]
+## Commands
 
-User: `@copilot /$1 [example command]`
+実行可能なコマンド例：
+\`\`\`bash
+npm test
+npm run build
+\`\`\`
+
+## Examples
+
+### Example 1: [ユースケース1]
+
+User Input:
+\`\`\`
+@copilot /$1 [example command]
+\`\`\`
 
 Expected Response:
 \`\`\`
-[期待される応答例]
+[期待される応答の詳細]
 \`\`\`
 
-#### Example 2: [ユースケース2]
+### Example 2: [ユースケース2]
 
-User: `@copilot /$1 [example command]`
+User Input:
+\`\`\`
+@copilot /$1 [example command]
+\`\`\`
 
 Expected Response:
 \`\`\`
-[期待される応答例]
+[期待される応答の詳細]
 \`\`\`
 
 ## Limitations
@@ -158,116 +169,17 @@ Expected Response:
 - [セキュリティ考慮事項2]
 ```
 
-### 4. GitHub Copilot Agent 設定ファイルの作成（オプション）
-
-`.github/copilot/agents/$1.json` に設定ファイルを作成します（必要に応じて）：
-
-```json
-{
-  "name": "$1",
-  "description": "[エージェントの簡潔な説明]",
-  "version": "1.0.0",
-  "capabilities": {
-    "file_access": true,
-    "web_search": false,
-    "code_execution": false
-  },
-  "context": {
-    "max_tokens": 4000,
-    "temperature": 0.7
-  },
-  "tools": []
-}
-```
-
-### 5. 使用例とドキュメントの作成
-
-`docs/copilot-agents/$1.md` に詳細なドキュメントを作成します：
-
-```markdown
-# $1 Agent - 使用ガイド
-
-## 概要
-
-[エージェントの詳細な説明]
-
-## インストール
-
-\`\`\`bash
-# GitHub Copilot Agent は自動的に認識されます
-# .github/copilot/agents/$1.md が配置されていることを確認
-\`\`\`
-
-## 使用方法
-
-### 基本的な使い方
-
-\`\`\`
-@copilot /$1 [command]
-\`\`\`
-
-### 実用例
-
-#### ユースケース1: [タイトル]
-
-\`\`\`
-@copilot /$1 [具体的なコマンド]
-\`\`\`
-
-**期待される結果:**
-[説明]
-
-#### ユースケース2: [タイトル]
-
-\`\`\`
-@copilot /$1 [具体的なコマンド]
-\`\`\`
-
-**期待される結果:**
-[説明]
-
-## ベストプラクティス
-
-1. **[プラクティス1]**
-   - [説明]
-
-2. **[プラクティス2]**
-   - [説明]
-
-## トラブルシューティング
-
-### 問題: [一般的な問題1]
-
-**解決策:**
-[解決方法]
-
-### 問題: [一般的な問題2]
-
-**解決策:**
-[解決方法]
-
-## 制限事項
-
-- [制限1]
-- [制限2]
-
-## 参考リンク
-
-- [GitHub Copilot Custom Agents 公式ドキュメント](https://docs.github.com/en/copilot/using-github-copilot/using-extensions-to-integrate-external-tools-with-copilot-chat)
-- [プロジェクト固有のドキュメント]
-```
-
-### 6. テストとバリデーション
+### 4. テストとバリデーション
 
 作成したエージェントが正しく動作することを確認するためのチェックリスト：
 
-- [ ] プロンプトファイルが正しいパスに配置されている
-- [ ] プロンプトが明確で具体的
-- [ ] 例が十分に提供されている
-- [ ] エラーハンドリングが考慮されている
-- [ ] セキュリティリスクが最小化されている
-- [ ] ドキュメントが完備している
-- [ ] 実際の GitHub Copilot Chat でテストできる
+- [ ] エージェントファイルが `.github/agents/$1.agent.md` に配置されている
+- [ ] YAML frontmatterが正しく記述されている（name, description必須）
+- [ ] エージェントの指示がMarkdown形式で明確に記述されている
+- [ ] 実用的な例が提供されている（最低2つ）
+- [ ] 境界線（✅⚠️🚫）が明確に定義されている
+- [ ] 実行可能なコマンドが記載されている
+- [ ] セキュリティリスクが考慮されている
 
 ## ベストプラクティス
 
@@ -295,21 +207,25 @@ Expected Response:
 
 ## 注意事項
 
-- GitHub Copilot Agent は GitHub Copilot Chat でのみ利用可能です
-- プロンプトファイルは `.github/copilot/agents/` ディレクトリに配置する必要があります
+- GitHub Copilot Custom Agent は GitHub Copilot Chat および VS Code で利用可能です
+- エージェントファイルは `.github/agents/` ディレクトリに配置する必要があります
+- ファイル拡張子は `.agent.md` を使用してください
 - エージェント名は小文字とハイフンのみを使用してください
+- YAML frontmatterのname, descriptionは必須フィールドです
 - 公式ドキュメントは頻繁に更新されるため、最新情報を確認してください
-- 作成したエージェントは組織内でのみ使用可能です（パブリック公開には追加の設定が必要）
 
 ## 出力形式
 
 以下のファイルを生成してください：
 
-1. **エージェントプロンプト**: `.github/copilot/agents/$1.md`
-2. **設定ファイル**（オプション）: `.github/copilot/agents/$1.json`
-3. **ドキュメント**: `docs/copilot-agents/$1.md`
+1. **エージェントファイル**: `.github/agents/$1.agent.md`
+   - 必須のYAML frontmatter（name, description）を含む
+   - Markdown形式でエージェントの詳細な指示を記述
 
-各ファイルのパスと内容を明確に示し、使用方法の例を提供してください。
+ファイル作成後、以下を提供してください：
+- 作成したファイルのパス
+- 基本的な使用方法の例
+- GitHub Copilot ChatまたはVS Codeでの起動方法
 
 ---
 
