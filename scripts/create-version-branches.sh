@@ -95,6 +95,13 @@ ensure_on_base_branch() {
     git checkout "${BASE_BRANCH}"
     git reset --hard "origin/${BASE_BRANCH}"
 
+    # projects/ ディレクトリをクリーンアップ
+    if [ -d "${PROJECTS_DIR}" ]; then
+        info "既存の projects/ ディレクトリを削除しています..."
+        rm -rf "${PROJECTS_DIR}"
+        success "projects/ ディレクトリを削除しました"
+    fi
+
     success "version-env-base に切り替わりました"
 }
 
