@@ -187,7 +187,7 @@ update_repository() {
     # 未コミット変更チェック（読み取り専用ポリシー）
     if has_uncommitted_changes "${repo_path}"; then
         error "${repo_name} に未コミットの変更があります"
-        error "glow-brain-2 は参照専用プロジェクトのため、リポジトリへの変更は禁止されています"
+        error "glow-brain は参照専用プロジェクトのため、リポジトリへの変更は禁止されています"
         error "変更を破棄するか、別の場所に退避してから再実行してください"
         exit 1
     fi
@@ -345,7 +345,7 @@ show_current_configuration() {
 # メイン処理
 # ====================================
 main() {
-    info "glow-brain-2 セットアップスクリプトを開始します"
+    info "glow-brain セットアップスクリプトを開始します"
     echo ""
 
     # 前提条件チェック
