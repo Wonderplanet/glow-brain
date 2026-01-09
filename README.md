@@ -115,6 +115,9 @@ cd glow-brain
 
 全バージョンの環境ブランチを一括で作成できます:
 
+※ github action workflow で 定期実行するように登録済みです
+(.github/workflows/create-version-branches.yml)
+
 ```bash
 # 全バージョンのブランチを作成（確認あり）
 ./scripts/create-version-branches.sh
