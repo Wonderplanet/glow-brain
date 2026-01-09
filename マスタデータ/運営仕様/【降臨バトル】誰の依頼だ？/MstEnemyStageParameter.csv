@@ -1,0 +1,14 @@
+memo
+TABLE,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter,MstEnemyStageParameter
+ENABLE,release_key,id,mst_enemy_character_id,character_unit_kind,role_type,color,sort_order,hp,damage_knock_back_count,move_speed,well_distance,attack_power,attack_combo_cycle,mst_unit_ability_id1,drop_battle_point,mstTransformationEnemyStageParameterId,transformationConditionType,transformationConditionValue
+e,202602010,e_you_00001_you1_advent_Normal_Green,enemy_you_00001_you1,Normal,Defense,Green,,10000,1,45,0.34,100,6,,10,,None,
+e,202602010,e_you_00101_you1_advent_Normal_Green,enemy_you_00101_you1,Normal,Attack,Green,,4000,2,45,0.34,200,6,,4,,None,
+e,202602010,c_you_00001_you1_advent_Normal_Colorless,chara_you_00001_you1,Normal,Attack,Colorless,,10000,2,45,0.34,200,6,,10,,None,
+e,202602010,c_you_00201_you1_advent_Boss_Green,chara_you_00201_you1,Boss,Technical,Green,,80000,4,45,0.34,400,6,,8,,None,
+e,202602010,c_you_00101_you1_advent_Boss_Green,chara_you_00101_you1,Boss,Technical,Green,,200000,8,45,0.34,800,6,,20,,None,
+e,202602010,c_you_00301_you1_advent_Boss_Green,chara_you_00301_you1,Boss,Attack,Green,,300000,10,45,0.34,1000,6,,30,,None,
+e,202602010,e_you_00101_you1_advent_Boss_Colorless,enemy_you_00101_you1,Boss,Attack,Colorless,,500000,15,45,0.34,1500,6,,50,,None,
+e,202602010,c_you_00001_you1_advent_Boss_Green,chara_you_00001_you1,Boss,Attack,Green,,700000,22,45,0.34,2200,6,,70,,None,
+e,202602010,c_you_00201_you1_advent_Normal_Green,chara_you_00201_you1,Normal,Technical,Green,,400000,15,45,0.34,1500,6,,400,,None,
+e,202602010,c_you_00301_you1_advent_Normal_Colorless,chara_you_00301_you1,Normal,Attack,Colorless,,350000,18,45,0.34,1800,6,,350,,None,
+e,202602010,e_you_00001_you1_advent_Boss_Colorless,enemy_you_00001_you1,Boss,Defense,Colorless,,800000,15,45,0.34,1500,6,,80,,None,
