@@ -69,7 +69,19 @@ get_current_version() {
 
 get_repository_url() {
     local repo_name="$1"
-    jq -r ".repositories.\"${repo_name}\"" "${CONFIG_FILE}"
+    local url
+    url=$(jq -r ".repositories.\"${repo_name}\"" "${CONFIG_FILE}")
+
+    # GITHUB_TOKEN が設定されている場合は HTTPS URL に変換して認証情報を付加
+    if [ -n "${GITHUB_TOKEN:-}" ]; then
+        # SSH形式 (git@github.com:owner/repo.git) を HTTPS形式に変換
+        if [[ "$url" =~ ^git@github\.com:(.+)$ ]]; then
+            local repo_path="${BASH_REMATCH[1]}"
+            url="https://x-access-token:${GITHUB_TOKEN}@github.com/${repo_path}"
+        fi
+    fi
+
+    echo "$url"
 }
 
 get_branch_name() {
