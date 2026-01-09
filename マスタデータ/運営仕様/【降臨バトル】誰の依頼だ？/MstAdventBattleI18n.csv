@@ -1,2 +1,4 @@
+memo
+TABLE,MstAdventBattleI18n,MstAdventBattleI18n,MstAdventBattleI18n,MstAdventBattleI18n,MstAdventBattleI18n,MstAdventBattleI18n
 ENABLE,release_key,id,mst_advent_battle_id,language,name,boss_description
 e,202602010,quest_raid_you1_00001_ja,quest_raid_you1_00001,ja,誰の依頼だ？,ボスを倒して高スコア獲得！！
