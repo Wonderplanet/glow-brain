@@ -1,6 +1,6 @@
-ENABLE,id,mst_advent_battle_id,mst_item_id,count,release_key
-e,1,quest_raid_you1_00001,memory_glo_00001,3,202602010
-e,2,quest_raid_you1_00001,memory_glo_00002,3,202602010
-e,3,quest_raid_you1_00001,memory_glo_00003,3,202602010
-e,4,quest_raid_you1_00001,memory_glo_00004,3,202602010
-e,5,quest_raid_you1_00001,memory_glo_00005,3,202602010
+ENABLE,id,mst_advent_battle_id,reward_category,resource_type,resource_id,resource_amount,percentage,sort_order,release_key
+e,quest_raid_you1_00001_01,quest_raid_you1_00001,Random,Item,memory_glo_00001,3,20,1,202602010
+e,quest_raid_you1_00001_02,quest_raid_you1_00001,Random,Item,memory_glo_00002,3,20,2,202602010
+e,quest_raid_you1_00001_03,quest_raid_you1_00001,Random,Item,memory_glo_00003,3,20,3,202602010
+e,quest_raid_you1_00001_04,quest_raid_you1_00001,Random,Item,memory_glo_00004,3,20,4,202602010
+e,quest_raid_you1_00001_05,quest_raid_you1_00001,Random,Item,memory_glo_00005,3,20,5,202602010
