@@ -135,6 +135,7 @@ def generate_advent_battle_csv(data, output_path):
     in_game_id = data['gate_id_enemy']
     asset_key = data['gate_asset_enemy']
     
+    # Note: Including I18n columns as they are in the template
     data_row = [
         'e',  # ENABLE
         advent_id,  # id
@@ -162,12 +163,16 @@ def generate_advent_battle_csv(data, output_path):
         data['home_text'],  # boss_description.ja
     ]
     
-    # Write output
+    # Create header row matching template format (all 24 columns including I18n)
+    header_row = rows[2]  # All columns (ENABLE + 23 columns)
+    table_row = rows[1]  # TABLE row
+    
+    # Write output in template format
     with open(output_path, 'w', encoding='utf-8', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(rows[0])  # memo
-        writer.writerow(rows[1])  # TABLE
-        writer.writerow(rows[2])  # ENABLE (headers)
+        writer.writerow(rows[0])  # memo row
+        writer.writerow(table_row)  # TABLE row
+        writer.writerow(header_row)  # ENABLE row (headers)
         writer.writerow(data_row)
     
     print(f"✓ Created: {output_path}")
@@ -186,12 +191,17 @@ def generate_enemy_stage_parameter_csv(data, output_path):
         reader = csv.reader(f)
         rows = list(reader)
     
-    # Write output
+    # Get header rows from template
+    memo_row = rows[0]
+    table_row = rows[1]
+    header_row = rows[2]
+    
+    # Write output in template format
     with open(output_path, 'w', encoding='utf-8', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(rows[0])  # memo
-        writer.writerow(rows[1])  # TABLE
-        writer.writerow(rows[2])  # ENABLE (headers)
+        writer.writerow(memo_row)  # memo
+        writer.writerow(table_row)  # TABLE
+        writer.writerow(header_row)  # ENABLE (headers)
         
         # Add each enemy as a row
         for enemy_id, enemy in data['enemies'].items():
