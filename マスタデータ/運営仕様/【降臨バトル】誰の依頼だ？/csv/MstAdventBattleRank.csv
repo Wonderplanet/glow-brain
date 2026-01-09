@@ -1,0 +1,5 @@
+ENABLE,id,mst_advent_battle_id,rank,min_score,max_score,mst_item_id,count,release_key
+e,1,quest_raid_you1_00001,1,100000,999999999,item_special_00001,10,202602010
+e,2,quest_raid_you1_00001,2,50000,99999,item_special_00001,5,202602010
+e,3,quest_raid_you1_00001,3,10000,49999,item_special_00001,3,202602010
+e,4,quest_raid_you1_00001,4,5000,9999,item_special_00001,1,202602010
