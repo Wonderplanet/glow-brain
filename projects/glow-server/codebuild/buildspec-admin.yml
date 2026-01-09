@@ -1,0 +1,111 @@
+version: 0.2
+env:
+  variables:
+    DOCKER_BUILDKIT: 1
+  parameter-store:
+    DOCKER_USER: dockerhub-user
+    DOCKER_TOKEN: dockerhub-token
+    AWS_ACCOUNT_ID: account-id
+    GIT_USER_ID: git-user-id
+    GIT_USER_TOKEN: git-user-token
+    GIT_SSH_KEY: git-ssh-key
+    DB_PASS: db-pass
+  secrets-manager:
+    DB_USERNAME: glow-${INFRA_ENV}-secrets:db-root-user
+    DB_PASSWORD: glow-${INFRA_ENV}-secrets:db-root-password
+    MANAGE_DB_USERNAME: glow-${INFRA_ENV}-secrets:db-root-user
+    MANAGE_DB_PASSWORD: glow-${INFRA_ENV}-secrets:db-root-password
+    MOMENTO_API_KEY: glow-${INFRA_ENV}-secrets:glow-momento-api-key
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com
+      - PHP_REPOSITORY=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${PJ_NAME}-${INFRA_ENV}-admin-php
+      - NGINX_REPOSITORY=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${PJ_NAME}-${INFRA_ENV}-admin-nginx
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_USER} --password-stdin
+      - echo Pulling the Docker images...
+      - docker pull ${PHP_REPOSITORY}:latest-cache || true
+      - docker pull ${NGINX_REPOSITORY}:latest-cache || true
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - |
+        docker build \
+          --build-arg GIT_USER="${GIT_USER_ID}" \
+          --build-arg GIT_TOKEN="${GIT_USER_TOKEN}" \
+          --build-arg GIT_SSH_KEY="${GIT_SSH_KEY}" \
+          -f docker/envs/ecs/php-admin/Dockerfile \
+          -t ${PHP_REPOSITORY}:latest \
+          -t ${PHP_REPOSITORY}:latest-cache \
+          -t ${PHP_REPOSITORY}:${COMMIT_HASH} \
+          --cache-from ${PHP_REPOSITORY}:latest-cache \
+          --build-arg MOMENTO_API_KEY="${MOMENTO_API_KEY}" \
+          --build-arg BUILDKIT_INLINE_CACHE=1 \
+        .
+      # php-adminのnpm run buildで生成したファイルをnginxにも渡すためにホストにコピーしておく
+      - docker create --name temp-php-admin ${PHP_REPOSITORY}:${COMMIT_HASH}
+      - docker cp temp-php-admin:/var/www/admin/public/build ./admin/public/build
+      - docker rm temp-php-admin
+      - |
+        docker build \
+          --build-arg BUILDKIT_INLINE_CACHE=1 \
+          -f docker/envs/ecs/nginx-admin/Dockerfile \
+          -t ${NGINX_REPOSITORY}:latest \
+          -t ${NGINX_REPOSITORY}:latest-cache \
+          -t ${NGINX_REPOSITORY}:${COMMIT_HASH} \
+          --cache-from ${NGINX_REPOSITORY}:latest-cache \
+        .
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker images...
+      - |
+        docker run \
+          -e DB_CONNECTION=admin \
+          -e ADMIN_DB_DATABASE=admin \
+          -e ADMIN_DB_HOST=db-write.${INFRA_ENV}.glow.internal \
+          -e ADMIN_DB_PORT=3306 \
+          -e ADMIN_DB_USERNAME=${DB_USERNAME} \
+          -e ADMIN_DB_PASSWORD=${DB_PASSWORD} \
+          -e MANAGE_DB_CONNECTION=mng \
+          -e MANAGE_DB_DATABASE=mng \
+          -e MANAGE_DB_HOST=db-write.${INFRA_ENV}.glow.internal \
+          -e MANAGE_DB_PORT=3306 \
+          -e MANAGE_DB_USERNAME=${MANAGE_DB_USERNAME} \
+          -e MANAGE_DB_PASSWORD=${MANAGE_DB_PASSWORD}  \
+          -e REDIS_HOST=redis.${INFRA_ENV}.glow.internal \
+          -dit --init --name php ${PHP_REPOSITORY}:latest
+      - docker exec php bash -c "php /var/www/admin/artisan migrate --database=admin --path=database/migrations"
+      - docker push ${PHP_REPOSITORY}:latest
+      - docker push ${PHP_REPOSITORY}:latest-cache
+      - docker push ${PHP_REPOSITORY}:${COMMIT_HASH}
+      - docker push ${NGINX_REPOSITORY}:latest
+      - docker push ${NGINX_REPOSITORY}:latest-cache
+      - docker push ${NGINX_REPOSITORY}:${COMMIT_HASH}
+      - PJ_NAME2=$(echo ${PJ_NAME} | sed "s/\(.*\)/\U\1/")
+      - |
+        sed -i \
+          -e "s;<PHP_IMAGE>;${PHP_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<NGINX_IMAGE>;${NGINX_REPOSITORY}:${COMMIT_HASH};g" \
+          codebuild/artifacts/imagedefinitions-admin.json
+      - |
+        sed -i \
+          -e "s;<PHP_IMAGE>;${PHP_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<NGINX_IMAGE>;${NGINX_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<DB_IMAGE>;${DB_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<REDIS_IMAGE>;${REDIS_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<SECRET>;${SECRET};g" \
+          -e "s;<INFRA_ENV>;${INFRA_ENV};g" \
+          -e "s;<PJ_NAME>;${PJ_NAME};g" \
+          -e "s;<PJ_NAME2>;${PJ_NAME2};g" \
+          -e "s;<APP_ENV>;${APP_ENV};g" \
+          -e "s;<AWS_DEFAULT_REGION>;${AWS_DEFAULT_REGION};g" \
+          -e "s;<AWS_ACCOUNT_ID>;${AWS_ACCOUNT_ID};g" \
+          codebuild/artifacts/taskdefinitions-admin.json
+artifacts:
+    files:
+        - codebuild/artifacts/*
