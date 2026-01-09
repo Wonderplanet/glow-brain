@@ -1,0 +1,3 @@
+memo
+TABLE,MstStageClearTimeReward,MstStageClearTimeReward,MstStageClearTimeReward,MstStageClearTimeReward,MstStageClearTimeReward,MstStageClearTimeReward,MstStageClearTimeReward
+ENABLE,id,mst_stage_id,upper_clear_time_ms,resource_type,resource_id,resource_amount,release_key

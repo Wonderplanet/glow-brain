@@ -1,0 +1,3 @@
+memo
+TABLE,MstStageEndCondition,MstStageEndCondition,MstStageEndCondition,MstStageEndCondition,MstStageEndCondition,MstStageEndCondition,MstStageEndCondition
+ENABLE,id,mst_stage_id,stage_end_type,condition_type,condition_value1,condition_value2,release_key

@@ -1,0 +1,41 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Domain\{{domainName}}\Models;
+
+use App\Domain\Common\Eloquent\HasFactory;
+use App\Domain\Common\Eloquent\UsrModel;
+use App\Domain\Resource\Usr\Entities\{{tableName}}Entity;
+
+class {{tableName}} extends UsrModel implements {{tableName}}Interface
+{
+    use HasFactory;
+
+    protected $fillable = [
+    ];
+
+    protected $casts = [
+    ];
+
+    /**
+     * UsrModelManagerでキャッシュ管理する際に使うユニークキーを作成する
+     */
+    public function makeModelKey(): string
+    {
+        // 例：usr_user_id と　column1 でユニーク制約があるテーブルの場合
+        return $this->usr_user_id . $this->column1 . ...;
+
+        // 例：1ユーザーあたり最大でも1レコードのみのテーブルの場合
+        return $this->usr_user_id;
+
+        // 例：その他で、idのみで良い場合は、UsrModel.makeModelKeyのオーバーライドは不要なので、関数ごと削除して問題ないです。
+    }
+
+    public function toEntity(): {{tableName}}Entity
+    {
+        return new {{tableName}}Entity(
+            $this->usr_user_id,
+        );
+    }
+}
