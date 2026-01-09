@@ -1,154 +1,208 @@
-# glow-brain AI エージェント向けガイド
+# GitHub Copilot Instructions
 
-## このプロジェクトとは？
+**重要: このリポジトリでの全ての対応（対話、PRタイトル、PR本文、コメント、コミットメッセージ、作業中の進捗記録など、あらゆる出力）は必ず日本語で行ってください。**
 
-**glow-brain** は、GLOWゲームプロジェクトの複数バージョンを参照するための**読み取り専用ワークスペース**です。3つの独立したリポジトリ（glow-server、glow-masterdata、glow-client）をバージョン管理されたチェックアウトで統合し、コードを変更することなくバージョン間のコード比較を可能にします。
+---
 
-## 重要：これは読み取り専用リポジトリです
+## プロジェクト概要
 
-**`projects/` ディレクトリ内のコードを変更しないでください。**
+glow-brainは、**GLOWゲームプロジェクト全体の開発支援のための統合コンテキストリポジトリ**です。
 
-- すべての `git commit`、`git push`、`git merge`、`git rebase` 操作は **Git フックでブロック**されます（[scripts/hooks/](../scripts/hooks/)）
-- セットアップスクリプトは更新前に未コミット変更を検出します
-- 変更は元のリポジトリで行う必要があります：
-  - `git@github.com:Wonderplanet/glow-server.git`
-  - `git@github.com:Wonderplanet/glow-client.git`
-  - `git@github.com:Wonderplanet/glow-masterdata.git`
+### 目的
 
-## アーキテクチャ概要
+- GLOWプロジェクトに関する**あらゆる相談**に対応
+- GLOWプロジェクトで**何かを作る**際の支援
+- server/client/masterdataのコードベースを1箇所に集約し、横断的な理解と開発を可能にする
 
-### リポジトリ構造
+### ユースケース例
+
+- マスタデータCSVの作成・検証
+- サーバーAPIとクライアント実装の整合性確認
+- 新機能の設計と実装相談
+- バグ調査とトラブルシューティング
+- コードベース横断的な調査
+- 運営施策の技術的実現可能性の検討
+
+---
+
+## リポジトリ構造
+
 ```
 glow-brain/
-├── config/versions.json       # バージョンとブランチのマッピング
-├── scripts/
-│   ├── setup.sh               # メイン統合スクリプト
-│   └── hooks/                 # 変更防止用Gitフック
-└── projects/                  # 管理対象リポジトリ（編集禁止）
-    ├── glow-server/           # サーバーコード（完全クローン）
-    ├── glow-masterdata/       # マスターデータCSV（完全クローン）
-    └── glow-client/           # Unityクライアント（sparse checkout）
+├── projects/              # GLOWプロジェクトの3リポジトリを集約
+│   ├── glow-server/      # サーバー実装（API、DB）
+│   ├── glow-client/      # クライアント実装（Unity/C#）
+│   └── glow-masterdata/  # マスタデータ（CSV、スキーマ）
+├── マスタデータ/           # 運営仕様書と生成データ
+├── .claude/
+│   ├── skills/          # Agent Skills（GitHub Copilot/Claude Code共通）
+│   └── docs/            # 参考ドキュメント
+├── .github/
+│   ├── agents/          # GitHub Copilot Agents
+│   └── copilot-instructions.md  # このファイル
+├── scripts/              # セットアップスクリプト
+├── docs/                 # プロジェクトドキュメント
+└── config/               # 設定ファイル
 ```
 
-### バージョン管理モデル
+### projects/配下の3リポジトリ
 
-[config/versions.json](../config/versions.json) のバージョン設定：
-- セマンティックバージョン（`1.4.1`、`1.5.0`）をリポジトリごとの特定ブランチ名にマッピング
-- `current_version` でワークスペースの状態を追跡
-- 各リポジトリは異なるブランチ命名規則を使用可能（例：`develop/v1.4.1` vs `release/v1.4.1`）
+このリポジトリの最も重要な特徴は、**3つの独立したリポジトリを1箇所に集約**していることです。
 
-### クライアントリポジトリの最適化
+| リポジトリ | 役割 | 主要技術 |
+|-----------|------|---------|
+| **glow-server** | バックエンドAPI、DB定義 | TypeScript, PostgreSQL |
+| **glow-client** | ゲームクライアント | Unity, C# |
+| **glow-masterdata** | マスタデータ管理 | CSV |
 
-**glow-client は積極的なサイズ削減を実施**：
-- Sparse checkout で `Assets/GLOW/Scripts` と `Assets/Framework/Scripts` のみに限定
-- Git LFS をスキップ（`GIT_LFS_SKIP_SMUDGE=1`）
-- `--depth 1` と `--filter=blob:none` でシャロークローン
-- 結果として完全版に比べて約100MBに削減
+**重要な注意点**:
+- これらは**参照専用**です（`.git`ディレクトリは削除済み）
+- Git submoduleではなく、通常のディレクトリとして管理
+- 実際の変更は各リポジトリで行う
+- `config/versions.json`で管理されたバージョン・ブランチ状態
 
-## 重要なワークフロー
+---
 
-### セットアップ・バージョン切り替え
+## バージョン管理
 
-```bash
-# デフォルトバージョンでセットアップ（config/versions.json から）
-./scripts/setup.sh
+`config/versions.json`で複数バージョンのコードベースを管理しています。
 
-# 特定バージョンに切り替え
-./scripts/setup.sh 1.5.0
-```
-
-**実行される処理：**
-1. `jq` の前提条件をチェック（macOS: `brew install jq`）
-2. `config/versions.json` にバージョンが存在するか検証
-3. 各リポジトリに対して：
-   - 存在しない場合はクローン（クライアント専用最適化を適用）
-   - 存在する場合は対象ブランチに更新（分岐している場合は強制リセット）
-   - 保護用Gitフックをインストール
-4. 設定ファイルの `current_version` を更新
-
-### 誤った変更からのリカバリ
-
-```bash
-cd projects/glow-server
-git reset --hard HEAD
-git clean -fd
-```
-
-### 新しいバージョンの追加
-
-[config/versions.json](../config/versions.json) を編集：
 ```json
 {
+  "current_version": "v1.5.0-devld",
   "versions": {
-    "1.6.0": {
-      "glow-server": "develop/v1.6.0",
-      "glow-client": "release/v1.6.0",
+    "v1.5.0-devld": {
+      "glow-server": "develop/v1.5.0",
+      "glow-client": "release/v1.5.0",
       "glow-masterdata": "release/dev-ld"
     }
   }
 }
 ```
 
-## プロジェクト固有の規約
+各バージョンごとに専用ブランチを作成し、異なるバージョンのコードベースを並行管理できます。
 
-### Bashスクリプトパターン
+---
 
-[scripts/setup.sh](../scripts/setup.sh) はプロジェクトのシェル規約を示します：
-- 厳格なエラー処理のため `set -euo pipefail` を使用
-- カラーコード付きログ関数（`info`、`success`、`error`、`warning`）
-- パス用の `readonly` 変数（`PROJECT_ROOT`、`CONFIG_FILE`）
-- nullチェック付きの防御的な `jq` 使用
+## 主要なデータソース
 
-### Force-Push の処理
+### 1. DBスキーマ
 
-更新ロジック（[setup.sh:205-228](../scripts/setup.sh#L205-L228)）は上流の force-push を処理します：
-```bash
-if ! git merge --ff-only "origin/${target_branch}" 2>/dev/null; then
-    warning "履歴が分岐しています。リモートに強制的に合わせます..."
-    git reset --hard "origin/${target_branch}"
-fi
-```
-これは読み取り専用モードでの意図的な動作で、常にリモート状態に合わせます。
+**パス**: `projects/glow-server/api/database/schema/exports/master_tables_schema.json`
 
-### Gitフック保護
+テーブル定義、カラムの型、制約、enum値などが定義されています。
 
-[scripts/hooks/](../scripts/hooks/) のフックは多層的な保護を提供：
-- `pre-commit`: 日本語エラーメッセージでコミットをブロック
-- `pre-push`: プッシュを防止
-- `pre-merge-commit`: マージ操作を停止
+### 2. マスタデータCSV
 
-## 一般的な操作（推奨・非推奨）
+**パス**: `projects/glow-masterdata/*.csv`
 
-### ✅ 推奨
-- 任意のエディタ/IDEで `projects/` 内のコードを閲覧
-- バージョン間でコードの変遷を検索
-- バージョン間で実装を比較
-- 最新コードへの更新：`./scripts/setup.sh`
+ゲームで使用される実際のマスタデータ。
 
-### ❌ 非推奨
-- `projects/` サブディレクトリ内でのブランチ作成
-- 変更のコミット（フックがブロックしますが、トリガーを避ける）
-- 管理対象リポジトリへの新しいファイルの追加
-- 標準的なgitワークフローが動作すると想定すること（これは通常のワークスペースではありません）
+### 3. サーバーAPI実装
 
-## 理解すべき重要なファイル
+**パス**: `projects/glow-server/`
 
-- [config/versions.json](../config/versions.json): バージョンマッピングの唯一の信頼できる情報源
-- [scripts/setup.sh](../scripts/setup.sh): すべての統合ロジック（397行）
-- [README.md](../README.md): 日本語のユーザー向けドキュメント
-- [scripts/hooks/pre-commit](../scripts/hooks/pre-commit): 保護メカニズムの例
+TypeScriptで実装されたバックエンドAPI。
 
-## トラブルシューティング
+### 4. クライアント実装
 
-**"jq コマンドが見つかりません"**
-- インストール：`brew install jq`（macOS）
+**パス**: `projects/glow-client/`
 
-**"未コミットの変更があります"**
-- リセット：`cd projects/<repo> && git reset --hard HEAD && git clean -fd`
+Unity/C#で実装されたゲームクライアント。主要な場所:
+- `Assets/GLOW/Scripts/Runtime/Core/Data/Data/AutoGenerated/` - マスタデータクラス（自動生成）
+- `Assets/GLOW/Scripts/Runtime/Core/Domain/` - ドメイン層
+- `Assets/GLOW/Scripts/Runtime/Core/Data/Translators/` - Data→Model変換
 
-**間違ったバージョンがチェックアウトされている**
-- 再実行：`./scripts/setup.sh <version>`（冪等な操作）
+---
 
-**クライアントリポジトリが大きすぎる**
-- LFSアセットが取得された場合の予期される動作
-- 削除して再セットアップ：`rm -rf projects/glow-client && ./scripts/setup.sh`
+## 利用可能なツールとエージェント
+
+### GitHub Copilot Agents
+
+このリポジトリでは、以下のGitHub Copilot Agentが利用可能です:
+
+- **pln-masterdata-creator** (`@copilot /pln-masterdata-creator`) - 運営仕様書からマスタデータCSVを作成
+
+詳細は`.github/agents/`を参照してください。
+
+### Agent Skills
+
+このリポジトリでは、GitHub CopilotとClaude Code両方で使用できる**Agent Skills**を活用しています。
+
+**配置場所**: `.claude/skills/`
+
+**動作の仕組み**:
+- プロンプトの内容に基づいて、Copilotが自動的に関連性のあるスキルを判断
+- 必要なスキルのSKILL.mdがコンテキストに自動ロードされる
+- 明示的に呼び出す必要はなく、関連するタスクを依頼すれば自動で活用される
+
+**利用可能なスキル**:
+`.claude/skills/`配下を参照してください。各スキルディレクトリには`SKILL.md`（スキルの説明と指示）と`references/`（詳細なドキュメント）が含まれています。
+
+**注**: `.github/skills/`と`.claude/skills/`の両方がサポートされていますが、このリポジトリでは`.claude/skills/`を使用しています。
+
+---
+
+## 主要なワークフロー例
+
+### マスタデータ作成
+
+運営仕様書（`マスタデータ/運営仕様/<名前>/要件/`）からマスタデータCSVを作成するワークフローが整備されています。
+
+詳細は以下を参照:
+- `.ai-context/prompts/運営仕様書からマスタデータ作成の手順書.md` - 詳細な作成手順
+- `.github/agents/pln-masterdata-creator.agent.md` - GitHub Copilot Agent定義
+- `.claude/skills/masterdata-csv-validator/SKILL.md` - 検証方法（Agent Skill）
+
+### コードベース調査
+
+3つのリポジトリを横断的に調査できます。
+
+例:
+- 特定のマスタデータテーブルがどこで使われているかを調査
+- サーバーAPIとクライアント実装の対応関係を確認
+- 新機能に必要なマスタデータテーブルを特定
+
+---
+
+## テーブル命名規則
+
+GLOWプロジェクトでは、DBスキーマとCSVファイルで異なる命名規則を使用しています。
+
+| 種類 | 命名規則 | 例 |
+|------|---------|-----|
+| **DBスキーマ** | snake_case + 複数形 | `mst_events`, `opr_gachas` |
+| **CSVファイル** | PascalCase + 単数形 | `MstEvent.csv`, `OprGacha.csv` |
+
+**プレフィックス**:
+- `mst_*` / `Mst*` - 固定マスタデータ
+- `opr_*` / `Opr*` - 運営施策・期間限定データ
+
+---
+
+## 参考ドキュメント
+
+このリポジトリには詳細なドキュメントが用意されています。
+
+### プロジェクト運用
+
+- `docs/glow-brain運用/glow-brainプロジェクト管理のGit化手順.md` - Git管理化手順
+
+### マスタデータ関連
+
+- `.ai-context/prompts/運営仕様書からマスタデータ作成の手順書.md` - マスタデータ作成の詳細手順
+- `マスタデータ/docs/マスターテーブル一覧調査方法.md` - テーブル調査方法
+- `.claude/skills/masterdata-explorer/SKILL.md` - スキーマ調査とSQL分析（Agent Skill）
+- `.claude/skills/masterdata-csv-validator/SKILL.md` - CSV検証（Agent Skill）
+
+### Agent Skills / Agents 開発
+
+- `.claude/docs/skills-best-practices.md` - Agent Skills作成のベストプラクティス
+- `.claude/docs/subagent-best-practices.md` - Agents作成のベストプラクティス
+- `.claude/skills/plugin-marketplace-creator/SKILL.md` - プラグインマーケットプレイス作成（Agent Skill）
+
+---
+
+## 重要: 日本語対応
+
+**再度強調します: このリポジトリでの全ての対応（コード補完の説明、チャットでの対話、PRタイトル、PR本文、コードレビューコメント、コミットメッセージ、Issue作成、作業進捗の記録など、あらゆる出力）は必ず日本語で行ってください。英語での出力は避けてください。**

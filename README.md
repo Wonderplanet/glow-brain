@@ -1,185 +1,185 @@
 # glow-brain
 
-GLOW プロジェクトのコードを参照するための開発環境です。
+**GLOWゲームプロジェクト全体の開発支援のための統合コンテキストリポジトリ**
 
-## これは何？
+glow-brainは、GLOWプロジェクトに関する質問、相談、設計などの包括的な支援を行うためのリポジトリです。主に、AI（GitHub CopilotやClaude Code）での作業時に、充実したコンテキストを用意して、GLOWの全メンバーの日々の作業効率アップや、新しい発見をすることを目的としています。
 
-GLOWの3つのプロジェクト（サーバー、マスターデータ、クライアント）のコードを、バージョンを指定して簡単に参照できるようにするツールです。
+---
 
-**できること:**
-- ✅ バージョンを指定してコードを取得
-- ✅ 別のバージョンに簡単に切り替え
-- ✅ 最新のコードに更新
-- ✅ 軽量化されたクライアントコード（約100MB）
+## 特徴
 
-## 重要な注意事項
+- **3つのリポジトリを1箇所に集約** - server/client/masterdataのコードベースを1箇所に集約し、横断的な理解と開発を可能にします
+- **バージョンごとのブランチ管理** - 異なるバージョンのコードベースを並行管理できます
+- **AI支援に最適化** - GitHub CopilotやClaude Codeで使いやすいよう設計されています
+- **カスタムスキルとエージェント** - マスタデータ作成・検証などの専用ツールを提供します
 
-このプロジェクトは**完全に参照専用**です。Gitフックにより、以下の操作は自動的にブロックされます：
-
-**❌ 禁止されている操作:**
-- コミット（`git commit`）
-- プッシュ（`git push`）
-- マージ（`git merge`）
-- リベース（`git rebase`）
-
-**✅ 許可されている操作:**
-- コードの閲覧・検索・参照
-- バージョンの切り替え（`./scripts/setup.sh <version>`）
-- 最新コードへの更新（`git pull`、`./scripts/setup.sh`）
-
-**コードを変更したい場合:**
-本来のリポジトリを直接クローンして作業してください：
-```bash
-# glow-serverの例
-git clone git@github.com:Wonderplanet/glow-server.git
-```
-
-## クイックスタート
-
-### 1. 必要なツールをインストール
-
-macOSの場合、ターミナルで以下を実行：
-
-```bash
-brew install jq
-```
-
-### 2. コードを取得
-
-```bash
-./scripts/setup.sh
-```
-
-これで完了です！`projects/` フォルダ内に以下が作成されます：
-- `glow-server/` - サーバーコード
-- `glow-masterdata/` - マスターデータ
-- `glow-client/` - クライアントコード（軽量版）
-
-### 3. コードを見る
-
-好きなエディタで `projects/` 内のコードを参照できます：
-
-```bash
-# VS Codeで開く場合
-code projects/glow-server
-
-# Finderで開く場合
-open projects
-```
-
-## よく使うコマンド
-
-### バージョンを切り替える
-
-```bash
-# v1.4.1に切り替え
-./scripts/setup.sh 1.4.1
-
-# v1.5.0に切り替え
-./scripts/setup.sh 1.5.0
-```
-
-### 最新のコードに更新
-
-```bash
-./scripts/setup.sh
-```
-
-### 現在のバージョンを確認
-
-```bash
-cat config/versions.json | grep current_version
-```
-
-## トラブルシューティング
-
-### 「この操作は禁止されています」と表示される
-
-このリポジトリは参照専用のため、`git commit`、`git push`、`git merge`などの
-変更操作はできません。
-
-**コードを変更したい場合:**
-本来のリポジトリを直接クローンして作業してください：
-```bash
-# glow-serverの例
-git clone git@github.com:Wonderplanet/glow-server.git
-
-# glow-clientの例
-git clone git@github.com:Wonderplanet/glow-client.git
-
-# glow-masterdataの例
-git clone git@github.com:Wonderplanet/glow-masterdata.git
-```
-
-**間違えて変更してしまった場合:**
-以下のコマンドで元に戻せます：
-```bash
-# 例：glow-serverを元に戻す
-cd projects/glow-server
-git reset --hard HEAD
-git clean -fd
-cd ../..
-```
-
-### 「jq コマンドが見つかりません」と表示される
-
-以下を実行してください：
-```bash
-brew install jq
-```
-
-### 「未コミットの変更があります」と表示される
-
-コードを変更してしまった可能性があります。以下で元に戻せます：
-
-```bash
-# 例：glow-serverを元に戻す
-cd projects/glow-server
-git reset --hard HEAD
-git clean -fd
-cd ../..
-```
-
-### うまく動かない時
-
-コードを削除して、最初からやり直せます：
-
-```bash
-# すべて削除
-rm -rf projects
-
-# 再セットアップ
-./scripts/setup.sh
-```
-
-## 詳しい使い方
-
-詳細は `scripts/README.md` を参照してください。
-
-## バージョン一覧
-
-利用可能なバージョン：
-- **1.4.1** (デフォルト)
-- **1.5.0**
-
-新しいバージョンは `config/versions.json` で管理されています。
+---
 
 ## プロジェクト構成
 
 ```
 glow-brain/
-├── README.md              # このファイル
-├── config/
-│   └── versions.json      # バージョン設定
-├── scripts/
-│   ├── setup.sh           # セットアップスクリプト
-│   └── README.md          # 詳細な使い方
-└── projects/              # ここにコードが入ります
-    ├── glow-server/
-    ├── glow-masterdata/
-    └── glow-client/
+├── projects/              # GLOWプロジェクトの3リポジトリを集約
+│   ├── glow-server/      # サーバー実装（API、DB）
+│   ├── glow-client/      # クライアント実装（Unity/C#）
+│   └── glow-masterdata/  # マスタデータ（CSV、スキーマ）
+├── マスタデータ/           # 運営仕様書と生成データ
+├── .github/
+│   ├── agents/          # copilot カスタムエージェント
+│   ├── prompts/         # copilot プロンプトファイル
+├── .claude/
+│   ├── skills/          # Agent Skills
+├── scripts/              # セットアップスクリプト
+├── docs/                 # プロジェクトドキュメント
+└── config/               # 設定ファイル
+    └── versions.json    # バージョン管理設定
 ```
 
-## サポート
+### projects/ - 3つのリポジトリ
 
-問題が発生した場合は、開発チームにお問い合わせください。
+| リポジトリ | 役割 | 主要技術 | 配置内容 |
+|-----------|------|---------|---------|
+| **glow-server** | バックエンドAPI、DB定義 | TypeScript, PostgreSQL | 完全なリポジトリ内容 |
+| **glow-client** | ゲームクライアント | Unity, C# | スクリプトのみ（軽量化版） |
+| **glow-masterdata** | マスタデータ管理 | CSV | 完全なリポジトリ内容 |
+
+**重要な注意点**:
+- これらは**参照専用**です（`.git`ディレクトリは削除済み）
+- Git submoduleではなく、通常のディレクトリとして管理
+- 実際の変更は各リポジトリで行う
+- `config/versions.json`で管理されたバージョン・ブランチ状態
+
+---
+
+## バージョン管理の仕組み
+
+glow-brainでは、**バージョンごとに専用のブランチ**を作成し、異なるバージョンのコードベースを並行管理できます。
+
+### 仕組み
+
+1. `config/versions.json`で各バージョンのブランチを定義
+2. バージョンごとに専用のGitブランチを作成
+3. ブランチを切り替えることで、そのバージョンの開発関連ファイルに瞬時に切り替え可能
+
+### メリット
+
+- **バージョン間の切り替えが高速** - `git checkout`で瞬時に切り替え
+- **バージョンごとの独立した作業環境** - 異なるバージョンの開発を並行して進められる
+- **コンテキストの整合性** - そのバージョンに対応したserver/client/masterdataのコードが常に揃っている
+
+### config/versions.json の例
+
+```json
+{
+  "current_version": "v1.5.0-devld",
+  "versions": {
+    "v1.5.0-devld": {
+      "glow-server": "develop/v1.5.0",
+      "glow-client": "release/v1.5.0",
+      "glow-masterdata": "release/dev-ld"
+    },
+    "v1.5.1-devld": {
+      "glow-server": "develop/v1.5.1",
+      "glow-client": "release/v1.5.0",
+      "glow-masterdata": "release/dev-ld"
+    }
+  }
+}
+```
+
+---
+
+## セットアップ
+
+### 前提条件
+
+- Git
+- jq (`brew install jq`)
+- GitHubへのSSHアクセス権限
+
+### 初回セットアップ
+
+```bash
+# 1. リポジトリをクローン
+git clone git@github.com:Wonderplanet/glow-brain.git
+cd glow-brain
+
+# 2. setup.sh を実行（current_versionをセットアップ）
+./scripts/setup.sh
+
+# または、特定のバージョンをセットアップ
+./scripts/setup.sh v1.5.0-devld
+```
+
+### バージョン環境ブランチの作成（管理者向け）
+
+全バージョンの環境ブランチを一括で作成できます:
+
+```bash
+# 全バージョンのブランチを作成（確認あり）
+./scripts/create-version-branches.sh
+
+# 確認をスキップして自動実行
+./scripts/create-version-branches.sh --yes
+```
+
+このスクリプトは以下を実行します:
+1. `config/versions.json`に定義された全バージョンを取得
+2. 各バージョンごとに専用ブランチを作成
+3. そのバージョンに対応したserver/client/masterdataをprojects/配下に配置
+4. リモートにpush
+
+---
+
+## 使い方
+
+### バージョンの切り替え
+
+```bash
+# ブランチを切り替えるだけでバージョンが切り替わる
+git checkout v1.5.0-devld
+git checkout v1.5.1-devld
+```
+
+### 最新の状態に更新
+
+```bash
+# 現在のバージョンを最新に更新
+./scripts/setup.sh
+
+# 特定のバージョンを最新に更新
+./scripts/setup.sh v1.5.0-devld
+```
+
+### コードベースの調査
+
+3つのリポジトリを横断的に調査できます:
+
+```bash
+# 例: 特定のマスタデータテーブルがどこで使われているか調査
+grep -r "mst_events" projects/
+
+# 例: サーバーAPIとクライアント実装の対応関係を確認
+# （Claude CodeやGitHub Copilotでの質問が便利です）
+```
+
+---
+
+## 主要なワークフロー
+
+### マスタデータ作成
+
+運営仕様書からマスタデータCSVを作成するワークフローが整備されています。
+
+詳細は以下を参照:
+- `.ai-context/prompts/運営仕様書からマスタデータ作成の手順書.md`
+- `.claude/skills/masterdata-csv-validator/SKILL.md`
+- `.github/agents/pln-masterdata-creator.agent.md`
+
+### カスタムスキル
+
+このリポジトリには、GLOW開発を支援するカスタムスキルが用意されています:
+
+- **masterdata-explorer** - マスタデータのスキーマ調査とSQL分析
+- **masterdata-csv-validator** - マスタデータCSVの検証
+- **plugin-marketplace-creator** - プラグインマーケットプレイス作成
