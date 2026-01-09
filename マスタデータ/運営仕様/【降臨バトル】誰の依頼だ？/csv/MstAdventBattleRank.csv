@@ -1,0 +1,5 @@
+ENABLE,id,mst_advent_battle_id,rank_type,rank_level,required_lower_score,asset_key,release_key
+e,quest_raid_you1_00001_rank_01,quest_raid_you1_00001,Bronze,1,100000,,202602010
+e,quest_raid_you1_00001_rank_02,quest_raid_you1_00001,Bronze,2,50000,,202602010
+e,quest_raid_you1_00001_rank_03,quest_raid_you1_00001,Bronze,3,10000,,202602010
+e,quest_raid_you1_00001_rank_04,quest_raid_you1_00001,Bronze,4,5000,,202602010
