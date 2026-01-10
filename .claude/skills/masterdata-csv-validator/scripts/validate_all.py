@@ -130,6 +130,14 @@ def validate_all(csv_path: str) -> Dict[str, Any]:
             "skipped": True
         }
 
+    # 4. Enum値検証
+    print(f"🔍 Enum値検証中...", file=sys.stderr)
+    enum_result = run_validation_script(
+        str(script_dir / 'validate_enum.py'),
+        ['--csv', csv_path]
+    )
+    results['validations']['enum'] = enum_result
+
     # サマリー集計
     for validation_name, validation_result in results['validations'].items():
         if validation_result.get('skipped'):
