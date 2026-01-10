@@ -1,0 +1,298 @@
+enum:
+  - name: ShootType
+    params:
+      - name: StaticPosition
+      - name: StraightFlying
+      - name: EnemyDirected
+      - name: EnemyTracking
+
+  - name: AttackKind
+    params:
+      - name: Normal
+      - name: Special
+      - name: Appearance
+
+  - name: AttackType
+    params:
+      - name: None
+      - name: Direct
+      - name: Deck
+      - name: PlaceItem
+
+  - name: AttackTarget
+    params:
+      - name: Friend
+      - name: Foe
+      - name: Self
+      - name: FriendOnly
+
+  - name: AttackTargetType
+    params:
+      - name: All
+      - name: Character
+      - name: OutpostAndDefenseTarget
+
+  - name: AttackDamageType
+    params:
+      - name: None
+      - name: Damage
+      - name: PoisonDamage
+      - name: BurnDamage
+      - name: SlipDamage
+      - name: RushDamage
+      - name: Heal
+
+  - name: AttackHitType
+    params:
+      - name: Normal
+      - name: AccumulatedDamageKnockBack
+      - name: KnockBack1
+      - name: KnockBack2
+      - name: KnockBack3
+      - name: ForcedKnockBack2
+      - name: ForcedKnockBack5
+      - name: Drain
+      - name: Stun
+      - name: Freeze
+
+  - name: AttackRangePointType
+    params:
+      - name: Distance
+      - name: Koma
+      - name: KomaLine
+      - name: Page
+
+  - name: AttackPowerParameterType
+    params:
+      - name: Percentage  #キャラなどの攻撃力に対するパーセンテージ
+      - name: Fixed  #固定値
+      - name: MaxHpPercentage
+
+  - name: StateEffectType
+    params:
+      - name: None
+        number: 0
+      - name: AttackPowerUp
+        number: 1
+      - name: AttackPowerDown
+        number: 2
+      - name: DamageCut
+        number: 3
+      - name: AttackSpeedDown
+        number: 4
+      - name: MoveSpeedUp
+        number: 5
+      - name: MoveSpeedDown
+        number: 6
+      - name: SlipDamage
+        number: 7
+      - name: Fierce
+        number: 8
+      - name: SpecialAttackSeal
+        number: 9
+      - name: SlipDamageKomaBlock
+        number: 10
+      - name: AttackPowerDownKomaBlock
+        number: 11
+      - name: GustKomaBlock
+        number: 12
+      - name: AttackPowerUpKomaBoost
+        number: 13
+      - name: AttackPowerUpInNormalKoma
+        number: 14
+      - name: MoveSpeedUpInNormalKoma
+        number: 15
+      - name: DamageCutInNormalKoma
+        number: 16
+      - name: Poison
+        number: 17
+      - name: PoisonBlock
+        number: 18
+      - name: Burn
+        number: 19
+      - name: BurnBlock
+        number: 20
+      - name: KnockBackBlock
+        number: 21
+      - name: Stun
+        number: 22
+      - name: Guts
+        number: 23
+      - name: PoisonDamageCut
+        number: 24
+      - name: BurnDamageCut
+        number: 25
+      - name: StunBlock
+        number: 26
+      - name: Freeze
+        number: 27
+      - name: FreezeBlock
+        number: 28
+      - name: RushAttackPowerUp
+        number: 29
+      - name: RegenerationByFixed
+        number: 30
+      - name: RegenerationByMaxHpPercentage
+        number: 31
+      - name: ForcedKnockBackBlock
+        number: 32
+      - name: AttackPowerUpByHpPercentage
+        number: 33
+      - name: DamageCutByHpPercentage
+        number: 34
+      - name: SpecialAttackCoolTimeShorten
+        number: 35
+      - name: SpecialAttackCoolTimeExtend
+        number: 36
+      - name: SummonCoolTimeShorten
+        number: 37
+      - name: SummonCoolTimeExtend
+        number: 38
+      - name: Weakening
+        number: 39
+      - name: WeakeningBlock
+        number: 40
+      - name: RemoveEnhance
+        number: 41
+
+data:
+  - name: MstAttack
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstUnitId
+        type: string
+      - name: unitGrade
+        type: int
+      - name: attackKind
+        type: AttackKind
+      - name: killerColors
+        type: string
+      - name: killerPercentage
+        type: int
+      - name: actionFrames
+        type: int
+      - name: attackDelay
+        type: int
+      - name: nextAttackInterval
+        type: int
+
+  - name: MstAttackI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstAttackId
+        type: string
+      - name: language
+        type: Language
+      - name: description
+        type: string
+      - name: gradeDescription
+        type: string
+        
+  - name: MstAttackElement
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstAttackId
+        type: string
+      - name: sortOrder
+        type: int
+      - name: attackType
+        type: AttackType
+      - name: target
+        type: AttackTarget
+      - name: targetType
+        type: AttackTargetType
+      - name: targetColors
+        type: string
+      - name: targetRoles
+        type: string
+      - name: targetMstSeriesId
+        type: string
+      - name: targetMstUnitIds
+        type: string
+      - name: rangeStartType
+        type: AttackRangePointType
+      - name: rangeStartParameter
+        type: float
+      - name: rangeEndType
+        type: AttackRangePointType
+      - name: rangeEndParameter
+        type: float
+      - name: maxTargetCount
+        type: int
+      - name: damageType
+        type: AttackDamageType
+      - name: hitType
+        type: AttackHitType
+      - name: hitParameter1
+        type: int
+      - name: hitParameter2
+        type: int
+      - name: hitEffectId
+        type: string
+      - name: isHitStop
+        type: bool
+      - name: probability
+        type: int
+      - name: powerParameterType
+        type: AttackPowerParameterType
+      - name: powerParameter
+        type: int
+      - name: effectType
+        type: StateEffectType
+      - name: effectiveCount
+        type: int
+      - name: effectiveDuration
+        type: int
+      - name: effectParameter
+        type: float
+      - name: effectValue
+        type: string
+      - name: attackDelay
+        type: int
+
+  - name: MstAttackHitEffect
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: onomatopoeia1AssetKey
+        type: string
+      - name: onomatopoeia2AssetKey
+        type: string
+      - name: onomatopoeia3AssetKey
+        type: string
+      - name: soundEffectAssetKey
+        type: string
+      - name: killerSoundEffectAssetKey
+        type: string
+        
+  - name: MstSpecialRoleLevelUpAttackElement
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstAttackElementId
+        type: string
+      - name: minPowerParameter
+        type: float
+      - name: maxPowerParameter
+        type: float
+      - name: minEffectiveCount
+        type: int
+      - name: maxEffectiveCount
+        type: int
+      - name: minEffectiveDuration
+        type: int
+      - name: maxEffectiveDuration
+        type: int
+      - name: minEffectParameter
+        type: float
+      - name: maxEffectParameter
+        type: float

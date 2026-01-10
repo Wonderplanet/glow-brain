@@ -1,0 +1,159 @@
+name: Auto Merge to Next Develop Branch
+
+on:
+  pull_request:
+    types:
+      - closed
+
+env:
+  # .ymlファイルを編集してブランチ名を指定する
+  SOURCE_BRANCH: 'develop/v1.4.0'
+  TARGET_BRANCH: 'develop/v1.5.0'
+  # Slack通知に必要な設定
+  # secrets.SLACK_WEBHOOK_URL: SlackのIncoming Webhook URL
+  # 設定方法: https://api.slack.com/messaging/webhooks
+
+jobs:
+  auto-merge:
+    # PRがマージされ、かつ対象ブランチがSOURCE_BRANCHの場合に実行
+    if: |
+      github.event.pull_request.merged == true &&
+      github.event.pull_request.base.ref == 'develop/v1.4.0'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PAT_FOR_ACTIONS }}
+
+      # (以降のステップは変更なし)
+      - name: Set up Git user
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Validate Branch Configuration
+        run: |
+          # ブランチ名が設定されているか確認
+          if [ -z "${{ env.SOURCE_BRANCH }}" ] || [ -z "${{ env.TARGET_BRANCH }}" ]; then
+            echo "::error::SOURCE_BRANCH or TARGET_BRANCH is not configured properly"
+            exit 1
+          fi
+          echo "Source branch: ${{ env.SOURCE_BRANCH }}"
+          echo "Target branch: ${{ env.TARGET_BRANCH }}"
+
+      - name: Merge and Push
+        run: |
+          echo "Merging ${{ env.SOURCE_BRANCH }} into ${{ env.TARGET_BRANCH }}"
+          git switch ${{ env.TARGET_BRANCH }}
+          git pull origin ${{ env.TARGET_BRANCH }}
+
+          # マージを試行し、コンフリクトが発生した場合はエラーメッセージを出力
+          if ! git merge origin/${{ env.SOURCE_BRANCH }} --no-ff -m "Merge branch '${{ env.SOURCE_BRANCH }}' into ${{ env.TARGET_BRANCH }}"; then
+            echo "::error::Merge conflict occurred when merging ${{ env.SOURCE_BRANCH }} into ${{ env.TARGET_BRANCH }}. Manual intervention required."
+            echo "::error::Please resolve the conflict manually and retry the merge."
+
+            # コンフリクトの詳細情報を表示
+            echo "=== Conflict Details ==="
+            git status
+            echo "========================"
+
+            # マージを中止してクリーンな状態に戻す
+            git merge --abort
+            exit 1
+          fi
+
+          git push origin ${{ env.TARGET_BRANCH }}
+
+      # 成功時のSlack通知
+      - name: Notify Slack on Success
+        if: success()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: custom
+          custom_payload: |
+            {
+              "text": "✅ Auto-merge Successful",
+              "attachments": [
+                {
+                  "color": "good",
+                  "title": "自動マージが成功しました",
+                  "fields": [
+                    {
+                      "title": "マージ元",
+                      "value": "${{ env.SOURCE_BRANCH }}",
+                      "short": true
+                    },
+                    {
+                      "title": "マージ先",
+                      "value": "${{ env.TARGET_BRANCH }}",
+                      "short": true
+                    },
+                    {
+                      "title": "トリガーPR",
+                      "value": "#${{ github.event.pull_request.number }} - ${{ github.event.pull_request.title }}",
+                      "short": false
+                    },
+                    {
+                      "title": "実行者",
+                      "value": "${{ github.event.pull_request.user.login }}",
+                      "short": true
+                    },
+                    {
+                      "title": "リポジトリ",
+                      "value": "${{ github.repository }}",
+                      "short": true
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      # エラー時のSlack通知
+      - name: Notify Slack on Failure
+        if: failure()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: custom
+          custom_payload: |
+            {
+              "text": "❌ Auto-merge Failed",
+              "attachments": [
+                {
+                  "color": "danger",
+                  "title": "自動マージが失敗しました",
+                  "fields": [
+                    {
+                      "title": "マージ元",
+                      "value": "${{ env.SOURCE_BRANCH }}",
+                      "short": true
+                    },
+                    {
+                      "title": "マージ先",
+                      "value": "${{ env.TARGET_BRANCH }}",
+                      "short": true
+                    },
+                    {
+                      "title": "トリガーPR",
+                      "value": "#${{ github.event.pull_request.number }} - ${{ github.event.pull_request.title }}",
+                      "short": false
+                    },
+                    {
+                      "title": "エラー内容",
+                      "value": "マージコンフリクトが発生しました。手動での解決が必要です。",
+                      "short": false
+                    },
+                    {
+                      "title": "Action URL",
+                      "value": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}",
+                      "short": false
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

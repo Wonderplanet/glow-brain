@@ -1,0 +1,406 @@
+enum:
+  - name: IgnDisplayType
+    params:
+      - name: BasicBanner
+      - name: Dialog
+
+  - name: IgnDisplayFrequencyType
+    params:
+      - name: Always
+      - name: Daily
+      - name: Weekly
+      - name: Monthly
+      - name: Once
+
+  - name: InGameContentType
+    params:
+      - name: Stage
+      - name: AdventBattle
+      - name: Pvp
+
+  - name: CampaignType
+    params:
+      - name: Stamina
+      - name: Exp
+      - name: ArtworkFragment
+      - name: ItemDrop
+      - name: CoinDrop
+      - name: ChallengeCount
+
+  - name: CampaignTargetType
+    params:
+      - name: NormalQuest
+      - name: EnhanceQuest
+      - name: EventQuest
+      - name: PvP
+      - name: AdventBattle
+
+  - name: CampaignTargetIdType
+    params:
+      - name: Quest
+      - name: Series
+
+data:
+  - name: MstConfig
+    obscure: true
+    params:
+      - name: key
+        type: string
+      - name: value
+        type: string
+
+  - name: OprInGameNotice
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: displayType
+        type: IgnDisplayType
+      - name: destinationType
+        type: string
+      - name: destinationPath
+        type: string
+      - name: destinationPathDetail
+        type: string
+      - name: priority
+        type: int
+      - name: displayFrequencyType
+        type: IgnDisplayFrequencyType
+      - name: title
+        type: string
+      - name: description
+        type: string
+      - name: bannerUrl
+        type: string
+      - name: buttonTitle
+        type: string
+
+  - name: Badge
+    obscure: true
+    params:
+      - name: unreceivedMissionRewardCount
+        type: int
+      - name: unreceivedMissionBeginnerRewardCount
+        type: int
+      - name: unreceivedMissionEventRewardCounts
+        type: MissionEventRewardCountData[]
+      - name: unreceivedMissionAdventBattleRewardCount
+        type: int
+      - name: unopenedMessageCount
+        type: int
+
+  - name: MissionEventRewardCount
+    obscure: true
+    params:
+      - name: mstEventId
+        type: string
+      - name: count
+        type: int
+
+  - name: MissionStatus
+    obscure: true
+    params:
+      - name: isBeginnerMissionCompleted
+        type: bool
+
+  - name: DailyBonusReward
+    obscure: true
+    params:
+      - name: missionDailyBonusType
+        type: MissionDailyBonusType
+      - name: loginDayCount
+        type: int
+      - name: reward
+        type: RewardData
+
+  - name: EventDailyBonusReward
+    obscure: true
+    params:
+      - name: mstMissionEventDailyBonusScheduleId
+        type: string
+      - name: loginDayCount
+        type: int
+      - name: reward
+        type: RewardData
+
+  - name: ComebackBonusReward
+    obscure: true
+    params:
+      - name: mstComebackBonusScheduleId
+        type: string
+      - name: loginDayCount
+        type: int
+      - name: reward
+        type: RewardData
+
+  - name: UsrInGameStatus
+    obscure: true
+    params:
+      - name: isStartedSession
+        type: bool
+      - name: inGameContentType
+        type: InGameContentType?
+      - name: targetMstId
+        type: string
+      - name: partyNo
+        type: int
+      - name: continueCount
+        type: int
+      - name: continueAdCount
+        type: int
+
+  - name: OprCampaign
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: campaignType
+        type: CampaignType
+      - name: targetType
+        type: CampaignTargetType
+      - name: difficulty
+        type: Difficulty
+      - name: targetIdType
+        type: CampaignTargetIdType
+      - name: targetId
+        type: string
+      - name: effectValue
+        type: int
+      - name: assetKey
+        type: string
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+
+  - name: OprCampaignI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: oprCampaignId
+        type: string
+      - name: language
+        type: Language
+      - name: description
+        type: string
+
+  - name: GameVersionResult
+    obscure: true
+    params:
+      - name: mstHash
+        type: string
+      - name: oprHash
+        type: string
+      - name: mstI18nHash
+        type: string
+      - name: oprI18nHash
+        type: string
+      - name: mstPath
+        type: string
+      - name: oprPath
+        type: string
+      - name: mstI18nPath
+        type: string
+      - name: oprI18nPath
+        type: string
+      - name: assetCatalogDataPath
+        type: string
+      - name: assetHash
+        type: string
+      - name: assetVersion
+        type: string
+      - name: tosVersion
+        type: int
+      - name: tosUserAgreeVersion
+        type: int
+      - name: tosUrl
+        type: string
+      - name: privacyPolicyVersion
+        type: int
+      - name: privacyPolicyUserAgreeVersion
+        type: int
+      - name: privacyPolicyUrl
+        type: string
+      - name: globalCnsntVersion
+        type: int
+      - name: globalCnsntUserAgreeVersion
+        type: int
+      - name: globalCnsntUrl
+        type: string
+      - name: inAppAdvertisementVersion
+        type: int
+      - name: inAppAdvertisementUserAgreeVersion
+        type: int
+      - name: inAppAdvertisementUrl
+        type: string
+
+  - name: GameServerTimeResult
+    obscure: true
+    params:
+      - name: serverTime
+        type: DateTimeOffset
+
+  - name: GameFetch
+    obscure: true
+    params:
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrStages
+        type: UsrStageData[]
+      - name: usrStageEvents
+        type: UsrStageEventData[]
+      - name: usrStageEnhances
+        type: UsrStageEnhanceData[]
+      - name: usrAdventBattles
+        type: UsrAdventBattleData[]
+      - name: usrBuyCount
+        type: UsrUserBuyCountData
+      - name: badges
+        type: BadgeData
+      - name: missionStatus
+        type: MissionStatusData
+
+  - name: GameFetchOther
+    obscure: true
+    params:
+      - name: tutorialStatus
+        type: string
+      - name: usrTutorialFreeParts
+        type: UsrTutorialData[]
+      - name: usrProfile
+        type: UsrProfileData
+      - name: usrLogin
+        type: UsrLoginData
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: usrItems
+        type: UsrItemData[]
+      - name: requiredDailyBuyStaminaDiamond
+        type: int
+      - name: usrStoreProducts
+        type: UsrStoreProductData[]
+      - name: usrShopItems
+        type: UsrShopItemData[]
+      - name: usrTradePacks
+        type: UsrTradePackData[]
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+      - name: usrShopPasses
+        type: UsrShopPassData[]
+      - name: shopPassRewards
+        type: ShopPassRewardData[]
+      - name: usrIdleIncentive
+        type: UsrIdleIncentiveData
+      - name: usrParties
+        type: UsrPartyData[]
+      - name: usrOutposts
+        type: UsrOutpostData[]
+      - name: usrOutpostEnhancements
+        type: UsrOutpostEnhancementData[]
+      - name: usrInGameStatus
+        type: UsrInGameStatusData
+      - name: dailyBonusRewards
+        type: DailyBonusRewardData[]
+      - name: eventDailyBonusRewards
+        type: EventDailyBonusRewardData[]
+      - name: usrMissionEventDailyBonusProgresses
+        type: UsrMissionEventDailyBonusProgressData[]
+      - name: comebackBonusRewards
+        type: ComebackBonusRewardData[]
+      - name: usrComebackBonusProgresses
+        type: UsrComebackBonusProgressData[]
+      - name: usrEmblems
+        type: UsrEmblemData[]
+      - name: usrArtworks
+        type: UsrArtworkData[]
+      - name: usrArtworkFragments
+        type: UsrArtworkFragmentData[]
+      - name: UsrGachas
+        type: UsrGachaData[]
+      - name: UsrGachaUppers
+        type: UsrGachaUpperData[]
+      - name: usrReceivedUnitEncyclopediaRewards
+        type: UsrReceivedUnitEncyclopediaRewardData[]
+      - name: oprInGameNotices
+        type: OprInGameNoticeData[]
+      - name: usrStoreInfo
+        type: UsrStoreInfoData
+      - name: usrItemTrades
+        type: UsrItemTradeData[]
+      - name: usrTradePacks
+        type: UsrTradePackData[]
+      - name: usrEnemyDiscoveries
+        type: UsrEnemyDiscoveryData[]
+      - name: adventBattleRaidTotalScore
+        type: AdventBattleRaidTotalScoreData
+      - name: bnidLinkedAt
+        type: DateTimeOffset?
+      - name: gameStartAt
+        type: DateTimeOffset
+      - name: oprCampaigns
+        type: OprCampaignData[]
+      - name: sysPvpSeason
+        type: SysPvpSeasonData
+      - name: usrPvpStatus
+        type: UsrPvpStatusData
+      - name: usrExchangeLineups
+        type: UsrExchangeLineupData[]
+
+  # - name: GameUpdate
+  #   params:
+
+  - name: GameUpdateAndFetchResult
+    obscure: true
+    params:
+      - name: fetch
+        type: GameFetchData
+      - name: fetchOther
+        type: GameFetchOtherData
+      # - name: update
+      #   type: GameUpdateData
+
+  - name: GameFetchResult
+    obscure: true
+    params:
+      - name: fetch
+        type: GameFetchData
+
+  - name: GameBadgeResult
+    obscure: true
+    params:
+      - name: badges
+        type: BadgeData
+
+api:
+  - name: Game
+    actions:
+      - name: Version
+        path: "/api/game/version"
+        params:
+        method: GET
+        response: GameVersionResultData
+
+      - name: UpdateAndFetch
+        path: "/api/game/update_and_fetch"
+        params:
+        method: POST
+        response: GameUpdateAndFetchResultData
+
+      - name: Fetch
+        path: "/api/game/fetch"
+        params:
+        method: GET
+        response: GameFetchResultData
+
+      - name: Badge
+        path: "api/game/badge"
+        params:
+        method: GET
+        response: GameBadgeResultData
+
+      - name: ServerTime
+        path: "/api/game/server_time"
+        params:
+        method: GET
+        response: GameServerTimeResultData
