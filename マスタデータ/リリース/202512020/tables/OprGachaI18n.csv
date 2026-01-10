@@ -1,7 +1,0 @@
-ENABLE,release_key,id,opr_gacha_id,language,name,description,max_rarity_upper_description,pickup_upper_description,fixed_prize_description,banner_url,logo_asset_key,logo_banner_url,gacha_background_color,gacha_banner_size
-e,202512020,Fest_osh_001_ja,Fest_osh_001,ja,正月DXフェスガシャ,"「B小町不動のセンター アイ」の出現率UP中!",,ピックアップURキャラ1体確定!,SSR以上1体確定,glo_00002,fes_00001,,Yellow,SizeL
-e,202512020,Pickup_osh_001_ja,Pickup_osh_001,ja,"【推しの子】 いいジャン祭ピックアップガシャ","【推しの子】から新URキャラ1体と\n新SSRキャラ4体の出現率UP中!",,ピックアップURキャラ1体確定!,SR以上1体確定,osh_00001,pickup_00001,,Yellow,SizeL
-e,202512020,UR_newyear_001_ja,UR_newyear_001,ja,2026年正月記念！UR1体確定ガシャ,"有償プリズム1,500個で引ける！\nURキャラ1体確定！",URキャラ1体確定,,UR1体確定,glo_00003,,,Purple,SizeL
-e,202512020,UR_newyear_Ticket_001_ja,UR_newyear_Ticket_001,ja,2026年正月記念！UR1体確定ガシャ,URキャラ1体確定！,URキャラ1体確定,,UR1体確定,glo_00003,,,Purple,SizeL
-e,202512020,gasho_001_ja,gasho_001,ja,賀正ガシャ2026,賀正ガシャチケット引ける!,,,,glo_00005,,,Yellow,SizeL
-e,202512020,SSRticket_osh_001_ja,SSRticket_osh_001,ja,【推しの子】SSR確定チケットガシャ,【推しの子】作品のSSRキャラのみ出現！,,SSR確定！,,osh_00002,,,Yellow,SizeL

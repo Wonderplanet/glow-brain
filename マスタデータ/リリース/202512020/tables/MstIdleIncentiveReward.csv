@@ -1,4 +1,0 @@
-ENABLE,id,release_key,mst_stage_id,base_coin_amount,base_exp_amount,base_rank_up_material_amount,mst_idle_incentive_item_group_id
-e,mst_idle_incentive_reward_79,202512020,normal_osh_00001,35.391,25.063,0,idle_incentive_group_70
-e,mst_idle_incentive_reward_80,202512020,normal_osh_00002,36.061,25.442,0,idle_incentive_group_71
-e,mst_idle_incentive_reward_81,202512020,normal_osh_00003,36.735,25.822,0,idle_incentive_group_72
