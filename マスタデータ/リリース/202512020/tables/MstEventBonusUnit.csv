@@ -1,7 +1,0 @@
-ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
-e,48,chara_osh_00001,30,raid_osh1_00001,,202512020
-e,49,chara_osh_00201,10,raid_osh1_00001,,202512020
-e,50,chara_osh_00301,10,raid_osh1_00001,,202512020
-e,51,chara_osh_00401,10,raid_osh1_00001,,202512020
-e,52,chara_osh_00501,10,raid_osh1_00001,,202512020
-e,53,chara_osh_00601,10,raid_osh1_00001,,202512020

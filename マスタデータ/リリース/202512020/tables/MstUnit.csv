@@ -1,8 +1,0 @@
-ENABLE,id,fragment_mst_item_id,role_type,color,attack_range_type,unit_label,has_specific_rank_up,mst_series_id,asset_key,rarity,sort_order,summon_cost,summon_cool_time,special_attack_initial_cool_time,special_attack_cool_time,min_hp,max_hp,damage_knock_back_count,move_speed,well_distance,min_attack_power,max_attack_power,mst_unit_ability_id1,ability_unlock_rank1,mst_unit_ability_id2,ability_unlock_rank2,mst_unit_ability_id3,ability_unlock_rank3,is_encyclopedia_special_attack_position_right,release_key
-e,chara_osh_00001,piece_osh_00001,Technical,Red,Middle,FestivalUR,0,osh,chara_osh_00001,UR,1,900,790,640,1770,2160,21600,3,35,0.41,3520,35200,ability_osh_00001_01,0,ability_osh_00001_02,4,ability_osh_00001_03,6,0,202512020
-e,chara_osh_00101,piece_osh_00101,Special,Colorless,None,PremiumUR,0,osh,chara_osh_00101,UR,1,750,0,0,0,0,0,,0,,50,50,,0,,0,,0,0,202512020
-e,chara_osh_00201,piece_osh_00201,Attack,Red,Short,PremiumSSR,0,osh,chara_osh_00201,SSR,1,535,500,240,1455,1370,13700,2,35,0.29,1770,17700,ability_osh_00201_01,0,,0,,0,0,202512020
-e,chara_osh_00301,piece_osh_00301,Support,Yellow,Short,PremiumSSR,0,osh,chara_osh_00301,SSR,1,350,270,170,1300,890,8900,2,35,0.27,630,6300,ability_osh_00301_01,0,,0,,0,0,202512020
-e,chara_osh_00401,piece_osh_00401,Technical,Green,Short,PremiumSSR,0,osh,chara_osh_00401,SSR,1,370,275,225,640,700,7000,3,30,0.32,870,8700,ability_osh_00401_01,0,,0,,0,0,202512020
-e,chara_osh_00501,piece_osh_00501,Technical,Blue,Short,PremiumSSR,0,osh,chara_osh_00501,SSR,1,335,320,165,1795,870,8700,3,35,0.31,630,6300,ability_osh_00501_01,0,,0,,0,0,202512020
-e,chara_osh_00601,piece_osh_00601,Defense,Green,Short,DropSR,1,osh,chara_osh_00601,SR,1,800,1720,750,1265,5280,52800,1,47,0.17,960,9600,ability_osh_00601_01,2,,0,,0,0,202512020

@@ -1,7 +1,0 @@
-ENABLE,id,product_sub_id,discount_rate,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,is_first_time_free,cost_amount,is_recommend,asset_key,pack_decoration,release_key
-e,event_item_pack_7,37,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00005,__NULL__,202512020
-e,event_item_pack_8,44,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00012,__NULL__,202512020
-e,event_item_pack_9,45,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00013,__NULL__,202512020
-e,event_item_pack_10,46,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00014,__NULL__,202512020
-e,event_item_pack_11,47,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00019,__NULL__,202512020
-e,monthly_item_pack_2,51,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00017,__NULL__,202512020

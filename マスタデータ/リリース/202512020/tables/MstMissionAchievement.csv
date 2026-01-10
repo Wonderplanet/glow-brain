@@ -1,4 +1,0 @@
-ENABLE,id,release_key,criterion_type,criterion_value,criterion_count,unlock_criterion_type,unlock_criterion_value,unlock_criterion_count,group_key,mst_mission_reward_group_id,sort_order,destination_scene
-e,achievement_2_101,202512020,SpecificQuestClear,quest_main_osh_normal_17,1,__NULL__,,0,,achievement_2_101,101,QuestSelect
-e,achievement_2_102,202512020,SpecificQuestClear,quest_main_osh_hard_17,1,__NULL__,,0,,achievement_2_102,102,QuestSelect
-e,achievement_2_103,202512020,SpecificQuestClear,quest_main_osh_veryhard_17,1,__NULL__,,0,,achievement_2_103,103,QuestSelect
