@@ -1,0 +1,406 @@
+{
+    "containerDefinitions":[
+        {
+            "name":"php",
+            "image":"<PHP_IMAGE>",
+            "cpu":0,
+            "portMappings":[
+                {
+                    "name":"php-9000-tcp",
+                    "containerPort":9000,
+                    "hostPort":9000,
+                    "protocol":"tcp",
+                    "appProtocol":"http"
+                }
+            ],
+            "essential":true,
+            "environment":[
+                {
+                    "name":"APP_ENV",
+                    "value":"<INFRA_ENV>"
+                },
+                {
+                    "name": "TIDB_PORT",
+                    "value": "4000"
+                },
+                {
+                    "name": "TIDB_DATABASE",
+                    "value": "<INFRA_ENV>"
+                },
+                {
+                    "name": "MASTER_DB_HOST",
+                    "value": "db.<INFRA_ENV>.<PJ_NAME>.internal"
+                },
+                {
+                    "name": "MASTER_DB_PORT",
+                    "value": "3306"
+                },
+                {
+                    "name": "MASTER_DB_DATABASE",
+                    "value": "<INFRA_ENV>"
+                },
+                {
+                    "name": "MANAGE_DB_HOST",
+                    "value": "db.<INFRA_ENV>.<PJ_NAME>.internal"
+                },
+                {
+                    "name": "MANAGE_DB_PORT",
+                    "value": "3306"
+                },
+                {
+                    "name": "MANAGE_DB_DATABASE",
+                    "value": "mng"
+                },
+                {
+                    "name": "ADMIN_DB_HOST",
+                    "value": "db.<INFRA_ENV>.<PJ_NAME>.internal"
+                },
+                {
+                    "name": "ADMIN_DB_PORT",
+                    "value": "3306"
+                },
+                {
+                    "name": "ADMIN_DB_DATABASE",
+                    "value": "admin"
+                },
+                {
+                    "name": "MOMENTO_CACHE_NAME",
+                    "value": "<PJ_NAME>-<INFRA_ENV>"
+                },
+                {
+                    "name": "DD_AGENT_HOST",
+                    "value": "localhost"
+                },
+                {
+                    "name": "DD_TRACE_AGENT_PORT",
+                    "value": "8126"
+                },
+                {
+                    "name": "DD_ENV",
+                    "value": "<INFRA_ENV>"
+                },
+                {
+                    "name": "DD_SERVICE",
+                    "value": "<PJ_NAME>-server"
+                },
+                {
+                    "name": "DD_VERSION",
+                    "value": "1.0"
+                },
+                {
+                    "name": "DD_TRACE_ENABLED",
+                    "value": "true"
+                },
+                {
+                    "name": "DD_APPSEC_ENABLED",
+                    "value": "false"
+                },
+                {
+                    "name": "DD_PROFILING_ENABLED",
+                    "value": "false"
+                },
+                {
+                    "name": "STOREKIT2_CERT_DIR",
+                    "value": "/var/www/api/storage/app/certificates"
+                }
+            ],
+            "mountPoints":[
+                {
+                    "sourceVolume": "sharesock",
+                    "containerPath": "/var/run/php-fpm/",
+                    "readOnly": false
+                },
+                {
+                    "sourceVolume": "datadog-socket",
+                    "containerPath": "/var/run/datadog",
+                    "readOnly": true
+                }
+            ],
+            "volumesFrom":[],
+            "linuxParameters":null,
+            "secrets":[
+                {
+                    "name": "TIDB_HOST",
+                    "valueFrom": "<SECRET>:glow-tidb-host::"
+                },
+                {
+                    "name": "TIDB_USERNAME",
+                    "valueFrom": "<SECRET>:glow-tidb-api-user::"
+                },
+                {
+                    "name": "TIDB_PASSWORD",
+                    "valueFrom": "<SECRET>:glow-tidb-api-pass::"
+                },
+                {
+                    "name": "MASTER_DB_USERNAME",
+                    "valueFrom": "<SECRET>:glow-aurora-api-user::"
+                },
+                {
+                    "name": "MASTER_DB_PASSWORD",
+                    "valueFrom": "<SECRET>:glow-aurora-api-pass::"
+                },
+                {
+                    "name": "MANAGE_DB_USERNAME",
+                    "valueFrom": "<SECRET>:glow-aurora-api-user::"
+                },
+                {
+                    "name": "MANAGE_DB_PASSWORD",
+                    "valueFrom": "<SECRET>:glow-aurora-api-pass::"
+                },
+                {
+                    "name": "ADMIN_DB_USERNAME",
+                    "valueFrom": "<SECRET>:glow-aurora-api-user::"
+                },
+                {
+                    "name": "ADMIN_DB_PASSWORD",
+                    "valueFrom": "<SECRET>:glow-aurora-api-pass::"
+                },
+                {
+                    "name": "TIDB_MYSQL_ATTR_SSL_CA",
+                    "valueFrom": "<SECRET>:tidb-mysql-attr-ssl-ca::"
+                },
+                {
+                    "name": "TIDB_PERSISTENT",
+                    "valueFrom": "<SECRET>:tidb-persistent::"
+                },
+                {
+                    "name": "MOMENTO_API_KEY",
+                    "valueFrom": "<SECRET>:glow-momento-api-key::"
+                },
+                {
+                    "name": "APP_DEBUG",
+                    "valueFrom": "<SECRET>:app-debug::"
+                },
+                {
+                    "name": "REDIS_HOST",
+                    "valueFrom": "<SECRET>:redis-host::"
+                },
+                {
+                    "name": "WP_INSTRUMENTATION_DATADOG_ENABLE",
+                    "valueFrom": "<SECRET>:wp-instrumentation-datadog-enable::"
+                },
+                {
+                    "name": "IS_DEBUGGABLE_ENV",
+                    "valueFrom": "<SECRET>:is-debuggable-env::"
+                },
+                {
+                    "name": "APPSTORE_BUNDLE_ID_PRODUCTION",
+                    "valueFrom": "<SECRET>:appstore-bundle-id-production::"
+                },
+                {
+                    "name": "APPSTORE_BUNDLE_ID_SANDBOX",
+                    "valueFrom": "<SECRET>:appstore-bundle-id-sandbox::"
+                },
+                {
+                    "name": "GOOGLEPLAY_PACKAGE_NAME",
+                    "valueFrom": "<SECRET>:googleplay-package-name::"
+                },
+                {
+                    "name": "GOOGLEPLAY_PURCHASE_CREDENTIAL_ENV",
+                    "valueFrom": "<SECRET>:googleplay-purchase-credential-env::"
+                },
+                {
+                    "name": "GOOGLEPLAY_PUBKEY_ENV",
+                    "valueFrom": "<SECRET>:googleplay-pubkey-env::"
+                },
+                {
+                    "name": "BNID_ACCESS_TOKEN_URL",
+                    "valueFrom": "<SECRET>:bnid-access-token-url::"
+                },
+                {
+                    "name": "X_BNID_REMOTE_ADDRESS",
+                    "valueFrom": "<SECRET>:bnid-remote-address::"
+                },
+                {
+                    "name": "X_BNID_CLIENT_ID",
+                    "valueFrom": "<SECRET>:bnid-client-id::"
+                },
+                {
+                    "name": "X_BNID_CLIENT_SECRET",
+                    "valueFrom": "<SECRET>:bnid-client-secret::"
+                },
+                {
+                    "name": "ENCRYPTION_ENABLED",
+                    "valueFrom": "<SECRET>:encryption-enabled::"
+                },
+                {
+                    "name": "ENCRYPTION_REQUEST_PASSWORD",
+                    "valueFrom": "<SECRET>:encryption-request-password::"
+                },
+                {
+                    "name": "ENCRYPTION_RESPONSE_PASSWORD",
+                    "valueFrom": "<SECRET>:encryption-response-password::"
+                },
+                {
+                    "name": "DISABLE_HEADER",
+                    "valueFrom": "<SECRET>:disable-header::"
+                },
+                {
+                    "name": "LOG_LEVEL",
+                    "valueFrom": "<SECRET>:log-level::"
+                },
+                {
+                    "name": "STOREKIT2_EXTERNAL_TOKEN_URL",
+                    "valueFrom": "<SECRET>:storekit2-external-token-url::"
+                }
+            ],
+            "ulimits":[
+                {
+                    "name":"nofile",
+                    "softLimit":65535,
+                    "hardLimit":65535
+                },
+                {
+                    "name":"nproc",
+                    "softLimit":65535,
+                    "hardLimit":65535
+                }
+            ],
+            "logConfiguration":{
+                "logDriver":"awslogs",
+                "options":{
+                    "awslogs-create-group":"true",
+                    "awslogs-group":"/ecs/<PJ_NAME>-<INFRA_ENV>-app-task",
+                    "awslogs-region":"<AWS_DEFAULT_REGION>",
+                    "awslogs-stream-prefix":"ecs"
+                }
+            },
+            "healthCheck": {
+                "command": [
+                    "CMD-SHELL",
+                    "true"
+                ],
+                "interval": 30,
+                "timeout": 5,
+                "retries": 3
+            }
+        },
+        {
+            "name":"nginx",
+            "image":"<NGINX_IMAGE>",
+            "cpu":0,
+            "portMappings":[
+                {
+                    "name":"nginx-80-tcp",
+                    "containerPort":80,
+                    "hostPort":80,
+                    "protocol":"tcp"
+                }
+            ],
+            "essential":true,
+            "environment":[],
+            "mountPoints":[
+                {
+                    "sourceVolume": "sharesock",
+                    "containerPath": "/var/run/php-fpm/",
+                    "readOnly": false
+                }
+            ],
+            "volumesFrom":[],
+            "linuxParameters":null,
+            "dependsOn":[
+                {
+                    "containerName":"php",
+                    "condition":"HEALTHY"
+                }
+            ],
+            "ulimits":[
+                {
+                    "name":"nofile",
+                    "softLimit":65535,
+                    "hardLimit":65535
+                },
+                {
+                    "name":"nproc",
+                    "softLimit":65535,
+                    "hardLimit":65535
+                }
+            ],
+            "logConfiguration":{
+                "logDriver":"awslogs",
+                "options":{
+                    "awslogs-create-group":"true",
+                    "awslogs-group":"/ecs/<PJ_NAME>-<INFRA_ENV>-app-task",
+                    "awslogs-region":"<AWS_DEFAULT_REGION>",
+                    "awslogs-stream-prefix":"ecs"
+                }
+            },
+            "healthCheck": {
+                "command": [
+                    "CMD-SHELL",
+                    "true"
+                ],
+                "interval": 30,
+                "timeout": 5,
+                "retries": 3
+            }
+        },
+        {
+            "name":"datadog-agent",
+            "image":"<DATADOG_IMAGE>",
+            "essential":false,
+            "environment":[
+                {
+                    "name": "DD_APM_ENABLED",
+                    "value": "true"
+                },
+                {
+                    "name": "DD_SITE",
+                    "value": "ap1.datadoghq.com"
+                }
+            ],
+            "mountPoints":[
+                {
+                    "sourceVolume": "datadog-socket",
+                    "containerPath": "/var/run/datadog",
+                    "readOnly": false
+                }
+            ],
+            "volumesFrom":[],
+            "linuxParameters":null,
+            "secrets":[
+                {
+                    "name": "DD_API_KEY",
+                    "valueFrom": "<SECRET>:dd-api-key::"
+                }
+            ],
+            "dependsOn":[
+                {
+                    "containerName": "php",
+                    "condition": "HEALTHY"
+                }
+            ],
+            "logConfiguration":{
+                "logDriver":"awslogs",
+                "options":{
+                    "awslogs-create-group":"true",
+                    "awslogs-group":"/ecs/<PJ_NAME>-<INFRA_ENV>-app-datadog",
+                    "awslogs-region":"<AWS_DEFAULT_REGION>",
+                    "awslogs-stream-prefix":"datadog"
+                }
+            }
+        }
+    ],
+    "family":"<PJ_NAME>-<INFRA_ENV>-api-def",
+    "taskRoleArn":"arn:aws:iam::<AWS_ACCOUNT_ID>:role/<PJ_NAME2>EcsTaskRole",
+    "executionRoleArn":"arn:aws:iam::<AWS_ACCOUNT_ID>:role/<PJ_NAME2>EcsTaskExecutionRole",
+    "networkMode":"awsvpc",
+    "volumes":[
+        {
+            "name":"sharesock",
+            "host":{}
+        },
+        {
+            "name": "datadog-socket"
+        }
+    ],
+    "requiresCompatibilities":[
+        "EC2"
+    ],
+    "cpu":"8192",
+    "memory":"16384",
+    "runtimePlatform": {
+        "cpuArchitecture": "ARM64",
+        "operatingSystemFamily": "LINUX"
+    }
+}

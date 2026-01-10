@@ -1,0 +1,773 @@
+enum:
+  - name: MissionType
+    params:
+      - name: Achievement
+      - name: DailyBonus
+      - name: Daily
+      - name: Weekly
+      - name: Beginner
+      - name: Event
+      - name: EventDaily
+      - name: EventDailyBonus
+      - name: LimitedTerm
+  - name: MissionDailyBonusType
+    params:
+      - name: DailyBonus
+  - name: MissionCriterionType
+    params:
+      # ミッション
+      - name: MissionClearCount
+      - name: SpecificMissionClearCount
+      - name: MissionBonusPoint
+      # ステージ
+      - name: SpecificQuestClear
+      - name: SpecificStageClearCount
+      - name: QuestClearCount
+      - name: StageClearCount
+      - name: SpecificStageChallengeCount
+      - name: SpecificUnitStageClearCount
+      - name: SpecificUnitStageChallengeCount
+      - name: SpecificTribeUnitStageClearCount
+      - name: SpecificTribeUnitStageChallengeCount
+      # インゲーム
+      - name: DefeatEnemyCount
+      - name: DefeatBossEnemyCount
+      - name: SpecificSeriesEnemyDiscoveryCount
+      - name: EnemyDiscoveryCount
+      - name: SpecificEnemyDiscoveryCount
+      # ログイン
+      - name: LoginCount
+      - name: LoginContinueCount
+      - name: ComebackLoginContinueCount
+      - name: Comeback
+      # ユーザー
+      - name: UserLevel
+      - name: IconChange
+      - name: EmblemChange
+      - name: TutorialCompleted
+      - name: CoinCollect
+      - name: CoinUsedCount
+      # 図鑑
+      - name: SpecificSeriesArtworkCompletedCount
+      - name: ArtworkCompletedCount
+      - name: SpecificArtworkCompletedCount
+      - name: SpecificSeriesEmblemAcquiredCount
+      - name: EmblemAcquiredCount
+      - name: SpecificEmblemAcquiredCount
+      # ユニット
+      - name: UnitLevel
+      - name: SpecificUnitLevel
+      - name: UnitLevelUpCount
+      - name: SpecificUnitRankUpCount
+      - name: SpecificUnitGradeUpCount
+      - name: UnitAcquiredCount
+      - name: SpecificSeriesUnitAcquiredCount
+      - name: SpecificUnitAcquiredCount
+      # ゲート
+      - name: OutpostEnhanceCount
+      - name: SpecificOutpostEnhanceLevel
+      - name: OutpostKomaChange
+      # システム
+      - name: ReviewCompleted
+      - name: FollowCompleted
+      - name: AccountCompleted
+      - name: IaaCount
+      - name: AccessWeb
+      # ガチャ
+      - name: SpecificGachaDrawCount
+      - name: GachaDrawCount
+      # アイテム
+      - name: SpecificItemCollect
+      # 放置収益
+      - name: IdleIncentiveCount
+      - name: IdleIncentiveQuickCount
+      # 降臨バトル
+      - name: AdventBattleChallengeCount
+      - name: AdventBattleTotalScore
+      - name: AdventBattleScore
+      # ランクマッチ
+      - name: PvpChallengeCount
+      - name: PvpWinCount
+
+  - name: EventCategory
+    params:
+      - name: None
+      - name: AdventBattle
+  - name: MissionCategory
+    params:
+      - name: AdventBattle
+
+data:
+  - name: MstMissionAchievement
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: criterionType
+        type: MissionCriterionType
+      - name: criterionValue
+        type: string?
+      - name: criterionCount
+        type: int
+      - name: unlockCriterionType
+        type: MissionCriterionType?
+      - name: unlockCriterionValue
+        type: string
+      - name: unlockCriterionCount
+        type: int?
+      - name: groupKey
+        type: string
+      - name: mstMissionRewardGroupId
+        type: string
+      - name: sortOrder
+        type: int
+      - name: destinationScene
+        type: string
+  - name: MstMissionAchievementI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstMissionAchievementId
+        type: string
+      - name: language
+        type: Language
+      - name: description
+        type: string
+  - name: MstMissionAchievementDependency
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: groupId
+        type: string
+      - name: mstMissionAchievementId
+        type: string
+      - name: unlockOrder
+        type: int
+  - name: MstMissionDaily
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: criterionType
+        type: MissionCriterionType
+      - name: criterionValue
+        type: string?
+      - name: criterionCount
+        type: int
+      - name: groupKey
+        type: string
+      - name: bonusPoint
+        type: int
+      - name: mstMissionRewardGroupId
+        type: string
+      - name: sortOrder
+        type: int
+      - name: destinationScene
+        type: string
+  - name: MstMissionDailyI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstMissionDailyId
+        type: string
+      - name: language
+        type: Language
+      - name: description
+        type: string
+  - name: MstMissionWeekly
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: criterionType
+        type: MissionCriterionType
+      - name: criterionValue
+        type: string?
+      - name: criterionCount
+        type: int
+      - name: groupKey
+        type: string
+      - name: bonusPoint
+        type: int
+      - name: mstMissionRewardGroupId
+        type: string
+      - name: sortOrder
+        type: int
+      - name: destinationScene
+        type: string
+  - name: MstMissionWeeklyI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstMissionWeeklyId
+        type: string
+      - name: language
+        type: Language
+      - name: description
+        type: string
+  - name: MstMissionBeginner
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: criterionType
+        type: MissionCriterionType
+      - name: criterionValue
+        type: string?
+      - name: criterionCount
+        type: int
+      - name: unlockDay
+        type: int
+      - name: groupKey
+        type: string
+      - name: bonusPoint
+        type: int
+      - name: mstMissionRewardGroupId
+        type: string
+      - name: sortOrder
+        type: int
+      - name: destinationScene
+        type: string
+  - name: MstMissionBeginnerI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstMissionBeginnerId
+        type: string
+      - name: language
+        type: Language
+      - name: title
+        type: string
+      - name: description
+        type: string
+  - name: MstMissionBeginnerPromptPhraseI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: language
+        type: Language
+      - name: promptPhraseText
+        type: string
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+  - name: MstMissionEvent
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstEventId
+        type: string
+      - name: criterionType
+        type: MissionCriterionType
+      - name: criterionValue
+        type: string?
+      - name: criterionCount
+        type: int
+      - name: unlockCriterionType
+        type: MissionCriterionType?
+      - name: unlockCriterionValue
+        type: string
+      - name: unlockCriterionCount
+        type: int?
+      - name: groupKey
+        type: string
+      - name: mstMissionRewardGroupId
+        type: string
+      - name: eventCategory
+        type: EventCategory?
+      - name: sortOrder
+        type: int
+      - name: destinationScene
+        type: string
+  - name: MstMissionEventI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstMissionEventId
+        type: string
+      - name: language
+        type: Language
+      - name: description
+        type: string
+  - name: MstMissionEventDependency
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: groupId
+        type: string
+      - name: mstMissionEventId
+        type: string
+      - name: unlockOrder
+        type: int
+  - name: MstMissionEventDaily
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstEventId
+        type: string
+      - name: criterionType
+        type: MissionCriterionType
+      - name: criterionValue
+        type: string?
+      - name: criterionCount
+        type: int
+      - name: groupKey
+        type: string
+      - name: mstMissionRewardGroupId
+        type: string
+      - name: sortOrder
+        type: int
+      - name: destinationScene
+        type: string
+  - name: MstMissionEventDailyI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstMissionEventDailyId
+        type: string
+      - name: language
+        type: Language
+      - name: description
+        type: string
+  - name: MstMissionLimitedTerm
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: progressGroupKey
+        type: string
+      - name: criterionType
+        type: MissionCriterionType
+      - name: criterionValue
+        type: string?
+      - name: criterionCount
+        type: int
+      - name: missionCategory
+        type: MissionCategory
+      - name: mstMissionRewardGroupId
+        type: string
+      - name: sortOrder
+        type: int
+      - name: destinationScene
+        type: string
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+  - name: MstMissionLimitedTermDependency
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: groupId
+        type: string
+      - name: mstMissionLimitedTermId
+        type: string
+      - name: unlockOrder
+        type: int
+  - name: MstMissionLimitedTermI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstMissionLimitedTermId
+        type: string
+      - name: language
+        type: Language
+      - name: description
+        type: string
+  - name: MstMissionReward
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: groupId
+        type: string
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+      - name: sortOrder
+        type: int
+  - name: MstMissionDailyBonus
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: missionDailyBonusType
+        type: MissionDailyBonusType
+      - name: loginDayCount
+        type: int
+      - name: mstMissionRewardGroupId
+        type: string
+      - name: sortOrder
+        type: int
+
+  - name: MissionReward
+    obscure: true
+    params:
+      - name: missionType
+        type: MissionType
+      - name: mstMissionId
+        type: string
+      - name: reward
+        type: RewardData
+
+  - name: MstMissionEventDailyBonus
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstMissionEventDailyBonusScheduleId
+        type: string
+      - name: loginDayCount
+        type: int
+      - name: mstMissionRewardGroupId
+        type: string
+      - name: sortOrder
+        type: int
+  - name: MstMissionEventDailyBonusSchedule
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstEventId
+        type: string
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+  
+  - name: MstComebackBonus
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstComebackBonusScheduleId
+        type: string
+      - name: loginDayCount
+        type: int
+      - name: mstDailyBonusRewardGroupId
+        type: string
+      - name: sortOrder
+        type: int
+  - name: MstComebackBonusSchedule
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: inactiveConditionDays
+        type: int
+      - name: durationDays
+        type: int
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+  - name: MstDailyBonusReward
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: groupId
+        type: string
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+
+  - name: UsrMissionAchievement
+    obscure: true
+    params:
+      - name: mstMissionAchievementId
+        type: string
+      - name: progress
+        type: int
+      - name: isCleared
+        type: bool
+      - name: isReceivedReward
+        type: bool
+  - name: UsrMissionDailyBonus
+    obscure: true
+    params:
+      - name: mstMissionDailyBonusId
+        type: string
+      - name: progress
+        type: int
+      - name: isCleared
+        type: bool
+      - name: isReceivedReward
+        type: bool
+  - name: UsrMissionDaily
+    obscure: true
+    params:
+      - name: mstMissionDailyId
+        type: string
+      - name: progress
+        type: int
+      - name: isCleared
+        type: bool
+      - name: isReceivedReward
+        type: bool
+  - name: UsrMissionWeekly
+    obscure: true
+    params:
+      - name: mstMissionWeeklyId
+        type: string
+      - name: progress
+        type: int
+      - name: isCleared
+        type: bool
+      - name: isReceivedReward
+        type: bool
+  - name: MissionEvent
+    obscure: true
+    params:
+      - name: mstEventId
+        type: string
+      - name: usrMissionEvents
+        type: UsrMissionEventData[]
+      - name: usrMissionEventDailies
+        type: UsrMissionEventDailyData[]
+  - name: UsrMissionEvent
+    obscure: true
+    params:
+      - name: mstMissionEventId
+        type: string
+      - name: progress
+        type: int
+      - name: isCleared
+        type: bool
+      - name: isReceivedReward
+        type: bool
+  - name: UsrMissionEventDaily
+    obscure: true
+    params:
+      - name: mstMissionEventDailyId
+        type: string
+      - name: progress
+        type: int
+      - name: isCleared
+        type: bool
+      - name: isReceivedReward
+        type: bool
+  - name: UsrMissionLimitedTerm
+    obscure: true
+    params:
+      - name: mstMissionLimitedTermId
+        type: string
+      - name: progress
+        type: int
+      - name: isCleared
+        type: bool
+      - name: isReceivedReward
+        type: bool
+  - name: UsrMissionBeginner
+    obscure: true
+    params:
+      - name: mstMissionBeginnerId
+        type: string
+      - name: progress
+        type: int
+      - name: isCleared
+        type: bool
+      - name: isReceivedReward
+        type: bool
+  - name: UsrMissionBonusPoint
+    obscure: true
+    params:
+      - name: missionType
+        type: MissionType
+      - name: point
+        type: int
+      - name: receivedRewardPoints
+        type: int[]
+  - name: UsrMissionEventDailyBonusProgress
+    obscure: true
+    params:
+      - name: mstMissionEventDailyBonusScheduleId
+        type: string
+      - name: progress
+        type: int
+  - name: UsrComebackBonusProgress
+    obscure: true
+    params:
+      - name: mstComebackBonusScheduleId
+        type: string
+      - name: progress
+        type: int
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+  - name: MissionReceiveReward
+    obscure: true
+    params:
+      - name: missionType
+        type: MissionType
+      - name: mstMissionId
+        type: string
+      - name: unreceivedRewardReasonType
+        type: UnreceivedRewardReasonType?
+
+  # ResultData
+
+  - name: MissionUpdateAndFetchResult
+    obscure: true
+    params:
+      - name: usrMissionAchievements
+        type: UsrMissionAchievementData[]
+      - name: usrMissionDailyBonuses
+        type: UsrMissionDailyBonusData[]
+      - name: usrMissionDailies
+        type: UsrMissionDailyData[]
+      - name: usrMissionWeeklies
+        type: UsrMissionWeeklyData[]
+      - name: usrMissionBeginners
+        type: UsrMissionBeginnerData[]
+      - name: missionBeginnerDaysFromStart
+        type: int
+      - name: usrMissionBonusPoints
+        type: UsrMissionBonusPointData[]
+  - name: MissionEventUpdateAndFetchResult
+    obscure: true
+    params:
+      - name: missionEvents
+        type: MissionEventData[]
+  - name: MissionAdventBattleFetchResult
+    obscure: true
+    params:
+      - name: usrMissionEvents
+        type: UsrMissionEventData[]
+      - name: usrMissionLimitedTerms
+        type: UsrMissionLimitedTermData[]
+  - name: MissionReceiveRewardResult
+    obscure: true
+    params:
+      - name: usrMissionBonusPoints
+        type: UsrMissionBonusPointData[]
+      - name: missionRewards
+        type: MissionRewardData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+  - name: MissionBulkReceiveRewardResult
+    obscure: true
+    params:
+      - name: missionReceiveRewards
+        type: MissionReceiveRewardData[]
+      - name: missionRewards
+        type: MissionRewardData[]
+      - name: usrMissionAchievements
+        type: UsrMissionAchievementData[]
+      - name: usrMissionDailies
+        type: UsrMissionDailyData[]
+      - name: usrMissionWeeklies
+        type: UsrMissionWeeklyData[]
+      - name: usrMissionBeginners
+        type: UsrMissionBeginnerData[]
+      - name: missionEvents
+        type: MissionEventData[]
+      - name: usrMissionLimitedTerms
+        type: UsrMissionLimitedTermData[]
+      - name: usrMissionBonusPoints
+        type: UsrMissionBonusPointData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+  - name: MissionClearOnCallResult
+    obscure: true
+    params:
+      - name: usrMissionAchievements
+        type: UsrMissionAchievementData[]
+  - name: MissionEventDailyBonusUpdateResult
+    obscure: true
+    params:
+      - name: eventDailyBonusRewards
+        type: EventDailyBonusRewardData[]
+      - name: usrMissionEventDailyBonusProgresses
+        type: UsrMissionEventDailyBonusProgressData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: usrEmblems
+        type: UsrEmblemData[]
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+
+api:
+  - name: Mission
+    actions:
+    - name: UpdateAndFetch
+      path: "/api/mission/update_and_fetch"
+      params:
+      method: POST
+      response: MissionUpdateAndFetchResultData
+    - name: EventUpdateAndFetch
+      path: "/api/mission/event_update_and_fetch"
+      params:
+      method: POST
+      response: MissionEventUpdateAndFetchResultData
+    - name: AdventBattleFetch
+      path: "/api/mission/advent_battle_fetch"
+      params:
+      method: POST
+      response: MissionAdventBattleFetchResultData
+    - name: BulkReceiveReward
+      path: "/api/mission/bulk_receive_reward"
+      params:
+        - name: missionType
+          type: string
+        - name: mstMissionIds
+          type: string[]
+      method: POST
+      response: MissionBulkReceiveRewardResultData
+    - name: ClearOnCall
+      path: "/api/mission/clear_on_call"
+      params:
+        - name: missionType
+          type: string
+        - name: mstMissionId
+          type: string
+      method: POST
+      response: MissionClearOnCallResultData
+    - name: EventDailyBonusUpdate
+      path: "/api/mission/event_daily_bonus_update"
+      params:
+      method: POST
+      response: MissionEventDailyBonusUpdateResultData

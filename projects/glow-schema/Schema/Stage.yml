@@ -1,0 +1,964 @@
+data:
+  - name: MstQuest
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: assetKey
+        type: string
+      - name: questType
+        type: QuestType
+      - name: mstEventId
+        type: string
+      - name: startDate
+        type: DateTimeOffset
+      - name: endDate
+        type: DateTimeOffset
+      - name: sortOrder
+        type: int
+      - name: questGroup
+        type: string
+      - name: difficulty
+        type: Difficulty
+
+  - name: MstQuestI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstQuestId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+      - name: categoryName
+        type: string
+      - name: flavorText
+        type: string
+
+  - name: MstInGame
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstAutoPlayerSequenceId
+        type: string
+      - name: mstAutoPlayerSequenceSetId
+        type: string
+      - name: bgmAssetKey
+        type: string
+      - name: bossBgmAssetKey
+        type: string
+      - name: loopBackgroundAssetKey
+        type: string
+      - name: playerOutpostAssetKey
+        type: string
+      - name: mstPageId
+        type: string
+      - name: mstEnemyOutpostId
+        type: string
+      - name: mstDefenseTargetId
+        type: string?
+      - name: bossMstEnemyStageParameterId
+        type: string
+      - name: bossCount
+        type: int?
+      - name: normalEnemyHpCoef
+        type: float
+      - name: normalEnemyAttackCoef
+        type: float
+      - name: normalEnemySpeedCoef
+        type: float
+      - name: bossEnemyHpCoef
+        type: float
+      - name: bossEnemyAttackCoef
+        type: float
+      - name: bossEnemySpeedCoef
+        type: float
+
+  - name: MstInGameI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstInGameId
+        type: string
+      - name: language
+        type: Language
+      - name: resultTips
+        type: string
+      - name: description
+        type: string
+
+  - name: MstInGameSpecialRule
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: contentType
+        type: InGameContentType
+      - name: targetId
+        type: string
+      - name: ruleType
+        type: RuleType
+      - name: ruleValue
+        type: string?
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+
+  - name: MstInGameSpecialRuleUnitStatus
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: groupId
+        type: string
+      - name: targetType
+        type: InGameSpecialRuleUnitStatusTargetType
+      - name: targetValue
+        type: string
+      - name: statusParameterType
+        type: InGameSpecialRuleUnitStatusParameterType
+      - name: effectValue
+        type: int
+
+  - name: MstStage
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstQuestId
+        type: string
+      - name: mstInGameId
+        type: string
+      - name: assetKey
+        type: string
+      - name: stageNumber
+        type: int
+      - name: recommendedLevel
+        type: int
+      - name: costStamina
+        type: int
+      - name: exp
+        type: int
+      - name: coin
+        type: int
+      - name: mstArtworkFragmentDropGroupId
+        type: string
+      - name: prevMstStageId
+        type: string
+      - name: sortOrder
+        type: int
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+
+  - name: MstStageI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstStageId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+
+  - name: MstAutoPlayerSequence
+    obscure: true
+    params:
+      - name: id                  # 一つ分のID(差分用のプライマリーキー)
+        type: string
+      - name: sequenceSetId       # シーケンス全体毎の共通ID
+        type: string
+      - name: sequenceElementId   # シーケンス内の個別id
+        type: string
+      - name: sequenceGroupId     # シーケンス内のグループid
+        type: string
+      - name: prioritySequenceElementId     # 同時達成時に活性化を優先させるシーケンス内の個別id
+        type: string?
+      - name: conditionType
+        type: AutoPlayerSequenceConditionType
+      - name: conditionValue
+        type: string
+      - name: actionType
+        type: AutoPlayerSequenceActionType
+      - name: actionValue
+        type: string
+      - name: actionValue2
+        type: string
+      - name: summonAnimationType
+        type: SummonAnimationType
+      - name: summonCount
+        type: int
+      - name: summonInterval
+        type: int
+      - name: actionDelay
+        type: int
+      - name: summonPosition
+        type: float
+      - name: moveStartConditionType
+        type: MoveStartConditionType
+      - name: moveStartConditionValue
+        type: long
+      - name: moveStopConditionType
+        type: MoveStopConditionType
+      - name: moveStopConditionValue
+        type: long
+      - name: moveRestartConditionType
+        type: MoveStartConditionType
+      - name: moveRestartConditionValue
+        type: long
+      - name: moveLoopCount
+        type: int
+      - name: lastBossTrigger
+        type: bool
+      - name: auraType
+        type: UnitAuraType
+      - name: deathType
+        type: UnitDeathType
+      - name: overrideDropBattlePoint
+        type: int?
+      - name: defeatedScore
+        type: int
+      - name: enemyHpCoef
+        type: float
+      - name: enemyAttackCoef
+        type: float
+      - name: enemySpeedCoef
+        type: float
+      - name: deactivationConditionType
+        type: AutoPlayerSequenceConditionType
+      - name: deactivationConditionValue
+        type: string
+      - name: isSummonUnitOutpostDamageInvalidation
+        type: bool
+
+  - name: MstStageEventSetting
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstStageId
+        type: string
+      - name: resetType
+        type: ResetType?
+      - name: clearableCount
+        type: int?
+      - name: adChallengeCount
+        type: int
+      - name: backgroundAssetKey
+        type: string
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+
+  - name: MstStageTipsTemplateI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: language
+        type: Language
+      - name: description
+        type: string
+
+  - name: MstStageReward
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstStageId
+        type: string
+      - name: rewardCategory
+        type: RewardCategory
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+      - name: percentage
+        type: int
+      - name: sortOrder
+        type: int
+
+  - name: MstStageEventReward
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstStageId
+        type: string
+      - name: rewardCategory
+        type: RewardCategory
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+      - name: percentage
+        type: int
+      - name: sortOrder
+        type: int
+
+  - name: MstStageEnhanceRewardParam
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: minThresholdScore
+        type: int
+      - name: coinRewardAmount
+        type: int
+      - name: coinRewardSizeType
+        type: CoinRewardSizeType
+
+  - name: MstStageClearTimeReward
+    obscure: true
+    params:
+      - name: mstStageId
+        type: string
+      - name: upperClearTimeMs
+        type: int
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+
+  - name: MstEventBonusUnit
+    obscure: true
+    params:
+      - name: mstUnitId
+        type: string
+      - name: bonusPercentage
+        type: int
+      - name: eventBonusGroupId
+        type: string
+      - name: isPickUp
+        type: bool
+
+  - name: MstQuestEventBonusSchedule
+    obscure: true
+    params:
+      - name: mstQuestId
+        type: string
+      - name: eventBonusGroupId
+        type: string
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+
+  - name: MstPage
+    obscure: true
+    params:
+      - name: id
+        type: string
+
+  - name: MstKomaLine
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstPageId
+        type: string
+      - name: row
+        type: int
+      - name: height
+        type: float
+      - name: komaLineLayoutAssetKey
+        type: string
+      - name: koma1AssetKey # 利用想定として背景画像のDL
+        type: string
+      - name: koma1Width
+        type: float
+      - name: koma1BackGroundOffset
+        type: float
+      - name: koma1EffectType
+        type: KomaEffectType
+      - name: koma1EffectParameter1
+        type: string
+      - name: koma1EffectParameter2
+        type: string
+      - name: koma1EffectTargetSide
+        type: KomaEffectTargetSide
+      - name: koma1EffectTargetColors
+        type: string
+      - name: koma1EffectTargetRoles
+        type: string
+      - name: koma2AssetKey # 利用想定として背景画像のDL
+        type: string
+      - name: koma2Width
+        type: float?
+      - name: koma2BackGroundOffset
+        type: float?
+      - name: koma2EffectType
+        type: KomaEffectType?
+      - name: koma2EffectParameter1
+        type: string
+      - name: koma2EffectParameter2
+        type: string
+      - name: koma2EffectTargetSide
+        type: KomaEffectTargetSide?
+      - name: koma2EffectTargetColors
+        type: string
+      - name: koma2EffectTargetRoles
+        type: string
+      - name: koma3AssetKey # 利用想定として背景画像のDL
+        type: string
+      - name: koma3Width
+        type: float?
+      - name: koma3BackGroundOffset
+        type: float?
+      - name: koma3EffectType
+        type: KomaEffectType?
+      - name: koma3EffectParameter1
+        type: string
+      - name: koma3EffectParameter2
+        type: string
+      - name: koma3EffectTargetSide
+        type: KomaEffectTargetSide?
+      - name: koma3EffectTargetColors
+        type: string
+      - name: koma3EffectTargetRoles
+        type: string
+      - name: koma4AssetKey # 利用想定として背景画像のDL
+        type: string
+      - name: koma4Width
+        type: float?
+      - name: koma4BackGroundOffset
+        type: float?
+      - name: koma4EffectType
+        type: KomaEffectType?
+      - name: koma4EffectParameter1
+        type: string
+      - name: koma4EffectParameter2
+        type: string
+      - name: koma4EffectTargetSide
+        type: KomaEffectTargetSide?
+      - name: koma4EffectTargetColors
+        type: string
+      - name: koma4EffectTargetRoles
+        type: string
+
+  - name: MstDefenseTarget
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: assetKey
+        type: string
+      - name: position
+        type: float
+      - name: hp
+        type: int
+        
+  - name: MstInGameGimmickObject
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: assetKey
+        type: string
+
+  - name: MstMangaAnimation
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstStageId
+        type: string
+      - name: conditionType
+        type: MangaAnimationConditionType
+      - name: conditionValue
+        type: string
+      - name: animationStartDelay
+        type: int
+      - name: animationSpeed
+        type: float
+      - name: isPause
+        type: bool
+      - name: canSkip
+        type: bool
+      - name: assetKey
+        type: string
+
+  - name: MstResultTipI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: language
+        type: Language
+      - name: userLevel
+        type: int
+      - name: resultTips
+        type: string
+
+  - name: MstStageEndCondition
+    obscure: true
+    params:
+      - name: mstStageId
+        type: string
+      - name: stageEndType
+        type: StageEndType
+      - name: conditionType
+        type: StageEndConditionType
+      - name: conditionValue1
+        type: string
+      - name: conditionValue2
+        type: string
+
+  - name: MstQuestBonusUnit
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstQuestId
+        type: string
+      - name: mstUnitId
+        type: string
+      - name: coinBonusRate
+        type: float
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+
+  - name: StageStartResult
+    obscure: true
+    params:
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrInGameStatus
+        type: UsrInGameStatusData
+
+  - name: StageEndResult
+    obscure: true
+    params:
+      - name: stageRewards
+        type: StageRewardData[]
+      - name: isEmblemDuplicated
+        type: bool
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+      - name: usrArtworks
+        type: UsrArtworkData[]
+      - name: usrArtworkFragments
+        type: UsrArtworkFragmentData[]
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrEnemyDiscoveries
+        type: UsrEnemyDiscoveryData[]
+      - name: oprCampaignIds
+        type: string[]
+
+  - name: StageContinueDiamondResult
+    obscure: true
+    params:
+      - name: usrParameter
+        type: UsrParameterData
+      - name: continueCount
+        type: int
+
+  - name: StageContinueAdResult
+    obscure: true
+    params:
+      - name: continueCount
+        type: int
+      - name: continueAdCount
+        type: int
+
+  - name: StageReward
+    obscure: true
+    params:
+      - name: rewardCategory
+        type: RewardCategory
+      - name: reward
+        type: RewardData
+      - name: campaignPercentage
+        type: int?
+
+  - name: UserLevelUp
+    obscure: true
+    params:
+      - name: beforeExp
+        type: int
+      - name: afterExp
+        type: int
+      - name: usrLevelReward
+        type: UsrLevelRewardData[]
+      - name: isEmblemDuplicated
+        type: bool
+
+  - name: UsrLevelReward
+    obscure: true
+    params:
+      - name: Level
+        type: int
+      - name: reward
+        type: RewardData
+
+  - name: UsrStage
+    obscure: true
+    params:
+      - name: usrUserId
+        type: string
+      - name: mstStageId
+        type: string
+      - name: clearTimeMs
+        type: int?
+      - name: clearCount
+        type: int
+
+  - name: UsrStageEvent
+    obscure: true
+    params:
+      - name: mstStageId
+        type: string
+      - name: resetClearCount
+        type: int
+      - name: resetAdChallengeCount
+        type: int
+      - name: latestResetAt
+        type: DateTimeOffset?
+      - name: totalClearCount
+        type: int
+      - name: lastChallengedAt
+        type: DateTimeOffset?
+      - name: clearTimeMs
+        type: int?
+      - name: resetClearTimeMs
+        type: int?
+      - name: latestEventSettingEndAt
+        type: DateTimeOffset?
+
+  - name: UsrStageEnhance
+    obscure: true
+    params:
+      - name: mstStageId
+        type: string
+      - name: resetChallengeCount
+        type: int
+      - name: resetAdChallengeCount
+        type: int
+      - name: maxScore
+        type: long
+
+  - name: UsrEnemyDiscovery
+    obscure: true
+    params:
+      - name: mstEnemyCharacterId
+        type: string
+      - name: isNewEncyclopedia
+        type: bool
+
+  - name: InGameStartBattleLog
+    obscure: true
+    params:
+      - name: partyStatus
+        type: PartyStatusData[]
+
+  - name: InGameEndBattleLog
+    obscure: true
+    params:
+      - name: defeatEnemyCount
+        type: int
+      - name: defeatBossEnemyCount
+        type: int
+      - name: score
+        type: long
+      - name: clearTimeMs
+        type: int
+      - name: partyStatus
+        type: PartyStatusData[]
+      - name: maxDamage
+        type: int
+      - name: discoveredEnemies
+        type: DiscoveredEnemyData[]
+
+  - name: DiscoveredEnemy
+    obscure: true
+    params:
+      - name: mstEnemyCharacterId
+        type: string
+      - name: count
+        type: int
+
+  - name: PartyStatus
+    obscure: true
+    params:
+      - name: usrUnitId
+        type: string
+      - name: mstUnitId
+        type: string
+      - name: color
+        type: string
+      - name: roleType
+        type: string
+      - name: hp
+        type: int
+      - name: atk
+        type: int
+      - name: moveSpeed
+        type: float
+      - name: summonCost
+        type: int
+      - name: summonCoolTime
+        type: int
+      - name: damageKnockBackCount
+        type: int
+      - name: specialAttackMstAttackId
+        type: string
+      - name: attackDelay
+        type: int
+      - name: nextAttackInterval
+        type: int
+      - name: mstUnitAbility1
+        type: string
+      - name: mstUnitAbility2
+        type: string
+      - name: mstUnitAbility3
+        type: string
+
+enum:
+  - name: AutoPlayerSequenceConditionType
+    params:
+      - name: None
+      - name: ElapsedTime
+      - name: OutpostDamage
+      - name: OutpostHpPercentage
+      - name: InitialSummon
+      - name: EnterTargetKomaIndex # 指定のコマに入ったとき。0始まり
+      - name: DarknessKomaCleared
+      - name: FriendUnitDead       # 対象AutoPlayerのユニットが死亡した時(EnemyAutoPlayer使っているときはこのenumで敵死亡時になる)。
+      - name: FriendUnitTransform  # 対象AutoPlayer基準でFriend / Foe
+      - name: FriendUnitSummoned   # 対象AutoPlayer基準で味方に指定IDのユニットが召喚されたら
+      - name: SequenceElementActivated
+      - name: ElapsedTimeSinceSequenceGroupActivated
+
+  - name: AutoPlayerSequenceActionType
+    params:
+      - name: None
+      - name: SummonEnemy
+      - name: SummonPlayerCharacter
+      - name: SwitchSequenceGroup
+      - name: PlayerSpecialAttack
+      - name: SummonPlayerSpecialCharacter
+      - name: SummonGimmickObject
+      - name: TransformGimmickObjectToEnemy
+
+  - name: SummonAnimationType
+    params:
+      - name: None
+      - name: Fall0
+      - name: Fall
+      - name: Fall4
+
+  - name: UnitAuraType
+    params:
+      - name: Default
+      - name: Boss
+      - name: AdventBoss1
+      - name: AdventBoss2
+      - name: AdventBoss3
+
+  - name: MoveStartConditionType
+    params:
+      - name: None
+      - name: ElapsedTime       # 時間経過(フレーム)
+      - name: FoeEnterSameKoma  # 自分のコマに敵対者が入ったとき
+      - name: EnterTargetKoma   # 指定のコマに入ったとき。0始まり
+      - name: Damage
+      - name: DeadFriendUnitCount
+
+  - name: MoveStopConditionType
+    params:
+      - name: None
+      - name: ElapsedTime       # 時間経過(フレーム)
+      - name: TargetPosition    # 指定の停止座標になった場合
+      - name: PassedKomaCount   # 指定のコマ数移動した場合
+
+  - name: RewardCategory # ステージ報酬カテゴリ
+    params:
+      - name: FirstClear
+      - name: Always
+      - name: Random
+      - name: SpeedAttackClear # スピードアタッククリア報酬
+
+  - name: KomaEffectType
+    params:
+      - name: None
+      - name: AttackPowerUp
+      - name: AttackPowerDown
+      - name: MoveSpeedUp
+      - name: SlipDamage
+      - name: Gust
+      - name: Poison
+      - name: Darkness
+      - name: Burn
+      - name: Stun
+      - name: Freeze
+      - name: Weakening
+
+  - name: KomaEffectTargetSide
+    params:
+      - name: All
+      - name: Player
+      - name: Enemy
+
+  - name: Difficulty
+    params:
+      - name: Normal
+      - name: Hard
+      - name: Extra
+
+  - name: MangaAnimationConditionType
+    params:
+      - name: None
+      - name: Start
+      - name: Victory
+      - name: Finish
+      - name: EnemySummon
+      - name: EnemyMoveStart
+      - name: TransformationReady
+      - name: TransformationStart
+      - name: TransformationEnd
+
+  - name: ResetType
+    params:
+      - name: Daily
+
+  - name: QuestType
+    params:
+      - name: Normal
+      - name: Event
+      - name: Enhance
+      - name: Tutorial
+
+  - name: StageEndType
+    params:
+      - name: Victory
+      - name: Defeat
+      - name: Finish
+
+  - name: StageEndConditionType
+    params:
+      - name: None
+      - name: PlayerOutpostBreakDown
+      - name: EnemyOutpostBreakDown
+      - name: TimeOver
+      - name: DefeatedEnemyCount
+      - name: DefeatUnit
+      - name: DefenseTargetBreakDown
+
+  - name: InGameContentType
+    params:
+      - name: Stage
+      - name: AdventBattle
+      - name: Pvp
+
+  - name: RuleType
+    params:
+      - name: PartyUnitNum
+      - name: PartyRarity
+      - name: PartySeries
+      - name: PartyAttackRangeType
+      - name: PartyRoleType
+      - name: PartyColor
+      - name: PartySummonCostUpperEqual
+      - name: PartySummonCostLowerEqual
+      - name: OutpostHp
+      - name: NoContinue
+      - name: SpeedAttack
+      - name: TimeLimit
+      - name: UnitStatus
+
+  - name: InGameSpecialRuleUnitStatusTargetType
+    params:
+      - name: All
+      - name: Unit                         # mstUnit.id
+      - name: CharacterUnitRoleType        # enum:CharacterUnitRoleType
+      - name: CharacterColor               # enum:CharacterColor
+      - name: Series                       # mstSeries.id
+
+  - name: InGameSpecialRuleUnitStatusParameterType
+    params:
+      - name: Hp
+      - name: AttackPower
+      - name: SpecialAttackCoolTime
+      - name: SummonCoolTime
+
+  - name: UnitDeathType
+    params:
+      - name: Normal
+      - name: Escape
+
+  - name: CoinRewardSizeType
+    params:
+      - name: Small
+      - name: Medium
+      - name: Large
+      - name: ExtraLarge
+api:
+  - name: Stage
+    actions:
+      - name: Start
+        path: "/api/stage/start"
+        params:
+          - name: mstStageId
+            type: string
+          - name: partyNo
+            type: int
+          - name: isChallengeAd
+            type: bool
+        method: POST
+        response: StageStartResultData
+
+      - name: End
+        path: "/api/stage/end"
+        params:
+          - name: mstStageId
+            type: string
+          - name: inGameBattleLog
+            type: InGameEndBattleLogData
+        method: POST
+        response: StageEndResultData
+
+      - name: ContinueDiamond
+        path: "/api/stage/continue_diamond"
+        params:
+          - name: mstStageId
+            type: string
+        method: POST
+        response: StageContinueDiamondResultData
+        
+      - name: ContinueAd
+        path: "/api/stage/continue_ad"
+        params:
+          - name: mstStageId
+            type: string
+        method: POST
+        response: StageContinueAdResultData
+
+      - name: Abort
+        path: "/api/stage/abort"
+        params:
+          - name: abortType
+            type: int
+        method: POST
+        response: HeadOK
