@@ -3,14 +3,23 @@ const path = require('path');
 const os = require('os');
 
 // 引数の解析
-const args = process.argv[2] || '';
+const args = process.argv.slice(2);
 let limit = null;
+let exportAll = false;
 
-if (args === 'latest') {
-  limit = 1;
-} else if (!isNaN(parseInt(args))) {
-  limit = parseInt(args);
-}
+args.forEach(arg => {
+  if (arg === '--all') {
+    exportAll = true;
+  } else if (arg === 'latest') {
+    limit = 1;
+  } else if (!isNaN(parseInt(arg))) {
+    limit = parseInt(arg);
+  }
+});
+
+// 今日の日付の開始時刻（00:00:00）を取得
+const todayStart = new Date();
+todayStart.setHours(0, 0, 0, 0);
 
 // 現在のプロジェクトディレクトリを取得
 const cwd = process.cwd();
@@ -19,6 +28,11 @@ const projectKey = '-' + cwd.substring(1).replace(/[/_.]/g, '-');
 const projectDir = path.join(os.homedir(), '.claude', 'projects', projectKey);
 
 console.log(`📂 プロジェクトディレクトリ: ${projectDir}`);
+if (exportAll) {
+  console.log(`📅 対象期間: 全期間`);
+} else {
+  console.log(`📅 対象期間: 今日（${todayStart.toLocaleDateString('ja-JP')}）`);
+}
 
 if (!fs.existsSync(projectDir)) {
   console.log(`❌ プロジェクトディレクトリが見つかりません: ${projectDir}`);
@@ -106,12 +120,25 @@ allFiles.forEach(file => {
 });
 
 // 親セッションがあるグループのみをフィルタリング
-const validGroups = Array.from(sessionGroups.values())
-  .filter(group => group.parentFile !== null)
-  .sort((a, b) => b.latestMtime - a.latestMtime); // 新しい順にソート
+let validGroups = Array.from(sessionGroups.values())
+  .filter(group => group.parentFile !== null);
+
+// --all オプションがない場合は今日のセッションのみをフィルタリング
+if (!exportAll) {
+  validGroups = validGroups.filter(group => {
+    return group.latestMtime >= todayStart;
+  });
+}
+
+// 新しい順にソート
+validGroups.sort((a, b) => b.latestMtime - a.latestMtime);
 
 if (validGroups.length === 0) {
-  console.log('❌ エクスポート可能なセッションが見つかりません（親セッションファイルが必要です）');
+  if (exportAll) {
+    console.log('❌ エクスポート可能なセッションが見つかりません（親セッションファイルが必要です）');
+  } else {
+    console.log('❌ 今日のセッションが見つかりません（--all オプションで全セッションをエクスポート可能）');
+  }
   process.exit(1);
 }
 
