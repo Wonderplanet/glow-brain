@@ -137,6 +137,125 @@ JOIN read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattleR
   ON rg.id = r.mst_advent_battle_reward_group_id;
 ```
 
+#### レポート作成用: I18n日本語名取得パターン
+
+レポート作成時に、IDと日本語名を併記するためのクエリパターン集です。
+
+**ユニット（キャラクター）**
+```sql
+SELECT
+  u.id,
+  u.rarity,
+  u.color,
+  i.name as name_ja
+FROM read_csv('マスタデータ/リリース/202512020/tables/MstUnit.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') u
+LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstUnitI18n.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') i
+  ON u.id = i.mst_unit_id AND i.language = 'ja';
+```
+
+**イベント**
+```sql
+SELECT
+  e.id,
+  e.start_at,
+  e.end_at,
+  i.name as name_ja
+FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') e
+LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstEventI18n.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') i
+  ON e.id = i.mst_event_id AND i.language = 'ja';
+```
+
+**クエスト**
+```sql
+SELECT
+  q.id,
+  i.name as name_ja
+FROM read_csv('マスタデータ/リリース/202512020/tables/MstQuest.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') q
+LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstQuestI18n.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') i
+  ON q.id = i.mst_quest_id AND i.language = 'ja';
+```
+
+**ステージ**
+```sql
+SELECT
+  s.id,
+  i.name as name_ja
+FROM read_csv('マスタデータ/リリース/202512020/tables/MstStage.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') s
+LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstStageI18n.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') i
+  ON s.id = i.mst_stage_id AND i.language = 'ja';
+```
+
+**降臨バトル**
+```sql
+SELECT
+  ab.id,
+  i.name as name_ja,
+  i.boss_description as description_ja
+FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattle.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') ab
+LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattleI18n.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') i
+  ON ab.id = i.mst_advent_battle_id AND i.language = 'ja';
+```
+
+**ガチャ**
+```sql
+SELECT
+  g.id,
+  i.name as name_ja,
+  i.description as description_ja
+FROM read_csv('マスタデータ/リリース/202512020/tables/OprGacha.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') g
+LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/OprGachaI18n.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') i
+  ON g.id = i.opr_gacha_id AND i.language = 'ja';
+```
+
+**アイテム**
+```sql
+SELECT
+  item.id,
+  i.name as name_ja
+FROM read_csv('マスタデータ/リリース/202512020/tables/MstItem.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') item
+LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstItemI18n.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') i
+  ON item.id = i.mst_item_id AND i.language = 'ja';
+```
+
+**エンブレム**
+```sql
+SELECT
+  e.id,
+  i.name as name_ja,
+  i.description as description_ja
+FROM read_csv('マスタデータ/リリース/202512020/tables/MstEmblem.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') e
+LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstEmblemI18n.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') i
+  ON e.id = i.mst_emblem_id AND i.language = 'ja';
+```
+
+**ミッションイベント（descriptionのみ）**
+```sql
+SELECT
+  m.id,
+  i.description as description_ja
+FROM read_csv('マスタデータ/リリース/202512020/tables/MstMissionEvent.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') m
+LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstMissionEventI18n.csv',
+  AUTO_DETECT=TRUE, nullstr='__NULL__') i
+  ON m.id = i.mst_mission_event_id AND i.language = 'ja';
+```
+
 ---
 
 ### 3. 集計・統計

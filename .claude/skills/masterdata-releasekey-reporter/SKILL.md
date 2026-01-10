@@ -173,9 +173,48 @@ ORDER BY count DESC;
 5. **多言語対応**: I18nテーブルの一覧
 6. **まとめ**: リリースの特徴や規模感
 
+**I18n日本語名の活用（重要）:**
+
+レポート作成時は、IDだけでなくI18nテーブルから日本語名を取得して併記することで、内容を分かりやすくします。
+
+**日本語名の取得方法:**
+1. 該当するI18nテーブルが存在するか確認（例: `MstEvent` → `MstEventI18n`）
+2. DuckDBでJOINクエリを実行して日本語名を取得（`language = 'ja'` でフィルタ）
+3. レポートにID + 日本語名を併記
+
+**併記フォーマット例:**
+```markdown
+- event_osh_00001（【推しの子】 いいジャン祭）
+- chara_osh_00001（B小町不動のセンター アイ）
+```
+
+**よく使うI18nテーブルとカラム:**
+- `MstUnitI18n`: `mst_unit_id` → `name`（キャラクター名）
+- `MstEventI18n`: `mst_event_id` → `name`（イベント名）
+- `MstStageI18n`: `mst_stage_id` → `name`（ステージ名）
+- `MstQuestI18n`: `mst_quest_id` → `name`（クエスト名）
+- `MstItemI18n`: `mst_item_id` → `name`（アイテム名）
+- `MstEmblemI18n`: `mst_emblem_id` → `name`（エンブレム名）
+- `MstAdventBattleI18n`: `mst_advent_battle_id` → `name`（降臨バトル名）
+- `OprGachaI18n`: `opr_gacha_id` → `name`（ガチャ名）
+- `MstMissionEventI18n`: `mst_mission_event_id` → `description`（ミッション説明）
+- `MstAttackI18n`: `mst_attack_id` → `description`（攻撃説明）
+
+**JOINクエリ例:**
+```bash
+# イベント + 日本語名
+.claude/skills/masterdata-releasekey-reporter/scripts/query_release.sh {KEY} sql \
+  "SELECT e.id, i.name FROM read_csv('マスタデータ/リリース/{KEY}/tables/MstEvent.csv', AUTO_DETECT=TRUE) e \
+   LEFT JOIN read_csv('マスタデータ/リリース/{KEY}/tables/MstEventI18n.csv', AUTO_DETECT=TRUE) i \
+   ON e.id = i.mst_event_id AND i.language = 'ja'"
+```
+
+詳細なクエリパターンは `references/query-examples.md` を参照してください。
+
 **レポートのトーン:**
 - 簡潔かつ分かりやすく
 - 具体的な数値を含める
+- **IDには必ず日本語名を併記する**（I18nテーブルが存在する場合）
 - 投入されたデータの目的や内容を推測して記載
 - 技術者と非技術者の両方が理解できる言葉で
 
