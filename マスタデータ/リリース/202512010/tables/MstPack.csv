@@ -1,0 +1,3 @@
+ENABLE,id,product_sub_id,discount_rate,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,is_first_time_free,cost_amount,is_recommend,asset_key,pack_decoration,release_key
+e,event_item_pack_6,35,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00005,__NULL__,202512010
+e,monthly_item_pack_1,36,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00017,__NULL__,202512010

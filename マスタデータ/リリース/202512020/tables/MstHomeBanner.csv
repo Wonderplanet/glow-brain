@@ -1,0 +1,6 @@
+ENABLE,id,destination,destination_path,asset_key,start_at,end_at,sort_order,release_key
+e,26,Event,event_osh_00001,hometop_event_osh_00001,"2026-01-01 00:00:00","2026-01-16 10:59:59",7,202512020
+e,27,Gacha,Fest_osh_001,hometop_gacha_glo_00002,"2026-01-01 00:00:00","2026-02-02 10:59:59",6,202512020
+e,28,Gacha,Pickup_osh_001,hometop_gacha_osh_00001,"2026-01-01 00:00:00","2026-01-16 10:59:59",6,202512020
+e,29,Pack,,hometop_shop_pack_00018,"2026-01-01 00:00:00","2026-01-15 10:59:59",5,202512020
+e,30,CreditShop,,hometop_campaign_00004,"2026-01-01 00:00:00","2026-01-15 10:59:59",5,202512020

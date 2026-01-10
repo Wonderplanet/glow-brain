@@ -1,0 +1,7 @@
+ENABLE,id,opr_gacha_id,cost_type,cost_id,cost_num,draw_count,cost_priority,release_key
+e,23,Pickup_mag_001,Item,ticket_glo_00003,1,1,2,202511010
+e,24,Pickup_mag_001,Diamond,,150,1,3,202511010
+e,25,Pickup_mag_001,Diamond,,1500,10,3,202511010
+e,26,Pickup_mag_002,Item,ticket_glo_00003,1,1,2,202511010
+e,27,Pickup_mag_002,Diamond,,150,1,3,202511010
+e,28,Pickup_mag_002,Diamond,,1500,10,3,202511010

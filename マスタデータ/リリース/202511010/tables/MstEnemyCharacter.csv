@@ -1,0 +1,5 @@
+ENABLE,release_key,id,mst_series_id,asset_key,is_phantomized,is_displayed_encyclopedia,mst_attack_hit_onomatopeia_group_id
+e,202511010,chara_mag_00201,mag,chara_mag_00201,1,1,
+e,202511010,chara_mag_00301,mag,chara_mag_00301,1,1,
+e,202511010,chara_mag_00401,mag,chara_mag_00401,1,1,
+e,202511010,enemy_mag_00401,mag,enemy_mag_00401,0,1,

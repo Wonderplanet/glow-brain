@@ -1,0 +1,10 @@
+ENABLE,id,content_type,target_id,rule_type,rule_value,start_at,end_at,release_key
+e,event_yuw1_savage02_00001_1,Stage,event_yuw1_savage02_00001,SpeedAttack,1000,"2025-12-22 15:00:00","2025-12-31 23:59:59",202512015
+e,event_yuw1_savage02_00002_1,Stage,event_yuw1_savage02_00002,SpeedAttack,1000,"2025-12-22 15:00:00","2025-12-31 23:59:59",202512015
+e,event_yuw1_savage02_00002_2,Stage,event_yuw1_savage02_00002,PartyRoleType,Support,"2025-12-22 15:00:00","2025-12-31 23:59:59",202512015
+e,event_yuw1_savage02_00002_3,Stage,event_yuw1_savage02_00002,PartyRoleType,Defense,"2025-12-22 15:00:00","2025-12-31 23:59:59",202512015
+e,event_yuw1_savage02_00002_4,Stage,event_yuw1_savage02_00002,PartyRoleType,Attack,"2025-12-22 15:00:00","2025-12-31 23:59:59",202512015
+e,event_yuw1_savage02_00001_2,Stage,event_yuw1_savage02_00001,NoContinue,1,"2025-12-22 15:00:00","2025-12-31 23:59:59",202512015
+e,event_yuw1_savage02_00002_5,Stage,event_yuw1_savage02_00002,NoContinue,1,"2025-12-22 15:00:00","2025-12-31 23:59:59",202512015
+e,pvp_Xmas_specialrule_001,Pvp,2025052,UnitStatus,pvp_Xmas_specialrule_001_1,"2025-12-01 12:00:00","2026-01-31 23:59:59",202512015
+e,pvp_Xmas_specialrule_002,Pvp,2026001,UnitStatus,pvp_Xmas_specialrule_001_1,"2025-12-01 12:00:00","2026-01-31 23:59:59",202512015

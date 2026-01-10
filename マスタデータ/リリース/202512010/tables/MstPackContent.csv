@@ -1,0 +1,8 @@
+ENABLE,id,mst_pack_id,resource_type,resource_id,resource_amount,is_bonus,display_order,release_key
+e,72,event_item_pack_6,Item,memoryfragment_glo_00001,50,,4,202512010
+e,73,event_item_pack_6,Item,memoryfragment_glo_00002,30,,3,202512010
+e,74,event_item_pack_6,Item,memoryfragment_glo_00003,3,,2,202512010
+e,75,event_item_pack_6,Item,ticket_glo_00003,10,,1,202512010
+e,76,monthly_item_pack_1,Item,memoryfragment_glo_00001,50,,3,202512010
+e,77,monthly_item_pack_1,Item,memoryfragment_glo_00002,30,,2,202512010
+e,78,monthly_item_pack_1,Item,memoryfragment_glo_00003,3,,1,202512010

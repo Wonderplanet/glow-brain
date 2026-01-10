@@ -1,0 +1,10 @@
+ENABLE,release_key,id,mst_quest_id,language,name,category_name,flavor_text
+e,202512020,quest_main_osh_normal_17_ja,quest_main_osh_normal_17,ja,【推しの子】,,"『【推しの子】』のクエスト。\n\nこのクエストでは、火傷コマが登場。\nキャラの特性で対策して挑もう!"
+e,202512020,quest_main_osh_hard_17_ja,quest_main_osh_hard_17,ja,【推しの子】,,"『【推しの子】』のクエスト。\n\nこのクエストでは、火傷コマが登場。\nキャラの特性で対策して挑もう!"
+e,202512020,quest_main_osh_veryhard_17_ja,quest_main_osh_veryhard_17,ja,【推しの子】,,"『【推しの子】』のクエスト。\n\nこのクエストでは、火傷コマが登場。\nキャラの特性で対策して挑もう!"
+e,202512020,quest_event_osh1_charaget01_ja,quest_event_osh1_charaget01,ja,芸能界へ!,収集,
+e,202512020,quest_event_osh1_challenge01_ja,quest_event_osh1_challenge01,ja,推しの子になってやる,チャレンジ,
+e,202512020,quest_event_osh1_charaget02_ja,quest_event_osh1_charaget02,ja,ぴえヨンのブートクエスト,強化,
+e,202512020,quest_event_osh1_savage_ja,quest_event_osh1_savage,ja,芸能界には才能が集まる,高難易度,
+e,202512020,quest_event_osh1_1day_ja,quest_event_osh1_1day,ja,ファンと推し合戦!,デイリー,
+e,202512020,quest_event_glo1_1day_ja,quest_event_glo1_1day,ja,開運!ジャンブル運試し,デイリー,

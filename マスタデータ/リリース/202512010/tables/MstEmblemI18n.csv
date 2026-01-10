@@ -1,0 +1,10 @@
+ENABLE,release_key,id,mst_emblem_id,language,name,description
+e,202512010,emblem_event_sur_00001_ja,emblem_event_sur_00001,ja,魔都防衛隊章,魔都の脅威から日本を守護するために編成された組織の証。
+e,202512010,emblem_event_sur_00002_ja,emblem_event_sur_00002,ja,"七番組組長 羽前 京香","魔防隊七番組組長である羽前 京香のエンブレム"
+e,202512010,emblem_event_sur_00003_ja,emblem_event_sur_00003,ja,"六番組組長 出雲 天花","魔防隊六番組組長である出雲 天花のエンブレム"
+e,202512010,emblem_adventbattle_sur_season01_00001_ja,emblem_adventbattle_sur_season01_00001,ja,屈服の時間だ(1位),2025年12月開催降臨バトル『魔防隊と戦う者』1位の証
+e,202512010,emblem_adventbattle_sur_season01_00002_ja,emblem_adventbattle_sur_season01_00002,ja,屈服の時間だ(2位),2025年12月開催降臨バトル『魔防隊と戦う者』2位の証
+e,202512010,emblem_adventbattle_sur_season01_00003_ja,emblem_adventbattle_sur_season01_00003,ja,屈服の時間だ(3位),2025年12月開催降臨バトル『魔防隊と戦う者』3位の証
+e,202512010,emblem_adventbattle_sur_season01_00004_ja,emblem_adventbattle_sur_season01_00004,ja,屈服の時間だ(4~50位),2025年12月開催降臨バトル『魔防隊と戦う者』4~50位の証
+e,202512010,emblem_adventbattle_sur_season01_00005_ja,emblem_adventbattle_sur_season01_00005,ja,屈服の時間だ(51~300位),2025年12月開催降臨バトル『魔防隊と戦う者』51~300位の証
+e,202512010,emblem_adventbattle_sur_season01_00006_ja,emblem_adventbattle_sur_season01_00006,ja,"屈服の時間だ(301~1,000位)","2025年12月開催降臨バトル『魔防隊と戦う者』301~1,000位の証"

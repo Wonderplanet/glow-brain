@@ -1,0 +1,11 @@
+ENABLE,id,mst_exchange_lineup_id,cost_type,cost_id,cost_amount,release_key
+e,normal_01_lineup_00001,normal_01_lineup_00001,Coin,,30000,202512015
+e,normal_01_lineup_00002,normal_01_lineup_00002,Coin,,1000,202512015
+e,normal_01_lineup_00003,normal_01_lineup_00003,Coin,,1500,202512015
+e,normal_01_lineup_00004,normal_01_lineup_00004,Coin,,3000,202512015
+e,normal_01_lineup_00005,normal_01_lineup_00005,Coin,,810,202512015
+e,normal_01_lineup_00006,normal_01_lineup_00006,Coin,,810,202512015
+e,normal_01_lineup_00007,normal_01_lineup_00007,Coin,,810,202512015
+e,normal_01_lineup_00008,normal_01_lineup_00008,Coin,,810,202512015
+e,normal_01_lineup_00009,normal_01_lineup_00009,Coin,,810,202512015
+e,normal_01_lineup_00010,normal_01_lineup_00010,Coin,,6000,202512015

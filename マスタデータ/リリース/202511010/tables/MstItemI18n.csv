@@ -1,0 +1,7 @@
+ENABLE,release_key,id,mst_item_id,language,name,description
+e,202511010,memory_chara_mag_00401_ja,memory_chara_mag_00401,ja,"槇野 あかねのメモリー","槇野 あかねのLv.上限開放に使用するアイテム"
+e,202511010,memory_chara_mag_00501_ja,memory_chara_mag_00501,ja,"重本 浩司のメモリー","重本 浩司のLv.上限開放に使用するアイテム"
+e,202511010,piece_mag_00201_ja,piece_mag_00201,ja,"絶対効率の体現者 土刃 メイのかけら","絶対効率の体現者 土刃 メイのグレードアップに使用するアイテム"
+e,202511010,piece_mag_00301_ja,piece_mag_00301,ja,"葵 リリーのかけら","葵 リリーのグレードアップに使用するアイテム"
+e,202511010,piece_mag_00401_ja,piece_mag_00401,ja,"槇野 あかねのかけら","槇野 あかねのグレードアップに使用するアイテム"
+e,202511010,piece_mag_00501_ja,piece_mag_00501,ja,"重本 浩司のかけら","重本 浩司のグレードアップに使用するアイテム"

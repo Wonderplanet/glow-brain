@@ -1,0 +1,62 @@
+{
+  "release_key": "202512020",
+  "extraction_date": "2026-01-10T02:45:50Z",
+  "total_tables": 93,
+  "total_rows": 2901,
+  "categories": {
+    "Mst": {
+      "tables": 59,
+      "rows": 2102
+    },
+    "Opr": {
+      "tables": 10,
+      "rows": 323
+    },
+    "I18n": {
+      "tables": 24,
+      "rows": 476
+    }
+  },
+  "largest_tables": [
+    {
+      "name": "MstAutoPlayerSequence",
+      "rows": 354
+    },
+    {
+      "name": "OprGachaPrize",
+      "rows": 247
+    },
+    {
+      "name": "MstAttackElement",
+      "rows": 241
+    },
+    {
+      "name": "MstAttack",
+      "rows": 165
+    },
+    {
+      "name": "MstAttackI18n",
+      "rows": 165
+    },
+    {
+      "name": "MstAdventBattleReward",
+      "rows": 119
+    },
+    {
+      "name": "MstArtworkFragment",
+      "rows": 80
+    },
+    {
+      "name": "MstArtworkFragmentI18n",
+      "rows": 80
+    },
+    {
+      "name": "MstArtworkFragmentPosition",
+      "rows": 80
+    },
+    {
+      "name": "MstMissionReward",
+      "rows": 78
+    }
+  ]
+}

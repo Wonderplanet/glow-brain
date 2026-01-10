@@ -1,0 +1,5 @@
+ENABLE,id,mst_ability_id,ability_parameter1,ability_parameter2,ability_parameter3,release_key
+e,ability_mag_00201_01,ability_attack_power_up_by_hp_percentage_over,35,50,0,202511010
+e,ability_mag_00201_02,ability_slip_damage_koma_block,0,0,0,202511010
+e,ability_mag_00301_01,ability_FreezeBlock,60,All,All,202511010
+e,ability_mag_00401_01,ability_FreezeBlock,20,All,All,202511010

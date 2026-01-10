@@ -1,0 +1,9 @@
+ENABLE,id,mst_stage_id,reward_category,resource_type,resource_id,resource_amount,percentage,sort_order,release_key
+e,385,event_yuw1_savage02_00001,FirstClear,FreeDiamond,prism_glo_00001,100,100,1,202512015
+e,386,event_yuw1_savage02_00001,FirstClear,Coin,,5000,100,2,202512015
+e,387,event_yuw1_savage02_00001,FirstClear,Item,ticket_glo_00002,5,100,3,202512015
+e,388,event_yuw1_savage02_00002,FirstClear,FreeDiamond,prism_glo_00001,150,100,1,202512015
+e,389,event_yuw1_savage02_00002,FirstClear,Coin,,10000,100,2,202512015
+e,390,event_yuw1_savage02_00002,FirstClear,Item,memoryfragment_glo_00001,20,100,3,202512015
+e,391,event_yuw1_savage02_00002,FirstClear,Item,memoryfragment_glo_00002,10,100,4,202512015
+e,392,event_yuw1_savage02_00002,FirstClear,Item,memoryfragment_glo_00003,1,100,5,202512015

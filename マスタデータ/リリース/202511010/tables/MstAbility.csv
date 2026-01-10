@@ -1,0 +1,2 @@
+ENABLE,id,ability_type,release_key,asset_key
+e,ability_attack_power_up_by_hp_percentage_over,AttackPowerUpByHpPercentageOver,202511010,conditional_attack_up

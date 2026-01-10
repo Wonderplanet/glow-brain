@@ -1,0 +1,62 @@
+{
+  "release_key": "202512015",
+  "extraction_date": "2026-01-10T04:27:54Z",
+  "total_tables": 52,
+  "total_rows": 341,
+  "categories": {
+    "Mst": {
+      "tables": 31,
+      "rows": 211
+    },
+    "Opr": {
+      "tables": 8,
+      "rows": 88
+    },
+    "I18n": {
+      "tables": 13,
+      "rows": 42
+    }
+  },
+  "largest_tables": [
+    {
+      "name": "OprGachaPrize",
+      "rows": 65
+    },
+    {
+      "name": "MstItemTransition",
+      "rows": 41
+    },
+    {
+      "name": "MstAttackElement",
+      "rows": 29
+    },
+    {
+      "name": "MstPackContent",
+      "rows": 16
+    },
+    {
+      "name": "MstAttack",
+      "rows": 13
+    },
+    {
+      "name": "MstAttackI18n",
+      "rows": 13
+    },
+    {
+      "name": "MstExchangeCost",
+      "rows": 10
+    },
+    {
+      "name": "MstExchangeLineup",
+      "rows": 10
+    },
+    {
+      "name": "MstExchangeReward",
+      "rows": 10
+    },
+    {
+      "name": "MstInGameSpecialRule",
+      "rows": 9
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+ENABLE,id,product_sub_id,discount_rate,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,is_first_time_free,cost_amount,is_recommend,asset_key,pack_decoration,release_key
+e,Xmas_item_pack_1,28,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00009,__NULL__,202512015
+e,Xmas_item_pack_2,29,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00010,__NULL__,202512015
+e,Xmas_item_pack_3,30,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00011,__NULL__,202512015
+e,offer_FreeDiamond150_202512015,49,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00020,__NULL__,202512015

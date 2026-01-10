@@ -1,0 +1,6 @@
+ENABLE,id,mst_series_id,outpost_additional_hp,asset_key,sort_order,release_key
+e,artwork_osh_0001,osh,100,osh_0001,01,202512020
+e,artwork_osh_0002,osh,100,osh_0002,02,202512020
+e,artwork_osh_0003,osh,100,osh_0003,03,202512020
+e,artwork_event_osh_0001,osh,100,event_osh_0001,01,202512020
+e,artwork_event_osh_0002,osh,100,event_osh_0002,02,202512020

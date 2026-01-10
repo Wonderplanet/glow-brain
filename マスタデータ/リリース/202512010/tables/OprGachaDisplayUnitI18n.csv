@@ -1,0 +1,5 @@
+ENABLE,id,opr_gacha_id,mst_unit_id,language,sort_order,description,release_key
+e,42,Pickup_sur_001,chara_sur_00501,ja,1,"遠距離から\n広範囲の必殺ワザで\n相手をスタン状態に\nすることができるぞ!",202512010
+e,43,Pickup_sur_001,chara_sur_00601,ja,2,"中距離からの必殺ワザ\nで複数の相手を\nスタン状態にすること\nができるぞ!",202512010
+e,44,Pickup_sur_002,chara_sur_00101,ja,1,"必殺ワザの範囲攻撃で\n複数の相手に\nダメージ!\n特性も強力!",202512010
+e,45,Pickup_sur_002,chara_sur_00601,ja,2,"中距離からの必殺ワザ\nで複数の相手を\nスタン状態にすること\nができるぞ!",202512010

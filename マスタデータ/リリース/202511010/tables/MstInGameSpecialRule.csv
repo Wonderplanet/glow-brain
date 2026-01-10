@@ -1,0 +1,19 @@
+ENABLE,id,content_type,target_id,rule_type,rule_value,start_at,end_at,release_key
+e,event_mag1_challenge01_00001_1,Stage,event_mag1_challenge01_00001,SpeedAttack,1000,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_challenge01_00001_2,Stage,event_mag1_challenge01_00001,NoContinue,1,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_challenge01_00002_1,Stage,event_mag1_challenge01_00002,SpeedAttack,1000,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_challenge01_00002_2,Stage,event_mag1_challenge01_00002,NoContinue,1,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_challenge01_00003_1,Stage,event_mag1_challenge01_00003,SpeedAttack,1000,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_challenge01_00003_2,Stage,event_mag1_challenge01_00003,NoContinue,1,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_challenge01_00004_1,Stage,event_mag1_challenge01_00004,SpeedAttack,1000,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_challenge01_00004_2,Stage,event_mag1_challenge01_00004,NoContinue,1,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_savage_00001_1,Stage,event_mag1_savage_00001,SpeedAttack,1000,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_savage_00001_2,Stage,event_mag1_savage_00001,NoContinue,1,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_savage_00002_1,Stage,event_mag1_savage_00002,SpeedAttack,1000,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_savage_00002_2,Stage,event_mag1_savage_00002,NoContinue,1,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_savage_00003_1,Stage,event_mag1_savage_00003,SpeedAttack,1000,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_savage_00003_2,Stage,event_mag1_savage_00003,NoContinue,1,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_savage_00003_3,Stage,event_mag1_savage_00003,PartySeries,gom,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_savage_00003_4,Stage,event_mag1_savage_00003,PartySeries,mag,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_savage_00003_5,Stage,event_mag1_savage_00003,PartySeries,aka,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
+e,event_mag1_savage_00003_6,Stage,event_mag1_savage_00003,PartySeries,jig,"2025-11-06 15:00:00","2025-12-08 10:59:59",202511010
