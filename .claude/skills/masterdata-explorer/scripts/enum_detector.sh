@@ -133,8 +133,74 @@ extract_csharp_enum() {
 
   # public enum後の値を抽出
   awk '/public enum/,/^}/' "$file" | \
-    grep -E '^\s+\w+,' | \
-    sed -n 's/^ *\([A-Za-z0-9_]*\),*.*$/\1/p'
+    grep -E '^\s+\w+' | \
+    grep -vE '^\s*(public|private|protected|internal|static|readonly|const)' | \
+    sed -n 's/^ *\([A-Za-z0-9_]*\).*$/\1/p'
+}
+
+# glow-schemaからEnum値を取得
+get_schema_enum_values() {
+  local enum_name="$1"
+
+  check_schema_dir
+  check_yq
+
+  # 全YAMLを検索してEnum値を抽出
+  for yml in "$SCHEMA_DIR"/*.yml; do
+    yq ".enum[] | select(.name == \"$enum_name\") | .params[].name" "$yml" 2>/dev/null
+  done | grep -v '^null$'
+}
+
+# PHP Enumを類似検索 + 値マッチングで探す
+find_php_enum_fuzzy() {
+  local schema_enum="$1"
+
+  # 1. 完全一致を試す
+  local exact=$(find_php_enum_file "$schema_enum")
+  if [ -n "$exact" ]; then
+    basename "$exact" .php
+    return 0
+  fi
+
+  # 2. 部分一致で候補を探す（末尾のType, Categoryなどを使う）
+  local suffix=$(echo "$schema_enum" | grep -oE '[A-Z][a-z]+$')  # 例: Type, Category
+  if [ -z "$suffix" ]; then
+    return 1
+  fi
+
+  local candidates=$(list_php_enums | grep -i "$suffix")
+  if [ -z "$candidates" ]; then
+    return 1
+  fi
+
+  # 3. glow-schemaのEnum値を取得
+  local schema_values=$(get_schema_enum_values "$schema_enum" | sort)
+  if [ -z "$schema_values" ]; then
+    return 1
+  fi
+
+  # 4. 各候補の値と比較、一致率が最も高いものを返す
+  local best_match=""
+  local best_score=0
+
+  while IFS= read -r candidate; do
+    local php_values=$(extract_php_enum "$candidate" 2>/dev/null | sort)
+    if [ -z "$php_values" ]; then
+      continue
+    fi
+
+    local common=$(comm -12 <(echo "$schema_values") <(echo "$php_values") | wc -l | tr -d ' ')
+    if [ "$common" -gt "$best_score" ]; then
+      best_score=$common
+      best_match=$candidate
+    fi
+  done <<< "$candidates"
+
+  # 一致数が半分以上なら採用
+  local total=$(echo "$schema_values" | wc -l | tr -d ' ')
+  if [ "$best_score" -ge $((total / 2)) ]; then
+    echo "$best_match"
+  fi
 }
 
 # glow-schemaからカラムのEnum型を取得
@@ -181,28 +247,31 @@ find_enum_for_column() {
     return 1
   fi
 
-  echo "  Enum Type: $enum_type"
+  echo "  Enum Type (glow-schema): $enum_type"
   echo ""
 
-  # PHP Enum検索
-  local php_file=$(find_php_enum_file "$enum_type")
-  if [ -n "$php_file" ]; then
+  # PHP Enum検索（類似検索）
+  local php_enum=$(find_php_enum_fuzzy "$enum_type")
+  if [ -n "$php_enum" ]; then
+    local php_file=$(find_php_enum_file "$php_enum")
+    echo "  PHP Enum: $php_enum"
     echo "  PHP File: $php_file"
     echo "  PHP Values:"
-    extract_php_enum "$enum_type" | sed 's/^/    /'
+    extract_php_enum "$php_enum" | sed 's/^/    /'
     echo ""
   else
-    echo "  PHP File: (not found)"
+    echo "  PHP Enum: (not found)"
     echo ""
   fi
 
-  # C# Enum検索
+  # C# Enum検索（完全一致）
   if [ -f "${CSHARP_ENUM_DIR}/${enum_type}.cs" ]; then
+    echo "  C# Enum: $enum_type"
     echo "  C# File: ${CSHARP_ENUM_DIR}/${enum_type}.cs"
     echo "  C# Values:"
     extract_csharp_enum "$enum_type" | sed 's/^/    /'
   else
-    echo "  C# File: (not found)"
+    echo "  C# Enum: (not found)"
   fi
 }
 
@@ -238,22 +307,39 @@ detect_enums() {
           # Enum型かどうか判定（プリミティブ型でないか）
           if ! echo "$clean_type" | grep -qE '^(string|int|bool|DateTimeOffset|DateTime|TimeSpan|decimal|float|double)$'; then
             # PHP/C#でEnum定義があるか確認
-            local php_found=""
-            local csharp_found=""
+            local php_enum=""
+            local csharp_enum=""
 
-            [ -n "$(find_php_enum_file "$clean_type")" ] && php_found="PHP"
-            [ -f "${CSHARP_ENUM_DIR}/${clean_type}.cs" ] && csharp_found="C#"
+            # C#は完全一致
+            if [ -f "${CSHARP_ENUM_DIR}/${clean_type}.cs" ]; then
+              csharp_enum="$clean_type"
+            fi
 
-            if [ -n "$php_found" ] || [ -n "$csharp_found" ]; then
-              local sources=""
-              [ -n "$php_found" ] && sources="$php_found"
-              [ -n "$csharp_found" ] && sources="${sources:+$sources/}$csharp_found"
+            # PHPは類似検索
+            php_enum=$(find_php_enum_fuzzy "$clean_type")
+
+            if [ -n "$php_enum" ] || [ -n "$csharp_enum" ]; then
+              # 出力形式: roleType -> CharacterUnitRoleType(C#), RoleType(PHP)
+              local enum_display=""
+
+              # C#とPHPで同名か確認
+              if [ -n "$csharp_enum" ] && [ -n "$php_enum" ] && [ "$csharp_enum" = "$php_enum" ]; then
+                # 同名の場合
+                enum_display="${csharp_enum}(C#/PHP)"
+              else
+                # 異名の場合
+                [ -n "$csharp_enum" ] && enum_display="${csharp_enum}(C#)"
+                if [ -n "$php_enum" ]; then
+                  [ -n "$enum_display" ] && enum_display="$enum_display, "
+                  enum_display="${enum_display}${php_enum}(PHP)"
+                fi
+              fi
 
               # Nullable型の場合は表示
               local nullable_mark=""
               [ "$col_type" != "$clean_type" ] && nullable_mark=" (nullable)"
 
-              echo "  $col_name -> $clean_type ($sources)$nullable_mark"
+              echo "  $col_name -> $enum_display$nullable_mark"
             fi
           fi
         done
