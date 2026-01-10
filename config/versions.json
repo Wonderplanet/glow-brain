@@ -4,22 +4,26 @@
     "v1.5.0-devld": {
       "glow-server": "develop/v1.5.0",
       "glow-client": "release/v1.5.0",
-      "glow-masterdata": "release/dev-ld"
+      "glow-masterdata": "release/dev-ld",
+      "glow-schema": "main"
     },
     "v1.5.1-devld": {
       "glow-server": "develop/v1.5.1",
       "glow-client": "release/v1.5.0",
-      "glow-masterdata": "release/dev-ld"
+      "glow-masterdata": "release/dev-ld",
+      "glow-schema": "main"
     },
     "v1.6.0-devld": {
       "glow-server": "develop/v1.6.0",
       "glow-client": "release/v1.5.0",
-      "glow-masterdata": "release/dev-ld"
+      "glow-masterdata": "release/dev-ld",
+      "glow-schema": "main"
     }
   },
   "repositories": {
     "glow-server": "git@github.com:Wonderplanet/glow-server.git",
     "glow-client": "git@github.com:Wonderplanet/glow-client.git",
-    "glow-masterdata": "git@github.com:Wonderplanet/glow-masterdata.git"
+    "glow-masterdata": "git@github.com:Wonderplanet/glow-masterdata.git",
+    "glow-schema": "git@github.com:Wonderplanet/glow-schema.git"
   }
 }

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # glow-brain セットアップ・更新スクリプト
-# バージョンごとの3つのリポジトリ（glow-server, glow-masterdata, glow-client）を管理します
+# バージョンごとの4つのリポジトリ（glow-server, glow-masterdata, glow-client, glow-schema）を管理します
 
 set -euo pipefail
 
@@ -325,7 +325,7 @@ show_current_configuration() {
     info "現在の構成（バージョン: ${version}）"
     info "========================================="
 
-    for repo in glow-server glow-masterdata glow-client; do
+    for repo in glow-server glow-masterdata glow-client glow-schema; do
         if repo_exists "${repo}"; then
             cd "${PROJECTS_DIR}/${repo}"
             local current_branch
@@ -389,6 +389,8 @@ main() {
     process_repository "glow-masterdata" "${version}"
     echo ""
     process_repository "glow-client" "${version}"
+    echo ""
+    process_repository "glow-schema" "${version}"
     echo ""
 
     # current_version の更新
