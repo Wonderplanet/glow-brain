@@ -1,0 +1,29 @@
+-- DuckDB初期化ファイル for masterdata-releasekey-reporter
+-- 使い方: duckdb -init .claude/skills/masterdata-releasekey-reporter/.duckdbrc
+
+-- 出力形式設定
+.mode csv
+.headers on
+
+-- ウェルカムメッセージ
+SELECT '================================================' AS message;
+SELECT '  Masterdata Release Key Reporter (DuckDB)' AS message;
+SELECT '================================================' AS message;
+SELECT '' AS message;
+SELECT 'テーブル別CSVの読み込み方法:' AS message;
+SELECT '  SELECT * FROM read_csv(''マスタデータ/リリース/{KEY}/tables/{TABLE}.csv'', ' AS message;
+SELECT '    AUTO_DETECT=TRUE, nullstr=''__NULL__'');' AS message;
+SELECT '' AS message;
+SELECT '例:' AS message;
+SELECT '  -- 特定テーブルの全データ' AS message;
+SELECT '  SELECT * FROM read_csv(''マスタデータ/リリース/202512020/tables/MstEvent.csv'', ' AS message;
+SELECT '    AUTO_DETECT=TRUE, nullstr=''__NULL__'');' AS message;
+SELECT '' AS message;
+SELECT '  -- 報酬の集計' AS message;
+SELECT '  SELECT resource_type, COUNT(*) as count' AS message;
+SELECT '  FROM read_csv(''マスタデータ/リリース/202512020/tables/MstAdventBattleReward.csv'', ' AS message;
+SELECT '    AUTO_DETECT=TRUE, nullstr=''__NULL__'')' AS message;
+SELECT '  GROUP BY resource_type;' AS message;
+SELECT '' AS message;
+SELECT 'ヘルプ: query-examples.md を参照' AS message;
+SELECT '================================================' AS message;
