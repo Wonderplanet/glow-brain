@@ -1,0 +1,9 @@
+ENABLE,id,mst_ability_id,ability_parameter1,ability_parameter2,ability_parameter3,release_key
+e,ability_osh_00001_01,ability_StunBlock,45,All,All,202512020
+e,ability_osh_00001_02,ability_gust_koma_block,0,0,0,202512020
+e,ability_osh_00001_03,ability_slip_damage_koma_block,0,0,0,202512020
+e,ability_osh_00201_01,ability_attack_power_up_by_hp_percentage_over,20,50,0,202512020
+e,ability_osh_00301_01,ability_slip_damage_koma_block,0,0,0,202512020
+e,ability_osh_00401_01,ability_burn_damage_cut,40,0,0,202512020
+e,ability_osh_00501_01,ability_StunBlock,40,All,All,202512020
+e,ability_osh_00601_01,ability_burn_damage_cut,40,0,0,202512020

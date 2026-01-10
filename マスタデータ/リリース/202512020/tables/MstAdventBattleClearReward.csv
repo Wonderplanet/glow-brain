@@ -1,0 +1,6 @@
+ENABLE,id,mst_advent_battle_id,reward_category,resource_type,resource_id,resource_amount,percentage,sort_order,release_key
+e,quest_raid_osh1_00001_1,quest_raid_osh1_00001,Random,Item,memory_glo_00001,3,20,1,202512020
+e,quest_raid_osh1_00001_2,quest_raid_osh1_00001,Random,Item,memory_glo_00002,3,20,2,202512020
+e,quest_raid_osh1_00001_3,quest_raid_osh1_00001,Random,Item,memory_glo_00003,3,20,3,202512020
+e,quest_raid_osh1_00001_4,quest_raid_osh1_00001,Random,Item,memory_glo_00004,3,20,4,202512020
+e,quest_raid_osh1_00001_5,quest_raid_osh1_00001,Random,Item,memory_glo_00005,3,20,5,202512020

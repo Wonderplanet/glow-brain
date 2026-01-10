@@ -1,0 +1,6 @@
+ENABLE,release_key,id,mst_attack_element_id,min_power_parameter,max_power_parameter,min_effective_count,max_effective_count,min_effective_duration,max_effective_duration,min_effect_parameter,max_effect_parameter
+e,202512020,chara_osh_00101_Special_00001a,chara_osh_00101_Special_00001a,0,10000,0,0,0,0,0,0
+e,202512020,chara_osh_00101_Special_00002a,chara_osh_00101_Special_00002a,0,10000,0,0,0,0,0,0
+e,202512020,chara_osh_00101_Special_00003a,chara_osh_00101_Special_00003a,0,10000,0,0,0,0,0,0
+e,202512020,chara_osh_00101_Special_00004a,chara_osh_00101_Special_00004a,0,10000,0,0,0,0,0,0
+e,202512020,chara_osh_00101_Special_00005a,chara_osh_00101_Special_00005a,0,10000,0,0,0,0,0,0
