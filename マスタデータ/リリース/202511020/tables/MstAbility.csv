@@ -1,0 +1,2 @@
+ENABLE,id,ability_type,release_key,asset_key
+e,ability_damage_cut_by_hp_percentage_less,DamageCutByHpPercentageLess,202511020,conditional_damage_cut

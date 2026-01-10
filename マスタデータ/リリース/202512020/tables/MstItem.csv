@@ -1,0 +1,13 @@
+ENABLE,id,type,group_type,rarity,asset_key,effect_value,sort_order,start_date,end_date,release_key,item_type,destination_opr_product_id
+e,memory_chara_osh_00601,RankUpMaterial,Etc,SR,memory_chara_osh_00601,chara_osh_00601,1012,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,RankUpMaterial,
+e,piece_osh_00001,CharacterFragment,Etc,UR,piece_osh_00001,,1,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,CharacterFragment,
+e,piece_osh_00101,CharacterFragment,Etc,UR,piece_osh_00101,,1,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,CharacterFragment,
+e,piece_osh_00201,CharacterFragment,Etc,SSR,piece_osh_00201,,1,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,CharacterFragment,
+e,piece_osh_00301,CharacterFragment,Etc,SSR,piece_osh_00301,,1,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,CharacterFragment,
+e,piece_osh_00401,CharacterFragment,Etc,SSR,piece_osh_00401,,1,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,CharacterFragment,
+e,piece_osh_00501,CharacterFragment,Etc,SSR,piece_osh_00501,,1,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,CharacterFragment,
+e,piece_osh_00601,CharacterFragment,Etc,SR,piece_osh_00601,,1,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,CharacterFragment,
+e,ticket_glo_00207,GachaTicket,Consumable,UR,ticket_glo_00203,,10001,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,GachaTicket,
+e,ticket_osh_10000,GachaTicket,Consumable,SSR,ticket_osh_10000,,30000,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,GachaTicket,
+e,ticket_glo_10001,GachaTicket,Consumable,SSR,ticket_glo_10001,,30001,"2026-01-01 00:00:00","2037-12-31 23:59:59",202512020,GachaTicket,
+e,item_glo_00001,Etc,Etc,R,item_glo_00001,,20000,"2026-01-01 00:00:00","2026-02-02 10:59:59",202512020,Etc,

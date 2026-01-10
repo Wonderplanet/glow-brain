@@ -1,0 +1,5 @@
+ENABLE,id,release_key,progress_group_key,criterion_type,criterion_value,criterion_count,mission_category,mst_mission_reward_group_id,sort_order,destination_scene,start_at,end_at
+e,limited_term_21,202511020,group6,AdventBattleChallengeCount,,5,AdventBattle,yuw_00001_limited_term_1,1,AdventBattle,"2025-12-05 15:00:00","2025-12-12 14:59:59"
+e,limited_term_22,202511020,group6,AdventBattleChallengeCount,,10,AdventBattle,yuw_00001_limited_term_2,2,AdventBattle,"2025-12-05 15:00:00","2025-12-12 14:59:59"
+e,limited_term_23,202511020,group6,AdventBattleChallengeCount,,20,AdventBattle,yuw_00001_limited_term_3,3,AdventBattle,"2025-12-05 15:00:00","2025-12-12 14:59:59"
+e,limited_term_24,202511020,group6,AdventBattleChallengeCount,,30,AdventBattle,yuw_00001_limited_term_4,4,AdventBattle,"2025-12-05 15:00:00","2025-12-12 14:59:59"

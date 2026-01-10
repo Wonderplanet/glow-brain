@@ -1,0 +1,2 @@
+ENABLE,release_key,id,mst_ability_id,language,description,filter_title
+e,202511010,ability_attack_power_up_by_hp_percentage_over_ja,ability_attack_power_up_by_hp_percentage_over,ja,体力{1}%以上時に攻撃を{0}%UP,体力条件強化(以上/攻撃)

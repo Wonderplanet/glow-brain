@@ -1,0 +1,68 @@
+ENABLE,id,release_key,group_id,resource_type,resource_id,resource_amount,sort_order,備考
+e,mission_reward_374,202512010,event_sur_00001_daily_bonus_1,Item,ticket_glo_00003,1,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_375,202512010,event_sur_00001_daily_bonus_2,Coin,,5000,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_376,202512010,event_sur_00001_daily_bonus_3,FreeDiamond,,20,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_377,202512010,event_sur_00001_daily_bonus_4,Item,ticket_glo_00002,1,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_378,202512010,event_sur_00001_daily_bonus_5,Item,memory_glo_00002,300,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_379,202512010,event_sur_00001_daily_bonus_6,Item,memory_glo_00004,300,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_380,202512010,event_sur_00001_daily_bonus_7,FreeDiamond,,20,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_381,202512010,event_sur_00001_daily_bonus_8,Item,ticket_glo_00003,1,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_382,202512010,event_sur_00001_daily_bonus_9,Item,memoryfragment_glo_00001,3,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_383,202512010,event_sur_00001_daily_bonus_10,Item,memoryfragment_glo_00002,2,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_384,202512010,event_sur_00001_daily_bonus_11,FreeDiamond,,20,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_385,202512010,event_sur_00001_daily_bonus_12,Item,ticket_glo_00003,1,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_386,202512010,event_sur_00001_daily_bonus_13,Item,memoryfragment_glo_00001,3,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_387,202512010,event_sur_00001_daily_bonus_14,Coin,,5000,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_388,202512010,event_sur_00001_daily_bonus_15,FreeDiamond,,20,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_389,202512010,event_sur_00001_daily_bonus_16,Item,ticket_glo_00002,1,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_390,202512010,event_sur_00001_daily_bonus_17,Item,memoryfragment_glo_00001,3,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_391,202512010,event_sur_00001_daily_bonus_18,Coin,,5000,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_392,202512010,event_sur_00001_daily_bonus_19,Item,memory_glo_00002,300,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_393,202512010,event_sur_00001_daily_bonus_20,Item,memory_glo_00004,300,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_394,202512010,event_sur_00001_daily_bonus_21,Item,memoryfragment_glo_00001,3,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_395,202512010,event_sur_00001_daily_bonus_22,Item,memoryfragment_glo_00002,2,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_396,202512010,event_sur_00001_daily_bonus_23,Item,memoryfragment_glo_00001,3,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_397,202512010,event_sur_00001_daily_bonus_24,FreeDiamond,,20,1,"魔都精兵のスレイブ いいジャン祭 特別ログインボーナス"
+e,mission_reward_398,202512010,sur_00001_limited_term_1,Coin,,2000,1,降臨バトル「魔防隊と戦う者」に5回挑戦しよう！
+e,mission_reward_399,202512010,sur_00001_limited_term_2,FreeDiamond,,20,1,降臨バトル「魔防隊と戦う者」に10回挑戦しよう！
+e,mission_reward_400,202512010,sur_00001_limited_term_3,Coin,,3000,1,降臨バトル「魔防隊と戦う者」に20回挑戦しよう！
+e,mission_reward_401,202512010,sur_00001_limited_term_4,FreeDiamond,,30,1,降臨バトル「魔防隊と戦う者」に30回挑戦しよう！
+e,mission_reward_402,202512010,sur_00001_event_reward_01,Item,memory_chara_sur_00801,200,1,surいいジャン祭_ミッション
+e,mission_reward_403,202512010,sur_00001_event_reward_02,Item,memory_chara_sur_00801,300,1,surいいジャン祭_ミッション
+e,mission_reward_404,202512010,sur_00001_event_reward_03,Item,memory_chara_sur_00801,350,1,surいいジャン祭_ミッション
+e,mission_reward_405,202512010,sur_00001_event_reward_04,Item,ticket_glo_00003,1,1,surいいジャン祭_ミッション
+e,mission_reward_406,202512010,sur_00001_event_reward_05,Item,piece_sur_00801,10,1,surいいジャン祭_ミッション
+e,mission_reward_407,202512010,sur_00001_event_reward_06,Item,piece_sur_00801,20,1,surいいジャン祭_ミッション
+e,mission_reward_408,202512010,sur_00001_event_reward_07,Item,piece_sur_00801,20,1,surいいジャン祭_ミッション
+e,mission_reward_409,202512010,sur_00001_event_reward_08,Item,piece_sur_00801,20,1,surいいジャン祭_ミッション
+e,mission_reward_410,202512010,sur_00001_event_reward_09,Item,piece_sur_00801,30,1,surいいジャン祭_ミッション
+e,mission_reward_411,202512010,sur_00001_event_reward_10,Item,memoryfragment_glo_00003,1,1,surいいジャン祭_ミッション
+e,mission_reward_412,202512010,sur_00001_event_reward_11,FreeDiamond,,50,1,surいいジャン祭_ミッション
+e,mission_reward_413,202512010,sur_00001_event_reward_12,Item,memory_chara_sur_00701,200,1,surいいジャン祭_ミッション
+e,mission_reward_414,202512010,sur_00001_event_reward_13,Item,memory_chara_sur_00701,300,1,surいいジャン祭_ミッション
+e,mission_reward_415,202512010,sur_00001_event_reward_14,Item,memory_chara_sur_00701,350,1,surいいジャン祭_ミッション
+e,mission_reward_416,202512010,sur_00001_event_reward_15,Item,ticket_glo_00003,1,1,surいいジャン祭_ミッション
+e,mission_reward_417,202512010,sur_00001_event_reward_16,Item,piece_sur_00701,10,1,surいいジャン祭_ミッション
+e,mission_reward_418,202512010,sur_00001_event_reward_17,Item,piece_sur_00701,20,1,surいいジャン祭_ミッション
+e,mission_reward_419,202512010,sur_00001_event_reward_18,Item,piece_sur_00701,20,1,surいいジャン祭_ミッション
+e,mission_reward_420,202512010,sur_00001_event_reward_19,Item,piece_sur_00701,20,1,surいいジャン祭_ミッション
+e,mission_reward_421,202512010,sur_00001_event_reward_20,Item,piece_sur_00701,30,1,surいいジャン祭_ミッション
+e,mission_reward_422,202512010,sur_00001_event_reward_21,Item,memoryfragment_glo_00003,1,1,surいいジャン祭_ミッション
+e,mission_reward_423,202512010,sur_00001_event_reward_22,FreeDiamond,,50,1,surいいジャン祭_ミッション
+e,mission_reward_424,202512010,sur_00001_event_reward_23,Coin,,12500,1,surいいジャン祭_ミッション
+e,mission_reward_425,202512010,sur_00001_event_reward_24,Coin,,12500,1,surいいジャン祭_ミッション
+e,mission_reward_426,202512010,sur_00001_event_reward_25,Item,ticket_glo_00002,3,1,surいいジャン祭_ミッション
+e,mission_reward_427,202512010,sur_00001_event_reward_26,Item,ticket_glo_00003,1,1,surいいジャン祭_ミッション
+e,mission_reward_428,202512010,sur_00001_event_reward_27,Item,memoryfragment_glo_00001,5,1,surいいジャン祭_ミッション
+e,mission_reward_429,202512010,sur_00001_event_reward_28,Item,memoryfragment_glo_00001,5,1,surいいジャン祭_ミッション
+e,mission_reward_430,202512010,sur_00001_event_reward_29,Item,memoryfragment_glo_00001,5,1,surいいジャン祭_ミッション
+e,mission_reward_431,202512010,sur_00001_event_reward_30,Item,memoryfragment_glo_00001,5,1,surいいジャン祭_ミッション
+e,mission_reward_432,202512010,sur_00001_event_reward_31,Item,memoryfragment_glo_00001,10,1,surいいジャン祭_ミッション
+e,mission_reward_433,202512010,sur_00001_event_reward_32,Item,memoryfragment_glo_00002,5,1,surいいジャン祭_ミッション
+e,mission_reward_434,202512010,sur_00001_event_reward_33,Item,memoryfragment_glo_00002,5,1,surいいジャン祭_ミッション
+e,mission_reward_435,202512010,sur_00001_event_reward_34,Item,memoryfragment_glo_00002,5,1,surいいジャン祭_ミッション
+e,mission_reward_436,202512010,sur_00001_event_reward_35,Item,memoryfragment_glo_00002,5,1,surいいジャン祭_ミッション
+e,mission_reward_437,202512010,sur_00001_event_reward_36,Emblem,emblem_event_sur_00001,1,1,surいいジャン祭_ミッション
+e,mission_reward_438,202512010,sur_00001_event_reward_37,Item,memoryfragment_glo_00003,1,1,surいいジャン祭_ミッション
+e,mission_reward_439,202512010,sur_00001_event_reward_38,Item,memoryfragment_glo_00003,2,1,surいいジャン祭_ミッション
+e,mission_reward_440,202512010,sur_00001_event_reward_39,Item,ticket_glo_00003,1,1,surいいジャン祭_ミッション

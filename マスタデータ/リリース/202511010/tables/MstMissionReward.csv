@@ -1,0 +1,52 @@
+ENABLE,id,release_key,group_id,resource_type,resource_id,resource_amount,sort_order,備考
+e,mission_reward_267,202511010,event_mag_00001_daily_bonus_1,Item,ticket_glo_00003,1,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_268,202511010,event_mag_00001_daily_bonus_2,Coin,,3000,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_269,202511010,event_mag_00001_daily_bonus_3,FreeDiamond,,30,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_270,202511010,event_mag_00001_daily_bonus_4,Item,memory_glo_00002,150,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_271,202511010,event_mag_00001_daily_bonus_5,Item,ticket_glo_00002,1,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_272,202511010,event_mag_00001_daily_bonus_6,Item,memoryfragment_glo_00001,5,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_273,202511010,event_mag_00001_daily_bonus_7,Item,memoryfragment_glo_00002,2,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_274,202511010,event_mag_00001_daily_bonus_8,Item,memory_glo_00005,100,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_275,202511010,event_mag_00001_daily_bonus_9,FreeDiamond,,30,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_276,202511010,event_mag_00001_daily_bonus_10,Coin,,4000,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_277,202511010,event_mag_00001_daily_bonus_11,Item,memory_glo_00002,150,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_278,202511010,event_mag_00001_daily_bonus_12,Item,ticket_glo_00003,1,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_279,202511010,event_mag_00001_daily_bonus_13,Item,memoryfragment_glo_00001,5,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_280,202511010,event_mag_00001_daily_bonus_14,Item,memory_glo_00005,100,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_281,202511010,event_mag_00001_daily_bonus_15,Item,memoryfragment_glo_00002,3,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_282,202511010,event_mag_00001_daily_bonus_16,FreeDiamond,,30,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_283,202511010,event_mag_00001_daily_bonus_17,Item,memoryfragment_glo_00003,1,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_284,202511010,event_mag_00001_daily_bonus_18,Item,ticket_glo_00002,1,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_285,202511010,event_mag_00001_daily_bonus_19,Item,memory_glo_00005,100,1,"株式会社マジルミエ いいジャン祭 特別ログインボーナス"
+e,mission_reward_286,202511010,mag_00001_limited_term_1,Coin,,2000,1,降臨バトル「業務実行！！」に5回挑戦しよう！
+e,mission_reward_287,202511010,mag_00001_limited_term_2,FreeDiamond,,20,1,降臨バトル「業務実行！！」に10回挑戦しよう！
+e,mission_reward_288,202511010,mag_00001_limited_term_3,Coin,,3000,1,降臨バトル「業務実行！！」に20回挑戦しよう！
+e,mission_reward_289,202511010,mag_00001_limited_term_4,FreeDiamond,,30,1,降臨バトル「業務実行！！」に30回挑戦しよう！
+e,mission_reward_290,202511010,mag_00001_event_reward_01,Item,memory_chara_mag_00501,200,1,magいいジャン祭_ミッション
+e,mission_reward_291,202511010,mag_00001_event_reward_02,Item,memory_chara_mag_00501,300,1,magいいジャン祭_ミッション
+e,mission_reward_292,202511010,mag_00001_event_reward_03,Item,memory_chara_mag_00501,350,1,magいいジャン祭_ミッション
+e,mission_reward_293,202511010,mag_00001_event_reward_04,Item,ticket_glo_00003,1,1,magいいジャン祭_ミッション
+e,mission_reward_294,202511010,mag_00001_event_reward_05,Item,piece_mag_00501,75,1,magいいジャン祭_ミッション
+e,mission_reward_295,202511010,mag_00001_event_reward_06,Item,piece_mag_00501,100,1,magいいジャン祭_ミッション
+e,mission_reward_296,202511010,mag_00001_event_reward_07,Emblem,emblem_event_mag_00001,1,1,magいいジャン祭_ミッション
+e,mission_reward_297,202511010,mag_00001_event_reward_08,Item,memory_chara_mag_00401,200,1,magいいジャン祭_ミッション
+e,mission_reward_298,202511010,mag_00001_event_reward_09,Item,memory_chara_mag_00401,300,1,magいいジャン祭_ミッション
+e,mission_reward_299,202511010,mag_00001_event_reward_10,Item,memory_chara_mag_00401,350,1,magいいジャン祭_ミッション
+e,mission_reward_300,202511010,mag_00001_event_reward_11,Item,ticket_glo_00003,1,1,magいいジャン祭_ミッション
+e,mission_reward_301,202511010,mag_00001_event_reward_12,Item,piece_mag_00401,75,1,magいいジャン祭_ミッション
+e,mission_reward_302,202511010,mag_00001_event_reward_13,Item,piece_mag_00401,100,1,magいいジャン祭_ミッション
+e,mission_reward_303,202511010,mag_00001_event_reward_14,FreeDiamond,,50,1,magいいジャン祭_ミッション
+e,mission_reward_304,202511010,mag_00001_event_reward_15,Coin,,12500,1,magいいジャン祭_ミッション
+e,mission_reward_305,202511010,mag_00001_event_reward_16,Coin,,12500,1,magいいジャン祭_ミッション
+e,mission_reward_306,202511010,mag_00001_event_reward_17,Item,ticket_glo_00002,3,1,magいいジャン祭_ミッション
+e,mission_reward_307,202511010,mag_00001_event_reward_18,Item,ticket_glo_00003,1,1,magいいジャン祭_ミッション
+e,mission_reward_308,202511010,mag_00001_event_reward_19,Item,memoryfragment_glo_00001,5,1,magいいジャン祭_ミッション
+e,mission_reward_309,202511010,mag_00001_event_reward_20,Item,memory_glo_00005,150,1,magいいジャン祭_ミッション
+e,mission_reward_310,202511010,mag_00001_event_reward_21,Item,memoryfragment_glo_00002,5,1,magいいジャン祭_ミッション
+e,mission_reward_311,202511010,mag_00001_event_reward_22,Item,memory_glo_00002,200,1,magいいジャン祭_ミッション
+e,mission_reward_312,202511010,mag_00001_event_reward_23,Item,memoryfragment_glo_00002,10,1,magいいジャン祭_ミッション
+e,mission_reward_313,202511010,mag_00001_event_reward_24,Item,memoryfragment_glo_00003,2,1,magいいジャン祭_ミッション
+e,mission_reward_314,202511010,kai_00002_limited_term_1,Coin,,2000,1,降臨バトル「怪獣退治の時間︎」に5回挑戦しよう！
+e,mission_reward_315,202511010,kai_00002_limited_term_2,FreeDiamond,,20,1,降臨バトル「怪獣退治の時間︎」に10回挑戦しよう！
+e,mission_reward_316,202511010,kai_00002_limited_term_3,Coin,,3000,1,降臨バトル「怪獣退治の時間︎」に20回挑戦しよう！
+e,mission_reward_317,202511010,kai_00002_limited_term_4,FreeDiamond,,30,1,降臨バトル「怪獣退治の時間︎」に30回挑戦しよう！

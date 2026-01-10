@@ -1,0 +1,7 @@
+ENABLE,id,mst_stage_id,upper_clear_time_ms,resource_type,resource_id,resource_amount,release_key
+e,event_yuw1_savage02_00001_1,event_yuw1_savage02_00001,100000,FreeDiamond,,20,202512015
+e,event_yuw1_savage02_00001_2,event_yuw1_savage02_00001,200000,FreeDiamond,,20,202512015
+e,event_yuw1_savage02_00001_3,event_yuw1_savage02_00001,300000,FreeDiamond,,20,202512015
+e,event_yuw1_savage02_00002_1,event_yuw1_savage02_00002,300000,FreeDiamond,,20,202512015
+e,event_yuw1_savage02_00002_2,event_yuw1_savage02_00002,400000,FreeDiamond,,20,202512015
+e,event_yuw1_savage02_00002_3,event_yuw1_savage02_00002,500000,FreeDiamond,,20,202512015

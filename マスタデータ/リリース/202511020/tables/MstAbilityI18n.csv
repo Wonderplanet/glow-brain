@@ -1,0 +1,2 @@
+ENABLE,release_key,id,mst_ability_id,language,description,filter_title
+e,202511020,ability_damage_cut_by_hp_percentage_less_ja,ability_damage_cut_by_hp_percentage_less,ja,体力{1}%以下時に被ダメージを{0}%カット,体力条件強化(以下/被ダメージ)

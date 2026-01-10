@@ -1,0 +1,2 @@
+ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key
+e,quest_event_yuw1_savage02,event,event_yuw_00001,6,yuw1_savage02,"2025-12-22 15:00:00","2025-12-31 23:59:59",event_yuw1_savege02,Normal,202512015

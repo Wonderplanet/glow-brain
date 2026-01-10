@@ -1,0 +1,14 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,199,chara_osh_00001,ja,Summon,Maru,Left,1.5,"　私は誰かを\n　愛したい",202512020
+e,200,chara_osh_00101,ja,SpecialAttackCharge,Maru,Right,0.5,"滅茶苦茶やって\n帰るか",202512020
+e,201,chara_osh_00101,ja,Summon,Maru,Left,1.5,"やりようは\nありそうだな",202512020
+e,202,chara_osh_00201,ja,SpecialAttackCharge,Maru,Right,0.5,"だって憧れは\n止められない",202512020
+e,203,chara_osh_00201,ja,Summon,Maru,Left,1.5,私がんばる,202512020
+e,204,chara_osh_00301,ja,SpecialAttackCharge,Maru,Right,0.5,"バズらせのプロ\nなんだけどぉ？",202512020
+e,205,chara_osh_00301,ja,Summon,Maru,Left,1.5,"ここは年の功\nなのかなぁ",202512020
+e,206,chara_osh_00401,ja,SpecialAttackCharge,Maru,Right,0.5,"アンタの\n\n\n\n推しの子に\nなってやる",202512020
+e,207,chara_osh_00401,ja,Summon,Maru,Left,1.5,"私が\n\n\n\nなんとかする",202512020
+e,208,chara_osh_00601,ja,SpecialAttackCharge,Maru,Right,0.5,ボク年収1億ダヨ,202512020
+e,209,chara_osh_00601,ja,Summon,Maru,Left,1.5,オマカセ！,202512020
+e,212,chara_osh_00501,ja,SpecialAttackCharge,Maru,Right,0.5,今は負けない,202512020
+e,213,chara_osh_00501,ja,Summon,Maru,Left,1.5,頑張らなきゃ,202512020

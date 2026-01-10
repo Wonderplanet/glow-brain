@@ -1,0 +1,2 @@
+ENABLE,id,release_key,key,value
+e,67,202511020,ANNOUNCEMENT_HOOK_PATTERN_URL,"^https:\/\/(?:(?:x\.com|dpoint\.docomo\.ne\.jp)\/.*|kddi-l\.jp\/HJZ.*|stn\.mb\.softbank\.jp\/p3z6W.*)"

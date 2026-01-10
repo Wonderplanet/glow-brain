@@ -1,0 +1,8 @@
+ENABLE,id,type,group_type,rarity,asset_key,effect_value,sort_order,start_date,end_date,release_key,item_type,destination_opr_product_id
+e,memory_chara_yuw_00501,RankUpMaterial,Etc,SR,memory_chara_yuw_00501,chara_yuw_00501,1008,"2025-11-25 15:00:00","2037-12-31 23:59:59",202511020,RankUpMaterial,
+e,memory_chara_yuw_00601,RankUpMaterial,Etc,SR,memory_chara_yuw_00601,chara_yuw_00601,1009,"2025-11-25 15:00:00","2037-12-31 23:59:59",202511020,RankUpMaterial,
+e,piece_yuw_00201,CharacterFragment,Etc,SSR,piece_yuw_00201,,1,"2025-11-25 15:00:00","2037-12-31 23:59:59",202511020,CharacterFragment,
+e,piece_yuw_00301,CharacterFragment,Etc,UR,piece_yuw_00301,,1,"2025-11-25 15:00:00","2037-12-31 23:59:59",202511020,CharacterFragment,
+e,piece_yuw_00401,CharacterFragment,Etc,UR,piece_yuw_00401,,1,"2025-11-25 15:00:00","2037-12-31 23:59:59",202511020,CharacterFragment,
+e,piece_yuw_00501,CharacterFragment,Etc,SR,piece_yuw_00501,,1,"2025-11-25 15:00:00","2037-12-31 23:59:59",202511020,CharacterFragment,
+e,piece_yuw_00601,CharacterFragment,Etc,SR,piece_yuw_00601,,1,"2025-11-25 15:00:00","2037-12-31 23:59:59",202511020,CharacterFragment,

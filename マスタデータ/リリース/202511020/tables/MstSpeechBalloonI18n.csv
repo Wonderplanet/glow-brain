@@ -1,0 +1,11 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,180,chara_yuw_00201,ja,SpecialAttackCharge,Maru,Right,0.5,"味方に決まってる\nじゃない…",202511020
+e,181,chara_yuw_00201,ja,Summon,Maru,Left,1.5,"やるなら\n一番だ !!",202511020
+e,182,chara_yuw_00301,ja,SpecialAttackCharge,Maru,Right,0.5,"私は違う\n誰かになれる",202511020
+e,183,chara_yuw_00301,ja,Summon,Maru,Left,1.5,"友達を\n作るんだ！！",202511020
+e,184,chara_yuw_00401,ja,SpecialAttackCharge,Maru,Right,0.5,"大好きだって\n伝えたい",202511020
+e,185,chara_yuw_00401,ja,Summon,Maru,Left,1.5,"ウチは\nちょー元気 !!",202511020
+e,186,chara_yuw_00501,ja,SpecialAttackCharge,Maru,Right,0.5,考えてみて？,202511020
+e,187,chara_yuw_00501,ja,Summon,Maru,Left,1.5,"一番のコスプレを\n見せてあげる！！",202511020
+e,188,chara_yuw_00601,ja,SpecialAttackCharge,Maru,Right,0.5,"ここから先は\n俺の話だ",202511020
+e,189,chara_yuw_00601,ja,Summon,Maru,Left,1.5,"そういう事なら\n任せておけ",202511020

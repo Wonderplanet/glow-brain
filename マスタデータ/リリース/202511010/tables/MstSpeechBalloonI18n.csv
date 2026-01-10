@@ -1,0 +1,9 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,172,chara_mag_00201,ja,SpecialAttackCharge,Maru,Right,0.5,テーブル展開,202511010
+e,173,chara_mag_00201,ja,Summon,Maru,Left,1.5,"挨拶は\n省略致します",202511010
+e,174,chara_mag_00301,ja,SpecialAttackCharge,Maru,Right,0.5,"大丈夫　そんなに\n慌てないで",202511010
+e,175,chara_mag_00301,ja,Summon,Maru,Left,1.5,"ただ今より\n業務に当たります",202511010
+e,176,chara_mag_00401,ja,SpecialAttackCharge,Maru,Right,0.5,私が行きます,202511010
+e,177,chara_mag_00401,ja,Summon,Maru,Left,1.5,"大丈夫です\nお任せあれ !!",202511010
+e,178,chara_mag_00501,ja,SpecialAttackCharge,Maru,Right,0.5,"そこまで見えれば\n上出来だ",202511010
+e,179,chara_mag_00501,ja,Summon,Maru,Left,1.5,俺がすべて責任を取る,202511010

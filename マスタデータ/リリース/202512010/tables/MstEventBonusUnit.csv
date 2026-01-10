@@ -1,0 +1,9 @@
+ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
+e,32,chara_sur_00501,20,raid_sur1_00001,,202512010
+e,33,chara_sur_00101,15,raid_sur1_00001,,202512010
+e,34,chara_sur_00601,10,raid_sur1_00001,,202512010
+e,35,chara_sur_00701,10,raid_sur1_00001,,202512010
+e,37,chara_sur_00801,10,raid_sur1_00001,,202512010
+e,38,chara_sur_00201,5,raid_sur1_00001,,202512010
+e,39,chara_sur_00301,5,raid_sur1_00001,,202512010
+e,40,chara_sur_00001,3,raid_sur1_00001,,202512010
