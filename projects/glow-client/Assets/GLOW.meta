@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/AssetBundles/stage_image.meta
+guid: 268d0935c0def43ad9978517f6222257
+========
+guid: 7141dd52464494d36a552878d600baee
+>>>>>>>> release/v0.1.0:Assets/GLOW.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

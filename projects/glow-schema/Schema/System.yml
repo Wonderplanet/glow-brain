@@ -1,0 +1,39 @@
+data:
+  - name: Environment
+    obscure: true
+    params: 
+      - name: env
+        type: string
+      - name: name
+        type: string
+      - name: description
+        type: string
+      - name: authenticate_url
+        type: string
+      - name: api_url
+        type: string
+      - name: mst_url
+        type: string
+      - name: cdn_url
+        type: string
+      - name: web_cdn_url
+        type: string
+      - name: banner_cdn_url
+        type: string
+      - name: information_cdn_url
+        type: string
+      - name: agreement_url
+        type: string
+  - name: EnvironmentList
+    obscure: true
+    params: 
+      - name: environments
+        type: EnvironmentData[]
+
+api:
+  - name: System
+    actions:
+      - name: FetchEnvList
+        path: "/env.json"
+        method: Get
+        response: EnvironmentListData
