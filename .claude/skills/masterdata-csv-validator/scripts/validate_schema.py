@@ -35,8 +35,18 @@ def snake_to_pascal(snake_str: str) -> str:
 def pascal_to_snake(pascal_str: str) -> str:
     """PascalCaseをsnake_caseに変換して複数形にする"""
     import re
+
+    # I18nで終わる場合は特殊処理（i18nテーブルは mst_<複数形>_i18n 形式）
+    if pascal_str.endswith('I18n'):
+        base = pascal_str[:-4]  # 'I18n'を除去
+        snake_base = re.sub(r'(?<!^)(?=[A-Z])', '_', base).lower()
+        # 基底部分を複数形に
+        if not snake_base.endswith('s'):
+            snake_base += 's'
+        return snake_base + '_i18n'
+
+    # 通常のケース
     snake = re.sub(r'(?<!^)(?=[A-Z])', '_', pascal_str).lower()
-    # 単数形を複数形に変換（簡易版）
     if not snake.endswith('s'):
         snake += 's'
     return snake
