@@ -2,6 +2,8 @@
 
 Googleスプレッドシートから設計書をHTML形式でダウンロードし、glow-brainリポジトリにPull Requestを作成するPythonスクリプトです。
 
+**認証方式**: Googleサービスアカウント
+
 ## 機能
 
 1. 一覧シートからリリースキーを自動抽出（B3セル）
@@ -11,6 +13,31 @@ Googleスプレッドシートから設計書をHTML形式でダウンロード�
 5. `マスターデータ/リリース/{リリースキー}/raw/` に保存
 6. 自動的にGitブランチ作成、コミット、プッシュ
 7. GitHub Pull Requestを自動作成
+
+## 🔒 安全性について
+
+### スプレッドシートへの影響
+
+このスクリプトは**完全に読み取り専用**です：
+
+- ✅ セルの値を読み取る
+- ✅ シート構造を読み取る
+- ✅ HTMLとしてエクスポート
+- ❌ セルの値を変更しない
+- ❌ データを追加しない
+- ❌ データを削除しない
+- ❌ シートを作成・削除しない
+
+### 使用する権限スコープ
+
+```python
+SCOPES = [
+    'https://www.googleapis.com/auth/spreadsheets.readonly',  # 読み取り専用
+    'https://www.googleapis.com/auth/drive.readonly'          # 読み取り専用
+]
+```
+
+この権限では**物理的に編集できません**。
 
 ## 前提条件
 
@@ -92,14 +119,9 @@ git clone <glow-brain-repository-url>
 cd glow-brain
 ```
 
-### 2. 依存ライブラリのインストール
+### 2. 仮想環境の作成（推奨）
 
-```bash
-cd scripts/download_masterdata_design_docs
-pip install -r requirements.txt
-```
-
-または、仮想環境を使用する場合:
+システムのPython環境を汚さないため、**仮想環境の使用を強く推奨**します。
 
 ```bash
 cd scripts/download_masterdata_design_docs
@@ -112,11 +134,22 @@ source venv/bin/activate  # macOS/Linux
 # または
 venv\Scripts\activate  # Windows
 
-# 依存ライブラリインストール
+# 仮想環境が有効化されると、プロンプトに (venv) が表示されます
+# (venv) user@host:~/scripts/download_masterdata_design_docs$
+```
+
+### 3. 依存ライブラリのインストール
+
+**仮想環境を有効化した状態で**実行してください。
+
+```bash
+# 仮想環境内でインストール
 pip install -r requirements.txt
 ```
 
-### 3. 認証情報の配置
+**注意**: 仮想環境を有効化せずに `pip install` を実行すると、システム全体にインストールされてしまいます。
+
+### 4. 認証情報の配置
 
 ダウンロードした `credentials.json` をスクリプトと同じディレクトリに配置してください。
 
@@ -132,9 +165,15 @@ scripts/download_masterdata_design_docs/
 
 ### 基本的な使い方
 
+**仮想環境を有効化してから**実行してください。
+
 ```bash
 cd scripts/download_masterdata_design_docs
 
+# 仮想環境を有効化（まだの場合）
+source venv/bin/activate
+
+# スクリプト実行
 python3 download_masterdata_design_docs.py "一覧シートのURL"
 ```
 
