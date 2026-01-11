@@ -1,0 +1,30 @@
+# 認証情報（機密情報）
+credentials.json
+token.pickle
+token.json
+*.json
+!credentials.json.example
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
