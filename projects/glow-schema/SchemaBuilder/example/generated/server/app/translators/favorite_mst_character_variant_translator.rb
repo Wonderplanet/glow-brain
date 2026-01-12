@@ -1,0 +1,14 @@
+class FavoriteMstCharacterVariantTranslator
+  def self.translate(favorite_mst_character_variant_model)
+    view_model = FavoriteMstCharacterVariantViewModel.new
+    view_model.main_favorite_mst_character_variant_id = favorite_mst_character_variant_model.main_favorite_mst_character_variant_id
+    view_model.main_current_graphic = favorite_mst_character_variant_model.main_current_graphic
+    view_model.sub_favorite_mst_character_variant_id1 = favorite_mst_character_variant_model.sub_favorite_mst_character_variant_id1
+    view_model.sub1_current_graphic = favorite_mst_character_variant_model.sub1_current_graphic
+    view_model.sub_favorite_mst_character_variant_id2 = favorite_mst_character_variant_model.sub_favorite_mst_character_variant_id2
+    view_model.sub2_current_graphic = favorite_mst_character_variant_model.sub2_current_graphic
+    view_model.sub_favorite_mst_character_variant_id3 = favorite_mst_character_variant_model.sub_favorite_mst_character_variant_id3
+    view_model.sub3_current_graphic = favorite_mst_character_variant_model.sub3_current_graphic
+    view_model
+  end
+end

@@ -1,0 +1,8 @@
+data:
+  - name: MstNgWord
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: word
+        type: string

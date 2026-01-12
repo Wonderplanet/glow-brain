@@ -1,0 +1,294 @@
+enum:
+  - name: EmblemType
+    params:
+      - name: Event
+      - name: Series
+
+data:
+  - name: MstUserLevelUp
+    obscure: true
+    params:
+      ## 1レベルづつレコード持っており、必要な経験値については累計経験値で表示する
+      ## レベルアップ時の検索方法はレベルアップ前のレベルより大きく累計経験値がrequiredExp以下のものをリストで取得で一括取得可能
+      - name: level
+        type: int
+      - name: requiredExp
+        type: int
+      - name: rewardDiamond
+        type: int
+      - name: rewardStamina
+        type: int
+      - name: mstHandoutId
+        type: string
+
+  - name: MstUserLevel
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: level
+        type: int
+      - name: exp
+        type: long
+      - name: stamina
+        type: int
+
+  - name: MstEmblem
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: emblemType
+        type: EmblemType
+      - name: mstSeriesId
+        type: string
+      - name: assetKey
+        type: string
+
+  - name: MstEmblemI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstEmblemId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+      - name: description
+        type: string
+
+  - name: UsrProfile
+    obscure: true
+    params:
+      - name: name
+        type: string
+      - name: nameUpdateAt
+        type: DateTimeOffset?
+      - name: mstUnitId
+        type: string
+      - name: mstEmblemId
+        type: string
+      - name: mstAvatarId
+        type: string
+      - name: mstAvatarFrameId
+        type: string
+      - name: myId
+        type: string
+
+  - name: UsrParameter
+    obscure: true
+    params:
+      - name: level
+        type: int
+      - name: exp
+        type: int
+      - name: coin
+        type: int
+      - name: stamina
+        type: int
+      - name: staminaUpdatedAt
+        type: DateTimeOffset?
+      - name: freeDiamond
+        type: int
+      - name: paidDiamondIos
+        type: int
+      - name: paidDiamondAndroid
+        type: int
+      - name: dailyBuyStaminaDiamondLimit
+        type: int
+      - name: dailyBuyStaminaAdLimit
+        type: int
+
+  - name: UsrUserBuyCount
+    obscure: true
+    params:
+      - name: dailyBuyStaminaAdCount
+        type: int
+      - name: dailyBuyStaminaAdAt
+        type: DateTimeOffset?
+
+  - name: UsrLogin
+    obscure: true
+    params:
+      - name: lastLoginAt
+        type: DateTimeOffset?
+      - name: loginDayCount
+        type: int
+      - name: loginContinueDayCount
+        type: int
+
+  - name: UsrEmblem
+    # FIXME 定義するところが適切でなければ移動する
+    obscure: true
+    params:
+      - name: mstEmblemId
+        type: string
+      - name: isNewEncyclopedia
+        type: bool
+
+  - name: UsrGachaUpper
+    obscure: true
+    params:
+    - name: upperGroup
+      type: string
+    - name: upperType
+      type: UpperType
+    - name: count
+      type: int
+
+  - name: UsrGacha
+    obscure: true
+    params:
+    - name: oprGachaId
+      type: string
+    - name: adPlayedAt
+      type: DateTimeOffset?
+    - name: playedAt
+      type: DateTimeOffset?
+    - name: adCount
+      type: int
+    - name: adDailyCount
+      type: int
+    - name: count
+      type: int
+    - name: dailyCount
+      type: int
+    - name: expiresAt
+      type: DateTimeOffset?
+
+  - name: UserBuyStaminaDiamondResult
+    obscure: true
+    params:
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrBuyCount
+        type: UsrUserBuyCountData
+
+  - name: UserBuyStaminaAdResult
+    obscure: true
+    params:
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrBuyCount
+        type: UsrUserBuyCountData
+
+  - name: UserChangeAvatarResult
+    obscure: true
+    params:
+      - name: usrProfile
+        type: UsrProfileData
+
+  - name: UserChangeEmblemResult
+    obscure: true
+    params:
+      - name: usrProfile
+        type: UsrProfileData
+
+  - name: UserLinkBnidConfirmResult
+    obscure: true
+    params:
+      - name: name
+        type: string
+      - name: level
+        type: int?
+      - name: myId
+        type: string
+
+  - name: UserLinkBnidResult
+    obscure: true
+    params:
+      - name: idToken
+        type: string
+      - name: bnidLinkedAt
+        type: DateTimeOffset
+
+  - name: UserInfoResult
+    obscure: true
+    params:
+      - name: myId
+        type: string
+
+api:
+  - name: User
+    actions:
+      - name: Info
+        path: "/api/user/info"
+        params:
+        method: GET
+        response: UserInfoResultData
+
+      - name: Agree
+        path: "/api/user/agree"
+        params:
+          - name: tosVersion
+            type: int
+          - name: privacyPolicyVersion
+            type: int
+          - name: globalCnsntVersion
+            type: int
+          - name: inAppAdvertisementVersion
+            type: int
+        method: POST
+        response: HeadOK
+
+      - name: BuyStaminaDiamond
+        path: "/api/user/buy_stamina_diamond"
+        params:
+        method: POST
+        response: UserBuyStaminaDiamondResultData
+
+      - name: BuyStaminaAd
+        path: "/api/user/buy_stamina_ad"
+        params:
+        method: POST
+        response: UserBuyStaminaAdResultData
+
+      - name: ChangeAvatar
+        path: "/api/user/change_avatar"
+        params:
+          - name: mstUnitId
+            type: string
+        method: POST
+        response: UserChangeAvatarResultData
+
+      - name: ChangeEmblem
+        path: "/api/user/change_emblem"
+        params:
+          - name: mstEmblemId
+            type: string
+        method: POST
+        response: UserChangeEmblemResultData
+
+      - name: ChangeName
+        path: "/api/user/change_name"
+        params:
+          - name: name
+            type: string
+        method: POST
+        response: HeadOK
+
+      - name: LinkBnidConfirm
+        path: "/api/user/link_bnid_confirm"
+        params:
+          - name: code
+            type: string
+        method: POST
+        response: UserLinkBnidConfirmResultData
+
+      - name: LinkBnid
+        path: "/api/user/link_bnid"
+        params:
+          - name: code
+            type: string
+          - name: isHome
+            type: bool
+        method: POST
+        response: UserLinkBnidResultData
+
+      - name: UnlinkLinkBnid
+        path: "/api/user/unlink_bnid"
+        params:
+        method: POST
+        response: HeadOK

@@ -1,0 +1,361 @@
+enum:
+  - name: AdventBattleType
+    params:
+      - name: ScoreChallenge
+      - name: Raid
+
+  - name: AdventBattleRewardCategory
+    params:
+      - name: MaxScore
+      - name: Ranking
+      - name: Rank
+      - name: RaidTotalScore
+      - name: Drop
+
+  - name: AdventBattleClearRewardCategory
+    params:
+      - name: FirstClear
+      - name: Always
+      - name: Random
+
+  - name: RankType
+    params:
+      - name: Bronze
+      - name: Silver
+      - name: Gold
+      - name: Master
+
+  - name: ScoreAdditionType
+    params:
+      - name: AllEnemiesAndOutPost
+      - name: AllEnemies
+      - name: BossEnemies
+
+data:
+  - name: MstAdventBattle
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstEventId
+        type: string
+      - name: mstInGameId
+        type: string
+      - name: assetKey
+        type: string
+      - name: adventBattleType
+        type: AdventBattleType
+      - name: initialBattlePoint
+        type: int
+      - name: eventBonusGroupId
+        type: string
+      - name: challengeableCount
+        type: int
+      - name: adChallengeableCount
+        type: int
+      - name: displayMstUnitId1
+        type: string
+      - name: displayMstUnitId2
+        type: string
+      - name: displayMstUnitId3
+        type: string
+      - name: exp
+        type: int
+      - name: coin
+        type: int
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+      - name: scoreAdditionType
+        type: ScoreAdditionType
+      - name: scoreAdditionalCoef
+        type: decimal
+
+  - name: MstAdventBattleClearReward
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstAdventBattleId
+        type: string
+      - name: rewardCategory
+        type: AdventBattleClearRewardCategory
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+      - name: percentage
+        type: int
+      - name: sortOrder
+        type: int
+
+  - name: MstAdventBattleRewardGroup
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstAdventBattleId
+        type: string
+      - name: rewardCategory
+        type: AdventBattleRewardCategory
+      - name: conditionValue
+        type: string
+
+  - name: MstAdventBattleReward
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstAdventBattleRewardGroupId
+        type: string
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+
+  - name: MstAdventBattleRank
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstAdventBattleId
+        type: string
+      - name: rankType
+        type: RankType
+      - name: rankLevel
+        type: int
+      - name: requiredLowerScore
+        type: long
+      - name: assetKey
+        type: string
+
+  - name: MstAdventBattleI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstAdventBattleId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+      - name: bossDescription
+        type: string
+
+  - name: UsrAdventBattle
+    obscure: true
+    params:
+      - name: mstAdventBattleId
+        type: string
+      - name: maxScore
+        type: long
+      - name: totalScore
+        type: long
+      - name: maxReceivedMaxScoreReward
+        type: long
+      - name: resetChallengeCount
+        type: int
+      - name: resetAdChallengeCount
+        type: int
+      - name: clearCount
+        type: int
+
+  - name: AdventBattleRaidTotalScore
+    obscure: true
+    params:
+      - name: mstAdventBattleId
+        type: string
+      - name: totalDamage
+        type: long
+
+  - name: AdventBattleReward
+    obscure: true
+    params:
+      - name: rewardCategory
+        type: AdventBattleRewardCategory
+      - name: reward
+        type: RewardData
+
+  - name: AdventBattleResult
+    obscure: true
+    params:
+      - name: mstAdventBattleId
+        type: string
+      - name: myRanking
+        type: AdventBattleMyRankingData
+      - name: totalDamage
+        type: int
+
+  - name: AdventBattleClearReward
+    obscure: true
+    params:
+      - name: rewardCategory
+        type: AdventBattleClearRewardCategory
+      - name: reward
+        type: RewardData
+
+  - name: MaxScorePartyUnit
+    obscure: true
+    params:
+      - name: mstUnitId
+        type: string
+      - name: level
+        type: int
+      - name: gradeLevel
+        type: int
+
+  - name: AdventBattleTopResult
+    obscure: true
+    params:
+      - name: adventBattleRaidTotalScoreRewards
+        type: AdventBattleRewardData[]
+      - name: adventBattleMaxScoreRewards
+        type: AdventBattleRewardData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrEmblems
+        type: UsrEmblemData[]
+
+  - name: AdventBattleInfoResult
+    obscure: true
+    params:
+      - name: adventBattleResult
+        type: AdventBattleResultData
+
+  - name: AdventBattleEndResult
+    obscure: true
+    params:
+      - name: usrAdventBattle
+        type: UsrAdventBattleData
+      - name: totalDamage
+        type: long
+      - name: usrEnemyDiscoveries
+        type: UsrEnemyDiscoveryData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: adventBattleDropRewards
+        type: AdventBattleRewardData[]
+      - name: adventBattleRankRewards
+        type: AdventBattleRewardData[]
+      - name: adventBattleClearRewards
+        type: AdventBattleClearRewardData[]
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+
+  - name: AdventBattleAbortResult
+    obscure: true
+    params:
+      - name: totalDamage
+        type: long
+
+  - name: AdventBattleRankingItem
+    obscure: true
+    params:
+      - name: myId
+        type: string
+      - name: rank
+        type: int
+      - name: name
+        type: string
+      - name: mstUnitId
+        type: string
+      - name: mstEmblemId
+        type: string
+      - name: score
+        type: long
+      - name: totalScore
+        type: long
+      - name: maxScoreParty
+        type: MaxScorePartyUnitData[]
+
+  - name: AdventBattleMyRanking
+    obscure: true
+    params:
+      - name: rank
+        type: int
+      - name: score
+        type: long
+      - name: totalScore
+        type: long
+      - name: isExcludeRanking
+        type: bool
+
+  - name: AdventBattleRankingResult
+    obscure: true
+    params:
+      - name: ranking
+        type: AdventBattleRankingItemData[]
+      - name: myRanking
+        type: AdventBattleMyRankingData
+
+api:
+  - name: AdventBattle
+    actions:
+      - name: Top
+        path: "/api/advent_battle/top"
+        params:
+          - name: mstAdventBattleId
+            type: string
+        method: post
+        response: AdventBattleTopResultData
+
+      - name: Start
+        path: "/api/advent_battle/start"
+        params:
+          - name: mstAdventBattleId
+            type: string
+          - name: partyNo
+            type: int
+          - name: isChallengeAd
+            type: bool
+          - name: inGameBattleLog
+            type: InGameStartBattleLogData
+        method: post
+        response: HeadOK
+
+      - name: End
+        path: "/api/advent_battle/end"
+        params:
+          - name: mstAdventBattleId
+            type: string
+          - name: inGameBattleLog
+            type: InGameEndBattleLogData
+        method: post
+        response: AdventBattleEndResultData
+
+      - name: Abort
+        path: "/api/advent_battle/abort"
+        params:
+          - name: abortType
+            type: int
+        method: post
+        response: AdventBattleAbortResultData
+
+      - name: Ranking
+        path: "/api/advent_battle/ranking"
+        params:
+          - name: mstAdventBattleId
+            type: string
+          - name: isPrevious
+            type: bool
+        method: GET
+        response: AdventBattleRankingResultData
+
+      - name: Info
+        path: "/api/advent_battle/info"
+        params:
+        method: get
+        response: AdventBattleInfoResultData
+

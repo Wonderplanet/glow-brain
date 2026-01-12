@@ -1,0 +1,19 @@
+{
+    "name": "WPFramework.Runtime.Exceptions",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2a2deac7912b046ef9de4b6eb8f2a9a8",
+        "GUID:a145c23cbc8144a86b81873ba449104f",
+        "GUID:4ac1d8d1232ba43398f69754ba998e6a",
+        "GUID:9e24947de15b9834991c9d8411ea37cf"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
