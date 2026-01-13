@@ -2,7 +2,8 @@
 
 Googleスプレッドシートから設計書をHTML形式でダウンロードし、glow-brainリポジトリにPull Requestを作成するPythonスクリプトです。
 
-**認証方式**: Googleサービスアカウント
+**認証方式**: Googleサービスアカウント  
+**パッケージ管理**: [uv](https://github.com/astral-sh/uv) - 高速なPythonパッケージマネージャー
 
 ## 機能
 
@@ -49,7 +50,19 @@ Python 3.8以上が必要です。
 python3 --version
 ```
 
-### 2. 必要なツールのインストール
+### 2. uvのインストール
+
+```bash
+# macOS/Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# インストール確認
+uv --version
+```
+
+uvについて詳しくは [UV_GUIDE.md](UV_GUIDE.md) を参照してください。
+
+### 3. 必要なツールのインストール
 
 ```bash
 # gh CLI（GitHub CLI）
@@ -61,14 +74,14 @@ sudo apt install gh  # Ubuntu/Debian
 gh auth login
 ```
 
-### 3. Google Cloud サービスアカウントの設定
+### 4. Google Cloud サービスアカウントの設定
 
-#### 3.1 Google Cloud Projectの作成
+#### 4.1 Google Cloud Projectの作成
 
 1. [Google Cloud Console](https://console.cloud.google.com/)にアクセス
 2. プロジェクトを作成（既存プロジェクトを使用する場合はスキップ）
 
-#### 3.2 必要なAPIを有効化
+#### 4.2 必要なAPIを有効化
 
 以下のAPIを有効化してください:
 
@@ -83,7 +96,7 @@ gcloud services enable drive.googleapis.com
 
 または、[APIライブラリ](https://console.cloud.google.com/apis/library)から手動で有効化。
 
-#### 3.3 サービスアカウントの作成
+#### 4.3 サービスアカウントの作成
 
 1. [IAMと管理 > サービスアカウント](https://console.cloud.google.com/iam-admin/serviceaccounts)にアクセス
 2. 「サービスアカウントを作成」をクリック
@@ -92,7 +105,7 @@ gcloud services enable drive.googleapis.com
 5. ロールは不要（スキップ）
 6. 「完了」をクリック
 
-#### 3.4 認証キーの作成
+#### 4.4 認証キーの作成
 
 1. 作成したサービスアカウントをクリック
 2. 「キー」タブを選択
@@ -101,7 +114,7 @@ gcloud services enable drive.googleapis.com
 5. 「作成」をクリック
 6. ダウンロードされたJSONファイルを `credentials.json` として保存
 
-#### 3.5 スプレッドシートへのアクセス権限付与
+#### 4.5 スプレッドシートへのアクセス権限付与
 
 サービスアカウントのメールアドレス（`xxx@xxx.iam.gserviceaccount.com`）に対して、対象のスプレッドシートの**閲覧権限**を付与してください。
 
@@ -119,37 +132,18 @@ git clone <glow-brain-repository-url>
 cd glow-brain
 ```
 
-### 2. 仮想環境の作成（推奨）
+### 2. 依存関係のインストール
 
-システムのPython環境を汚さないため、**仮想環境の使用を強く推奨**します。
+スクリプトディレクトリに移動して、uvで依存関係をインストールします。
 
 ```bash
 cd scripts/download_masterdata_design_docs
 
-# 仮想環境作成
-python3 -m venv venv
-
-# 仮想環境有効化
-source venv/bin/activate  # macOS/Linux
-# または
-venv\Scripts\activate  # Windows
-
-# 仮想環境が有効化されると、プロンプトに (venv) が表示されます
-# (venv) user@host:~/scripts/download_masterdata_design_docs$
+# 依存関係のインストール（.venv環境が自動作成される）
+uv sync
 ```
 
-### 3. 依存ライブラリのインストール
-
-**仮想環境を有効化した状態で**実行してください。
-
-```bash
-# 仮想環境内でインストール
-pip install -r requirements.txt
-```
-
-**注意**: 仮想環境を有効化せずに `pip install` を実行すると、システム全体にインストールされてしまいます。
-
-### 4. 認証情報の配置
+### 3. 認証情報の配置
 
 ダウンロードした `credentials.json` をスクリプトと同じディレクトリに配置してください。
 
@@ -157,7 +151,7 @@ pip install -r requirements.txt
 scripts/download_masterdata_design_docs/
 ├── credentials.json  # ← ここに配置
 ├── download_masterdata_design_docs.py
-├── requirements.txt
+├── pyproject.toml
 └── README.md
 ```
 
@@ -165,29 +159,26 @@ scripts/download_masterdata_design_docs/
 
 ### 基本的な使い方
 
-**仮想環境を有効化してから**実行してください。
+`uv run` を使用してスクリプトを実行します（仮想環境の有効化は不要）。
 
 ```bash
 cd scripts/download_masterdata_design_docs
 
-# 仮想環境を有効化（まだの場合）
-source venv/bin/activate
-
 # スクリプト実行
-python3 download_masterdata_design_docs.py "一覧シートのURL"
+uv run download_masterdata_design_docs.py "一覧シートのURL"
 ```
 
 ### 例
 
 ```bash
-python3 download_masterdata_design_docs.py \
+uv run download_masterdata_design_docs.py \
   "https://docs.google.com/spreadsheets/d/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX/edit#gid=0"
 ```
 
 ### オプション
 
 ```bash
-python3 download_masterdata_design_docs.py \
+uv run download_masterdata_design_docs.py \
   --credentials /path/to/credentials.json \
   --repo-path /path/to/glow-brain \
   "一覧シートのURL"
