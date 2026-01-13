@@ -1,9 +1,14 @@
-# Slack-Claude Code連携システム 実装計画
+# Slack-Claude Code連携システム 実装計画（EC2本番版）
 
 ## 概要
 
 Slackからメンションでトリガーし、EC2上のClaude Codeセッションを操作するシステム。
 同一スレッドでは同一セッションを継続使用し、生成物はSlack/Google Driveに転記する。
+
+## 関連計画
+
+- **ローカル検証版**: `.claude/plans/Slack-Claude連携_ローカル検証版.md`
+  - 本計画の前段階として、ローカルPCで検証を行う
 
 ## 確定事項
 
