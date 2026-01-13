@@ -6,7 +6,8 @@ token.json
 !credentials.json.example
 
 # Python
-venv/
+.venv/
+uv.lock
 __pycache__/
 *.pyc
 *.pyo
