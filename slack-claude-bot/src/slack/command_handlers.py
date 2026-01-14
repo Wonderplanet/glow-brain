@@ -226,6 +226,15 @@ class CommandHandlers:
                 # Create slack_thread_id based on thread_ts
                 slack_thread_id = f"cmd:{channel_id}:{thread_ts}"
 
+                # Store as active session immediately after pop to prevent race condition
+                _active_sessions[thread_ts] = {
+                    "branch": branch,
+                    "channel_id": channel_id,
+                    "user_id": user_id,
+                    "user_name": user_name,
+                    "slack_thread_id": slack_thread_id,
+                }
+
                 logger.info(
                     "thread_prompt_received_first",
                     branch=branch,
@@ -263,15 +272,6 @@ class CommandHandlers:
                     prompt=prompt,
                     branch=branch,
                 )
-
-                # Store as active session for future messages
-                _active_sessions[thread_ts] = {
-                    "branch": branch,
-                    "channel_id": channel_id,
-                    "user_id": user_id,
-                    "user_name": user_name,
-                    "slack_thread_id": slack_thread_id,
-                }
 
             # Case 2: Continuation message (in _active_sessions)
             elif thread_ts in _active_sessions:
