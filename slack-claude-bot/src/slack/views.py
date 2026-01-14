@@ -1,97 +1,56 @@
-"""Slack modal view definitions."""
+"""Slack message view definitions."""
 
 from typing import Optional
 
 
-def build_glow_brain_modal(
+def build_branch_select_message(
     versions: list[str],
     current_version: Optional[str] = None,
-    channel_id: Optional[str] = None,
 ) -> dict:
-    """Build modal view for /glow-brain command.
+    """Build branch selection message with buttons.
 
     Args:
         versions: List of available version names from versions.json
-        current_version: Default/current version to pre-select
-        channel_id: Channel ID where the command was invoked
+        current_version: Default/current version to highlight
 
     Returns:
-        Slack modal view definition (Block Kit)
+        Slack message blocks with branch selection buttons
     """
     if not versions:
         versions = ["main"]
 
-    # Use current_version if provided and in list, otherwise use first version
-    default_version = (
-        current_version if current_version and current_version in versions else versions[0]
-    )
+    # Create button elements for each version
+    button_elements = [
+        {
+            "type": "button",
+            "text": {
+                "type": "plain_text",
+                "text": version,
+            },
+            "value": version,
+            "action_id": f"select_branch_{version}",
+            **({"style": "primary"} if version == current_version else {}),
+        }
+        for version in versions
+    ]
+
+    # Group buttons into rows (max 5 per row)
+    button_blocks = []
+    for i in range(0, len(button_elements), 5):
+        button_blocks.append({
+            "type": "actions",
+            "elements": button_elements[i:i+5],
+        })
 
     return {
-        "type": "modal",
-        "callback_id": "glow_brain_modal",
-        "private_metadata": channel_id or "",
-        "title": {
-            "type": "plain_text",
-            "text": "GLOW Brain Claude",
-        },
-        "submit": {
-            "type": "plain_text",
-            "text": "送信",
-        },
-        "close": {
-            "type": "plain_text",
-            "text": "キャンセル",
-        },
         "blocks": [
             {
-                "type": "input",
-                "block_id": "branch_block",
-                "element": {
-                    "type": "static_select",
-                    "action_id": "branch_select",
-                    "placeholder": {
-                        "type": "plain_text",
-                        "text": "バージョン（ブランチ）を選択",
-                    },
-                    "options": [
-                        {
-                            "text": {
-                                "type": "plain_text",
-                                "text": version,
-                            },
-                            "value": version,
-                        }
-                        for version in versions
-                    ],
-                    "initial_option": {
-                        "text": {
-                            "type": "plain_text",
-                            "text": default_version,
-                        },
-                        "value": default_version,
-                    },
-                },
-                "label": {
-                    "type": "plain_text",
-                    "text": "バージョン（ブランチ）",
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": "ブランチ（バージョン）を選択してください:",
                 },
             },
-            {
-                "type": "input",
-                "block_id": "prompt_block",
-                "element": {
-                    "type": "plain_text_input",
-                    "action_id": "prompt_input",
-                    "multiline": True,
-                    "placeholder": {
-                        "type": "plain_text",
-                        "text": "Claudeへの指示を入力してください",
-                    },
-                },
-                "label": {
-                    "type": "plain_text",
-                    "text": "プロンプト",
-                },
-            },
+            *button_blocks,
         ],
     }
