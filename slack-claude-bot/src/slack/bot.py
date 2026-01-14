@@ -7,10 +7,7 @@ import structlog
 from slack_bolt.async_app import AsyncApp
 from slack_bolt.adapter.socket_mode.async_handler import AsyncSocketModeHandler
 
-from ..claude.executor import ClaudeExecutor
 from ..config import Config
-from ..github.pr_manager import GitHubPRManager
-from ..session.manager import SessionManager
 from .command_handlers import CommandHandlers
 from .handlers import SlackHandlers
 
@@ -22,17 +19,13 @@ class SlackClaudeBot:
 
     def __init__(
         self,
-        session_manager: SessionManager,
-        claude_executor: ClaudeExecutor,
-        github_manager: GitHubPRManager,
+        session_handler,
         command_handlers: CommandHandlers,
     ):
         """Initialize Slack bot.
 
         Args:
-            session_manager: Session manager
-            claude_executor: Claude executor
-            github_manager: GitHub PR manager
+            session_handler: Common session handler
             command_handlers: Command handlers for slash commands
         """
         self.app = AsyncApp(
@@ -41,9 +34,7 @@ class SlackClaudeBot:
         )
 
         self.handlers = SlackHandlers(
-            session_manager=session_manager,
-            claude_executor=claude_executor,
-            github_manager=github_manager,
+            session_handler=session_handler,
         )
 
         self.command_handlers = command_handlers

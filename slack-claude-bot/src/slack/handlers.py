@@ -1,14 +1,11 @@
 """Slack event handlers."""
 
-from pathlib import Path
 from typing import Optional
 
 import structlog
 from slack_sdk import WebClient
 
-from ..claude.executor import ClaudeExecutor
-from ..github.pr_manager import GitHubPRManager, SlackContext
-from ..session.manager import SessionManager
+from .session_handler import SessionHandler
 
 logger = structlog.get_logger()
 
@@ -18,20 +15,14 @@ class SlackHandlers:
 
     def __init__(
         self,
-        session_manager: SessionManager,
-        claude_executor: ClaudeExecutor,
-        github_manager: GitHubPRManager,
+        session_handler: SessionHandler,
     ):
         """Initialize handlers.
 
         Args:
-            session_manager: Session manager
-            claude_executor: Claude executor
-            github_manager: GitHub PR manager
+            session_handler: Common session handler
         """
-        self.session_manager = session_manager
-        self.claude_executor = claude_executor
-        self.github_manager = github_manager
+        self.session_handler = session_handler
 
     async def handle_app_mention(
         self,
@@ -68,92 +59,28 @@ class SlackHandlers:
             channel_name = channel_info.get("name", "unknown")
             user_name = user_info.get("name", "unknown")
 
-            # Get or create session
-            session = await self.session_manager.get_or_create_session(
-                slack_thread_id=slack_thread_id,
-                slack_channel_id=channel_id,
-                slack_user_id=user_id,
-                slack_channel_name=channel_name,
-                slack_user_name=user_name,
-                branch=branch,
-            )
-
             # Remove bot mention from text
             prompt = self._extract_prompt(text)
 
-            # Check if this is the first message
-            is_first = not session.claude_session_started
-
-            # Execute Claude
-            result = await self.claude_executor.execute(
-                prompt=prompt,
-                worktree_path=Path(session.worktree_path),
-                session_id=session.id,
-                is_first_message=is_first,
-            )
-
-            # Mark session as started if first message
-            if is_first:
-                self.session_manager.mark_session_started(session.id)
-
-            if result.is_error:
-                await say(
-                    text=f"エラーが発生しました: {result.error_message}",
-                    thread_ts=thread_ts,
-                )
-                await self._add_reaction(client, channel_id, event["ts"], "x")
-                return
-
-            # Send response
-            if result.output and result.output.strip():
-                await self._send_response(
-                    say=say,
-                    thread_ts=thread_ts,
-                    output=result.output,
-                )
-            else:
-                await say(
-                    text="（Claudeから応答がありませんでした。もう一度お試しください。）",
-                    thread_ts=thread_ts,
-                )
-
-            # Check for changes and create PR if needed
-            slack_context = SlackContext(
-                channel_name=channel_name,
-                thread_link=session.slack_thread_link,
+            # Process prompt using common handler
+            await self.session_handler.process_prompt(
+                client=client,
+                channel_id=channel_id,
+                thread_ts=thread_ts,
+                slack_thread_id=slack_thread_id,
+                user_id=user_id,
                 user_name=user_name,
+                channel_name=channel_name,
+                prompt=prompt,
+                branch=branch,
             )
-
-            pr_info = await self.github_manager.create_pr_if_changes(
-                worktree_path=Path(session.worktree_path),
-                session_id=session.id,
-                slack_context=slack_context,
-                summary=f"{prompt[:100]}...",
-            )
-
-            if pr_info:
-                branch_name, pr_url, pr_number = pr_info
-
-                # Update session with PR info
-                self.session_manager.update_github_pr(
-                    session_id=session.id,
-                    branch=branch_name,
-                    pr_url=pr_url,
-                    pr_number=pr_number,
-                )
-
-                # Send PR link
-                await say(
-                    text=f"📝 PRを作成しました: {pr_url}",
-                    thread_ts=thread_ts,
-                )
 
             # Add success reaction
             await self._remove_reaction(client, channel_id, event["ts"], "hourglass_flowing_sand")
             await self._add_reaction(client, channel_id, event["ts"], "white_check_mark")
 
         except Exception as e:
-            logger.error("handle_mention_failed", error=str(e))
+            logger.error("handle_mention_failed", error=str(e), exc_info=True)
             await say(
                 text=f"エラーが発生しました: {str(e)}",
                 thread_ts=thread_ts,
@@ -190,57 +117,6 @@ class SlackHandlers:
         import re
         cleaned = re.sub(r'<@[UW][A-Z0-9]+>', '', text)
         return cleaned.strip()
-
-    async def _send_response(
-        self,
-        say,
-        thread_ts: str,
-        output: str,
-    ) -> None:
-        """Send response to Slack thread.
-
-        Args:
-            say: Slack say function
-            thread_ts: Thread timestamp
-            output: Output text
-        """
-        # Split long messages
-        max_length = 4000
-        chunks = self._split_text(output, max_length)
-
-        for chunk in chunks:
-            await say(text=chunk, thread_ts=thread_ts)
-
-    def _split_text(self, text: str, max_length: int) -> list[str]:
-        """Split text into chunks.
-
-        Args:
-            text: Text to split
-            max_length: Maximum chunk length
-
-        Returns:
-            List of text chunks
-        """
-        if len(text) <= max_length:
-            return [text]
-
-        chunks = []
-        current_chunk = ""
-
-        for line in text.split('\n'):
-            if len(current_chunk) + len(line) + 1 > max_length:
-                if current_chunk:
-                    chunks.append(current_chunk)
-                current_chunk = line
-            else:
-                if current_chunk:
-                    current_chunk += '\n'
-                current_chunk += line
-
-        if current_chunk:
-            chunks.append(current_chunk)
-
-        return chunks
 
     async def _add_reaction(
         self,

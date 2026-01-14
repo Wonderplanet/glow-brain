@@ -1,22 +1,23 @@
 """Slack slash command handlers."""
 
 import asyncio
-from pathlib import Path
 
 import structlog
 from slack_sdk import WebClient
 
-from ..claude.executor import ClaudeExecutor
-from ..github.pr_manager import GitHubPRManager, SlackContext
-from ..session.manager import SessionManager
 from ..worktree.manager import WorktreeManager
+from .session_handler import SessionHandler
 from .views import build_branch_select_message
 
 logger = structlog.get_logger()
 
-# Store pending sessions waiting for thread messages
+# Store pending sessions waiting for thread messages (before first prompt)
 # {message_ts: {"branch": str, "channel_id": str, "user_id": str, "user_name": str}}
 _pending_sessions = {}
+
+# Store active sessions after first prompt (for session lookup)
+# {thread_ts: {"branch": str, "channel_id": str, "user_id": str, "user_name": str, "slack_thread_id": str}}
+_active_sessions = {}
 
 
 class CommandHandlers:
@@ -24,22 +25,16 @@ class CommandHandlers:
 
     def __init__(
         self,
-        session_manager: SessionManager,
-        claude_executor: ClaudeExecutor,
-        github_manager: GitHubPRManager,
+        session_handler: SessionHandler,
         worktree_manager: WorktreeManager,
     ):
         """Initialize command handlers.
 
         Args:
-            session_manager: Session manager
-            claude_executor: Claude executor
-            github_manager: GitHub PR manager
+            session_handler: Common session handler
             worktree_manager: Worktree manager (for getting available versions)
         """
-        self.session_manager = session_manager
-        self.claude_executor = claude_executor
-        self.github_manager = github_manager
+        self.session_handler = session_handler
         self.worktree_manager = worktree_manager
 
     async def handle_glow_brain_command(
@@ -173,179 +168,114 @@ class CommandHandlers:
             say: Function to send messages
         """
         try:
-            # Check if this is a thread reply to a pending session
             thread_ts = event.get("thread_ts")
-            if not thread_ts or thread_ts not in _pending_sessions:
+            if not thread_ts:
                 return
 
-            # Get pending session info
-            session_info = _pending_sessions.pop(thread_ts)
-            branch = session_info["branch"]
-            channel_id = session_info["channel_id"]
-            user_id = session_info["user_id"]
-            user_name = session_info["user_name"]
+            # Ignore bot's own messages
+            if event.get("bot_id"):
+                return
 
+            channel_id = event["channel"]
+            user_id = event["user"]
             prompt = event["text"]
 
-            logger.info(
-                "thread_prompt_received",
-                branch=branch,
-                channel_id=channel_id,
-                user_id=user_id,
-                prompt_length=len(prompt),
-            )
+            # Case 1: First message (in _pending_sessions)
+            if thread_ts in _pending_sessions:
+                session_info = _pending_sessions.pop(thread_ts)
+                branch = session_info["branch"]
+                user_name = session_info["user_name"]
 
-            # Create session
-            import time
-            timestamp = str(int(time.time() * 1000))
-            slack_thread_id = f"cmd:{channel_id}:{timestamp}"
+                # Create slack_thread_id based on thread_ts
+                slack_thread_id = f"cmd:{channel_id}:{thread_ts}"
 
-            session = await self.session_manager.get_or_create_session(
-                slack_thread_id=slack_thread_id,
-                slack_channel_id=channel_id,
-                slack_user_id=user_id,
-                slack_channel_name="command",
-                slack_user_name=user_name,
-                branch=branch,
-            )
-
-            is_first = not session.claude_session_started
-
-            # Send processing message
-            response = await client.chat_postMessage(
-                channel=channel_id,
-                thread_ts=thread_ts,
-                text=f"🔄 処理中です... (ブランチ: `{branch}`)",
-            )
-
-            processing_ts = response["ts"]
-
-            # Execute Claude
-            result = await self.claude_executor.execute(
-                prompt=prompt,
-                worktree_path=Path(session.worktree_path),
-                session_id=session.id,
-                is_first_message=is_first,
-            )
-
-            if is_first:
-                self.session_manager.mark_session_started(session.id)
-
-            if result.is_error:
-                await client.chat_postMessage(
-                    channel=channel_id,
+                logger.info(
+                    "thread_prompt_received_first",
+                    branch=branch,
+                    channel_id=channel_id,
                     thread_ts=thread_ts,
-                    text=f"❌ エラーが発生しました:\n```\n{result.error_message}\n```",
+                    slack_thread_id=slack_thread_id,
+                    user_id=user_id,
+                    prompt_length=len(prompt),
                 )
-                return
 
-            # Send response
-            if result.output and result.output.strip():
-                await self._send_response(
+                # Get channel info (for process_prompt)
+                try:
+                    channel_info = await client.conversations_info(channel=channel_id)
+                    channel_name = channel_info["channel"].get("name", "command")
+                except Exception:
+                    channel_name = "command"
+
+                # Get user name if not available
+                if not user_name:
+                    try:
+                        user_info = await client.users_info(user=user_id)
+                        user_name = user_info["user"].get("name", "unknown")
+                    except Exception:
+                        user_name = "unknown"
+
+                # Process prompt using common handler
+                await self.session_handler.process_prompt(
                     client=client,
-                    channel=channel_id,
+                    channel_id=channel_id,
                     thread_ts=thread_ts,
-                    output=result.output,
+                    slack_thread_id=slack_thread_id,
+                    user_id=user_id,
+                    user_name=user_name,
+                    channel_name=channel_name,
+                    prompt=prompt,
+                    branch=branch,
                 )
+
+                # Store as active session for future messages
+                _active_sessions[thread_ts] = {
+                    "branch": branch,
+                    "channel_id": channel_id,
+                    "user_id": user_id,
+                    "user_name": user_name,
+                    "slack_thread_id": slack_thread_id,
+                }
+
+            # Case 2: Continuation message (in _active_sessions)
+            elif thread_ts in _active_sessions:
+                session_info = _active_sessions[thread_ts]
+                slack_thread_id = session_info["slack_thread_id"]
+                branch = session_info["branch"]
+                user_name = session_info["user_name"]
+
+                logger.info(
+                    "thread_prompt_received_continuation",
+                    branch=branch,
+                    channel_id=channel_id,
+                    thread_ts=thread_ts,
+                    slack_thread_id=slack_thread_id,
+                    user_id=user_id,
+                    prompt_length=len(prompt),
+                )
+
+                # Get channel info
+                try:
+                    channel_info = await client.conversations_info(channel=channel_id)
+                    channel_name = channel_info["channel"].get("name", "command")
+                except Exception:
+                    channel_name = "command"
+
+                # Process prompt using common handler (will resume existing session)
+                await self.session_handler.process_prompt(
+                    client=client,
+                    channel_id=channel_id,
+                    thread_ts=thread_ts,
+                    slack_thread_id=slack_thread_id,
+                    user_id=user_id,
+                    user_name=user_name,
+                    channel_name=channel_name,
+                    prompt=prompt,
+                    branch=branch,
+                )
+
             else:
-                await client.chat_postMessage(
-                    channel=channel_id,
-                    thread_ts=thread_ts,
-                    text="（Claudeから応答がありませんでした。）",
-                )
-
-            # Check for changes and create PR
-            slack_context = SlackContext(
-                channel_name="command",
-                thread_link=None,
-                user_name=user_name,
-            )
-
-            pr_info = await self.github_manager.create_pr_if_changes(
-                worktree_path=Path(session.worktree_path),
-                session_id=session.id,
-                slack_context=slack_context,
-                summary=f"{prompt[:100]}...",
-            )
-
-            if pr_info:
-                branch_name, pr_url, pr_number = pr_info
-
-                self.session_manager.update_github_pr(
-                    session_id=session.id,
-                    branch=branch_name,
-                    pr_url=pr_url,
-                    pr_number=pr_number,
-                )
-
-                await client.chat_postMessage(
-                    channel=channel_id,
-                    thread_ts=thread_ts,
-                    text=f"📝 PRを作成しました: {pr_url}",
-                )
-
-            await client.chat_postMessage(
-                channel=channel_id,
-                thread_ts=thread_ts,
-                text="✅ 処理が完了しました",
-            )
+                # This thread is not managed by command handlers
+                return
 
         except Exception as e:
             logger.error("thread_message_failed", error=str(e), exc_info=True)
-
-    async def _send_response(
-        self,
-        client: WebClient,
-        channel: str,
-        thread_ts: str,
-        output: str,
-    ) -> None:
-        """Send response to Slack.
-
-        Args:
-            client: Slack WebClient
-            channel: Channel ID
-            thread_ts: Thread timestamp
-            output: Output text
-        """
-        # Split long messages
-        max_length = 4000
-        chunks = self._split_text(output, max_length)
-
-        for chunk in chunks:
-            await client.chat_postMessage(
-                channel=channel,
-                text=chunk,
-                thread_ts=thread_ts,
-            )
-
-    def _split_text(self, text: str, max_length: int) -> list[str]:
-        """Split text into chunks.
-
-        Args:
-            text: Text to split
-            max_length: Maximum chunk length
-
-        Returns:
-            List of text chunks
-        """
-        if len(text) <= max_length:
-            return [text]
-
-        chunks = []
-        current_chunk = ""
-
-        for line in text.split('\n'):
-            if len(current_chunk) + len(line) + 1 > max_length:
-                if current_chunk:
-                    chunks.append(current_chunk)
-                current_chunk = line
-            else:
-                if current_chunk:
-                    current_chunk += '\n'
-                current_chunk += line
-
-        if current_chunk:
-            chunks.append(current_chunk)
-
-        return chunks
