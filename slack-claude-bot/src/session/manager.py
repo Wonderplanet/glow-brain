@@ -68,6 +68,7 @@ class SessionManager:
         slack_user_id: str,
         slack_channel_name: Optional[str] = None,
         slack_user_name: Optional[str] = None,
+        branch: Optional[str] = None,
     ) -> Session:
         """Get existing session or create new one.
 
@@ -77,6 +78,7 @@ class SessionManager:
             slack_user_id: Slack user ID
             slack_channel_name: Slack channel name (optional)
             slack_user_name: Slack user name (optional)
+            branch: Git branch to checkout for worktree (optional)
 
         Returns:
             Session object
@@ -119,7 +121,7 @@ class SessionManager:
             )
 
             # Create worktree
-            worktree_path = self.worktree_manager.create_worktree(session_id)
+            worktree_path = self.worktree_manager.create_worktree(session_id, branch=branch)
 
             # claude_session_started will be set to True when first message is processed
             # This allows is_first_message check to work correctly
