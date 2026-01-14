@@ -40,7 +40,7 @@ function fetchLogs(sessionId) {
 /**
  * メイン処理：URLから設計書を探索しZIPを作成
  */
-function processSpreadsheets(listSheetUrl, sessionId) {
+function processSpreadsheets(listSheetUrl, sessionId, format = 'html') {
   const stats = { detailSheetsTotal: 0, detailSheetsSuccess: 0, designDocsTotal: 0, filesGenerated: 0, errors: 0 };
 
   // ヘルパー関数：ログを保存
@@ -167,27 +167,31 @@ function processSpreadsheets(listSheetUrl, sessionId) {
               // ディレイ時間（スクリプトプロパティから取得、デフォルト1秒）
               const delayMs = parseInt(props.getProperty('EXPORT_DELAY_MS') || '1000', 10);
 
+              // フォーマットラベルとファイル拡張子を設定
+              const formatLabel = format === 'csv' ? 'CSV' : 'HTML';
+              const fileExtension = format === 'csv' ? '.csv' : '.html';
+
               sheets.forEach((sheet, sheetIndex) => {
                 const sheetId = sheet.getSheetId();
                 const sheetName = sheet.getName();
-                // フォルダ構成でファイル名を設定（設計書名/シート名.html）
-                const fileName = `${folderName}/${sanitizeFileName(sheetName)}.html`;
+                // フォルダ構成でファイル名を設定（設計書名/シート名.拡張子）
+                const fileName = `${folderName}/${sanitizeFileName(sheetName)}${fileExtension}`;
 
-                addLog({ type: 'info', message: `    シート「${sheetName}」をHTML化中...` });
+                addLog({ type: 'info', message: `    シート「${sheetName}」を${formatLabel}化中...` });
 
                 try {
-                  // fetchを用いてHTMLとしてエクスポート (参照のみ)
-                  const htmlBlob = fetchSheetAsHtml(designSsId, sheetId, fileName);
-                  zipFiles.push(htmlBlob);
+                  // fetchを用いて指定形式でエクスポート (参照のみ)
+                  const exportedBlob = fetchSheetAsExport(designSsId, sheetId, fileName, format);
+                  zipFiles.push(exportedBlob);
                   stats.filesGenerated++;
-                  addLog({ type: 'success', message: `    HTML生成成功: ${fileName}` });
+                  addLog({ type: 'success', message: `    ${formatLabel}生成成功: ${fileName}` });
 
                   // レートリミット対策：各エクスポート後にディレイ（最後のシートは不要）
                   if (sheetIndex < sheets.length - 1) {
                     Utilities.sleep(delayMs);
                   }
                 } catch (e) {
-                  addLog({ type: 'error', message: `    HTML生成失敗: ${fileName} - ${e.message}` });
+                  addLog({ type: 'error', message: `    ${formatLabel}生成失敗: ${fileName} - ${e.message}` });
                   stats.errors++;
                 }
               });
@@ -380,10 +384,14 @@ function getUrlsFromSheet(url, sheetName = null, targetColumn = null) {
 }
 
 /**
- * 指定したシートをHTMLとして取得（リトライ・レートリミット対策）
+ * 指定したシートを指定形式でエクスポート（リトライ・レートリミット対策）
+ * @param {string} ssId - スプレッドシートID
+ * @param {number} sheetId - シートID（gid）
+ * @param {string} fileName - 出力ファイル名
+ * @param {string} format - 出力形式（'html' または 'csv'）
  */
-function fetchSheetAsHtml(ssId, sheetId, fileName) {
-  const url = `https://docs.google.com/spreadsheets/d/${ssId}/export?format=html&gid=${sheetId}`;
+function fetchSheetAsExport(ssId, sheetId, fileName, format = 'html') {
+  const url = `https://docs.google.com/spreadsheets/d/${ssId}/export?format=${format}&gid=${sheetId}`;
   const token = ScriptApp.getOAuthToken();
 
   // リトライロジック（最大3回）

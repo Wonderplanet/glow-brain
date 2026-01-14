@@ -5,6 +5,7 @@
     <style>
       body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
       input[type="text"] { width: 80%; padding: 10px; margin-bottom: 10px; }
+      select { padding: 8px; margin-left: 10px; margin-bottom: 10px; }
       button { padding: 10px 20px; cursor: pointer; background: #4285f4; color: white; border: none; border-radius: 4px; }
       button:disabled { background: #ccc; }
       #status { margin-top: 20px; font-weight: bold; }
@@ -23,6 +24,17 @@
     <p>一覧シートのURLを入力してください：</p>
     <input type="text" id="url" placeholder="https://docs.google.com/spreadsheets/d/...">
     <br>
+    <label for="format">出力形式：</label>
+    <select id="format">
+      <option value="html" selected>HTML</option>
+      <option value="csv">CSV</option>
+    </select>
+    <br>
+    <label>
+      <input type="checkbox" id="enableLogs" checked>
+      リアルタイムログ表示
+    </label>
+    <br><br>
     <button id="btn" onclick="startProcess()">ZIPを作成してダウンロード</button>
     <div id="status"></div>
     <div id="stats"></div>
@@ -35,6 +47,8 @@
 
       function startProcess() {
         const url = document.getElementById('url').value;
+        const format = document.getElementById('format').value;
+        const enableLogs = document.getElementById('enableLogs').checked;
         if (!url) { alert('URLを入力してください'); return; }
 
         const btn = document.getElementById('btn');
@@ -45,21 +59,25 @@
         btn.disabled = true;
         status.innerText = '解析中...（シート数が多いと時間がかかります）';
         stats.style.display = 'none';
-        logs.style.display = 'block'; // ログエリアを即座に表示
-        logs.innerHTML = '';
         lastLogCount = 0;
 
         // セッションID生成
         sessionId = 'session_' + Date.now();
 
-        // ログポーリング開始（1秒間隔）
-        logPoller = setInterval(pollLogs, 1000);
+        // ログポーリング開始（リアルタイムログが有効な場合のみ）
+        if (enableLogs) {
+          logs.style.display = 'block';
+          logs.innerHTML = '';
+          logPoller = setInterval(pollLogs, 1000);
+        } else {
+          logs.style.display = 'none';
+        }
 
         // メイン処理開始
         google.script.run
           .withSuccessHandler(onComplete)
           .withFailureHandler(showError)
-          .processSpreadsheets(url, sessionId);
+          .processSpreadsheets(url, sessionId, format);
       }
 
       function pollLogs() {
@@ -96,16 +114,24 @@
       }
 
       function onComplete(result) {
-        // ポーリング停止
-        clearInterval(logPoller);
+        const enableLogs = document.getElementById('enableLogs').checked;
 
-        // 最終ログを取得して表示
-        google.script.run
-          .withSuccessHandler(function(finalLogs) {
-            displayLogs(finalLogs);
-            downloadZip(result);
-          })
-          .fetchLogs(sessionId);
+        // ポーリング停止
+        if (logPoller) {
+          clearInterval(logPoller);
+        }
+
+        if (enableLogs) {
+          // 最終ログを取得して表示
+          google.script.run
+            .withSuccessHandler(function(finalLogs) {
+              displayLogs(finalLogs);
+              downloadZip(result);
+            })
+            .fetchLogs(sessionId);
+        } else {
+          downloadZip(result);
+        }
       }
 
       function downloadZip(result) {
