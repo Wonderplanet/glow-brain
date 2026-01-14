@@ -8,6 +8,14 @@
       button { padding: 10px 20px; cursor: pointer; background: #4285f4; color: white; border: none; border-radius: 4px; }
       button:disabled { background: #ccc; }
       #status { margin-top: 20px; font-weight: bold; }
+      #stats { margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 5px; display: none; }
+      #logs { margin-top: 20px; max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; background: #fafafa; font-size: 13px; font-family: monospace; display: none; white-space: pre-wrap; line-height: 1.5; }
+      .log-info { color: #333; }
+      .log-success { color: #0a0; font-weight: bold; }
+      .log-warn { color: #f80; font-weight: bold; }
+      .log-error { color: #f00; font-weight: bold; }
+      #logs a { color: #0066cc; text-decoration: underline; }
+      #logs a:hover { background: #e6f2ff; }
     </style>
   </head>
   <body>
@@ -17,6 +25,8 @@
     <br>
     <button id="btn" onclick="startProcess()">ZIPを作成してダウンロード</button>
     <div id="status"></div>
+    <div id="stats"></div>
+    <div id="logs"></div>
 
     <script>
       function startProcess() {
@@ -25,9 +35,14 @@
 
         const btn = document.getElementById('btn');
         const status = document.getElementById('status');
-        
+        const stats = document.getElementById('stats');
+        const logs = document.getElementById('logs');
+
         btn.disabled = true;
         status.innerText = '解析中...（シート数が多いと時間がかかります）';
+        stats.style.display = 'none';
+        logs.style.display = 'none';
+        logs.innerHTML = '';
 
         google.script.run
           .withSuccessHandler(downloadZip)
@@ -37,26 +52,76 @@
 
       function downloadZip(result) {
         const status = document.getElementById('status');
-        const byteCharacters = atob(result.data);
-        const byteNumbers = new Array(byteCharacters.length);
-        for (let i = 0; i < byteCharacters.length; i++) {
-          byteNumbers[i] = byteCharacters.charCodeAt(i);
+        const stats = document.getElementById('stats');
+        const logs = document.getElementById('logs');
+
+        // ログ表示
+        if (result.logs && result.logs.length > 0) {
+          logs.style.display = 'block';
+          result.logs.forEach(log => {
+            const logLine = document.createElement('div');
+            logLine.className = 'log-' + log.type;
+
+            // URLとname情報がある場合はハイパーリンクとして表示
+            if (log.url) {
+              const linkText = log.name || log.url;
+              logLine.innerHTML = log.message + ': <a href="' + log.url + '" target="_blank" style="color: #0066cc; text-decoration: underline;">' + linkText + '</a>';
+            } else {
+              logLine.innerText = log.message;
+            }
+
+            logs.appendChild(logLine);
+          });
         }
-        const byteArray = new Uint8Array(byteNumbers);
-        const blob = new Blob([byteArray], {type: 'application/zip'});
-        
-        const link = document.createElement('a');
-        link.href = window.URL.createObjectURL(blob);
-        link.download = result.fileName;
-        link.click();
-        
-        status.innerText = 'ダウンロード完了！';
+
+        // 統計情報表示
+        if (result.stats) {
+          stats.style.display = 'block';
+          stats.innerHTML = `
+            <strong>処理結果：</strong><br>
+            ・詳細シート: ${result.stats.detailSheetsSuccess}/${result.stats.detailSheetsTotal}件成功<br>
+            ・設計書: ${result.stats.designDocsTotal}件検出<br>
+            ・生成ファイル: ${result.stats.filesGenerated}件<br>
+            ・エラー/警告: ${result.stats.errors}件
+          `;
+        }
+
+        // エラーがある場合
+        if (result.error) {
+          status.innerText = 'エラーが発生しました: ' + result.error;
+          document.getElementById('btn').disabled = false;
+          return;
+        }
+
+        // ZIPダウンロード
+        if (result.data) {
+          const byteCharacters = atob(result.data);
+          const byteNumbers = new Array(byteCharacters.length);
+          for (let i = 0; i < byteCharacters.length; i++) {
+            byteNumbers[i] = byteCharacters.charCodeAt(i);
+          }
+          const byteArray = new Uint8Array(byteNumbers);
+          const blob = new Blob([byteArray], {type: 'application/zip'});
+
+          const link = document.createElement('a');
+          link.href = window.URL.createObjectURL(blob);
+          link.download = result.fileName;
+          link.click();
+
+          status.innerText = 'ダウンロード完了！';
+        }
+
         document.getElementById('btn').disabled = false;
       }
 
       function showError(err) {
-        alert(err.message);
-        document.getElementById('status').innerText = 'エラーが発生しました。';
+        const status = document.getElementById('status');
+        const logs = document.getElementById('logs');
+
+        status.innerText = 'エラーが発生しました: ' + err.message;
+        logs.style.display = 'block';
+        logs.innerHTML = '<div class="log-error">' + err.message + '</div>';
+
         document.getElementById('btn').disabled = false;
       }
     </script>
