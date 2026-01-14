@@ -21,11 +21,13 @@ class ClaudeResult:
         is_error: bool = False,
         error_message: Optional[str] = None,
         duration_seconds: float = 0.0,
+        tmux_session_name: Optional[str] = None,
     ):
         self.output = output
         self.is_error = is_error
         self.error_message = error_message
         self.duration_seconds = duration_seconds
+        self.tmux_session_name = tmux_session_name
 
 
 class ClaudeExecutor:
@@ -46,7 +48,8 @@ class ClaudeExecutor:
         self,
         prompt: str,
         worktree_path: Path,
-        tmux_session_name: str,
+        tmux_session_name: Optional[str],
+        session_id: str,
         is_first_message: bool = False,
     ) -> ClaudeResult:
         """Execute Claude prompt in tmux session.
@@ -54,16 +57,20 @@ class ClaudeExecutor:
         Args:
             prompt: User prompt
             worktree_path: Working directory (worktree path)
-            tmux_session_name: tmux session name
+            tmux_session_name: tmux session name (None for first message)
+            session_id: Session ID (used to generate tmux session name)
             is_first_message: Whether this is the first message in session
 
         Returns:
-            ClaudeResult
+            ClaudeResult with tmux_session_name set
         """
         start_time = time.time()
 
         try:
+            # Generate tmux session name if first message
             if is_first_message:
+                tmux_session_name = f"claude_{session_id}"
+
                 # Create tmux session and start claude
                 await self._start_claude_session(
                     tmux_session_name,
@@ -85,11 +92,13 @@ class ClaudeExecutor:
                 output_length=len(output),
             )
 
-            return ClaudeResult(
+            result = ClaudeResult(
                 output=output,
                 is_error=False,
                 duration_seconds=duration,
             )
+            result.tmux_session_name = tmux_session_name
+            return result
 
         except pexpect.TIMEOUT:
             duration = time.time() - start_time
@@ -104,6 +113,7 @@ class ClaudeExecutor:
                 is_error=True,
                 error_message=error_msg,
                 duration_seconds=duration,
+                tmux_session_name=tmux_session_name,
             )
 
         except Exception as e:
@@ -119,6 +129,7 @@ class ClaudeExecutor:
                 is_error=True,
                 error_message=str(e),
                 duration_seconds=duration,
+                tmux_session_name=tmux_session_name,
             )
 
     async def _start_claude_session(

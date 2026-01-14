@@ -164,6 +164,33 @@ class SessionDB:
                 (datetime.now(), session_id),
             )
 
+    def update_tmux_session_name(
+        self,
+        session_id: str,
+        tmux_session_name: str,
+    ) -> None:
+        """Update tmux session name.
+
+        Args:
+            session_id: Session ID
+            tmux_session_name: tmux session name
+        """
+        with sqlite3.connect(self.db_path) as conn:
+            conn.execute(
+                """
+                UPDATE sessions
+                SET tmux_session_name = ?
+                WHERE id = ?
+                """,
+                (tmux_session_name, session_id),
+            )
+
+        logger.debug(
+            "tmux_session_name_updated",
+            session_id=session_id,
+            tmux_session_name=tmux_session_name,
+        )
+
     def update_github_pr(
         self,
         session_id: str,
