@@ -46,7 +46,7 @@ function processSpreadsheets(listSheetUrl) {
     });
 
     // デバッグ用：最初の1件のみ処理
-    const DEBUG_LIMIT = 1; // 一時的なデバッグ用制限
+    const DEBUG_LIMIT = detailUrls.length; // 一時的なデバッグ用制限
     const urlsToProcess = detailUrls.slice(0, DEBUG_LIMIT);
     logs.push({ type: 'warn', message: `⚠️ デバッグモード：最初の${DEBUG_LIMIT}件のみ処理します` });
 
@@ -120,10 +120,14 @@ function processSpreadsheets(listSheetUrl) {
               logs.push({ type: 'success', message: `  アクセス成功`, url: trimmedDesignUrl, name: designSsName });
               logs.push({ type: 'info', message: `  シート数: ${sheets.length}枚` });
 
+              // フォルダ名（設計書ごと）
+              const folderName = sanitizeFileName(designSsName);
+
               sheets.forEach(sheet => {
                 const sheetId = sheet.getSheetId();
                 const sheetName = sheet.getName();
-                const fileName = `${designSs.getName()}_${sheetName}.html`;
+                // フォルダ構成でファイル名を設定（設計書名/シート名.html）
+                const fileName = `${folderName}/${sanitizeFileName(sheetName)}.html`;
 
                 logs.push({ type: 'info', message: `    シート「${sheetName}」をHTML化中...` });
                 // fetchを用いてHTMLとしてエクスポート (参照のみ)
@@ -200,6 +204,16 @@ function processSpreadsheets(listSheetUrl) {
 //   });
 //   return [...new Set(urls)]; // 重複削除
 // }
+
+/**
+ * ファイル名をサニタイズ（ZIPで使えない文字を置換）
+ * @param {string} name - 元のファイル名
+ * @returns {string} - サニタイズされたファイル名
+ */
+function sanitizeFileName(name) {
+  // ZIPで使えない文字 \ / : * ? " < > | を _ に置換
+  return name.replace(/[\\/:*?"<>|]/g, '_').trim();
+}
 
 /**
  * スプレッドシートURLを正規化
