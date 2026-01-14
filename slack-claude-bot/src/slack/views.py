@@ -6,12 +6,14 @@ from typing import Optional
 def build_glow_brain_modal(
     versions: list[str],
     current_version: Optional[str] = None,
+    channel_id: Optional[str] = None,
 ) -> dict:
     """Build modal view for /glow-brain command.
 
     Args:
         versions: List of available version names from versions.json
         current_version: Default/current version to pre-select
+        channel_id: Channel ID where the command was invoked
 
     Returns:
         Slack modal view definition (Block Kit)
@@ -27,6 +29,7 @@ def build_glow_brain_modal(
     return {
         "type": "modal",
         "callback_id": "glow_brain_modal",
+        "private_metadata": channel_id or "",
         "title": {
             "type": "plain_text",
             "text": "GLOW Brain Claude",
