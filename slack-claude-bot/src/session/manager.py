@@ -25,7 +25,7 @@ class Session:
         self.slack_user_id: str = data["slack_user_id"]
         self.slack_user_name: Optional[str] = data.get("slack_user_name")
         self.slack_thread_link: Optional[str] = data.get("slack_thread_link")
-        self.claude_session_id: Optional[str] = data.get("claude_session_id")
+        self.tmux_session_name: Optional[str] = data.get("tmux_session_name")
         self.worktree_path: str = data["worktree_path"]
         self.github_branch: Optional[str] = data.get("github_branch")
         self.github_pr_url: Optional[str] = data.get("github_pr_url")
@@ -108,8 +108,8 @@ class SessionManager:
                     f"Maximum concurrent sessions ({self.max_sessions}) reached"
                 )
 
-            # Create new session with full UUID
-            session_id = str(uuid.uuid4())
+            # Create new session
+            session_id = str(uuid.uuid4())[:8]
             expires_at = datetime.now() + timedelta(hours=self.ttl_hours)
 
             # Generate Slack thread link
@@ -118,12 +118,12 @@ class SessionManager:
                 slack_channel_id, thread_ts
             )
 
-            # Create worktree (use first 8 chars for worktree directory name)
-            worktree_path = self.worktree_manager.create_worktree(session_id[:8])
+            # Create worktree
+            worktree_path = self.worktree_manager.create_worktree(session_id)
 
-            # claude_session_id will be set when Claude session starts
+            # tmux_session_name will be set when Claude session starts
             # This allows is_first_message check to work correctly
-            claude_session_id = None
+            tmux_session_name = None
 
             # Save to database
             self.db.create_session(
@@ -136,7 +136,7 @@ class SessionManager:
                 slack_channel_name=slack_channel_name,
                 slack_user_name=slack_user_name,
                 slack_thread_link=slack_thread_link,
-                claude_session_id=claude_session_id,
+                tmux_session_name=tmux_session_name,
             )
 
             logger.info(
@@ -157,6 +157,20 @@ class SessionManager:
         for session_data in expired_sessions:
             session_id = session_data["id"]
             worktree_path = Path(session_data["worktree_path"])
+            tmux_session = session_data.get("tmux_session_name")
+
+            # Kill tmux session
+            if tmux_session:
+                try:
+                    import subprocess
+                    subprocess.run(
+                        ["tmux", "kill-session", "-t", tmux_session],
+                        capture_output=True,
+                        check=False,
+                    )
+                    logger.info("tmux_session_killed", tmux_session=tmux_session)
+                except Exception as e:
+                    logger.warning("tmux_kill_failed", error=str(e))
 
             # Remove worktree
             self.worktree_manager.remove_worktree(worktree_path)
@@ -166,18 +180,18 @@ class SessionManager:
 
             logger.info("session_cleaned_up", session_id=session_id)
 
-    def update_claude_session_id(
+    def update_tmux_session_name(
         self,
         session_id: str,
-        claude_session_id: str,
+        tmux_session_name: str,
     ) -> None:
-        """Update Claude session ID for session.
+        """Update tmux session name for session.
 
         Args:
             session_id: Session ID
-            claude_session_id: Claude session ID
+            tmux_session_name: tmux session name
         """
-        self.db.update_claude_session_id(session_id, claude_session_id)
+        self.db.update_tmux_session_name(session_id, tmux_session_name)
 
     def update_github_pr(
         self,
