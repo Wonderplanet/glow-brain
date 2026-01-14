@@ -29,6 +29,10 @@
     <div id="logs"></div>
 
     <script>
+      let sessionId = null;
+      let logPoller = null;
+      let lastLogCount = 0;
+
       function startProcess() {
         const url = document.getElementById('url').value;
         if (!url) { alert('URLを入力してください'); return; }
@@ -41,28 +45,43 @@
         btn.disabled = true;
         status.innerText = '解析中...（シート数が多いと時間がかかります）';
         stats.style.display = 'none';
-        logs.style.display = 'none';
+        logs.style.display = 'block'; // ログエリアを即座に表示
         logs.innerHTML = '';
+        lastLogCount = 0;
 
+        // セッションID生成
+        sessionId = 'session_' + Date.now();
+
+        // ログポーリング開始（1秒間隔）
+        logPoller = setInterval(pollLogs, 1000);
+
+        // メイン処理開始
         google.script.run
-          .withSuccessHandler(downloadZip)
+          .withSuccessHandler(onComplete)
           .withFailureHandler(showError)
-          .processSpreadsheets(url);
+          .processSpreadsheets(url, sessionId);
       }
 
-      function downloadZip(result) {
-        const status = document.getElementById('status');
-        const stats = document.getElementById('stats');
+      function pollLogs() {
+        google.script.run
+          .withSuccessHandler(displayLogs)
+          .withFailureHandler(function(err) {
+            // ポーリングエラーは無視（処理中の一時的なエラー）
+            console.log('ログ取得エラー:', err);
+          })
+          .fetchLogs(sessionId);
+      }
+
+      function displayLogs(allLogs) {
         const logs = document.getElementById('logs');
 
-        // ログ表示
-        if (result.logs && result.logs.length > 0) {
-          logs.style.display = 'block';
-          result.logs.forEach(log => {
+        // 新しいログのみを追記
+        if (allLogs.length > lastLogCount) {
+          const newLogs = allLogs.slice(lastLogCount);
+          newLogs.forEach(log => {
             const logLine = document.createElement('div');
             logLine.className = 'log-' + log.type;
 
-            // URLとname情報がある場合はハイパーリンクとして表示
             if (log.url) {
               const linkText = log.name || log.url;
               logLine.innerHTML = log.message + ': <a href="' + log.url + '" target="_blank" style="color: #0066cc; text-decoration: underline;">' + linkText + '</a>';
@@ -72,7 +91,26 @@
 
             logs.appendChild(logLine);
           });
+          lastLogCount = allLogs.length;
         }
+      }
+
+      function onComplete(result) {
+        // ポーリング停止
+        clearInterval(logPoller);
+
+        // 最終ログを取得して表示
+        google.script.run
+          .withSuccessHandler(function(finalLogs) {
+            displayLogs(finalLogs);
+            downloadZip(result);
+          })
+          .fetchLogs(sessionId);
+      }
+
+      function downloadZip(result) {
+        const status = document.getElementById('status');
+        const stats = document.getElementById('stats');
 
         // 統計情報表示
         if (result.stats) {
@@ -115,12 +153,21 @@
       }
 
       function showError(err) {
+        // ポーリング停止
+        if (logPoller) {
+          clearInterval(logPoller);
+        }
+
         const status = document.getElementById('status');
         const logs = document.getElementById('logs');
 
         status.innerText = 'エラーが発生しました: ' + err.message;
-        logs.style.display = 'block';
-        logs.innerHTML = '<div class="log-error">' + err.message + '</div>';
+
+        // エラーログを追加
+        const logLine = document.createElement('div');
+        logLine.className = 'log-error';
+        logLine.innerText = 'エラー: ' + err.message;
+        logs.appendChild(logLine);
 
         document.getElementById('btn').disabled = false;
       }

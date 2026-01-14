@@ -8,17 +8,51 @@ function doGet() {
 }
 
 /**
+ * ログ管理用関数（リアルタイム表示のため）
+ */
+function saveLog(sessionId, log) {
+  const cache = CacheService.getScriptCache();
+  const key = `logs_${sessionId}`;
+  const existing = cache.get(key);
+  const logs = existing ? JSON.parse(existing) : [];
+  logs.push(log);
+  // 10分間保持（600秒）
+  cache.put(key, JSON.stringify(logs), 600);
+}
+
+function getLogs(sessionId) {
+  const cache = CacheService.getScriptCache();
+  const logsStr = cache.get(`logs_${sessionId}`);
+  return logsStr ? JSON.parse(logsStr) : [];
+}
+
+function clearLogs(sessionId) {
+  CacheService.getScriptCache().remove(`logs_${sessionId}`);
+}
+
+/**
+ * ログ取得用（クライアントからポーリングされる）
+ */
+function fetchLogs(sessionId) {
+  return getLogs(sessionId);
+}
+
+/**
  * メイン処理：URLから設計書を探索しZIPを作成
  */
-function processSpreadsheets(listSheetUrl) {
-  const logs = []; // ログ収集用
+function processSpreadsheets(listSheetUrl, sessionId) {
   const stats = { detailSheetsTotal: 0, detailSheetsSuccess: 0, designDocsTotal: 0, filesGenerated: 0, errors: 0 };
+
+  // ヘルパー関数：ログを保存
+  const addLog = (log) => {
+    saveLog(sessionId, log);
+  };
 
   try {
     const zipFiles = [];
     const processedUrls = new Set(); // 重複処理防止
 
-    logs.push({ type: 'info', message: '一覧シートからURLを取得中...' });
+    addLog({ type: 'info', message: '一覧シートからURLを取得中...' });
 
     // 1. 一覧シートから詳細シートURLを取得（B列のハイパーリンクから）
     const detailResult = getUrlsFromSheet(listSheetUrl, '総合進捗管理', 2);  // B列(2)のハイパーリンク
@@ -26,158 +60,179 @@ function processSpreadsheets(listSheetUrl) {
     const detailDebug = detailResult.debug;
 
     // デバッグ情報を表示
-    logs.push({ type: 'info', message: `スプレッドシート: ${detailDebug.spreadsheetName}` });
-    logs.push({ type: 'info', message: `要求シート: ${detailDebug.requestedSheetName}` });
-    logs.push({ type: 'info', message: `実際のシート: ${detailDebug.actualSheetName}` });
-    logs.push({ type: 'info', message: `対象列: ${detailDebug.targetColumn}` });
-    logs.push({ type: 'info', message: `抽出方法: ${detailDebug.extractionMethod}` });
-    logs.push({ type: 'info', message: `利用可能なシート: ${detailDebug.availableSheets.join(', ')}` });
+    addLog({ type: 'info', message: `スプレッドシート: ${detailDebug.spreadsheetName}` });
+    addLog({ type: 'info', message: `要求シート: ${detailDebug.requestedSheetName}` });
+    addLog({ type: 'info', message: `実際のシート: ${detailDebug.actualSheetName}` });
+    addLog({ type: 'info', message: `対象列: ${detailDebug.targetColumn}` });
+    addLog({ type: 'info', message: `抽出方法: ${detailDebug.extractionMethod}` });
+    addLog({ type: 'info', message: `利用可能なシート: ${detailDebug.availableSheets.join(', ')}` });
 
     if (detailDebug.error) {
-      logs.push({ type: 'error', message: `エラー: ${detailDebug.error}` });
+      addLog({ type: 'error', message: `エラー: ${detailDebug.error}` });
     }
 
     stats.detailSheetsTotal = detailUrls.length;
-    logs.push({ type: 'info', message: `詳細シートを${detailUrls.length}件検出しました` });
+    addLog({ type: 'info', message: `詳細シートを${detailUrls.length}件検出しました` });
 
     // デバッグ: 取得したURL一覧を表示
     detailUrls.forEach((url, index) => {
-      logs.push({ type: 'info', message: `  [${index + 1}] 検出URL`, url: url });
+      addLog({ type: 'info', message: `  [${index + 1}] 検出URL`, url: url });
     });
 
-    // デバッグ用：最初の1件のみ処理
-    const DEBUG_LIMIT = detailUrls.length; // 一時的なデバッグ用制限
+    // DEBUG_LIMIT: スクリプトプロパティから取得（未設定なら全件処理）
+    const props = PropertiesService.getScriptProperties();
+    const debugLimitStr = props.getProperty('DEBUG_LIMIT');
+    const DEBUG_LIMIT = debugLimitStr ? parseInt(debugLimitStr, 10) : detailUrls.length;
     const urlsToProcess = detailUrls.slice(0, DEBUG_LIMIT);
-    logs.push({ type: 'warn', message: `⚠️ デバッグモード：最初の${DEBUG_LIMIT}件のみ処理します` });
+
+    if (DEBUG_LIMIT < detailUrls.length) {
+      addLog({ type: 'warn', message: `⚠️ デバッグモード：最初の${DEBUG_LIMIT}件のみ処理します（全${detailUrls.length}件中）` });
+    } else {
+      addLog({ type: 'info', message: `全${detailUrls.length}件を処理します` });
+    }
 
     urlsToProcess.forEach((detailUrl, index) => {
       // URLをtrim
       const trimmedDetailUrl = detailUrl.trim();
 
-      logs.push({ type: 'info', message: `\n--- [${index + 1}/${urlsToProcess.length}] 詳細シート処理開始 ---` });
-      logs.push({ type: 'info', message: `処理対象URL`, url: trimmedDetailUrl });
+      addLog({ type: 'info', message: `\n--- [${index + 1}/${urlsToProcess.length}] 詳細シート処理開始 ---` });
+      addLog({ type: 'info', message: `処理対象URL`, url: trimmedDetailUrl });
 
       // URL検証
       if (!trimmedDetailUrl || !trimmedDetailUrl.startsWith('https://docs.google.com/spreadsheets/')) {
-        logs.push({ type: 'warn', message: `URL検証失敗: 無効な形式`, url: trimmedDetailUrl });
+        addLog({ type: 'warn', message: `URL検証失敗: 無効な形式`, url: trimmedDetailUrl });
         stats.errors++;
         return;
       }
-      logs.push({ type: 'info', message: `URL検証: OK` });
+      addLog({ type: 'info', message: `URL検証: OK` });
 
       // 2. 詳細シートから「進捗管理表」シートを特定
-      logs.push({ type: 'info', message: `スプレッドシートにアクセス中...` });
+      addLog({ type: 'info', message: `スプレッドシートにアクセス中...` });
       try {
         const ss = SpreadsheetApp.openByUrl(trimmedDetailUrl);
         const ssName = ss.getName();
-        logs.push({ type: 'success', message: `アクセス成功`, url: trimmedDetailUrl, name: ssName });
+        addLog({ type: 'success', message: `アクセス成功`, url: trimmedDetailUrl, name: ssName });
 
         const progressSheet = ss.getSheetByName('進捗管理表');
 
         if (progressSheet) {
           stats.detailSheetsSuccess++;
-          logs.push({ type: 'info', message: `「進捗管理表」シート: 見つかりました` });
+          addLog({ type: 'info', message: `「進捗管理表」シート: 見つかりました` });
 
           // 3. 進捗管理表から設計書URLを取得
-          logs.push({ type: 'info', message: `「進捗管理表」から設計書URLを抽出中...` });
+          addLog({ type: 'info', message: `「進捗管理表」から設計書URLを抽出中...` });
           const designResult = getUrlsFromSheet(trimmedDetailUrl, '進捗管理表');
           const designUrls = designResult.urls;
-          logs.push({ type: 'success', message: `設計書URLを${designUrls.length}件検出しました` });
+          addLog({ type: 'success', message: `設計書URLを${designUrls.length}件検出しました` });
           stats.designDocsTotal += designUrls.length;
 
           designUrls.forEach((designUrl, dIndex) => {
             // URLをtrim
             const trimmedDesignUrl = designUrl.trim();
 
-            logs.push({ type: 'info', message: `  --- 設計書 [${dIndex + 1}/${designUrls.length}] ---` });
-            logs.push({ type: 'info', message: `  処理対象URL`, url: trimmedDesignUrl });
+            addLog({ type: 'info', message: `  --- 設計書 [${dIndex + 1}/${designUrls.length}] ---` });
+            addLog({ type: 'info', message: `  処理対象URL`, url: trimmedDesignUrl });
 
             // URL検証
             if (!trimmedDesignUrl || !trimmedDesignUrl.startsWith('https://docs.google.com/spreadsheets/')) {
-              logs.push({ type: 'warn', message: `  設計書URL検証失敗: 無効な形式`, url: trimmedDesignUrl });
+              addLog({ type: 'warn', message: `  設計書URL検証失敗: 無効な形式`, url: trimmedDesignUrl });
               stats.errors++;
               return;
             }
-            logs.push({ type: 'info', message: `  設計書URL検証: OK` });
+            addLog({ type: 'info', message: `  設計書URL検証: OK` });
 
             if (processedUrls.has(trimmedDesignUrl)) {
-              logs.push({ type: 'info', message: `  スキップ（重複）`, url: trimmedDesignUrl });
+              addLog({ type: 'info', message: `  スキップ（重複）`, url: trimmedDesignUrl });
               return;
             }
             processedUrls.add(trimmedDesignUrl);
 
             // 4. 設計書スプシの全シートをHTML化
-            logs.push({ type: 'info', message: `  設計書にアクセス中...` });
+            addLog({ type: 'info', message: `  設計書にアクセス中...` });
             try {
               // URLを正規化してからアクセス
               const normalizedUrl = normalizeSpreadsheetUrl(trimmedDesignUrl);
-              logs.push({ type: 'info', message: `  正規化URL`, url: normalizedUrl });
+              addLog({ type: 'info', message: `  正規化URL`, url: normalizedUrl });
               const designSs = SpreadsheetApp.openByUrl(normalizedUrl);
               const designSsName = designSs.getName();
               const designSsId = designSs.getId();
               const sheets = designSs.getSheets();
 
-              logs.push({ type: 'success', message: `  アクセス成功`, url: trimmedDesignUrl, name: designSsName });
-              logs.push({ type: 'info', message: `  シート数: ${sheets.length}枚` });
+              addLog({ type: 'success', message: `  アクセス成功`, url: trimmedDesignUrl, name: designSsName });
+              addLog({ type: 'info', message: `  シート数: ${sheets.length}枚` });
 
               // フォルダ名（設計書ごと）
               const folderName = sanitizeFileName(designSsName);
 
-              sheets.forEach(sheet => {
+              // ディレイ時間（スクリプトプロパティから取得、デフォルト1秒）
+              const delayMs = parseInt(props.getProperty('EXPORT_DELAY_MS') || '1000', 10);
+
+              sheets.forEach((sheet, sheetIndex) => {
                 const sheetId = sheet.getSheetId();
                 const sheetName = sheet.getName();
                 // フォルダ構成でファイル名を設定（設計書名/シート名.html）
                 const fileName = `${folderName}/${sanitizeFileName(sheetName)}.html`;
 
-                logs.push({ type: 'info', message: `    シート「${sheetName}」をHTML化中...` });
-                // fetchを用いてHTMLとしてエクスポート (参照のみ)
-                const htmlBlob = fetchSheetAsHtml(designSsId, sheetId, fileName);
-                zipFiles.push(htmlBlob);
-                stats.filesGenerated++;
-                logs.push({ type: 'success', message: `    HTML生成成功: ${fileName}` });
+                addLog({ type: 'info', message: `    シート「${sheetName}」をHTML化中...` });
+
+                try {
+                  // fetchを用いてHTMLとしてエクスポート (参照のみ)
+                  const htmlBlob = fetchSheetAsHtml(designSsId, sheetId, fileName);
+                  zipFiles.push(htmlBlob);
+                  stats.filesGenerated++;
+                  addLog({ type: 'success', message: `    HTML生成成功: ${fileName}` });
+
+                  // レートリミット対策：各エクスポート後にディレイ（最後のシートは不要）
+                  if (sheetIndex < sheets.length - 1) {
+                    Utilities.sleep(delayMs);
+                  }
+                } catch (e) {
+                  addLog({ type: 'error', message: `    HTML生成失敗: ${fileName} - ${e.message}` });
+                  stats.errors++;
+                }
               });
             } catch (e) {
-              logs.push({ type: 'error', message: `  設計書アクセス失敗`, url: trimmedDesignUrl });
-              logs.push({ type: 'error', message: `  エラー詳細: ${e.message}` });
+              addLog({ type: 'error', message: `  設計書アクセス失敗`, url: trimmedDesignUrl });
+              addLog({ type: 'error', message: `  エラー詳細: ${e.message}` });
               stats.errors++;
               return;
             }
           });
         } else {
-          logs.push({ type: 'warn', message: `「進捗管理表」シートが見つかりません`, url: trimmedDetailUrl, name: ssName });
+          addLog({ type: 'warn', message: `「進捗管理表」シートが見つかりません`, url: trimmedDetailUrl, name: ssName });
         }
       } catch (e) {
-        logs.push({ type: 'error', message: `詳細シートアクセス失敗`, url: trimmedDetailUrl });
-        logs.push({ type: 'error', message: `エラー詳細: ${e.message}` });
-        logs.push({ type: 'error', message: `エラースタック: ${e.stack || 'なし'}` });
+        addLog({ type: 'error', message: `詳細シートアクセス失敗`, url: trimmedDetailUrl });
+        addLog({ type: 'error', message: `エラー詳細: ${e.message}` });
+        addLog({ type: 'error', message: `エラースタック: ${e.stack || 'なし'}` });
         stats.errors++;
         return;
       }
     });
 
     if (zipFiles.length === 0) {
-      logs.push({ type: 'error', message: '設計書が1件も見つかりませんでした。アクセス権限を確認してください。' });
+      addLog({ type: 'error', message: '設計書が1件も見つかりませんでした。アクセス権限を確認してください。' });
       throw new Error('設計書が見つかりませんでした。詳細はログを確認してください。');
     }
 
     // 5. ZIP圧縮
-    logs.push({ type: 'info', message: `ZIP作成中... (${zipFiles.length}ファイル)` });
-    const zip = Utilities.zip(zipFiles, 'DesignDocuments.zip');
-    logs.push({ type: 'success', message: 'ZIP作成完了！' });
+    addLog({ type: 'info', message: `ZIP作成中... (${zipFiles.length}ファイル)` });
+    const zipFileName = `${sanitizeFileName(detailDebug.spreadsheetName)}.zip`;
+    const zip = Utilities.zip(zipFiles, zipFileName);
+    addLog({ type: 'success', message: 'ZIP作成完了！' });
 
+    // 最終結果を返却（ログはCacheから取得）
     return {
       data: Utilities.base64Encode(zip.getBytes()),
-      fileName: 'DesignDocuments.zip',
-      logs: logs,
+      fileName: zipFileName,
       stats: stats
     };
 
   } catch (e) {
-    logs.push({ type: 'error', message: `処理中にエラーが発生: ${e.message}` });
+    addLog({ type: 'error', message: `処理中にエラーが発生: ${e.message}` });
     return {
       data: null,
       fileName: null,
-      logs: logs,
       stats: stats,
       error: e.message
     };
@@ -325,14 +380,39 @@ function getUrlsFromSheet(url, sheetName = null, targetColumn = null) {
 }
 
 /**
- * 指定したシートをHTMLとして取得
+ * 指定したシートをHTMLとして取得（リトライ・レートリミット対策）
  */
 function fetchSheetAsHtml(ssId, sheetId, fileName) {
   const url = `https://docs.google.com/spreadsheets/d/${ssId}/export?format=html&gid=${sheetId}`;
   const token = ScriptApp.getOAuthToken();
-  const response = UrlFetchApp.fetch(url, {
-    headers: { 'Authorization': 'Bearer ' + token },
-    muteHttpExceptions: true
-  });
-  return response.getBlob().setName(fileName);
+
+  // リトライロジック（最大3回）
+  for (let retry = 0; retry < 3; retry++) {
+    const response = UrlFetchApp.fetch(url, {
+      headers: { 'Authorization': 'Bearer ' + token },
+      muteHttpExceptions: true
+    });
+
+    const code = response.getResponseCode();
+
+    // 成功
+    if (code === 200) {
+      return response.getBlob().setName(fileName);
+    }
+
+    // レートリミット（429）またはサーバーエラー（5xx）の場合は待機してリトライ
+    if (code === 429 || code >= 500) {
+      const waitMs = 3000 * (retry + 1); // 3秒、6秒、9秒と増加
+      Logger.log(`[リトライ] ${fileName}: HTTPコード${code}、${waitMs}ms待機後に再試行...`);
+      Utilities.sleep(waitMs);
+      continue;
+    }
+
+    // その他のエラーはそのまま返す（エラーページとして保存）
+    Logger.log(`[エラー] ${fileName}: HTTPコード${code}`);
+    return response.getBlob().setName(fileName);
+  }
+
+  // リトライ上限到達時
+  throw new Error(`シート取得に失敗しました（リトライ上限）: ${fileName}`);
 }
