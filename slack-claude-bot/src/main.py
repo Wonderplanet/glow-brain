@@ -12,6 +12,7 @@ from .session.db import SessionDB
 from .session.manager import SessionManager
 from .slack.bot import SlackClaudeBot
 from .slack.command_handlers import CommandHandlers
+from .slack.session_handler import SessionHandler
 from .worktree.manager import WorktreeManager
 
 
@@ -71,19 +72,22 @@ async def main():
         # GitHub PR manager
         github_manager = GitHubPRManager()
 
-        # Command handlers
-        command_handlers = CommandHandlers(
+        # Session handler (common logic)
+        session_handler = SessionHandler(
             session_manager=session_manager,
             claude_executor=claude_executor,
             github_manager=github_manager,
+        )
+
+        # Command handlers
+        command_handlers = CommandHandlers(
+            session_handler=session_handler,
             worktree_manager=worktree_manager,
         )
 
         # Slack bot
         bot = SlackClaudeBot(
-            session_manager=session_manager,
-            claude_executor=claude_executor,
-            github_manager=github_manager,
+            session_handler=session_handler,
             command_handlers=command_handlers,
         )
 
