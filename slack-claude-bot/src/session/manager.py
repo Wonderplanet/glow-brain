@@ -121,8 +121,9 @@ class SessionManager:
             # Create worktree
             worktree_path = self.worktree_manager.create_worktree(session_id)
 
-            # Generate tmux session name
-            tmux_session_name = f"claude_{session_id}"
+            # tmux_session_name will be set when Claude session starts
+            # This allows is_first_message check to work correctly
+            tmux_session_name = None
 
             # Save to database
             self.db.create_session(
@@ -178,6 +179,19 @@ class SessionManager:
             self.db.mark_session_expired(session_id)
 
             logger.info("session_cleaned_up", session_id=session_id)
+
+    def update_tmux_session_name(
+        self,
+        session_id: str,
+        tmux_session_name: str,
+    ) -> None:
+        """Update tmux session name for session.
+
+        Args:
+            session_id: Session ID
+            tmux_session_name: tmux session name
+        """
+        self.db.update_tmux_session_name(session_id, tmux_session_name)
 
     def update_github_pr(
         self,
