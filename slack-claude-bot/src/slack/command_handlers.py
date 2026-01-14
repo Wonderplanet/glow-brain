@@ -1,5 +1,6 @@
 """Slack slash command handlers."""
 
+import asyncio
 from pathlib import Path
 
 import structlog
@@ -71,6 +72,7 @@ class CommandHandlers:
             view = build_glow_brain_modal(
                 versions=versions,
                 current_version=current_version,
+                channel_id=body["channel_id"],
             )
 
             # Open modal
@@ -122,8 +124,27 @@ class CommandHandlers:
             client: Slack WebClient
             view: Submitted view data
         """
+        # Acknowledge immediately to avoid timeout
         await ack()
 
+        # Process in background to avoid Slack timeout
+        asyncio.create_task(
+            self._process_modal_submission(body, client, view)
+        )
+
+    async def _process_modal_submission(
+        self,
+        body: dict,
+        client: WebClient,
+        view: dict,
+    ) -> None:
+        """Process modal submission in background.
+
+        Args:
+            body: Slack view submission payload
+            client: Slack WebClient
+            view: Submitted view data
+        """
         try:
             # Extract values from modal
             values = view["state"]["values"]
@@ -134,30 +155,28 @@ class CommandHandlers:
             user_id = body["user"]["id"]
             user_name = body["user"]["name"]
 
-            # Use channel where command was invoked
-            # Note: Modal submissions don't have direct channel info in Slack API
-            # We'll post to the user as DM or use a fallback channel
-            # For now, we'll send a DM to the user with the result
+            # Get channel ID from private_metadata
+            channel_id = view.get("private_metadata", "")
 
             logger.info(
                 "modal_submitted",
                 user_id=user_id,
+                channel_id=channel_id,
                 branch=branch,
                 prompt_length=len(prompt),
             )
 
             # Create a pseudo thread_id for this command-based session
-            # Since we don't have a real thread, use user_id + timestamp
             import time
             timestamp = str(int(time.time() * 1000))
-            slack_thread_id = f"dm:{user_id}:{timestamp}"
+            slack_thread_id = f"cmd:{channel_id}:{timestamp}"
 
             # Get or create session
             session = await self.session_manager.get_or_create_session(
                 slack_thread_id=slack_thread_id,
-                slack_channel_id=user_id,  # DM channel
+                slack_channel_id=channel_id,
                 slack_user_id=user_id,
-                slack_channel_name="dm",
+                slack_channel_name="command",
                 slack_user_name=user_name,
                 branch=branch,
             )
@@ -167,7 +186,7 @@ class CommandHandlers:
 
             # Send "processing" message
             response = await client.chat_postMessage(
-                channel=user_id,
+                channel=channel_id,
                 text=f"🔄 処理中です... (ブランチ: `{branch}`)\n```\n{prompt}\n```",
             )
 
@@ -187,7 +206,7 @@ class CommandHandlers:
 
             if result.is_error:
                 await client.chat_postMessage(
-                    channel=user_id,
+                    channel=channel_id,
                     text=f"❌ エラーが発生しました:\n```\n{result.error_message}\n```",
                     thread_ts=message_ts,
                 )
@@ -197,20 +216,20 @@ class CommandHandlers:
             if result.output and result.output.strip():
                 await self._send_response(
                     client=client,
-                    channel=user_id,
+                    channel=channel_id,
                     thread_ts=message_ts,
                     output=result.output,
                 )
             else:
                 await client.chat_postMessage(
-                    channel=user_id,
+                    channel=channel_id,
                     text="（Claudeから応答がありませんでした。もう一度お試しください。）",
                     thread_ts=message_ts,
                 )
 
             # Check for changes and create PR if needed
             slack_context = SlackContext(
-                channel_name="dm",
+                channel_name="command",
                 thread_link=None,
                 user_name=user_name,
             )
@@ -235,27 +254,30 @@ class CommandHandlers:
 
                 # Send PR link
                 await client.chat_postMessage(
-                    channel=user_id,
+                    channel=channel_id,
                     text=f"📝 PRを作成しました: {pr_url}",
                     thread_ts=message_ts,
                 )
 
             # Send completion message
             await client.chat_postMessage(
-                channel=user_id,
+                channel=channel_id,
                 text="✅ 処理が完了しました",
                 thread_ts=message_ts,
             )
 
         except Exception as e:
-            logger.error("modal_submission_failed", error=str(e))
+            logger.error("modal_submission_failed", error=str(e), exc_info=True)
 
-            # Try to send error to user
+            # Try to send error to user in the channel
             try:
-                await client.chat_postMessage(
-                    channel=body["user"]["id"],
-                    text=f"エラーが発生しました: {str(e)}",
-                )
+                # Get channel_id from view if available
+                channel_id = view.get("private_metadata", "")
+                if channel_id:
+                    await client.chat_postMessage(
+                        channel=channel_id,
+                        text=f"エラーが発生しました: {str(e)}",
+                    )
             except Exception:
                 pass
 
