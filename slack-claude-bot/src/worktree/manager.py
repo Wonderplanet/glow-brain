@@ -1,5 +1,6 @@
 """Git worktree management."""
 
+import json
 import subprocess
 from pathlib import Path
 from typing import Optional
@@ -223,3 +224,44 @@ class WorktreeManager:
         worktrees = self.list_worktrees()
         # Exclude main repository
         return len([w for w in worktrees if str(self.base_path) in w.get("path", "")])
+
+    def get_available_versions(self) -> list[str]:
+        """Get list of available versions from config/versions.json.
+
+        Returns:
+            List of version names (branches) from versions.json
+
+        Raises:
+            FileNotFoundError: If versions.json doesn't exist
+            json.JSONDecodeError: If versions.json is invalid
+        """
+        versions_path = self.source_repo / "config" / "versions.json"
+
+        if not versions_path.exists():
+            logger.error(
+                "versions_file_not_found",
+                path=str(versions_path),
+            )
+            raise FileNotFoundError(f"versions.json not found at {versions_path}")
+
+        try:
+            with open(versions_path, encoding="utf-8") as f:
+                data = json.load(f)
+
+            versions = list(data.get("versions", {}).keys())
+
+            logger.info(
+                "versions_loaded",
+                count=len(versions),
+                versions=versions,
+            )
+
+            return versions
+
+        except json.JSONDecodeError as e:
+            logger.error(
+                "versions_json_decode_error",
+                path=str(versions_path),
+                error=str(e),
+            )
+            raise

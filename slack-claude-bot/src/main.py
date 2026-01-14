@@ -11,6 +11,7 @@ from .github.pr_manager import GitHubPRManager
 from .session.db import SessionDB
 from .session.manager import SessionManager
 from .slack.bot import SlackClaudeBot
+from .slack.command_handlers import CommandHandlers
 from .worktree.manager import WorktreeManager
 
 
@@ -70,11 +71,20 @@ async def main():
         # GitHub PR manager
         github_manager = GitHubPRManager()
 
+        # Command handlers
+        command_handlers = CommandHandlers(
+            session_manager=session_manager,
+            claude_executor=claude_executor,
+            github_manager=github_manager,
+            worktree_manager=worktree_manager,
+        )
+
         # Slack bot
         bot = SlackClaudeBot(
             session_manager=session_manager,
             claude_executor=claude_executor,
             github_manager=github_manager,
+            command_handlers=command_handlers,
         )
 
         logger.info("components_initialized")
