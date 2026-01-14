@@ -1,5 +1,8 @@
 """Slack Bot implementation."""
 
+import asyncio
+import re
+
 import structlog
 from slack_bolt.async_app import AsyncApp
 from slack_bolt.adapter.socket_mode.async_handler import AsyncSocketModeHandler
@@ -63,10 +66,15 @@ class SlackClaudeBot:
             """Handle /mst-input-guide slash command."""
             await self.command_handlers.handle_glow_brain_command(ack, body, client)
 
-        @self.app.view("glow_brain_modal")
-        async def handle_modal_submission(ack, body, client, view):
-            """Handle modal submission."""
-            await self.command_handlers.handle_modal_submission(ack, body, client, view)
+        @self.app.action(re.compile("^select_branch_"))
+        async def handle_branch_select(ack, body, client):
+            """Handle branch selection button click."""
+            await self.command_handlers.handle_branch_select_action(ack, body, client)
+
+        @self.app.event("message")
+        async def handle_message(event, client, say):
+            """Handle thread messages."""
+            await self.command_handlers.handle_thread_message(event, client, say)
 
         logger.debug("event_handlers_registered")
 

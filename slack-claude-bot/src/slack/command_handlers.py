@@ -10,9 +10,13 @@ from ..claude.executor import ClaudeExecutor
 from ..github.pr_manager import GitHubPRManager, SlackContext
 from ..session.manager import SessionManager
 from ..worktree.manager import WorktreeManager
-from .views import build_glow_brain_modal
+from .views import build_branch_select_message
 
 logger = structlog.get_logger()
+
+# Store pending sessions waiting for thread messages
+# {message_ts: {"branch": str, "channel_id": str, "user_id": str, "user_name": str}}
+_pending_sessions = {}
 
 
 class CommandHandlers:
@@ -44,7 +48,7 @@ class CommandHandlers:
         body: dict,
         client: WebClient,
     ) -> None:
-        """Handle /glow-brain command - open modal with branch selector.
+        """Handle /mst-input-guide command - post branch selection message.
 
         Args:
             ack: Acknowledge function
@@ -64,25 +68,24 @@ class CommandHandlers:
                 versions_count=len(versions),
             )
 
-            # Get current version from versions.json (optional enhancement)
-            # For now, just use the first version as default
+            # Get current version
             current_version = versions[0] if versions else None
 
-            # Build modal view
-            view = build_glow_brain_modal(
+            # Build branch selection message
+            message = build_branch_select_message(
                 versions=versions,
                 current_version=current_version,
-                channel_id=body["channel_id"],
             )
 
-            # Open modal
-            await client.views_open(
-                trigger_id=body["trigger_id"],
-                view=view,
+            # Post message to channel
+            await client.chat_postMessage(
+                channel=body["channel_id"],
+                **message,
             )
 
             logger.info(
-                "modal_opened",
+                "branch_select_message_posted",
+                channel_id=body["channel_id"],
                 user_id=body["user_id"],
             )
 
@@ -91,7 +94,6 @@ class CommandHandlers:
                 "versions_file_not_found",
                 error=str(e),
             )
-            # Send ephemeral error message
             await client.chat_postEphemeral(
                 channel=body["channel_id"],
                 user=body["user_id"],
@@ -109,69 +111,95 @@ class CommandHandlers:
                 text=f"エラーが発生しました: {str(e)}",
             )
 
-    async def handle_modal_submission(
+    async def handle_branch_select_action(
         self,
         ack,
         body: dict,
         client: WebClient,
-        view: dict,
     ) -> None:
-        """Handle modal submission - start Claude session.
+        """Handle branch selection button click.
 
         Args:
             ack: Acknowledge function
-            body: Slack view submission payload
+            body: Slack action payload
             client: Slack WebClient
-            view: Submitted view data
         """
-        # Acknowledge immediately to avoid timeout
         await ack()
 
-        # Process in background to avoid Slack timeout
-        asyncio.create_task(
-            self._process_modal_submission(body, client, view)
-        )
-
-    async def _process_modal_submission(
-        self,
-        body: dict,
-        client: WebClient,
-        view: dict,
-    ) -> None:
-        """Process modal submission in background.
-
-        Args:
-            body: Slack view submission payload
-            client: Slack WebClient
-            view: Submitted view data
-        """
         try:
-            # Extract values from modal
-            values = view["state"]["values"]
-
-            branch = values["branch_block"]["branch_select"]["selected_option"]["value"]
-            prompt = values["prompt_block"]["prompt_input"]["value"]
-
+            action = body["actions"][0]
+            branch = action["value"]
             user_id = body["user"]["id"]
             user_name = body["user"]["name"]
-
-            # Get channel ID from private_metadata
-            channel_id = view.get("private_metadata", "")
+            channel_id = body["channel"]["id"]
+            message_ts = body["message"]["ts"]
 
             logger.info(
-                "modal_submitted",
+                "branch_selected",
+                branch=branch,
                 user_id=user_id,
                 channel_id=channel_id,
+            )
+
+            # Store pending session info
+            _pending_sessions[message_ts] = {
+                "branch": branch,
+                "channel_id": channel_id,
+                "user_id": user_id,
+                "user_name": user_name,
+            }
+
+            # Reply in thread asking for prompt
+            await client.chat_postMessage(
+                channel=channel_id,
+                thread_ts=message_ts,
+                text=f"ブランチ `{branch}` を選択しました。\nこのスレッドにプロンプトを送信してください。",
+            )
+
+        except Exception as e:
+            logger.error("branch_select_action_failed", error=str(e), exc_info=True)
+
+    async def handle_thread_message(
+        self,
+        event: dict,
+        client: WebClient,
+        say,
+    ) -> None:
+        """Handle thread message as prompt.
+
+        Args:
+            event: Slack event data
+            client: Slack WebClient
+            say: Function to send messages
+        """
+        try:
+            # Check if this is a thread reply to a pending session
+            thread_ts = event.get("thread_ts")
+            if not thread_ts or thread_ts not in _pending_sessions:
+                return
+
+            # Get pending session info
+            session_info = _pending_sessions.pop(thread_ts)
+            branch = session_info["branch"]
+            channel_id = session_info["channel_id"]
+            user_id = session_info["user_id"]
+            user_name = session_info["user_name"]
+
+            prompt = event["text"]
+
+            logger.info(
+                "thread_prompt_received",
                 branch=branch,
+                channel_id=channel_id,
+                user_id=user_id,
                 prompt_length=len(prompt),
             )
 
-            # Create a pseudo thread_id for this command-based session
+            # Create session
             import time
             timestamp = str(int(time.time() * 1000))
             slack_thread_id = f"cmd:{channel_id}:{timestamp}"
 
-            # Get or create session
             session = await self.session_manager.get_or_create_session(
                 slack_thread_id=slack_thread_id,
                 slack_channel_id=channel_id,
@@ -181,16 +209,16 @@ class CommandHandlers:
                 branch=branch,
             )
 
-            # Check if this is the first message
             is_first = not session.claude_session_started
 
-            # Send "processing" message
+            # Send processing message
             response = await client.chat_postMessage(
                 channel=channel_id,
-                text=f"🔄 処理中です... (ブランチ: `{branch}`)\n```\n{prompt}\n```",
+                thread_ts=thread_ts,
+                text=f"🔄 処理中です... (ブランチ: `{branch}`)",
             )
 
-            message_ts = response["ts"]
+            processing_ts = response["ts"]
 
             # Execute Claude
             result = await self.claude_executor.execute(
@@ -200,15 +228,14 @@ class CommandHandlers:
                 is_first_message=is_first,
             )
 
-            # Mark session as started if first message
             if is_first:
                 self.session_manager.mark_session_started(session.id)
 
             if result.is_error:
                 await client.chat_postMessage(
                     channel=channel_id,
+                    thread_ts=thread_ts,
                     text=f"❌ エラーが発生しました:\n```\n{result.error_message}\n```",
-                    thread_ts=message_ts,
                 )
                 return
 
@@ -217,17 +244,17 @@ class CommandHandlers:
                 await self._send_response(
                     client=client,
                     channel=channel_id,
-                    thread_ts=message_ts,
+                    thread_ts=thread_ts,
                     output=result.output,
                 )
             else:
                 await client.chat_postMessage(
                     channel=channel_id,
-                    text="（Claudeから応答がありませんでした。もう一度お試しください。）",
-                    thread_ts=message_ts,
+                    thread_ts=thread_ts,
+                    text="（Claudeから応答がありませんでした。）",
                 )
 
-            # Check for changes and create PR if needed
+            # Check for changes and create PR
             slack_context = SlackContext(
                 channel_name="command",
                 thread_link=None,
@@ -244,7 +271,6 @@ class CommandHandlers:
             if pr_info:
                 branch_name, pr_url, pr_number = pr_info
 
-                # Update session with PR info
                 self.session_manager.update_github_pr(
                     session_id=session.id,
                     branch=branch_name,
@@ -252,34 +278,20 @@ class CommandHandlers:
                     pr_number=pr_number,
                 )
 
-                # Send PR link
                 await client.chat_postMessage(
                     channel=channel_id,
+                    thread_ts=thread_ts,
                     text=f"📝 PRを作成しました: {pr_url}",
-                    thread_ts=message_ts,
                 )
 
-            # Send completion message
             await client.chat_postMessage(
                 channel=channel_id,
+                thread_ts=thread_ts,
                 text="✅ 処理が完了しました",
-                thread_ts=message_ts,
             )
 
         except Exception as e:
-            logger.error("modal_submission_failed", error=str(e), exc_info=True)
-
-            # Try to send error to user in the channel
-            try:
-                # Get channel_id from view if available
-                channel_id = view.get("private_metadata", "")
-                if channel_id:
-                    await client.chat_postMessage(
-                        channel=channel_id,
-                        text=f"エラーが発生しました: {str(e)}",
-                    )
-            except Exception:
-                pass
+            logger.error("thread_message_failed", error=str(e), exc_info=True)
 
     async def _send_response(
         self,
