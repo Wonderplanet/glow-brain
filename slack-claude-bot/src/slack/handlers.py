@@ -51,6 +51,9 @@ class SlackHandlers:
         user_id = event["user"]
         text = event["text"]
 
+        # Extract branch specification from text
+        branch, text = self._extract_branch(text)
+
         # Create thread ID
         slack_thread_id = f"{channel_id}:{thread_ts}"
 
@@ -72,6 +75,7 @@ class SlackHandlers:
                 slack_user_id=user_id,
                 slack_channel_name=channel_name,
                 slack_user_name=user_name,
+                branch=branch,
             )
 
             # Remove bot mention from text
@@ -155,6 +159,23 @@ class SlackHandlers:
                 thread_ts=thread_ts,
             )
             await self._add_reaction(client, channel_id, event["ts"], "x")
+
+    def _extract_branch(self, text: str) -> tuple[Optional[str], str]:
+        """Extract branch specification from text.
+
+        Args:
+            text: Raw text that may contain branch specification
+
+        Returns:
+            Tuple of (branch_name or None, remaining_text)
+        """
+        import re
+        match = re.search(r'branch:(\S+)', text)
+        if match:
+            branch = match.group(1)
+            remaining = re.sub(r'branch:\S+\s*', '', text)
+            return branch, remaining.strip()
+        return None, text
 
     def _extract_prompt(self, text: str) -> str:
         """Extract prompt from mention text.
