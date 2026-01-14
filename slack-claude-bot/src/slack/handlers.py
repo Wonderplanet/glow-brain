@@ -105,11 +105,17 @@ class SlackHandlers:
                 return
 
             # Send response
-            await self._send_response(
-                say=say,
-                thread_ts=thread_ts,
-                output=result.output,
-            )
+            if result.output and result.output.strip():
+                await self._send_response(
+                    say=say,
+                    thread_ts=thread_ts,
+                    output=result.output,
+                )
+            else:
+                await say(
+                    text="（Claudeから応答がありませんでした。もう一度お試しください。）",
+                    thread_ts=thread_ts,
+                )
 
             # Check for changes and create PR if needed
             slack_context = SlackContext(
