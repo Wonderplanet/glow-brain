@@ -42,6 +42,13 @@ class SlackHandlers:
         user_id = event["user"]
         text = event["text"]
 
+        # Check if this thread is managed by command handlers
+        cmd_slack_thread_id = f"cmd:{channel_id}:{thread_ts}"
+        if self.session_handler.session_manager.db.get_session_by_slack_thread(cmd_slack_thread_id):
+            # This thread is managed by command handlers, skip
+            logger.info("skipping_command_thread", slack_thread_id=cmd_slack_thread_id)
+            return
+
         # Extract branch specification from text
         branch, text = self._extract_branch(text)
 
