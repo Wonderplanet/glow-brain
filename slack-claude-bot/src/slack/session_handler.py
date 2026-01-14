@@ -75,7 +75,7 @@ class SessionHandler:
             await client.chat_postMessage(
                 channel=channel_id,
                 thread_ts=thread_ts,
-                text=f"🔄 処理中です... (ブランチ: `{branch or 'main'}`)",
+                text=f"🔄 処理中です... (セッション: `{session.id}`, ブランチ: `{branch or 'main'}`)",
             )
 
             # 3. Execute Claude
