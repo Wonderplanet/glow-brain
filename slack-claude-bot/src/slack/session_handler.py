@@ -72,10 +72,15 @@ class SessionHandler:
             is_first = not session.claude_session_started
 
             # 2. Send processing message
+            # Get current commit hash
+            commit_hash = self.session_manager.worktree_manager.get_commit_hash(
+                Path(session.worktree_path)
+            )
+
             await client.chat_postMessage(
                 channel=channel_id,
                 thread_ts=thread_ts,
-                text=f"🔄 処理中です... (セッション: `{session.id}`, ブランチ: `{branch or 'main'}`)",
+                text=f"🔄 処理中です... (セッション: `{session.id}`, ブランチ: `{branch or 'main'}`, コミット: `{commit_hash}`)",
             )
 
             # 3. Execute Claude

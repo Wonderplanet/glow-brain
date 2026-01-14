@@ -330,3 +330,39 @@ class WorktreeManager:
                 error=str(e),
             )
             raise
+
+    def get_commit_hash(self, worktree_path: Path, short: bool = True) -> str:
+        """Get the current HEAD commit hash of a worktree.
+
+        Args:
+            worktree_path: Path to the worktree
+            short: If True, return short hash (7 chars)
+
+        Returns:
+            Commit hash string
+
+        Raises:
+            RuntimeError: If git command fails
+        """
+        try:
+            args = ["git", "-C", str(worktree_path), "rev-parse"]
+            if short:
+                args.append("--short")
+            args.append("HEAD")
+
+            result = subprocess.run(
+                args,
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+
+            return result.stdout.strip()
+
+        except subprocess.CalledProcessError as e:
+            logger.error(
+                "get_commit_hash_failed",
+                worktree_path=str(worktree_path),
+                error=e.stderr,
+            )
+            raise RuntimeError(f"Failed to get commit hash: {e.stderr}") from e
