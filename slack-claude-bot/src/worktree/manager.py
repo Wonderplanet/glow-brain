@@ -62,31 +62,71 @@ class WorktreeManager:
             return worktree_path
 
         try:
-            # Create worktree with detached HEAD
-            result = subprocess.run(
-                [
-                    "git",
-                    "-C",
-                    str(self.source_repo),
-                    "worktree",
-                    "add",
-                    "--detach",
-                    str(worktree_path),
-                    branch,
-                ],
-                capture_output=True,
-                text=True,
-                check=True,
-            )
+            # Try to create worktree from origin/<branch> (no fetch)
+            remote_branch = f"origin/{branch}"
+            try:
+                result = subprocess.run(
+                    [
+                        "git",
+                        "-C",
+                        str(self.source_repo),
+                        "worktree",
+                        "add",
+                        "--detach",
+                        str(worktree_path),
+                        remote_branch,
+                    ],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                )
 
-            logger.info(
-                "worktree_created",
-                session_id=session_id,
-                worktree_path=str(worktree_path),
-                branch=branch,
-            )
+                logger.info(
+                    "worktree_created",
+                    session_id=session_id,
+                    worktree_path=str(worktree_path),
+                    branch=remote_branch,
+                    fetched=False,
+                )
 
-            return worktree_path
+                return worktree_path
+
+            except subprocess.CalledProcessError as e:
+                # origin/<branch> not found locally, fetch and retry
+                logger.info(
+                    "worktree_creation_failed_will_fetch",
+                    session_id=session_id,
+                    branch=branch,
+                    error=e.stderr,
+                )
+                self._fetch_branch(branch)
+
+                # Retry
+                result = subprocess.run(
+                    [
+                        "git",
+                        "-C",
+                        str(self.source_repo),
+                        "worktree",
+                        "add",
+                        "--detach",
+                        str(worktree_path),
+                        remote_branch,
+                    ],
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                )
+
+                logger.info(
+                    "worktree_created",
+                    session_id=session_id,
+                    worktree_path=str(worktree_path),
+                    branch=remote_branch,
+                    fetched=True,
+                )
+
+                return worktree_path
 
         except subprocess.CalledProcessError as e:
             logger.error(
@@ -95,6 +135,31 @@ class WorktreeManager:
                 error=e.stderr,
             )
             raise RuntimeError(f"Failed to create worktree: {e.stderr}") from e
+
+    def _fetch_branch(self, branch: str) -> None:
+        """Fetch the latest state of the specified branch from remote.
+
+        Args:
+            branch: Branch name to fetch
+        """
+        try:
+            subprocess.run(
+                [
+                    "git",
+                    "-C",
+                    str(self.source_repo),
+                    "fetch",
+                    "origin",
+                    branch,
+                ],
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            logger.info("branch_fetched", branch=branch)
+        except subprocess.CalledProcessError as e:
+            logger.warning("fetch_failed", branch=branch, error=e.stderr)
+            raise
 
     def remove_worktree(self, worktree_path: Path) -> bool:
         """Remove a worktree.
