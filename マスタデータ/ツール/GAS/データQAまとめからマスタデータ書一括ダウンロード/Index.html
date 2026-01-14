@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+      input[type="text"] { width: 80%; padding: 10px; margin-bottom: 10px; }
+      button { padding: 10px 20px; cursor: pointer; background: #4285f4; color: white; border: none; border-radius: 4px; }
+      button:disabled { background: #ccc; }
+      #status { margin-top: 20px; font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <h2>設計書HTML一括ダウンロード</h2>
+    <p>一覧シートのURLを入力してください：</p>
+    <input type="text" id="url" placeholder="https://docs.google.com/spreadsheets/d/...">
+    <br>
+    <button id="btn" onclick="startProcess()">ZIPを作成してダウンロード</button>
+    <div id="status"></div>
+
+    <script>
+      function startProcess() {
+        const url = document.getElementById('url').value;
+        if (!url) { alert('URLを入力してください'); return; }
+
+        const btn = document.getElementById('btn');
+        const status = document.getElementById('status');
+        
+        btn.disabled = true;
+        status.innerText = '解析中...（シート数が多いと時間がかかります）';
+
+        google.script.run
+          .withSuccessHandler(downloadZip)
+          .withFailureHandler(showError)
+          .processSpreadsheets(url);
+      }
+
+      function downloadZip(result) {
+        const status = document.getElementById('status');
+        const byteCharacters = atob(result.data);
+        const byteNumbers = new Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+          byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
+        const blob = new Blob([byteArray], {type: 'application/zip'});
+        
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = result.fileName;
+        link.click();
+        
+        status.innerText = 'ダウンロード完了！';
+        document.getElementById('btn').disabled = false;
+      }
+
+      function showError(err) {
+        alert(err.message);
+        document.getElementById('status').innerText = 'エラーが発生しました。';
+        document.getElementById('btn').disabled = false;
+      }
+    </script>
+  </body>
+</html>
