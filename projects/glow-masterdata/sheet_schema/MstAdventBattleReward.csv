@@ -1,0 +1,3 @@
+memo
+TABLE,MstAdventBattleReward,MstAdventBattleReward,MstAdventBattleReward,MstAdventBattleReward,MstAdventBattleReward,MstAdventBattleReward
+ENABLE,id,mst_advent_battle_reward_group_id,resource_type,resource_id,resource_amount,release_key

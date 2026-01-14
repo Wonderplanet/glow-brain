@@ -1,0 +1,2 @@
+ENABLE,id,release_key,mst_event_id,cost_id,cost_num,loop_type,asset_key,display_mst_unit_id1,display_mst_unit_id2
+e,box_gacha_test,1,event_box_gacha_test,box_item_glo_00001,5,Last,kai_00001,chara_kai_00001,chara_kai_00101

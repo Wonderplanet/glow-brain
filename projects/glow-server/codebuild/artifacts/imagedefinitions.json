@@ -1,0 +1,23 @@
+[
+    {
+        "name":"db",
+        "imageUri":"<DB_IMAGE>"
+    },
+    {
+        "name":"redis",
+        "imageUri":"<REDIS_IMAGE>"
+    },
+    {
+        "name":"php",
+        "imageUri":"<PHP_IMAGE>"
+    },
+    {
+        "name":"nginx",
+        "imageUri":"<NGINX_IMAGE>"
+    },
+    {
+        "name":"datadog",
+        "imageUri":"<DATADOG_IMAGE>"
+    }
+]
+
