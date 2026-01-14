@@ -1,9 +1,11 @@
 """Slack slash command handlers."""
 
 import asyncio
+import re
 
 import structlog
 from slack_sdk import WebClient
+from slack_sdk.errors import SlackApiError
 
 from ..worktree.manager import WorktreeManager
 from .session_handler import SessionHandler
@@ -36,6 +38,7 @@ class CommandHandlers:
         """
         self.session_handler = session_handler
         self.worktree_manager = worktree_manager
+        self._bot_user_id = None  # Cache for bot user ID
 
     async def handle_glow_brain_command(
         self,
@@ -154,6 +157,21 @@ class CommandHandlers:
         except Exception as e:
             logger.error("branch_select_action_failed", error=str(e), exc_info=True)
 
+    async def _get_bot_user_id(self, client: WebClient) -> str:
+        """Get bot user ID (cached).
+
+        Args:
+            client: Slack WebClient
+
+        Returns:
+            Bot user ID
+        """
+        if self._bot_user_id is None:
+            result = await client.auth_test()
+            self._bot_user_id = result["user_id"]
+            logger.info("bot_user_id_cached", bot_user_id=self._bot_user_id)
+        return self._bot_user_id
+
     async def handle_thread_message(
         self,
         event: dict,
@@ -179,6 +197,25 @@ class CommandHandlers:
             channel_id = event["channel"]
             user_id = event["user"]
             prompt = event["text"]
+
+            # Check if bot is mentioned (required for command threads)
+            bot_user_id = await self._get_bot_user_id(client)
+            if f"<@{bot_user_id}>" not in prompt:
+                return  # Ignore messages without mention
+
+            # Remove bot mention from prompt
+            prompt = re.sub(r'<@[UW][A-Z0-9]+>', '', prompt).strip()
+
+            # Add processing reaction
+            try:
+                await client.reactions_add(
+                    channel=channel_id,
+                    timestamp=event["ts"],
+                    name="hourglass_flowing_sand",
+                )
+            except SlackApiError as e:
+                if e.response.get("error") != "already_reacted":
+                    raise
 
             # Case 1: First message (in _pending_sessions)
             if thread_ts in _pending_sessions:
@@ -277,5 +314,30 @@ class CommandHandlers:
                 # This thread is not managed by command handlers
                 return
 
+            # Replace with success reaction
+            await client.reactions_remove(
+                channel=channel_id,
+                timestamp=event["ts"],
+                name="hourglass_flowing_sand",
+            )
+            try:
+                await client.reactions_add(
+                    channel=channel_id,
+                    timestamp=event["ts"],
+                    name="white_check_mark",
+                )
+            except SlackApiError as e:
+                if e.response.get("error") != "already_reacted":
+                    raise
+
         except Exception as e:
             logger.error("thread_message_failed", error=str(e), exc_info=True)
+            # Add error reaction
+            try:
+                await client.reactions_add(
+                    channel=event["channel"],
+                    timestamp=event["ts"],
+                    name="x",
+                )
+            except Exception:
+                pass
