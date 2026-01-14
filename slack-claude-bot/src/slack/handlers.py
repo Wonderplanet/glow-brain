@@ -5,6 +5,7 @@ from typing import Optional
 import structlog
 from slack_sdk import WebClient
 
+from .command_handlers import _active_sessions, _pending_sessions
 from .session_handler import SessionHandler
 
 logger = structlog.get_logger()
@@ -42,7 +43,12 @@ class SlackHandlers:
         user_id = event["user"]
         text = event["text"]
 
-        # Check if this thread is managed by command handlers
+        # Check if this thread is managed by command handlers (in-memory check first)
+        if thread_ts in _pending_sessions or thread_ts in _active_sessions:
+            logger.info("skipping_command_thread_in_memory", thread_ts=thread_ts)
+            return
+
+        # Check if this thread is managed by command handlers (DB check)
         cmd_slack_thread_id = f"cmd:{channel_id}:{thread_ts}"
         if self.session_handler.session_manager.db.get_session_by_slack_thread(cmd_slack_thread_id):
             # This thread is managed by command handlers, skip
