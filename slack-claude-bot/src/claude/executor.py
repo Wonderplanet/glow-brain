@@ -182,9 +182,43 @@ class ClaudeExecutor:
             check=True,
         )
 
-        # Wait for Claude to start (wait for prompt)
+        # Wait for Claude to start
         import asyncio
         await asyncio.sleep(3)
+
+        # Check if trust prompt is displayed and auto-approve
+        result = subprocess.run(
+            [
+                "tmux",
+                "capture-pane",
+                "-t",
+                tmux_session_name,
+                "-p",
+            ],
+            capture_output=True,
+            text=True,
+        )
+
+        if "Do you trust the files in this folder?" in result.stdout:
+            logger.info(
+                "trust_prompt_detected",
+                tmux_session=tmux_session_name,
+            )
+
+            # Send Enter to select the default option (1. Yes, proceed)
+            subprocess.run(
+                [
+                    "tmux",
+                    "send-keys",
+                    "-t",
+                    tmux_session_name,
+                    "Enter",
+                ],
+                check=True,
+            )
+
+            # Wait for Claude to fully start after approval
+            await asyncio.sleep(5)
 
         logger.info(
             "claude_session_started",
@@ -231,6 +265,8 @@ class ClaudeExecutor:
         max_wait = self.timeout_seconds
         poll_interval = 2
         waited = 0
+        stability_count = 0
+        required_stability = 3  # Require 3 consecutive stable checks (6 seconds)
 
         previous_content = ""
 
@@ -255,14 +291,49 @@ class ClaudeExecutor:
 
             # Check if content has changed
             if current_content == previous_content:
-                # Content hasn't changed for poll_interval seconds
-                # Assume response is complete
-                break
+                stability_count += 1
+                logger.debug(
+                    "content_stable",
+                    tmux_session=tmux_session_name,
+                    stability_count=stability_count,
+                    content_length=len(current_content),
+                )
+
+                # Require multiple consecutive stable checks
+                if stability_count >= required_stability:
+                    logger.debug(
+                        "response_complete",
+                        tmux_session=tmux_session_name,
+                        content_length=len(current_content),
+                    )
+                    break
+            else:
+                # Content changed, reset stability counter
+                stability_count = 0
+                logger.debug(
+                    "content_changed",
+                    tmux_session=tmux_session_name,
+                    content_length=len(current_content),
+                )
 
             previous_content = current_content
 
+        # Log raw pane content for debugging
+        logger.debug(
+            "raw_pane_content",
+            tmux_session=tmux_session_name,
+            content_preview=current_content[:500] if current_content else "(empty)",
+        )
+
         # Extract response
         response = self._extract_response(current_content, prompt)
+
+        logger.debug(
+            "extracted_response",
+            tmux_session=tmux_session_name,
+            response_length=len(response),
+            response_preview=response[:200] if response else "(empty)",
+        )
 
         return response
 
@@ -279,22 +350,32 @@ class ClaudeExecutor:
         # Remove ANSI escape sequences
         cleaned = self.ANSI_ESCAPE.sub('', pane_content)
 
-        # Try to find the response after the prompt
+        # Find the LAST occurrence of the user's prompt
         lines = cleaned.split('\n')
 
-        # Find where the prompt appears
+        # Find the last line containing the prompt
+        prompt_line_idx = -1
+        for i in range(len(lines) - 1, -1, -1):
+            if prompt in lines[i]:
+                prompt_line_idx = i
+                break
+
+        if prompt_line_idx == -1:
+            logger.warning("prompt_not_found_in_pane", prompt=prompt[:50])
+            return ""
+
+        # Extract lines after the prompt until we see indicators of completion
         response_lines = []
-        found_prompt = False
+        for i in range(prompt_line_idx + 1, len(lines)):
+            line = lines[i]
 
-        for line in lines:
-            if not found_prompt:
-                if prompt in line:
-                    found_prompt = True
-                continue
-
-            # Skip empty lines immediately after prompt
+            # Skip the first empty line after prompt
             if not response_lines and not line.strip():
                 continue
+
+            # Stop if we see Claude's status line (e.g., "0 tokens", "ctrl+g to edit")
+            if "tokens" in line.lower() or "ctrl+" in line.lower():
+                break
 
             response_lines.append(line)
 
