@@ -78,22 +78,21 @@ class SlackHandlers:
             prompt = self._extract_prompt(text)
 
             # Check if this is the first message
-            is_first = not session.tmux_session_name
+            is_first = not session.claude_session_id
 
             # Execute Claude
             result = await self.claude_executor.execute(
                 prompt=prompt,
                 worktree_path=Path(session.worktree_path),
-                tmux_session_name=session.tmux_session_name,
                 session_id=session.id,
                 is_first_message=is_first,
             )
 
-            # Update tmux session name if first message
-            if is_first and result.tmux_session_name:
-                self.session_manager.update_tmux_session_name(
+            # Update Claude session ID if first message
+            if is_first and result.claude_session_id:
+                self.session_manager.update_claude_session_id(
                     session.id,
-                    result.tmux_session_name,
+                    result.claude_session_id,
                 )
 
             if result.is_error:
