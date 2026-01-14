@@ -1,11 +1,14 @@
 """Claude Code executor using subprocess."""
 
+import os
 import subprocess
 import time
 from pathlib import Path
 from typing import Optional
 
 import structlog
+
+from src.config import Config
 
 logger = structlog.get_logger()
 
@@ -58,7 +61,7 @@ class ClaudeExecutor:
         start_time = time.time()
 
         # Build command
-        cmd = ["claude"]
+        cmd = [str(Config.CLAUDE_COMMAND_PATH)]
         if not is_first_message:
             cmd.append("-c")  # Continue session
         cmd.extend(["-p", "--dangerously-skip-permissions", prompt])
@@ -72,12 +75,19 @@ class ClaudeExecutor:
         )
 
         try:
+            # Prepare environment variables
+            env = os.environ.copy()
+            # If API key is empty, remove it from environment (use Max plan auth)
+            if not env.get("ANTHROPIC_API_KEY"):
+                env.pop("ANTHROPIC_API_KEY", None)
+
             result = subprocess.run(
                 cmd,
                 cwd=str(worktree_path),
                 capture_output=True,
                 text=True,
                 timeout=self.timeout_seconds,
+                env=env,
             )
 
             duration = time.time() - start_time
