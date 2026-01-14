@@ -32,6 +32,9 @@ class Config:
     SESSION_TTL_HOURS: int = int(os.getenv("SESSION_TTL_HOURS", "8"))
     CLAUDE_TIMEOUT_SECONDS: int = int(os.getenv("CLAUDE_TIMEOUT_SECONDS", "300"))
 
+    # Claude CLI
+    CLAUDE_COMMAND_PATH: Path = Path(os.getenv("CLAUDE_COMMAND_PATH", "~/.claude/local/claude")).expanduser()
+
     # Paths
     WORKTREE_BASE_PATH: Path = Path(os.getenv("WORKTREE_BASE_PATH", "~/glow-worktrees")).expanduser()
     SOURCE_REPO_PATH: Path = Path(os.getenv("SOURCE_REPO_PATH", "~/Documents/workspace/glow/glow-brain")).expanduser()
