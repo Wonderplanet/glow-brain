@@ -37,7 +37,7 @@ class SessionDB:
                     slack_user_id TEXT NOT NULL,
                     slack_user_name TEXT,
                     slack_thread_link TEXT,
-                    tmux_session_name TEXT,
+                    claude_session_id TEXT,
                     worktree_path TEXT NOT NULL,
                     github_branch TEXT,
                     github_pr_url TEXT,
@@ -77,7 +77,7 @@ class SessionDB:
         slack_channel_name: Optional[str] = None,
         slack_user_name: Optional[str] = None,
         slack_thread_link: Optional[str] = None,
-        tmux_session_name: Optional[str] = None,
+        claude_session_id: Optional[str] = None,
     ) -> None:
         """Create a new session.
 
@@ -91,7 +91,7 @@ class SessionDB:
             slack_channel_name: Slack channel name (optional)
             slack_user_name: Slack user name (optional)
             slack_thread_link: Slack thread link (optional)
-            tmux_session_name: tmux session name (optional)
+            claude_session_id: Claude session ID (optional)
         """
         now = datetime.now()
 
@@ -101,7 +101,7 @@ class SessionDB:
                 INSERT INTO sessions
                 (id, slack_thread_id, slack_channel_id, slack_channel_name,
                  slack_user_id, slack_user_name, slack_thread_link,
-                 tmux_session_name, worktree_path, status,
+                 claude_session_id, worktree_path, status,
                  created_at, last_activity, expires_at)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?)
                 """,
@@ -113,7 +113,7 @@ class SessionDB:
                     slack_user_id,
                     slack_user_name,
                     slack_thread_link,
-                    tmux_session_name,
+                    claude_session_id,
                     worktree_path,
                     now,
                     now,
@@ -164,31 +164,31 @@ class SessionDB:
                 (datetime.now(), session_id),
             )
 
-    def update_tmux_session_name(
+    def update_claude_session_id(
         self,
         session_id: str,
-        tmux_session_name: str,
+        claude_session_id: str,
     ) -> None:
-        """Update tmux session name.
+        """Update Claude session ID.
 
         Args:
             session_id: Session ID
-            tmux_session_name: tmux session name
+            claude_session_id: Claude session ID
         """
         with sqlite3.connect(self.db_path) as conn:
             conn.execute(
                 """
                 UPDATE sessions
-                SET tmux_session_name = ?
+                SET claude_session_id = ?
                 WHERE id = ?
                 """,
-                (tmux_session_name, session_id),
+                (claude_session_id, session_id),
             )
 
         logger.debug(
-            "tmux_session_name_updated",
+            "claude_session_id_updated",
             session_id=session_id,
-            tmux_session_name=tmux_session_name,
+            claude_session_id=claude_session_id,
         )
 
     def update_github_pr(
