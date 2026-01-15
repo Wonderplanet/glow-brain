@@ -35,6 +35,7 @@ class SlackClaudeBot:
 
         self.handlers = SlackHandlers(
             session_handler=session_handler,
+            worktree_manager=command_handlers.worktree_manager,
         )
 
         self.command_handlers = command_handlers
