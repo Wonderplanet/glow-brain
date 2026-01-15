@@ -1,4 +1,0 @@
-ENABLE,id,destination,destination_path,asset_key,start_at,end_at,sort_order,release_key
-e,20,Gacha,Fest_Xmas_001,hometop_gacha_glo_00001,"2025-12-22 15:00:00","2025-12-31 23:59:59",10,202512015
-e,21,Pack,,hometop_shop_pack_00016,"2025-12-22 15:00:00","2025-12-26 14:59:59",9,202512015
-e,22,CreditShop,,hometop_campaign_00003,"2025-12-26 15:00:00","2025-12-31 23:59:59",8,202512015

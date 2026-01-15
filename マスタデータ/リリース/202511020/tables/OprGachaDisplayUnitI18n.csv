@@ -1,7 +1,0 @@
-ENABLE,id,opr_gacha_id,mst_unit_id,language,sort_order,description,release_key
-e,36,Pickup_yuw_001,chara_yuw_00401,ja,1,"必殺ワザで\n単体に大ダメージ!\n特定の条件で\n自身の被ダメージをカット!",202511020
-e,37,Pickup_yuw_001,chara_yuw_00301,ja,2,"チームの火力を上げる\nサポートキャラ!\n必殺ワザの攻撃UPで\nチーム全体を優位に！",202511020
-e,38,Pickup_yuw_001,chara_yuw_00201,ja,3,"必殺ワザで\n複数の相手の\n攻撃をDOWNする\nテクニカルキャラ!",202511020
-e,39,Pickup_yuw_002,chara_yuw_00001,ja,1,"必殺ワザで複数の相手にダメージを与える!\nさらに、必殺ワザで\n青属性の相手には大ダメージ!",202511020
-e,40,Pickup_yuw_002,chara_yuw_00101,ja,2,"必殺ワザで相手の\n攻撃をDOWNさせる\nテクニカルキャラ!",202511020
-e,41,Pickup_yuw_002,chara_yuw_00201,ja,3,"必殺ワザで\n複数の相手の\n攻撃をDOWNする\nテクニカルキャラ!",202511020

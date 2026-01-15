@@ -1,9 +1,0 @@
-ENABLE,id,release_key,progress_group_key,criterion_type,criterion_value,criterion_count,mission_category,mst_mission_reward_group_id,sort_order,destination_scene,start_at,end_at
-e,limited_term_13,202511010,group4,AdventBattleChallengeCount,,5,AdventBattle,mag_00001_limited_term_1,1,AdventBattle,"2025-11-22 15:00:00","2025-11-28 14:59:59"
-e,limited_term_14,202511010,group4,AdventBattleChallengeCount,,10,AdventBattle,mag_00001_limited_term_2,2,AdventBattle,"2025-11-22 15:00:00","2025-11-28 14:59:59"
-e,limited_term_15,202511010,group4,AdventBattleChallengeCount,,20,AdventBattle,mag_00001_limited_term_3,3,AdventBattle,"2025-11-22 15:00:00","2025-11-28 14:59:59"
-e,limited_term_16,202511010,group4,AdventBattleChallengeCount,,30,AdventBattle,mag_00001_limited_term_4,4,AdventBattle,"2025-11-22 15:00:00","2025-11-28 14:59:59"
-e,limited_term_17,202511010,group5,AdventBattleChallengeCount,,5,AdventBattle,kai_00002_limited_term_1,1,AdventBattle,"2025-11-12 15:00:00","2025-11-17 14:59:59"
-e,limited_term_18,202511010,group5,AdventBattleChallengeCount,,10,AdventBattle,kai_00002_limited_term_2,2,AdventBattle,"2025-11-12 15:00:00","2025-11-17 14:59:59"
-e,limited_term_19,202511010,group5,AdventBattleChallengeCount,,20,AdventBattle,kai_00002_limited_term_3,3,AdventBattle,"2025-11-12 15:00:00","2025-11-17 14:59:59"
-e,limited_term_20,202511010,group5,AdventBattleChallengeCount,,30,AdventBattle,kai_00002_limited_term_4,4,AdventBattle,"2025-11-12 15:00:00","2025-11-17 14:59:59"
