@@ -1,0 +1,33 @@
+# 認証情報
+credentials.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 仮想環境
+.venv/
+venv/
+ENV/
+env/
+
+# uv
+.uv/
+# uv.lock は再現性のためコミットする
+
+# 出力ファイル
+*.zip
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
