@@ -15,7 +15,16 @@ from .views import build_agent_select_message, build_branch_select_message
 logger = structlog.get_logger()
 
 # Store pending sessions waiting for thread messages (before first prompt)
-# {message_ts: {"branch": str, "channel_id": str, "user_id": str, "user_name": str, "agent_name": str | None}}
+# {message_ts: {
+#     "branch": str,
+#     "channel_id": str,
+#     "user_id": str,
+#     "user_name": str,
+#     "agent_name": str | None,
+#     "initial_prompt": str | None,     # メンション経由の元プロンプト
+#     "mention_event_ts": str | None,   # メンション経由の元ts（リアクション用）
+#     "source": str,                     # "command" | "mention"
+# }}
 _pending_sessions = {}
 
 # Store active sessions after first prompt (for session lookup)
@@ -133,21 +142,36 @@ class CommandHandlers:
             channel_id = body["channel"]["id"]
             message_ts = body["message"]["ts"]
 
+            # スレッド内のボタンクリックの場合、thread_ts を取得
+            # メンション経由の場合は thread_ts が親メンションのtsになる
+            thread_ts = body["message"].get("thread_ts") or message_ts
+
             logger.info(
                 "branch_selected",
                 branch=branch,
                 user_id=user_id,
                 channel_id=channel_id,
+                thread_ts=thread_ts,
             )
 
-            # Store pending session info with agent_name=None
-            _pending_sessions[message_ts] = {
-                "branch": branch,
-                "channel_id": channel_id,
-                "user_id": user_id,
-                "user_name": user_name,
-                "agent_name": None,
-            }
+            # 既存の pending_session があれば更新、なければ新規作成
+            if thread_ts in _pending_sessions:
+                # メンション経由（既にセッション情報がある）
+                _pending_sessions[thread_ts]["branch"] = branch
+                session_info = _pending_sessions[thread_ts]
+            else:
+                # コマンド経由（新規作成）
+                _pending_sessions[thread_ts] = {
+                    "branch": branch,
+                    "channel_id": channel_id,
+                    "user_id": user_id,
+                    "user_name": user_name,
+                    "agent_name": None,
+                    "initial_prompt": None,
+                    "mention_event_ts": None,
+                    "source": "command",
+                }
+                session_info = _pending_sessions[thread_ts]
 
             # Get available agents
             agents = get_available_agents()
@@ -157,16 +181,26 @@ class CommandHandlers:
                 message = build_agent_select_message(agents, branch)
                 await client.chat_postMessage(
                     channel=channel_id,
-                    thread_ts=message_ts,
+                    thread_ts=thread_ts,
                     **message,
                 )
             else:
-                # No agents available, proceed to prompt
-                await client.chat_postMessage(
-                    channel=channel_id,
-                    thread_ts=message_ts,
-                    text=f"ブランチ `{branch}` を選択しました。\nこのスレッドにプロンプトを送信してください。",
-                )
+                # No agents available
+                if session_info.get("initial_prompt"):
+                    # メンション経由で initial_prompt がある場合は自動実行
+                    await self._auto_execute_with_prompt(
+                        client=client,
+                        channel_id=channel_id,
+                        thread_ts=thread_ts,
+                        session_info=session_info,
+                    )
+                else:
+                    # コマンド経由またはプロンプトなし
+                    await client.chat_postMessage(
+                        channel=channel_id,
+                        thread_ts=thread_ts,
+                        text=f"ブランチ `{branch}` を選択しました。\nこのスレッドにプロンプトを送信してください。",
+                    )
 
         except Exception as e:
             logger.error("branch_select_action_failed", error=str(e), exc_info=True)
@@ -196,32 +230,46 @@ class CommandHandlers:
                 logger.warning("pending_session_not_found", message_ts=message_ts)
                 return
 
+            session_info = _pending_sessions[message_ts]
+
             # Update agent_name
             if agent_name == "__none__":
-                _pending_sessions[message_ts]["agent_name"] = None
+                session_info["agent_name"] = None
                 agent_display = "通常モード"
             else:
-                _pending_sessions[message_ts]["agent_name"] = agent_name
+                session_info["agent_name"] = agent_name
                 agents = get_available_agents()
                 agent_display = next(
                     (a["display_name"] for a in agents if a["name"] == agent_name),
                     agent_name
                 )
 
-            branch = _pending_sessions[message_ts]["branch"]
+            branch = session_info["branch"]
+            initial_prompt = session_info.get("initial_prompt")
 
             logger.info(
                 "agent_selected",
                 agent_name=agent_name,
                 branch=branch,
                 channel_id=channel_id,
+                has_initial_prompt=initial_prompt is not None,
             )
 
-            await client.chat_postMessage(
-                channel=channel_id,
-                thread_ts=message_ts,
-                text=f"設定完了: ブランチ `{branch}` / エージェント `{agent_display}`\nこのスレッドにプロンプトを送信してください。",
-            )
+            # initial_prompt がある場合は自動実行
+            if initial_prompt:
+                await self._auto_execute_with_prompt(
+                    client=client,
+                    channel_id=channel_id,
+                    thread_ts=message_ts,
+                    session_info=session_info,
+                )
+            else:
+                # 従来通り「プロンプトを送信してください」メッセージ
+                await client.chat_postMessage(
+                    channel=channel_id,
+                    thread_ts=message_ts,
+                    text=f"設定完了: ブランチ `{branch}` / エージェント `{agent_display}`\nこのスレッドにプロンプトを送信してください。",
+                )
 
         except Exception as e:
             logger.error("agent_select_action_failed", error=str(e), exc_info=True)
@@ -415,3 +463,129 @@ class CommandHandlers:
                 )
             except Exception:
                 pass
+
+    async def _auto_execute_with_prompt(
+        self,
+        client: WebClient,
+        channel_id: str,
+        thread_ts: str,
+        session_info: dict,
+    ) -> None:
+        """UI選択完了後、保存されたプロンプトで自動実行.
+
+        Args:
+            client: Slack WebClient
+            channel_id: Channel ID
+            thread_ts: Thread timestamp (parent message ts)
+            session_info: Session information from _pending_sessions
+        """
+        branch = session_info["branch"]
+        user_id = session_info["user_id"]
+        user_name = session_info["user_name"]
+        agent_name = session_info.get("agent_name")
+        initial_prompt = session_info["initial_prompt"]
+        mention_event_ts = session_info.get("mention_event_ts")
+
+        # pending_sessions から active_sessions へ移動
+        _pending_sessions.pop(thread_ts, None)
+
+        slack_thread_id = f"cmd:{channel_id}:{thread_ts}"
+
+        _active_sessions[thread_ts] = {
+            "branch": branch,
+            "channel_id": channel_id,
+            "user_id": user_id,
+            "user_name": user_name,
+            "slack_thread_id": slack_thread_id,
+            "agent_name": agent_name,
+        }
+
+        # 処理開始のリアクションを元メンションに追加
+        if mention_event_ts:
+            try:
+                await client.reactions_add(
+                    channel=channel_id,
+                    timestamp=mention_event_ts,
+                    name="hourglass_flowing_sand",
+                )
+            except Exception:
+                pass
+
+        logger.info(
+            "auto_execute_started",
+            branch=branch,
+            channel_id=channel_id,
+            thread_ts=thread_ts,
+            prompt_length=len(initial_prompt),
+        )
+
+        # 設定完了メッセージ
+        agent_display = "通常モード"
+        if agent_name:
+            agents = get_available_agents()
+            agent_display = next(
+                (a["display_name"] for a in agents if a["name"] == agent_name),
+                agent_name
+            )
+
+        await client.chat_postMessage(
+            channel=channel_id,
+            thread_ts=thread_ts,
+            text=f"設定完了: ブランチ `{branch}` / エージェント `{agent_display}`\n\n自動的に処理を開始します...",
+        )
+
+        # チャンネル情報を取得
+        try:
+            channel_info = await client.conversations_info(channel=channel_id)
+            channel_name = channel_info["channel"].get("name", "unknown")
+        except Exception:
+            channel_name = "unknown"
+
+        # session_handler.process_prompt を呼び出し
+        try:
+            await self.session_handler.process_prompt(
+                client=client,
+                channel_id=channel_id,
+                thread_ts=thread_ts,
+                slack_thread_id=slack_thread_id,
+                user_id=user_id,
+                user_name=user_name,
+                channel_name=channel_name,
+                prompt=initial_prompt,
+                branch=branch,
+                agent_name=agent_name,
+            )
+
+            # 成功リアクション
+            if mention_event_ts:
+                try:
+                    await client.reactions_remove(
+                        channel=channel_id,
+                        timestamp=mention_event_ts,
+                        name="hourglass_flowing_sand",
+                    )
+                    await client.reactions_add(
+                        channel=channel_id,
+                        timestamp=mention_event_ts,
+                        name="white_check_mark",
+                    )
+                except Exception:
+                    pass
+
+        except Exception as e:
+            logger.error("auto_execute_failed", error=str(e), exc_info=True)
+            await client.chat_postMessage(
+                channel=channel_id,
+                thread_ts=thread_ts,
+                text=f"エラーが発生しました: {str(e)}",
+            )
+            # エラーリアクション
+            if mention_event_ts:
+                try:
+                    await client.reactions_add(
+                        channel=channel_id,
+                        timestamp=mention_event_ts,
+                        name="x",
+                    )
+                except Exception:
+                    pass
