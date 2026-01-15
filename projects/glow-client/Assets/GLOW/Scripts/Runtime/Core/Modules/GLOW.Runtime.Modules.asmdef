@@ -1,0 +1,27 @@
+{
+    "name": "GLOW.Runtime.Modules",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2a2deac7912b046ef9de4b6eb8f2a9a8",
+        "GUID:a145c23cbc8144a86b81873ba449104f",
+        "GUID:33661e06c33d31b4c9223810bf503247",
+        "GUID:20e5b313cb5f24f778aa9741c58ce242",
+        "GUID:47268f5a6f8e7446ebea32e9bb1d40bb",
+        "GUID:9069ac25d95ca17448a247f3bb1c769f",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:bee5f13d300a64f67b18edc36ea26d97",
+        "GUID:658e0fbd657c1442c948ab03fe658867",
+        "GUID:e38b19fb6b34a4c3883d5471e99a0e2d",
+        "GUID:aae7bec31b7e4475d86c54392a8a03aa",
+        "GUID:fc849262609ed488e932753c3592b441"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

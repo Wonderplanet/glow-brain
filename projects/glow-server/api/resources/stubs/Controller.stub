@@ -1,0 +1,25 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Http\Controllers;
+
+use App\Http\ResponseFactories\{{name}}ResponseFactory;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+
+class {{name}}Controller extends Controller
+{
+    public function __construct(
+        private Request $request,
+        private {{name}}ResponseFactory $responseFactory,
+    ) {
+    }
+
+    public function xxx(XxxUseCase $useCase, Request $request): JsonResponse
+    {
+        $resultData = $useCase->exec($this->request->user());
+
+        return $this->responseFactory->createXxxResponse($resultData);
+    }
+}

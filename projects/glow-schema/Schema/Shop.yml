@@ -1,0 +1,484 @@
+enum:
+  - name: ShopType
+    params:
+      - name: Coin
+      - name: Daily
+      - name: Weekly
+  - name: CostType
+    params:
+      - name: Coin
+      - name: Diamond
+      - name: PaidDiamond
+      - name: Item
+      - name: Ad
+      - name: Cash
+      - name: Free
+
+  - name: ProductType
+    params:
+      - name: Diamond
+      - name: Pack
+      - name: Pass
+  - name: PackDecoration
+    params:
+      - name: Gold
+  - name: SaleCondition
+    params:
+      - name: StageClear
+      - name: UserLevel
+      - name: ElaspeDays
+  - name: ShopPassRewardType
+    params:
+      - name: Daily
+      - name: Immediately
+  - name: ShopPassEffectType
+    params:
+      - name: IdleIncentiveAddReward
+      - name: IdleIncentiveMaxQuickReceiveByDiamond
+      - name: IdleIncentiveMaxQuickReceiveByAd
+      - name: StaminaAddRecoveryLimit
+      - name: AdSkip
+      - name: ChangeBattleSpeed
+  - name: ShopPassCellColor
+    params:
+      - name: Purple
+      - name: Gold
+      - name: Silver
+      - name: Red
+
+  - name: PackType
+    params:
+      - name: Daily
+      - name: Normal
+
+
+data:
+  - name: MstTradePiece
+    obscure: true
+    params:
+      - name: mstTradePieceId
+        type: string
+      - name: mstUnitId
+        type: string
+      - name: tradeRequiredAmount
+        type: int
+      - name: tradeAmount
+        type: int
+
+  - name: MstShopItem
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: shopType
+        type: ShopType
+      - name: costType
+        type: CostType
+      - name: costAmount
+        type: int?
+      - name: isFirstTimeFree
+        type: bool
+      - name: tradableCount
+        type: int
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+      - name: startDate
+        type: DateTimeOffset
+      - name: endDate
+        type: DateTimeOffset
+
+  - name: OprProduct
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstStoreProductId
+        type: string
+      - name: productType
+        type: ProductType
+      - name: purchasableCount
+        type: int?
+      - name: paidAmount
+        type: int
+      - name: displayPriority
+        type: int
+      - name: startDate
+        type: DateTimeOffset
+      - name: endDate
+        type: DateTimeOffset
+
+  - name: OprProductI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: oprProductId
+        type: string
+      - name: language
+        type: Language
+      - name: assetKey
+        type: string
+
+  - name: MstStoreProduct
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: releaseKey
+        type: int
+      - name: productIdIos
+        type: string
+      - name: productIdAndroid
+        type: string
+  - name: MstStoreProductI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstStoreProductId
+        type: string
+      - name: language
+        type: Language
+      - name: priceIos
+        type: float
+      - name: priceAndroid
+        type: float
+
+  - name: MstPack
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: productSubId
+        type: string
+      - name: discountRate
+        type: int
+      - name: packType
+        type: PackType
+      - name: saleCondition
+        type: SaleCondition?
+      - name: saleConditionValue
+        type: string
+      - name: saleHours
+        type: int?
+      - name: tradableCount
+        type: int?
+      - name: costType
+        type: CostType
+      - name: costAmount
+        type: int
+      - name: isRecommend
+        type: bool
+      - name: isDisplayExpiration
+        type: bool
+      - name: isFirstTimeFree
+        type: bool
+      - name: assetKey
+        type: string
+      - name: packDecoration
+        type: PackDecoration?
+  - name: MstPackI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstPackId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+
+  - name: MstPackContent
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstPackId
+        type: string
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+      - name: isBonus
+        type: bool
+      - name: displayOrder
+        type: int
+
+  - name: MstShopPass
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: oprProductId
+        type: string
+      - name: isDisplayExpiration
+        type: bool
+      - name: passDurationDays
+        type: int
+      - name: assetKey
+        type: string
+      - name: shopPassCellColor
+        type: ShopPassCellColor
+  - name: MstShopPassI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstShopPassId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+  - name: MstShopPassReward
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstShopPassId
+        type: string
+      - name: passRewardType
+        type: ShopPassRewardType
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+  - name: MstShopPassEffect
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstShopPassId
+        type: string
+      - name: effectType
+        type: ShopPassEffectType
+      - name: effectValue
+        type: long
+
+  - name: UsrStoreProduct
+    obscure: true
+    params:
+      - name: productSubId
+        type: string
+      - name: purchaseCount
+        type: int
+      - name: purchaseTotalCount
+        type: int
+  - name: UsrShopItem
+    obscure: true
+    params:
+      - name: mstShopItemId
+        type: string
+      - name: tradeCount
+        type: int
+      - name: tradeTotalCount
+        type: int
+  - name: UsrTradePack
+    obscure: true
+    params:
+      - name: mstPackId
+        type: string
+      - name: dailyTradeCount
+        type: int
+  - name: UsrConditionPack
+    obscure: true
+    params:
+      - name: mstPackId
+        type: string
+      - name: startDate
+        type: string
+  - name: UsrShopPass
+    obscure: true
+    params:
+      - name: mstShopPassId
+        type: string
+      - name: dailyRewardReceivedCount
+        type: int
+      - name: dailyLatestReceivedAt
+        type: DateTimeOffset
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+  - name: CurrencyPurchase
+    obscure: true
+    params:
+      - name: purchasePrice
+        type: string
+      - name: purchaseAmount
+        type: int
+      - name: currencyCode
+        type: string
+      - name: purchaseAt
+        type: DateTimeOffset
+
+  - name: TradeShopItemResult
+    obscure: true
+    params:
+      - name: usrShopItems
+        type: UsrShopItemData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+  - name: PurchaseResult
+    obscure: true
+    params:
+      - name: rewards
+        type: PurchaseResultRewardData[]
+      - name: usrStoreProduct
+        type: UsrStoreProductData
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: usrTradePacks
+        type: UsrTradePackData[]
+      - name: usrStoreInfo
+        type: UsrStoreInfoData
+
+  - name: PurchaseResultReward
+    obscure: true
+    params:
+      - name: reward
+        type: RewardData
+
+  - name: ShopPassReward
+    obscure: true
+    params:
+      - name: mstShopPassId
+        type: string
+      - name: passRewardType
+        type: ShopPassRewardType
+      - name: reward
+        type: RewardData
+      - name: preConversionResource
+        type: PreConversionResourceData?
+  - name: PurchasePassResult
+    obscure: true
+    params:
+      - name: usrStoreProduct
+        type: UsrStoreProductData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrShopPass
+        type: UsrShopPassData
+      - name: shopPassRewards
+        type: ShopPassRewardData[]
+      - name: usrStoreInfo
+        type: UsrStoreInfoData
+  - name: PurchaseHistoryResult
+    obscure: true
+    params:
+      - name: currencyPurchases
+        type: CurrencyPurchaseData[]
+
+  - name: UsrStoreInfo
+    obscure: true
+    params:
+      - name: age
+        type: int? # 生年月日が未登録の場合はnullを返す
+      - name: currentMonthTotalBilling # 当月累計課金額
+        type: int
+      - name: renotifyAt # 次回年齢再確認する日時。nullなら再確認不要
+        type: DateTimeOffset?
+
+  - name: SetStoreInfoResult
+    obscure: true
+    params:
+      - name: usrStoreInfo
+        type: UsrStoreInfoData
+
+  - name: AllowanceResult
+    obscure: true
+    params:
+      - name: productId
+        type: string
+      - name: productSubId
+        type: string
+      - name: oprProductId
+        type: string
+
+api:
+  - name: Shop
+    actions:
+      - name: SetStoreInfo
+        path: "/api/shop/set_store_info"
+        params:
+          - name: birthDate
+            type: int
+        method: POST
+        response: SetStoreInfoResultData
+
+      - name: Allowance
+        path: "/api/shop/allowance"
+        params:
+          - name: productId
+            type: string
+          - name: productSubId
+            type: string
+          - name: currencyCode
+            type: string
+          - name: price
+            type: float
+        method: post
+        response: AllowanceResultData
+
+      - name: TradeShopItem
+        path: "/api/shop/trade_shop_item"
+        params:
+          - name: mstShopItemId
+            type: string
+        method: POST
+        response: TradeShopItemResultData
+
+      - name: Purchase
+        path: "/api/shop/trade_pack"
+        params:
+          - name: productSubId
+            type: string
+          - name: receipt
+            type: string
+          - name: currencyCode
+            type: string
+          - name: price
+            type: float
+          - name: rawPriceString
+            type: string
+        method: POST
+        response: PurchaseResultData
+
+      - name: PurchasePass
+        path: "/api/shop/purchase_pass"
+        params:
+          - name: productSubId
+            type: string
+          - name: receipt
+            type: string
+          - name: currencyCode
+            type: string
+          - name: price
+            type: float
+          - name: rawPriceString
+            type: string
+        method: POST
+        response: PurchasePassResultData
+
+      - name: PurchaseHistory
+        path: "/api/shop/purchase_history"
+        params:
+        method: GET
+        response: PurchaseHistoryResultData

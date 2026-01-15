@@ -1,0 +1,119 @@
+deptrac:
+  layers:
+    - name: Wp Currency BaseEntity
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Currency\\Entities\\Base.*Entity
+    - name: Wp Currency BaseModel
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Currency\\Models\\Base.*Model
+    - name: Wp Currency Constant
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Currency\\Constants\\.*
+    - name: Wp Currency Delegator
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Currency\\Delegators\\.*
+    - name: Wp Currency Entity
+      collectors:
+        - type: bool
+          must:
+            - type: class
+              value: Wonderplanet\\Domain\\Currency\\Entities\\.*
+          must_not:
+            - type: layer
+              value: Wp Currency BaseEntity
+    - name: Wp Currency Enum
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Currency\\Enums\\.*
+    - name: Wp Currency Exception
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Currency\\Exceptions\\.*
+    - name: Wp Currency Factory
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Currency\\Database\\Factories\\.*
+    - name: Wp Currency Model
+      collectors:
+        - type: bool
+          must:
+            - type: class
+              value: Wonderplanet\\Domain\\Currency\\Models\\.*
+          must_not:
+            - type: layer
+              value: Wp Currency BaseModel
+    - name: Wp Currency Provider
+      collectors:
+        - type: class
+          value: Wonderplanet\\CurrencyServiceProvider
+    - name: Wp Currency Repository
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Currency\\Repositories\\.*
+    - name: Wp Currency Service
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Currency\\Services\\.*
+    - name: Wp Currency Util
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Currency\\Utils\\.*
+
+  ruleset:
+    Wp Currency BaseModel:
+      - Wp Currency Util
+    Wp Currency Delegator:
+      - Wp Currency Service
+      - Wp Currency Entity
+      - Wp Currency Exception
+      - Wp Currency Model
+      - Wp Currency Util
+    Wp Currency Entity:
+      - Wp Billing Entity
+      - Wp Currency Constant
+      - Wp Currency Model
+      - Wp Currency BaseEntity
+      - Wp Currency Util
+    Wp Currency Exception:
+      - Wp Currency Constant
+      - Wp Currency Model
+    Wp Currency Factory:
+      - Wp Currency Constant
+      - Wp Currency Model
+    Wp Currency Model:
+      - Wp Billing Entity
+      - Wp Currency BaseModel
+      - Wp Currency Constant
+      - Wp Currency Entity
+      - Wp Currency Util
+      - Wp Common Model
+      - Wp Common Util
+    Wp Currency Provider:
+      - Wp Billing Delegator
+      - Wp Billing Service
+      - Wp Common Provider
+      - Wp Currency Delegator
+    Wp Currency Repository:
+      - Wp Currency Constant
+      - Wp Currency Entity
+      - Wp Currency Exception
+      - Wp Currency Model
+      - Wp Currency Util
+    Wp Currency Service:
+      - Wp Billing Delegator
+      - Wp Currency Constant
+      - Wp Currency Entity
+      - Wp Currency Exception
+      - Wp Currency Model
+      - Wp Currency Repository
+      - Wp Currency Util
+      - Wp Common Facade
+    Wp Currency Util:
+      - Wp Common Facade
+      - Wp Common Util
+      - Wp Currency Constant
+      - Wp Currency Entity
