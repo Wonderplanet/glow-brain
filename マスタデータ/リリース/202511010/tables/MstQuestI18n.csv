@@ -1,6 +1,0 @@
-ENABLE,release_key,id,mst_quest_id,language,name,category_name,flavor_text
-e,202511010,quest_event_mag1_charaget01_ja,quest_event_mag1_charaget01,ja,うちの美学,ストーリー,
-e,202511010,quest_event_mag1_challenge01_ja,quest_event_mag1_challenge01,ja,色々な魔法少女,チャレンジ,
-e,202511010,quest_event_mag1_charaget02_ja,quest_event_mag1_charaget02,ja,よく見てる,ストーリー,
-e,202511010,quest_event_mag1_savage_ja,quest_event_mag1_savage,ja,「怪異」現象,高難易度,
-e,202511010,quest_event_mag1_1day_ja,quest_event_mag1_1day,ja,何とかやってます,デイリー,

@@ -1,9 +1,0 @@
-ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
-e,190,chara_sur_00501,ja,SpecialAttackCharge,Maru,Right,0.5,位置バッチリ,202512010
-e,191,chara_sur_00501,ja,Summon,Maru,Left,1.5,"ノルマは六番組の\n完勝で行こ",202512010
-e,192,chara_sur_00601,ja,SpecialAttackCharge,Maru,Right,0.5,"偉大な姉の指示に\n従うのじゃ",202512010
-e,193,chara_sur_00601,ja,Summon,Maru,Left,1.5,六番組に任せい！,202512010
-e,194,chara_sur_00701,ja,SpecialAttackCharge,Maru,Right,0.5,"優希は千兆点の\nイケメンよ !!",202512010
-e,195,chara_sur_00701,ja,Summon,Maru,Left,1.5,"さー\n\n\n\n\n\nやろっか",202512010
-e,196,chara_sur_00801,ja,SpecialAttackCharge,Maru,Right,0.5,"ぶっ潰す !!",202512010
-e,197,chara_sur_00801,ja,Summon,Maru,Left,1.5,行かせるかよ！,202512010

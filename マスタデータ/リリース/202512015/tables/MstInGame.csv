@@ -1,4 +1,0 @@
-ENABLE,id,mst_auto_player_sequence_id,mst_auto_player_sequence_set_id,bgm_asset_key,boss_bgm_asset_key,loop_background_asset_key,player_outpost_asset_key,mst_page_id,mst_enemy_outpost_id,mst_defense_target_id,boss_mst_enemy_stage_parameter_id,boss_count,normal_enemy_hp_coef,normal_enemy_attack_coef,normal_enemy_speed_coef,boss_enemy_hp_coef,boss_enemy_attack_coef,boss_enemy_speed_coef,release_key
-e,pvp_Xmas_01,,,SSE_SBG_003_007,,,,pvp_Xmas_01,pvp,,1,,1,1,1,1,1,1,202512015
-e,event_yuw1_savage02_00001,event_yuw1_savage02_00001,event_yuw1_savage02_00001,SSE_SBG_003_006,SSE_SBG_003_007,,,event_yuw1_savage02_00001,event_yuw1_savage02_00001,,1,,1,1,1,1,1,1,202512015
-e,event_yuw1_savage02_00002,event_yuw1_savage02_00002,event_yuw1_savage02_00002,SSE_SBG_003_006,SSE_SBG_003_007,,,event_yuw1_savage02_00002,event_yuw1_savage02_00002,,1,,1,1,1,1,1,1,202512015

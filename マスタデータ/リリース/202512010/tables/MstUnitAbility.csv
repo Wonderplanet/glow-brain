@@ -1,6 +1,0 @@
-ENABLE,id,mst_ability_id,ability_parameter1,ability_parameter2,ability_parameter3,release_key
-e,ability_sur_00501_01,ability_poison_damage_cut,55,0,0,202512010
-e,ability_sur_00501_02,ability_gust_koma_block,0,0,0,202512010
-e,ability_sur_00601_01,ability_poison_damage_cut,40,0,0,202512010
-e,ability_sur_00701_01,ability_poison_damage_cut,20,0,0,202512010
-e,ability_sur_00801_01,ability_poison_damage_cut,40,0,0,202512010

@@ -1,5 +1,0 @@
-  post "quests/:id/session", to: "quests#create_session"
-  get "quests/current_session", to: "quests#get_current_session"
-  post "quests/session/puzzle_result", to: "quests#puzzle_result"
-  get "quests/session/puzzle_result", to: "quests#get_puzzle_result"
-  delete "quests/session", to: "quests#delete_session"

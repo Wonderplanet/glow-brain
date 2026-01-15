@@ -1,6 +1,0 @@
-ENABLE,release_key,id,mst_quest_id,language,name,category_name,flavor_text
-e,202512010,quest_event_sur1_charaget01_ja,quest_event_sur1_charaget01,ja,スレイブの誕生,ストーリー,
-e,202512010,quest_event_sur1_challenge01_ja,quest_event_sur1_challenge01,ja,魔都防衛隊,チャレンジ,
-e,202512010,quest_event_sur1_charaget02_ja,quest_event_sur1_charaget02,ja,隠れ里の戦い,ストーリー,
-e,202512010,quest_event_sur1_savage_ja,quest_event_sur1_savage,ja,スレイブと組長,高難易度,
-e,202512010,quest_event_sur1_1day_ja,quest_event_sur1_1day,ja,"精兵と管理人	",デイリー,

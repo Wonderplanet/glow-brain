@@ -1,5 +1,0 @@
-ENABLE,id,opr_gacha_id,mst_unit_id,language,sort_order,description,release_key
-e,25,Pickup_mag_001,chara_mag_00201,ja,1,"必殺ワザで遠距離から\n範囲攻撃できる\nアタックキャラ!\n特定の条件で攻撃UP",202511010
-e,26,Pickup_mag_001,chara_mag_00301,ja,2,"中距離のディフェンス\nキャラ!\n必殺ワザで自身が\n受けるダメージカット",202511010
-e,27,Pickup_mag_002,chara_mag_00001,ja,1,"遠距離からの\n通常攻撃が強力!\n必殺ワザの範囲攻撃で\n複数の相手にダメージ",202511010
-e,28,Pickup_mag_002,chara_mag_00301,ja,2,"中距離のディフェンス\nキャラ!\n必殺ワザで自身が\n受けるダメージカット",202511010

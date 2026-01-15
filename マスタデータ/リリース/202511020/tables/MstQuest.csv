@@ -1,6 +1,0 @@
-ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key
-e,quest_event_yuw1_charaget01,event,event_yuw_00001,1,yuw1_charaget01,"2025-11-25 15:00:00","2025-12-31 23:59:59",event_yuw1_charaget_753,Normal,202511020
-e,quest_event_yuw1_challenge01,event,event_yuw_00001,2,yuw1_challenge01,"2025-11-25 15:00:00","2025-12-31 23:59:59",event_yuw1_challenge01,Normal,202511020
-e,quest_event_yuw1_charaget02,event,event_yuw_00001,3,yuw1_charaget02,"2025-12-01 15:00:00","2025-12-31 23:59:59",event_yuw1_charaget_okumura,Normal,202511020
-e,quest_event_yuw1_savage,event,event_yuw_00001,4,yuw1_savage,"2025-11-25 15:00:00","2025-12-31 23:59:59",event_yuw1_savege,Normal,202511020
-e,quest_event_yuw1_1day,event,event_yuw_00001,5,yuw1_1day,"2025-11-25 15:00:00","2025-12-08 03:59:59",event_yuw1_1day,Normal,202511020

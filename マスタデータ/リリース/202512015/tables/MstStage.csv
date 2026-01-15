@@ -1,3 +1,0 @@
-ENABLE,id,mst_quest_id,mst_in_game_id,stage_number,recommended_level,cost_stamina,exp,coin,prev_mst_stage_id,mst_stage_tips_group_id,auto_lap_type,max_auto_lap_count,sort_order,asset_key,mst_stage_limit_status_id,release_key,mst_artwork_fragment_drop_group_id,start_at,end_at
-e,event_yuw1_savage02_00001,quest_event_yuw1_savage02,event_yuw1_savage02_00001,1,75,50,2500,2000,,1,__NULL__,1,1,general_diamond,,202512015,__NULL__,"2025-12-22 15:00:00","2025-12-31 23:59:59"
-e,event_yuw1_savage02_00002,quest_event_yuw1_savage02,event_yuw1_savage02_00002,2,80,100,5000,5000,event_yuw1_savage02_00001,1,__NULL__,1,2,general_diamond,,202512015,__NULL__,"2025-12-22 15:00:00","2025-12-31 23:59:59"
