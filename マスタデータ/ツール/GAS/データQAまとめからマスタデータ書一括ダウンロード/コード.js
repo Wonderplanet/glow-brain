@@ -45,6 +45,13 @@ function processSpreadsheets(listSheetUrl, sessionId, format = 'html') {
 
   // ヘルパー関数：ログを保存
   const addLog = (log) => {
+    // GAS実行ログにも出力
+    const logPrefix = `[${log.type.toUpperCase()}]`;
+    if (log.url) {
+      Logger.log(`${logPrefix} ${log.message}: ${log.url}`);
+    } else {
+      Logger.log(`${logPrefix} ${log.message}`);
+    }
     saveLog(sessionId, log);
   };
 
