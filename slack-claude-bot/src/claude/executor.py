@@ -46,6 +46,7 @@ class ClaudeExecutor:
         worktree_path: Path,
         session_id: str,
         is_first_message: bool = False,
+        agent_name: Optional[str] = None,
     ) -> ClaudeResult:
         """Execute Claude prompt directly.
 
@@ -54,6 +55,7 @@ class ClaudeExecutor:
             worktree_path: Working directory (worktree path)
             session_id: Session ID (for logging)
             is_first_message: Whether this is the first message in session
+            agent_name: Agent name for Claude CLI --agent option (optional)
 
         Returns:
             ClaudeResult
@@ -62,6 +64,11 @@ class ClaudeExecutor:
 
         # Build command
         cmd = [str(Config.CLAUDE_COMMAND_PATH)]
+
+        # Add --agent option if specified
+        if agent_name:
+            cmd.extend(["--agent", agent_name])
+
         if not is_first_message:
             cmd.append("-c")  # Continue session
         cmd.extend(["-p", "--dangerously-skip-permissions", prompt])
@@ -70,6 +77,7 @@ class ClaudeExecutor:
             "claude_executing",
             session_id=session_id,
             is_first=is_first_message,
+            agent_name=agent_name,
             cmd=" ".join(cmd[:3]) + " <prompt>",
             worktree=str(worktree_path),
         )

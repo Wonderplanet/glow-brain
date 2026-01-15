@@ -1,10 +1,14 @@
 """Configuration management for Slack-Claude Bot."""
 
+import json
 import os
 from pathlib import Path
 from typing import Optional
 
+import structlog
 from dotenv import load_dotenv
+
+logger = structlog.get_logger()
 
 # Load .env file
 load_dotenv()
@@ -39,6 +43,7 @@ class Config:
     WORKTREE_BASE_PATH: Path = Path(os.getenv("WORKTREE_BASE_PATH", "~/glow-worktrees")).expanduser()
     SOURCE_REPO_PATH: Path = Path(os.getenv("SOURCE_REPO_PATH", "~/Documents/workspace/glow/glow-brain")).expanduser()
     DB_PATH: Path = Path(os.getenv("DB_PATH", "./data/sessions.db"))
+    AGENTS_CONFIG_PATH: Path = Path(os.getenv("AGENTS_CONFIG_PATH", "./config/agents.json"))
 
     # Logging
     LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
@@ -67,6 +72,39 @@ class Config:
         # Remove dots from thread_ts for URL
         ts_without_dots = thread_ts.replace(".", "")
         return f"{cls.SLACK_WORKSPACE_URL}/archives/{channel_id}/p{ts_without_dots}"
+
+
+def get_available_agents() -> list[dict]:
+    """Get list of available agents from config/agents.json.
+
+    Returns:
+        List of agent configurations (enabled only).
+        Returns empty list if file not found or parse error.
+    """
+    agents_path = Config.AGENTS_CONFIG_PATH
+
+    if not agents_path.exists():
+        logger.warning("agents_file_not_found", path=str(agents_path))
+        return []
+
+    try:
+        with open(agents_path, encoding="utf-8") as f:
+            data = json.load(f)
+
+        agents = [
+            agent for agent in data.get("agents", {}).values()
+            if agent.get("enabled", True)
+        ]
+
+        logger.info("agents_loaded", count=len(agents))
+        return agents
+
+    except json.JSONDecodeError as e:
+        logger.error("agents_json_decode_error", error=str(e))
+        return []
+    except Exception as e:
+        logger.error("agents_load_error", error=str(e))
+        return []
 
 
 # Validate configuration on module import
