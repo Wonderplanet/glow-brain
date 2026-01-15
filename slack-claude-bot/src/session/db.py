@@ -42,6 +42,7 @@ class SessionDB:
                     github_branch TEXT,
                     github_pr_url TEXT,
                     github_pr_number INTEGER,
+                    agent_name TEXT,
                     status TEXT NOT NULL DEFAULT 'active',
                     created_at TIMESTAMP NOT NULL,
                     last_activity TIMESTAMP NOT NULL,
@@ -64,7 +65,21 @@ class SessionDB:
                 ON sessions(expires_at)
             """)
 
+        # Migrate existing database if needed
+        self._migrate_db()
+
         logger.info("database_initialized", db_path=str(self.db_path))
+
+    def _migrate_db(self) -> None:
+        """Add new columns if they don't exist (migration)."""
+        with sqlite3.connect(self.db_path) as conn:
+            # Check if agent_name column exists
+            cursor = conn.execute("PRAGMA table_info(sessions)")
+            columns = [row[1] for row in cursor.fetchall()]
+
+            if "agent_name" not in columns:
+                conn.execute("ALTER TABLE sessions ADD COLUMN agent_name TEXT")
+                logger.info("migrated_add_agent_name_column")
 
     def create_session(
         self,
@@ -78,6 +93,7 @@ class SessionDB:
         slack_user_name: Optional[str] = None,
         slack_thread_link: Optional[str] = None,
         claude_session_started: bool = False,
+        agent_name: Optional[str] = None,
     ) -> None:
         """Create a new session.
 
@@ -92,6 +108,7 @@ class SessionDB:
             slack_user_name: Slack user name (optional)
             slack_thread_link: Slack thread link (optional)
             claude_session_started: Whether Claude session has been started (optional)
+            agent_name: Agent name for Claude CLI --agent option (optional)
         """
         now = datetime.now()
 
@@ -101,9 +118,9 @@ class SessionDB:
                 INSERT INTO sessions
                 (id, slack_thread_id, slack_channel_id, slack_channel_name,
                  slack_user_id, slack_user_name, slack_thread_link,
-                 claude_session_started, worktree_path, status,
+                 claude_session_started, worktree_path, agent_name, status,
                  created_at, last_activity, expires_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?)
                 """,
                 (
                     session_id,
@@ -115,6 +132,7 @@ class SessionDB:
                     slack_thread_link,
                     1 if claude_session_started else 0,
                     worktree_path,
+                    agent_name,
                     now,
                     now,
                     expires_at,
@@ -125,6 +143,7 @@ class SessionDB:
             "session_created",
             session_id=session_id,
             slack_thread_id=slack_thread_id,
+            agent_name=agent_name,
         )
 
     def get_session_by_slack_thread(self, slack_thread_id: str) -> Optional[dict]:

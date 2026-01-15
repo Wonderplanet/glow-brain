@@ -1,0 +1,11 @@
+{
+  "agents": {
+    "pln-input-guide": {
+      "name": "pln-input-guide",
+      "display_name": "マスタデータ設定ガイド",
+      "description": "マスタデータ設定方法を非エンジニア向けに案内",
+      "enabled": true
+    }
+  },
+  "default_agent": null
+}

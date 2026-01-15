@@ -62,6 +62,11 @@ class SlackClaudeBot:
             """Handle branch selection button click."""
             await self.command_handlers.handle_branch_select_action(ack, body, client)
 
+        @self.app.action(re.compile("^select_agent_"))
+        async def handle_agent_select(ack, body, client):
+            """Handle agent selection button click."""
+            await self.command_handlers.handle_agent_select_action(ack, body, client)
+
         @self.app.event("message")
         async def handle_message(event, client, say):
             """Handle thread messages."""

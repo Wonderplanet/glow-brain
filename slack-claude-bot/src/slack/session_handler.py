@@ -82,6 +82,7 @@ class SessionHandler:
         channel_name: str,
         prompt: str,
         branch: Optional[str] = None,
+        agent_name: Optional[str] = None,
     ) -> None:
         """Process prompt and execute Claude.
 
@@ -95,6 +96,7 @@ class SessionHandler:
             channel_name: Slack channel name
             prompt: User prompt
             branch: Git branch to checkout for worktree (optional)
+            agent_name: Agent name for Claude CLI --agent option (optional)
         """
         lock = self._get_thread_lock(thread_ts)
 
@@ -108,6 +110,7 @@ class SessionHandler:
                     slack_channel_name=channel_name,
                     slack_user_name=user_name,
                     branch=branch,
+                    agent_name=agent_name,
                 )
 
                 is_first = not session.claude_session_started
@@ -133,6 +136,7 @@ class SessionHandler:
                     worktree_path=Path(session.worktree_path),
                     session_id=session.id,
                     is_first_message=is_first,
+                    agent_name=agent_name or session.agent_name,
                 )
 
                 if is_first:

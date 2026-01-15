@@ -30,6 +30,7 @@ class Session:
         self.github_branch: Optional[str] = data.get("github_branch")
         self.github_pr_url: Optional[str] = data.get("github_pr_url")
         self.github_pr_number: Optional[int] = data.get("github_pr_number")
+        self.agent_name: Optional[str] = data.get("agent_name")
         self.status: str = data["status"]
         self.created_at: datetime = data["created_at"]
         self.last_activity: datetime = data["last_activity"]
@@ -69,6 +70,7 @@ class SessionManager:
         slack_channel_name: Optional[str] = None,
         slack_user_name: Optional[str] = None,
         branch: Optional[str] = None,
+        agent_name: Optional[str] = None,
     ) -> Session:
         """Get existing session or create new one.
 
@@ -79,6 +81,7 @@ class SessionManager:
             slack_channel_name: Slack channel name (optional)
             slack_user_name: Slack user name (optional)
             branch: Git branch to checkout for worktree (optional)
+            agent_name: Agent name for Claude CLI --agent option (optional)
 
         Returns:
             Session object
@@ -139,6 +142,7 @@ class SessionManager:
                 slack_user_name=slack_user_name,
                 slack_thread_link=slack_thread_link,
                 claude_session_started=claude_session_started,
+                agent_name=agent_name,
             )
 
             logger.info(
