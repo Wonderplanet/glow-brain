@@ -1,4 +1,0 @@
-enum:
-  - name: Language
-    params:
-      - name: ja

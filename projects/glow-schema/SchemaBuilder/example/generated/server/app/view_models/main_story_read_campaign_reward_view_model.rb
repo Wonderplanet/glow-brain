@@ -1,4 +1,0 @@
-class MainStoryReadCampaignRewardViewModel < BaseViewModel
-  attr_accessor :opr_main_story_read_campaign_reward_id
-
-end

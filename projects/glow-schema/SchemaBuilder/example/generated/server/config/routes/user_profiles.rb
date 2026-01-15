@@ -1,5 +1,0 @@
-  patch "user_profiles/nickname", to: "user_profiles#nickname"
-  patch "user_profiles/scenario_name", to: "user_profiles#scenario_name"
-  patch "user_profiles/gender", to: "user_profiles#gender"
-  patch "user_profiles/description", to: "user_profiles#description"
-  patch "user_profiles/birthday", to: "user_profiles#birthday"

@@ -1,5 +1,0 @@
-class PuzzleResultDropViewModel < BaseViewModel
-  attr_accessor :mst_item_id, 
- :amount
-
-end
