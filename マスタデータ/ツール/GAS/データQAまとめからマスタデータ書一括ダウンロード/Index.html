@@ -31,7 +31,7 @@
     </select>
     <br>
     <label>
-      <input type="checkbox" id="enableLogs" checked>
+      <input type="checkbox" id="enableLogs">
       リアルタイムログ表示
     </label>
     <br><br>
@@ -97,6 +97,15 @@
         if (allLogs.length > lastLogCount) {
           const newLogs = allLogs.slice(lastLogCount);
           newLogs.forEach(log => {
+            // console.logにも出力
+            const logPrefix = `[${log.type.toUpperCase()}]`;
+            if (log.url) {
+              console.log(logPrefix, log.message, log.url);
+            } else {
+              console.log(logPrefix, log.message);
+            }
+
+            // UI表示
             const logLine = document.createElement('div');
             logLine.className = 'log-' + log.type;
 
