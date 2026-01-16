@@ -1,6 +1,6 @@
 # glow-brain-gemini 全ソースコード (Part 2)
 
-生成日時: 2026-01-16 15:36:39
+生成日時: 2026-01-16 17:38:32
 
 ---
 
@@ -1412,28 +1412,6 @@ e,202602020,78_ja,78,ja,
 
 ---
 
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstAdventBattle.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstAdventBattle.csv
-
-```csv
-memo
-TABLE,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattle,MstAdventBattleI18n,MstAdventBattleI18n
-ENABLE,id,mst_event_id,mst_in_game_id,asset_key,advent_battle_type,initial_battle_point,score_addition_type,score_additional_coef,score_addition_target_mst_enemy_stage_parameter_id,mst_stage_rule_group_id,event_bonus_group_id,challengeable_count,ad_challengeable_count,display_mst_unit_id1,display_mst_unit_id2,display_mst_unit_id3,exp,coin,start_at,end_at,release_key,name.ja,boss_description.ja
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstArtwork.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstArtwork.csv
-
-```csv
-memo
-TABLE,MstArtwork,MstArtwork,MstArtwork,MstArtwork,MstArtwork,MstArtwork,MstArtworkI18n,MstArtworkI18n
-ENABLE,id,mst_series_id,outpost_additional_hp,asset_key,sort_order,release_key,name.ja,description.ja
-```
-
----
-
 <!-- FILE: ./projects/glow-masterdata/sheet_schema/MstComebackBonus.csv -->
 ## ./projects/glow-masterdata/sheet_schema/MstComebackBonus.csv
 
@@ -1452,39 +1430,6 @@ ENABLE,id,release_key,mst_comeback_bonus_schedule_id,login_day_count,mst_daily_b
 memo,,,,,,
 TABLE,MstDailyBonusReward,MstDailyBonusReward,MstDailyBonusReward,MstDailyBonusReward,MstDailyBonusReward,MstDailyBonusReward
 ENABLE,id,release_key,group_id,resource_type,resource_id,resource_amount
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstEnemyCharacter.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstEnemyCharacter.csv
-
-```csv
-memo,,,,,,,,,,フレーバーチェック
-TABLE,MstEnemyCharacter,MstEnemyCharacter,MstEnemyCharacter,MstEnemyCharacter,MstEnemyCharacter,MstEnemyCharacter,MstEnemyCharacter,MstEnemyCharacterI18n,MstEnemyCharacterI18n
-ENABLE,release_key,id,mst_series_id,asset_key,is_phantomized,is_displayed_encyclopedia,mst_attack_hit_onomatopeia_group_id,name.ja,description.ja
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstEvent.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstEvent.csv
-
-```csv
-memo
-TABLE,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEvent,MstEventI18n,MstEventI18n
-ENABLE,id,mst_series_id,is_displayed_series_logo,is_displayed_jump_plus,start_at,end_at,asset_key,release_key,name.ja,balloon.ja
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstItem.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstItem.csv
-
-```csv
-memo
-TABLE,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItem,MstItemI18n,MstItemI18n
-ENABLE,id,type,group_type,rarity,asset_key,effect_value,sort_order,start_date,end_date,release_key,item_type,destination_opr_product_id,name.ja,description.ja
 ```
 
 ---
@@ -1639,83 +1584,6 @@ ENABLE,id,release_key,group_id,resource_type,resource_id,resource_amount,sort_or
 memo,,,,,,,,,,,
 TABLE,MstMissionWeekly,MstMissionWeekly,MstMissionWeekly,MstMissionWeekly,MstMissionWeekly,MstMissionWeekly,MstMissionWeekly,MstMissionWeekly,MstMissionWeekly,MstMissionWeekly,MstMissionWeeklyI18n
 ENABLE,id,release_key,criterion_type,criterion_value,criterion_count,group_key,bonus_point,mst_mission_reward_group_id,sort_order,destination_scene,description.ja
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstPack.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstPack.csv
-
-```csv
-memo
-TABLE,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPack,MstPackI18n
-ENABLE,id,product_sub_id,discount_rate,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,is_first_time_free,cost_amount,is_recommend,asset_key,pack_decoration,release_key,name.ja
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstQuest.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstQuest.csv
-
-```csv
-memo
-TABLE,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuestI18n,MstQuestI18n,MstQuestI18n
-ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key,name.ja,category_name.ja,flavor_text.ja
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstShopItem.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstShopItem.csv
-
-```csv
-memo,,,,,,,,,,,,,商品内容
-TABLE,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem
-ENABLE,id,shop_type,cost_type,cost_amount,is_first_time_free,tradable_count,resource_type,resource_id,resource_amount,start_date,end_date,release_key
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstShopPass.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstShopPass.csv
-
-```csv
-memo
-TABLE,MstShopPass,MstShopPass,MstShopPass,MstShopPass,MstShopPass,MstShopPass,MstShopPass,MstShopPassI18n
-ENABLE,id,opr_product_id,is_display_expiration,pass_duration_days,asset_key,shop_pass_cell_color,release_key,name.ja
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstStage.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstStage.csv
-
-```csv
-memo
-TABLE,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStageI18n,MstStageI18n
-ENABLE,id,mst_quest_id,mst_in_game_id,stage_number,recommended_level,cost_stamina,exp,coin,prev_mst_stage_id,mst_stage_tips_group_id,auto_lap_type,max_auto_lap_count,sort_order,asset_key,mst_stage_limit_status_id,release_key,mst_artwork_fragment_drop_group_id,start_at,end_at,name.ja,category_name.ja
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/MstUnit.csv -->
-## ./projects/glow-masterdata/sheet_schema/MstUnit.csv
-
-```csv
-memo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,フレーバーチェック
-TABLE,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnit,MstUnitI18n,MstUnitI18n,,MstUnitI18n
-ENABLE,id,fragment_mst_item_id,role_type,color,attack_range_type,unit_label,has_specific_rank_up,mst_series_id,asset_key,rarity,sort_order,summon_cost,summon_cool_time,special_attack_initial_cool_time,special_attack_cool_time,min_hp,max_hp,damage_knock_back_count,move_speed,well_distance,min_attack_power,max_attack_power,mst_unit_ability_id1,ability_unlock_rank1,mst_unit_ability_id2,ability_unlock_rank2,mst_unit_ability_id3,ability_unlock_rank3,is_encyclopedia_special_attack_position_right,release_key,name.ja,description.ja,,detail.ja
-```
-
----
-
-<!-- FILE: ./projects/glow-masterdata/sheet_schema/OprProduct.csv -->
-## ./projects/glow-masterdata/sheet_schema/OprProduct.csv
-
-```csv
-memo,,,,,,,,,,,商品内容,iOSプロダクトID,AndroidプロダクトID,iOS価格,Android価格
-TABLE,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProduct,OprProductI18n
-ENABLE,id,mst_store_product_id,product_type,purchasable_count,paid_amount,display_priority,start_date,end_date,release_key,asset_key.ja
 ```
 
 ---
