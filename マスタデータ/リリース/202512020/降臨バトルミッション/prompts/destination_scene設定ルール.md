@@ -5,17 +5,11 @@
 `destination_scene`は、ミッションをタップした際の遷移先シーンを指定するカラムです。
 このドキュメントでは、設定可能な値とその使用方法を説明します。
 
-## データソース
-
-destination_sceneの定義は以下のファイルに記載されています。
-
-- `projects/glow-client/Assets/GLOW/Scripts/Runtime/Core/Domain/ValueObjects/DestinationScene.cs`
-
 ## 基本ルール
 
 ### 1. enum定義済みの値を使用
 
-destination_sceneには、`DestinationScene.cs`の`DestinationSceneEnum`に定義されている値を基本とします。
+destination_sceneには、このドキュメントに記載されている値を基本とします。
 未定義の値を設定すると、クライアント側で正しく処理されない可能性があります。
 
 ### 2. 大文字小文字の一致
@@ -25,7 +19,7 @@ enum名と完全一致する文字列を設定してください。
 
 ## 設定可能な値一覧
 
-以下は、`DestinationScene.cs`に定義されている標準的な遷移先です。
+以下は、設定可能な標準的な遷移先です。
 
 ### Empty
 
@@ -290,7 +284,7 @@ AdventBattle
 
 destination_scene設定時は、以下を確認してください。
 
-- [ ] `DestinationScene.cs`のenum定義に存在する値である（またはカスタム遷移先として承認済み）
+- [ ] このドキュメントに記載されている値である（またはカスタム遷移先として承認済み）
 - [ ] 大文字小文字が正確に一致している
 - [ ] ミッションの達成条件に適した遷移先である
 - [ ] ユーザーが次のアクションを取りやすい遷移先である
@@ -303,7 +297,7 @@ destination_scene設定時は、以下を確認してください。
 **原因1**: enum定義にない値を設定している
 
 **対処**:
-1. `DestinationScene.cs`を確認
+1. このドキュメントの「設定可能な値一覧」セクションを確認
 2. 正しい値に修正
 3. カスタム遷移先の場合は開発チームに確認
 
@@ -329,33 +323,6 @@ destination_scene設定時は、以下を確認してください。
 1. 過去の実装例を確認
 2. クライアント側の対応を確認
 3. 不明な場合は開発チームに確認
-
-## 実装の確認方法
-
-### クライアントコードでの定義確認
-
-`DestinationScene.cs`ファイルで、利用可能な値を確認できます。
-
-```csharp
-public enum DestinationSceneEnum
-{
-    Empty,
-    QuestSelect,
-    StageSelect,
-    Home,
-    // ... その他の値
-}
-```
-
-### 遷移処理の実装確認
-
-各遷移先の実際の処理は、クライアント側のPresenterやUseCaseで実装されています。
-新しい遷移先を追加する場合は、対応する処理の実装が必要です。
-
-## 参考資料
-
-- `projects/glow-client/Assets/GLOW/Scripts/Runtime/Core/Domain/ValueObjects/DestinationScene.cs` - destination_sceneの定義
-- 過去のマスタデータCSV - 実装例の参照
 
 ## 補足情報
 

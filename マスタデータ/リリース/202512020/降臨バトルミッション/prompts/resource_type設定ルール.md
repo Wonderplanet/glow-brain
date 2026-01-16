@@ -5,18 +5,11 @@
 `resource_type`は、ミッション報酬のリソースタイプを指定するカラムです。
 このドキュメントでは、設定可能な値とその使用方法を説明します。
 
-## データソース
-
-resource_typeの定義は以下のファイルに記載されています。
-
-- `projects/glow-server/api/database/schema/exports/master_tables_schema.json` - DBスキーマ定義
-- `projects/glow-server/api/app/Domain/Resource/Enums/RewardType.php` - サーバー実装
-
 ## 基本ルール
 
 ### 1. enum定義済みの値のみ設定可能
 
-resource_typeには、`RewardType.php`に定義されているenum値のみ設定できます。
+resource_typeには、このドキュメントに記載されているenum値のみ設定できます。
 未定義の値を設定すると、データ投入エラーまたは報酬付与エラーが発生します。
 
 ### 2. resource_idの設定有無
@@ -36,7 +29,7 @@ enum値と完全一致する文字列を設定してください。
 
 ## 設定可能な値一覧
 
-以下は、`RewardType.php`に定義されているすべてのresource_typeです。
+以下は、設定可能なすべてのresource_typeです。
 
 ---
 
@@ -356,7 +349,7 @@ e,mission_reward_602,202512020,special_reward_1,Item,ticket_glo_00002,1,3,ガシ
 
 resource_type設定時は、以下を確認してください。
 
-- [ ] `RewardType.php`に定義されている値である
+- [ ] このドキュメントに定義されている値である
 - [ ] 大文字小文字が正確に一致している
 - [ ] resource_id必要なタイプには、正しいIDを設定している
 - [ ] resource_id不要なタイプには、空欄を設定している
@@ -368,10 +361,10 @@ resource_type設定時は、以下を確認してください。
 
 ### エラー: Invalid resource_type
 
-**原因**: `RewardType.php`に定義されていない値を設定している
+**原因**: 定義されていないresource_typeを設定している
 
 **対処**:
-1. `RewardType.php`を確認
+1. このドキュメントの「設定可能な値一覧」セクションを確認
 2. 正しいresource_typeに修正
 3. タイプミスがないか確認（例: `Coins` → `Coin`）
 
@@ -412,54 +405,6 @@ resource_type設定時は、以下を確認してください。
 2. 一致していない場合、修正
 
 ---
-
-## 実装の確認方法
-
-### サーバーコードでの定義確認
-
-`RewardType.php`ファイルで、利用可能な値を確認できます。
-
-```php
-enum RewardType: string
-{
-    case COIN = 'Coin';
-    case FREE_DIAMOND = 'FreeDiamond';
-    case STAMINA = 'Stamina';
-    case ITEM = 'Item';
-    case EMBLEM = 'Emblem';
-    case EXP = 'Exp';
-    case UNIT = 'Unit';
-    case PAID_DIAMOND = 'PaidDiamond';
-    case ARTWORK = 'Artwork';
-}
-```
-
-### resource_id必要判定の確認
-
-`hasResourceId()`メソッドで、resource_id必要判定が実装されています。
-
-```php
-public function hasResourceId(): bool
-{
-    return match ($this) {
-        self::COIN => false,
-        self::FREE_DIAMOND => false,
-        self::STAMINA => false,
-        self::ITEM => true,
-        self::EMBLEM => true,
-        self::EXP => false,
-        self::UNIT => true,
-        self::PAID_DIAMOND => false,
-        self::ARTWORK => true,
-    };
-}
-```
-
-## 参考資料
-
-- `projects/glow-server/api/app/Domain/Resource/Enums/RewardType.php` - resource_typeの定義
-- `projects/glow-server/api/database/schema/exports/master_tables_schema.json` - DBスキーマ定義
-- 各マスターテーブルCSV - resource_idの参照先
 
 ## 補足情報
 
