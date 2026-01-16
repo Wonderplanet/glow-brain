@@ -1,0 +1,3 @@
+memo,,,,,,,,,,,
+TABLE,MstMissionDaily,MstMissionDaily,MstMissionDaily,MstMissionDaily,MstMissionDaily,MstMissionDaily,MstMissionDaily,MstMissionDaily,MstMissionDaily,MstMissionDaily,MstMissionDailyI18n
+ENABLE,id,release_key,criterion_type,criterion_value,criterion_count,group_key,bonus_point,mst_mission_reward_group_id,sort_order,destination_scene,description.ja

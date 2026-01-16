@@ -1,0 +1,3 @@
+memo,,,,,,
+TABLE,MstMissionDailyBonus,MstMissionDailyBonus,MstMissionDailyBonus,MstMissionDailyBonus,MstMissionDailyBonus,MstMissionDailyBonus
+ENABLE,id,release_key,mission_daily_bonus_type,login_day_count,mst_mission_reward_group_id,sort_order
