@@ -1,3 +1,0 @@
-memo
-TABLE,MstInGameSpecialRule,MstInGameSpecialRule,MstInGameSpecialRule,MstInGameSpecialRule,MstInGameSpecialRule,MstInGameSpecialRule,MstInGameSpecialRule,MstInGameSpecialRule
-ENABLE,id,content_type,target_id,rule_type,rule_value,start_at,end_at,release_key

@@ -1,3 +1,0 @@
-memo
-TABLE,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward,MstStageReward
-ENABLE,id,mst_stage_id,reward_category,resource_type,resource_id,resource_amount,percentage,sort_order,release_key,weight

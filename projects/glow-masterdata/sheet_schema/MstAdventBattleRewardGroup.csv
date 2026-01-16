@@ -1,3 +1,0 @@
-memo
-TABLE,MstAdventBattleRewardGroup,MstAdventBattleRewardGroup,MstAdventBattleRewardGroup,MstAdventBattleRewardGroup,MstAdventBattleRewardGroup
-ENABLE,id,mst_advent_battle_id,reward_category,condition_value,release_key

@@ -1,3 +1,0 @@
-memo
-TABLE,MstAdventBattleRank,MstAdventBattleRank,MstAdventBattleRank,MstAdventBattleRank,MstAdventBattleRank,MstAdventBattleRank,MstAdventBattleRank
-ENABLE,id,mst_advent_battle_id,rank_type,rank_level,required_lower_score,asset_key,release_key

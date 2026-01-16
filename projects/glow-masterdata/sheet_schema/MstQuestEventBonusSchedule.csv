@@ -1,3 +1,0 @@
-memo
-TABLE,MstQuestEventBonusSchedule,MstQuestEventBonusSchedule,MstQuestEventBonusSchedule,MstQuestEventBonusSchedule,MstQuestEventBonusSchedule,MstQuestEventBonusSchedule
-ENABLE,id,mst_quest_id,event_bonus_group_id,start_at,end_at,release_key

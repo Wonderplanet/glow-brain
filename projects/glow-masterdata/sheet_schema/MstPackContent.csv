@@ -1,3 +1,0 @@
-memo
-TABLE,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent,MstPackContent
-ENABLE,id,mst_pack_id,resource_type,resource_id,resource_amount,is_bonus,display_order,release_key

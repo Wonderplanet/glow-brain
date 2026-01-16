@@ -1,7 +1,0 @@
-ENABLE,id,role_type,color_advantage_attack_bonus,color_advantage_defense_bonus,release_key
-e,1,Attack,1.5,0.7,202509010
-e,2,Defense,1.5,0.7,202509010
-e,3,Support,1.5,0.7,202509010
-e,4,Technical,1.5,0.7,202509010
-e,5,Special,1,1,202509010
-e,6,Unique,1,1,202509010
