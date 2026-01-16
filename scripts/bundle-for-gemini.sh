@@ -5,7 +5,7 @@ set -e
 echo "🚀 Geminiアップロード用ファイル統合スクリプト"
 
 # 出力ディレクトリの設定
-OUTPUT_DIR="dist/gemini-upload"
+OUTPUT_DIR="gemini/bundles"
 INDEX_FILE="$OUTPUT_DIR/index.md"
 CONTENT_FILE="$OUTPUT_DIR/content.md"
 
