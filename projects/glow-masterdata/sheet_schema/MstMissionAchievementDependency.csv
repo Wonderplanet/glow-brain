@@ -1,0 +1,3 @@
+memo,,,,,
+TABLE,MstMissionAchievementDependency,MstMissionAchievementDependency,MstMissionAchievementDependency,MstMissionAchievementDependency,MstMissionAchievementDependency
+ENABLE,id,release_key,group_id,mst_mission_achievement_id,unlock_order

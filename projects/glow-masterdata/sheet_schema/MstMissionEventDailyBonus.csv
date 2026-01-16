@@ -1,0 +1,3 @@
+memo,,,,,,,
+TABLE,MstMissionEventDailyBonus,MstMissionEventDailyBonus,MstMissionEventDailyBonus,MstMissionEventDailyBonus,MstMissionEventDailyBonus,MstMissionEventDailyBonus,MstMissionEventDailyBonus
+ENABLE,id,release_key,mst_mission_event_daily_bonus_schedule_id,login_day_count,mst_mission_reward_group_id,sort_order,備考
