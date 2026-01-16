@@ -1,0 +1,11015 @@
+# glow-brain-gemini 全ソースコード (Part 3)
+
+生成日時: 2026-01-16 14:39:37
+
+---
+
+<!-- FILE: ./projects/glow-server/api/database/schema/exports/master_tables_schema.json -->
+## ./projects/glow-server/api/database/schema/exports/master_tables_schema.json
+
+```json
+{
+    "databases": {
+        "mst": {
+            "tables": {
+                "mst_abilities": {
+                    "comment": "ユニット特性・コマ効果の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "ability_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "アビリティタイプ"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "アセットキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_abilities_i18n": {
+                    "comment": "ユニット特性・コマ効果の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_ability_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstAbilityId"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語設定"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "説明文"
+                        },
+                        "filter_title": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "ユニットソートフィルタータイトル"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_advent_battle_clear_rewards": {
+                    "comment": "降臨バトルのクリア報酬設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_advent_battle_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_advent_battle.id"
+                        },
+                        "reward_category": {
+                            "type": "enum('Always','FirstClear','Random')",
+                            "nullable": false,
+                            "comment": "報酬カテゴリー"
+                        },
+                        "resource_type": {
+                            "type": "enum('Exp','Coin','FreeDiamond','Item','Emblem','Unit')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬のID(アイテムだったらアイテムのID、コインやプリズムなら空)"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "配布される報酬の量"
+                        },
+                        "percentage": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "出現比重"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "ソート順序"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_advent_battle_clear_rewards_mst_advent_battle_id_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_advent_battle_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "mst_advent_battle_id_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_advent_battle_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_advent_battle_ranks": {
+                    "comment": "降臨バトルのランク設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_advent_battle_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_advent_battles.id"
+                        },
+                        "rank_type": {
+                            "type": "enum('Bronze','Silver','Gold','Master')",
+                            "nullable": false,
+                            "comment": "降臨バトルランクタイプ"
+                        },
+                        "rank_level": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "comment": "ランクレベル"
+                        },
+                        "required_lower_score": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "このランクタイプとレベル到達に必要な最低スコア"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_advent_battle_reward_groups": {
+                    "comment": "降臨バトルの報酬情報をグルーピング",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_advent_battle_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_advent_battles.id"
+                        },
+                        "reward_category": {
+                            "type": "enum('MaxScore','Ranking','Rank','RaidTotalScore')",
+                            "nullable": false,
+                            "comment": "報酬カテゴリー"
+                        },
+                        "condition_value": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "報酬条件値"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_advent_battle_rewards": {
+                    "comment": "降臨バトルの報酬設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_advent_battle_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_advent_battle_reward_groups.id"
+                        },
+                        "resource_type": {
+                            "type": "enum('Coin','FreeDiamond','Item','Emblem')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬ID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "報酬数量"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_advent_battles": {
+                    "comment": "降臨バトルの基本設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "mst_events.id"
+                        },
+                        "mst_in_game_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "mst_in_games.id"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "アセットキー"
+                        },
+                        "advent_battle_type": {
+                            "type": "enum('ScoreChallenge','Raid')",
+                            "nullable": false,
+                            "comment": "降臨バトルタイプ"
+                        },
+                        "initial_battle_point": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "インゲーム開始時のリーダーP"
+                        },
+                        "mst_stage_rule_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "mst_stage_event_rules.group_id"
+                        },
+                        "event_bonus_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "mst_event_bonus_units.event_bonus_group_id"
+                        },
+                        "challengeable_count": {
+                            "type": "smallint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "1日の挑戦可能回数"
+                        },
+                        "ad_challengeable_count": {
+                            "type": "smallint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "1日の広告視聴での挑戦可能回数"
+                        },
+                        "display_mst_unit_id1": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "降臨バトルトップ場所1に表示するキャラ"
+                        },
+                        "display_mst_unit_id2": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "降臨バトルトップ場所2に表示するキャラ"
+                        },
+                        "display_mst_unit_id3": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "降臨バトルトップ場所3に表示するキャラ"
+                        },
+                        "exp": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "獲得リーダーEXP"
+                        },
+                        "coin": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "獲得コイン"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "降臨バトル開始日"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "降臨バトル終了日"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "score_addition_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "AllEnemiesAndOutPost",
+                            "comment": "降臨バトルスコア加算タイプ(スコアチャレンジ、レイド)"
+                        },
+                        "score_additional_coef": {
+                            "type": "decimal(5,3)",
+                            "nullable": false,
+                            "default": "0.000",
+                            "comment": "降臨バトルスコア加算係数"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_advent_battles_i18n": {
+                    "comment": "降臨バトルの基本設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_advent_battle_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_advent_battles.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "名前"
+                        },
+                        "boss_description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "降臨バトルボス説明文"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_api_actions": {
+                    "comment": "API動作設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "api_path": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "APIパス"
+                        },
+                        "through_app": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "comment": "アプリバージョンのチェック（強制アプデなど）をスキップするか"
+                        },
+                        "through_master": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "comment": "マスターデータのバージョンチェックをスキップするか"
+                        },
+                        "through_date": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "comment": "日跨ぎチェックをスキップするか"
+                        },
+                        "through_asset": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "comment": "アセットデータのバージョンチェックをスキップするか"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        },
+                        "resource": {
+                            "type": "json",
+                            "nullable": true,
+                            "comment": "API追加情報"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "mst_api_actions_api_path_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "api_path"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_artwork_fragment_positions": {
+                    "comment": "原画のかけらの表示位置設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_artwork_fragment_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_artwork_fragments.id"
+                        },
+                        "position": {
+                            "type": "smallint unsigned",
+                            "nullable": true,
+                            "comment": "表示位置(1~16)"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_artwork_fragments": {
+                    "comment": "原画のかけら設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_artwork_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_artworks.id"
+                        },
+                        "drop_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "ステージのドロップ単位(非ドロップはNULL)"
+                        },
+                        "drop_percentage": {
+                            "type": "smallint unsigned",
+                            "nullable": true,
+                            "comment": "ドロップ率(非ドロップはNULL)"
+                        },
+                        "rarity": {
+                            "type": "enum('N','R','SR','SSR','UR')",
+                            "nullable": false,
+                            "default": "R",
+                            "comment": "レアリティ"
+                        },
+                        "asset_num": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "アセット番号"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_artwork_fragments_i18n": {
+                    "comment": "原画のかけら名などの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_artwork_fragment_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_artwork_fragments.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(15)",
+                            "nullable": false,
+                            "comment": "原画のかけら名"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_mst_artwork_fragment_id_language": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_artwork_fragment_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_artworks": {
+                    "comment": "原画の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_series_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_series.id"
+                        },
+                        "outpost_additional_hp": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "完成時にゲートに加算するHP"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "原画画像アセット"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "ソート順"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_artworks_i18n": {
+                    "comment": "原画名などの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_artwork_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_series.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(40)",
+                            "nullable": false,
+                            "comment": "原画名"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "原画の説明文"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_mst_artwork_id_language": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_artwork_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_attack_elements": {
+                    "comment": "インゲーム向けユニットの攻撃データ",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_attack_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_attacks.id"
+                        },
+                        "sort_order": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "表示順"
+                        },
+                        "attack_delay": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "攻撃が発生するまでの時間"
+                        },
+                        "attack_type": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "range_start_type": {
+                            "type": "enum('Distance','Koma','KomaLine','Page')",
+                            "nullable": false,
+                            "comment": "攻撃範囲開始タイプ"
+                        },
+                        "range_start_parameter": {
+                            "type": "double(8,2)",
+                            "nullable": false,
+                            "comment": "攻撃範囲開始値"
+                        },
+                        "range_end_type": {
+                            "type": "enum('Distance','Koma','KomaLine','Page')",
+                            "nullable": false,
+                            "comment": "攻撃範囲終了タイプ"
+                        },
+                        "range_end_parameter": {
+                            "type": "double(8,2)",
+                            "nullable": false,
+                            "comment": "攻撃範囲終了値"
+                        },
+                        "max_target_count": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "攻撃対象最大数"
+                        },
+                        "target": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "target_type": {
+                            "type": "enum('All','Character','Outpost')",
+                            "nullable": false,
+                            "comment": "対象タイプ"
+                        },
+                        "target_colors": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "対象属性"
+                        },
+                        "target_roles": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "対象ロールタイプ"
+                        },
+                        "target_mst_series_ids": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "対象シリーズID"
+                        },
+                        "target_mst_character_ids": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "対象ユニットID群"
+                        },
+                        "damage_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "ダメージタイプ"
+                        },
+                        "hit_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "Normal",
+                            "comment": "命中効果タイプ"
+                        },
+                        "hit_parameter1": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "命中効果値1"
+                        },
+                        "hit_parameter2": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "命中効果値2"
+                        },
+                        "hit_effect_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "命中時エフェクトID"
+                        },
+                        "is_hit_stop": {
+                            "type": "tinyint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ヒットストップするか"
+                        },
+                        "probability": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "確率"
+                        },
+                        "power_parameter_type": {
+                            "type": "enum('Percentage','Fixed','MaxHpPercentage')",
+                            "nullable": false,
+                            "comment": "攻撃力増減タイプ"
+                        },
+                        "power_parameter": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "攻撃力増減値"
+                        },
+                        "effect_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "攻撃効果タイプ"
+                        },
+                        "effective_count": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "攻撃効果回数"
+                        },
+                        "effective_duration": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "攻撃効果間隔"
+                        },
+                        "effect_parameter": {
+                            "type": "double",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "攻撃効果値"
+                        },
+                        "effect_value": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "攻撃効果値(文字列)"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_attack_hit_effects": {
+                    "comment": "ユニットの攻撃ヒット演出設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "onomatopoeia1_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "擬音語アセットキー1"
+                        },
+                        "onomatopoeia2_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "擬音語アセットキー2"
+                        },
+                        "onomatopoeia3_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "擬音語アセットキー3"
+                        },
+                        "sound_effect_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "SEアセットキー"
+                        },
+                        "killer_sound_effect_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "弱点攻撃SEアセットキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_attacks": {
+                    "comment": "ユニットの攻撃データ",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst.units.id"
+                        },
+                        "unit_grade": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "ユニットグレード"
+                        },
+                        "attack_kind": {
+                            "type": "enum('Normal','Special','Appearance')",
+                            "nullable": false,
+                            "comment": "攻撃種別"
+                        },
+                        "killer_colors": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "弱点対象属性"
+                        },
+                        "killer_percentage": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "弱点割合"
+                        },
+                        "action_frames": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "アクションフレーム数"
+                        },
+                        "attack_delay": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "攻撃が発生するまでの時間"
+                        },
+                        "next_attack_interval": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "次回攻撃間隔"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_attacks_i18n": {
+                    "comment": "ユニットの攻撃データの多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_attack_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_attacks.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "description": {
+                            "type": "varchar(512)",
+                            "nullable": false,
+                            "comment": "攻撃説明"
+                        },
+                        "grade_description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "グレード説明"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_auto_player_sequences": {
+                    "comment": "インゲーム内敵出現ルール",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "sequence_set_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "シーケンスセット用のID"
+                        },
+                        "sequence_element_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "順序要素ID"
+                        },
+                        "sequence_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "順序グループID"
+                        },
+                        "priority_sequence_element_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "優先順序要素ID"
+                        },
+                        "condition_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "条件タイプ"
+                        },
+                        "condition_value": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "条件値"
+                        },
+                        "action_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "アクション種別"
+                        },
+                        "action_value": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アクション値"
+                        },
+                        "action_value2": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "アクション値2"
+                        },
+                        "summon_animation_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "召喚アニメーションタイプ"
+                        },
+                        "summon_count": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "召喚数"
+                        },
+                        "summon_interval": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "召喚間隔"
+                        },
+                        "action_delay": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "アクションするまでの時間"
+                        },
+                        "summon_position": {
+                            "type": "double",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "召喚位置"
+                        },
+                        "move_start_condition_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "移動を開始する条件"
+                        },
+                        "move_start_condition_value": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "移動開始条件で使用するパラメータ"
+                        },
+                        "move_stop_condition_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "移動を停止する条件"
+                        },
+                        "move_stop_condition_value": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "移動停止条件で使用するパラメータ"
+                        },
+                        "move_restart_condition_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "移動停止後に再度移動開始する条件"
+                        },
+                        "move_restart_condition_value": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "再移動開始条件で使用するパラメータ"
+                        },
+                        "move_loop_count": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "移動・停止を繰り返す回数"
+                        },
+                        "last_boss_trigger": {
+                            "type": "tinyint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ラスボストリガー"
+                        },
+                        "aura_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "Default",
+                            "comment": "オーラタイプ"
+                        },
+                        "death_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "死亡タイプ"
+                        },
+                        "override_drop_battle_point": {
+                            "type": "int",
+                            "nullable": true,
+                            "comment": "上書きするドロップバトルポイント"
+                        },
+                        "defeated_score": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "撃破スコア"
+                        },
+                        "enemy_hp_coef": {
+                            "type": "double",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "敵HP係数"
+                        },
+                        "enemy_attack_coef": {
+                            "type": "double",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "敵攻撃力係数"
+                        },
+                        "enemy_speed_coef": {
+                            "type": "double",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "敵速度係数"
+                        },
+                        "deactivation_condition_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "このSequenceが非活性化する条件"
+                        },
+                        "deactivation_condition_value": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "非活性化条件で使用するパラメータ"
+                        },
+                        "is_summon_unit_outpost_damage_invalidation": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "召喚ユニットの基地ダメージを無効化するか"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_battle_point_levels": {
+                    "comment": "インゲームで使用するバトルポイントについての設定(初期ポイント、ポイントが貯まる速度、最大ポイント etc) (現在未使用)",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "level": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "レベル(当初は貯まるとレベルを上げて更にポイントが貯まる速度とかを強化できる仕様だった)"
+                        },
+                        "required_level_up_battle_point": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "レベルを上げるために必要なポイント"
+                        },
+                        "max_battle_point": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "上限ポイント"
+                        },
+                        "charge_amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "一回で貯まるポイントの量"
+                        },
+                        "charge_interval": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "何フレーム毎にポイントが貯まるかの設定"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_box_gacha_groups": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_box_gacha_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_box_gachas.id"
+                        },
+                        "box_level": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "箱レベル（1から順番）"
+                        }
+                    },
+                    "indexes": {
+                        "mst_box_gacha_id_box_level_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_box_gacha_id",
+                                "box_level"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_box_gacha_prizes": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_box_gacha_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_box_gacha_groups.id"
+                        },
+                        "is_pickup": {
+                            "type": "tinyint(1)",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ピックアップ対象"
+                        },
+                        "resource_type": {
+                            "type": "enum('Item','Artwork','FreeDiamond','Coin','Unit')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬リソースID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "報酬数量"
+                        },
+                        "stock": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "在庫数"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_box_gachas": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_events.id イベントID"
+                        },
+                        "cost_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "消費アイテムID（mst_items.id）"
+                        },
+                        "cost_num": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "1回の抽選に必要なコスト数"
+                        },
+                        "loop_type": {
+                            "type": "enum('All','Last','First')",
+                            "nullable": false,
+                            "default": "Last",
+                            "comment": "ループタイプ"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "display_mst_unit_id1": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "TOP表示用ユニットID1"
+                        },
+                        "display_mst_unit_id2": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "TOP表示用ユニットID2"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_box_gachas_i18n": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_box_gacha_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_box_gachas.id"
+                        },
+                        "language": {
+                            "type": "varchar(10)",
+                            "nullable": false,
+                            "comment": "言語コード"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "名称"
+                        }
+                    },
+                    "indexes": {
+                        "mst_box_gacha_id_language_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_box_gacha_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_cheat_settings": {
+                    "comment": "インゲームコンテンツごとに検出すべきチート手法と閾値を設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "content_type": {
+                            "type": "enum('AdventBattle','Pvp')",
+                            "nullable": false,
+                            "comment": "コンテンツのタイプ"
+                        },
+                        "cheat_type": {
+                            "type": "enum('BattleTime','MaxDamage','BattleStatusMismatch','MasterDataStatusMismatch')",
+                            "nullable": false,
+                            "comment": "チートタイプ"
+                        },
+                        "cheat_value": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "チートとする値"
+                        },
+                        "is_excluded_ranking": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "チート検出時に即ランキング除外するか"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "チート設定開始日"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "チート設定終了日"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_comeback_bonus_schedules": {
+                    "comment": "カムバックボーナスのスケジュール設定(現在未対応、対応予定あり)",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "inactive_condition_days": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "未ログイン期間の条件日数"
+                        },
+                        "duration_days": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "有効日数"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_comeback_bonuses": {
+                    "comment": "カムバックボーナスの設定(現在未対応、対応予定あり)",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_comeback_bonus_schedule_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_comeback_bonus_schedules.id"
+                        },
+                        "login_day_count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "条件とするログイン日数"
+                        },
+                        "mst_daily_bonus_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_daily_bonus_reward.group_id"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "表示順"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_schedule_id_login_day_count": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_comeback_bonus_schedule_id",
+                                "login_day_count"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_configs": {
+                    "comment": "定数設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "キー"
+                        },
+                        "value": {
+                            "type": "text",
+                            "nullable": false,
+                            "comment": "設定値"
+                        }
+                    },
+                    "indexes": {
+                        "mst_configs_key_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "key"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_daily_bonus_rewards": {
+                    "comment": "ログインボーナスの設定用テーブル(ただ、現在は通常ログインボーナスもイベントログインボーナスもmst_mission_rewardsで設定されている)(現在は未使用)",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "報酬グルーピングID"
+                        },
+                        "resource_type": {
+                            "type": "enum('Exp','Coin','FreeDiamond','Item','Emblem','Stamina','Unit')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬ID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "報酬数量"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "idx_group_id": {
+                            "type": "index",
+                            "columns": [
+                                "group_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_defense_targets": {
+                    "comment": "インゲーム向け防衛オブジェクトの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "アセットキー"
+                        },
+                        "position": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "インゲーム内座標"
+                        },
+                        "hp": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "守備対象HP"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_dummy_outposts": {
+                    "comment": "ダミーユーザーのゲート情報マスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_dummy_user_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_dummy_users.id"
+                        },
+                        "mst_outpost_enhancement_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_outpost_enhancements.id"
+                        },
+                        "level": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "アウトポストレベル"
+                        }
+                    },
+                    "indexes": {
+                        "mst_dummy_user_outpost_enhancement_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_dummy_user_id",
+                                "mst_outpost_enhancement_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_dummy_user_artworks": {
+                    "comment": "ダミーユーザーの原画所持マスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_dummy_user_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_dummy_users.id"
+                        },
+                        "mst_artwork_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_artwork.id"
+                        }
+                    },
+                    "indexes": {
+                        "mst_dummy_user_artworks_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_dummy_user_id",
+                                "mst_artwork_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_dummy_user_units": {
+                    "comment": "ダミーユーザーのユニット情報マスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_dummy_user_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_dummy_users.id"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_units.id"
+                        },
+                        "level": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "ユニットレベル"
+                        },
+                        "rank": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ユニットランク"
+                        },
+                        "grade_level": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "ユニットグレードレベル"
+                        }
+                    },
+                    "indexes": {
+                        "mst_dummy_user_units_mst_dummy_user_id_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_dummy_user_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_dummy_users": {
+                    "comment": "ダミーユーザー情報のマスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "mst_units.id"
+                        },
+                        "mst_emblem_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "mst_emblems.id"
+                        },
+                        "grade_unit_level_total_count": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "図鑑効果用グレードレベル合計"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_dummy_users_i18n": {
+                    "comment": "ダミーユーザー情報の多言語対応テーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_dummy_user_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_dummy_users.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "ダミーユーザー名"
+                        }
+                    },
+                    "indexes": {
+                        "mst_dummy_users_i18n_mst_dummy_user_id_language_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_dummy_user_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_emblems": {
+                    "comment": "エンブレム設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "emblem_type": {
+                            "type": "enum('Event','Series')",
+                            "nullable": false,
+                            "comment": "エンブレムのタイプ"
+                        },
+                        "mst_series_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "作品ID"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "経緯情報ソース"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_emblems_i18n": {
+                    "comment": "エンブレム設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_emblem_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_emblems.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "エンブレムの名称"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "フレーバーテキスト"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "language_index": {
+                            "type": "index",
+                            "columns": [
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "mst_emblem_id_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_emblem_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_enemy_characters": {
+                    "comment": "敵ユニットの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_series_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "作品ID"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "経緯情報ソース"
+                        },
+                        "is_phantomized": {
+                            "type": "tinyint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "プレイアブルキャラの敵化専用表現用"
+                        },
+                        "is_displayed_encyclopedia": {
+                            "type": "tinyint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "図鑑に表示するかのフラグ"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_enemy_characters_i18n": {
+                    "comment": "敵ユニットの設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_enemy_character_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ファントムID"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ファントム名"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ファントム説明"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_enemy_outposts": {
+                    "comment": "敵タワーの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "hp": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "敵タワーHP"
+                        },
+                        "outpost_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "敵タワーアセットキー"
+                        },
+                        "artwork_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "敵タワー原画アセットキー"
+                        },
+                        "is_damage_invalidation": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "無敵判定"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_enemy_stage_parameters": {
+                    "comment": "インゲーム向け敵ユニットの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_enemy_character_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstEnemyCharacterId"
+                        },
+                        "character_unit_kind": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "Normal",
+                            "comment": "敵カテゴリ(通常、ボス、降臨バトルボス)"
+                        },
+                        "role_type": {
+                            "type": "enum('None','Attack','Balance','Defense','Support','Unique','Technical','Special')",
+                            "nullable": false,
+                            "comment": "ロールタイプ"
+                        },
+                        "color": {
+                            "type": "enum('None','Colorless','Red','Blue','Yellow','Green')",
+                            "nullable": false,
+                            "comment": "影色"
+                        },
+                        "sort_order": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "表示並び順"
+                        },
+                        "hp": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "HP"
+                        },
+                        "damage_knock_back_count": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "被撃破までのHP減少によるノックバック回数"
+                        },
+                        "move_speed": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "移動速度"
+                        },
+                        "well_distance": {
+                            "type": "double",
+                            "nullable": false,
+                            "comment": "索敵距離"
+                        },
+                        "attack_power": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "攻撃力"
+                        },
+                        "attack_combo_cycle": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "攻撃サイクル"
+                        },
+                        "mst_unit_ability_id1": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "default": "",
+                            "comment": "リレーション向けMstUnitAbilityId"
+                        },
+                        "drop_battle_point": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "被撃破時のリーダーP獲得量"
+                        },
+                        "mst_transformation_enemy_stage_parameter_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstTransformationEnemyStageParameterId"
+                        },
+                        "transformation_condition_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "敵が変身する際の条件"
+                        },
+                        "transformation_condition_value": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "変身条件に使用するパラメータ"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_event_bonus_units": {
+                    "comment": "キャラごとのイベントボーナス設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "ボーナス対象キャラID"
+                        },
+                        "bonus_percentage": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "ステータスボーナス割合"
+                        },
+                        "event_bonus_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "ボーナスグループ"
+                        },
+                        "is_pick_up": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "comment": "ボーナスキャラ簡易表示の対象フラグ"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_event_display_rewards": {
+                    "comment": "(現在未使用)旧イベントクエスト画面で出す目玉報酬の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstEventId"
+                        },
+                        "resource_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リソースカテゴリ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けリソースId"
+                        },
+                        "sort_order": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "表示順番"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_event_display_units": {
+                    "comment": "イベントTOP画面で表示するユニットデータ",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_quest_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstQuestId"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstUnitId"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_event_display_units_i18n": {
+                    "comment": "イベントTOP画面で表示するユニットデータの多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_event_display_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstEventDisplayUnitId"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語設定"
+                        },
+                        "speech_balloon_text1": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "吹き出しセリフ1"
+                        },
+                        "speech_balloon_text2": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "吹き出しセリフ2"
+                        },
+                        "speech_balloon_text3": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "吹き出しセリフ3"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_events": {
+                    "comment": "イベント設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_series_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "作品ID"
+                        },
+                        "is_displayed_series_logo": {
+                            "type": "tinyint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "作品ロゴの表示有無"
+                        },
+                        "is_displayed_jump_plus": {
+                            "type": "tinyint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "作品を読むボタンの表示有無"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_series_id_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_series_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_events_i18n": {
+                    "comment": "イベント設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstEventId"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語設定"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "イベント名"
+                        },
+                        "balloon": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "吹き出し内テキスト"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_mst_event_id_language": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_event_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_exchange_costs": {
+                    "comment": "交換コストマスタ",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "mst_exchange_lineup_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_exchange_lineups.id"
+                        },
+                        "cost_type": {
+                            "type": "enum('Coin','Item')",
+                            "nullable": false,
+                            "comment": "コストタイプ"
+                        },
+                        "cost_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コストID"
+                        },
+                        "cost_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "必要数量"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "idx_mst_exchange_lineup_id": {
+                            "type": "index",
+                            "columns": [
+                                "mst_exchange_lineup_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_exchange_lineups": {
+                    "comment": "交換ラインナップマスタ",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "グループID"
+                        },
+                        "tradable_count": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "交換上限数（null=無制限）"
+                        },
+                        "display_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "表示順序"
+                        }
+                    },
+                    "indexes": {
+                        "idx_group_id": {
+                            "type": "index",
+                            "columns": [
+                                "group_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_exchange_rewards": {
+                    "comment": "交換報酬マスタ",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "mst_exchange_lineup_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_exchange_lineups.id"
+                        },
+                        "resource_type": {
+                            "type": "enum('Coin','FreeDiamond','Item','Emblem','Unit','Artwork')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬ID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "報酬数量"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "idx_mst_exchange_lineup_id": {
+                            "type": "index",
+                            "columns": [
+                                "mst_exchange_lineup_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_exchanges": {
+                    "comment": "交換所マスタ",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "mst_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "mst_events.id"
+                        },
+                        "exchange_trade_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "交換所の種類"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開催開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "開催終了日時"
+                        },
+                        "lineup_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ラインナップグループID"
+                        },
+                        "display_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "表示順序"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_exchanges_i18n": {
+                    "comment": "交換所マスタ多言語",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_exchange_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_exchanges.id"
+                        },
+                        "language": {
+                            "type": "varchar(50)",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "交換所名"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_mst_exchange_id_language": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_exchange_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_fragment_box_groups": {
+                    "comment": "かけらボックスアイテムの交換先アイテム設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_fragment_box_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "BOXのアイテムID"
+                        },
+                        "mst_item_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ラインナップされるかけらのアイテムID"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "ラインナップアイテムの開始日"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "ラインナップアイテムの終了日"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_fragment_box_group_id_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_fragment_box_group_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_fragment_boxes": {
+                    "comment": "かけらボックスアイテム設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_item_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstItemId"
+                        },
+                        "mst_fragment_box_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstFragmentBoxGroupId"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_fragment_boxes_mst_item_id_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_item_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_home_banners": {
+                    "comment": "ホームのバナー設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "destination": {
+                            "type": "enum('None','Gacha','CreditShop','BasicShop','Event','Web','Pack','Pass','BeginnerMission','AdventBattle','Pvp')",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "タップ時の遷移先タイプ"
+                        },
+                        "destination_path": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "タップ時の遷移先における情報"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "表示するバナーのパス"
+                        },
+                        "sort_order": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "ホームで出す表示順番"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "掲載開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "掲載終了日時"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_idle_incentive_items": {
+                    "comment": "探索報酬として配布したいアイテムをまとめて複数設定できるテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_idle_incentive_item_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "グループID"
+                        },
+                        "mst_item_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_items.id"
+                        },
+                        "base_amount": {
+                            "type": "decimal(10,4)",
+                            "nullable": false,
+                            "comment": "ベース量"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_idle_incentive_rewards": {
+                    "comment": "探索報酬の基本設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_stage_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "報酬が変わるステージ進捗の閾値"
+                        },
+                        "base_coin_amount": {
+                            "type": "decimal(10,4)",
+                            "nullable": false,
+                            "comment": "N分ごとのコインの基礎獲得数"
+                        },
+                        "base_exp_amount": {
+                            "type": "decimal(10,4)",
+                            "nullable": false,
+                            "comment": "N分ごとの経験値の基礎獲得数"
+                        },
+                        "base_rank_up_material_amount": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "default": "1.00",
+                            "comment": "リミテッドメモリーのベース獲得量"
+                        },
+                        "mst_idle_incentive_item_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_idle_incentive_items.mst_idle_incentive_item_group_id"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_idle_incentives": {
+                    "comment": "探索の基本設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "initial_reward_receive_minutes": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "放置後最初に報酬が獲得可能になる放置時間"
+                        },
+                        "reward_increase_interval_minutes": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "報酬が増加する時間間隔(分)"
+                        },
+                        "max_idle_hours": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "最大放置時間"
+                        },
+                        "required_quick_receive_diamond_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "クイック獲得時に必要なプリズム量"
+                        },
+                        "max_daily_diamond_quick_receive_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "１日の一次通貨での最大獲得回数"
+                        },
+                        "max_daily_ad_quick_receive_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "１日の広告での最大獲得回数"
+                        },
+                        "ad_interval_seconds": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "広告視聴のインターバル"
+                        },
+                        "quick_idle_minutes": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "クイック獲得での実質放置時間"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_in_game_gimmick_objects": {
+                    "comment": "各種インゲームコンテンツの特別ルール設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "アセットキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_in_game_special_rule_unit_statuses": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "グループID"
+                        },
+                        "target_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "InGameSpecialRuleUnitStatusTargetTypeで指定する"
+                        },
+                        "target_value": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_units.idやロール、属性などを指定する"
+                        },
+                        "status_parameter_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "InGameSpecialRuleUnitStatusParameterTypeで指定する"
+                        },
+                        "effect_value": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "効果値"
+                        }
+                    },
+                    "indexes": {
+                        "mst_in_game_special_rule_unit_statuses_group_id_index": {
+                            "type": "index",
+                            "columns": [
+                                "group_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_in_game_special_rules": {
+                    "comment": "アイテムのレアリティ別交換レート設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "content_type": {
+                            "type": "enum('Stage','AdventBattle','Pvp')",
+                            "nullable": false,
+                            "comment": "インゲームコンテンツタイプ"
+                        },
+                        "target_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "各インゲームコンテンツごとの対象マスタテーブルのID"
+                        },
+                        "rule_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ルール条件タイプ"
+                        },
+                        "rule_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "ルール条件値"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_in_games": {
+                    "comment": "インゲームの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_auto_player_sequence_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstAutoPlayerSequenceId"
+                        },
+                        "mst_auto_player_sequence_set_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_auto_player_sequences.sequence_set_id"
+                        },
+                        "bgm_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "BGMアセットキー"
+                        },
+                        "boss_bgm_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "ボスBGM"
+                        },
+                        "loop_background_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "背景アセットキー"
+                        },
+                        "player_outpost_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "プレイヤータワーアセットキー"
+                        },
+                        "mst_page_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstPageId"
+                        },
+                        "mst_enemy_outpost_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstEnemyOutpostId"
+                        },
+                        "mst_defense_target_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "リレーション向けMstDefenceTargetId"
+                        },
+                        "boss_mst_enemy_stage_parameter_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstEnemyStageParameterId"
+                        },
+                        "boss_count": {
+                            "type": "int",
+                            "nullable": true,
+                            "comment": "ボスの出現数"
+                        },
+                        "normal_enemy_hp_coef": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "ステージ内敵HP倍率(通常敵)"
+                        },
+                        "normal_enemy_attack_coef": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "ステージ内敵攻撃倍率(通常敵)"
+                        },
+                        "normal_enemy_speed_coef": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "ステージ内敵スピード倍率(通常敵)"
+                        },
+                        "boss_enemy_hp_coef": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "ステージ内敵HP倍率(ボス)"
+                        },
+                        "boss_enemy_attack_coef": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "ステージ内敵攻撃倍率(ボス)"
+                        },
+                        "boss_enemy_speed_coef": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "ステージ内敵スピード倍率(ボス)"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_in_games_i18n": {
+                    "comment": "インゲームの設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_in_game_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstInGameId"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語設定"
+                        },
+                        "result_tips": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "敗北時Tips"
+                        },
+                        "description": {
+                            "type": "text",
+                            "nullable": false,
+                            "comment": "ステージ情報"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_language": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_in_game_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_item_rarity_trades": {
+                    "comment": "キャラのかけらをかけらBOXに交換する際の設定(交換可能個数、レート、交換可能回数上限、交換可能回数リセット設定)",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "rarity": {
+                            "type": "enum('N','R','SR','SSR','UR')",
+                            "nullable": false,
+                            "comment": "レアリティ"
+                        },
+                        "cost_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "交換元アイテムの必要消費数"
+                        },
+                        "reset_type": {
+                            "type": "enum('None','Daily','Weekly','Monthly')",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "リセット期間"
+                        },
+                        "max_tradable_amount": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "交換上限個数。null: 交換上限なし"
+                        }
+                    },
+                    "indexes": {
+                        "mst_item_rarity_trades_rarity_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "rarity"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_item_transitions": {
+                    "comment": "アイテム詳細からの遷移先の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_item_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstItemId"
+                        },
+                        "transition1": {
+                            "type": "enum('None','MainQuest','EventQuest','ShopItem','Pack','Achievement','LoginBonus','DailyMission','WeeklyMission','Patrol','ExchangeShop','Etc')",
+                            "nullable": false
+                        },
+                        "transition1_mst_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "画面遷移先条件向けMasterDataId"
+                        },
+                        "transition2": {
+                            "type": "enum('None','MainQuest','EventQuest','ShopItem','Pack','Achievement','LoginBonus','DailyMission','WeeklyMission','Patrol','ExchangeShop','Etc')",
+                            "nullable": true
+                        },
+                        "transition2_mst_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "画面遷移先条件向けMasterDataId"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_items": {
+                    "comment": "アイテム設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "type": {
+                            "type": "enum('CharacterFragment','RankUpMaterial','StageMedal','IdleCoinBox','IdleRankUpMaterialBox','RandomFragmentBox','SelectionFragmentBox','GachaTicket','Etc','RankUpMemoryFragment','GachaMedal','StaminaRecoveryPercent','StaminaRecoveryFixed')",
+                            "nullable": true
+                        },
+                        "group_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アプリの表示タブ用"
+                        },
+                        "rarity": {
+                            "type": "enum('N','R','SR','SSR','UR')",
+                            "nullable": false,
+                            "comment": "レア度"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "effect_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "特定item_typeのときの効果値"
+                        },
+                        "mst_series_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "mst_series.id"
+                        },
+                        "sort_order": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "表示順番"
+                        },
+                        "start_date": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日"
+                        },
+                        "end_date": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "destination_opr_product_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "画面遷移先条件向けOprProductId"
+                        }
+                    },
+                    "indexes": {
+                        "mst_items_item_type_index": {
+                            "type": "index",
+                            "columns": [
+                                "type"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_items_i18n": {
+                    "comment": "アイテム設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_item_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アイテムID"
+                        },
+                        "language": {
+                            "type": "enum('ja','en','zh-Hant')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "名前"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "説明"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_items_i18n_mst_item_id_language_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_item_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_koma_lines": {
+                    "comment": "インゲーム内のコマ設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_page_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstPageId"
+                        },
+                        "row": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "列番号"
+                        },
+                        "height": {
+                            "type": "double(8,2)",
+                            "nullable": false,
+                            "comment": "コマ列高さ"
+                        },
+                        "koma_line_layout_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマレイアウトアセットキー"
+                        },
+                        "koma1_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマアセットキー"
+                        },
+                        "koma1_width": {
+                            "type": "double(8,2)",
+                            "nullable": true,
+                            "comment": "コマ幅"
+                        },
+                        "koma1_back_ground_offset": {
+                            "type": "double(8,2)",
+                            "nullable": false,
+                            "comment": "コマ背景オフセット"
+                        },
+                        "koma1_effect_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "コマ効果タイプ"
+                        },
+                        "koma1_effect_parameter1": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマ効果パラメータ1"
+                        },
+                        "koma1_effect_parameter2": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマ効果パラメータ2"
+                        },
+                        "koma1_effect_target_side": {
+                            "type": "enum('All','Player','Enemy')",
+                            "nullable": false,
+                            "comment": "コマ効果影響対象"
+                        },
+                        "koma1_effect_target_colors": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマ効果影響カラー"
+                        },
+                        "koma1_effect_target_roles": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマ効果影響ロール"
+                        },
+                        "koma2_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コマアセットキー"
+                        },
+                        "koma2_width": {
+                            "type": "double(8,2)",
+                            "nullable": true,
+                            "comment": "コマ幅"
+                        },
+                        "koma2_back_ground_offset": {
+                            "type": "double(8,2)",
+                            "nullable": true,
+                            "comment": "コマ背景オフセット"
+                        },
+                        "koma2_effect_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "コマ効果タイプ"
+                        },
+                        "koma2_effect_parameter1": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマ効果パラメータ1"
+                        },
+                        "koma2_effect_parameter2": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマ効果パラメータ2"
+                        },
+                        "koma2_effect_target_side": {
+                            "type": "enum('All','Player','Enemy')",
+                            "nullable": true,
+                            "comment": "コマ効果影響対象"
+                        },
+                        "koma2_effect_target_colors": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コマ効果影響カラー"
+                        },
+                        "koma2_effect_target_roles": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コマ効果影響ロール"
+                        },
+                        "koma3_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コマアセットキー"
+                        },
+                        "koma3_width": {
+                            "type": "double(8,2)",
+                            "nullable": true,
+                            "comment": "コマ幅"
+                        },
+                        "koma3_back_ground_offset": {
+                            "type": "double(8,2)",
+                            "nullable": true,
+                            "comment": "コマ背景オフセット"
+                        },
+                        "koma3_effect_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "コマ効果タイプ"
+                        },
+                        "koma3_effect_parameter1": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマ効果パラメータ1"
+                        },
+                        "koma3_effect_parameter2": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマ効果パラメータ2"
+                        },
+                        "koma3_effect_target_side": {
+                            "type": "enum('All','Player','Enemy')",
+                            "nullable": true,
+                            "comment": "コマ効果影響対象"
+                        },
+                        "koma3_effect_target_colors": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コマ効果影響カラー"
+                        },
+                        "koma3_effect_target_roles": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コマ効果影響ロール"
+                        },
+                        "koma4_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コマアセットキー"
+                        },
+                        "koma4_width": {
+                            "type": "double(8,2)",
+                            "nullable": true,
+                            "comment": "コマ幅"
+                        },
+                        "koma4_back_ground_offset": {
+                            "type": "double(8,2)",
+                            "nullable": true,
+                            "comment": "コマ背景オフセット"
+                        },
+                        "koma4_effect_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "コマ効果タイプ"
+                        },
+                        "koma4_effect_parameter1": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマ効果パラメータ1"
+                        },
+                        "koma4_effect_parameter2": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コマ効果パラメータ2"
+                        },
+                        "koma4_effect_target_side": {
+                            "type": "enum('All','Player','Enemy')",
+                            "nullable": true,
+                            "comment": "コマ効果影響対象"
+                        },
+                        "koma4_effect_target_colors": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コマ効果影響カラー"
+                        },
+                        "koma4_effect_target_roles": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コマ効果影響ロール"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_manga_animations": {
+                    "comment": "ステージ原画演出設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_stage_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_stages.id"
+                        },
+                        "condition_type": {
+                            "type": "enum('None','Start','Victory','EnemySummon','EnemyMoveStart','TransformationReady','TransformationStart','TransformationEnd')",
+                            "nullable": true,
+                            "comment": "条件タイプ"
+                        },
+                        "condition_value": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "条件値"
+                        },
+                        "animation_start_delay": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "アニメーション開始までの時間"
+                        },
+                        "animation_speed": {
+                            "type": "decimal(3,2)",
+                            "nullable": false,
+                            "default": "1.00",
+                            "comment": "アニメーションのスピード"
+                        },
+                        "is_pause": {
+                            "type": "tinyint(1)",
+                            "nullable": false,
+                            "comment": "一時停止するか"
+                        },
+                        "can_skip": {
+                            "type": "tinyint(1)",
+                            "nullable": false,
+                            "comment": "スキップ可能か"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_achievement_dependencies": {
+                    "comment": "アチーブメントミッション同士のつながりの設定。あるミッションの開放条件として他ミッション達成を設定したい場合に設定する。",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "依存関係のグルーピングID"
+                        },
+                        "mst_mission_achievement_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_achievements.id"
+                        },
+                        "unlock_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "対象グループ内でのミッションの開放順。1つ前のunlock_orderを持つミッションをクリアしたら開放される。"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_group_id_mst_mission_achievement_id": {
+                            "type": "unique",
+                            "columns": [
+                                "group_id",
+                                "mst_mission_achievement_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_group_id_unlock_order": {
+                            "type": "unique",
+                            "columns": [
+                                "group_id",
+                                "unlock_order"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_achievements": {
+                    "comment": "アチーブメントミッションの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "criterion_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "達成条件タイプ"
+                        },
+                        "criterion_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "達成条件値"
+                        },
+                        "criterion_count": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "達成回数"
+                        },
+                        "unlock_criterion_type": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "開放条件タイプ"
+                        },
+                        "unlock_criterion_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "開放条件値"
+                        },
+                        "unlock_criterion_count": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "開放条件の達成回数"
+                        },
+                        "group_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "分類キー。mission_full_completeのカウント対象となる。"
+                        },
+                        "mst_mission_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_rewards.group_id"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "並び順"
+                        },
+                        "destination_scene": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ミッションから遷移する画面"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_achievements_i18n": {
+                    "comment": "アチーブメントミッションの設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_mission_achievement_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_achievements.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "説明"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_beginner_prompt_phrases_i18n": {
+                    "comment": "初心者ミッションのUIの煽り文言の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "prompt_phrase_text": {
+                            "type": "text",
+                            "nullable": false,
+                            "comment": "設定文言"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "設定文言を表示する開始期間"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "設定文言を表示する終了期間"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_beginners": {
+                    "comment": "初心者ミッションの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "criterion_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "達成条件タイプ"
+                        },
+                        "criterion_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "達成条件値"
+                        },
+                        "criterion_count": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "達成回数"
+                        },
+                        "unlock_day": {
+                            "type": "smallint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "開始からの開放日"
+                        },
+                        "group_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "分類キー"
+                        },
+                        "bonus_point": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ミッションボーナスポイント量"
+                        },
+                        "mst_mission_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_reward_groups.group_id"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "並び順"
+                        },
+                        "destination_scene": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ミッションから遷移する画面"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_beginners_i18n": {
+                    "comment": "初心者ミッションの設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_mission_beginner_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_beginners.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "title": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ダイアログタイトル"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "初心者ミッションテキスト"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_dailies": {
+                    "comment": "デイリーミッションの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "criterion_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "達成条件タイプ"
+                        },
+                        "criterion_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "達成条件値"
+                        },
+                        "criterion_count": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "達成回数"
+                        },
+                        "group_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "分類キー"
+                        },
+                        "bonus_point": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ミッションボーナスポイント量"
+                        },
+                        "mst_mission_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_reward_groups.group_id"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "並び順"
+                        },
+                        "destination_scene": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ミッションから遷移する画面"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_dailies_i18n": {
+                    "comment": "デイリーミッションの設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_mission_daily_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_dailies.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "説明"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_daily_bonuses": {
+                    "comment": "デイリーボーナス(ログボ)の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mission_daily_bonus_type": {
+                            "type": "enum('DailyBonus')",
+                            "nullable": false,
+                            "comment": "デイリーボーナスタイプ"
+                        },
+                        "login_day_count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "条件とするログイン日数"
+                        },
+                        "mst_mission_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_reward_groups.id"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "表示順"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_type_login_day_count": {
+                            "type": "unique",
+                            "columns": [
+                                "mission_daily_bonus_type",
+                                "login_day_count"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_event_dailies": {
+                    "comment": "イベントデイリーミッションの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "イベントID"
+                        },
+                        "criterion_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "達成条件タイプ"
+                        },
+                        "criterion_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "達成条件値"
+                        },
+                        "criterion_count": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "達成回数"
+                        },
+                        "group_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "分類キー"
+                        },
+                        "mst_mission_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_reward_groups.group_id"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "並び順"
+                        },
+                        "destination_scene": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ミッションから遷移する画面"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_event_dailies_i18n": {
+                    "comment": "イベントデイリーミッションの設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_mission_event_daily_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_events.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "説明"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_event_daily_bonus_schedules": {
+                    "comment": "イベントデイリーボーナス(イベントログボ)のスケジュール設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_events.id"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "index_mst_event_id": {
+                            "type": "index",
+                            "columns": [
+                                "mst_event_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_event_daily_bonuses": {
+                    "comment": "イベントデイリーボーナス(イベントログボ)の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_mission_event_daily_bonus_schedule_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_event_daily_bonus_schedules.id"
+                        },
+                        "login_day_count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "条件とするログイン日数"
+                        },
+                        "mst_mission_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_reward_groups.id"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "表示順"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_schedule_id_login_day_count": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_mission_event_daily_bonus_schedule_id",
+                                "login_day_count"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_event_dependencies": {
+                    "comment": "イベントミッション同士のつながりの設定。あるミッションの開放条件として他ミッション達成を設定したい場合に設定する。",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "依存関係のグルーピングID"
+                        },
+                        "mst_mission_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_events.id"
+                        },
+                        "unlock_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "グループ内でのミッションの開放順"
+                        }
+                    },
+                    "indexes": {
+                        "group_id_mst_mission_event_id_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "group_id",
+                                "mst_mission_event_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "group_id_unlock_order_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "group_id",
+                                "unlock_order"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_events": {
+                    "comment": "イベントミッションの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "イベントID"
+                        },
+                        "criterion_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "達成条件タイプ"
+                        },
+                        "criterion_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "達成条件値"
+                        },
+                        "criterion_count": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "達成回数"
+                        },
+                        "unlock_criterion_type": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "開放条件タイプ"
+                        },
+                        "unlock_criterion_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "開放条件値"
+                        },
+                        "unlock_criterion_count": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "達成回数"
+                        },
+                        "group_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "分類キー"
+                        },
+                        "mst_mission_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_reward_groups.group_id"
+                        },
+                        "event_category": {
+                            "type": "enum('AdventBattle')",
+                            "nullable": true,
+                            "comment": "イベントカテゴリー"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "並び順"
+                        },
+                        "destination_scene": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ミッションから遷移する画面"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_events_i18n": {
+                    "comment": "イベントミッションの設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_mission_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_events.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "説明"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_limited_term_dependencies": {
+                    "comment": "期間限定ミッション同士のつながりの設定。あるミッションの開放条件として他ミッション達成を設定したい場合に設定する。",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "依存関係のグルーピングID"
+                        },
+                        "mst_mission_limited_term_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_limited_terms.id"
+                        },
+                        "unlock_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "グループ内でのミッションの開放順"
+                        }
+                    },
+                    "indexes": {
+                        "group_id_mst_mission_limited_term_id_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "group_id",
+                                "mst_mission_limited_term_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "group_id_unlock_order_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "group_id",
+                                "unlock_order"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_limited_terms": {
+                    "comment": "期間限定ミッションの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "progress_group_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "進捗グループ"
+                        },
+                        "criterion_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "達成条件タイプ"
+                        },
+                        "criterion_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "達成条件値"
+                        },
+                        "criterion_count": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "達成回数"
+                        },
+                        "mission_category": {
+                            "type": "enum('AdventBattle')",
+                            "nullable": false,
+                            "comment": "ミッションカテゴリー"
+                        },
+                        "mst_mission_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_reward_groups.group_id"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "並び順"
+                        },
+                        "destination_scene": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ミッションから遷移する画面"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_limited_terms_i18n": {
+                    "comment": "期間限定ミッションの設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_mission_limited_term_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_limited_terms.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "説明"
+                        }
+                    },
+                    "indexes": {
+                        "mst_mission_limited_term_id_language_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_mission_limited_term_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_rewards": {
+                    "comment": "ミッション報酬設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "報酬グルーピングID"
+                        },
+                        "resource_type": {
+                            "type": "enum('Exp','Coin','FreeDiamond','Item','Emblem','Unit')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬リソースID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "報酬の個数"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "並び順"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_weeklies": {
+                    "comment": "ウィークリーミッションの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "criterion_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "達成条件タイプ"
+                        },
+                        "criterion_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "達成条件値"
+                        },
+                        "criterion_count": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "達成回数"
+                        },
+                        "group_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "分類キー"
+                        },
+                        "bonus_point": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ミッションボーナスポイント量"
+                        },
+                        "mst_mission_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_reward_groups.group_id"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "並び順"
+                        },
+                        "destination_scene": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ミッションから遷移する画面"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_mission_weeklies_i18n": {
+                    "comment": "ウィークリーミッションの設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_mission_weekly_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_mission_weeklies.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "説明"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_ng_words": {
+                    "comment": "ユーザー名やユニット名でのNGワードリスト設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "word": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "NGワード"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_outpost_enhancement_levels": {
+                    "comment": "ゲート強化項目ごとのレベル設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_outpost_enhancement_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "拠点強化ID"
+                        },
+                        "level": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "レベル"
+                        },
+                        "cost_coin": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "消費コイン"
+                        },
+                        "enhancement_value": {
+                            "type": "double(8,2)",
+                            "nullable": false,
+                            "comment": "強化値"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_outpost_enhancement_levels_i18n": {
+                    "comment": "ゲート強化項目ごとのレベル設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_outpost_enhancement_level_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "拠点強化レベルID"
+                        },
+                        "language": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "強化時の説明文"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_outpost_enhancements": {
+                    "comment": "ゲート強化項目の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_outpost_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "拠点ID"
+                        },
+                        "outpost_enhancement_type": {
+                            "type": "enum('LeaderPointSpeed','LeaderPointLimit','OutpostHp','SummonInterval','LeaderPointUp','RushChargeSpeed')",
+                            "nullable": false,
+                            "comment": "強化タイプ"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_outpost_enhancements_i18n": {
+                    "comment": "ゲート強化項目の設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_outpost_enhancement_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_outpost_enhancements.id"
+                        },
+                        "language": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "強化できる項目の名前"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_outposts": {
+                    "comment": "ゲートの基本設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_pack_contents": {
+                    "comment": "ショップのパックの内容物の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_pack_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_packs.id"
+                        },
+                        "resource_type": {
+                            "type": "enum('FreeDiamond','Coin','Item','Unit')",
+                            "nullable": false,
+                            "comment": "内包物のタイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "内包物のID(resource_typeがitemの場合のみ)"
+                        },
+                        "resource_amount": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "内包物の数量"
+                        },
+                        "is_bonus": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "おまけフラグ"
+                        },
+                        "display_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "表示順序"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_packs": {
+                    "comment": "ショップのパック設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "product_sub_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "opr_products.id"
+                        },
+                        "discount_rate": {
+                            "type": "smallint unsigned",
+                            "nullable": false,
+                            "comment": "割引率"
+                        },
+                        "pack_type": {
+                            "type": "enum('Daily','Normal')",
+                            "nullable": false,
+                            "comment": "パック販売タイプ"
+                        },
+                        "sale_condition": {
+                            "type": "enum('StageClear','UserLevel')",
+                            "nullable": true,
+                            "comment": "販売開始条件"
+                        },
+                        "sale_condition_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "販売開始条件値"
+                        },
+                        "sale_hours": {
+                            "type": "smallint unsigned",
+                            "nullable": true,
+                            "comment": "条件達成からの販売時間"
+                        },
+                        "tradable_count": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "交換可能個数"
+                        },
+                        "cost_type": {
+                            "type": "enum('Cash','Diamond','PaidDiamond','Ad','Free')",
+                            "nullable": false,
+                            "comment": "販売コスト種別"
+                        },
+                        "cost_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "コスト量"
+                        },
+                        "is_recommend": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "おすすめフラグ"
+                        },
+                        "is_first_time_free": {
+                            "type": "tinyint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "初回無料フラグ"
+                        },
+                        "is_display_expiration": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "表示期限があるかどうか"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "バナー画像パス"
+                        },
+                        "pack_decoration": {
+                            "type": "enum('Gold')",
+                            "nullable": true,
+                            "comment": "パックの装飾"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_packs_sale_condition_index": {
+                            "type": "index",
+                            "columns": [
+                                "sale_condition"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_packs_i18n": {
+                    "comment": "ショップのパック設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_pack_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_packs.id"
+                        },
+                        "language": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "パック名"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_pages": {
+                    "comment": "インゲーム内のステージ設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_party_unit_counts": {
+                    "comment": "メインクエストの進捗に応じたパーティ編成可能なキャラ数の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "mst_stage_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_stages.id。進捗しているステージ"
+                        },
+                        "max_count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "設定可能なパーティキャラ数"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_party_unit_counts_mst_stage_id_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_stage_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_pvp_bonus_points": {
+                    "comment": "PVPボーナスポイントのマスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "condition_value": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "しきい値"
+                        },
+                        "bonus_point": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ボーナスポイント"
+                        },
+                        "bonus_type": {
+                            "type": "enum('ClearTime','WinUpperBonus','WinSameBonus','WinLowerBonus')",
+                            "nullable": false,
+                            "comment": "PVPボーナスタイプ"
+                        }
+                    },
+                    "indexes": {
+                        "mst_pvp_bonus_points_threshold_bonus_type_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "condition_value",
+                                "bonus_type"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_pvp_dummies": {
+                    "comment": "PVPダミーユーザーのマスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "rank_class_type": {
+                            "type": "enum('Bronze','Silver','Gold','Platinum')",
+                            "nullable": false
+                        },
+                        "rank_class_level": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1"
+                        },
+                        "matching_type": {
+                            "type": "enum('Upper','Same','Lower')",
+                            "nullable": false
+                        },
+                        "mst_dummy_user_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_dummy_users.id"
+                        }
+                    },
+                    "indexes": {
+                        "mst_pvp_dummies_rank_class_type_rank_class_level_index": {
+                            "type": "index",
+                            "columns": [
+                                "rank_class_type",
+                                "rank_class_level"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_pvp_matching_score_ranges": {
+                    "comment": "マッチングに使用するスコアの幅設定情報のマスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "rank_class_type": {
+                            "type": "enum('Bronze','Silver','Gold','Platinum')",
+                            "nullable": false,
+                            "comment": "クラスランク"
+                        },
+                        "rank_class_level": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "クラスランクレベル"
+                        },
+                        "upper_rank_max_score": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "格上スコア足し込み上限"
+                        },
+                        "upper_rank_min_score": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "格上スコア足し込み下限"
+                        },
+                        "same_rank_max_score": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "同格スコア足し込み上限"
+                        },
+                        "same_rank_min_score": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "同格スコア足し込み下限"
+                        },
+                        "lower_rank_max_score": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "格下スコア足し込み上限"
+                        },
+                        "lower_rank_min_score": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "格下スコア足し込み下限"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_pvp_ranks": {
+                    "comment": "PVPランクのマスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "rank_class_type": {
+                            "type": "enum('Bronze','Silver','Gold','Platinum')",
+                            "nullable": false,
+                            "comment": "PVPランク区分"
+                        },
+                        "rank_class_level": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "PVPランクの最小値"
+                        },
+                        "required_lower_score": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "PVPランクの最小スコア"
+                        },
+                        "win_add_point": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "勝利時のスコア加算値"
+                        },
+                        "lose_sub_point": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "敗北時のスコア減算値"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "ランクアイコンアセットId"
+                        }
+                    },
+                    "indexes": {
+                        "mst_pvp_ranks_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "rank_class_type",
+                                "rank_class_level"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_pvp_reward_groups": {
+                    "comment": "PVP報酬グループのマスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "reward_category": {
+                            "type": "enum('Ranking','RankClass','TotalScore')",
+                            "nullable": false,
+                            "comment": "PVP報酬カテゴリ"
+                        },
+                        "condition_value": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "報酬条件値"
+                        },
+                        "mst_pvp_id": {
+                            "type": "varchar(16)",
+                            "nullable": false,
+                            "comment": "mst_pvps.id"
+                        }
+                    },
+                    "indexes": {
+                        "mst_pvp_reward_groups_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_pvp_id",
+                                "reward_category",
+                                "condition_value"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_pvp_rewards": {
+                    "comment": "PVP報酬のマスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_pvp_reward_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_pvp_reward_groups.id"
+                        },
+                        "resource_type": {
+                            "type": "enum('Coin','FreeDiamond','Item','Emblem')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬ID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "報酬数"
+                        }
+                    },
+                    "indexes": {
+                        "mst_pvp_rewards_mst_pvp_reward_group_id_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_pvp_reward_group_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_pvps": {
+                    "comment": "PVP情報のマスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(16)",
+                            "nullable": false,
+                            "comment": "西暦4桁と週番号2桁を使った自動採番IDを使用"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "ranking_min_pvp_rank_class": {
+                            "type": "enum('Bronze','Silver','Gold','Platinum')",
+                            "nullable": true,
+                            "comment": "ランキングに含む最小PVPランク区分"
+                        },
+                        "max_daily_challenge_count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "1日のアイテム消費なし挑戦可能回数"
+                        },
+                        "max_daily_item_challenge_count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "1日のアイテム消費あり挑戦可能回数"
+                        },
+                        "item_challenge_cost_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "アイテム消費あり挑戦時の消費アイテム数"
+                        },
+                        "initial_battle_point": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "初期バトルポイント"
+                        },
+                        "mst_in_game_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "mst_in_games.id"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_pvps_i18n": {
+                    "comment": "PVP情報の多言語対応テーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_pvp_id": {
+                            "type": "varchar(16)",
+                            "nullable": false,
+                            "comment": "mst_pvps.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "PVP名"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "PVP説明"
+                        }
+                    },
+                    "indexes": {
+                        "mst_pvps_i18n_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_pvp_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_quest_bonus_units": {
+                    "comment": "キャラごとのコインクエストボーナス設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_quest_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_quests.id"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_units.id"
+                        },
+                        "coin_bonus_rate": {
+                            "type": "double",
+                            "nullable": false,
+                            "comment": "コイン報酬量の上昇倍率"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        }
+                    },
+                    "indexes": {
+                        "idx_mst_quest_id_mst_unit_id": {
+                            "type": "index",
+                            "columns": [
+                                "mst_quest_id",
+                                "mst_unit_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_quest_event_bonus_schedules": {
+                    "comment": "クエストごとのイベントボーナス設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_quest_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "ボーナス対象クエストID"
+                        },
+                        "event_bonus_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "mst_stage_event_bonus_unitsのevent_bonus_group_id"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_quests": {
+                    "comment": "クエスト設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "quest_type": {
+                            "type": "enum('Normal','Event','Enhance','Tutorial')",
+                            "nullable": false,
+                            "comment": "クエストの種類"
+                        },
+                        "mst_event_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "mst_events.id"
+                        },
+                        "mst_series_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "mst_series.id"
+                        },
+                        "sort_order": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ソート順序"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "start_date": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日"
+                        },
+                        "end_date": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "quest_group": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "同クエストとして表示をまとめるグループ"
+                        },
+                        "difficulty": {
+                            "type": "enum('Normal','Hard','Extra')",
+                            "nullable": false,
+                            "default": "Normal",
+                            "comment": "難易度"
+                        }
+                    },
+                    "indexes": {
+                        "idx_mst_event_id": {
+                            "type": "index",
+                            "columns": [
+                                "mst_event_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "idx_quest_type": {
+                            "type": "index",
+                            "columns": [
+                                "quest_type"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_quests_i18n": {
+                    "comment": "クエスト名などの多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_quest_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_quests.id"
+                        },
+                        "language": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "名前"
+                        },
+                        "category_name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "カテゴリ名"
+                        },
+                        "flavor_text": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "フレーバーテキスト"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_release_keys": {
+                    "comment": "リリースキー設定",
+                    "columns": {
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        },
+                        "start_at": {
+                            "type": "datetime",
+                            "nullable": false,
+                            "default": "2000-01-01 00:00:00",
+                            "comment": "開始日時"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "説明文"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "release_key"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_result_tips_i18n": {
+                    "comment": "敗北時の汎用Tipsテキストの多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "user_level": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "レベル"
+                        },
+                        "result_tips": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "Tips本文"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_series": {
+                    "comment": "ジャンプ+の漫画作品をGLOW内で識別するための情報の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "作品ID"
+                        },
+                        "jump_plus_url": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ジャンプ+作品へのURL"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "banner_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "バナーのアセット"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_series_i18n": {
+                    "comment": "作品の言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_series_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_series.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "作品名"
+                        },
+                        "prefix_word": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "絞込も文字(ア行など)"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_mst_series_id_language": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_series_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_shop_items": {
+                    "comment": "ユーザーに販売する非課金商品を管理する",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "shop_type": {
+                            "type": "enum('Coin','Daily','Weekly')",
+                            "nullable": true,
+                            "comment": "商品タイプ"
+                        },
+                        "cost_type": {
+                            "type": "enum('Coin','Diamond','PaidDiamond','Ad','Free')",
+                            "nullable": true,
+                            "comment": "消費するコストのタイプ"
+                        },
+                        "cost_amount": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "default": "0",
+                            "comment": "消費するコストの数量"
+                        },
+                        "is_first_time_free": {
+                            "type": "tinyint(1)",
+                            "nullable": false,
+                            "comment": "初回無料か"
+                        },
+                        "tradable_count": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "交換可能回数"
+                        },
+                        "resource_type": {
+                            "type": "enum('FreeDiamond','Coin','IdleCoin','Item')",
+                            "nullable": true,
+                            "comment": "獲得物のタイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "獲得物のID"
+                        },
+                        "resource_amount": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "獲得物の数量"
+                        },
+                        "start_date": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "販売開始日時"
+                        },
+                        "end_date": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "販売終了日時"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_shop_pass_effects": {
+                    "comment": "ショップパスの効果設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_shop_pass_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_shop_passes.id"
+                        },
+                        "effect_type": {
+                            "type": "enum('IdleIncentiveAddReward','IdleIncentiveMaxQuickReceiveByDiamond','IdleIncentiveMaxQuickReceiveByAd','StaminaAddRecoveryLimit','AdSkip','ChangeBattleSpeed')",
+                            "nullable": false,
+                            "comment": "ゲーム内パス効果"
+                        },
+                        "effect_value": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ゲーム内パス効果設定値"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "idx_mst_shop_pass_id": {
+                            "type": "index",
+                            "columns": [
+                                "mst_shop_pass_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_shop_pass_rewards": {
+                    "comment": "ショップパスの報酬設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_shop_pass_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_shop_passes.id"
+                        },
+                        "pass_reward_type": {
+                            "type": "enum('Daily','Immediately')",
+                            "nullable": false,
+                            "comment": "報酬の受け取りタイミング"
+                        },
+                        "resource_type": {
+                            "type": "enum('Coin','FreeDiamond','Item')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬リソースID"
+                        },
+                        "resource_amount": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "報酬の個数"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "idx_mst_shop_pass_id": {
+                            "type": "index",
+                            "columns": [
+                                "mst_shop_pass_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_shop_passes": {
+                    "comment": "ショップパスの基本設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "opr_product_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "opr_products.id"
+                        },
+                        "is_display_expiration": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "販売の有効期限を表示するかどうか 0:表示しない 1:表示する"
+                        },
+                        "pass_duration_days": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "パスの有効日数"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "アセットキー"
+                        },
+                        "shop_pass_cell_color": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "パス表示バナーの背景色"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_opr_product_id": {
+                            "type": "unique",
+                            "columns": [
+                                "opr_product_id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_shop_passes_i18n": {
+                    "comment": "ショップパスの基本設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_shop_pass_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_shop_passes.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語設定"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "パス名"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_mst_shop_pass_id_language": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_shop_pass_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_special_attacks_i18n": {
+                    "comment": "必殺ワザの名前設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_units.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語設定"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "名前"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_special_role_level_up_attack_elements": {
+                    "comment": "スペシャルキャラのレベルアップに応じて",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_attack_element_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "必殺ワザID"
+                        },
+                        "min_power_parameter": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "スペシャルロールユニットにおけるレベル最小時の攻撃パラメータ"
+                        },
+                        "max_power_parameter": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "スペシャルロールユニットにおけるレベル最大時の攻撃パラメータ"
+                        },
+                        "min_effective_count": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "強化するeffective_countの最低値"
+                        },
+                        "max_effective_count": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "強化するeffective_countの最高値"
+                        },
+                        "min_effective_duration": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "強化するeffective_durationの最低値"
+                        },
+                        "max_effective_duration": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "強化するeffective_durationの最高値"
+                        },
+                        "min_effect_parameter": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "強化するeffect_parameterの最低値"
+                        },
+                        "max_effect_parameter": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "強化するeffect_parameterの最高値"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_speech_balloons_i18n": {
+                    "comment": "ユニット吹き出しテキストの多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstUnitId"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語設定"
+                        },
+                        "condition_type": {
+                            "type": "enum('Summon','SpecialAttackCharge','SpecialAttack')",
+                            "nullable": false,
+                            "comment": "条件タイプ"
+                        },
+                        "balloon_type": {
+                            "type": "enum('Maru','Fuwa','Toge')",
+                            "nullable": false,
+                            "comment": "吹き出しタイプ"
+                        },
+                        "side": {
+                            "type": "enum('Right','Left')",
+                            "nullable": false,
+                            "comment": "向きタイプ"
+                        },
+                        "duration": {
+                            "type": "double",
+                            "nullable": false,
+                            "comment": "間隔"
+                        },
+                        "text": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "セリフ"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_stage_clear_time_rewards": {
+                    "comment": "ステージごとのクリアタイムに応じた報酬設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_stage_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_stages.id"
+                        },
+                        "upper_clear_time_ms": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "目標タイム(ミリ秒)"
+                        },
+                        "resource_type": {
+                            "type": "enum('Coin','FreeDiamond','Item','Emblem','Unit')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬ID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "報酬数"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_stage_end_conditions": {
+                    "comment": "インゲームにて、特殊な勝利・敗北などのバトル終了条件を設定したい時に",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_stage_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": ""
+                        },
+                        "stage_end_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "Victory",
+                            "comment": "Victory(勝利)・Defeat(敗北)・Finish(終了)の3タイプのどれに当たるかを設定"
+                        },
+                        "condition_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "PlayerOutpostBreakDown",
+                            "comment": "条件を設定"
+                        },
+                        "condition_value1": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "条件が敵討伐であれば討伐数など、条件によって必要な数など値を指定する(不要な場合は空)"
+                        },
+                        "condition_value2": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "条件が敵討伐であれば討伐数など、条件によって必要な数など値を指定する(複数必要な場合)"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_stage_enhance_reward_params": {
+                    "comment": "強化クエストステージクリア時の報酬量算出に使う係数設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "min_threshold_score": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "乗数が適用されるスコアの下限値"
+                        },
+                        "coin_reward_amount": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "報酬量"
+                        },
+                        "coin_reward_size_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "報酬のサイズタイプ"
+                        },
+                        "release_key": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_min_threshold_score": {
+                            "type": "unique",
+                            "columns": [
+                                "min_threshold_score"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_stage_event_rewards": {
+                    "comment": "イベントクエストステージのクリア報酬設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_stage_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_stages.id"
+                        },
+                        "reward_category": {
+                            "type": "enum('Always','FirstClear','Random')",
+                            "nullable": false,
+                            "comment": "報酬カテゴリー"
+                        },
+                        "resource_type": {
+                            "type": "enum('Exp','Coin','FreeDiamond','Item','Emblem','Unit')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬ID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "報酬数"
+                        },
+                        "percentage": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "ドロップの確率(パーセント)"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "ソート順序"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_stage_event_settings": {
+                    "comment": "ステージの基本設定にはないイベントクエスト用の追加設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_stage_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_stages.id"
+                        },
+                        "reset_type": {
+                            "type": "enum('Daily')",
+                            "nullable": true,
+                            "comment": "リセットタイプ"
+                        },
+                        "clearable_count": {
+                            "type": "int",
+                            "nullable": true,
+                            "comment": "クリア可能回数"
+                        },
+                        "ad_challenge_count": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "広告視聴で挑戦できる回数"
+                        },
+                        "background_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "背景"
+                        },
+                        "mst_stage_rule_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "mst_stage_event_rules.group_id"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_mst_stage_id": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_stage_id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_stage_rewards": {
+                    "comment": "ステージ報酬設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_stage_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_stages.id"
+                        },
+                        "reward_category": {
+                            "type": "enum('Always','FirstClear','Random')",
+                            "nullable": false,
+                            "comment": "報酬カテゴリー"
+                        },
+                        "resource_type": {
+                            "type": "enum('Exp','Coin','FreeDiamond','Item','Emblem','Unit')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬ID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "報酬数"
+                        },
+                        "percentage": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "出現比重"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "ソート順序"
+                        },
+                        "release_key": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_stage_id_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_stage_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_stage_tips": {
+                    "comment": "ステージで表示するtips設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "language": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "言語設定"
+                        },
+                        "mst_stage_tips_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstStageTipsGroupId"
+                        },
+                        "title": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "タイトル"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "本文"
+                        },
+                        "release_key": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_stages": {
+                    "comment": "ステージの基本設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_quest_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クエストID(mst_quest.id)"
+                        },
+                        "mst_in_game_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "インゲーム設定ID(mst_in_game.id)"
+                        },
+                        "stage_number": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ステージ番号"
+                        },
+                        "recommended_level": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "おすすめレベル"
+                        },
+                        "cost_stamina": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "消費スタミナ"
+                        },
+                        "exp": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "獲得EXP"
+                        },
+                        "coin": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "獲得コイン"
+                        },
+                        "mst_artwork_fragment_drop_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "mst_artwork_fragments.drop_group_id"
+                        },
+                        "prev_mst_stage_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "解放条件のステージID"
+                        },
+                        "mst_stage_tips_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "tipsID"
+                        },
+                        "auto_lap_type": {
+                            "type": "enum('AfterClear','Initial')",
+                            "nullable": true,
+                            "comment": "スタミナブーストタイプ"
+                        },
+                        "max_auto_lap_count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "最大スタミナブースト周回指定可能数"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "ソート順序"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "ステージ公開開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "ステージ公開終了日時"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "アセットキー"
+                        },
+                        "release_key": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_stages_i18n": {
+                    "comment": "ステージの基本設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_stage_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ステージID(mst_stage.id)"
+                        },
+                        "language": {
+                            "type": "enum('ja','en','zh-Hant')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語設定"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ステージ名"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_store_products": {
+                    "comment": "プラットフォーム（AppStore, GooglePlay）に登録している商品のIDを管理する\nリストアがあるため一度定義したら変えない",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "comment": "変更が適用されるリリースキー"
+                        },
+                        "product_id_ios": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "AppStoreのプロダクトID"
+                        },
+                        "product_id_android": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "GooglePlayのプロダクトID"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "product_id_android_index": {
+                            "type": "index",
+                            "columns": [
+                                "product_id_android"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "product_id_ios_index": {
+                            "type": "index",
+                            "columns": [
+                                "product_id_ios"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_store_products_i18n": {
+                    "comment": "ストア商品情報の多言語を管理する",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_store_product_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_store_products.id"
+                        },
+                        "language": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "言語設定"
+                        },
+                        "price_ios": {
+                            "type": "decimal(10,3)",
+                            "nullable": false,
+                            "comment": "AppStoreの価格"
+                        },
+                        "price_android": {
+                            "type": "decimal(10,3)",
+                            "nullable": false,
+                            "comment": "GooglePlayの価格"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_tutorial_tips_i18n": {
+                    "comment": "チュートリアルダイアログで表示するtips画像パスの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_tutorial_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "mst_tutorials.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "sort_order": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "並び順(昇順)"
+                        },
+                        "title": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "タイトル"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "アセットキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_tutorials": {
+                    "comment": "チュートリアルの項目と開始条件の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "type": {
+                            "type": "enum('Intro','Main','Free')",
+                            "nullable": false,
+                            "default": "Intro",
+                            "comment": "チュートリアルタイプ"
+                        },
+                        "sort_order": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "各チュートリアルコンテンツの順番"
+                        },
+                        "function_name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "チュートリアル名"
+                        },
+                        "condition_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "フリーパートの開放条件種別"
+                        },
+                        "condition_value": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "フリーパートの開放条件値"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        }
+                    },
+                    "indexes": {
+                        "mst_tutorials_function_name_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "function_name"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_abilities": {
+                    "comment": "ユニット特性の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_ability_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstAbilityId"
+                        },
+                        "ability_parameter1": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "Abilityごとに使用するパラメータ1"
+                        },
+                        "ability_parameter2": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "Abilityごとに使用するパラメータ2"
+                        },
+                        "ability_parameter3": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "Abilityごとに使用するパラメータ3"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_encyclopedia_effects": {
+                    "comment": "キャラ図鑑報酬のインゲーム効果設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_unit_encyclopedia_reward_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_unit_encyclopedia_rewards.id"
+                        },
+                        "effect_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "効果種別"
+                        },
+                        "value": {
+                            "type": "double",
+                            "nullable": false,
+                            "comment": "効果値"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_encyclopedia_rewards": {
+                    "comment": "キャラ図鑑報酬の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "unit_encyclopedia_rank": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "図鑑ランク(グレードの合算値)"
+                        },
+                        "resource_type": {
+                            "type": "enum('Exp','Coin','FreeDiamond','Item','Emblem')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬リソースID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "報酬の個数"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_fragment_converts": {
+                    "comment": "キャラ重複獲得時のキャラのかけらへの変換レートの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "unit_label": {
+                            "type": "enum('DropR','DropSR','DropSSR','DropUR','PremiumR','PremiumSR','PremiumSSR','PremiumUR','FestivalUR')",
+                            "nullable": false,
+                            "comment": "ラベル"
+                        },
+                        "convert_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "ガチャとかでキャラが重複した際に変換されるキャラのかけら数"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_unit_fragment_converts_rarity_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "unit_label"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_grade_coefficients": {
+                    "comment": "キャラのグレードアップ後のステータス係数の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "unit_label": {
+                            "type": "enum('DropR','DropSR','DropSSR','DropUR','PremiumR','PremiumSR','PremiumSSR','PremiumUR','FestivalUR')",
+                            "nullable": false,
+                            "comment": "ラベル"
+                        },
+                        "grade_level": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "グレードレベル"
+                        },
+                        "coefficient": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "体力と攻撃力に係る係数"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_grade_ups": {
+                    "comment": "キャラのグレードアップ設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "unit_label": {
+                            "type": "enum('DropR','DropSR','DropSSR','DropUR','PremiumR','PremiumSR','PremiumSSR','PremiumUR','FestivalUR')",
+                            "nullable": false,
+                            "comment": "ラベル"
+                        },
+                        "grade_level": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "グレードレベル"
+                        },
+                        "require_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "グレードアップに必要なかけら数"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_unit_label_grade_level": {
+                            "type": "unique",
+                            "columns": [
+                                "unit_label",
+                                "grade_level"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_level_ups": {
+                    "comment": "キャラのレベルアップ設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "unit_label": {
+                            "type": "enum('DropR','DropSR','DropSSR','DropUR','PremiumR','PremiumSR','PremiumSSR','PremiumUR','FestivalUR')",
+                            "nullable": false,
+                            "comment": "ユニットタイプ"
+                        },
+                        "level": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "レベル"
+                        },
+                        "required_coin": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "レベルアップに必要なコイン"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_unit_label_level": {
+                            "type": "unique",
+                            "columns": [
+                                "unit_label",
+                                "level"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_rank_coefficients": {
+                    "comment": "キャラのランクアップ後のステータス係数の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "rank": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "ユニットのランク"
+                        },
+                        "coefficient": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "係数"
+                        },
+                        "special_unit_coefficient": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "スペシャルキャラ用のランクステータス上昇率"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_rank_ups": {
+                    "comment": "キャラのランクアップ設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "unit_label": {
+                            "type": "enum('DropR','DropSR','DropSSR','DropUR','PremiumR','PremiumSR','PremiumSSR','PremiumUR','FestivalUR')",
+                            "nullable": false,
+                            "comment": "ユニットラベル"
+                        },
+                        "rank": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "Lv上限開放後のユニットのランク"
+                        },
+                        "amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "リミテッドメモリーの必要数"
+                        },
+                        "require_level": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "Lv上限開放に必要なユニットのレベル"
+                        },
+                        "sr_memory_fragment_amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "初級メモリーフラグメントの必要数"
+                        },
+                        "ssr_memory_fragment_amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "中級メモリーフラグメントの必要数"
+                        },
+                        "ur_memory_fragment_amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "上級メモリーフラグメントの必要数"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_unit_label_rank": {
+                            "type": "unique",
+                            "columns": [
+                                "unit_label",
+                                "rank"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_role_bonuses": {
+                    "comment": "インゲームでのロールごとの属性有利時の攻撃と防御にかけるボーナス係数の設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "role_type": {
+                            "type": "enum('None','Attack','Balance','Defense','Support','Unique','Technical','Special')",
+                            "nullable": false,
+                            "comment": "該当のロールタイプ"
+                        },
+                        "color_advantage_attack_bonus": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "該当ロールが攻撃時に属性有利だった時にダメージ計算にかけるボーナス係数(1.0が基準値。1.3などでダメージが大きくなる)"
+                        },
+                        "color_advantage_defense_bonus": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "該当ロールが防御時に属性有利だった時にダメージ計算にかけるボーナス係数(1.0が基準値。0.8などでダメージが小さくなる)"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_unit_specific_rank_ups": {
+                    "comment": "ユニット個別のランクアップ設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_units.id"
+                        },
+                        "rank": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "Lv上限開放後のユニットのランク"
+                        },
+                        "amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "リミテッドメモリーの必要数"
+                        },
+                        "unit_memory_amount": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "キャラ個別メモリーの必要数"
+                        },
+                        "require_level": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "Lv上限開放に必要なユニットのレベル"
+                        },
+                        "sr_memory_fragment_amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "初級メモリーフラグメントの必要数"
+                        },
+                        "ssr_memory_fragment_amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "中級メモリーフラグメントの必要数"
+                        },
+                        "ur_memory_fragment_amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "上級メモリーフラグメントの必要数"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_mst_unit_id_rank": {
+                            "type": "unique",
+                            "columns": [
+                                "mst_unit_id",
+                                "rank"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_units": {
+                    "comment": "キャラ設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "fragment_mst_item_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "かけらID(mst_items.id)"
+                        },
+                        "color": {
+                            "type": "enum('Colorless','Red','Blue','Yellow','Green')",
+                            "nullable": false,
+                            "default": "Colorless",
+                            "comment": "属性"
+                        },
+                        "role_type": {
+                            "type": "enum('None','Attack','Balance','Defense','Support','Unique','Technical','Special')",
+                            "nullable": false,
+                            "comment": "属性"
+                        },
+                        "attack_range_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ロール"
+                        },
+                        "unit_label": {
+                            "type": "enum('DropR','DropSR','DropSSR','DropUR','PremiumR','PremiumSR','PremiumSSR','PremiumUR','FestivalUR')",
+                            "nullable": false,
+                            "comment": "ラベル"
+                        },
+                        "has_specific_rank_up": {
+                            "type": "tinyint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "キャラ個別のランクアップ設定を使うかどうか"
+                        },
+                        "mst_series_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "作品ID"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "アセットキー"
+                        },
+                        "rarity": {
+                            "type": "enum('N','R','SR','SSR','UR')",
+                            "nullable": false,
+                            "comment": "レアリティ"
+                        },
+                        "sort_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "ソート順序"
+                        },
+                        "summon_cost": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "インゲーム召喚コスト"
+                        },
+                        "summon_cool_time": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "インゲーム召喚クールタイム"
+                        },
+                        "special_attack_initial_cool_time": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "召喚時の必殺ワザクールタイム"
+                        },
+                        "special_attack_cool_time": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "必殺ワザ使用後の必殺ワザクールタイム"
+                        },
+                        "min_hp": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "基礎最小ステータス"
+                        },
+                        "max_hp": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "基礎最大ステータス"
+                        },
+                        "damage_knock_back_count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "被撃破までのHP減少によるノックバック回数"
+                        },
+                        "move_speed": {
+                            "type": "decimal(10,2)",
+                            "nullable": false,
+                            "comment": "移動速度"
+                        },
+                        "well_distance": {
+                            "type": "double(8,2)",
+                            "nullable": false,
+                            "comment": "索敵距離"
+                        },
+                        "min_attack_power": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "最小攻撃力"
+                        },
+                        "max_attack_power": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "最大攻撃力"
+                        },
+                        "mst_unit_ability_id1": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstAbilityId"
+                        },
+                        "ability_unlock_rank1": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "開放ランク"
+                        },
+                        "mst_unit_ability_id2": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstAbilityId"
+                        },
+                        "ability_unlock_rank2": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "開放ランク"
+                        },
+                        "mst_unit_ability_id3": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "リレーション向けMstAbilityId"
+                        },
+                        "ability_unlock_rank3": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "開放ランク"
+                        },
+                        "is_encyclopedia_special_attack_position_right": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "図鑑画面で必殺ワザ再生時にキャラを右寄りにするかフラグ"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_units_i18n": {
+                    "comment": "キャラ設定の多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "リレーション向けMstUnitId"
+                        },
+                        "language": {
+                            "type": "enum('ja','en','zh-Hant')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語設定"
+                        },
+                        "name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "名前"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "詳細"
+                        },
+                        "detail": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "情報詳細"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_user_level_bonus_groups": {
+                    "comment": "ユーザーレベル報酬のグルーピング設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_user_level_bonus_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "報酬グループID"
+                        },
+                        "resource_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "タイプ対象のID"
+                        },
+                        "resource_amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "報酬数"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "level_bonus_group_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_user_level_bonus_group_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_user_level_bonuses": {
+                    "comment": "ユーザーレベルごとの報酬設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "level": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "プレイヤーレベル"
+                        },
+                        "mst_user_level_bonus_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "報酬グループID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_user_level_bonuses_level_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "level"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_user_levels": {
+                    "comment": "ユーザーレベル設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "プレイヤーレベルID"
+                        },
+                        "level": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "プレイヤーレベル"
+                        },
+                        "stamina": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "時間回復最大値のスタミナ"
+                        },
+                        "exp": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "comment": "レベルアップに必要な累計経験値"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mst_white_words": {
+                    "comment": "NGワードから除外されるホワイトワード設定マスターテーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "id"
+                        },
+                        "word": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ホワイトワード"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_asset_release_controls": {
+                    "comment": "アセット配信制御設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "version": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "バージョン指定"
+                        },
+                        "platform": {
+                            "type": "int",
+                            "nullable": true,
+                            "default": "0",
+                            "comment": "プラットフォーム指定"
+                        },
+                        "branch": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ブランチ名"
+                        },
+                        "hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コミットハッシュ"
+                        },
+                        "version_no": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "バージョンナンバー"
+                        },
+                        "release_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "リリース予定日時"
+                        },
+                        "release_description": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "リリース内容のメモ"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "idx_release_at": {
+                            "type": "index",
+                            "columns": [
+                                "release_at"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_asset_release_versions": {
+                    "comment": "アセット配信バージョン情報設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        },
+                        "git_revision": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ビルドを行なったクライアントリポジトリのリビジョン"
+                        },
+                        "git_branch": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ビルドを行なったクライアントリポジトリのカレントブランチ"
+                        },
+                        "catalog_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "AddressableAssetをビルドした時のCatalogハッシュ値"
+                        },
+                        "platform": {
+                            "type": "enum('1','2')",
+                            "nullable": false,
+                            "comment": "iOS \/ Androidの識別子"
+                        },
+                        "build_client_version": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ビルドクライアントバージョン"
+                        },
+                        "asset_total_byte_size": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "アセット合計容量"
+                        },
+                        "catalog_byte_size": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "comment": "カタログ容量"
+                        },
+                        "catalog_file_name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "カタログ名"
+                        },
+                        "catalog_hash_file_name": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "カタログハッシュファイル名"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_asset_releases": {
+                    "comment": "リリース済みアセット情報設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        },
+                        "platform": {
+                            "type": "enum('1','2')",
+                            "nullable": false,
+                            "comment": "iOS \/ Androidの識別子"
+                        },
+                        "enabled": {
+                            "type": "tinyint(1)",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "リリース状態"
+                        },
+                        "target_release_version_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "opr_asset_release_versions.id"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "platform_enabled_index": {
+                            "type": "index",
+                            "columns": [
+                                "platform",
+                                "enabled"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "release_key_platform_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "release_key",
+                                "platform"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_campaigns": {
+                    "comment": "インゲームコンテンツに対するキャンペーン設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "campaign_type": {
+                            "type": "enum('Stamina','Exp','ArtworkFragment','ItemDrop','CoinDrop','ChallengeCount')",
+                            "nullable": false,
+                            "comment": "キャンペーンタイプ"
+                        },
+                        "target_type": {
+                            "type": "enum('NormalQuest','EnhanceQuest','EventQuest','PvP','AdventBattle')",
+                            "nullable": false,
+                            "comment": "キャンペーン対象タイプ"
+                        },
+                        "difficulty": {
+                            "type": "enum('Normal','Hard','Extra')",
+                            "nullable": false,
+                            "comment": "難易度"
+                        },
+                        "target_id_type": {
+                            "type": "enum('Quest','Series')",
+                            "nullable": false,
+                            "comment": "指定するIDのタイプ"
+                        },
+                        "target_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "mst_quests.idかmst_series.id"
+                        },
+                        "effect_value": {
+                            "type": "smallint unsigned",
+                            "nullable": false,
+                            "comment": "効果値"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "対象となるクエストID"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "キャンペーン開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "キャンペーン終了日時"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_campaigns_i18n": {
+                    "comment": "キャンペーン説明などの多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "opr_campaign_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "opr_campaigns.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "詳細"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_opr_campaign_id_language": {
+                            "type": "unique",
+                            "columns": [
+                                "opr_campaign_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_gacha_display_units_i18n": {
+                    "comment": "ガチャ画面に表示するユニット情報の多言語情報",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "opr_gacha_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "表示対象のガシャ(opr_gachas.id)"
+                        },
+                        "mst_unit_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "表示するキャラ(mst_units.id)"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語情報"
+                        },
+                        "sort_order": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "キャラの表示順(昇順)"
+                        },
+                        "description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "表示キャラごとの文言"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_gacha_unit_language": {
+                            "type": "unique",
+                            "columns": [
+                                "opr_gacha_id",
+                                "mst_unit_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_gacha_prizes": {
+                    "comment": "ガシャの排出物設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "同じ抽選テーブルとしてまとめるグループID"
+                        },
+                        "resource_type": {
+                            "type": "enum('Coin','Unit','Item')",
+                            "nullable": false,
+                            "comment": "ガシャの消費リソースのタイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "ガシャの消費リソースid"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "ガシャの消費リソース量"
+                        },
+                        "weight": {
+                            "type": "bigint unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "出現比重"
+                        },
+                        "pickup": {
+                            "type": "tinyint(1)",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "ピックアップ対象"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "group_id_resource_type_resource_id_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "group_id",
+                                "resource_type",
+                                "resource_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_gacha_uppers": {
+                    "comment": "ガシャの天井設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "upper_group": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "天井設定区分"
+                        },
+                        "upper_type": {
+                            "type": "enum('MaxRarity','Pickup')",
+                            "nullable": false,
+                            "default": "MaxRarity",
+                            "comment": "天井タイプ"
+                        },
+                        "count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "天井を保証する回数"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "upper_type_step_number_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "upper_group",
+                                "upper_type"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_gacha_use_resources": {
+                    "comment": "ガシャを引くために必要なリソースの設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "opr_gacha_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "opr_gachas.id"
+                        },
+                        "cost_type": {
+                            "type": "enum('Diamond','PaidDiamond','Free','Item','Ad')",
+                            "nullable": false,
+                            "default": "Diamond",
+                            "comment": "ガシャで使用するコストのタイプ"
+                        },
+                        "cost_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "消費リソースID"
+                        },
+                        "cost_num": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "一回で必要なアイテムの個数"
+                        },
+                        "draw_count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リソースを1回分消費して回せる回数"
+                        },
+                        "cost_priority": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "使用するコストの優先度設定"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "opr_gacha_id_cost_type_draw_count_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "opr_gacha_id",
+                                "cost_type",
+                                "draw_count"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_gachas": {
+                    "comment": "ガシャの基本設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "gacha_type": {
+                            "type": "enum('Normal','Premium','Pickup','Free','Ticket','Festival','PaidOnly','Medal','Tutorial')",
+                            "nullable": true,
+                            "comment": "ガシャのタイプ"
+                        },
+                        "upper_group": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "天井設定区分"
+                        },
+                        "enable_ad_play": {
+                            "type": "tinyint(1)",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "広告で回せるか"
+                        },
+                        "enable_add_ad_play_upper": {
+                            "type": "tinyint(1)",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "広告で天井を動かすか"
+                        },
+                        "ad_play_interval_time": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "広告で回すことができるインターバル時間(設定単位は分)"
+                        },
+                        "multi_draw_count": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "N連の指定"
+                        },
+                        "multi_fixed_prize_count": {
+                            "type": "smallint unsigned",
+                            "nullable": true,
+                            "default": "0",
+                            "comment": "N連の確定枠数"
+                        },
+                        "daily_play_limit_count": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "１日に回すことができる上限数"
+                        },
+                        "total_play_limit_count": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "回すことができる上限数"
+                        },
+                        "daily_ad_limit_count": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "1日に広告で回すことができる上限数"
+                        },
+                        "total_ad_limit_count": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "広告で回すことができる上限数"
+                        },
+                        "prize_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "opr_gacha_prizes.group_id"
+                        },
+                        "fixed_prize_group_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "確定枠(opr_gacha_prizes.group_id)"
+                        },
+                        "appearance_condition": {
+                            "type": "enum('Always','HasTicket')",
+                            "nullable": false,
+                            "default": "Always",
+                            "comment": "登場条件"
+                        },
+                        "unlock_condition_type": {
+                            "type": "enum('None','MainPartTutorialComplete')",
+                            "nullable": false,
+                            "default": "None",
+                            "comment": "開放条件タイプ"
+                        },
+                        "unlock_duration_hours": {
+                            "type": "smallint unsigned",
+                            "nullable": true,
+                            "comment": "条件達成からの開放時間"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        },
+                        "display_mst_unit_id": {
+                            "type": "text",
+                            "nullable": true,
+                            "comment": "表示に使用するピックアップユニットIDを指定する"
+                        },
+                        "display_information_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "ガチャ詳細用お知らせID"
+                        },
+                        "display_gacha_caution_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "ガシャ注意事項のid（adm_gacha_cautions.id）"
+                        },
+                        "gacha_priority": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "バナー表示順"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_gachas_i18n": {
+                    "comment": "ガシャ名などの多言語設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "opr_gacha_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "opr_gachas.id"
+                        },
+                        "language": {
+                            "type": "enum('ja','en','zh-Hant')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語情報"
+                        },
+                        "name": {
+                            "type": "text",
+                            "nullable": true,
+                            "comment": "ガチャ名"
+                        },
+                        "description": {
+                            "type": "text",
+                            "nullable": true,
+                            "comment": "ガチャ説明"
+                        },
+                        "max_rarity_upper_description": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "default": "",
+                            "comment": "最高レアリティ天井の文言"
+                        },
+                        "pickup_upper_description": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "default": "",
+                            "comment": "ピックアップ天井の文言"
+                        },
+                        "fixed_prize_description": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "確定枠の表示文言"
+                        },
+                        "banner_url": {
+                            "type": "text",
+                            "nullable": true,
+                            "comment": "バナーURL"
+                        },
+                        "logo_asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": true
+                        },
+                        "logo_banner_url": {
+                            "type": "text",
+                            "nullable": true,
+                            "comment": "詳細へ飛んだ後のロゴバナーurl"
+                        },
+                        "gacha_background_color": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ガチャ背景色"
+                        },
+                        "gacha_banner_size": {
+                            "type": "enum('SizeM','SizeL')",
+                            "nullable": false,
+                            "default": "SizeM",
+                            "comment": "ガチャバナーサイズ"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "opr_gacha_id_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "opr_gacha_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_master_release_controls": {
+                    "comment": "マスター配信制御設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        },
+                        "git_revision": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "マスターデータのコミットハッシュ"
+                        },
+                        "release_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "リリース予定日時"
+                        },
+                        "release_description": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "リリース内容のメモ"
+                        },
+                        "client_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアント共通データのハッシュ値"
+                        },
+                        "zh-Hant_client_i18n_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "クライアント多言語データ（繁体字中国語）のハッシュ値"
+                        },
+                        "en_client_i18n_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "クライアント多言語データ（英語）のハッシュ値"
+                        },
+                        "ja_client_i18n_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "クライアント多言語データ（日本語）のハッシュ値"
+                        },
+                        "client_opr_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアント運用データのハッシュ値"
+                        },
+                        "zh-Hant_client_opr_i18n_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "クライアント運用多言語データ（繁体字中国語）のハッシュ値"
+                        },
+                        "en_client_opr_i18n_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "クライアント運用多言語データ（英語）のハッシュ値"
+                        },
+                        "ja_client_opr_i18n_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "クライアント運用多言語データ（日本語）のハッシュ値"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "作成日時のタイムスタンプ"
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "更新日時のタイムスタンプ"
+                        }
+                    },
+                    "indexes": {
+                        "git_revision_release_key_client_data_hash_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "git_revision",
+                                "release_key",
+                                "client_data_hash"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "idx_release_at": {
+                            "type": "index",
+                            "columns": [
+                                "release_at"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_master_release_versions": {
+                    "comment": "マスター配信バージョン情報設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        },
+                        "git_revision": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "適用したGitリビジョン"
+                        },
+                        "master_scheme_version": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "マスターデータのテーブルスキームのhash化した値"
+                        },
+                        "data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "全ての実データを一意に識別できるハッシュ値"
+                        },
+                        "server_db_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "サーバーDBのハッシュ値"
+                        },
+                        "client_mst_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアントマスターデータのハッシュ値"
+                        },
+                        "client_mst_data_i18n_ja_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアントマスターデータ多言語（日本語）のハッシュ値"
+                        },
+                        "client_mst_data_i18n_en_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアントマスターデータ多言語（英語）のハッシュ値"
+                        },
+                        "client_mst_data_i18n_zh_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアントマスターデータ多言語（繁体字中国語）のハッシュ値"
+                        },
+                        "client_opr_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアント運用データのハッシュ値"
+                        },
+                        "client_opr_data_i18n_ja_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアント運用データ多言語（日本語）のハッシュ値"
+                        },
+                        "client_opr_data_i18n_en_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアント運用データ多言語（英語）のハッシュ値"
+                        },
+                        "client_opr_data_i18n_zh_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアント運用データ多言語（繁体字中国語）のハッシュ値"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_master_releases": {
+                    "comment": "リリース済みマスター情報設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "release_key": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "リリースキー"
+                        },
+                        "enabled": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "リリース状態"
+                        },
+                        "target_release_version_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "opr_master_release_versions.id"
+                        }
+                    },
+                    "indexes": {
+                        "opr_master_releases_release_key_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "release_key"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_products": {
+                    "comment": "ユーザーに販売する実際の商品を管理する\n1mst_store_productに対して複数",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "mst_store_product_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mst_store_products.id"
+                        },
+                        "product_type": {
+                            "type": "enum('diamond','pack','pass')",
+                            "nullable": true,
+                            "comment": "商品タイプ"
+                        },
+                        "purchasable_count": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "購入可能回数"
+                        },
+                        "paid_amount": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "配布する有償一次通貨"
+                        },
+                        "display_priority": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "表示優先度"
+                        },
+                        "start_date": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "販売開始日時"
+                        },
+                        "end_date": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "販売終了日時"
+                        },
+                        "release_key": {
+                            "type": "int",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        }
+                    },
+                    "indexes": {
+                        "mst_store_product_id_index": {
+                            "type": "index",
+                            "columns": [
+                                "mst_store_product_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "opr_products_i18n": {
+                    "comment": "ユーザーに販売する実際の商品の多言語テーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "opr_product_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "対象のプロダクト(opr_products.id)"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "comment": "言語情報"
+                        },
+                        "asset_key": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "default": "",
+                            "comment": "アセットキー"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_opr_product_id_language": {
+                            "type": "unique",
+                            "columns": [
+                                "opr_product_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                }
+            }
+        },
+        "mng": {
+            "tables": {
+                "mng_asset_release_versions": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false
+                        },
+                        "git_revision": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ビルドを行なったクライアントリポジトリのリビジョン"
+                        },
+                        "git_branch": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ビルドを行なったクライアントリポジトリのカレントブランチ"
+                        },
+                        "catalog_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "AddressableAssetをビルドした時のCatalogハッシュ値"
+                        },
+                        "platform": {
+                            "type": "enum('1','2')",
+                            "nullable": false,
+                            "comment": "iOS \/ Androidの識別子"
+                        },
+                        "build_client_version": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "asset_total_byte_size": {
+                            "type": "bigint unsigned",
+                            "nullable": false
+                        },
+                        "catalog_byte_size": {
+                            "type": "bigint unsigned",
+                            "nullable": false
+                        },
+                        "catalog_file_name": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "catalog_hash_file_name": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": false
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": false
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_asset_releases": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false
+                        },
+                        "platform": {
+                            "type": "enum('1','2')",
+                            "nullable": false,
+                            "comment": "iOS \/ Androidの識別子"
+                        },
+                        "enabled": {
+                            "type": "tinyint(1)",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "リリース状態"
+                        },
+                        "target_release_version_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "opr_asset_release_versions.id"
+                        },
+                        "client_compatibility_version": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "クライアント互換性バージョン"
+                        },
+                        "description": {
+                            "type": "text",
+                            "nullable": true,
+                            "comment": "メモ欄"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "開始日時"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": false
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": false
+                        }
+                    },
+                    "indexes": {
+                        "platform_enabled_index": {
+                            "type": "index",
+                            "columns": [
+                                "platform",
+                                "enabled"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "release_key_platform_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "release_key",
+                                "platform"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_client_versions": {
+                    "comment": "クライアントバージョン管理",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "UUID"
+                        },
+                        "client_version": {
+                            "type": "varchar(32)",
+                            "nullable": false,
+                            "comment": "クライアントバージョン"
+                        },
+                        "platform": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "プラットフォーム"
+                        },
+                        "is_force_update": {
+                            "type": "tinyint",
+                            "nullable": false,
+                            "comment": "強制アップデートするか"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_client_version_platform": {
+                            "type": "unique",
+                            "columns": [
+                                "client_version",
+                                "platform"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_content_closes": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "管理コンテンツクローズID"
+                        },
+                        "content_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "コンテンツタイプ"
+                        },
+                        "content_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "コンテンツID（ガチャID、ショップIDなど。null = 全コンテンツ）"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "クローズ開始時間"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "クローズ終了時間"
+                        },
+                        "is_valid": {
+                            "type": "tinyint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "有効フラグ"
+                        }
+                    },
+                    "indexes": {
+                        "idx_content_type_content_id": {
+                            "type": "index",
+                            "columns": [
+                                "content_type",
+                                "content_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_deleted_my_ids": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "my_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "MyID"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        }
+                    },
+                    "indexes": {
+                        "idx_my_id": {
+                            "type": "index",
+                            "columns": [
+                                "my_id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_in_game_notices": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "adm_promotion_tag_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "昇格タグID(adm_promotion_tags.id)"
+                        },
+                        "display_type": {
+                            "type": "enum('BasicBanner','Dialog')",
+                            "nullable": false,
+                            "comment": "表示モード"
+                        },
+                        "enable": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "comment": "有効フラグ"
+                        },
+                        "priority": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "表示優先度"
+                        },
+                        "display_frequency_type": {
+                            "type": "enum('Always','Daily','Weekly','Monthly','Once')",
+                            "nullable": false,
+                            "comment": "表示頻度タイプ"
+                        },
+                        "destination_type": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "遷移先タイプ"
+                        },
+                        "destination_path": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "遷移先情報"
+                        },
+                        "destination_path_detail": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "遷移先詳細情報"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "掲載開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "掲載終了日時"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_in_game_notices_i18n": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "mng_in_game_notice_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mng_in_game_notices.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "title": {
+                            "type": "text",
+                            "nullable": true,
+                            "comment": "タイトル"
+                        },
+                        "description": {
+                            "type": "text",
+                            "nullable": false,
+                            "comment": "本文テキスト"
+                        },
+                        "banner_url": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "バナーURL"
+                        },
+                        "button_title": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ボタンに表示するテキスト"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_jump_plus_reward_schedules": {
+                    "comment": "ジャンプ+連携報酬のスケジュール",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "adm_promotion_tag_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "昇格タグID(adm_promotion_tags.id)"
+                        },
+                        "group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mng_jump_plus_rewards.group_id"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "開始日時"
+                        },
+                        "end_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "終了日時"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_jump_plus_rewards": {
+                    "comment": "ジャンプ+連携報酬設定",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "group_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "報酬のグルーピングID"
+                        },
+                        "resource_type": {
+                            "type": "enum('FreeDiamond','Coin','Item','Unit','Emblem')",
+                            "nullable": false,
+                            "comment": "報酬タイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "報酬ID"
+                        },
+                        "resource_amount": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "報酬の個数"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_master_release_versions": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false
+                        },
+                        "git_revision": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "適用したGitリビジョン"
+                        },
+                        "master_schema_version": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "マスターデータのテーブルスキームのhash化した値"
+                        },
+                        "data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "全ての実データを一意に識別できるハッシュ値"
+                        },
+                        "server_db_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "client_mst_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "client_mst_data_i18n_ja_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "client_mst_data_i18n_en_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "client_mst_data_i18n_zh_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "client_opr_data_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "client_opr_data_i18n_ja_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "client_opr_data_i18n_en_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "client_opr_data_i18n_zh_hash": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_master_releases": {
+                    "comment": "",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false
+                        },
+                        "enabled": {
+                            "type": "tinyint unsigned",
+                            "nullable": false,
+                            "default": "0",
+                            "comment": "リリース状態"
+                        },
+                        "target_release_version_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "opr_master_release_versions.id"
+                        },
+                        "client_compatibility_version": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "クライアント互換性バージョン"
+                        },
+                        "description": {
+                            "type": "text",
+                            "nullable": true,
+                            "comment": "メモ欄"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "開始日時"
+                        },
+                        "created_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        },
+                        "updated_at": {
+                            "type": "timestamp",
+                            "nullable": true
+                        }
+                    },
+                    "indexes": {
+                        "opr_master_releases_release_key_unique": {
+                            "type": "unique",
+                            "columns": [
+                                "release_key"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_message_rewards": {
+                    "comment": "メッセージ報酬テーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mng_message_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mng_messages.id"
+                        },
+                        "resource_type": {
+                            "type": "enum('Exp','Coin','FreeDiamond','Item','Emblem','Stamina','Unit')",
+                            "nullable": false,
+                            "comment": "リソースタイプ"
+                        },
+                        "resource_id": {
+                            "type": "varchar(255)",
+                            "nullable": true,
+                            "comment": "リソースID"
+                        },
+                        "resource_amount": {
+                            "type": "int unsigned",
+                            "nullable": true,
+                            "comment": "リソース数量"
+                        },
+                        "display_order": {
+                            "type": "int unsigned",
+                            "nullable": false,
+                            "comment": "表示順"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_mng_message_id_display_order": {
+                            "type": "unique",
+                            "columns": [
+                                "mng_message_id",
+                                "display_order"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_messages": {
+                    "comment": "メッセージ管理テーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "start_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "配布開始時日時"
+                        },
+                        "expired_at": {
+                            "type": "timestamp",
+                            "nullable": false,
+                            "comment": "表示期限日時"
+                        },
+                        "type": {
+                            "type": "enum('All','Individual')",
+                            "nullable": false,
+                            "comment": "配布種別"
+                        },
+                        "account_created_start_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "全体配布条件とするアカウント作成日時(開始)"
+                        },
+                        "account_created_end_at": {
+                            "type": "timestamp",
+                            "nullable": true,
+                            "comment": "全体配布条件とするアカウント作成日時(終了)"
+                        },
+                        "add_expired_days": {
+                            "type": "int",
+                            "nullable": false,
+                            "comment": "ユーザー受け取り日時加算日数"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                },
+                "mng_messages_i18n": {
+                    "comment": "メッセージ多言語テーブル",
+                    "columns": {
+                        "id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "ID"
+                        },
+                        "release_key": {
+                            "type": "bigint",
+                            "nullable": false,
+                            "default": "1",
+                            "comment": "リリースキー"
+                        },
+                        "mng_message_id": {
+                            "type": "varchar(255)",
+                            "nullable": false,
+                            "comment": "mng_messages.id"
+                        },
+                        "language": {
+                            "type": "enum('ja')",
+                            "nullable": false,
+                            "default": "ja",
+                            "comment": "言語"
+                        },
+                        "title": {
+                            "type": "text",
+                            "nullable": false,
+                            "comment": "タイトル"
+                        },
+                        "body": {
+                            "type": "text",
+                            "nullable": false,
+                            "comment": "本文"
+                        }
+                    },
+                    "indexes": {
+                        "PRIMARY": {
+                            "type": "primary",
+                            "columns": [
+                                "id"
+                            ],
+                            "index_type": "BTREE"
+                        },
+                        "uk_mng_message_id_language": {
+                            "type": "unique",
+                            "columns": [
+                                "mng_message_id",
+                                "language"
+                            ],
+                            "index_type": "BTREE"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}```
+
+---
+
