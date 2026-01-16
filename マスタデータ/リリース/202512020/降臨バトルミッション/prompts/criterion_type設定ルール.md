@@ -9,7 +9,7 @@
 
 criterion_typeの定義は以下のファイルに記載されています。
 
-- `マスタデータ/docs/mission/ミッショントリガー一覧.csv`
+- `ミッショントリガー一覧.csv`
 
 ## 基本ルール
 
@@ -327,7 +327,7 @@ criterion_type設定時は、以下を確認してください。
 
 ## 参考資料
 
-- `マスタデータ/docs/mission/ミッショントリガー一覧.csv` - 全criterion_typeの定義
+- `ミッショントリガー一覧.csv` - 全criterion_typeの定義
 - 各マスターテーブルのスキーマ - criterion_valueで参照するIDの定義
 
 ## 更新履歴
