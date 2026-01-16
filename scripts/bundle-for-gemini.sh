@@ -50,7 +50,7 @@ echo "" >> "$current_content_file"
 
 current_file_lines=6
 
-for file in $FILES; do
+while IFS= read -r file; do
   file_num=$((file_num + 1))
 
   # 拡張子を取得
@@ -110,7 +110,7 @@ for file in $FILES; do
   if [ $((file_num % 50)) -eq 0 ]; then
     echo "  処理済み: $file_num / $FILE_COUNT (現在: content_$(printf '%03d' $file_index).md)"
   fi
-done
+done <<< "$FILES"
 
 echo "✅ $file_index 個のcontent_XXX.md ファイルを生成完了"
 
