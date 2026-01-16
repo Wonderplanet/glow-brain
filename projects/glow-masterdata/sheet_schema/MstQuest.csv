@@ -1,3 +1,0 @@
-memo
-TABLE,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuest,MstQuestI18n,MstQuestI18n,MstQuestI18n
-ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key,name.ja,category_name.ja,flavor_text.ja
