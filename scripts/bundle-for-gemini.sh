@@ -22,6 +22,8 @@ FILES=$(find . -type f \
   -not -path './.git/*' \
   -not -name '.DS_Store' \
   -not -path "./dist/*" \
+  -not -path "./gemini/bundles/*" \
+  -not -path "./scripts/bundle-for-gemini.sh" \
   | sort)
 
 FILE_COUNT=$(echo "$FILES" | wc -l | tr -d ' ')
