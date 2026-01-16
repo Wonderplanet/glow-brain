@@ -1,8 +1,8 @@
 # glow-brain-gemini ソースコード目次
 
 ## 概要
-- 総ファイル数: 93
-- 生成日時: 2026-01-16 14:58:26
+- 総ファイル数: 92
+- 生成日時: 2026-01-16 15:36:39
 - 分割ファイル数: 4
 
 ## ファイル一覧
@@ -10,55 +10,55 @@
 | No | ファイルパス | バンドル | 行番号 |
 |----|-------------|---------|--------|
 | 1 | ./gemini/gem-custom-instructions/masterdata-mission-creator.md | content_001.md | L7 |
-| 2 | ./projects/glow-masterdata/MstAdventBattle.csv | content_001.md | L275 |
-| 3 | ./projects/glow-masterdata/MstAdventBattleI18n.csv | content_001.md | L295 |
-| 4 | ./projects/glow-masterdata/MstArtwork.csv | content_001.md | L315 |
-| 5 | ./projects/glow-masterdata/MstArtworkI18n.csv | content_001.md | L384 |
-| 6 | ./projects/glow-masterdata/MstComebackBonus.csv | content_001.md | L453 |
-| 7 | ./projects/glow-masterdata/MstComebackBonusSchedule.csv | content_001.md | L469 |
-| 8 | ./projects/glow-masterdata/MstConfig.csv | content_001.md | L479 |
-| 9 | ./projects/glow-masterdata/MstDailyBonusReward.csv | content_001.md | L552 |
-| 10 | ./projects/glow-masterdata/MstEmblem.csv | content_001.md | L568 |
-| 11 | ./projects/glow-masterdata/MstEmblemI18n.csv | content_001.md | L685 |
-| 12 | ./projects/glow-masterdata/MstEnemyCharacter.csv | content_001.md | L802 |
-| 13 | ./projects/glow-masterdata/MstEnemyCharacterI18n.csv | content_001.md | L952 |
-| 14 | ./projects/glow-masterdata/MstEvent.csv | content_001.md | L1102 |
-| 15 | ./projects/glow-masterdata/MstEventI18n.csv | content_001.md | L1122 |
-| 16 | ./projects/glow-masterdata/MstItem.csv | content_001.md | L1142 |
-| 17 | ./projects/glow-masterdata/MstItemI18n.csv | content_001.md | L1295 |
-| 18 | ./projects/glow-masterdata/MstMissionAchievement.csv | content_001.md | L1448 |
-| 19 | ./projects/glow-masterdata/MstMissionAchievementDependency.csv | content_001.md | L1560 |
-| 20 | ./projects/glow-masterdata/MstMissionAchievementI18n.csv | content_001.md | L1672 |
-| 21 | ./projects/glow-masterdata/MstMissionBeginner.csv | content_001.md | L1784 |
-| 22 | ./projects/glow-masterdata/MstMissionBeginnerI18n.csv | content_001.md | L1829 |
-| 23 | ./projects/glow-masterdata/MstMissionBeginnerPromptPhraseI18n.csv | content_001.md | L1874 |
-| 24 | ./projects/glow-masterdata/MstMissionDaily.csv | content_001.md | L1884 |
-| 25 | ./projects/glow-masterdata/MstMissionDailyBonus.csv | content_001.md | L1904 |
-| 26 | ./projects/glow-masterdata/MstMissionDailyI18n.csv | content_001.md | L1920 |
-| 27 | ./projects/glow-masterdata/MstMissionEvent.csv | content_001.md | L1940 |
-| 28 | ./projects/glow-masterdata/MstMissionEventDaily.csv | content_001.md | L2308 |
-| 29 | ./projects/glow-masterdata/MstMissionEventDailyBonus.csv | content_001.md | L2317 |
-| 30 | ./projects/glow-masterdata/MstMissionEventDailyBonusSchedule.csv | content_001.md | L2485 |
-| 31 | ./projects/glow-masterdata/MstMissionEventDailyI18n.csv | content_001.md | L2504 |
-| 32 | ./projects/glow-masterdata/MstMissionEventDependency.csv | content_001.md | L2513 |
-| 33 | ./projects/glow-masterdata/MstMissionEventI18n.csv | content_001.md | L2829 |
-| 34 | ./projects/glow-masterdata/MstMissionLimitedTerm.csv | content_001.md | L3197 |
-| 35 | ./projects/glow-masterdata/MstMissionLimitedTermDependency.csv | content_001.md | L3250 |
-| 36 | ./projects/glow-masterdata/MstMissionLimitedTermI18n.csv | content_001.md | L3259 |
-| 37 | ./projects/glow-masterdata/MstMissionReward.csv | content_001.md | L3312 |
-| 38 | ./projects/glow-masterdata/MstMissionWeekly.csv | content_001.md | L4025 |
-| 39 | ./projects/glow-masterdata/MstMissionWeeklyI18n.csv | content_001.md | L4045 |
-| 40 | ./projects/glow-masterdata/MstPack.csv | content_001.md | L4065 |
-| 41 | ./projects/glow-masterdata/MstPackI18n.csv | content_001.md | L4121 |
-| 42 | ./projects/glow-masterdata/MstPvp.csv | content_001.md | L4177 |
-| 43 | ./projects/glow-masterdata/MstPvpI18n.csv | content_001.md | L4207 |
-| 44 | ./projects/glow-masterdata/MstQuest.csv | content_001.md | L4237 |
-| 45 | ./projects/glow-masterdata/MstQuestI18n.csv | content_001.md | L4351 |
-| 46 | ./projects/glow-masterdata/MstSeries.csv | content_001.md | L4465 |
-| 47 | ./projects/glow-masterdata/MstSeriesI18n.csv | content_001.md | L4495 |
-| 48 | ./projects/glow-masterdata/MstShopItem.csv | content_001.md | L4525 |
-| 49 | ./projects/glow-masterdata/MstShopPass.csv | content_001.md | L4548 |
-| 50 | ./projects/glow-masterdata/MstShopPassI18n.csv | content_001.md | L4559 |
+| 2 | ./projects/glow-masterdata/MstAdventBattle.csv | content_001.md | L343 |
+| 3 | ./projects/glow-masterdata/MstAdventBattleI18n.csv | content_001.md | L363 |
+| 4 | ./projects/glow-masterdata/MstArtwork.csv | content_001.md | L383 |
+| 5 | ./projects/glow-masterdata/MstArtworkI18n.csv | content_001.md | L452 |
+| 6 | ./projects/glow-masterdata/MstComebackBonus.csv | content_001.md | L521 |
+| 7 | ./projects/glow-masterdata/MstComebackBonusSchedule.csv | content_001.md | L537 |
+| 8 | ./projects/glow-masterdata/MstConfig.csv | content_001.md | L547 |
+| 9 | ./projects/glow-masterdata/MstDailyBonusReward.csv | content_001.md | L620 |
+| 10 | ./projects/glow-masterdata/MstEmblem.csv | content_001.md | L636 |
+| 11 | ./projects/glow-masterdata/MstEmblemI18n.csv | content_001.md | L753 |
+| 12 | ./projects/glow-masterdata/MstEnemyCharacter.csv | content_001.md | L870 |
+| 13 | ./projects/glow-masterdata/MstEnemyCharacterI18n.csv | content_001.md | L1020 |
+| 14 | ./projects/glow-masterdata/MstEvent.csv | content_001.md | L1170 |
+| 15 | ./projects/glow-masterdata/MstEventI18n.csv | content_001.md | L1190 |
+| 16 | ./projects/glow-masterdata/MstItem.csv | content_001.md | L1210 |
+| 17 | ./projects/glow-masterdata/MstItemI18n.csv | content_001.md | L1363 |
+| 18 | ./projects/glow-masterdata/MstMissionAchievement.csv | content_001.md | L1516 |
+| 19 | ./projects/glow-masterdata/MstMissionAchievementDependency.csv | content_001.md | L1628 |
+| 20 | ./projects/glow-masterdata/MstMissionAchievementI18n.csv | content_001.md | L1740 |
+| 21 | ./projects/glow-masterdata/MstMissionBeginner.csv | content_001.md | L1852 |
+| 22 | ./projects/glow-masterdata/MstMissionBeginnerI18n.csv | content_001.md | L1897 |
+| 23 | ./projects/glow-masterdata/MstMissionBeginnerPromptPhraseI18n.csv | content_001.md | L1942 |
+| 24 | ./projects/glow-masterdata/MstMissionDaily.csv | content_001.md | L1952 |
+| 25 | ./projects/glow-masterdata/MstMissionDailyBonus.csv | content_001.md | L1972 |
+| 26 | ./projects/glow-masterdata/MstMissionDailyI18n.csv | content_001.md | L1988 |
+| 27 | ./projects/glow-masterdata/MstMissionEvent.csv | content_001.md | L2008 |
+| 28 | ./projects/glow-masterdata/MstMissionEventDaily.csv | content_001.md | L2376 |
+| 29 | ./projects/glow-masterdata/MstMissionEventDailyBonus.csv | content_001.md | L2385 |
+| 30 | ./projects/glow-masterdata/MstMissionEventDailyBonusSchedule.csv | content_001.md | L2553 |
+| 31 | ./projects/glow-masterdata/MstMissionEventDailyI18n.csv | content_001.md | L2572 |
+| 32 | ./projects/glow-masterdata/MstMissionEventDependency.csv | content_001.md | L2581 |
+| 33 | ./projects/glow-masterdata/MstMissionEventI18n.csv | content_001.md | L2897 |
+| 34 | ./projects/glow-masterdata/MstMissionLimitedTerm.csv | content_001.md | L3265 |
+| 35 | ./projects/glow-masterdata/MstMissionLimitedTermDependency.csv | content_001.md | L3318 |
+| 36 | ./projects/glow-masterdata/MstMissionLimitedTermI18n.csv | content_001.md | L3327 |
+| 37 | ./projects/glow-masterdata/MstMissionReward.csv | content_001.md | L3380 |
+| 38 | ./projects/glow-masterdata/MstMissionWeekly.csv | content_001.md | L4093 |
+| 39 | ./projects/glow-masterdata/MstMissionWeeklyI18n.csv | content_001.md | L4113 |
+| 40 | ./projects/glow-masterdata/MstPack.csv | content_001.md | L4133 |
+| 41 | ./projects/glow-masterdata/MstPackI18n.csv | content_001.md | L4189 |
+| 42 | ./projects/glow-masterdata/MstPvp.csv | content_001.md | L4245 |
+| 43 | ./projects/glow-masterdata/MstPvpI18n.csv | content_001.md | L4275 |
+| 44 | ./projects/glow-masterdata/MstQuest.csv | content_001.md | L4305 |
+| 45 | ./projects/glow-masterdata/MstQuestI18n.csv | content_001.md | L4419 |
+| 46 | ./projects/glow-masterdata/MstSeries.csv | content_001.md | L4533 |
+| 47 | ./projects/glow-masterdata/MstSeriesI18n.csv | content_001.md | L4563 |
+| 48 | ./projects/glow-masterdata/MstShopItem.csv | content_001.md | L4593 |
+| 49 | ./projects/glow-masterdata/MstShopPass.csv | content_001.md | L4616 |
+| 50 | ./projects/glow-masterdata/MstShopPassI18n.csv | content_001.md | L4627 |
 | 51 | ./projects/glow-masterdata/MstStage.csv | content_002.md | L7 |
 | 52 | ./projects/glow-masterdata/MstStageI18n.csv | content_002.md | L490 |
 | 53 | ./projects/glow-masterdata/MstUnit.csv | content_002.md | L973 |
@@ -99,9 +99,8 @@
 | 88 | ./projects/glow-server/api/app/Domain/Mission/Enums/MissionCriterionType.php | content_002.md | L1882 |
 | 89 | ./projects/glow-server/api/app/Domain/Resource/Enums/RewardType.php | content_002.md | L2154 |
 | 90 | ./projects/glow-server/api/database/schema/exports/master_tables_schema.json | content_003.md | L7 |
-| 91 | ./scripts/filter_master_tables_schema.py | content_003.md | L3575 |
-| 92 | ./マスタデータ/docs/ミッショントリガー一覧 - データ入力用ミッショントリガー一覧.csv | content_003.md | L3829 |
-| 93 | ./マスタデータ/リリース/202512020/作成手順/ミッションマスタデータ作成手順書.md | content_004.md | L7 |
+| 91 | ./マスタデータ/docs/ミッショントリガー一覧 - データ入力用ミッショントリガー一覧.csv | content_003.md | L3575 |
+| 92 | ./マスタデータ/リリース/202512020/作成手順/ミッションマスタデータ作成手順書.md | content_004.md | L7 |
 
 ## 使い方
 
