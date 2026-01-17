@@ -2,21 +2,13 @@
 仕様書(添付したcsvファイル)から
 降臨バトルミッションのマスタデータを作成してください。
 
-## release_key
+## 入力パラメータ（要入力）
 
-`{release_keyを指定、未指定の場合はファイル名から抽出します}`
-
-## 作品ID
-
-`{作品IDを指定}`
-
-## ID採番の開始番号
-
-| カラム | 開始番号 |
-|--------|----------|
-| MstMissionLimitedTerm.id | limited_term_{ここから開始} |
-| MstMissionLimitedTerm.progress_group_key | group{ここから開始} |
-| MstMissionReward.id | mission_reward_{ここから開始} |
+- release_key: {release_keyを指定}
+- 作品ID: {作品IDを指定}
+- MstMissionLimitedTerm.id: limited_term_{連番の開始番号}
+- MstMissionLimitedTerm.progress_group_key: group{連番の開始番号}
+- MstMissionReward.id: ission_reward_{連番の開始番号}
 
 ## 出力形式
 
