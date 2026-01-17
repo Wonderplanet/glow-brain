@@ -539,18 +539,16 @@ function formatToolExecution(toolGroup, timestamp) {
   return wrapWithColor(markdown, COLORS.toolExecution);
 }
 
-// PDFスタイルを読み込む関数
-function getPdfStyles() {
-  const stylesPath = path.join(__dirname, 'pdf_styles.html');
-  if (fs.existsSync(stylesPath)) {
-    return fs.readFileSync(stylesPath, 'utf-8') + '\n\n';
-  }
-  return '';
-}
-
 // Markdown→PDF変換関数
 function convertToPdf(mdFilePath, pdfFilePath) {
-  const command = `pandoc "${mdFilePath}" -o "${pdfFilePath}" --pdf-engine=weasyprint -V documentclass=ltjarticle -f markdown-citations`;
+  const stylesPath = path.join(__dirname, 'pdf_styles.css');
+  let command = `pandoc "${mdFilePath}" -o "${pdfFilePath}" --pdf-engine=weasyprint -f markdown-citations`;
+
+  // CSSファイルが存在する場合は -c オプションで指定
+  if (fs.existsSync(stylesPath)) {
+    command += ` -c "${stylesPath}"`;
+  }
+
   try {
     execSync(command, { stdio: 'inherit' });
     return true;
@@ -700,10 +698,8 @@ groupsToExport.forEach((group, index) => {
     const fileName = path.basename(group.parentFile.name, '.jsonl');
     const outputPath = path.join(sessionDir, `${fileName}.md`);
 
-    // PDF出力用にスタイルを冒頭に追加
-    const markdownWithStyles = getPdfStyles() + parentMarkdown;
-
-    fs.writeFileSync(outputPath, markdownWithStyles);
+    // Markdownをそのまま保存（スタイルは-cオプションで適用）
+    fs.writeFileSync(outputPath, parentMarkdown);
     console.log(`  ✅ 親セッション: ${outputPath}`);
 
     // PDF変換（常に実行）
@@ -733,10 +729,8 @@ groupsToExport.forEach((group, index) => {
       const fileName = path.basename(agentFile.name, '.jsonl');
       const outputPath = path.join(sessionDir, `${agentDatePrefix}${fileName}.md`);
 
-      // PDF出力用にスタイルを冒頭に追加
-      const markdownWithStyles = getPdfStyles() + agentMarkdown;
-
-      fs.writeFileSync(outputPath, markdownWithStyles);
+      // Markdownをそのまま保存（スタイルは-cオプションで適用）
+      fs.writeFileSync(outputPath, agentMarkdown);
       console.log(`  ✅ エージェント: ${outputPath}`);
 
       // PDF変換（常に実行）
