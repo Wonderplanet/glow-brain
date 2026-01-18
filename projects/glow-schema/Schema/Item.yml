@@ -1,0 +1,213 @@
+enum:
+  - name: ItemType
+    params:
+      - name: CharacterFragment
+      - name: RankUpMaterial
+      - name: RankUpMemoryFragment
+      - name: StageMedal
+      - name: IdleCoinBox
+      - name: IdleRankUpMaterialBox
+      - name: RandomFragmentBox
+      - name: SelectionFragmentBox
+      - name: SeriesFragmentBox
+      - name: GachaTicket
+      - name: GachaMedal
+      - name: StaminaRecoveryPercent
+      - name: StaminaRecoveryFixed
+      - name: Etc
+
+  - name: ItemGroupType
+    params:
+      - name: Consumable
+      - name: Etc
+
+  - name: ItemTransitionType
+    params:
+      - name: None
+      - name: MainQuest
+      - name: EventQuest
+      - name: ShopItem
+      - name: Pack
+      - name: Achievement
+      - name: LoginBonus
+      - name: DailyMission
+      - name: WeeklyMission
+      - name: Patrol
+      - name: ExchangeShop
+      - name: Etc
+
+  - name: ItemTradeResetType
+    params:
+      - name: None
+      - name: Daily
+      - name: Weekly
+      - name: Monthly
+
+data:
+  - name: MstItem
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: type
+        type: ItemType
+      - name: groupType
+        type: ItemGroupType
+      - name: rarity
+        type: Rarity
+      - name: effectValue
+        type: string
+      - name: sortOrder
+        type: int
+      - name: assetKey
+        type: string
+      - name: mstSeriesId
+        type: string
+      - name: destinationOprProductId
+        type: string
+      - name: startDate
+        type: DateTimeOffset
+      - name: endDate
+        type: DateTimeOffset
+
+  - name: MstItemI18n
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: mstItemId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+      - name: description
+        type: string
+
+  - name: MstFragmentBoxGroup
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstFragmentBoxGroupId
+        type: string
+      - name: mstItemId
+        type: string
+
+  - name: MstFragmentBox
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: mstItemId
+        type: string
+      - name: mstFragmentBoxGroupId
+        type: string
+
+  - name: MstItemRarityTrade
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: rarity
+        type: Rarity
+      - name: costAmount
+        type: int
+      - name: resetType
+        type: ItemTradeResetType
+      - name: maxTradableAmount
+        type: int?
+
+  - name: MstItemTransition
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: mstItemId
+        type: string
+      - name: transition1
+        type: ItemTransitionType
+      - name: transition1MstId
+        type: string
+      - name: transition2
+        type: ItemTransitionType
+      - name: transition2MstId
+        type: string
+
+  - name: UsrItem
+    obscure: true
+    impl_entity: true
+    params:
+      - name: usrItemId
+        type: string
+      - name: mstItemId
+        type: string
+      - name: amount
+        type: int
+
+  - name: UsrItemTrade
+    obscure: true
+    impl_entity: true
+    params:
+      - name: mstItemId
+        type: string
+      - name: tradeAmount
+        type: int
+      - name: tradeAmountResetAt
+        type: DateTimeOffset
+
+  - name: ItemReward
+    obscure: true
+    params:
+      - name: reward
+        type: RewardData
+
+  - name: ItemConsumeResult
+    obscure: true
+    params:
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: itemRewards
+        type: ItemRewardData[]
+      - name: usrItemTrade
+        type: UsrItemTradeData?
+
+  - name: ItemExchangeSelectItemResult
+    obscure: true
+    params:
+      - name: usrItems
+        type: UsrItemData[]
+      - name: itemRewards
+        type: ItemRewardData[]
+
+api:
+  - name: Item
+    actions:
+      - name: Consume
+        path: "/api/item/consume"
+        params:
+          - name: mstItemId
+            type: string
+          - name: amount
+            type: int
+        method: POST
+        response: ItemConsumeResultData
+
+      - name: ExchangeSelectItem
+        path: "/api/item/exchange_select_item"
+        params:
+          - name: mstItemId
+            type: string
+          - name: selectMstItemId
+            type: string
+          - name: amount
+            type: int
+        method: POST
+        response: ItemExchangeSelectItemResultData
+

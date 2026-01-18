@@ -1,0 +1,32 @@
+{
+    "name": "WPFramework.Runtime.Presentation",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:a145c23cbc8144a86b81873ba449104f",
+        "GUID:aae7bec31b7e4475d86c54392a8a03aa",
+        "GUID:2f8cf3b6d72b1428b8028589acfebbb0",
+        "GUID:ed9e5d88e44ea44e1bf3a03094ef8cec",
+        "GUID:5c01796d064528144a599661eaab93a6",
+        "GUID:029c1c1b674aaae47a6841a0b89ad80e",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:e888aafe9d8ea4da18bd2227271b2078",
+        "GUID:dd656ce70ee91479489c19139f877254",
+        "GUID:c631f4fa26bda4045819d4f02d64801e",
+        "GUID:1dc779e23435e45848965f24426f6887",
+        "GUID:ad480d5c001ce44088619944acf9ab28",
+        "GUID:0c4b22ab3020b4b62961d696fd15d382",
+        "GUID:68765d262e2128e4ab49c983f3411946",
+        "GUID:54d6c8c5bb6540b8a4cb5676be708e7d",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

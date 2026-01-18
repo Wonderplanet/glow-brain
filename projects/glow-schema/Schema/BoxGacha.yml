@@ -1,0 +1,160 @@
+enum:
+  - name: BoxGachaLoopType
+    params:
+      - name: First
+      - name: Last
+      - name: All
+
+data:
+  - name: MstBoxGacha
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: mstEventId
+        type: string
+      - name: costId
+        type: string
+      - name: costNum
+        type: int
+      - name: loopType
+        type: BoxGachaLoopType
+      - name: assetKey
+        type: string
+      - name: displayMstUnitId1
+        type: string
+      - name: displayMstUnitId2
+        type: string
+  - name: MstBoxGachaI18n
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: mstBoxGachaId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+  - name: MstBoxGachaGroup
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: mstBoxGachaId
+        type: string
+      - name: boxLevel
+        type: int
+  - name: MstBoxGachaPrize
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: mstBoxGachaGroupId
+        type: string
+      - name: isPickup
+        type: bool
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string?
+      - name: resourceAmount
+        type: int
+      - name: stock
+        type: int
+
+  # User Data
+  - name: UsrBoxGacha
+    obscure: true
+    params:
+      - name: mstBoxGachaId
+        type: string
+      - name: resetCount
+        type: int
+      - name: totalDrawCount
+        type: int
+      - name: currentBoxLevel
+        type: int
+      - name: drawPrizes
+        type: UsrBoxGachaPrizeData[]
+
+  - name: UsrBoxGachaPrize
+    obscure: true
+    params:
+      - name: mstBoxGachaPrizeId
+        type: string
+      - name: count
+        type: int
+
+  # data
+  - name: BoxGachaReward
+    obscure: true
+    params:
+      - name: reward
+        type: RewardData
+
+  # API Response Data
+  - name: BoxGachaInfoResult
+    obscure: true
+    params:
+      - name: usrBoxGacha
+        type: UsrBoxGachaData?
+
+  - name: BoxGachaDrawResult
+    obscure: true
+    params:
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: usrArtworks
+        type: UsrArtworkData[]
+      - name: usrArtworkFragments
+        type: UsrArtworkFragmentData[]
+      - name: usrBoxGacha
+        type: UsrBoxGachaData
+      - name: boxGachaRewards
+        type: BoxGachaRewardData[]
+
+  - name: BoxGachaResetResult
+    obscure: true
+    params:
+      - name: usrBoxGacha
+        type: UsrBoxGachaData
+
+api:
+  - name: BoxGacha
+    actions:
+      - name: Info
+        path: "/api/box_gacha/info"
+        params:
+          - name: mstBoxGachaId
+            type: string
+        method: GET
+        response: BoxGachaInfoResultData
+      - name: Draw
+        path: "/api/box_gacha/draw"
+        params:
+          - name: mstBoxGachaId
+            type: string
+          - name: drawCount
+            type: int
+          - name: currentBoxLevel
+            type: int
+        method: POST
+        response: BoxGachaDrawResultData
+      - name: Reset
+        path: "/api/box_gacha/reset"
+        params:
+          - name: mstBoxGachaId
+            type: string
+          - name: currentBoxLevel
+            type: int
+        method: POST
+        response: BoxGachaResetResultData

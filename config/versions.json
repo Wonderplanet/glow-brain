@@ -1,5 +1,5 @@
 {
-  "current_version": "v1.5.0-devld",
+  "current_version": "v1.5.1-devld",
   "versions": {
     "v1.5.0-devld": {
       "glow-server": "develop/v1.5.0",

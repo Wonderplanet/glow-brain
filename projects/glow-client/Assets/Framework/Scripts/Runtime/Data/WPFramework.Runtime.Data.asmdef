@@ -1,0 +1,25 @@
+﻿{
+    "name": "WPFramework.Runtime.Data",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a145c23cbc8144a86b81873ba449104f",
+        "GUID:15eb39257c3e14a60952caf968b88f65",
+        "GUID:aae7bec31b7e4475d86c54392a8a03aa",
+        "GUID:2f8cf3b6d72b1428b8028589acfebbb0",
+        "GUID:ed9e5d88e44ea44e1bf3a03094ef8cec",
+        "GUID:2a2deac7912b046ef9de4b6eb8f2a9a8",
+        "GUID:5c01796d064528144a599661eaab93a6",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:ad480d5c001ce44088619944acf9ab28",
+        "GUID:123bd5c95804d446cb9c52b60d9a240c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

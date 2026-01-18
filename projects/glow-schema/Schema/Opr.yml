@@ -1,0 +1,24 @@
+data:
+  - name: Opr
+    params:
+      - name: oprProduct
+        type: OprProductData[]
+      - name: oprGacha
+        type: OprGachaData[]
+      - name: oprGachaUseResource
+        type: OprGachaUseResourceData[]
+      - name: oprGachaUpper
+        type: OprGachaUpperData[]
+      - name: oprCampaign
+        type: OprCampaignData[]
+
+  - name: OprI18n
+    params:
+      - name: oprProductI18n
+        type: OprProductI18nData[]
+      - name: oprGachaI18n
+        type: OprGachaI18nData[]
+      - name: oprGachaDisplayUnitI18n
+        type: OprGachaDisplayUnitI18nData[]
+      - name: oprCampaignI18n
+        type: OprCampaignI18nData[]
