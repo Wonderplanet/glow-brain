@@ -1,0 +1,112 @@
+deptrac:
+  layers:
+    - name: Wp Cache Constant
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Cache\\Constants\\.*
+    - name: Wp Cache Delegator
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Cache\\Delegators\\.*
+    - name: Wp Cache Model
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Cache\\Models\\.*
+    - name: Wp Cache Service
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Cache\\Services\\.*
+    - name: Wp Cache Util
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Cache\\Utils\\.*
+    - name: Wp Common Constant
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Constants\\.*
+    - name: Wp Common Delegator
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Delegators\\.*
+    - name: Wp Common Service
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Services\\.*
+    - name: Wp Common Repository
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Repositories\\.*
+    - name: Wp Common Entity
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Entities\\.*
+    - name: Wp Common Enum
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Enums\\.*
+    - name: Wp Common Factory
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Factories\\.*
+    - name: Wp Common Facade
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Facades\\.*
+    - name: Wp Common Model
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Models\\.*
+    - name: Wp Common Middleware
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Middleware\\.*
+    - name: Wp Common Provider
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Providers\\.*
+        - type: class
+          value: Wonderplanet\\CommonServiceProvider
+    - name: Wp Common Util
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Common\\Utils\\.*
+
+
+  ruleset:
+    Wp Cache Delegator:
+      - Wp Cache Service
+    Wp Cache Model:
+      - Wp Common Model
+      - Wp Common Util
+    Wp Cache Service:
+      - Wp Cache Constant
+      - Wp Cache Util
+      - Wp Master Asset Release Delegator
+      - Wp Master Asset Release Entity
+    Wp Common Delegator:
+      - Wp Common Entity
+      - Wp Common Service
+    Wp Common Entity:
+      - Wp Common Model
+      - Wp Common Util
+    Wp Common Factory:
+      - Wp Common Entity
+      - Wp Common Util
+    Wp Common Facade:
+      - Wp Common Delegator
+    Wp Common Middleware:
+      - Wp Master Asset Release Delegator
+    Wp Common Model:
+      - Wp Common Entity
+      - Wp Common Util
+    Wp Common Repository:
+      - Wp Common Entity
+      - Wp Common Model
+    Wp Common Service:
+      - Wp Common Entity
+      - Wp Common Model
+      - Wp Common Repository
+    Wp Common Provider:
+      - Wp Cache Delegator
+      - Wp Common Delegator
+      - Wp Common Facade

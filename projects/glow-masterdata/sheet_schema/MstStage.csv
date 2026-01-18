@@ -1,0 +1,3 @@
+memo
+TABLE,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStage,MstStageI18n,MstStageI18n
+ENABLE,id,mst_quest_id,mst_in_game_id,stage_number,recommended_level,cost_stamina,exp,coin,prev_mst_stage_id,mst_stage_tips_group_id,auto_lap_type,max_auto_lap_count,sort_order,asset_key,mst_stage_limit_status_id,release_key,mst_artwork_fragment_drop_group_id,start_at,end_at,name.ja,category_name.ja

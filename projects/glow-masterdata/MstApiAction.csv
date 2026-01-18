@@ -1,0 +1,2 @@
+ENABLE,release_key,id,api_path,through_app,through_master,through_date,through_asset,resource
+e,999999999,shop_set_store_info,shop/set_store_info,0,1,1,1,__NULL__

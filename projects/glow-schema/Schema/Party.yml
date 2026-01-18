@@ -1,0 +1,67 @@
+data:
+  - name: UsrParty
+    obscure: true
+    impl_entity: true
+    params:
+      - name: partyNo
+        type: int
+      - name: partyName
+        type: string
+      - name: usrUnitId1
+        type: string
+      - name: usrUnitId2
+        type: string
+      - name: usrUnitId3
+        type: string
+      - name: usrUnitId4
+        type: string
+      - name: usrUnitId5
+        type: string
+      - name: usrUnitId6
+        type: string
+      - name: usrUnitId7
+        type: string
+      - name: usrUnitId8
+        type: string
+      - name: usrUnitId9
+        type: string
+      - name: usrUnitId10
+        type: string
+
+  - name: MstPartyUnitCount
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: mstStageId
+        type: string
+      - name: maxCount
+        type: int
+
+  - name: PartySaveRequest
+    obscure: true
+    params:
+      - name: partyNo
+        type: int
+      - name: partyName
+        type: string
+      - name: units
+        type: string[]
+
+  - name: PartySaveResult
+    obscure: true
+    params:
+      - name: usrParties
+        type: UsrPartyData[]
+
+api:
+  - name: Party
+    actions:
+      - name: Save
+        path: "/api/party/save"
+        params:
+          - name: parties
+            type: PartySaveRequestData[]
+        method: POST
+        response: PartySaveResultData

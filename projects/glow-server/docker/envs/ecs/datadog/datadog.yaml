@@ -1,0 +1,23 @@
+# API key (will be replaced at runtime)
+api_key: placeholder_key
+
+# Hostname (will be replaced at runtime)
+hostname: placeholder_host
+
+# The host of the Datadog intake server
+site: ap1.datadoghq.com
+
+# APM configuration
+apm_config:
+  enabled: true
+
+# Process monitoring
+process_config:
+  process_collection:
+    enabled: true
+
+# DogStatsD configuration
+use_dogstatsd: true
+
+remote_configuration:
+  enabled: true
