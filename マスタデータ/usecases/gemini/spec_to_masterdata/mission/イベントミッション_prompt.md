@@ -1,13 +1,14 @@
-手順書(降臨バトルミッション_マスタデータ設定手順書.md)に従って
+手順書(イベントミッション_マスタデータ設定手順書.md)に従って
 仕様書(添付したcsvファイル)から
-降臨バトルミッションのマスタデータを作成してください。
+イベントミッションのマスタデータを作成してください。
 
 ## 入力パラメータ（要入力）
 
 - release_key: {release_keyを指定}
 - 作品ID: {作品IDを指定}
-- MstMissionLimitedTerm.id: limited_term_{連番の開始番号}
-- MstMissionLimitedTerm.progress_group_key: group{連番の開始番号}
+- イベントID: {イベントIDを指定。例: `event_osh_00001`, `event_glo_00001`}
+- MstMissionEvent.idの連番開始ID: {`event_{作品ID}_{イベント連番}_1`。例: `event_osh_00001_1`}
+- MstMissionEventDependency.id: {連番の開始番号}
 - MstMissionReward.id: mission_reward_{連番の開始番号}
 
 ## 出力形式
