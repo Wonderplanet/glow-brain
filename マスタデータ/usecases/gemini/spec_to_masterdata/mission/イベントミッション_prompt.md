@@ -6,8 +6,7 @@
 
 - release_key: {release_keyを指定}
 - 作品ID: {作品IDを指定}
-- イベントID: {イベントIDを指定。例: `event_osh_00001`, `event_glo_00001`}
-- MstMissionEvent.idの連番開始ID: {`event_{作品ID}_{イベント連番}_1`。例: `event_osh_00001_1`}
+- イベントID: {イベントIDを指定。例: `event_osh_00001`, `event_glo_00001`, `event_{作品ID}_{イベント連番}`}
 - MstMissionEventDependency.id: {連番の開始番号}
 - MstMissionReward.id: mission_reward_{連番の開始番号}
 
