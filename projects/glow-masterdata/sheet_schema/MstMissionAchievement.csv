@@ -1,3 +1,0 @@
-memo,,,,,,,,,,,,,
-TABLE,MstMissionAchievement,MstMissionAchievement,MstMissionAchievement,MstMissionAchievement,MstMissionAchievement,MstMissionAchievement,MstMissionAchievement,MstMissionAchievement,MstMissionAchievement,MstMissionAchievement,MstMissionAchievement,MstMissionAchievement,MstMissionAchievementI18n
-ENABLE,id,release_key,criterion_type,criterion_value,criterion_count,unlock_criterion_type,unlock_criterion_value,unlock_criterion_count,group_key,mst_mission_reward_group_id,sort_order,destination_scene,description.ja

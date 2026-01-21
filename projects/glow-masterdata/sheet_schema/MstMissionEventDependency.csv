@@ -1,3 +1,0 @@
-memo
-TABLE,MstMissionEventDependency,MstMissionEventDependency,MstMissionEventDependency,MstMissionEventDependency,MstMissionEventDependency,MstMissionEventDependency
-ENABLE,id,release_key,group_id,mst_mission_event_id,unlock_order,備考

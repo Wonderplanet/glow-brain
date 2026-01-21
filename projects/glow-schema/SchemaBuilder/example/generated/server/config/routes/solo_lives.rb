@@ -1,7 +1,0 @@
-  post "solo_lives/:opr_solo_live_id/session", to: "solo_lives#create_session"
-  get "solo_lives/current_session", to: "solo_lives#get_current_session"
-  post "solo_lives/session/puzzle_result", to: "solo_lives#puzzle_result"
-  get "solo_lives/session/puzzle_result", to: "solo_lives#get_puzzle_result"
-  delete "solo_lives/session", to: "solo_lives#delete_session"
-  get "solo_lives/top_ranking", to: "solo_lives#get_top_ranking"
-  get "solo_lives/ranking/me", to: "solo_lives#get_mine"

@@ -1,5 +1,0 @@
-  post "event_normal_quests/:id/session", to: "event_normal_quests#create_session"
-  get "event_normal_quests/current_session", to: "event_normal_quests#get_current_session"
-  post "event_normal_quests/session/puzzle_result", to: "event_normal_quests#puzzle_result"
-  get "event_normal_quests/session/puzzle_result", to: "event_normal_quests#get_puzzle_result"
-  delete "event_normal_quests/session", to: "event_normal_quests#delete_session"

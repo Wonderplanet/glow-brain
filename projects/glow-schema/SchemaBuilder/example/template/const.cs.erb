@@ -1,6 +1,0 @@
-public static class <%= schema["name"] %> 
-{
-	<%- schema["params"].each do |p| -%>
-	public const <%= p["type"] %> <%= p["name"] %><%- unless p["value"].nil? -%> = <%= p["value"] %><%- end -%>;
-	<%- end -%>
-}

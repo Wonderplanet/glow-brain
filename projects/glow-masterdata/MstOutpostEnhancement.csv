@@ -1,7 +1,0 @@
-ENABLE,id,mst_outpost_id,outpost_enhancement_type,asset_key,release_key
-e,enhance_1_3,outpost_1,LeaderPointSpeed,readerpointspeed,202509010
-e,enhance_1_4,outpost_1,LeaderPointLimit,readerpointupperllimit,202509010
-e,enhance_1_5,outpost_1,OutpostHP,gatehp,202509010
-e,enhance_1_6,outpost_1,SummonInterval,summonspeed,202509010
-e,enhance_1_7,outpost_1,LeaderPointUp,readerpoint,202509010
-e,enhance_1_8,outpost_1,RushChargeSpeed,rushchargespeed,202509010

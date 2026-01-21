@@ -1,3 +1,0 @@
-memo,,,,,,,,,,,,,商品内容
-TABLE,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem,MstShopItem
-ENABLE,id,shop_type,cost_type,cost_amount,is_first_time_free,tradable_count,resource_type,resource_id,resource_amount,start_date,end_date,release_key

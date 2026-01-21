@@ -1,3 +1,0 @@
-memo,,,,,,
-TABLE,MstComebackBonus,MstComebackBonus,MstComebackBonus,MstComebackBonus,MstComebackBonus,MstComebackBonus
-ENABLE,id,release_key,mst_comeback_bonus_schedule_id,login_day_count,mst_daily_bonus_reward_group_id,sort_order

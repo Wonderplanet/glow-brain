@@ -1,3 +1,0 @@
-memo
-TABLE,MstAttack,MstAttack,MstAttack,MstAttack,MstAttack,MstAttack,MstAttack,MstAttack,MstAttack,MstAttack,MstAttack,MstAttackI18n,MstAttackI18n
-ENABLE,release_key,id,mst_unit_id,unit_grade,attack_kind,killer_colors,killer_percentage,action_frames,attack_delay,next_attack_interval,asset_key,description.ja,grade_description.ja

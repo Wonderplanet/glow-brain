@@ -1,3 +1,0 @@
-memo,,,,,,,,,,,
-TABLE,MstMissionEventDaily,MstMissionEventDaily,MstMissionEventDaily,MstMissionEventDaily,MstMissionEventDaily,MstMissionEventDaily,MstMissionEventDaily,MstMissionEventDaily,MstMissionEventDaily,MstMissionEventDaily,MstMissionEventDailyI18n
-ENABLE,id,release_key,mst_event_id,criterion_type,criterion_value,criterion_count,group_key,mst_mission_reward_group_id,sort_order,destination_scene,description.ja

@@ -1,8 +1,0 @@
-enum:
-  - name: Rarity
-    params:
-      - name: N #暫定残し(Rが最低レアリティ)
-      - name: R
-      - name: SR
-      - name: SSR
-      - name: UR

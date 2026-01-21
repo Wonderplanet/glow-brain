@@ -1,4 +1,0 @@
-namespace GLOW.Scenes.#SCRIPTNAME#.Presentation
-{
-    public record #SCRIPTNAME#ViewModel(string Value);
-}

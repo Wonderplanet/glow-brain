@@ -1,3 +1,0 @@
-memo
-TABLE,MstStoreProduct,MstStoreProduct,MstStoreProduct,MstStoreProductI18n,MstStoreProductI18n,MstStoreProduct
-ENABLE,id,product_id_ios,product_id_android,price_ios.ja,price_android.ja,release_key
