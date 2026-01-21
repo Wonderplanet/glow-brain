@@ -1,8 +1,5 @@
 {
   "env": {
     "ENABLE_TOOL_SEARCH": "true"
-  },
-  "enabledPlugins": {
-    "glow-masterdata@wonderplanet-glow": false
   }
 }
