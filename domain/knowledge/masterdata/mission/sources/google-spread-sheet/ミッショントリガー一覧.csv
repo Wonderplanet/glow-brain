@@ -1,0 +1,119 @@
+トリガー,機能カテゴリ,"使用条件
+開放/達成/両方","条件タイプ
+criterion_type","条件指定値
+criterion_value (X)","条件回数
+criterion_count (Y)",対象ミッションタイプ,"仕様書記載の
+achievement_criterion_type",サーバーメモ
+指定アイテムをX個集める,アイテム,達成条件,SpecificItemCollect,アイテムID（mst_items.id）,集めて欲しいアイテム個数,全て対象,specific_item_collect,
+インゲームで敵を Y体撃破,インゲーム,達成条件,DefeatEnemyCount,NULL(未指定),"撃破して欲しい敵数。
+期間中に撃破した数の合計値。",全て対象,"enemy_count
+now_enemy_count",
+インゲームで強敵を Y体撃破,インゲーム,達成条件,DefeatBossEnemyCount,NULL(未指定),"撃破して欲しい敵数。
+期間中に撃破した数の合計値。",全て対象,"boss_enemy_count
+now_boss_enemy_count",
+指定ガシャXをY回引く,ガシャ,達成条件,SpecificGachaDrawCount,"ガチャID
+（仮：opr_gachas.id）",ガシャを引いて欲しい回数,全て対象,"normal_gacha_completed
+gacha_completed
+target_gacha_count
+gacha_completed
+target_gacha_count",
+通算でガチャをY回引く,ガシャ,達成条件,GachaDrawCount,NULL(未指定),通算でガシャを引いて欲しい回数,全て対象,all_gacha_count,
+ゲートを X 回以上強化,ゲート,達成条件,OutpostEnhanceCount,NULL(未指定),ゲートを強化してほしい回数,全て対象,gate_enhance_count,
+指定したゲート強化項目がLvYに到達する,ゲート,達成条件,SpecificOutpostEnhanceLevel,"対象の強化項目ID
+（mst_outpost_enhancements.id）",対象の強化項目が到達してほしいレベル,全て対象,未定,
+広告視聴をY回する,システム,達成条件,IaaCount,NULL(未指定),広告視聴してほしい回数,全て対象,iaa_count,
+公式X（エックス）をフォローする,システム,達成条件,FollowCompleted,NULL(未指定),1,"アチーブメント
+初心者",follow_completed,"挑戦を押したら無条件でクリアとするミッション。厳密なチェックは行わない。
+mission/clear_on_call APIで達成できる。"
+アカウント連携を行う,システム,達成条件,AccountCompleted,NULL(未指定),1,"アチーブメント
+初心者",account_completed,"挑戦を押したら無条件でクリアとするミッション。厳密なチェックは行わない。
+mission/clear_on_call APIで達成できる。"
+"指定クエストを初クリアする
+
+※ 2回以上クリアなどの、クリア回数指定はできません
+
+クエストクリア = 内包するステージ全てを1回以上クリアしている",ステージ,両方,SpecificQuestClear,クエストID（mst_quests.id）,"1
+(2以上は設定できません。未指定であってもサーバー処理側では1として処理します)
+
+クエスト初クリア時に進捗。
+クエストの初クリアの判定タイミングについて：
+例えば、クエストAにステージ1,2,3があった場合、ステージ1,2をクリアしていた状態で、
+ステージ3を初クリアした時に、クエストA初クリアとして判定する。",全て対象,"specific_quest_clear
+quest_clear",
+指定ステージXを Y 回クリア,ステージ,両方,SpecificStageClearCount,ステージID（mst_stages.id）,クリアしてほしい回数,全て対象,"specific_stage_clear
+stage_clear",
+指定ステージXにY回挑戦する,ステージ,達成条件,SpecificStageChallengeCount,ステージID（mst_stages.id）,挑戦してほしい回数,全て対象,specific_stage_challenge,
+通算クエストクリア回数が Y 回に到達,ステージ,両方,QuestClearCount,NULL(未指定),全クエスト対象で、クリアして欲しいクエスト数。,全て対象,quest_clear_count,
+通算ステージクリア回数が Y 回に到達,ステージ,両方,StageClearCount,NULL(未指定),"全ステージ対象で、ステージをクリアして欲しい回数。
+
+同一ステージを複数回クリアした場合でも加算される。",全て対象,stage_clear_count,
+"指定したユニットを編成して
+指定したステージを Y回クリア",ステージ,達成条件,SpecificUnitStageClearCount,"ユニットID.ステージID
+（2つのID文字列を「.(ドット)」で連結した文字列）
+
+例：ユニットID=unit1,ステージID=stage2だった場合
+unit1.stage2 と入力する。",指定ユニットを編成して、ステージをクリアして欲しい回数,全て対象,specific_unit_stage_clear_count,
+"指定したユニットを編成して
+指定したステージに Y回挑戦",ステージ,達成条件,SpecificUnitStageChallengeCount,↑と同じ設定方法,指定ユニットを編成して、ステージに挑戦して欲しい回数,全て対象,specific_unit_stage_challenge_count,
+ミッションをY個クリアする,ミッション,達成条件,MissionClearCount,,"同じミッションタイプのミッションの内でクリアして欲しい数
+※ MissionClearCount, SpecificMissionClearCountのミッションはカウントに含めない",全て対象,mission_clear_count,
+指定したミッショングループXの内でY個クリアする,ミッション,達成条件,SpecificMissionClearCount,mst_mission_<ミッションタイプ>s.group_key,"同じミッションタイプの同じgroup_keyを持つミッションの内でクリアして欲しい数。
+※ MissionClearCount, SpecificMissionClearCountのミッションはカウントに含めない
+
+「指定されたミッションを全てクリア」を設定したい場合の設定例：
+criterion_type=SpecificMissionClearCount, criterion_value=groupKey1, criterion_count=5と設定し、
+クリアして欲しいミッションがmission1,2,3,4,5だった場合、
+mission1,2,3,4,5のgroup_keyにgroupKey1と設定する",全て対象,mission_full_complete,
+"ミッションボーナスポイントをY個集める
+(ミッションの累計ボーナスポイントエリアの設定)",ミッション,達成条件,MissionBonusPoint,NULL(未指定),集めて欲しいミッションボーナスポイント数,"初心者
+デイリー
+ウィークリー",記載なし,
+プレイヤーレベルがYに到達,ユーザー,両方,UserLevel,NULL(未指定),到達してほしいユーザーレベル,全て対象,player_rank,
+コインをY個集める,ユーザー,達成条件,CoinCollect,NULL(未指定),集めてほしいコイン数,全て対象,coin_collect,
+コインを X 枚使用した,ユーザー,達成条件,CoinUsedCount,NULL(未指定),使用してほしいコインの数,全て対象,coin_used_count,
+ユニットのレベルアップをY回する,ユニット,達成条件,UnitLevelUpCount,NULL(未指定),"全ユニット対象で
+レベルアップを実行してほしい回数",全て対象,unit_enhance_count,
+全ユニットの内でいずれかがLv. Y に到達,ユニット,達成条件,UnitLevel,NULL(未指定),到達して欲しいユニットレベル,全て対象,unit_level,
+指定ユニットがLv. Y に到達,ユニット,達成条件,SpecificUnitLevel,ユニットID（mst_units.id）,到達して欲しいユニットレベル,全て対象,specific_unit_level,
+指定したユニットのランクアップ回数がY回以上,ユニット,達成条件,SpecificUnitRankUpCount,ユニットID（mst_units.id）,指定ユニットのランクアップをしてほしい回数,全て対象,unit_break_count,
+指定したユニットのグレードアップ回数がY回以上,ユニット,達成条件,SpecificUnitGradeUpCount,ユニットID（mst_units.id）,指定ユニットのグレードアップをしてほしい回数,全て対象,unit_evolution_count,
+ストアレビューを記載,システム,達成条件,ReviewCompleted,NULL(未指定),1,"アチーブメント
+初心者",review_completed,"挑戦を押したら無条件でクリアとするミッション。厳密なチェックは行わない。
+mission/clear_on_call APIで達成できる。"
+通算ログインが Y日に到達,ログイン,両方,LoginCount,NULL(未指定),通算ログインして欲しい日数,全て対象,"login_count
+now_login_count",
+連続ログインが Y日目に到達,ログイン,達成条件,LoginContinueCount,NULL(未指定),連続ログインして欲しい日数,全て対象,login_continue_count,
+"最終ログイン日から 
+X 日後(カムバック判定)にログインし
+その日からの連続ログイン日数が Y 日に到達",ログイン,達成条件,ComebackLoginContinueCount,カムバックするまでにかかった日数,カムバックした日からの連続ログイン日数,全て対象,comeback_login_continue_count,カムバックログボ機能が実装され不要になったので削除済み
+"最終ログインから Y 日後（カムバック判定後）
+に再ログイン",ログイン,開放条件,Comeback,NULL(未指定),カムバックするまでにかかった日数,全て対象,comeback,カムバックログボ機能が実装され不要になったので削除済み
+クイック探索をY回する,探索,達成条件,IdleIncentiveQuickCount,NULL(未指定),クイック探索をして欲しい回数,全て対象,未定,
+探索をY回する,探索,達成条件,IdleIncentiveCount,NULL(未指定),探索をして欲しい回数,全て対象,未定,
+特定作品XのユニットをY体獲得しよう,ユニット,達成条件,SpecificSeriesUnitAcquiredCount,作品ID（mst_series.id）,獲得してほしいユニットの種類数（獲得済ユニットを再度獲得した際はカウントしない）,全て対象,,
+ユニットを Y 体入手しよう,ユニット,達成条件,UnitAcquiredCount,NULL(未指定),"入手して欲しいユニット体数。
+仮にたとえば、同じユニットを2体入手した場合は、+2になる",全て対象,unit_acquired_count,
+指定ユニットXをY体獲得しよう,ユニット,達成条件,SpecificUnitAcquiredCount,ユニットID（mst_units.id）,獲得してほしい体数（獲得済みでもカウントする）,全て対象,,
+指定作品Xの敵キャラをY体発見しよう,インゲーム,達成条件,SpecificSeriesEnemyDiscoveryCount,作品ID（mst_series.id）,発見してほしいエネミーの種類数（発見済ユニットを再度発見した際はカウントしない）,全て対象,,
+敵キャラをY体発見しよう,インゲーム,達成条件,EnemyDiscoveryCount,NULL(未指定),発見してほしいエネミーの種類数（発見済ユニットを再度発見した際はカウントしない）,全て対象,,
+敵キャラXをY体発見しよう,インゲーム,達成条件,SpecificEnemyDiscoveryCount,エネミーID（mst_enemy_characters.id）,発見してほしい体数（発見済みでもカウントする）,全て対象,,
+指定作品XのエンブレムをY個獲得しよう,図鑑,達成条件,SpecificSeriesEmblemAcquiredCount,作品ID（mst_series.id）,獲得してほしいエンブレムの種類数（獲得済で再度獲得してもカウントしない）,全て対象,,
+エンブレムをY個獲得しよう,図鑑,達成条件,EmblemAcquiredCount,NULL(未指定),獲得してほしいエンブレムの種類数（獲得済で再度獲得してもカウントしない）,全て対象,,
+指定エンブレムXをYつ獲得しよう,図鑑,達成条件,SpecificEmblemAcquiredCount,エンブレムID（mst_emblems.id）,獲得してほしい個数（獲得済みでもカウントする）,全て対象,,
+指定作品Xの原画をYつ完成させよう,図鑑,達成条件,SpecificSeriesArtworkCompletedCount,作品ID（mst_series.id）,完成させてほしい原画数,全て対象,,
+原画をYつ完成させよう,図鑑,達成条件,ArtworkCompletedCount,NULL(未指定),完成させてほしい原画数,全て対象,,
+指定原画Xを1つ完成させよう,図鑑,達成条件,SpecificArtworkCompletedCount,原画ID（mst_artworks.id）,完成させてほしい原画数（原画完成は生涯1回のみなので、実質1のみ設定可）,全て対象,,
+降臨バトルを X 回挑戦する,降臨バトル,達成条件,AdventBattleChallengeCount,NULL(未指定),挑戦してほしい回数,全て対象,,
+降臨バトルの累計スコアが X 達成,降臨バトル,達成条件,AdventBattleTotalScore,NULL(未指定),降臨バトルに複数回挑戦した時の累計として獲得してほしいスコア,全て対象,,
+降臨バトルのハイスコアが X 達成,降臨バトル,達成条件,AdventBattleScore,NULL(未指定),"獲得してほしいハイスコア。
+降臨バトルに複数回挑戦した場合、その内で最大のスコアが記録され判定対象となる。",全て対象,,
+決闘にY回挑戦しよう,決闘,達成条件,PvpChallengeCount,NULL(未指定),挑戦してほしい回数,全て対象,,
+決闘にY回勝利しよう,決闘,達成条件,PvpWinCount,NULL(未指定),勝利してほしい回数,全て対象,,
+"指定のWEBサイトにアクセスしよう
+
+例：「ジャンブルラッシュ情報局」を確認しよう",システム,達成条件,AccessWeb,"リンク先のURL
+
+※ 達成条件判定には未使用。
+　 アプリ上での表示にのみ使用。",1,"アチーブメント
+初心者",,"挑戦を押したら無条件でクリアとするミッション。厳密なチェックは行わない。
+mission/clear_on_call APIで達成できる。"

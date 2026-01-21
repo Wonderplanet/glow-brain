@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
+const { execSync } = require('child_process');
 
 // 引数の解析
 const args = process.argv.slice(2);
@@ -538,6 +539,25 @@ function formatToolExecution(toolGroup, timestamp) {
   return wrapWithColor(markdown, COLORS.toolExecution);
 }
 
+// Markdown→PDF変換関数
+function convertToPdf(mdFilePath, pdfFilePath) {
+  const stylesPath = path.join(__dirname, 'pdf_styles.css');
+  let command = `pandoc "${mdFilePath}" -o "${pdfFilePath}" --pdf-engine=weasyprint -f markdown-citations`;
+
+  // CSSファイルが存在する場合は -c オプションで指定
+  if (fs.existsSync(stylesPath)) {
+    command += ` -c "${stylesPath}"`;
+  }
+
+  try {
+    execSync(command, { stdio: 'inherit' });
+    return true;
+  } catch (error) {
+    console.error(`  ⚠️ PDF変換失敗: ${error.message}`);
+    return false;
+  }
+}
+
 // ファイルをマークダウンに変換する関数（全面書き換え）
 function convertToMarkdown(file) {
   const lines = fs.readFileSync(file.path, 'utf-8').split('\n').filter(l => l.trim());
@@ -677,8 +697,16 @@ groupsToExport.forEach((group, index) => {
   if (parentMarkdown) {
     const fileName = path.basename(group.parentFile.name, '.jsonl');
     const outputPath = path.join(sessionDir, `${fileName}.md`);
+
+    // Markdownをそのまま保存（スタイルは-cオプションで適用）
     fs.writeFileSync(outputPath, parentMarkdown);
     console.log(`  ✅ 親セッション: ${outputPath}`);
+
+    // PDF変換（常に実行）
+    const pdfPath = outputPath.replace('.md', '.pdf');
+    if (convertToPdf(outputPath, pdfPath)) {
+      console.log(`  📄 PDF生成: ${pdfPath}`);
+    }
   }
 
   // エージェントファイルをエクスポート
@@ -700,8 +728,16 @@ groupsToExport.forEach((group, index) => {
       }
       const fileName = path.basename(agentFile.name, '.jsonl');
       const outputPath = path.join(sessionDir, `${agentDatePrefix}${fileName}.md`);
+
+      // Markdownをそのまま保存（スタイルは-cオプションで適用）
       fs.writeFileSync(outputPath, agentMarkdown);
       console.log(`  ✅ エージェント: ${outputPath}`);
+
+      // PDF変換（常に実行）
+      const pdfPath = outputPath.replace('.md', '.pdf');
+      if (convertToPdf(outputPath, pdfPath)) {
+        console.log(`  📄 PDF生成: ${pdfPath}`);
+      }
     }
   });
 });
