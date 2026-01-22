@@ -110,14 +110,14 @@ clasp push
 spreadsheet-csv-exporter/
 ├── .clasp.json              # clasp設定（GASプロジェクトID）
 ├── appsscript.json          # GASマニフェスト
-├── コード.js                 # サーバーサイドメインロジック
+├── Code.js                  # サーバーサイドメインロジック
 ├── Index.html               # WebアプリUI（タブ形式）
 └── README.md                # このファイル
 ```
 
 ## 🔧 主要な関数
 
-### サーバーサイド（コード.js）
+### サーバーサイド（Code.js）
 
 | 関数名 | 用途 |
 |--------|------|
@@ -143,10 +143,10 @@ spreadsheet-csv-exporter/
 ### レートリミット対策
 
 各シートのエクスポート後に**500msのスリープ**を設定しています。
-Google APIのレート制限に引っかかる場合は、コード.js内の以下を調整：
+Google APIのレート制限に引っかかる場合は、Code.js内の以下を調整：
 
 ```javascript
-// コード.js: 77行目、238行目
+// Code.js: 77行目、238行目
 Utilities.sleep(500); // ← この値を増やす（ミリ秒）
 ```
 
@@ -159,7 +159,7 @@ Utilities.sleep(500); // ← この値を増やす（ミリ秒）
 
 **ユースケース**タブにカスタム機能を追加する手順：
 
-1. `コード.js` に新しい関数を追加
+1. `Code.js` に新しい関数を追加
 2. `Index.html` の「ユースケースタブ」にカードを追加
 3. ボタンのonclickイベントでGAS関数を呼び出す
 
