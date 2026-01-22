@@ -129,6 +129,21 @@ class ClickUpClient:
         )
         return Task.from_api(data)
 
+    def get_task_raw(self, task_id: str) -> Dict[str, Any]:
+        """タスク詳細を生データで取得
+
+        Args:
+            task_id: タスク ID
+
+        Returns:
+            タスクの生データ（APIレスポンス）
+        """
+        return self._request(
+            "GET",
+            f"/task/{task_id}",
+            params={"include_markdown_description": "true"},
+        )
+
     def get_comments(self, task_id: str) -> List[Comment]:
         """タスクのコメントを取得
 
@@ -140,6 +155,18 @@ class ClickUpClient:
         """
         data = self._request("GET", f"/task/{task_id}/comment")
         return [Comment.from_api(comment_data) for comment_data in data.get("comments", [])]
+
+    def get_comments_raw(self, task_id: str) -> List[Dict[str, Any]]:
+        """タスクのコメントを生データで取得
+
+        Args:
+            task_id: タスク ID
+
+        Returns:
+            コメントの生データリスト（APIレスポンス）
+        """
+        data = self._request("GET", f"/task/{task_id}/comment")
+        return data.get("comments", [])
 
     def download_file(self, url: str) -> bytes:
         """ファイルをダウンロード

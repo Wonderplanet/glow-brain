@@ -1,5 +1,6 @@
 """リスト内のチケットエクスポート処理"""
 
+import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
@@ -163,6 +164,19 @@ class ListExporter:
 
         # コメントを取得
         comments = self.client.get_comments(task.id)
+
+        # 生データを取得
+        task_raw = self.client.get_task_raw(task.id)
+        comments_raw = self.client.get_comments_raw(task.id)
+
+        # raw.json を保存
+        raw_data = {
+            "task": task_raw,
+            "comments": comments_raw,
+        }
+        raw_path = task_dir / "raw.json"
+        save_text(json.dumps(raw_data, ensure_ascii=False, indent=2), raw_path)
+        print(f"  ✓ raw.json を保存")
 
         # Markdown を生成（コメントは除外）
         markdown_content = self._generate_markdown(task, list_info, comments)
