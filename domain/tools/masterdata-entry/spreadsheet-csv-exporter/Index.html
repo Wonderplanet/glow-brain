@@ -77,6 +77,22 @@
       box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
     }
 
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      font-family: inherit;
+      resize: vertical;
+    }
+    textarea:focus {
+      outline: none;
+      border-color: #4285f4;
+      box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+    }
+
     button {
       padding: 12px 24px;
       cursor: pointer;
@@ -288,6 +304,14 @@
           <label for="filter-sheet-name" style="margin-top: 10px; display: block;">シート名（完全一致）：</label>
           <input type="text" id="filter-sheet-name" placeholder="例: MstEvent">
           <button id="btn-filter-download" onclick="downloadFilteredSheets()" style="margin-top: 15px;">ダウンロード</button>
+        </div>
+
+        <div class="usecase-card" id="card-multi-url">
+          <h3>📑 複数スプシ一括</h3>
+          <p>複数のスプレッドシートURLを指定して、まとめてCSVダウンロード</p>
+          <label for="multi-urls">スプレッドシートURL（1行に1つ）：</label>
+          <textarea id="multi-urls" rows="5" placeholder="https://docs.google.com/spreadsheets/d/...&#10;https://docs.google.com/spreadsheets/d/...&#10;..."></textarea>
+          <button id="btn-multi-download" onclick="downloadMultipleSpreadsheets()" style="margin-top: 15px;">ダウンロード</button>
         </div>
 
         <div class="usecase-card">
@@ -650,6 +674,57 @@
       document.getElementById('btn-single').disabled = false;
       document.getElementById('btn-list').disabled = false;
       document.getElementById('btn-bulk-download').disabled = false;
+    }
+
+    // 複数スプシダウンロード
+    function downloadMultipleSpreadsheets() {
+      const urlsText = document.getElementById('multi-urls').value.trim();
+
+      if (!urlsText) {
+        alert('URLを入力してください');
+        return;
+      }
+
+      // 改行で分割し、空行を除去
+      const urls = urlsText.split('\n')
+        .map(url => url.trim())
+        .filter(url => url.length > 0);
+
+      if (urls.length === 0) {
+        alert('有効なURLがありません');
+        return;
+      }
+
+      const btn = document.getElementById('btn-multi-download');
+      btn.disabled = true;
+
+      sessionId = 'session_' + Date.now();
+      showStatus(`${urls.length}件のスプレッドシートを処理中...`, 'info');
+      startLogPolling();
+
+      google.script.run
+        .withSuccessHandler(onMultiDownloadComplete)
+        .withFailureHandler(onError)
+        .downloadMultipleSpreadsheets(urls, sessionId);
+    }
+
+    // 複数スプシダウンロード完了
+    function onMultiDownloadComplete(result) {
+      stopLogPolling();
+      document.getElementById('btn-multi-download').disabled = false;
+
+      if (result.error) {
+        showStatus('エラー: ' + result.error, 'error');
+        return;
+      }
+
+      if (result.successCount === 0) {
+        showStatus(result.message, 'warn');
+        return;
+      }
+
+      downloadZip(result);
+      showStatus(result.message, 'success');
     }
   </script>
 </body>

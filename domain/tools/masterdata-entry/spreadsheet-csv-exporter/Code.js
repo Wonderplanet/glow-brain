@@ -436,3 +436,101 @@ function downloadFilteredSheets(folderInput, targetSheetName, sessionId) {
     };
   }
 }
+
+/**
+ * 複数のスプレッドシートをまとめてCSV ZIPとしてダウンロード
+ * @param {string[]} urls - スプレッドシートURLの配列
+ * @param {string} sessionId - セッションID
+ * @returns {object} - { data: base64文字列, fileName: ZIP名, successCount: 件数 }
+ */
+function downloadMultipleSpreadsheets(urls, sessionId) {
+  const addLog = (log) => {
+    Logger.log(`[${log.type.toUpperCase()}] ${log.message}`);
+    saveLog(sessionId, log);
+  };
+
+  try {
+    addLog({ type: 'info', message: `${urls.length}件のスプレッドシートを処理開始...` });
+
+    const zipFiles = [];
+    let successCount = 0;
+
+    urls.forEach((url, urlIndex) => {
+      try {
+        addLog({ type: 'info', message: `[${urlIndex + 1}/${urls.length}] アクセス中...` });
+
+        // URL正規化
+        const normalizedUrl = normalizeSpreadsheetUrl(url);
+        const ss = SpreadsheetApp.openByUrl(normalizedUrl);
+        const ssName = ss.getName();
+        const ssId = ss.getId();
+        const sheets = ss.getSheets();
+
+        addLog({ type: 'success', message: `アクセス成功: ${ssName} (${sheets.length}シート)` });
+
+        // 各シートをCSVエクスポート
+        sheets.forEach((sheet, sheetIndex) => {
+          const sheetId = sheet.getSheetId();
+          const sheetName = sheet.getName();
+          const fileName = `${sanitizeFileName(ssName)}/${sanitizeFileName(sheetName)}.csv`;
+
+          try {
+            const csvBlob = fetchSheetAsCsv(ssId, sheetId, fileName);
+            zipFiles.push(csvBlob);
+            addLog({ type: 'info', message: `  CSV生成: ${sheetName}` });
+
+            // レートリミット対策
+            if (sheetIndex < sheets.length - 1) {
+              Utilities.sleep(300);
+            }
+          } catch (e) {
+            addLog({ type: 'warn', message: `  スキップ: ${sheetName} - ${e.message}` });
+          }
+        });
+
+        successCount++;
+
+        // スプシ間のスリープ
+        if (urlIndex < urls.length - 1) {
+          Utilities.sleep(500);
+        }
+
+      } catch (e) {
+        addLog({ type: 'warn', message: `[${urlIndex + 1}/${urls.length}] スキップ: ${e.message}` });
+      }
+    });
+
+    if (zipFiles.length === 0) {
+      addLog({ type: 'warn', message: 'CSVファイルが1件も生成されませんでした' });
+      return {
+        data: null,
+        fileName: null,
+        successCount: 0,
+        message: 'CSVファイルが1件も生成されませんでした'
+      };
+    }
+
+    // ZIP作成
+    addLog({ type: 'info', message: `ZIP作成中... (${zipFiles.length}ファイル)` });
+    const timestamp = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyyMMdd_HHmmss');
+    const zipFileName = `spreadsheets_${timestamp}.zip`;
+    const zip = Utilities.zip(zipFiles, zipFileName);
+    addLog({ type: 'success', message: `完了！${successCount}件のスプシ, ${zipFiles.length}件のCSVをダウンロード` });
+
+    return {
+      data: Utilities.base64Encode(zip.getBytes()),
+      fileName: zipFileName,
+      successCount: successCount,
+      message: `${successCount}件のスプシ, ${zipFiles.length}件のCSVをダウンロードしました`
+    };
+
+  } catch (e) {
+    addLog({ type: 'error', message: `エラー: ${e.message}` });
+    return {
+      data: null,
+      fileName: null,
+      successCount: 0,
+      error: e.message
+    };
+  }
+}
