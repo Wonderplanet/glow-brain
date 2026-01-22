@@ -547,7 +547,7 @@
       document.getElementById('logs').style.display = 'block';
       document.getElementById('logs').innerHTML = '';
       lastLogCount = 0;
-      logPoller = setInterval(pollLogs, 1000);
+      logPoller = setInterval(pollLogs, 5000);  // 5秒ごと
     }
 
     // ログポーリング停止
