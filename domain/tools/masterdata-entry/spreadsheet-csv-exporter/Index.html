@@ -284,10 +284,23 @@
       <p>特定のユースケース向けの専用ダウンローダーです。</p>
 
       <div class="usecase-cards">
-        <div class="usecase-card">
-          <h3>🎮 マスタデータ運営仕様書</h3>
-          <p>運営仕様書スプレッドシートから必要なマスタデータをダウンロード</p>
-          <button disabled>準備中</button>
+        <div class="usecase-card" id="card-masterdata-specs">
+          <h3>🎮 マスタデータ運営仕様書一括</h3>
+          <p>フォルダ内の「進捗管理表」からスプシURLを抽出し、各スプシを個別ZIPでダウンロード</p>
+          <label for="specs-folder-url">フォルダURL / ID：</label>
+          <input type="text" id="specs-folder-url" placeholder="https://drive.google.com/drive/folders/...">
+          <button id="btn-specs-scan" onclick="scanProgressSheets()">進捗管理表をスキャン</button>
+
+          <!-- スキャン結果表示エリア -->
+          <div id="specs-scan-result" style="display: none;">
+            <div id="specs-url-list" class="spreadsheet-list"></div>
+            <div class="list-actions">
+              <button class="link" onclick="selectAllSpecsUrls()">全選択</button>
+              <button class="link" onclick="deselectAllSpecsUrls()">全解除</button>
+              <span id="specs-selected-count"></span>
+            </div>
+            <button id="btn-specs-download" onclick="downloadSelectedSpecs()">選択したスプシをダウンロード</button>
+          </div>
         </div>
 
         <div class="usecase-card">
@@ -725,6 +738,152 @@
 
       downloadZip(result);
       showStatus(result.message, 'success');
+    }
+
+    // マスタデータ運営仕様書: 進捗管理表スキャン
+    let specsUrlData = []; // スキャン結果保持用
+
+    function scanProgressSheets() {
+      const folderInput = document.getElementById('specs-folder-url').value;
+
+      if (!folderInput) {
+        alert('フォルダURLを入力してください');
+        return;
+      }
+
+      const btn = document.getElementById('btn-specs-scan');
+      btn.disabled = true;
+
+      sessionId = 'session_' + Date.now();
+      showStatus('進捗管理表をスキャン中...', 'info');
+      startLogPolling();
+
+      google.script.run
+        .withSuccessHandler(onScanComplete)
+        .withFailureHandler(onError)
+        .scanProgressSheetsForUrls(folderInput, sessionId);
+    }
+
+    // スキャン完了コールバック
+    function onScanComplete(result) {
+      stopLogPolling();
+      const btn = document.getElementById('btn-specs-scan');
+      btn.disabled = false;
+
+      if (result.error) {
+        showStatus('エラー: ' + result.error, 'error');
+        return;
+      }
+
+      specsUrlData = result.urls;
+
+      if (specsUrlData.length === 0) {
+        showStatus('スプレッドシートURLが見つかりませんでした', 'warn');
+        return;
+      }
+
+      showStatus(`${specsUrlData.length}件のスプレッドシートURLを検出しました`, 'success');
+
+      // URL一覧表示
+      const listContainer = document.getElementById('specs-url-list');
+      listContainer.innerHTML = '';
+
+      specsUrlData.forEach((urlData, index) => {
+        const item = document.createElement('div');
+        item.className = 'spreadsheet-item';
+        item.innerHTML = `
+          <input type="checkbox" id="specs-url-${index}" value="${urlData.url}" onchange="updateSpecsSelectedCount()">
+          <label for="specs-url-${index}">
+            ${urlData.name}
+            <span style="font-size: 12px; color: #999; display: block;">出典: ${urlData.sourceSs}</span>
+          </label>
+        `;
+        listContainer.appendChild(item);
+      });
+
+      document.getElementById('specs-scan-result').style.display = 'block';
+      updateSpecsSelectedCount();
+    }
+
+    // 選択数更新
+    function updateSpecsSelectedCount() {
+      const checkboxes = document.querySelectorAll('#specs-url-list input[type="checkbox"]');
+      const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+      document.getElementById('specs-selected-count').innerText = `${checked}件選択中`;
+    }
+
+    // 全選択
+    function selectAllSpecsUrls() {
+      document.querySelectorAll('#specs-url-list input[type="checkbox"]').forEach(cb => cb.checked = true);
+      updateSpecsSelectedCount();
+    }
+
+    // 全解除
+    function deselectAllSpecsUrls() {
+      document.querySelectorAll('#specs-url-list input[type="checkbox"]').forEach(cb => cb.checked = false);
+      updateSpecsSelectedCount();
+    }
+
+    // 選択したスプシをダウンロード（順次処理）
+    function downloadSelectedSpecs() {
+      const checkboxes = document.querySelectorAll('#specs-url-list input[type="checkbox"]:checked');
+
+      if (checkboxes.length === 0) {
+        alert('スプレッドシートを選択してください');
+        return;
+      }
+
+      const selectedUrls = Array.from(checkboxes).map(cb => cb.value);
+
+      const btn = document.getElementById('btn-specs-download');
+      btn.disabled = true;
+
+      sessionId = 'session_' + Date.now();
+      showStatus(`${selectedUrls.length}件のスプレッドシートを処理中...`, 'info');
+      startLogPolling();
+
+      // 順次ダウンロード処理
+      processNextSpecsSpreadsheet(selectedUrls, 0);
+    }
+
+    // 順次処理（再帰的に1つずつダウンロード）
+    function processNextSpecsSpreadsheet(urls, index) {
+      if (index >= urls.length) {
+        // 全て完了
+        stopLogPolling();
+        showStatus('全てのダウンロードが完了しました！', 'success');
+        document.getElementById('btn-specs-download').disabled = false;
+        return;
+      }
+
+      const url = urls[index];
+      const urlData = specsUrlData.find(u => u.url === url);
+      const ssName = urlData ? urlData.name : 'Unknown';
+
+      showStatus(`[${index + 1}/${urls.length}] ${ssName} を処理中...`, 'info');
+
+      google.script.run
+        .withSuccessHandler(function(result) {
+          if (result.error) {
+            showStatus(`[${index + 1}/${urls.length}] エラー: ${result.error}`, 'error');
+          } else {
+            // ZIPダウンロード
+            downloadZip(result);
+          }
+
+          // 次のスプシを処理（500ms待機）
+          setTimeout(() => {
+            processNextSpecsSpreadsheet(urls, index + 1);
+          }, 500);
+        })
+        .withFailureHandler(function(err) {
+          showStatus(`[${index + 1}/${urls.length}] エラー: ${err.message}`, 'error');
+          // エラーでも次へ進む
+          setTimeout(() => {
+            processNextSpecsSpreadsheet(urls, index + 1);
+          }, 500);
+        })
+        .downloadSingleSpreadsheet(url, sessionId);
     }
   </script>
 </body>

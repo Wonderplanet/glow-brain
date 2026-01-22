@@ -534,3 +534,147 @@ function downloadMultipleSpreadsheets(urls, sessionId) {
     };
   }
 }
+
+/**
+ * 文字列からスプレッドシートURLを抽出
+ */
+function extractSpreadsheetUrls(text) {
+  const pattern = /https:\/\/docs\.google\.com\/spreadsheets\/d\/[a-zA-Z0-9_-]+(?:\/[^\s"'<>]*)?/g;
+  return text.match(pattern) || [];
+}
+
+/**
+ * スプレッドシートURLからIDを抽出
+ */
+function extractSpreadsheetId(url) {
+  const match = url.match(/\/spreadsheets\/d\/([a-zA-Z0-9_-]+)/);
+  return match ? match[1] : null;
+}
+
+/**
+ * 列番号をアルファベットに変換
+ */
+function getColumnLetter(colNum) {
+  let letter = '';
+  while (colNum > 0) {
+    const remainder = (colNum - 1) % 26;
+    letter = String.fromCharCode(65 + remainder) + letter;
+    colNum = Math.floor((colNum - 1) / 26);
+  }
+  return letter;
+}
+
+/**
+ * フォルダ内の「進捗管理表」シートからスプシURLを抽出
+ * @param {string} folderInput - フォルダURL/ID
+ * @param {string} sessionId - セッションID
+ * @returns {object} - { urls: [{url, name, sourceSs}], error }
+ */
+function scanProgressSheetsForUrls(folderInput, sessionId) {
+  const addLog = (log) => {
+    Logger.log(`[${log.type.toUpperCase()}] ${log.message}`);
+    saveLog(sessionId, log);
+  };
+
+  try {
+    addLog({ type: 'info', message: 'フォルダにアクセス中...' });
+
+    // フォルダID抽出
+    const folderId = extractFolderId(folderInput);
+    const folder = DriveApp.getFolderById(folderId);
+    const folderName = folder.getName();
+
+    addLog({ type: 'success', message: `フォルダアクセス成功: ${folderName}` });
+    addLog({ type: 'info', message: 'スプレッドシートを検索中...' });
+
+    // スプレッドシート一覧取得
+    const files = folder.getFilesByType(MimeType.GOOGLE_SHEETS);
+    const spreadsheets = [];
+    while (files.hasNext()) {
+      spreadsheets.push(files.next());
+    }
+
+    addLog({ type: 'info', message: `${spreadsheets.length}件のスプレッドシートを検出` });
+    addLog({ type: 'info', message: '「進捗管理表」シートを検索中...' });
+
+    const urlMap = {}; // URLをキーにして重複除去
+
+    // 各スプレッドシートを処理
+    spreadsheets.forEach((file, index) => {
+      const ssId = file.getId();
+      const ssName = file.getName();
+
+      try {
+        const ss = SpreadsheetApp.openById(ssId);
+        const sheets = ss.getSheets();
+
+        // 「進捗管理表」シートを検索
+        const progressSheet = sheets.find(sheet => sheet.getName() === '進捗管理表');
+
+        if (progressSheet) {
+          addLog({ type: 'info', message: `「${ssName}」の進捗管理表を解析中...` });
+
+          // シート全体のデータ取得
+          const dataRange = progressSheet.getDataRange();
+          const values = dataRange.getValues();
+
+          // 各セルからURL抽出
+          values.forEach(row => {
+            row.forEach(cell => {
+              if (typeof cell === 'string' && cell.includes('docs.google.com/spreadsheets')) {
+                const urls = extractSpreadsheetUrls(cell);
+                urls.forEach(url => {
+                  const ssIdFromUrl = extractSpreadsheetId(url);
+                  if (ssIdFromUrl && !urlMap[ssIdFromUrl]) {
+                    // 重複チェック（IDベース）
+                    try {
+                      const targetSs = SpreadsheetApp.openById(ssIdFromUrl);
+                      urlMap[ssIdFromUrl] = {
+                        url: url,
+                        name: targetSs.getName(),
+                        sourceSs: ssName
+                      };
+                    } catch (e) {
+                      addLog({ type: 'warn', message: `URL取得エラー: ${url} - ${e.message}` });
+                    }
+                  }
+                });
+              }
+            });
+          });
+
+          addLog({ type: 'success', message: `「${ssName}」の解析完了` });
+        }
+
+        // レートリミット対策
+        if (index < spreadsheets.length - 1) {
+          Utilities.sleep(300);
+        }
+
+      } catch (e) {
+        addLog({ type: 'warn', message: `スキップ: ${ssName} - ${e.message}` });
+      }
+    });
+
+    // 結果を配列に変換
+    const urlList = Object.values(urlMap);
+
+    addLog({ type: 'success', message: `合計 ${urlList.length}件のスプレッドシートURLを検出` });
+
+    if (urlList.length === 0) {
+      addLog({ type: 'warn', message: 'スプレッドシートURLが見つかりませんでした' });
+    }
+
+    return {
+      urls: urlList,
+      error: null
+    };
+
+  } catch (e) {
+    addLog({ type: 'error', message: `エラー: ${e.message}` });
+    return {
+      urls: [],
+      error: e.message
+    };
+  }
+}
