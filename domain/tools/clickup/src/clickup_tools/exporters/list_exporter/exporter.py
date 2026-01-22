@@ -164,13 +164,20 @@ class ListExporter:
         # コメントを取得
         comments = self.client.get_comments(task.id)
 
-        # Markdown を生成
+        # Markdown を生成（コメントは除外）
         markdown_content = self._generate_markdown(task, list_info, comments)
 
         # ticket.md を保存
         ticket_path = task_dir / "ticket.md"
         save_text(markdown_content, ticket_path)
         print(f"  ✓ ticket.md を保存")
+
+        # activity.md を保存（コメントがある場合）
+        if comments:
+            activity_content = self._generate_activity_markdown(task, comments)
+            activity_path = task_dir / "activity.md"
+            save_text(activity_content, activity_path)
+            print(f"  ✓ activity.md を保存")
 
         # 添付ファイルをダウンロード
         if not skip_attachments and task.attachments:
@@ -232,14 +239,29 @@ class ListExporter:
             lines.append(md.heading("カスタムフィールド", level=2))
             lines.append(md.custom_fields_table(task.custom_fields))
 
-        # コメント
-        if comments:
-            lines.append(md.heading("コメント", level=2))
-            lines.append(md.comments_section(comments))
-
         # 添付ファイル
         if task.attachments:
             lines.append(md.heading("添付ファイル", level=2))
             lines.append(md.attachments_table(task.attachments))
+
+        return "".join(lines)
+
+    def _generate_activity_markdown(self, task: Task, comments) -> str:
+        """コメント情報を Markdown 形式で生成
+
+        Args:
+            task: タスク
+            comments: コメントリスト
+
+        Returns:
+            Markdown テキスト
+        """
+        md = self.markdown
+        lines = [md.heading(f"{task.name} - Activity", level=1)]
+
+        if comments:
+            lines.append(md.comments_section(comments))
+        else:
+            lines.append("コメントはありません。\n\n")
 
         return "".join(lines)
