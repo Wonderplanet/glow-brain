@@ -328,3 +328,111 @@ function fetchSheetAsCsv(ssId, sheetId, fileName) {
   // リトライ上限到達時
   throw new Error(`シート取得に失敗しました（リトライ上限）: ${fileName}`);
 }
+
+/**
+ * フォルダ内のスプレッドシートから指定シート名のみをCSVダウンロード
+ * @param {string} folderInput - フォルダURL または ID
+ * @param {string} targetSheetName - フィルタするシート名（完全一致）
+ * @param {string} sessionId - セッションID
+ * @returns {object} - { data: base64文字列, fileName: ZIP名, matchCount: 件数 }
+ */
+function downloadFilteredSheets(folderInput, targetSheetName, sessionId) {
+  const addLog = (log) => {
+    Logger.log(`[${log.type.toUpperCase()}] ${log.message}`);
+    saveLog(sessionId, log);
+  };
+
+  try {
+    addLog({ type: 'info', message: 'フォルダにアクセス中...' });
+
+    // フォルダID抽出
+    const folderId = extractFolderId(folderInput);
+    const folder = DriveApp.getFolderById(folderId);
+    const folderName = folder.getName();
+
+    addLog({ type: 'success', message: `フォルダアクセス成功: ${folderName}` });
+    addLog({ type: 'info', message: 'スプレッドシートを検索中...' });
+
+    // スプレッドシート一覧取得
+    const files = folder.getFilesByType(MimeType.GOOGLE_SHEETS);
+    const spreadsheets = [];
+    while (files.hasNext()) {
+      spreadsheets.push(files.next());
+    }
+
+    addLog({ type: 'info', message: `${spreadsheets.length}件のスプレッドシートを検出` });
+    addLog({ type: 'info', message: `シート名「${targetSheetName}」でフィルタ中...` });
+
+    const zipFiles = [];
+    let matchCount = 0;
+
+    // 各スプレッドシートを処理
+    spreadsheets.forEach((file, ssIndex) => {
+      const ssId = file.getId();
+      const ssName = file.getName();
+
+      try {
+        const ss = SpreadsheetApp.openById(ssId);
+        const sheets = ss.getSheets();
+
+        // シート名でフィルタ（完全一致）
+        const matchingSheets = sheets.filter(sheet => sheet.getName() === targetSheetName);
+
+        if (matchingSheets.length > 0) {
+          matchingSheets.forEach(sheet => {
+            const sheetId = sheet.getSheetId();
+            const fileName = `${sanitizeFileName(ssName)}_${sanitizeFileName(targetSheetName)}.csv`;
+
+            addLog({ type: 'info', message: `CSV化中: ${ssName} / ${targetSheetName}` });
+
+            const csvBlob = fetchSheetAsCsv(ssId, sheetId, fileName);
+            zipFiles.push(csvBlob);
+            matchCount++;
+
+            addLog({ type: 'success', message: `CSV生成成功: ${fileName}` });
+          });
+        }
+
+        // レートリミット対策（最後以外は500msスリープ）
+        if (ssIndex < spreadsheets.length - 1) {
+          Utilities.sleep(500);
+        }
+
+      } catch (e) {
+        addLog({ type: 'warn', message: `スキップ: ${ssName} - ${e.message}` });
+      }
+    });
+
+    if (matchCount === 0) {
+      addLog({ type: 'warn', message: `シート「${targetSheetName}」が見つかりませんでした` });
+      return {
+        data: null,
+        fileName: null,
+        matchCount: 0,
+        message: `シート「${targetSheetName}」が見つかりませんでした`
+      };
+    }
+
+    // ZIP作成
+    addLog({ type: 'info', message: `ZIP作成中... (${zipFiles.length}ファイル)` });
+    const zipFileName = `${sanitizeFileName(targetSheetName)}_filtered.zip`;
+    const zip = Utilities.zip(zipFiles, zipFileName);
+    addLog({ type: 'success', message: `完了！${matchCount}件のシートをダウンロード` });
+
+    return {
+      data: Utilities.base64Encode(zip.getBytes()),
+      fileName: zipFileName,
+      matchCount: matchCount,
+      message: `${matchCount}件のシートをダウンロードしました`
+    };
+
+  } catch (e) {
+    addLog({ type: 'error', message: `エラー: ${e.message}` });
+    return {
+      data: null,
+      fileName: null,
+      matchCount: 0,
+      error: e.message
+    };
+  }
+}

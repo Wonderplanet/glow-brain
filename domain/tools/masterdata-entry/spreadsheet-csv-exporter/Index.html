@@ -280,6 +280,16 @@
           <button disabled>準備中</button>
         </div>
 
+        <div class="usecase-card" id="card-sheet-filter">
+          <h3>📋 シート名フィルタ一括</h3>
+          <p>フォルダ内のスプレッドシートから、指定したシート名のみをCSVでダウンロード</p>
+          <label for="filter-folder-url">フォルダURL / ID：</label>
+          <input type="text" id="filter-folder-url" placeholder="https://drive.google.com/drive/folders/...">
+          <label for="filter-sheet-name" style="margin-top: 10px; display: block;">シート名（完全一致）：</label>
+          <input type="text" id="filter-sheet-name" placeholder="例: MstEvent">
+          <button id="btn-filter-download" onclick="downloadFilteredSheets()" style="margin-top: 15px;">ダウンロード</button>
+        </div>
+
         <div class="usecase-card">
           <h3>➕ 新規ユースケース追加</h3>
           <p>カスタムユースケースを追加する場合は、このWebアプリを拡張してください。</p>
@@ -583,6 +593,52 @@
         // 自動スクロール
         logs.scrollTop = logs.scrollHeight;
       }
+    }
+
+    // シート名フィルタダウンロード
+    function downloadFilteredSheets() {
+      const folderInput = document.getElementById('filter-folder-url').value;
+      const sheetName = document.getElementById('filter-sheet-name').value;
+
+      if (!folderInput) {
+        alert('フォルダURLを入力してください');
+        return;
+      }
+      if (!sheetName) {
+        alert('シート名を入力してください');
+        return;
+      }
+
+      const btn = document.getElementById('btn-filter-download');
+      btn.disabled = true;
+
+      sessionId = 'session_' + Date.now();
+      showStatus(`シート「${sheetName}」を検索中...`, 'info');
+      startLogPolling();
+
+      google.script.run
+        .withSuccessHandler(onFilteredDownloadComplete)
+        .withFailureHandler(onError)
+        .downloadFilteredSheets(folderInput, sheetName, sessionId);
+    }
+
+    // シート名フィルタダウンロード完了
+    function onFilteredDownloadComplete(result) {
+      stopLogPolling();
+      document.getElementById('btn-filter-download').disabled = false;
+
+      if (result.error) {
+        showStatus('エラー: ' + result.error, 'error');
+        return;
+      }
+
+      if (result.matchCount === 0) {
+        showStatus(result.message, 'warn');
+        return;
+      }
+
+      downloadZip(result);
+      showStatus(result.message, 'success');
     }
 
     // エラー表示
