@@ -1,4 +1,4 @@
-"""リスト内の closed チケットエクスポート処理"""
+"""リスト内のチケットエクスポート処理"""
 
 from dataclasses import dataclass
 from pathlib import Path
@@ -27,8 +27,8 @@ class ExportResult:
     output_dir: Path
 
 
-class ListClosedExporter:
-    """リスト内の closed チケットをエクスポート"""
+class ListExporter:
+    """リスト内のチケットをエクスポート"""
 
     def __init__(self, client: ClickUpClient, config: Config):
         """初期化
@@ -44,15 +44,17 @@ class ListClosedExporter:
     def export(
         self,
         list_url: str,
+        statuses: Optional[list[str]] = None,
         output_dir: Optional[Path] = None,
         skip_attachments: bool = False,
         debug_limit: Optional[int] = None,
         dry_run: bool = False,
     ) -> ExportResult:
-        """リスト内の closed チケットをエクスポート
+        """リスト内のチケットをエクスポート
 
         Args:
             list_url: リスト URL
+            statuses: フィルタするステータスのリスト（未指定なら全ステータス）
             output_dir: 出力ディレクトリ（指定しない場合は設定から取得）
             skip_attachments: 添付ファイルをスキップ
             debug_limit: デバッグ用の処理件数制限
@@ -72,9 +74,15 @@ class ListClosedExporter:
         if list_info.folder_name:
             print(f"フォルダ: {list_info.folder_name}")
 
-        # closed タスクを取得
-        print("\nclosed タスクを取得中...")
-        tasks = self.client.get_tasks(list_id, statuses=["closed"], include_closed=True)
+        # タスクを取得
+        if statuses:
+            status_text = ", ".join(statuses)
+            print(f"\n{status_text} タスクを取得中...")
+        else:
+            print("\n全タスクを取得中...")
+
+        include_closed = statuses is None or "closed" in statuses
+        tasks = self.client.get_tasks(list_id, statuses=statuses, include_closed=include_closed)
         print(f"取得件数: {len(tasks)}")
 
         # デバッグ制限

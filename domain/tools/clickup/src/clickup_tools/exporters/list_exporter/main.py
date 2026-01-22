@@ -1,41 +1,46 @@
-"""リスト内の closed チケットエクスポーター CLI"""
+"""リスト内のチケットエクスポーター CLI"""
 
 import argparse
 import sys
 from pathlib import Path
 
 from clickup_tools.common import Config, ClickUpClient
-from .exporter import ListClosedExporter
+from .exporter import ListExporter
 
 
 def main():
     """CLI エントリーポイント"""
     parser = argparse.ArgumentParser(
-        description="ClickUp リスト内の closed チケットをエクスポート",
+        description="ClickUp リスト内のチケットをエクスポート",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用例:
-  # 基本的な使い方
-  python -m clickup_tools.exporters.list_closed_exporter \\
+  # 基本的な使い方（全ステータス）
+  python -m clickup_tools.exporters.list_exporter \\
     --url "https://app.clickup.com/12345678/v/li/987654321"
 
+  # closed のみ
+  python -m clickup_tools.exporters.list_exporter \\
+    --url "https://app.clickup.com/12345678/v/li/987654321" \\
+    --status closed
+
   # 出力先を指定
-  python -m clickup_tools.exporters.list_closed_exporter \\
+  python -m clickup_tools.exporters.list_exporter \\
     --url "https://app.clickup.com/12345678/v/li/987654321" \\
     --output "./exports"
 
   # 添付ファイルをスキップ
-  python -m clickup_tools.exporters.list_closed_exporter \\
+  python -m clickup_tools.exporters.list_exporter \\
     --url "https://app.clickup.com/12345678/v/li/987654321" \\
     --skip-attachments
 
   # デバッグモード（最初の3件のみ）
-  python -m clickup_tools.exporters.list_closed_exporter \\
+  python -m clickup_tools.exporters.list_exporter \\
     --url "https://app.clickup.com/12345678/v/li/987654321" \\
     --debug-limit 3
 
   # ドライラン（ファイル出力なし）
-  python -m clickup_tools.exporters.list_closed_exporter \\
+  python -m clickup_tools.exporters.list_exporter \\
     --url "https://app.clickup.com/12345678/v/li/987654321" \\
     --dry-run
         """,
@@ -46,6 +51,13 @@ def main():
         "-u",
         required=True,
         help="ClickUp リスト URL",
+    )
+
+    parser.add_argument(
+        "--status",
+        "-s",
+        type=str,
+        help="フィルタするステータス（例: closed）。未指定なら全ステータス",
     )
 
     parser.add_argument(
@@ -85,15 +97,19 @@ def main():
         client = ClickUpClient(config.api_key)
 
         # エクスポーターを作成
-        exporter = ListClosedExporter(client, config)
+        exporter = ListExporter(client, config)
 
         # エクスポート実行
         print("=" * 60)
-        print("ClickUp List Closed Exporter")
+        print("ClickUp List Exporter")
         print("=" * 60)
+
+        # ステータスフィルタを準備
+        statuses = [args.status] if args.status else None
 
         result = exporter.export(
             list_url=args.url,
+            statuses=statuses,
             output_dir=args.output,
             skip_attachments=args.skip_attachments,
             debug_limit=args.debug_limit,
