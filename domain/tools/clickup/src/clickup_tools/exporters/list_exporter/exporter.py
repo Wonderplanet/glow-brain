@@ -221,10 +221,11 @@ class ListExporter:
             list_rows.append(["フォルダ", list_info.folder_name])
         lines.append(md.table(["項目", "値"], list_rows))
 
-        # 説明
-        if task.description:
+        # 説明（Markdown形式を優先）
+        description_content = task.markdown_description or task.description
+        if description_content:
             lines.append(md.heading("説明", level=2))
-            lines.append(f"{task.description}\n\n")
+            lines.append(f"{description_content}\n\n")
 
         # カスタムフィールド
         if task.custom_fields:

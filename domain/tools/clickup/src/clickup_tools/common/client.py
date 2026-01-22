@@ -102,7 +102,10 @@ class ClickUpClient:
         Returns:
             タスクのリスト
         """
-        params: Dict[str, Any] = {"include_closed": str(include_closed).lower()}
+        params: Dict[str, Any] = {
+            "include_closed": str(include_closed).lower(),
+            "include_markdown_description": "true",
+        }
 
         if statuses:
             params["statuses[]"] = statuses
@@ -119,7 +122,11 @@ class ClickUpClient:
         Returns:
             タスク情報
         """
-        data = self._request("GET", f"/task/{task_id}")
+        data = self._request(
+            "GET",
+            f"/task/{task_id}",
+            params={"include_markdown_description": "true"},
+        )
         return Task.from_api(data)
 
     def get_comments(self, task_id: str) -> List[Comment]:

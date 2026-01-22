@@ -93,6 +93,7 @@ class Task:
     attachments: List[Attachment]
     custom_fields: List[CustomField]
     parent: Optional[str] = None
+    markdown_description: Optional[str] = None
 
     @classmethod
     def from_api(cls, data: Dict[str, Any]) -> "Task":
@@ -125,6 +126,7 @@ class Task:
                 for field in data.get("custom_fields", [])
             ],
             parent=data.get("parent"),
+            markdown_description=data.get("markdown_description"),
         )
 
 
