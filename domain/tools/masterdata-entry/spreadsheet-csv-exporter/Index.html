@@ -300,6 +300,7 @@
               <span id="specs-selected-count"></span>
             </div>
             <button id="btn-specs-download" onclick="downloadSelectedSpecs()">選択したスプシをダウンロード</button>
+            <button id="btn-specs-abort" onclick="abortSpecsDownload()" style="display: none; margin-left: 10px;">中断</button>
           </div>
         </div>
 
@@ -742,6 +743,13 @@
 
     // マスタデータ運営仕様書: 進捗管理表スキャン
     let specsUrlData = []; // スキャン結果保持用
+    let specsDownloadAborted = false; // 中断フラグ
+
+    // 中断処理
+    function abortSpecsDownload() {
+      specsDownloadAborted = true;
+      showStatus('中断しています...', 'warn');
+    }
 
     function scanProgressSheets() {
       const folderInput = document.getElementById('specs-folder-url').value;
@@ -838,6 +846,10 @@
       const btn = document.getElementById('btn-specs-download');
       btn.disabled = true;
 
+      // 中断フラグをリセット & 中断ボタン表示
+      specsDownloadAborted = false;
+      document.getElementById('btn-specs-abort').style.display = 'inline-block';
+
       sessionId = 'session_' + Date.now();
       showStatus(`${selectedUrls.length}件のスプレッドシートを処理中...`, 'info');
       startLogPolling();
@@ -848,11 +860,21 @@
 
     // 順次処理（再帰的に1つずつダウンロード）
     function processNextSpecsSpreadsheet(urls, index) {
+      // 中断チェック
+      if (specsDownloadAborted) {
+        stopLogPolling();
+        showStatus(`中断しました（${index}/${urls.length}件完了）`, 'warn');
+        document.getElementById('btn-specs-download').disabled = false;
+        document.getElementById('btn-specs-abort').style.display = 'none';
+        return;
+      }
+
       if (index >= urls.length) {
         // 全て完了
         stopLogPolling();
         showStatus('全てのダウンロードが完了しました！', 'success');
         document.getElementById('btn-specs-download').disabled = false;
+        document.getElementById('btn-specs-abort').style.display = 'none';
         return;
       }
 
@@ -864,6 +886,15 @@
 
       google.script.run
         .withSuccessHandler(function(result) {
+          // 中断チェック
+          if (specsDownloadAborted) {
+            stopLogPolling();
+            showStatus(`中断しました（${index + 1}/${urls.length}件完了）`, 'warn');
+            document.getElementById('btn-specs-download').disabled = false;
+            document.getElementById('btn-specs-abort').style.display = 'none';
+            return;
+          }
+
           if (result.error) {
             showStatus(`[${index + 1}/${urls.length}] エラー: ${result.error}`, 'error');
           } else {
@@ -877,6 +908,15 @@
           }, 500);
         })
         .withFailureHandler(function(err) {
+          // 中断チェック
+          if (specsDownloadAborted) {
+            stopLogPolling();
+            showStatus(`中断しました（${index + 1}/${urls.length}件完了）`, 'warn');
+            document.getElementById('btn-specs-download').disabled = false;
+            document.getElementById('btn-specs-abort').style.display = 'none';
+            return;
+          }
+
           showStatus(`[${index + 1}/${urls.length}] エラー: ${err.message}`, 'error');
           // エラーでも次へ進む
           setTimeout(() => {
