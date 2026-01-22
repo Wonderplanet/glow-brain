@@ -178,13 +178,17 @@ class ListExporter:
         save_text(json.dumps(raw_data, ensure_ascii=False, indent=2), raw_path)
         print(f"  ✓ raw.json を保存")
 
-        # Markdown を生成（コメントは除外）
-        markdown_content = self._generate_markdown(task, list_info, comments)
-
-        # ticket.md を保存
+        # ticket.md を保存（タイトル + 説明のみ）
+        markdown_content = self._generate_markdown(task)
         ticket_path = task_dir / "ticket.md"
         save_text(markdown_content, ticket_path)
         print(f"  ✓ ticket.md を保存")
+
+        # meta.md を保存（メタ情報）
+        meta_content = self._generate_meta_markdown(task, list_info)
+        meta_path = task_dir / "meta.md"
+        save_text(meta_content, meta_path)
+        print(f"  ✓ meta.md を保存")
 
         # activity.md を保存（コメントがある場合）
         if comments:
@@ -210,15 +214,11 @@ class ListExporter:
                 except Exception as e:
                     print(f"    ⚠️ ダウンロード失敗: {e}")
 
-    def _generate_markdown(
-        self, task: Task, list_info: ListInfo, comments
-    ) -> str:
-        """タスク情報を Markdown 形式で生成
+    def _generate_markdown(self, task: Task) -> str:
+        """タスクのタイトルと説明のみを Markdown 形式で生成
 
         Args:
             task: タスク
-            list_info: リスト情報
-            comments: コメントリスト
 
         Returns:
             Markdown テキスト
@@ -227,6 +227,28 @@ class ListExporter:
 
         # タイトル
         lines = [md.heading(task.name, level=1)]
+
+        # 説明（Markdown形式を優先）
+        description_content = task.markdown_description or task.description
+        if description_content:
+            lines.append(f"{description_content}\n\n")
+
+        return "".join(lines)
+
+    def _generate_meta_markdown(self, task: Task, list_info: ListInfo) -> str:
+        """タスクのメタ情報を Markdown 形式で生成
+
+        Args:
+            task: タスク
+            list_info: リスト情報
+
+        Returns:
+            Markdown テキスト
+        """
+        md = self.markdown
+
+        # タイトル
+        lines = [md.heading(f"{task.name} - メタ情報", level=1)]
 
         # 基本情報
         lines.append(md.heading("基本情報", level=2))
@@ -241,12 +263,6 @@ class ListExporter:
         if list_info.folder_name:
             list_rows.append(["フォルダ", list_info.folder_name])
         lines.append(md.table(["項目", "値"], list_rows))
-
-        # 説明（Markdown形式を優先）
-        description_content = task.markdown_description or task.description
-        if description_content:
-            lines.append(md.heading("説明", level=2))
-            lines.append(f"{description_content}\n\n")
 
         # カスタムフィールド
         if task.custom_fields:
