@@ -72,6 +72,12 @@ function downloadSingleSpreadsheet(url, sessionId) {
 
     // 各シートをCSVエクスポート
     sheets.forEach((sheet, index) => {
+      // 非表示シートをスキップ
+      if (sheet.isSheetHidden()) {
+        addLog({ type: 'info', message: `  - シート「${sheet.getName()}」は非表示のためスキップ` });
+        return;
+      }
+
       const sheetId = sheet.getSheetId();
       const sheetName = sheet.getName();
       const fileName = `${folderName}/${sanitizeFileName(sheetName)}.csv`;
@@ -200,6 +206,12 @@ function downloadSpreadsheetById(ssId, sessionId) {
 
     // 各シートをCSVエクスポート
     sheets.forEach((sheet, index) => {
+      // 非表示シートをスキップ
+      if (sheet.isSheetHidden()) {
+        addLog({ type: 'info', message: `  - シート「${sheet.getName()}」は非表示のためスキップ` });
+        return;
+      }
+
       const sheetId = sheet.getSheetId();
       const sheetName = sheet.getName();
       const fileName = `${folderName}/${sanitizeFileName(sheetName)}.csv`;
@@ -375,8 +387,10 @@ function downloadFilteredSheets(folderInput, targetSheetName, sessionId) {
         const ss = SpreadsheetApp.openById(ssId);
         const sheets = ss.getSheets();
 
-        // シート名でフィルタ（完全一致）
-        const matchingSheets = sheets.filter(sheet => sheet.getName() === targetSheetName);
+        // シート名でフィルタ（完全一致）かつ非表示除外
+        const matchingSheets = sheets.filter(sheet =>
+          sheet.getName() === targetSheetName && !sheet.isSheetHidden()
+        );
 
         if (matchingSheets.length > 0) {
           matchingSheets.forEach(sheet => {
@@ -470,6 +484,12 @@ function downloadMultipleSpreadsheets(urls, sessionId) {
 
         // 各シートをCSVエクスポート
         sheets.forEach((sheet, sheetIndex) => {
+          // 非表示シートをスキップ
+          if (sheet.isSheetHidden()) {
+            addLog({ type: 'info', message: `  - シート「${sheet.getName()}」は非表示のためスキップ` });
+            return;
+          }
+
           const sheetId = sheet.getSheetId();
           const sheetName = sheet.getName();
           const fileName = `${sanitizeFileName(ssName)}/${sanitizeFileName(sheetName)}.csv`;
