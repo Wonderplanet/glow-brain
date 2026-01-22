@@ -31,7 +31,7 @@ Google SpreadsheetをCSV形式でエクスポートし、ZIP形式でダウン�
 cd domain/tools/masterdata-entry/spreadsheet-csv-exporter
 
 # claspで新規GASプロジェクトを作成
-clasp create --type webapp --title "Spreadsheet CSV Exporter"
+clasp create --type standalone --title "Spreadsheet CSV Exporter"
 
 # ファイルをGASにアップロード
 clasp push
@@ -40,20 +40,22 @@ clasp push
 ### 2. Webアプリとしてデプロイ
 
 1. GASエディタを開く
-   ```bash
-   clasp open
-   ```
+   - `clasp create`実行時に表示されたURLをブラウザで開く
+   - または `.clasp.json` の `scriptId` からURLを作成：
+     `https://script.google.com/d/{scriptId}/edit`
 
-2. **デプロイ** > **新しいデプロイ** を選択
+2. **デプロイ** > **新しいデプロイ** をクリック
 
-3. デプロイ設定
-   - **種類**: Webアプリ
-   - **次のユーザーとして実行**: アクセスしているユーザー
-   - **アクセスできるユーザー**: 組織内の全員
+3. 歯車アイコン（種類を選択）をクリック > **ウェブアプリ** を選択
 
-4. **デプロイ**ボタンをクリック
+4. デプロイ設定
+   - **説明**: 任意（例: v1）
+   - **次のユーザーとして実行**: **アクセスしているユーザー**
+   - **アクセスできるユーザー**: **組織内の全員**
 
-5. デプロイURLが発行される（このURLでWebアプリにアクセス可能）
+5. **デプロイ**ボタンをクリック
+
+6. デプロイURLが発行される（このURLでWebアプリにアクセス可能）
 
 ### 3. 権限の承認
 
