@@ -13,9 +13,25 @@ class Config:
         load_dotenv()
 
         self.api_key = os.getenv("CLICKUP_API_KEY")
-        self.output_base = Path(
-            os.getenv("CLICKUP_OUTPUT_BASE", "domain/raw-data/clickup")
-        )
+
+        # glow-brainルートから固定パスを構築
+        self.output_base = self._get_glow_brain_root() / "domain/raw-data/clickup"
+
+    @staticmethod
+    def _get_glow_brain_root() -> Path:
+        """glow-brainリポジトリのルートディレクトリを検出
+
+        Returns:
+            glow-brainルートの絶対パス
+
+        Raises:
+            RuntimeError: gitリポジトリが見つからない場合
+        """
+        current = Path(__file__).resolve()
+        for parent in [current] + list(current.parents):
+            if (parent / ".git").exists():
+                return parent
+        raise RuntimeError("glow-brainリポジトリのルートが見つかりません")
 
     def validate(self) -> None:
         """必須設定のバリデーション"""
