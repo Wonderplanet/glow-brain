@@ -197,18 +197,19 @@ class ListExporter:
             save_text(activity_content, activity_path)
             print(f"  ✓ activity.md を保存")
 
-        # 添付ファイルをダウンロード
-        if not skip_attachments and task.attachments:
+        # 添付ファイルをダウンロード（task_raw から取得）
+        raw_attachments = task_raw.get("attachments", [])
+        if not skip_attachments and raw_attachments:
             attachments_dir = task_dir / "attachments"
             ensure_directory(attachments_dir)
 
-            for i, att in enumerate(task.attachments, 1):
+            for i, att_data in enumerate(raw_attachments, 1):
                 try:
-                    print(
-                        f"  → 添付ファイル {i}/{len(task.attachments)}: {att.filename}"
-                    )
-                    content = self.client.download_file(att.url)
-                    file_path = attachments_dir / sanitize_filename(att.filename)
+                    filename = att_data.get("title", "unknown")
+                    url = att_data.get("url", "")
+                    print(f"  → 添付ファイル {i}/{len(raw_attachments)}: {filename}")
+                    content = self.client.download_file(url)
+                    file_path = attachments_dir / sanitize_filename(filename)
                     save_file(content, file_path)
                     print(f"    ✓ 保存完了")
                 except Exception as e:
