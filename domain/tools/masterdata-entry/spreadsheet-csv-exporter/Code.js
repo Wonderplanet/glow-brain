@@ -43,6 +43,30 @@ function fetchLogs(sessionId) {
 }
 
 /**
+ * 中断フラグをセット
+ */
+function setAbortFlag(sessionId) {
+  const cache = CacheService.getScriptCache();
+  cache.put(`abort_${sessionId}`, 'true', 600);
+  return { success: true };
+}
+
+/**
+ * 中断フラグをチェック
+ */
+function checkAbortFlag(sessionId) {
+  const cache = CacheService.getScriptCache();
+  return cache.get(`abort_${sessionId}`) === 'true';
+}
+
+/**
+ * 中断フラグをクリア
+ */
+function clearAbortFlag(sessionId) {
+  CacheService.getScriptCache().remove(`abort_${sessionId}`);
+}
+
+/**
  * 単一スプレッドシートをCSV ZIPとしてダウンロード
  * @param {string} url - スプレッドシートURL
  * @param {string} sessionId - セッションID
@@ -71,11 +95,21 @@ function downloadSingleSpreadsheet(url, sessionId) {
     const folderName = sanitizeFileName(ssName);
 
     // 各シートをCSVエクスポート
-    sheets.forEach((sheet, index) => {
+    let aborted = false;
+    for (let index = 0; index < sheets.length && !aborted; index++) {
+      const sheet = sheets[index];
+
+      // 中断フラグチェック
+      if (checkAbortFlag(sessionId)) {
+        addLog({ type: 'warn', message: '処理が中断されました' });
+        aborted = true;
+        break;
+      }
+
       // 非表示シートをスキップ
       if (sheet.isSheetHidden()) {
         addLog({ type: 'info', message: `  - シート「${sheet.getName()}」は非表示のためスキップ` });
-        return;
+        continue;
       }
 
       const sheetId = sheet.getSheetId();
@@ -96,7 +130,16 @@ function downloadSingleSpreadsheet(url, sessionId) {
       } catch (e) {
         addLog({ type: 'error', message: `CSV生成失敗: ${fileName} - ${e.message}` });
       }
-    });
+    }
+
+    if (aborted) {
+      return {
+        data: null,
+        fileName: null,
+        aborted: true,
+        message: '処理が中断されました'
+      };
+    }
 
     if (zipFiles.length === 0) {
       throw new Error('CSVファイルが1件も生成されませんでした');

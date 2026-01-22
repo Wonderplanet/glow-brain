@@ -749,6 +749,9 @@
     function abortSpecsDownload() {
       specsDownloadAborted = true;
       showStatus('中断しています...', 'warn');
+
+      // サーバー側にも中断フラグをセット
+      google.script.run.setAbortFlag(sessionId);
     }
 
     function scanProgressSheets() {
@@ -846,11 +849,18 @@
       const btn = document.getElementById('btn-specs-download');
       btn.disabled = true;
 
-      // 中断フラグをリセット & 中断ボタン表示
+      // 中断フラグをリセット（クライアント側）
       specsDownloadAborted = false;
+
+      // セッションID生成
+      sessionId = 'session_' + Date.now();
+
+      // サーバー側の中断フラグもクリア
+      google.script.run.clearAbortFlag(sessionId);
+
+      // 中断ボタン表示
       document.getElementById('btn-specs-abort').style.display = 'inline-block';
 
-      sessionId = 'session_' + Date.now();
       showStatus(`${selectedUrls.length}件のスプレッドシートを処理中...`, 'info');
       startLogPolling();
 
