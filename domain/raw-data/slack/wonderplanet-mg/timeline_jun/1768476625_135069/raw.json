@@ -1,0 +1,300 @@
+[
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768476625.135069",
+    "client_msg_id": "3923cb2c-7746-45e6-9950-528067e7850e",
+    "text": "geminiだけで結構いけるな\ngithub repositoryをソースに追加できるし\nスプシとかソースに指定できるし\n出力をスプシとして作成できるし",
+    "team": "T01GA4W81GT",
+    "thread_ts": "1768476625.135069",
+    "reply_count": 5,
+    "reply_users_count": 1,
+    "latest_reply": "1768527425.235199",
+    "reply_users": [
+      "U01SLEEPKQD"
+    ],
+    "is_locked": false,
+    "subscribed": false,
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "HrtZQ",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "geminiだけで結構いけるな\ngithub repositoryをソースに追加できるし\nスプシとかソースに指定できるし\n出力をスプシとして作成できるし"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "",
+    "files": [
+      {
+        "id": "F0A8FF0KNTH",
+        "created": 1768476743,
+        "timestamp": 1768476743,
+        "name": "image.png",
+        "title": "image.png",
+        "mimetype": "image/png",
+        "filetype": "png",
+        "pretty_type": "PNG",
+        "user": "U01SLEEPKQD",
+        "user_team": "E01BZ3TPJ8K",
+        "editable": false,
+        "size": 109411,
+        "mode": "hosted",
+        "is_external": false,
+        "external_type": "",
+        "is_public": true,
+        "public_url_shared": false,
+        "display_as_bot": false,
+        "username": "",
+        "url_private": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A8FF0KNTH/image.png",
+        "url_private_download": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A8FF0KNTH/download/image.png",
+        "media_display_type": "unknown",
+        "thumb_64": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8FF0KNTH-0e74b87a01/image_64.png",
+        "thumb_80": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8FF0KNTH-0e74b87a01/image_80.png",
+        "thumb_360": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8FF0KNTH-0e74b87a01/image_360.png",
+        "thumb_360_w": 360,
+        "thumb_360_h": 235,
+        "thumb_480": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8FF0KNTH-0e74b87a01/image_480.png",
+        "thumb_480_w": 480,
+        "thumb_480_h": 313,
+        "thumb_160": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8FF0KNTH-0e74b87a01/image_160.png",
+        "thumb_720": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8FF0KNTH-0e74b87a01/image_720.png",
+        "thumb_720_w": 720,
+        "thumb_720_h": 470,
+        "thumb_800": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8FF0KNTH-0e74b87a01/image_800.png",
+        "thumb_800_w": 800,
+        "thumb_800_h": 522,
+        "thumb_960": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8FF0KNTH-0e74b87a01/image_960.png",
+        "thumb_960_w": 960,
+        "thumb_960_h": 626,
+        "thumb_1024": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8FF0KNTH-0e74b87a01/image_1024.png",
+        "thumb_1024_w": 1024,
+        "thumb_1024_h": 668,
+        "original_w": 1150,
+        "original_h": 750,
+        "thumb_tiny": "AwAgADDPHSlwKVAD1YL7mn7Ez/rFx+P+FADCBk46ds0mBUpSPtIv5n/CkCJnmRT9M/4UAR4FBXOAoJP0qaJoo2beA/TBAyP1pLh45CPLTbgc8UwI42254B+oBpWIJJxgk0wHFLuyc0gF7UlAyRnj86Bk+nr1oAKD0pM07HUHHT+8KAP/2Q==",
+        "permalink": "https://wonderplanet.enterprise.slack.com/files/U09HLJHQR3R/F0A8FF0KNTH/image.png",
+        "permalink_public": "https://slack-files.com/T01BZ3TPJ8K-F0A8FF0KNTH-d69ae9a63e",
+        "is_starred": false,
+        "skipped_shares": true,
+        "has_rich_preview": false,
+        "file_access": "visible"
+      }
+    ],
+    "upload": false,
+    "user": "U01SLEEPKQD",
+    "display_as_bot": false,
+    "type": "message",
+    "ts": "1768476748.773549",
+    "client_msg_id": "854b7369-c90d-4dad-a176-3460aec45045",
+    "thread_ts": "1768476625.135069",
+    "parent_user_id": "U01SLEEPKQD"
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768477391.948339",
+    "client_msg_id": "60d81436-4199-47c8-ab91-aab422653ed5",
+    "text": "ブランチも指定できちゃってすんごい",
+    "team": "T01GA4W81GT",
+    "thread_ts": "1768476625.135069",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "xPOfc",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "ブランチも指定できちゃってすんごい"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768478042.430469",
+    "client_msg_id": "6447c99c-9c7e-433a-9214-3ed7859fa37f",
+    "text": "丸ごとだとアップロード制限にかかる\n<https://support.google.com/gemini/answer/14903178?visit_id=639040747205228881-2092635464&amp;co=GENIE.Platform%3DDesktop&amp;p=code_limit&amp;rd=1#upload_limits>",
+    "team": "T01GA4W81GT",
+    "thread_ts": "1768476625.135069",
+    "parent_user_id": "U01SLEEPKQD",
+    "attachments": [
+      {
+        "from_url": "https://support.google.com/gemini/answer/14903178?visit_id=639040747205228881-2092635464&co=GENIE.Platform%3DDesktop&p=code_limit&rd=1#upload_limits",
+        "id": 1,
+        "original_url": "https://support.google.com/gemini/answer/14903178?visit_id=639040747205228881-2092635464&amp;co=GENIE.Platform%3DDesktop&amp;p=code_limit&amp;rd=1#upload_limits",
+        "fallback": "Upload &amp; analyze files in Gemini Apps - Computer - Gemini Apps Help",
+        "text": "You can upload documents, spreadsheets, NotebookLM notebooks, photos, videos, and more to Gemini Apps to get answers, summaries, and insights about your content. What you need If you’re signed in",
+        "title": "Upload &amp; analyze files in Gemini Apps - Computer - Gemini Apps Help",
+        "title_link": "https://support.google.com/gemini/answer/14903178?visit_id=639040747205228881-2092635464&co=GENIE.Platform%3DDesktop&p=code_limit&rd=1#upload_limits",
+        "service_name": "support.google.com"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "khoMA",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "丸ごとだとアップロード制限にかかる\n"
+              },
+              {
+                "type": "link",
+                "url": "https://support.google.com/gemini/answer/14903178?visit_id=639040747205228881-2092635464&co=GENIE.Platform%3DDesktop&p=code_limit&rd=1#upload_limits"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768478059.842149",
+    "client_msg_id": "b19f57ac-2942-46bd-b1db-1062f73973e1",
+    "text": "glow-brainのgeminiかつ用途ごとのブランチを作って参照させるかな",
+    "team": "T01GA4W81GT",
+    "thread_ts": "1768476625.135069",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "jyIFJ",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "glow-brainのgeminiかつ用途ごとのブランチを作って参照させるかな"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "zipにしてもその中身のファイル数が10個以内じゃないと失敗する\n<https://support.google.com/gemini/answer/14903178?visit_id=639041241664631883-4115327984&amp;co=GENIE.Platform%3DDesktop&amp;p=code_limit&amp;rd=1#upload_limits>",
+    "files": [
+      {
+        "id": "F0A8W62J76X",
+        "created": 1768527407,
+        "timestamp": 1768527407,
+        "name": "image.png",
+        "title": "image.png",
+        "mimetype": "image/png",
+        "filetype": "png",
+        "pretty_type": "PNG",
+        "user": "U01SLEEPKQD",
+        "user_team": "E01BZ3TPJ8K",
+        "editable": false,
+        "size": 265483,
+        "mode": "hosted",
+        "is_external": false,
+        "external_type": "",
+        "is_public": true,
+        "public_url_shared": false,
+        "display_as_bot": false,
+        "username": "",
+        "url_private": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A8W62J76X/image.png",
+        "url_private_download": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A8W62J76X/download/image.png",
+        "media_display_type": "unknown",
+        "thumb_64": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8W62J76X-369806b542/image_64.png",
+        "thumb_80": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8W62J76X-369806b542/image_80.png",
+        "thumb_360": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8W62J76X-369806b542/image_360.png",
+        "thumb_360_w": 360,
+        "thumb_360_h": 214,
+        "thumb_480": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8W62J76X-369806b542/image_480.png",
+        "thumb_480_w": 480,
+        "thumb_480_h": 285,
+        "thumb_160": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8W62J76X-369806b542/image_160.png",
+        "thumb_720": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8W62J76X-369806b542/image_720.png",
+        "thumb_720_w": 720,
+        "thumb_720_h": 428,
+        "thumb_800": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8W62J76X-369806b542/image_800.png",
+        "thumb_800_w": 800,
+        "thumb_800_h": 475,
+        "thumb_960": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8W62J76X-369806b542/image_960.png",
+        "thumb_960_w": 960,
+        "thumb_960_h": 570,
+        "thumb_1024": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8W62J76X-369806b542/image_1024.png",
+        "thumb_1024_w": 1024,
+        "thumb_1024_h": 608,
+        "original_w": 1482,
+        "original_h": 880,
+        "thumb_tiny": "AwAdADDRAwe5696Rg23b1yf4eMD86BnLDcxwfb/P504kAZPT1oACMkZ7Hig56Dqe/pTd6s+0SDOegI/KnZ+Y89ulACjpzRSHJ6EjjtijJ3Y2nGOvagAGcn0oIyCMnkY4ppQM+4hTxjleevrTtoGcADJyeKAEKAsCS3HoxFOxSENzgj24o+bb1G7HXHFABjnOTQBznJNLRQB//9k=",
+        "permalink": "https://wonderplanet.enterprise.slack.com/files/U09HLJHQR3R/F0A8W62J76X/image.png",
+        "permalink_public": "https://slack-files.com/T01BZ3TPJ8K-F0A8W62J76X-a8b3bbe047",
+        "is_starred": false,
+        "skipped_shares": true,
+        "has_rich_preview": false,
+        "file_access": "visible"
+      }
+    ],
+    "upload": false,
+    "user": "U01SLEEPKQD",
+    "display_as_bot": false,
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "VPaa8",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "zipにしてもその中身のファイル数が10個以内じゃないと失敗する\n"
+              },
+              {
+                "type": "link",
+                "url": "https://support.google.com/gemini/answer/14903178?visit_id=639041241664631883-4115327984&co=GENIE.Platform%3DDesktop&p=code_limit&rd=1#upload_limits"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "type": "message",
+    "ts": "1768527425.235199",
+    "client_msg_id": "568b48e9-a94c-45ed-bbf5-e2ec04c0f813",
+    "thread_ts": "1768476625.135069",
+    "parent_user_id": "U01SLEEPKQD",
+    "attachments": [
+      {
+        "from_url": "https://support.google.com/gemini/answer/14903178?visit_id=639041241664631883-4115327984&co=GENIE.Platform%3DDesktop&p=code_limit&rd=1#upload_limits",
+        "id": 1,
+        "original_url": "https://support.google.com/gemini/answer/14903178?visit_id=639041241664631883-4115327984&amp;co=GENIE.Platform%3DDesktop&amp;p=code_limit&amp;rd=1#upload_limits",
+        "fallback": "Upload &amp; analyze files in Gemini Apps - Computer - Gemini Apps Help",
+        "text": "You can upload documents, spreadsheets, NotebookLM notebooks, photos, videos, and more to Gemini Apps to get answers, summaries, and insights about your content. What you need If you’re signed in",
+        "title": "Upload &amp; analyze files in Gemini Apps - Computer - Gemini Apps Help",
+        "title_link": "https://support.google.com/gemini/answer/14903178?visit_id=639041241664631883-4115327984&co=GENIE.Platform%3DDesktop&p=code_limit&rd=1#upload_limits",
+        "service_name": "support.google.com"
+      }
+    ]
+  }
+]
