@@ -1,0 +1,2537 @@
+[
+  {
+    "user": "U01DXPA51L1",
+    "type": "message",
+    "ts": "1768381036.673559",
+    "client_msg_id": "b004e146-8d95-4b91-9235-f23642b3d8c4",
+    "text": "<!subteam^S07QV5H2LLS>\nお疲れ様です。\n\n各自で行っている業務効率をあげている施策・試み・ツールなどを共有してほしいです。\n例としては、\n・お知らせのトンマナチェックをAIを使っている\n・スケジュールのリマインドツールをAI使って作成した\n・リリースタイムラインの作成をSlackワークフローで自動化した（<https://wonderplanet-glow.slack.com/archives/C08KFEGU7PE/p1768274812025599?thread_ts=1768272362.592959&amp;cid=C08KFEGU7PE>）\nなど、　小さいものから大きいものまで、なんでもいいので教えてください。\n明日（1/15）いっぱいで、スレッドに投稿してもらえると助かりますー",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "52f877340d73",
+      "image_72": "https://avatars.slack-edge.com/2020-11-02/1475185784884_52f877340d738be9131d_72.png",
+      "first_name": "Toshikazu",
+      "real_name": "Toshikazu Takahashi",
+      "display_name": "Toshi",
+      "team": "T07GTV1LW67",
+      "name": "t-takahashi",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "reply_count": 20,
+    "reply_users_count": 18,
+    "latest_reply": "1768534964.280909",
+    "reply_users": [
+      "U01DXPA51L1",
+      "UMV9ZG9NU",
+      "U1RJ7FH6J",
+      "UBRD602PN",
+      "U2WK72DBN",
+      "U07HEBPUW4E",
+      "U01SLEEPKQD",
+      "U87JG8W8Z",
+      "U08KFA64REY",
+      "UHHSKP17Z",
+      "U9YULJPUZ",
+      "U1RJART4G",
+      "UUMG9SH37",
+      "U038MD23A1Z",
+      "U2Q2M02NN",
+      "UGM7VMAQ7",
+      "U9Z8D704U",
+      "U016AL1NM8T"
+    ],
+    "is_locked": false,
+    "subscribed": true,
+    "last_read": "1768534964.280909",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "W5tvW",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "usergroup",
+                "usergroup_id": "S07QV5H2LLS"
+              },
+              {
+                "type": "text",
+                "text": "\nお疲れ様です。\n\n各自で行っている業務効率をあげている施策・試み・ツールなどを共有してほしいです。\n例としては、\n・お知らせのトンマナチェックをAIを使っている\n・スケジュールのリマインドツールをAI使って作成した\n・リリースタイムラインの作成をSlackワークフローで自動化した（"
+              },
+              {
+                "type": "link",
+                "url": "https://wonderplanet-glow.slack.com/archives/C08KFEGU7PE/p1768274812025599?thread_ts=1768272362.592959&cid=C08KFEGU7PE"
+              },
+              {
+                "type": "text",
+                "text": "）\nなど、　小さいものから大きいものまで、なんでもいいので教えてください。\n明日（1/15）いっぱいで、スレッドに投稿してもらえると助かりますー"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "saved": {
+      "is_archived": false,
+      "date_completed": 0,
+      "state": "in_progress"
+    }
+  },
+  {
+    "user": "U01DXPA51L1",
+    "type": "message",
+    "ts": "1768381220.391859",
+    "edited": {
+      "user": "U01DXPA51L1",
+      "ts": "1768381680.000000"
+    },
+    "client_msg_id": "16a7669d-e1f3-404a-8ef2-d8342ae83e17",
+    "text": "自分が作ったものも記載しておく\n\n• <https://wonderplanet-glow.slack.com/archives/C08KEGAV23D/p1766734597425469?thread_ts=1766734590.853159&cid=C08KEGAV23D|障害報告書自動作成>\n• <https://wonderplanet-glow.slack.com/archives/C08KEGAV23D/p1766734598750969?thread_ts=1766734590.853159&cid=C08KEGAV23D|障害報告タスク自動作成>\n• <https://wonderplanet-glow.slack.com/archives/C09V7638J03/p1764292230823899|BNE依頼をAIに判断させてタスク化するワークフロー（n8n）>\n• <https://wonderplanet-glow.slack.com/archives/C064RM1QX8A/p1763640899655649|バグチケが起票された時に、「調査方針・解決策・対応者の提案」をコメントに記載するn8n>\n• <https://wonderplanet-glow.slack.com/archives/C08KFEGU7PE/p1768274812025599?thread_ts=1768272362.592959&cid=C08KFEGU7PE|リリースタイムライン作成ワークフロー>\n• <https://wonderplanet-glow.slack.com/archives/C064RM1QX8A/p1766640626258189|ウィンセッション自動通知>\n• <https://wonderplanet-glow.slack.com/archives/C064RM1QX8A/p1766737599292529|リアクションランキング>\n• <https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1768381220391859?thread_ts=1768381036.673559&cid=C069N3UL80H|Gemを使った誤字脱字チェッカー>",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "52f877340d73",
+      "image_72": "https://avatars.slack-edge.com/2020-11-02/1475185784884_52f877340d738be9131d_72.png",
+      "first_name": "Toshikazu",
+      "real_name": "Toshikazu Takahashi",
+      "display_name": "Toshi",
+      "team": "T07GTV1LW67",
+      "name": "t-takahashi",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "emRFA",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "自分が作ったものも記載しておく\n\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "link",
+                    "url": "https://wonderplanet-glow.slack.com/archives/C08KEGAV23D/p1766734597425469?thread_ts=1766734590.853159&cid=C08KEGAV23D",
+                    "text": "障害報告書自動作成"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "link",
+                    "url": "https://wonderplanet-glow.slack.com/archives/C08KEGAV23D/p1766734598750969?thread_ts=1766734590.853159&cid=C08KEGAV23D",
+                    "text": "障害報告タスク自動作成"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "link",
+                    "url": "https://wonderplanet-glow.slack.com/archives/C09V7638J03/p1764292230823899",
+                    "text": "BNE依頼をAIに判断させてタスク化するワークフロー（n8n）"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "link",
+                    "url": "https://wonderplanet-glow.slack.com/archives/C064RM1QX8A/p1763640899655649",
+                    "text": "バグチケが起票された時に、「調査方針・解決策・対応者の提案」をコメントに記載するn8n"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "link",
+                    "url": "https://wonderplanet-glow.slack.com/archives/C08KFEGU7PE/p1768274812025599?thread_ts=1768272362.592959&cid=C08KFEGU7PE",
+                    "text": "リリースタイムライン作成ワークフロー"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "link",
+                    "url": "https://wonderplanet-glow.slack.com/archives/C064RM1QX8A/p1766640626258189",
+                    "text": "ウィンセッション自動通知"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "link",
+                    "url": "https://wonderplanet-glow.slack.com/archives/C064RM1QX8A/p1766737599292529",
+                    "text": "リアクションランキング"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "link",
+                    "url": "https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1768381220391859?thread_ts=1768381036.673559&cid=C069N3UL80H",
+                    "text": "Gemを使った誤字脱字チェッカー"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 0,
+            "border": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "UMV9ZG9NU",
+    "type": "message",
+    "ts": "1768381557.392059",
+    "client_msg_id": "5a521882-9efe-49f9-a5ed-a537614d3f27",
+    "text": "・他社ゲーのお知らせをAIに読み込ませてGLOW用に書き換えさせた\n・企画に使うクエスト名、エンブレム名をAIに候補を挙げてもらった\n・監修企画のスケジュールを自動で出させるための関数をAIに組ませた\n・お知らせの昇格日を自動的に出させるための関数をAIに組ませた\n・探してる原作のコマが何巻なのかをAIに聞いたらめっちゃ時短になった（５割当たる）\n（こんなかんじであってますか…？）",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "29e67e5f38a9",
+      "image_72": "https://avatars.slack-edge.com/2020-01-28/914381141921_29e67e5f38a9c217422c_72.jpg",
+      "first_name": "Rikaco",
+      "real_name": "Rikaco Kobayashi",
+      "display_name": "Rikaco_ojo",
+      "team": "T07GTV1LW67",
+      "name": "r-kobayashi",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "8nwn1",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "・他社ゲーのお知らせをAIに読み込ませてGLOW用に書き換えさせた\n・企画に使うクエスト名、エンブレム名をAIに候補を挙げてもらった\n・監修企画のスケジュールを自動で出させるための関数をAIに組ませた\n・お知らせの昇格日を自動的に出させるための関数をAIに組ませた\n・探してる原作のコマが何巻なのかをAIに聞いたらめっちゃ時短になった（５割当たる）\n（こんなかんじであってますか…？）"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U1RJ7FH6J",
+    "type": "message",
+    "ts": "1768382052.163359",
+    "client_msg_id": "197185ba-629d-4d4c-af51-77d0924c2319",
+    "text": "自分こんな感じです:ojigi:\n\n*メモとしてのvscode使用*\n• 日報などをテンプレから複製\n• 箇条書きした内容のまとめ\n• ファイル検索、追加\n    ◦ 〜ってどこにメモった？\n    ◦ 〜について記載する場所がほしい\n\n*機能実装*\nざっくり下記の流れで使っています\n1. Geminiで要件スライドのmd形式要約\n2. Copilotと機能実装計画擦り合わせ\n3. Agentで機能実装\n4. Copilotとユニットテスト実装計画擦り合わせ\n5. Agentでユニットテスト実装\n",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "b77ee1459e99",
+      "image_72": "https://avatars.slack-edge.com/2016-07-14/59629115847_b77ee1459e99cc21479f_72.png",
+      "first_name": "Kenta",
+      "real_name": "Kenta Inui",
+      "display_name": "kenta_inui",
+      "team": "T07GTV1LW67",
+      "name": "kenta_inui",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "kYxaH",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "自分こんな感じです"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              },
+              {
+                "type": "text",
+                "text": "\n\n"
+              },
+              {
+                "type": "text",
+                "text": "メモとしてのvscode使用",
+                "style": {
+                  "bold": true
+                }
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "日報などをテンプレから複製"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "箇条書きした内容のまとめ"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "ファイル検索、追加"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 0,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "〜ってどこにメモった？"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "〜について記載する場所がほしい"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 1,
+            "border": 0
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "\n\n"
+              },
+              {
+                "type": "text",
+                "text": "機能実装",
+                "style": {
+                  "bold": true
+                }
+              },
+              {
+                "type": "text",
+                "text": "\nざっくり下記の流れで使っています\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "Geminiで要件スライドのmd形式要約"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "Copilotと機能実装計画擦り合わせ"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "Agentで機能実装"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "Copilotとユニットテスト実装計画擦り合わせ"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "Agentでユニットテスト実装"
+                  }
+                ]
+              }
+            ],
+            "style": "ordered",
+            "indent": 0,
+            "border": 0
+          },
+          {
+            "type": "rich_text_section",
+            "elements": []
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "text": "<@U01DXPA51L1> cc <@UUMG9SH37>\n• ドン作成\n<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/923402248|【ツール】キャラアセット実装ツール>\n　→キャラの画像アセットの実装が簡単にできるツール\n\n<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/922779668|【ツール】キャラ/エネミーアセット確認ツール>\n　→キャラの画像アセットの実装に問題ないか簡単に確認できるツール\n\n<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1219821569|【ツール】キャラモーションデータチェックツール（改修中）>\n　→モーションアセットが仕様通りに作られているか確認できるツール\n\n<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1172897793/PSD|【ツール】漫画PSDコマ切り抜きツール >\n　→クエスト用コマ素材を切り抜くツール\n\n<https://docs.google.com/presentation/d/1CRKA_3YxdmHgsl5XEgh8ICWmkqkqNoU0rLQFy_T1bkQ/edit?slide=id.g47c21c12e6_0_417#slide=id.g47c21c12e6_0_417|【ナレッジ】AIと制作を分担する働き方>\n　→デザイナー向けのAI活用ナレッジ資料\n\n• 大川さんメインで作成↓\n<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1212579842|【ツール】スマートオブジェクトのリンク確認ツール>\n　→PSD内のスマートオブジェクトが問題ない構造になっているか確認できるツール",
+    "upload": false,
+    "user": "UBRD602PN",
+    "x_files": [
+      "F0A28QVHNHE"
+    ],
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "oBY8f",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U01DXPA51L1"
+              },
+              {
+                "type": "text",
+                "text": " cc "
+              },
+              {
+                "type": "user",
+                "user_id": "UUMG9SH37"
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "ドン作成"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 0,
+            "border": 0
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/923402248",
+                "text": "【ツール】キャラアセット実装ツール"
+              },
+              {
+                "type": "text",
+                "text": "\n　→キャラの画像アセットの実装が簡単にできるツール\n\n"
+              },
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/922779668",
+                "text": "【ツール】キャラ/エネミーアセット確認ツール"
+              },
+              {
+                "type": "text",
+                "text": "\n　→キャラの画像アセットの実装に問題ないか簡単に確認できるツール\n\n"
+              },
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1219821569",
+                "text": "【ツール】キャラモーションデータチェックツール（改修中）"
+              },
+              {
+                "type": "text",
+                "text": "\n　→モーションアセットが仕様通りに作られているか確認できるツール\n\n"
+              },
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1172897793/PSD",
+                "text": "【ツール】漫画PSDコマ切り抜きツール "
+              },
+              {
+                "type": "text",
+                "text": "\n　→クエスト用コマ素材を切り抜くツール\n\n"
+              },
+              {
+                "type": "link",
+                "url": "https://docs.google.com/presentation/d/1CRKA_3YxdmHgsl5XEgh8ICWmkqkqNoU0rLQFy_T1bkQ/edit?slide=id.g47c21c12e6_0_417#slide=id.g47c21c12e6_0_417",
+                "text": "【ナレッジ】AIと制作を分担する働き方"
+              },
+              {
+                "type": "text",
+                "text": "\n　→デザイナー向けのAI活用ナレッジ資料\n\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "大川さんメインで作成↓"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 0,
+            "border": 0
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1212579842",
+                "text": "【ツール】スマートオブジェクトのリンク確認ツール"
+              },
+              {
+                "type": "text",
+                "text": "\n　→PSD内のスマートオブジェクトが問題ない構造になっているか確認できるツール"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "type": "message",
+    "ts": "1768382473.694069",
+    "client_msg_id": "8bff4ab6-5a2e-444d-8eb0-9772c4aaa923",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "d39bc55bbbc4",
+      "image_72": "https://avatars.slack-edge.com/2018-08-16/418791127510_d39bc55bbbc4a0161f85_72.jpg",
+      "first_name": "Donghyeok",
+      "real_name": "Donghyeok Kim",
+      "display_name": "donghyeok",
+      "team": "T07GTV1LW67",
+      "name": "donghyeok-kim",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U2WK72DBN",
+    "type": "message",
+    "ts": "1768383456.381819",
+    "client_msg_id": "42fd6e3a-fdb4-4c5f-8294-f454f71dc2ba",
+    "text": "基本的にAIツールでGASや関数を作成する形で使用\n```・TCの叩きを作成(notebookLM)\n・QAスケジュールで使用するGASの作成(Gemini)\n・BPの稼働管理表の関数組み直し(Copilot)\n・リリースキー別の不具合集計作成(notebookLM)\n・QA共有シートのGAS作成(Gemini)```",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "23a9af322069",
+      "image_72": "https://avatars.slack-edge.com/2017-06-22/202533627590_23a9af322069f65ed5d4_72.jpg",
+      "first_name": "Hiroki",
+      "real_name": "Hiroki Fujita",
+      "display_name": "hiroki",
+      "team": "T07GTV1LW67",
+      "name": "hiroki",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "L9CHE",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "基本的にAIツールでGASや関数を作成する形で使用\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_preformatted",
+            "elements": [
+              {
+                "type": "text",
+                "text": "・TCの叩きを作成(notebookLM)\n・QAスケジュールで使用するGASの作成(Gemini)\n・BPの稼働管理表の関数組み直し(Copilot)\n・リリースキー別の不具合集計作成(notebookLM)\n・QA共有シートのGAS作成(Gemini)"
+              }
+            ],
+            "border": 0
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U07HEBPUW4E",
+    "type": "message",
+    "ts": "1768386397.863119",
+    "edited": {
+      "user": "U07HEBPUW4E",
+      "ts": "1768447152.000000"
+    },
+    "client_msg_id": "b6a37385-fd9e-4736-b5ab-87e11537eb19",
+    "text": "• 髙橋作成\nキャラ設計の品質維持・工数削減のために、以下のような取り組み行っています。\n(ツールとは違うかもですが:man-bowing:)\n\n【業務自動化・効率化の取り組み（キャラクター設計における設計品質のブレを抑える運用）】\n\n• キャラクター設計における設計資料の手動入力と設定ミスを想定し、\nレギュレーション参照および数値入力を自動化する仕組みを構築・運用している\n※1キャラあたり約110〜130項目の設計が必要&資料に手動入力していた設計作業を、\nプルダウン選択による誤入力防止&自動算出に置き換えている（最低限必要な設定項目を15〜20項目程度まで削減※キャラに依る）\n　例：各威力効果値、範囲・レアリティ・グレード等の数値レギュレーションを参照し、\n　　　設計意図に沿った数値が自動で反映される構成としている\n• 設計資料からそのまま数値としてマスター入力を行える構成とし、\n　資料と実データの相違が起きにくい構成で資料を構築\n• キャラクター承認用資料と設計資料を同一データ参照とし、\n　承認・QA時など設計時の内容と記載相違が起きにくい状態を構築\n• 設計時の各設定項目について、全体バランスを確認できる簡易集計ツールを作成\n(個人作業効率化：資料からマスタに反映が必要な項目、且つ、\n元資料形式的に記載項目をそのままマスタ反映できない箇所は、\n可能な限りGASを使って効率化処理&データ反映ミス防止)\n※新ワザ・新特性追加時・環境調整時など現在も随時、更新中",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "680fb217a31e",
+      "image_72": "https://avatars.slack-edge.com/2024-09-02/7685625318912_680fb217a31e9bf708e4_72.png",
+      "first_name": "Issei",
+      "real_name": "Issei Takahashi",
+      "display_name": "issei.takahashi",
+      "team": "T07GTV1LW67",
+      "name": "issei.takahashi",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "gwXMT",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "• 髙橋作成\nキャラ設計の品質維持・工数削減のために、以下のような取り組み行っています。\n(ツールとは違うかもですが"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-200d-2642-fe0f"
+              },
+              {
+                "type": "text",
+                "text": ")\n\n【業務自動化・効率化の取り組み（キャラクター設計における設計品質のブレを抑える運用）】\n\n• キャラクター設計における設計資料の手動入力と設定ミスを想定し、\nレギュレーション参照および数値入力を自動化する仕組みを構築・運用している\n※1キャラあたり約110〜130項目の設計が必要&資料に手動入力していた設計作業を、\nプルダウン選択による誤入力防止&自動算出に置き換えている（最低限必要な設定項目を15〜20項目程度まで削減※キャラに依る）\n　例：各威力効果値、範囲・レアリティ・グレード等の数値レギュレーションを参照し、\n　　　設計意図に沿った数値が自動で反映される構成としている\n• 設計資料からそのまま数値としてマスター入力を行える構成とし、\n　資料と実データの相違が起きにくい構成で資料を構築\n• キャラクター承認用資料と設計資料を同一データ参照とし、\n　承認・QA時など設計時の内容と記載相違が起きにくい状態を構築\n• 設計時の各設定項目について、全体バランスを確認できる簡易集計ツールを作成\n(個人作業効率化：資料からマスタに反映が必要な項目、且つ、\n元資料形式的に記載項目をそのままマスタ反映できない箇所は、\n可能な限りGASを使って効率化処理&データ反映ミス防止)\n※新ワザ・新特性追加時・環境調整時など現在も随時、更新中"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768441289.858359",
+    "edited": {
+      "user": "U01SLEEPKQD",
+      "ts": "1768441477.000000"
+    },
+    "client_msg_id": "8f9a59d8-2c54-49ff-bf83-d080d1f7d305",
+    "text": "• サーバー\n    ◦ AIでPR作成するコマンドを作った\n        ▪︎ レビュワーにとって、なぜその対応がなぜ必要だったかの背景情報や、どんな変更をしたのかのサマリがあると、レビューをスムーズに進めやすい\n        ▪︎ その結果、レビューが早く高品質に進められるので、実装者にとっても、スケジュール的にも良い\n    ◦ AIでAPIのテスト実行と自動修正するコマンドを作った\n        ▪︎ 手動で1つずつテスト確認して修正するのは手間がかかる。その上そんなに手間をかけるべきものでもないことが多い\n        ▪︎ 上記を全部自動化して、開発効率アップ\n    ◦ 仕様書から実装要件整理とAPI設計書の生成\n        ▪︎ 仕様書に記載はないが、サーバー実装的に必要な要件などを、設計段階で検知して、良質な設計やスケジュール遅延可能性の低減効果\n    ◦ 自動レビュー項目の拡充(CodeRabbitAI)\n        ▪︎ 変数名名などの小さい内容から、仕様との乖離部分のチェックまで、実装・レビュー効率をアップするAIの設定拡充をした\n    ◦ 管理ツールの実装を、AIが自動でブラウザを使って画面を見ながら動作確認できるようにした\n        ▪︎ 管理ツールではAPIのようにテストを作る意味が弱いが、画面の確認はしたい。だがこれは人が見るしかなかった。これをAIができるようにした\n    ◦ 障害再発防止のための実装確認シートの自動追加と記入催促をするgithub action workflowをAIで作った\n    ◦ 実装方法の手引きドキュメント(Agent skills)の量産\n        ▪︎ 多種多様な実装タスクを、既存実装などを参考にスピードも質も高く、実装完了できるようにするため\n• その他\n    ◦ 試み：マスタデータ設定方法を相談するAI窓口\n        ▪︎ 例えば、boxガシャどうやって設定すればいい？と聞いたら、このテーブルでこんな感じの設定をしてくださいと回答できるようにした\n    ◦ 試み：マスタデータを設計書から自動生成するAIツール\n    ◦ 試み：GLOWのことなら何でも答えられるよRepositoryの準備中（glow-brain）\n        ▪︎ 実装コード、マスタデータ、仕様書、QA,TC、KPI、デザインなどなど、GLOWに関するあらゆる情報を1箇所にまとめて、全ての情報をAIで使えるようにすれば、全チームの作業効率up、アイデアだしとかのための基盤にできるかもしれないという理想",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "1DSyR",
+        "elements": [
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "サーバー"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 0,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "AIでPR作成するコマンドを作った"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 1,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "レビュワーにとって、なぜその対応がなぜ必要だったかの背景情報や、どんな変更をしたのかのサマリがあると、レビューをスムーズに進めやすい"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "その結果、レビューが早く高品質に進められるので、実装者にとっても、スケジュール的にも良い"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 2,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "AIでAPIのテスト実行と自動修正するコマンドを作った"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 1,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "手動で1つずつテスト確認して修正するのは手間がかかる。その上そんなに手間をかけるべきものでもないことが多い"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "上記を全部自動化して、開発効率アップ"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 2,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "仕様書から実装要件整理とAPI設計書の生成"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 1,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "仕様書に記載はないが、サーバー実装的に必要な要件などを、設計段階で検知して、良質な設計やスケジュール遅延可能性の低減効果"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 2,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "自動レビュー項目の拡充(CodeRabbitAI)"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 1,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "変数名名などの小さい内容から、仕様との乖離部分のチェックまで、実装・レビュー効率をアップするAIの設定拡充をした"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 2,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "管理ツールの実装を、AIが自動でブラウザを使って画面を見ながら動作確認できるようにした"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 1,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "管理ツールではAPIのようにテストを作る意味が弱いが、画面の確認はしたい。だがこれは人が見るしかなかった。これをAIができるようにした"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 2,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "障害再発防止のための実装確認シートの自動追加と記入催促をするgithub action workflowをAIで作った"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "実装方法の手引きドキュメント(Agent skills)の量産"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 1,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "多種多様な実装タスクを、既存実装などを参考にスピードも質も高く、実装完了できるようにするため"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 2,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "その他"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 0,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "試み：マスタデータ設定方法を相談するAI窓口"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 1,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "例えば、boxガシャどうやって設定すればいい？と聞いたら、このテーブルでこんな感じの設定をしてくださいと回答できるようにした"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 2,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "試み：マスタデータを設計書から自動生成するAIツール"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "試み：GLOWのことなら何でも答えられるよRepositoryの準備中（glow-brain）"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 1,
+            "border": 0
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "実装コード、マスタデータ、仕様書、QA,TC、KPI、デザインなどなど、GLOWに関するあらゆる情報を1箇所にまとめて、全ての情報をAIで使えるようにすれば、全チームの作業効率up、アイデアだしとかのための基盤にできるかもしれないという理想"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 2,
+            "border": 0
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U87JG8W8Z",
+    "type": "message",
+    "ts": "1768443613.109339",
+    "client_msg_id": "cdbbea1a-734e-4128-9b30-7900b0defa10",
+    "text": "ブラッシュアップ中のため配布はまだですが、PhotoshopのプラグインをGeminiで作って時短化成功しました。\n\n*当て込み配置プラグイン*\n• 確認する際に必要なキャライラストの当て込みを作る際に、ワンポチで選択した複数キャラを縮小し画面上に配置できるようにしました。今まで１体ずつアクションをかけ手動配置していたのでワンポチでできるようになりかなり早くなりました。",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "605aa21b2082",
+      "image_72": "https://avatars.slack-edge.com/2023-05-08/5227949113060_605aa21b20828e571d9c_72.jpg",
+      "first_name": "Aya",
+      "real_name": "Aya Masakiyo",
+      "display_name": "massan",
+      "team": "T07GTV1LW67",
+      "name": "masakiyo",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "1GYvw",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "ブラッシュアップ中のため配布はまだですが、PhotoshopのプラグインをGeminiで作って時短化成功しました。\n\n"
+              },
+              {
+                "type": "text",
+                "text": "当て込み配置プラグイン",
+                "style": {
+                  "bold": true
+                }
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "確認する際に必要なキャライラストの当て込みを作る際に、ワンポチで選択した複数キャラを縮小し画面上に配置できるようにしました。今まで１体ずつアクションをかけ手動配置していたのでワンポチでできるようになりかなり早くなりました。"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 0,
+            "border": 0
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U08KFA64REY",
+    "type": "message",
+    "ts": "1768444320.630979",
+    "client_msg_id": "61043b90-108e-47a0-b53e-7ef5fb366077",
+    "text": "テストをAgentに書いてもらうためのプロンプト生成ツールをGeminiに作ってもらいました。\n→Agent(Cloaude Sonnet 4.5)にテスト作成時のプロンプトのフォーマットを作成してもらい、Geminiに簡単にチェックボックスなどでどんなテストを用意してほしいかなどを選択した結果をもとにフォーマットに沿ってプロンプトを作成してもらう感じです。ただ、無駄にメソッドを分けたりと精度はまだいまいちなので、ブラッシュアップしたいです。",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "c038e3b9c8c3",
+      "image_72": "https://avatars.slack-edge.com/2025-04-01/8688870494834_c038e3b9c8c3e4627e72_72.png",
+      "first_name": "Keisuke",
+      "real_name": "Keisuke Isayama",
+      "display_name": "keisuke.isayama",
+      "team": "T07GTV1LW67",
+      "name": "keisuke.isayama",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "U8VyA",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "テストをAgentに書いてもらうためのプロンプト生成ツールをGeminiに作ってもらいました。\n→Agent(Cloaude Sonnet 4.5)にテスト作成時のプロンプトのフォーマットを作成してもらい、Geminiに簡単にチェックボックスなどでどんなテストを用意してほしいかなどを選択した結果をもとにフォーマットに沿ってプロンプトを作成してもらう感じです。ただ、無駄にメソッドを分けたりと精度はまだいまいちなので、ブラッシュアップしたいです。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "UHHSKP17Z",
+    "type": "message",
+    "ts": "1768445444.967529",
+    "edited": {
+      "user": "UHHSKP17Z",
+      "ts": "1768445529.000000"
+    },
+    "client_msg_id": "84f60d7e-99e0-41d9-84b3-47f1e241dc42",
+    "text": "(主にGithub Copilotにはなりますが...)\n```コードリーディングをする際、github copilotのAgentモードを使用してmdファイルにまとめてもらう\n-> 不具合調査時、設計時などで使用(下記で資料化)\n<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1393295386/Copilot>\n\nコードの改行調整、簡単なテストの作成・修正(Copilot)\n-> 行数が多いと手作業は手間なのでCopilotにやってもらったら綺麗にやっていただいた。これから活用したい\n-> ユニットテストも書く内容、確認したい内容が明らかで確認しやすいものは書いてもらったりしてます。自分の手で書くよりかなり早い\n\n仕様書・要件書とコードを踏まえて必要なコードの修正とかの壁打ち\n-> PDFファイルを画像として分割の上保存してくれるツール(水谷くん作)を活用して画像化(<https://github.com/Wonderplanet/ai-tools/tree/main/ai-context-prep/pdf-to-png-converter>)\n-> 画像をContextとして設定すると読み取ってくれる\n-> コードとかもContextに含めてAgentモードを使用してmdファイルにまとめてもらう```",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "aa239eab8466",
+      "image_72": "https://avatars.slack-edge.com/2019-04-01/596300860183_aa239eab84665420a4c0_72.jpg",
+      "first_name": "Kiryu",
+      "real_name": "Kiryu Yamashita",
+      "display_name": "Kiryu",
+      "team": "T07GTV1LW67",
+      "name": "k-yamashita",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "NvFKu",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "(主にGithub Copilotにはなりますが...)\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_preformatted",
+            "elements": [
+              {
+                "type": "text",
+                "text": "コードリーディングをする際、github copilotのAgentモードを使用してmdファイルにまとめてもらう\n-> 不具合調査時、設計時などで使用(下記で資料化)\n"
+              },
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1393295386/Copilot"
+              },
+              {
+                "type": "text",
+                "text": "\n\nコードの改行調整、簡単なテストの作成・修正(Copilot)\n-> 行数が多いと手作業は手間なのでCopilotにやってもらったら綺麗にやっていただいた。これから活用したい\n-> ユニットテストも書く内容、確認したい内容が明らかで確認しやすいものは書いてもらったりしてます。自分の手で書くよりかなり早い\n\n仕様書・要件書とコードを踏まえて必要なコードの修正とかの壁打ち\n-> PDFファイルを画像として分割の上保存してくれるツール(水谷くん作)を活用して画像化("
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/Wonderplanet/ai-tools/tree/main/ai-context-prep/pdf-to-png-converter"
+              },
+              {
+                "type": "text",
+                "text": ")\n-> 画像をContextとして設定すると読み取ってくれる\n-> コードとかもContextに含めてAgentモードを使用してmdファイルにまとめてもらう"
+              }
+            ],
+            "border": 0
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "text": "「今瞬間TODOリスト」をGemini(LLM, nano banana)に作ってもらって運用してます(html, css, js)。\n30分単位でタスクと優先度と対応作業が変化するので「今この瞬間は、このタスクを消化する」のを記載してます。\nこれで元作業に戻ったとき、思い出すためのスイッチングコスト下げるのに役立ってます。\n(あと絵が可愛いので、気持ちが少し安らぐ)",
+    "files": [
+      {
+        "id": "F0A8SC57ZFG",
+        "created": 1768445509,
+        "timestamp": 1768445509,
+        "name": "image.png",
+        "title": "image.png",
+        "mimetype": "image/png",
+        "filetype": "png",
+        "pretty_type": "PNG",
+        "user": "U9YULJPUZ",
+        "user_team": "E01BZ3TPJ8K",
+        "editable": false,
+        "size": 705250,
+        "mode": "hosted",
+        "is_external": false,
+        "external_type": "",
+        "is_public": true,
+        "public_url_shared": false,
+        "display_as_bot": false,
+        "username": "",
+        "url_private": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A8SC57ZFG/image.png",
+        "url_private_download": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A8SC57ZFG/download/image.png",
+        "media_display_type": "unknown",
+        "thumb_64": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8SC57ZFG-2138e37b5f/image_64.png",
+        "thumb_80": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8SC57ZFG-2138e37b5f/image_80.png",
+        "thumb_360": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8SC57ZFG-2138e37b5f/image_360.png",
+        "thumb_360_w": 360,
+        "thumb_360_h": 203,
+        "thumb_480": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8SC57ZFG-2138e37b5f/image_480.png",
+        "thumb_480_w": 480,
+        "thumb_480_h": 270,
+        "thumb_160": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8SC57ZFG-2138e37b5f/image_160.png",
+        "thumb_720": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8SC57ZFG-2138e37b5f/image_720.png",
+        "thumb_720_w": 720,
+        "thumb_720_h": 405,
+        "thumb_800": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8SC57ZFG-2138e37b5f/image_800.png",
+        "thumb_800_w": 800,
+        "thumb_800_h": 450,
+        "thumb_960": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8SC57ZFG-2138e37b5f/image_960.png",
+        "thumb_960_w": 960,
+        "thumb_960_h": 540,
+        "thumb_1024": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8SC57ZFG-2138e37b5f/image_1024.png",
+        "thumb_1024_w": 1024,
+        "thumb_1024_h": 576,
+        "original_w": 1367,
+        "original_h": 769,
+        "thumb_tiny": "AwAcADDSKqRgqCPcUmVBC4Pt8vFOPSm/PnquM+lAAMHPHQ45FKQKF3Y+bAPoKY5+Qjk/hmgADqTg4FP21Dt5wFwPUdcVMM4560AKelFFFABTCdoxu5Pen0m0Hrz9RQA0jbgjt6+lOUhhkUuBRQB//9k=",
+        "permalink": "https://wonderplanet.enterprise.slack.com/files/U01SLEEPKQD/F0A8SC57ZFG/image.png",
+        "permalink_public": "https://slack-files.com/T01BZ3TPJ8K-F0A8SC57ZFG-1f7411190b",
+        "is_starred": false,
+        "skipped_shares": true,
+        "has_rich_preview": false,
+        "file_access": "visible"
+      }
+    ],
+    "upload": false,
+    "user": "U9YULJPUZ",
+    "display_as_bot": false,
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "oNz7u",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "「今瞬間TODOリスト」をGemini(LLM, nano banana)に作ってもらって運用してます(html, css, js)。\n30分単位でタスクと優先度と対応作業が変化するので「今この瞬間は、このタスクを消化する」のを記載してます。\nこれで元作業に戻ったとき、思い出すためのスイッチングコスト下げるのに役立ってます。\n(あと絵が可愛いので、気持ちが少し安らぐ)"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "type": "message",
+    "ts": "1768445561.373109",
+    "edited": {
+      "user": "U9YULJPUZ",
+      "ts": "1768445611.000000"
+    },
+    "client_msg_id": "f65018ee-a2f4-4525-9a53-4edb312bffab",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "fd0d6e798fec",
+      "image_72": "https://avatars.slack-edge.com/2019-06-21/665575325873_fd0d6e798fec711ff5c3_72.jpg",
+      "first_name": "Daichi",
+      "real_name": "Daichi Takishima",
+      "display_name": "takishima",
+      "team": "T07GTV1LW67",
+      "name": "takishima",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1",
+          "UMV9ZG9NU"
+        ],
+        "count": 2
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "kawaii",
+        "users": [
+          "UMV9ZG9NU"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "text": "・Adobe Fireflyのムードボードを使用し、ベンチマークをまとめる\n・まとめたベンチマークからAIで合成画像を作ってイメージの精度を上げる",
+    "files": [
+      {
+        "id": "F0A8UDGHW90",
+        "created": 1768445693,
+        "timestamp": 1768445693,
+        "name": "スクリーンショット 2026-01-15 11.54.31.png",
+        "title": "スクリーンショット 2026-01-15 11.54.31.png",
+        "mimetype": "image/png",
+        "filetype": "png",
+        "pretty_type": "PNG",
+        "user": "U1RJART4G",
+        "user_team": "E01BZ3TPJ8K",
+        "editable": false,
+        "size": 104077,
+        "mode": "hosted",
+        "is_external": false,
+        "external_type": "",
+        "is_public": true,
+        "public_url_shared": false,
+        "display_as_bot": false,
+        "username": "",
+        "url_private": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A8UDGHW90/____________________________2026-01-15_11.54.31.png",
+        "url_private_download": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A8UDGHW90/download/____________________________2026-01-15_11.54.31.png",
+        "media_display_type": "unknown",
+        "thumb_64": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8UDGHW90-ebb2fac3e7/____________________________2026-01-15_11.54.31_64.png",
+        "thumb_80": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8UDGHW90-ebb2fac3e7/____________________________2026-01-15_11.54.31_80.png",
+        "thumb_360": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8UDGHW90-ebb2fac3e7/____________________________2026-01-15_11.54.31_360.png",
+        "thumb_360_w": 360,
+        "thumb_360_h": 180,
+        "thumb_480": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8UDGHW90-ebb2fac3e7/____________________________2026-01-15_11.54.31_480.png",
+        "thumb_480_w": 480,
+        "thumb_480_h": 240,
+        "thumb_160": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A8UDGHW90-ebb2fac3e7/____________________________2026-01-15_11.54.31_160.png",
+        "original_w": 602,
+        "original_h": 301,
+        "thumb_tiny": "AwAYADCnDG0jEIoY4zgnFS/ZJmXcIlAIBzuHT86XTsCc5YL8p5qzJKIYFMcpc/dI3dPypiKDxPG5Vhgjr3py20rRs4X5V65/OjJkaR2yTjOSTVy1lWO3lYMobnA3ewxwaQyvDYyzRCRWQA+pNQOhR2U9VODitKKfFoXLhWO44465NUZ1GSwYMSSSR3oAiQ4OePxFOLA+mfaoxS0AOBGDzSs27rj8ABTKKAJFfC9s5zyBTSRim0UAf//Z",
+        "permalink": "https://wonderplanet.enterprise.slack.com/files/U01SLEEPKQD/F0A8UDGHW90/____________________________2026-01-15_11.54.31.png",
+        "permalink_public": "https://slack-files.com/T01BZ3TPJ8K-F0A8UDGHW90-4075806bba",
+        "is_starred": false,
+        "skipped_shares": true,
+        "has_rich_preview": false,
+        "file_access": "visible"
+      }
+    ],
+    "upload": false,
+    "user": "U1RJART4G",
+    "display_as_bot": false,
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "UMDHj",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "・Adobe Fireflyのムードボードを使用し、ベンチマークをまとめる\n・まとめたベンチマークからAIで合成画像を作ってイメージの精度を上げる"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "type": "message",
+    "ts": "1768445879.550369",
+    "client_msg_id": "e41f7e4b-8bd5-45c5-ada4-1de676b04e39",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "d947259354ea",
+      "image_72": "https://avatars.slack-edge.com/2022-12-01/4444421866694_d947259354ea89af4e43_72.png",
+      "first_name": "Miharu",
+      "real_name": "Miharu Kimura",
+      "display_name": "harumura",
+      "team": "T07GTV1LW67",
+      "name": "harumura",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "UUMG9SH37",
+    "type": "message",
+    "ts": "1768446755.853529",
+    "client_msg_id": "c9b176e3-c578-470d-9a9c-308a481eaa6f",
+    "text": "・Photoshopスマートオブジェクトのリンク確認ツール作成\n・ドンさん作成のモーションチェックツールに機能追加",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "06f8bdece59f",
+      "image_72": "https://avatars.slack-edge.com/2025-09-24/9585260498625_06f8bdece59f150d0e63_72.jpg",
+      "first_name": "Tomoko",
+      "real_name": "Tomoko Ookawa",
+      "display_name": "ookawa_tmk",
+      "team": "T07GTV1LW67",
+      "name": "ookawa",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "/saju",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "・Photoshopスマートオブジェクトのリンク確認ツール作成",
+                "style": {
+                  "unlink": true
+                }
+              },
+              {
+                "type": "text",
+                "text": "\n・ドンさん作成のモーションチェックツールに機能追加"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U038MD23A1Z",
+    "type": "message",
+    "ts": "1768447200.938119",
+    "client_msg_id": "cbcf0232-f3c3-4d0c-bb83-e87a45918dc3",
+    "text": "・GitHub Copilotでのテストコード作成・修正とテスト不足箇所の特定\n・テスト失敗内容を一括取得して修正効率を上げるエディタ拡張の作成\n・プランナーからのプレハブ確認依頼を半自動化するエディタ拡張の作成\n・ログイン等の手順をスキップしてUnity上でガシャ演出のみを確認できる専用シーンの構築\n・不具合起票のエラー内容や現象からAIを利用した原因箇所の調査\nあとは日々の実装ではほぼcopilotを使用しています。",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "250b662bdc7b",
+      "image_72": "https://avatars.slack-edge.com/2022-04-01/3321164565622_250b662bdc7b047c89b0_72.jpg",
+      "first_name": "Kazuomi",
+      "real_name": "Kazuomi Sawada",
+      "display_name": "omi",
+      "team": "T07GTV1LW67",
+      "name": "kazuomi.sawada",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "bT7VA",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "・GitHub Copilotでのテストコード作成・修正とテスト不足箇所の特定\n・テスト失敗内容を一括取得して修正効率を上げるエディタ拡張の作成\n・プランナーからのプレハブ確認依頼を半自動化するエディタ拡張の作成\n・ログイン等の手順をスキップしてUnity上でガシャ演出のみを確認できる専用シーンの構築\n・不具合起票のエラー内容や現象からAIを利用した原因箇所の調査\nあとは日々の実装ではほぼcopilotを使用しています。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U2Q2M02NN",
+    "type": "message",
+    "ts": "1768447714.529239",
+    "client_msg_id": "6ae18a87-797d-496c-bf57-b27045446693",
+    "text": "• 予算の概算を出した時の金額計算ダブルチェック\n• 外注から送られてきた発注書の金額計算に間違いがないかの確認\n• 普段使っているツールのヘルプの代わり\n• UnityやSourceTreeのエラー文の翻訳・要約\nスクリーンショットから計算の確認や翻訳をしてくれるので非常に助かってます",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "168447e9d72b",
+      "image_72": "https://avatars.slack-edge.com/2023-02-16/4834851538816_168447e9d72b40d63d9b_72.png",
+      "first_name": "Tomoko",
+      "real_name": "Tomoko Yamada",
+      "display_name": "tomoko_yamada",
+      "team": "T07GTV1LW67",
+      "name": "tomoko",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "yhjCZ",
+        "elements": [
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "予算の概算を出した時の金額計算ダブルチェック"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "外注から送られてきた発注書の金額計算に間違いがないかの確認"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "普段使っているツールのヘルプの代わり"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "UnityやSourceTreeのエラー文の翻訳・要約"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 0,
+            "border": 0
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "スクリーンショットから計算の確認や翻訳をしてくれるので非常に助かってます"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "UGM7VMAQ7",
+    "type": "message",
+    "ts": "1768450315.031679",
+    "client_msg_id": "042cabc4-37c3-4426-b724-c74d1c2f8159",
+    "text": "絶賛お知らせのワンポチ生成作成中！！\n<https://wonderplanet.atlassian.net/wiki/spaces/~701214a87664f7b8c49649ef41e1dc6e1725b/pages/1440841765/AI>",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "6ff5c77fd970",
+      "image_72": "https://avatars.slack-edge.com/2019-03-01/564271931810_6ff5c77fd970e6957937_72.jpg",
+      "first_name": "Sayaka",
+      "real_name": "Sayaka Goto",
+      "display_name": "saya",
+      "team": "T07GTV1LW67",
+      "name": "goto",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "attachments": [
+      {
+        "id": 1,
+        "blocks": [
+          {
+            "type": "section",
+            "block_id": "page:{\"contentId\":\"1440841765\",\"instanceId\":\"461e18ca-7256-3923-9e2f-36d8b2614716\",\"spaceKey\":\"~701214a87664f7b8c49649ef41e1dc6e1725b\"}",
+            "text": {
+              "type": "mrkdwn",
+              "text": "*<https://wonderplanet.atlassian.net/wiki/spaces/~701214a87664f7b8c49649ef41e1dc6e1725b/pages/1440841765/AI?atlOrigin=eyJpIjoiNWIyMzdhNWRhN2IyNGMyNjgyZDg1ZWM4MzU4NDIwMjIiLCJwIjoiY29uZmx1ZW5jZS1jaGF0cy1pbnQifQ|AIによるゲーム内お知らせ自動生成ツールの概要と機能説明>*",
+              "verbatim": false
+            }
+          },
+          {
+            "type": "context",
+            "block_id": "tmKzc",
+            "elements": [
+              {
+                "type": "image",
+                "image_url": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/70121:4a87664f-7b8c-4964-9ef4-1e1dc6e1725b/58a7da47-e62f-4271-8690-17fee4b5680b/128",
+                "alt_text": "images"
+              },
+              {
+                "type": "mrkdwn",
+                "text": "Owned by: Sayaka Goto | 1 person viewed",
+                "verbatim": false
+              }
+            ]
+          },
+          {
+            "type": "actions",
+            "block_id": "interactivity:{\"contentType\":\"page\",\"instanceId\":\"461e18ca-7256-3923-9e2f-36d8b2614716\",\"id\":\"1440841765\",\"source\":\"unfurl\",\"isSpaceLink\":false,\"spaceId\":\"89162457\"}",
+            "elements": [
+              {
+                "type": "button",
+                "action_id": "view",
+                "text": {
+                  "type": "plain_text",
+                  "text": "View page",
+                  "emoji": true
+                },
+                "style": "primary",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/~701214a87664f7b8c49649ef41e1dc6e1725b/pages/1440841765/AI?atlOrigin=eyJpIjoiYTFkOWExNTM4NjhkNDIwYzgxY2IyMDRiY2EwZDJhMDkiLCJwIjoiY29uZmx1ZW5jZS1jaGF0cy1pbnQifQ"
+              },
+              {
+                "type": "button",
+                "action_id": "saveContentForLater",
+                "text": {
+                  "type": "plain_text",
+                  "text": ":star: Bookmark",
+                  "emoji": true
+                }
+              },
+              {
+                "type": "static_select",
+                "action_id": "overflowActions",
+                "placeholder": {
+                  "type": "plain_text",
+                  "text": "More actions...",
+                  "emoji": true
+                },
+                "options": [
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Watch page",
+                      "emoji": true
+                    },
+                    "value": "watchContent"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Like page",
+                      "emoji": true
+                    },
+                    "value": "like"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Comment",
+                      "emoji": true
+                    },
+                    "value": "addComment"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Share page",
+                      "emoji": true
+                    },
+                    "value": "shareContent"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "color": "#2684ff",
+        "fallback": "AIによるゲーム内お知らせ自動生成ツールの概要と機能説明",
+        "bot_id": "B07TAQA2C58",
+        "bot_team_id": "T07GTV1LW67",
+        "app_unfurl_url": "https://wonderplanet.atlassian.net/wiki/spaces/~701214a87664f7b8c49649ef41e1dc6e1725b/pages/1440841765/AI",
+        "is_app_unfurl": true,
+        "app_id": "AC23SDS77"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "NKelw",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "絶賛お知らせのワンポチ生成作成中！！\n"
+              },
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/~701214a87664f7b8c49649ef41e1dc6e1725b/pages/1440841765/AI"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U9Z8D704U",
+    "type": "message",
+    "ts": "1768453892.728429",
+    "client_msg_id": "3c210cdf-9b07-4346-807a-e02cb2b5a5b4",
+    "text": "・Unity組み込みでわからないことがあった時にスクショ付きで質問\n・Unityのパーティクル作成でやりたいイメージの数値設定",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "244211bebd13",
+      "image_72": "https://avatars.slack-edge.com/2023-06-30/5506396986805_244211bebd1331373b85_72.png",
+      "first_name": "Rira",
+      "real_name": "Rira Mochizuki",
+      "display_name": "rira",
+      "team": "T07GTV1LW67",
+      "name": "mochizuki",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "7SNcq",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "・Unity組み込みでわからないことがあった時にスクショ付きで質問\n・Unityのパーティクル作成でやりたいイメージの数値設定"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "onaziku",
+        "users": [
+          "U01SPGT7U66"
+        ],
+        "count": 1
+      },
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U016AL1NM8T",
+    "type": "message",
+    "ts": "1768456123.120339",
+    "client_msg_id": "0813821c-0b24-43f8-a4c2-60f7553d922d",
+    "text": "・Geminiで下記の記事に記載しているプロンプト入力で文言作成を効率化した\n▼ゲーム内お知らせ作る君\n```<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1376550916/Gemini>```\n▼ゲーム内FAQ作る君\n```<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1376714755/FAQ>```\n・リリース後の機能、スキルの仕様要件書作成に活用し、下地を作らせた",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "eb9f21a6a3a6",
+      "image_72": "https://avatars.slack-edge.com/2022-09-25/4125334844069_eb9f21a6a3a61198bd28_72.png",
+      "first_name": "Ryosuke",
+      "real_name": "Ryosuke Goto",
+      "display_name": "GT-R",
+      "team": "T07GTV1LW67",
+      "name": "r-goto",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "GzNKo",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "・Geminiで下記の記事に記載しているプロンプト入力で文言作成を効率化した\n▼ゲーム内お知らせ作る君\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_preformatted",
+            "elements": [
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1376550916/Gemini"
+              }
+            ],
+            "border": 0
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "\n▼ゲーム内FAQ作る君\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_preformatted",
+            "elements": [
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1376714755/FAQ"
+              }
+            ],
+            "border": 0
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "\n・リリース後の機能、スキルの仕様要件書作成に活用し、下地を作らせた"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768534416.022249",
+    "client_msg_id": "882ea5cf-cacc-4b35-a851-2df75dafa14b",
+    "text": "GeminiのGemでミッションのマスタデータを作れるかもしれない\n&gt; [Gemini Gem] 運営仕様書からミッションのマスタデータ作成をやってみた\n&gt; <https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1449328643/Gemini+Gem>",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "attachments": [
+      {
+        "id": 1,
+        "blocks": [
+          {
+            "type": "section",
+            "block_id": "page:{\"contentId\":\"1449328643\",\"instanceId\":\"461e18ca-7256-3923-9e2f-36d8b2614716\",\"spaceKey\":\"GLOW\"}",
+            "text": {
+              "type": "mrkdwn",
+              "text": "*<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1449328643/Gemini+Gem?atlOrigin=eyJpIjoiNjgzNTkyNDhlMjdiNDMzMGIzMjZkMmI5ZmE1MzRmOWQiLCJwIjoiY29uZmx1ZW5jZS1jaGF0cy1pbnQifQ|[Gemini Gem] 運営仕様書からミッションのマスタデータ作成をやってみた>*",
+              "verbatim": false
+            }
+          },
+          {
+            "type": "context",
+            "block_id": "ha+3o",
+            "elements": [
+              {
+                "type": "image",
+                "image_url": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/606ae3952b469c00701fcb6c/a71806df-a303-4191-8774-e5cb5df549ff/128",
+                "alt_text": "images"
+              },
+              {
+                "type": "mrkdwn",
+                "text": "Owned by: Junki Mizutani | 1 person viewed",
+                "verbatim": false
+              }
+            ]
+          },
+          {
+            "type": "actions",
+            "block_id": "interactivity:{\"contentType\":\"page\",\"instanceId\":\"461e18ca-7256-3923-9e2f-36d8b2614716\",\"id\":\"1449328643\",\"source\":\"unfurl\",\"isSpaceLink\":false,\"spaceId\":\"105873497\"}",
+            "elements": [
+              {
+                "type": "button",
+                "action_id": "view",
+                "text": {
+                  "type": "plain_text",
+                  "text": "View page",
+                  "emoji": true
+                },
+                "style": "primary",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1449328643/Gemini+Gem?atlOrigin=eyJpIjoiMmY2YTg0ZmQ5ZDQ1NDI3OWExMTE1YzQ5MzgwNTg1ZDEiLCJwIjoiY29uZmx1ZW5jZS1jaGF0cy1pbnQifQ"
+              },
+              {
+                "type": "button",
+                "action_id": "saveContentForLater",
+                "text": {
+                  "type": "plain_text",
+                  "text": ":star: Bookmark",
+                  "emoji": true
+                }
+              },
+              {
+                "type": "static_select",
+                "action_id": "overflowActions",
+                "placeholder": {
+                  "type": "plain_text",
+                  "text": "More actions...",
+                  "emoji": true
+                },
+                "options": [
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Watch page",
+                      "emoji": true
+                    },
+                    "value": "watchContent"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Like page",
+                      "emoji": true
+                    },
+                    "value": "like"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Comment",
+                      "emoji": true
+                    },
+                    "value": "addComment"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Share page",
+                      "emoji": true
+                    },
+                    "value": "shareContent"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "color": "#2684ff",
+        "fallback": "[Gemini Gem] 運営仕様書からミッションのマスタデータ作成をやってみた",
+        "bot_id": "B07TAQA2C58",
+        "bot_team_id": "T07GTV1LW67",
+        "app_unfurl_url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1449328643/Gemini+Gem",
+        "is_app_unfurl": true,
+        "app_id": "AC23SDS77"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "5jMd6",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "GeminiのGemでミッションのマスタデータを作れるかもしれない\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_quote",
+            "elements": [
+              {
+                "type": "text",
+                "text": "[Gemini Gem] 運営仕様書からミッションのマスタデータ作成をやってみた\n"
+              },
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1449328643/Gemini+Gem"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "cw_iine",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "ok",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "niyari",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768534964.280909",
+    "client_msg_id": "b5ebe79c-3f27-460b-ab55-35663e646491",
+    "text": "何やら調子が悪いのでもう少し検証してみます:man-bowing::skin-tone-2:",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768381036.673559",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "hJHb5",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "何やら調子が悪いのでもう少し検証してみます"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-1f3fb-200d-2642-fe0f",
+                "skin_tone": 2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
