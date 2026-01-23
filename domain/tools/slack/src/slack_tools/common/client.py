@@ -141,6 +141,22 @@ class SlackClient:
         response.raise_for_status()
         return response.content
 
+    def get_workspace_info(self) -> dict[str, Any]:
+        """ワークスペース情報を取得（auth.test）
+
+        Returns:
+            ワークスペース情報
+            - url: ワークスペースURL (例: "https://wonderplanet-glow.slack.com/")
+            - team: ワークスペース名
+            - team_id: ワークスペースID
+        """
+        data = self._request("GET", "auth.test")
+        return {
+            "url": data.get("url", ""),
+            "team": data.get("team", ""),
+            "team_id": data.get("team_id", ""),
+        }
+
     def get_channel_history(
         self,
         channel_id: str,

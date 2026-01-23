@@ -14,7 +14,6 @@ class Config:
         load_dotenv()
 
         self.slack_token = os.getenv("SLACK_TOKEN")
-        self.workspace = os.getenv("SLACK_WORKSPACE", "glow-team")
 
         # glow-brainルートから固定パスを構築
         glow_brain_root = self._get_glow_brain_root()

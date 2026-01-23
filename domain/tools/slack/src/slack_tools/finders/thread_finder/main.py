@@ -157,6 +157,14 @@ def main():
         config = Config.from_env()
         client = SlackClient(config.slack_token)
 
+        # ワークスペース情報を取得
+        print("ワークスペース情報を取得中...")
+        workspace_info = client.get_workspace_info()
+        # URLからサブドメイン抽出: "https://wonderplanet-glow.slack.com/" -> "wonderplanet-glow"
+        workspace_url = workspace_info["url"]
+        workspace = workspace_url.replace("https://", "").replace("http://", "").split(".")[0]
+        print(f"ワークスペース: {workspace}")
+
         # チャンネル解決
         print("チャンネル情報を取得中...")
         channel_ids, channel_names = resolve_channel_ids(client, args.channels)
@@ -176,12 +184,12 @@ def main():
         )
 
         # 検索実行
-        finder = ThreadFinder(client, config.workspace)
+        finder = ThreadFinder(client, workspace)
         result = finder.search(params)
 
         # 出力ディレクトリ構築
         search_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-        output_dir = Path(config.raw_data_dir) / config.workspace / "_searches" / search_id
+        output_dir = Path(config.raw_data_dir) / workspace / "_searches" / search_id
 
         if not args.dry_run:
             output_dir.mkdir(parents=True, exist_ok=True)
