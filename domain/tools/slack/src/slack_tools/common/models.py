@@ -1,6 +1,7 @@
 """Slackデータモデル定義"""
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from datetime import date
 from typing import Any
 
 
@@ -126,3 +127,74 @@ class SlackThread:
                 for file in msg.files:
                     result.append((msg, file))
         return result
+
+
+@dataclass
+class SearchParams:
+    """スレッド検索パラメータ"""
+
+    channels: list[str]  # チャンネルID一覧
+    channel_names: list[str]  # チャンネル名一覧（表示用）
+    users: list[str]  # ユーザーID一覧
+    user_names: list[str]  # ユーザー名一覧（表示用）
+    start_date: date  # 検索開始日
+    end_date: date  # 検索終了日
+
+
+@dataclass
+class ThreadInfo:
+    """スレッド情報（検索結果用）"""
+
+    channel_id: str  # チャンネルID
+    channel_name: str  # チャンネル名
+    thread_ts: str  # スレッドタイムスタンプ
+    parent_user_id: str  # 親メッセージのユーザーID
+    parent_text: str  # 親メッセージのテキスト
+    reply_count: int  # 返信数
+    matching_users: list[str]  # マッチしたユーザーID一覧
+    url: str  # スレッドURL
+
+    def to_dict(self) -> dict[str, Any]:
+        """辞書形式に変換
+
+        Returns:
+            辞書表現
+        """
+        return {
+            "channel_id": self.channel_id,
+            "channel_name": self.channel_name,
+            "thread_ts": self.thread_ts,
+            "parent_user_id": self.parent_user_id,
+            "parent_text": self.parent_text,
+            "reply_count": self.reply_count,
+            "matching_users": self.matching_users,
+            "url": self.url,
+        }
+
+
+@dataclass
+class SearchResult:
+    """スレッド検索結果"""
+
+    version: str  # 検索結果フォーマットバージョン
+    searched_at: str  # 検索実行日時（ISO8601）
+    workspace: str  # ワークスペース名
+    params: dict[str, Any]  # 検索パラメータ
+    stats: dict[str, int]  # 統計情報
+    threads: list[ThreadInfo]  # 見つかったスレッド一覧
+    raw_messages: dict[str, list[dict[str, Any]]] = field(default_factory=dict)  # キャッシュされたスレッドメッセージ（キー: "channel_id_thread_ts"）
+
+    def to_dict(self) -> dict[str, Any]:
+        """辞書形式に変換
+
+        Returns:
+            辞書表現
+        """
+        return {
+            "version": self.version,
+            "searched_at": self.searched_at,
+            "workspace": self.workspace,
+            "params": self.params,
+            "stats": self.stats,
+            "threads": [t.to_dict() for t in self.threads],
+        }

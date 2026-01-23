@@ -1,6 +1,7 @@
 """Slackスレッドエクスポーター本体"""
 
 from pathlib import Path
+from typing import Any
 
 from slack_tools.common.client import SlackClient
 from slack_tools.common.config import Config
@@ -24,12 +25,20 @@ class ThreadExporter:
         self.skip_attachments = skip_attachments
         self.client = SlackClient(config.slack_token)
 
-    def export(self, url: str, dry_run: bool = False) -> Path:
+    def export(
+        self,
+        url: str,
+        dry_run: bool = False,
+        cached_messages: list[dict[str, Any]] | None = None,
+        cached_channel_name: str | None = None,
+    ) -> Path:
         """スレッドをエクスポート
 
         Args:
             url: SlackスレッドURL
             dry_run: ドライラン（ファイル保存をスキップ）
+            cached_messages: キャッシュされたメッセージ（指定時はAPI呼び出しをスキップ）
+            cached_channel_name: キャッシュされたチャンネル名（指定時はAPI呼び出しをスキップ）
 
         Returns:
             出力ディレクトリパス
@@ -42,18 +51,27 @@ class ThreadExporter:
         print(f"スレッドTS: {thread_info.thread_ts}")
 
         # チャンネル情報取得
-        print("チャンネル情報を取得中...")
-        channel_info = self.client.get_channel_info(thread_info.channel_id)
-        channel_name = channel_info.get("name", thread_info.channel_id)
-        print(f"チャンネル名: {channel_name}")
+        if cached_channel_name:
+            channel_name = cached_channel_name
+            print(f"チャンネル名: {channel_name} (キャッシュ)")
+        else:
+            print("チャンネル情報を取得中...")
+            channel_info = self.client.get_channel_info(thread_info.channel_id)
+            channel_name = channel_info.get("name", thread_info.channel_id)
+            print(f"チャンネル名: {channel_name}")
 
         # スレッドメッセージ取得
-        print("スレッドメッセージを取得中...")
-        messages_raw = self.client.get_thread_messages(
-            thread_info.channel_id, thread_info.thread_ts
-        )
+        if cached_messages:
+            messages_raw = cached_messages
+            print(f"メッセージ数: {len(cached_messages)} (キャッシュ)")
+        else:
+            print("スレッドメッセージを取得中...")
+            messages_raw = self.client.get_thread_messages(
+                thread_info.channel_id, thread_info.thread_ts
+            )
+            print(f"メッセージ数: {len(messages_raw)}")
+
         messages = [SlackMessage.from_api_response(msg) for msg in messages_raw]
-        print(f"メッセージ数: {len(messages)}")
 
         # ユーザー名取得
         print("ユーザー情報を取得中...")

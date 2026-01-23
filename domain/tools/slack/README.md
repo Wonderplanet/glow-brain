@@ -10,6 +10,11 @@ SlackのスレッドURLを指定して、全メッセージと添付ファイル
   - Markdown形式での保存
   - 生データ（JSON）の保存
 
+- **Thread Finder**: 条件指定によるスレッド検索とバッチエクスポート
+  - 日付・チャンネル・ユーザーを指定してスレッド検索
+  - 検索結果のJSON出力
+  - 見つかったスレッドの一括エクスポート
+
 ## セットアップ
 
 ### 1. 依存関係のインストール
@@ -70,6 +75,66 @@ uv run python -m slack_tools.exporters.thread_exporter \
   --url "..." --dry-run
 ```
 
+### Thread Finder
+
+指定した条件でスレッドを検索し、必要に応じてバッチエクスポートします。
+
+```bash
+cd domain/tools/slack
+
+# 基本的な検索（JSON出力のみ）
+uv run python -m slack_tools.finders.thread_finder \
+  --date 2024-01-15 \
+  --channels C12345678 \
+  --users U11111111
+
+# 日付範囲を指定
+uv run python -m slack_tools.finders.thread_finder \
+  --date 2024-01-15 \
+  --end-date 2024-01-17 \
+  --channels C12345678 general \
+  --users U11111111 @john
+
+# 検索結果をバッチエクスポート
+uv run python -m slack_tools.finders.thread_finder \
+  --date 2024-01-15 \
+  --channels C12345678 \
+  --users U11111111 \
+  --export \
+  --delay 2.0
+
+# ドライラン
+uv run python -m slack_tools.finders.thread_finder \
+  --date 2024-01-15 \
+  --channels C12345678 \
+  --users U11111111 \
+  --dry-run
+```
+
+**オプション:**
+
+- `--date`: 検索開始日（YYYY-MM-DD形式、必須）
+- `--end-date`: 検索終了日（省略時は--dateと同じ）
+- `--channels`: チャンネルID or 名前（複数指定可、必須）
+- `--users`: ユーザーID or @ユーザー名（複数指定可、必須）
+- `--export`: 検索結果をバッチエクスポート
+- `--delay`: エクスポート時のスレッド間ディレイ（秒、デフォルト: 1.0）
+- `--dry-run`: ドライラン（ファイル保存なし）
+
+**検索結果の出力先:**
+
+```
+domain/raw-data/slack/{workspace}/_searches/{YYYYMMDD_HHMMSS}/
+├── search_result.json      # 検索結果
+├── export_summary.json     # エクスポートサマリー（--export時）
+└── threads/                # エクスポートされたスレッド（--export時）
+    └── {channel}_{thread_ts}/
+        ├── raw.json
+        ├── thread.md
+        ├── meta.json
+        └── attachments/
+```
+
 ### 出力フォルダ構成
 
 ```
@@ -101,11 +166,17 @@ domain/tools/slack/
         │   ├── url_parser.py         # URL解析
         │   ├── file_utils.py         # ファイル操作
         │   └── markdown.py           # Markdown生成
-        └── exporters/
-            └── thread_exporter/      # スレッドエクスポーター
+        ├── exporters/
+        │   └── thread_exporter/      # スレッドエクスポーター
+        │       ├── __main__.py       # エントリーポイント
+        │       ├── main.py           # CLI処理
+        │       └── exporter.py       # エクスポート処理
+        └── finders/
+            └── thread_finder/        # スレッド検索
                 ├── __main__.py       # エントリーポイント
                 ├── main.py           # CLI処理
-                └── exporter.py       # エクスポート処理
+                ├── finder.py         # 検索ロジック
+                └── batch_exporter.py # バッチエクスポート
 ```
 
 ## 拡張性
@@ -127,9 +198,24 @@ src/slack_tools/exporters/
     └── exporter.py
 ```
 
+### 新しい検索機能の追加
+
+`src/slack_tools/finders/`配下に新しい検索機能を追加できます。
+
+例: メッセージ検索
+
+```
+src/slack_tools/finders/
+└── message_finder/
+    ├── __init__.py
+    ├── __main__.py
+    ├── main.py
+    └── finder.py
+```
+
 ### 共通モジュールの利用
 
-`slack_tools.common`パッケージの各モジュールは、すべてのエクスポーターから再利用できます。
+`slack_tools.common`パッケージの各モジュールは、すべてのエクスポーター・検索機能から再利用できます。
 
 ## トラブルシューティング
 
