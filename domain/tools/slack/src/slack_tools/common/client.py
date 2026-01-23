@@ -140,3 +140,49 @@ class SlackClient:
         response = self.session.get(url)
         response.raise_for_status()
         return response.content
+
+    def get_channel_history(
+        self,
+        channel_id: str,
+        oldest: str | None = None,
+        latest: str | None = None,
+        limit: int = 100,
+    ) -> list[dict[str, Any]]:
+        """チャンネル履歴を取得（ページネーション対応）
+
+        Args:
+            channel_id: チャンネルID
+            oldest: 最古のタイムスタンプ（この値以降のメッセージを取得）
+            latest: 最新のタイムスタンプ（この値以前のメッセージを取得）
+            limit: 1回のリクエストで取得するメッセージ数（最大1000）
+
+        Returns:
+            メッセージ一覧（古い順）
+        """
+        all_messages = []
+        cursor = None
+
+        while True:
+            params: dict[str, Any] = {
+                "channel": channel_id,
+                "limit": min(limit, 1000),  # API上限は1000
+            }
+            if oldest:
+                params["oldest"] = oldest
+            if latest:
+                params["latest"] = latest
+            if cursor:
+                params["cursor"] = cursor
+
+            data = self._request("GET", "conversations.history", params=params)
+            messages = data.get("messages", [])
+            all_messages.extend(messages)
+
+            # 次のページがあるかチェック
+            cursor = data.get("response_metadata", {}).get("next_cursor")
+            if not cursor:
+                break
+
+        # 古い順にソート（APIは新しい順で返す）
+        all_messages.sort(key=lambda msg: float(msg.get("ts", "0")))
+        return all_messages
