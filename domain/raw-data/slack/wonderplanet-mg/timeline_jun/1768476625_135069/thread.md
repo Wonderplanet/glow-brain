@@ -2,7 +2,7 @@
 
 **Channel:** timeline_jun (`C057YDF1F0W`)
 **Thread TS:** 1768476625.135069
-**Exported at:** 2026-01-23 21:09:18
+**Exported at:** 2026-01-23 21:19:35
 
 ---
 
@@ -37,6 +37,7 @@ github repositoryをソースに追加できるし
 **Attachments:**
 
 - `image.png` (image/png, 109411 bytes)
+  - Path: [attachments/F0A8FF0KNTH_image.png](attachments/F0A8FF0KNTH_image.png)
 
 
 ### Reply 2
@@ -91,6 +92,7 @@ zipにしてもその中身のファイル数が10個以内じゃないと失敗
 **Attachments:**
 
 - `image.png` (image/png, 265483 bytes)
+  - Path: [attachments/F0A8W62J76X_image.png](attachments/F0A8W62J76X_image.png)
 
 
 ### Reply 6
@@ -107,5 +109,7 @@ slackスレッドエクスポートテスト用
 **Attachments:**
 
 - `image.png` (image/png, 11695 bytes)
+  - Path: [attachments/F0AAXLHNS2D_image.png](attachments/F0AAXLHNS2D_image.png)
 - `image.png` (image/png, 1457 bytes)
+  - Path: [attachments/F0AA39L00H5_image.png](attachments/F0AA39L00H5_image.png)
 

@@ -2,6 +2,7 @@
 
 from datetime import datetime
 
+from .file_utils import sanitize_filename
 from .models import SlackThread
 
 
@@ -88,8 +89,11 @@ def _append_message(lines: list[str], message, thread: SlackThread) -> None:
         lines.append("**Attachments:**")
         lines.append("")
         for file in message.files:
+            safe_filename = sanitize_filename(file.name)
+            file_path = f"attachments/{file.id}_{safe_filename}"
             file_info = f"- `{file.name}` ({file.mimetype}, {file.size} bytes)"
             if file.title and file.title != file.name:
                 file_info += f" - {file.title}"
             lines.append(file_info)
+            lines.append(f"  - Path: [{file_path}]({file_path})")
         lines.append("")
