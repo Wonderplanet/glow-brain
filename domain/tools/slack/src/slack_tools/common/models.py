@@ -1,6 +1,6 @@
 """Slackデータモデル定義"""
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import date
 from typing import Any
 
@@ -182,6 +182,7 @@ class SearchResult:
     params: dict[str, Any]  # 検索パラメータ
     stats: dict[str, int]  # 統計情報
     threads: list[ThreadInfo]  # 見つかったスレッド一覧
+    raw_messages: dict[str, list[dict[str, Any]]] = field(default_factory=dict)  # キャッシュされたスレッドメッセージ（キー: "channel_id_thread_ts"）
 
     def to_dict(self) -> dict[str, Any]:
         """辞書形式に変換

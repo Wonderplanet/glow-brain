@@ -60,11 +60,6 @@ class BatchExporter:
 
         failed_threads = []
 
-        # エクスポート先ディレクトリを設定
-        threads_dir = self.output_dir / "threads"
-        if not dry_run:
-            threads_dir.mkdir(parents=True, exist_ok=True)
-
         # 各スレッドをエクスポート
         for i, thread in enumerate(matching_threads, 1):
             print(f"\n[{i}/{len(matching_threads)}] エクスポート中...")
@@ -73,23 +68,19 @@ class BatchExporter:
             print(f"  URL: {thread.url}")
 
             try:
-                # エクスポート実行
-                thread_output_dir = self.exporter.export(thread.url, dry_run=dry_run)
+                # キャッシュキーを生成
+                cache_key = f"{thread.channel_id}_{thread.thread_ts}"
 
-                # 出力先を移動（dry_runでなければ）
-                if not dry_run:
-                    # thread_exporterのデフォルト出力先から、_searches配下に移動
-                    target_dir = (
-                        threads_dir / f"{thread.channel_name}_{thread.thread_ts.replace('.', '_')}"
-                    )
-                    if thread_output_dir != target_dir:
-                        # 移動が必要な場合（通常はこちら）
-                        import shutil
+                # キャッシュされたメッセージを取得
+                cached_messages = self.search_result.raw_messages.get(cache_key)
 
-                        if target_dir.exists():
-                            shutil.rmtree(target_dir)
-                        shutil.move(str(thread_output_dir), str(target_dir))
-                        print(f"  移動先: {target_dir}")
+                # エクスポート実行（キャッシュがあれば使用）
+                thread_output_dir = self.exporter.export(
+                    thread.url,
+                    dry_run=dry_run,
+                    cached_messages=cached_messages,
+                    cached_channel_name=thread.channel_name,
+                )
 
                 stats["success"] += 1
 

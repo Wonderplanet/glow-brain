@@ -202,3 +202,36 @@ class SlackClient:
         # 古い順にソート（APIは新しい順で返す）
         all_messages.sort(key=lambda msg: float(msg.get("ts", "0")))
         return all_messages
+
+    def search_messages(
+        self,
+        query: str,
+        count: int = 100,
+    ) -> list[dict[str, Any]]:
+        """メッセージを検索（search.messages API）
+
+        Args:
+            query: 検索クエリ（例: "from:@USER in:#CHANNEL after:2024-01-01"）
+            count: 1回のリクエストで取得するメッセージ数（最大100）
+
+        Returns:
+            検索結果のメッセージ一覧
+        """
+        all_messages = []
+        page = 1
+
+        while True:
+            data = self._request(
+                "GET",
+                "search.messages",
+                params={"query": query, "count": count, "page": page},
+            )
+            matches = data.get("messages", {}).get("matches", [])
+            all_messages.extend(matches)
+
+            paging = data.get("messages", {}).get("paging", {})
+            if page >= paging.get("pages", 1):
+                break
+            page += 1
+
+        return all_messages
