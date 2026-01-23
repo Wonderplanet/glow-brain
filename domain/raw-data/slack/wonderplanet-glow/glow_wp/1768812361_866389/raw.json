@@ -1,0 +1,858 @@
+[
+  {
+    "user": "U01DXPA51L1",
+    "type": "message",
+    "ts": "1768812361.866389",
+    "client_msg_id": "cf0f8609-04e4-4906-951f-313260af10cf",
+    "text": "<@UD57AC0EB> <@U01SLEEPKQD> <@U02CFE058EN> <@U01TLE2AX8Q> ( <@U9YULJPUZ> <@U0113RN4C5S> <@U2WK72DBN>\nアナウンス漏れてました。\nQA環境をv1.5.0への更新をお願いします。\n<https://docs.google.com/spreadsheets/d/1FJeOKFEltBWGpd-7jdZUoVZKtqBtfhwYpGOVb8Dt1nQ/edit?gid=0#gid=0&amp;range=ET46:EX46>",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "52f877340d73",
+      "image_72": "https://avatars.slack-edge.com/2020-11-02/1475185784884_52f877340d738be9131d_72.png",
+      "first_name": "Toshikazu",
+      "real_name": "Toshikazu Takahashi",
+      "display_name": "Toshi",
+      "team": "T07GTV1LW67",
+      "name": "t-takahashi",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768812361.866389",
+    "reply_count": 11,
+    "reply_users_count": 3,
+    "latest_reply": "1768896098.802859",
+    "reply_users": [
+      "UD57AC0EB",
+      "U01TLE2AX8Q",
+      "U01SLEEPKQD"
+    ],
+    "is_locked": false,
+    "subscribed": true,
+    "last_read": "1768896098.802859",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "qeuDr",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "UD57AC0EB"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U01SLEEPKQD"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U02CFE058EN"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U01TLE2AX8Q"
+              },
+              {
+                "type": "text",
+                "text": " ( "
+              },
+              {
+                "type": "user",
+                "user_id": "U9YULJPUZ"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U0113RN4C5S"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U2WK72DBN"
+              },
+              {
+                "type": "text",
+                "text": "\nアナウンス漏れてました。\nQA環境をv1.5.0への更新をお願いします。\n"
+              },
+              {
+                "type": "link",
+                "url": "https://docs.google.com/spreadsheets/d/1FJeOKFEltBWGpd-7jdZUoVZKtqBtfhwYpGOVb8Dt1nQ/edit?gid=0#gid=0&range=ET46:EX46"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "saluting_face",
+        "users": [
+          "UD57AC0EB"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "UD57AC0EB",
+    "type": "message",
+    "ts": "1768812916.208279",
+    "client_msg_id": "49408839-418b-43b9-9fe3-1f1ab2bfd23e",
+    "text": "デプロイ開始:genbaneko06:",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "de9eee2c7a18",
+      "image_72": "https://avatars.slack-edge.com/2018-10-01/447266109239_de9eee2c7a1843e2f6c1_72.jpg",
+      "first_name": "Shun",
+      "real_name": "Shun Endo",
+      "display_name": "shun227",
+      "team": "T07GTV1LW67",
+      "name": "endo",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "d4dAL",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "デプロイ開始"
+              },
+              {
+                "type": "emoji",
+                "name": "genbaneko06"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "<!subteam^S07RJ1RBVUY>\nQA環境でマスタ取り込み時、全てにチェック入れてインポートしようとすると414エラー画面になってしまうのですが、解消可能でしょうか？\n\n全チェックしなければエラーにならないので、ひとまず昇格作業はチェック分割して進めます。",
+    "files": [
+      {
+        "id": "F0A9Q8EF1TL",
+        "created": 1768880843,
+        "timestamp": 1768880843,
+        "name": "スクリーンショット 2026-01-20 12.43.25.png",
+        "title": "スクリーンショット 2026-01-20 12.43.25.png",
+        "mimetype": "image/png",
+        "filetype": "png",
+        "pretty_type": "PNG",
+        "user": "U01TLE2AX8Q",
+        "user_team": "E01BZ3TPJ8K",
+        "editable": false,
+        "size": 44047,
+        "mode": "hosted",
+        "is_external": false,
+        "external_type": "",
+        "is_public": true,
+        "public_url_shared": false,
+        "display_as_bot": false,
+        "username": "",
+        "url_private": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A9Q8EF1TL/____________________________2026-01-20_12.43.25.png",
+        "url_private_download": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A9Q8EF1TL/download/____________________________2026-01-20_12.43.25.png",
+        "media_display_type": "unknown",
+        "thumb_64": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A9Q8EF1TL-11aee0af3e/____________________________2026-01-20_12.43.25_64.png",
+        "thumb_80": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A9Q8EF1TL-11aee0af3e/____________________________2026-01-20_12.43.25_80.png",
+        "thumb_360": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A9Q8EF1TL-11aee0af3e/____________________________2026-01-20_12.43.25_360.png",
+        "thumb_360_w": 360,
+        "thumb_360_h": 38,
+        "thumb_480": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A9Q8EF1TL-11aee0af3e/____________________________2026-01-20_12.43.25_480.png",
+        "thumb_480_w": 480,
+        "thumb_480_h": 51,
+        "thumb_160": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A9Q8EF1TL-11aee0af3e/____________________________2026-01-20_12.43.25_160.png",
+        "thumb_720": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A9Q8EF1TL-11aee0af3e/____________________________2026-01-20_12.43.25_720.png",
+        "thumb_720_w": 720,
+        "thumb_720_h": 77,
+        "thumb_800": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A9Q8EF1TL-11aee0af3e/____________________________2026-01-20_12.43.25_800.png",
+        "thumb_800_w": 800,
+        "thumb_800_h": 85,
+        "thumb_960": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A9Q8EF1TL-11aee0af3e/____________________________2026-01-20_12.43.25_960.png",
+        "thumb_960_w": 960,
+        "thumb_960_h": 102,
+        "thumb_1024": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A9Q8EF1TL-11aee0af3e/____________________________2026-01-20_12.43.25_1024.png",
+        "thumb_1024_w": 1024,
+        "thumb_1024_h": 109,
+        "original_w": 3074,
+        "original_h": 328,
+        "thumb_tiny": "AwAGADDTooooAj8lduMyYzn/AFjf409VCjAz+JzS0UAFFFFAH//Z",
+        "permalink": "https://wonderplanet.enterprise.slack.com/files/U01SLEEPKQD/F0A9Q8EF1TL/____________________________2026-01-20_12.43.25.png",
+        "permalink_public": "https://slack-files.com/T01BZ3TPJ8K-F0A9Q8EF1TL-de4d232949",
+        "is_starred": false,
+        "skipped_shares": true,
+        "has_rich_preview": false,
+        "file_access": "visible"
+      }
+    ],
+    "upload": false,
+    "user": "U01TLE2AX8Q",
+    "display_as_bot": false,
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "v2E4p",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "usergroup",
+                "usergroup_id": "S07RJ1RBVUY"
+              },
+              {
+                "type": "text",
+                "text": "\nQA環境でマスタ取り込み時、全てにチェック入れてインポートしようとすると414エラー画面になってしまうのですが、解消可能でしょうか？\n\n全チェックしなければエラーにならないので、ひとまず昇格作業はチェック分割して進めます。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "type": "message",
+    "ts": "1768880857.650749",
+    "client_msg_id": "bafa1ae7-3a39-434c-8358-f04612b3af46",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "be84dd5ea159",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1919370404546_be84dd5ea15964e3f508_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Furusawa",
+      "display_name": "furusawa",
+      "team": "T07GTV1LW67",
+      "name": "junki.furusawa",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "reactions": [
+      {
+        "name": "ojigi",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      },
+      {
+        "name": "yorosikuonegaisimasu",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "UD57AC0EB",
+    "type": "message",
+    "ts": "1768885686.961069",
+    "client_msg_id": "d5b48c3c-f30e-4254-954e-efab0f678f4b",
+    "text": "あーこれ全チェックすると全部がGETパラメーターに乗るやつ？ｗ",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "de9eee2c7a18",
+      "image_72": "https://avatars.slack-edge.com/2018-10-01/447266109239_de9eee2c7a1843e2f6c1_72.jpg",
+      "first_name": "Shun",
+      "real_name": "Shun Endo",
+      "display_name": "shun227",
+      "team": "T07GTV1LW67",
+      "name": "endo",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "KuZIY",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "あーこれ全チェックすると全部がGETパラメーターに乗るやつ？ｗ"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "desu",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "UD57AC0EB",
+    "type": "message",
+    "ts": "1768886084.204639",
+    "client_msg_id": "49704696-9916-4037-BE0A-267DB2AE19EC",
+    "text": "ydsのときは全チェックするとパラメーターがisAllみたいなのに変わるようにしてたからそういう方向性かなぁ\n（いつも全チェックの時だけパラメーター変えてたからこのエラー初めて見た:face_with_rolling_eyes:）",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "de9eee2c7a18",
+      "image_72": "https://avatars.slack-edge.com/2018-10-01/447266109239_de9eee2c7a1843e2f6c1_72.jpg",
+      "first_name": "Shun",
+      "real_name": "Shun Endo",
+      "display_name": "shun227",
+      "team": "T07GTV1LW67",
+      "name": "endo",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "uMG7q",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "ydsのときは全チェックするとパラメーターがisAllみたいなのに変わるようにしてたからそういう方向性かなぁ\n（いつも全チェックの時だけパラメーター変えてたからこのエラー初めて見た"
+              },
+              {
+                "type": "emoji",
+                "name": "face_with_rolling_eyes",
+                "unicode": "1f644"
+              },
+              {
+                "type": "text",
+                "text": "）"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "naruhodo2",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "text": "<!subteam^S07RJ1RBVUY>\nQA環境ですが、MstAttackElementにチェックを入れるとエラーになってしまうので、ご確認お願いします。\n\n構造差分の変更がたくさん出る影響でタイムアウトになってるっぽい…？",
+    "files": [
+      {
+        "id": "F0A99HCGB2B",
+        "created": 1768891893,
+        "timestamp": 1768891893,
+        "name": "スクリーンショット 2026-01-20 15.41.31.png",
+        "title": "スクリーンショット 2026-01-20 15.41.31.png",
+        "mimetype": "image/png",
+        "filetype": "png",
+        "pretty_type": "PNG",
+        "user": "U01TLE2AX8Q",
+        "user_team": "E01BZ3TPJ8K",
+        "editable": false,
+        "size": 1149436,
+        "mode": "hosted",
+        "is_external": false,
+        "external_type": "",
+        "is_public": true,
+        "public_url_shared": false,
+        "display_as_bot": false,
+        "username": "",
+        "url_private": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A99HCGB2B/____________________________2026-01-20_15.41.31.png",
+        "url_private_download": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0A99HCGB2B/download/____________________________2026-01-20_15.41.31.png",
+        "media_display_type": "unknown",
+        "thumb_64": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A99HCGB2B-480f8cb34b/____________________________2026-01-20_15.41.31_64.png",
+        "thumb_80": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A99HCGB2B-480f8cb34b/____________________________2026-01-20_15.41.31_80.png",
+        "thumb_360": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A99HCGB2B-480f8cb34b/____________________________2026-01-20_15.41.31_360.png",
+        "thumb_360_w": 360,
+        "thumb_360_h": 225,
+        "thumb_480": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A99HCGB2B-480f8cb34b/____________________________2026-01-20_15.41.31_480.png",
+        "thumb_480_w": 480,
+        "thumb_480_h": 300,
+        "thumb_160": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A99HCGB2B-480f8cb34b/____________________________2026-01-20_15.41.31_160.png",
+        "thumb_720": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A99HCGB2B-480f8cb34b/____________________________2026-01-20_15.41.31_720.png",
+        "thumb_720_w": 720,
+        "thumb_720_h": 451,
+        "thumb_800": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A99HCGB2B-480f8cb34b/____________________________2026-01-20_15.41.31_800.png",
+        "thumb_800_w": 800,
+        "thumb_800_h": 501,
+        "thumb_960": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A99HCGB2B-480f8cb34b/____________________________2026-01-20_15.41.31_960.png",
+        "thumb_960_w": 960,
+        "thumb_960_h": 601,
+        "thumb_1024": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0A99HCGB2B-480f8cb34b/____________________________2026-01-20_15.41.31_1024.png",
+        "thumb_1024_w": 1024,
+        "thumb_1024_h": 641,
+        "original_w": 3464,
+        "original_h": 2168,
+        "thumb_tiny": "AwAfADDQ4zk5zz3pfzpB1/Gnc+1ACdf71H/fVLzRz2xQAn/fVGfTNHzZ7YpD1/GgAHX8afTMEHp3p2fY0ADAccZwaB9KP+A03aM/cHtxQA+mHr+NKAB0XFJgk9O9AH//2Q==",
+        "permalink": "https://wonderplanet.enterprise.slack.com/files/U01SLEEPKQD/F0A99HCGB2B/____________________________2026-01-20_15.41.31.png",
+        "permalink_public": "https://slack-files.com/T01BZ3TPJ8K-F0A99HCGB2B-1b203a8d5e",
+        "is_starred": false,
+        "skipped_shares": true,
+        "has_rich_preview": false,
+        "file_access": "visible"
+      }
+    ],
+    "upload": false,
+    "user": "U01TLE2AX8Q",
+    "display_as_bot": false,
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "LTo3q",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "usergroup",
+                "usergroup_id": "S07RJ1RBVUY"
+              },
+              {
+                "type": "text",
+                "text": "\nQA環境ですが、MstAttackElementにチェックを入れるとエラーになってしまうので、ご確認お願いします。\n\n構造差分の変更がたくさん出る影響でタイムアウトになってるっぽい…？"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "type": "message",
+    "ts": "1768891936.377629",
+    "client_msg_id": "8a63193b-f378-4864-ba20-27484d098bb7",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "be84dd5ea159",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1919370404546_be84dd5ea15964e3f508_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Furusawa",
+      "display_name": "furusawa",
+      "team": "T07GTV1LW67",
+      "name": "junki.furusawa",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "reactions": [
+      {
+        "name": "kakunin",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      }
+    ],
+    "saved": {
+      "is_archived": false,
+      "date_completed": 1769133118,
+      "state": "completed"
+    }
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768892746.037559",
+    "edited": {
+      "user": "U01SLEEPKQD",
+      "ts": "1768892751.000000"
+    },
+    "client_msg_id": "ac7831ea-4524-4584-aeb2-69ae7e6b597f",
+    "text": "タイムアウト延長設定がもう一箇所必要かも",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "1eLiM",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "タイムアウト延長設定がもう一箇所必要かも"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768892864.273639",
+    "client_msg_id": "92fc9482-c342-4dad-ae26-61c05fbb1185",
+    "text": "qa環境のコードを調整してみます",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "fX4KE",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "qa環境のコードを調整してみます"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768893320.323079",
+    "client_msg_id": "89a028cf-f9fb-4aa8-b177-e70f6289ed37",
+    "text": "<@U01TLE2AX8Q> 少し調整してみました、再度MstAttackElementの投入してみていただいてよろしいでしょうか:man-bowing::skin-tone-2:",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "35GQ2",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U01TLE2AX8Q"
+              },
+              {
+                "type": "text",
+                "text": " 少し調整してみました、再度MstAttackElementの投入してみていただいてよろしいでしょうか"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-1f3fb-200d-2642-fe0f",
+                "skin_tone": 2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "arigatougozaimasu",
+        "users": [
+          "U01TLE2AX8Q"
+        ],
+        "count": 1
+      },
+      {
+        "name": "kakunin",
+        "users": [
+          "U01TLE2AX8Q"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768893519.692359",
+    "edited": {
+      "user": "U01SLEEPKQD",
+      "ts": "1768893923.000000"
+    },
+    "client_msg_id": "6290214d-cacf-4943-999f-93c955632bec",
+    "text": "サーバーメモ：\nimportメソッドではmax_execution_timeを伸ばしてたが\nスプシからデータ取得するmountメソッドの方では、伸ばしてなかった\n\nなのでmountでも伸ばすように追加してみた\n\n挙動問題なければ、PR出してマージする",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "NVz0R",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "サーバーメモ：\nimportメソッドではmax_execution_timeを伸ばしてたが\nスプシからデータ取得するmountメソッドの方では、伸ばしてなかった\n\nなのでmountでも伸ばすように追加してみた\n\n挙動問題なければ、PR出してマージする"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "roger",
+        "users": [
+          "UD57AC0EB"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01TLE2AX8Q",
+    "type": "message",
+    "ts": "1768894175.567819",
+    "client_msg_id": "e3d79a8e-2a8c-4f44-add3-2d1a4193ee20",
+    "text": "<@U01SLEEPKQD>\nインポートできました！\nご対応ありがとうございました。",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "be84dd5ea159",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1919370404546_be84dd5ea15964e3f508_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Furusawa",
+      "display_name": "furusawa",
+      "team": "T07GTV1LW67",
+      "name": "junki.furusawa",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "BCR53",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U01SLEEPKQD"
+              },
+              {
+                "type": "text",
+                "text": "\nインポートできました！\nご対応ありがとうございました。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "man-bowing::skin-tone-2",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      },
+      {
+        "name": "arigatougozaimasu",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01TLE2AX8Q",
+    "type": "message",
+    "ts": "1768896098.802859",
+    "client_msg_id": "90ad53f9-6888-4d20-aa32-aff5953cac59",
+    "text": "<@U2WK72DBN> <@U01DXPA51L1> (<@U02CFE058EN> <@U9YULJPUZ> <@UD57AC0EB>\nQA環境へ、1.5.0/202602010の昇格完了しました。",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "be84dd5ea159",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1919370404546_be84dd5ea15964e3f508_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Furusawa",
+      "display_name": "furusawa",
+      "team": "T07GTV1LW67",
+      "name": "junki.furusawa",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768812361.866389",
+    "parent_user_id": "U01DXPA51L1",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "tBF2B",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U2WK72DBN"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U01DXPA51L1"
+              },
+              {
+                "type": "text",
+                "text": " ("
+              },
+              {
+                "type": "user",
+                "user_id": "U02CFE058EN"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U9YULJPUZ"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "UD57AC0EB"
+              },
+              {
+                "type": "text",
+                "text": "\nQA環境へ、1.5.0/202602010の昇格完了しました。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "sho-chi",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      },
+      {
+        "name": "arigatougozaimasu",
+        "users": [
+          "U9YULJPUZ",
+          "U2WK72DBN"
+        ],
+        "count": 2
+      }
+    ]
+  }
+]

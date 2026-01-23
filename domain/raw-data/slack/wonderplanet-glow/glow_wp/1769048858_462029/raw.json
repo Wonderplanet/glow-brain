@@ -1,0 +1,265 @@
+[
+  {
+    "user": "U0A1HBXQ9",
+    "type": "message",
+    "ts": "1769048858.462029",
+    "client_msg_id": "38d43873-ed35-4542-9804-f093e0d4492b",
+    "text": "<!subteam^S07RJ1RBVUY>\n<https://github.com/Wonderplanet/glow-server/pull/2160>\n外部決済のBank送信時のplatform_id対応です。レビューお願いします。",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "547af795b238",
+      "image_72": "https://avatars.slack-edge.com/2017-09-06/237821512967_547af795b238eedb2e97_72.png",
+      "first_name": "Ken",
+      "real_name": "Ken Wakahara",
+      "display_name": "wakahara",
+      "team": "T07GTV1LW67",
+      "name": "wakahara",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1769048858.462029",
+    "reply_count": 3,
+    "reply_users_count": 2,
+    "latest_reply": "1769050048.269189",
+    "reply_users": [
+      "U01SLEEPKQD",
+      "B0667QWQN64"
+    ],
+    "is_locked": false,
+    "subscribed": true,
+    "last_read": "1769050048.269189",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "rS8tv",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "usergroup",
+                "usergroup_id": "S07RJ1RBVUY"
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "link",
+                "url": "https://github.com/Wonderplanet/glow-server/pull/2160"
+              },
+              {
+                "type": "text",
+                "text": "\n外部決済のBank送信時のplatform_id対応です。レビューお願いします。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "approve",
+        "users": [
+          "U01SLEEPKQD",
+          "UD57AC0EB"
+        ],
+        "count": 2
+      }
+    ],
+    "saved": {
+      "is_archived": false,
+      "date_completed": 1769153400,
+      "state": "completed"
+    }
+  },
+  {
+    "subtype": "bot_message",
+    "text": "<@U0A1HBXQ9>\nJunki Mizutani がapproveしたウホ",
+    "username": "approveゴリラ",
+    "type": "message",
+    "ts": "1769049973.309629",
+    "bot_id": "B0667QWQN64",
+    "app_id": "A065JR823L2",
+    "trigger_id": "Ft065M917H9A",
+    "workflow_id": "Wf0667QW9YKS",
+    "team": "T07GTV1LW67",
+    "bot_profile": {
+      "id": "B0667QWQN64",
+      "app_id": "A065JR823L2",
+      "user_id": "U065C6DELF8",
+      "name": "approveゴリラ",
+      "icons": {
+        "image_36": "https://avatars.slack-edge.com/2025-12-01/10037101547841_a46c73a8d1dd6c178503_36.png",
+        "image_48": "https://avatars.slack-edge.com/2025-12-01/10037101547841_a46c73a8d1dd6c178503_48.png",
+        "image_72": "https://avatars.slack-edge.com/2025-12-01/10037101547841_a46c73a8d1dd6c178503_72.png"
+      },
+      "deleted": false,
+      "updated": 1764576470,
+      "is_workflow_bot": true,
+      "team_id": "T07GTV1LW67"
+    },
+    "thread_ts": "1769048858.462029",
+    "parent_user_id": "U0A1HBXQ9",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "2gJbE",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U0A1HBXQ9"
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "text",
+                "text": "Junki Mizutani"
+              },
+              {
+                "type": "text",
+                "text": " がapproveしたウホ"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "arigatougozaimasu",
+        "users": [
+          "U0A1HBXQ9"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "subtype": "bot_message",
+    "text": "<@U0A1HBXQ9>\nShun Endo がapproveしたウホ",
+    "username": "approveゴリラ",
+    "type": "message",
+    "ts": "1769049984.342719",
+    "bot_id": "B0667QWQN64",
+    "app_id": "A065JR823L2",
+    "trigger_id": "Ft065M917H9A",
+    "workflow_id": "Wf0667QW9YKS",
+    "team": "T07GTV1LW67",
+    "bot_profile": {
+      "id": "B0667QWQN64",
+      "deleted": false,
+      "name": "approveゴリラ",
+      "updated": 1764576470,
+      "app_id": "A065JR823L2",
+      "user_id": "U065C6DELF8",
+      "icons": {
+        "image_36": "https://avatars.slack-edge.com/2025-12-01/10037101547841_a46c73a8d1dd6c178503_36.png",
+        "image_48": "https://avatars.slack-edge.com/2025-12-01/10037101547841_a46c73a8d1dd6c178503_48.png",
+        "image_72": "https://avatars.slack-edge.com/2025-12-01/10037101547841_a46c73a8d1dd6c178503_72.png"
+      },
+      "is_workflow_bot": true,
+      "team_id": "T07GTV1LW67"
+    },
+    "thread_ts": "1769048858.462029",
+    "parent_user_id": "U0A1HBXQ9",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "L/Cv+",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U0A1HBXQ9"
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "text",
+                "text": "Shun Endo"
+              },
+              {
+                "type": "text",
+                "text": " がapproveしたウホ"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "arigatougozaimasu",
+        "users": [
+          "U0A1HBXQ9"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1769050048.269189",
+    "edited": {
+      "user": "U01SLEEPKQD",
+      "ts": "1769050099.000000"
+    },
+    "client_msg_id": "1b2d300a-5f38-4157-a4b6-626c68f529e5",
+    "text": "api側でbankactivelogとかをwebhookで保存しないようにしてるので\nf001のplatform_idにasbが入ることはないはずなので、問題なさそう",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1769048858.462029",
+    "parent_user_id": "U0A1HBXQ9",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "7NniW",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "api側でbankactivelogとかをwebhookで保存しないようにしてるので\nf001のplatform_idにasbが入ることはないはずなので、問題なさそう"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "arigatougozaimasu",
+        "users": [
+          "U0A1HBXQ9"
+        ],
+        "count": 1
+      }
+    ]
+  }
+]
