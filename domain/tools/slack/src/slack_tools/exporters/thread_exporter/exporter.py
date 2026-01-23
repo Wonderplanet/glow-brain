@@ -122,7 +122,7 @@ class ThreadExporter:
                         safe_filename = sanitize_filename(file.name)
                         file_path = attachments_dir / f"{file.id}_{safe_filename}"
                         print(f"  - {file.name} -> {file_path.name}")
-                        content = self.client.download_file(file.url_private)
+                        content = self.client.download_file(file.url_private_download)
                         save_binary(file_path, content)
                     except Exception as e:
                         print(f"警告: ファイル {file.name} のダウンロードに失敗: {e}")

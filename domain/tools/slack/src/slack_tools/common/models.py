@@ -10,7 +10,8 @@ class SlackFile:
 
     id: str  # ファイルID
     name: str  # ファイル名
-    url_private: str  # プライベートダウンロードURL
+    url_private: str  # プライベートURL（cookie認証用）
+    url_private_download: str  # プライベートダウンロードURL（Authorizationヘッダー認証用）
     mimetype: str  # MIMEタイプ
     size: int  # ファイルサイズ（バイト）
     title: str | None = None  # ファイルタイトル
@@ -29,6 +30,7 @@ class SlackFile:
             id=data["id"],
             name=data["name"],
             url_private=data["url_private"],
+            url_private_download=data["url_private_download"],
             mimetype=data["mimetype"],
             size=data["size"],
             title=data.get("title"),
