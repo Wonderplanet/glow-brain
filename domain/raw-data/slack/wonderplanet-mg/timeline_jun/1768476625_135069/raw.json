@@ -7,9 +7,9 @@
     "text": "geminiだけで結構いけるな\ngithub repositoryをソースに追加できるし\nスプシとかソースに指定できるし\n出力をスプシとして作成できるし",
     "team": "T01GA4W81GT",
     "thread_ts": "1768476625.135069",
-    "reply_count": 5,
+    "reply_count": 6,
     "reply_users_count": 1,
-    "latest_reply": "1768527425.235199",
+    "latest_reply": "1769168872.766439",
     "reply_users": [
       "U01SLEEPKQD"
     ],
@@ -296,5 +296,121 @@
         "service_name": "support.google.com"
       }
     ]
+  },
+  {
+    "text": "slackスレッドエクスポートテスト用",
+    "files": [
+      {
+        "id": "F0AAXLHNS2D",
+        "created": 1769168845,
+        "timestamp": 1769168845,
+        "name": "image.png",
+        "title": "image.png",
+        "mimetype": "image/png",
+        "filetype": "png",
+        "pretty_type": "PNG",
+        "user": "U01SLEEPKQD",
+        "user_team": "E01BZ3TPJ8K",
+        "editable": false,
+        "size": 11695,
+        "mode": "hosted",
+        "is_external": false,
+        "external_type": "",
+        "is_public": true,
+        "public_url_shared": false,
+        "display_as_bot": false,
+        "username": "",
+        "url_private": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0AAXLHNS2D/image.png",
+        "url_private_download": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0AAXLHNS2D/download/image.png",
+        "media_display_type": "unknown",
+        "thumb_64": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AAXLHNS2D-a4a2843fb1/image_64.png",
+        "thumb_80": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AAXLHNS2D-a4a2843fb1/image_80.png",
+        "thumb_360": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AAXLHNS2D-a4a2843fb1/image_360.png",
+        "thumb_360_w": 360,
+        "thumb_360_h": 28,
+        "thumb_480": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AAXLHNS2D-a4a2843fb1/image_480.png",
+        "thumb_480_w": 480,
+        "thumb_480_h": 38,
+        "thumb_160": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AAXLHNS2D-a4a2843fb1/image_160.png",
+        "thumb_720": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AAXLHNS2D-a4a2843fb1/image_720.png",
+        "thumb_720_w": 720,
+        "thumb_720_h": 57,
+        "thumb_800": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AAXLHNS2D-a4a2843fb1/image_800.png",
+        "thumb_800_w": 800,
+        "thumb_800_h": 63,
+        "original_w": 839,
+        "original_h": 66,
+        "thumb_tiny": "AwAEADDSAwTyTk5+lLRRQAmPr+dL+NFFABSY56n6UtFAH//Z",
+        "permalink": "https://wonderplanet.enterprise.slack.com/files/U09HLJHQR3R/F0AAXLHNS2D/image.png",
+        "permalink_public": "https://slack-files.com/T01BZ3TPJ8K-F0AAXLHNS2D-8a0d36e672",
+        "is_starred": false,
+        "skipped_shares": true,
+        "has_rich_preview": false,
+        "file_access": "visible"
+      },
+      {
+        "id": "F0AA39L00H5",
+        "created": 1769168869,
+        "timestamp": 1769168869,
+        "name": "image.png",
+        "title": "image.png",
+        "mimetype": "image/png",
+        "filetype": "png",
+        "pretty_type": "PNG",
+        "user": "U01SLEEPKQD",
+        "user_team": "E01BZ3TPJ8K",
+        "editable": false,
+        "size": 1457,
+        "mode": "hosted",
+        "is_external": false,
+        "external_type": "",
+        "is_public": true,
+        "public_url_shared": false,
+        "display_as_bot": false,
+        "username": "",
+        "url_private": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0AA39L00H5/image.png",
+        "url_private_download": "https://files.slack.com/files-pri/T01BZ3TPJ8K-F0AA39L00H5/download/image.png",
+        "media_display_type": "unknown",
+        "thumb_64": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AA39L00H5-712baa490e/image_64.png",
+        "thumb_80": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AA39L00H5-712baa490e/image_80.png",
+        "thumb_360": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AA39L00H5-712baa490e/image_360.png",
+        "thumb_360_w": 32,
+        "thumb_360_h": 32,
+        "thumb_160": "https://files.slack.com/files-tmb/T01BZ3TPJ8K-F0AA39L00H5-712baa490e/image_160.png",
+        "original_w": 32,
+        "original_h": 32,
+        "thumb_tiny": "AwAwADDToopruI0LMcAUADyLGMswFNSeOQ4VuaosWlcttLkfkKawIwShU9jigDUoqOCQSRK2QTjn61JQAVWvj+5H+8Ks1Suzuk2sMqozigCJl22yEZJLfw0YzaZ5A3dCeTULM0bp1VDyMU4ZZfmcgDoM9KALdiQGkXvnNW6z7NQbjKdFHJ9a0KACsyaU+ezEZGccdsVp1E1tE77ivP1oAz458QlG2sc/LkdKXbvUblXnnhavfZIf7lM+xR56tt9M0ARWnFwwXpjnFXqZHEkS4QYFPoA//9k=",
+        "permalink": "https://wonderplanet.enterprise.slack.com/files/U09HLJHQR3R/F0AA39L00H5/image.png",
+        "permalink_public": "https://slack-files.com/T01BZ3TPJ8K-F0AA39L00H5-2ef56b4633",
+        "is_starred": false,
+        "skipped_shares": true,
+        "has_rich_preview": false,
+        "file_access": "visible"
+      }
+    ],
+    "upload": false,
+    "user": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "3XIS+",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "slackスレッドエクスポートテスト用"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "type": "message",
+    "ts": "1769168872.766439",
+    "client_msg_id": "8c1aad46-91db-4fec-bf68-140d5232e9cc",
+    "thread_ts": "1768476625.135069",
+    "parent_user_id": "U01SLEEPKQD"
   }
 ]

@@ -2,7 +2,7 @@
 
 **Channel:** timeline_jun (`C057YDF1F0W`)
 **Thread TS:** 1768476625.135069
-**Exported at:** 2026-01-23 20:44:36
+**Exported at:** 2026-01-23 21:09:18
 
 ---
 
@@ -91,4 +91,21 @@ zipにしてもその中身のファイル数が10個以内じゃないと失敗
 **Attachments:**
 
 - `image.png` (image/png, 265483 bytes)
+
+
+### Reply 6
+
+**Author:** Junki Mizutani (`U01SLEEPKQD`)
+**Timestamp:** 2026-01-23 20:47:52 (`1769168872.766439`)
+
+**Message:**
+
+```
+slackスレッドエクスポートテスト用
+```
+
+**Attachments:**
+
+- `image.png` (image/png, 11695 bytes)
+- `image.png` (image/png, 1457 bytes)
 
