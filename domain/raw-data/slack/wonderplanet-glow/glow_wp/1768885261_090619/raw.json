@@ -1,0 +1,1073 @@
+[
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768885261.090619",
+    "client_msg_id": "9c5ac565-73de-4b06-a4a4-732d12947e21",
+    "text": "<!subteam^S07QV7HS76W> (<@U01DXPA51L1> <@UD57AC0EB>\n運営仕様書からミッションのマスタデータを作るGeminiのGemを作ってみましたので、\nもしよろしければ使ってみていただいて、ご評価いただきたいです:man-bowing::skin-tone-2:\n（使える/使えない。まだまだ改善が必要。他の機能でもやってほしい など....。可能なら木曜終日までにご評価いただけると嬉しいです）\n\n幼稚園WARSの運営仕様書から\nイベントミッションデータ(45件)を数分で作ってみた動画 (手順動画)：\n<https://drive.google.com/file/d/15pAwNr3Qg2J-TvbBFqFBnG6dWh-x7oSm/view>\nGeminiで一発作成したイベントミッションデータ：\n<https://docs.google.com/spreadsheets/d/1Ijv213WUXdJvSyNClpYUKCU9EoQvJPFIKM3OoVF2qBo/edit?gid=0#gid=0>\n\n使い方ドキュメント：\n<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1449328643/Gemini+Gem>",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "reply_count": 11,
+    "reply_users_count": 5,
+    "latest_reply": "1769157152.511869",
+    "reply_users": [
+      "U01TLE2AX8Q",
+      "U0129V6BVUL",
+      "U016AL1NM8T",
+      "U01DXPA51L1",
+      "U01SLEEPKQD"
+    ],
+    "is_locked": false,
+    "subscribed": true,
+    "last_read": "1769157152.511869",
+    "attachments": [
+      {
+        "id": 1,
+        "blocks": [
+          {
+            "type": "section",
+            "block_id": "page:{\"contentId\":\"1449328643\",\"instanceId\":\"461e18ca-7256-3923-9e2f-36d8b2614716\",\"spaceKey\":\"GLOW\"}",
+            "text": {
+              "type": "mrkdwn",
+              "text": "*<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1449328643/Gemini+Gem?atlOrigin=eyJpIjoiMDUxOTlkOGNlNDk1NDE2MGFmMGNjYjA5NTIxMzg4ZGYiLCJwIjoiY29uZmx1ZW5jZS1jaGF0cy1pbnQifQ|[Gemini Gem] 運営仕様書からミッションのマスタデータ作成する>*",
+              "verbatim": false
+            }
+          },
+          {
+            "type": "context",
+            "block_id": "TJJEf",
+            "elements": [
+              {
+                "type": "image",
+                "image_url": "https://product-integrations-cdn.atl-paas.net/icons/unknown-user.png",
+                "alt_text": "images"
+              },
+              {
+                "type": "mrkdwn",
+                "text": "Anonymous User | 2 people viewed",
+                "verbatim": false
+              }
+            ]
+          },
+          {
+            "type": "actions",
+            "block_id": "interactivity:{\"contentType\":\"page\",\"instanceId\":\"461e18ca-7256-3923-9e2f-36d8b2614716\",\"id\":\"1449328643\",\"source\":\"unfurl\",\"isSpaceLink\":false,\"spaceId\":\"105873497\"}",
+            "elements": [
+              {
+                "type": "button",
+                "action_id": "view",
+                "text": {
+                  "type": "plain_text",
+                  "text": "View page",
+                  "emoji": true
+                },
+                "style": "primary",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1449328643/Gemini+Gem?atlOrigin=eyJpIjoiZmJmMWE5MjQwMDE1NDFkMTlhODU3OTQ3ZTM3ZGI2OGIiLCJwIjoiY29uZmx1ZW5jZS1jaGF0cy1pbnQifQ"
+              },
+              {
+                "type": "button",
+                "action_id": "saveContentForLater",
+                "text": {
+                  "type": "plain_text",
+                  "text": ":star: Bookmark",
+                  "emoji": true
+                }
+              },
+              {
+                "type": "static_select",
+                "action_id": "overflowActions",
+                "placeholder": {
+                  "type": "plain_text",
+                  "text": "More actions...",
+                  "emoji": true
+                },
+                "options": [
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Watch page",
+                      "emoji": true
+                    },
+                    "value": "watchContent"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Like page",
+                      "emoji": true
+                    },
+                    "value": "like"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Comment",
+                      "emoji": true
+                    },
+                    "value": "addComment"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Share page",
+                      "emoji": true
+                    },
+                    "value": "shareContent"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "color": "#2684ff",
+        "fallback": "[Gemini Gem] 運営仕様書からミッションのマスタデータ作成する",
+        "bot_id": "B07TAQA2C58",
+        "bot_team_id": "T07GTV1LW67",
+        "app_unfurl_url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1449328643/Gemini+Gem",
+        "is_app_unfurl": true,
+        "app_id": "AC23SDS77"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "HLRrS",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "usergroup",
+                "usergroup_id": "S07QV7HS76W"
+              },
+              {
+                "type": "text",
+                "text": " ("
+              },
+              {
+                "type": "user",
+                "user_id": "U01DXPA51L1"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "UD57AC0EB"
+              },
+              {
+                "type": "text",
+                "text": "\n運営仕様書からミッションのマスタデータを作るGeminiのGemを作ってみましたので、\nもしよろしければ使ってみていただいて、ご評価いただきたいです"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-1f3fb-200d-2642-fe0f",
+                "skin_tone": 2
+              },
+              {
+                "type": "text",
+                "text": "\n（使える/使えない。まだまだ改善が必要。他の機能でもやってほしい など....。可能なら木曜終日までにご評価いただけると嬉しいです）\n\n幼稚園WARSの運営仕様書から\nイベントミッションデータ(45件)を数分で作ってみた動画 (手順動画)：\n"
+              },
+              {
+                "type": "link",
+                "url": "https://drive.google.com/file/d/15pAwNr3Qg2J-TvbBFqFBnG6dWh-x7oSm/view"
+              },
+              {
+                "type": "text",
+                "text": "\nGeminiで一発作成したイベントミッションデータ：\n"
+              },
+              {
+                "type": "link",
+                "url": "https://docs.google.com/spreadsheets/d/1Ijv213WUXdJvSyNClpYUKCU9EoQvJPFIKM3OoVF2qBo/edit?gid=0#gid=0"
+              },
+              {
+                "type": "text",
+                "text": "\n\n使い方ドキュメント：\n"
+              },
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/1449328643/Gemini+Gem"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "clapping",
+        "users": [
+          "U016AL1NM8T",
+          "U01DXPA51L1",
+          "U02CFE058EN",
+          "UMV9ZG9NU",
+          "U0113RN4C5S",
+          "U0129V6BVUL",
+          "UHHSKP17Z"
+        ],
+        "count": 7
+      },
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1",
+          "UMV9ZG9NU"
+        ],
+        "count": 2
+      },
+      {
+        "name": "arigatougozaimasu",
+        "users": [
+          "U01TLE2AX8Q",
+          "U02CFE058EN",
+          "UMV9ZG9NU"
+        ],
+        "count": 3
+      },
+      {
+        "name": "sugee",
+        "users": [
+          "UMV9ZG9NU",
+          "U0129V6BVUL"
+        ],
+        "count": 2
+      }
+    ]
+  },
+  {
+    "user": "U01TLE2AX8Q",
+    "type": "message",
+    "ts": "1768885634.521409",
+    "client_msg_id": "c4ae30ae-ba24-4698-95b0-9e7633e0d9d6",
+    "text": "<@U0129V6BVUL> <@U09K37WGAF9>\n作業状況的に、今週の木曜日までに上記利用する機会ありそうですか？",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "be84dd5ea159",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1919370404546_be84dd5ea15964e3f508_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Furusawa",
+      "display_name": "furusawa",
+      "team": "T07GTV1LW67",
+      "name": "junki.furusawa",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "YcYng",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U0129V6BVUL"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U09K37WGAF9"
+              },
+              {
+                "type": "text",
+                "text": "\n作業状況的に、今週の木曜日までに上記利用する機会ありそうですか？"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U0129V6BVUL",
+    "type": "message",
+    "ts": "1768885932.812779",
+    "client_msg_id": "a8c2690f-f062-40b2-a510-7adea1f0ad74",
+    "text": "<@U01TLE2AX8Q> <@U09K37WGAF9>\nふつうの軽音部まで橋本さんが既に対応してくださってるので、ハーフアニバーサリーのミッションで試す形になるかと思います。\n上記機能を詳しく確認できていないので確認してみます。\n\n<@U09K37WGAF9>\nちょっと本日がBOXガシャと商材設計書の量がやばいので、明日のどこかでmtgで一緒にミッション設定試してみる時間取りたいですね。",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "0a160251035c",
+      "image_72": "https://avatars.slack-edge.com/2020-04-21/1075186263730_0a160251035ce3537ef1_72.jpg",
+      "first_name": "Kento",
+      "real_name": "Kento Hirano",
+      "display_name": "Hirano",
+      "team": "T07GTV1LW67",
+      "name": "hirano032",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "LGX86",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U01TLE2AX8Q"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U09K37WGAF9"
+              },
+              {
+                "type": "text",
+                "text": "\nふつうの軽音部まで橋本さんが既に対応してくださってるので、ハーフアニバーサリーのミッションで試す形になるかと思います。\n上記機能を詳しく確認できていないので確認してみます。\n\n"
+              },
+              {
+                "type": "user",
+                "user_id": "U09K37WGAF9"
+              },
+              {
+                "type": "text",
+                "text": "\nちょっと本日がBOXガシャと商材設計書の量がやばいので、明日のどこかでmtgで一緒にミッション設定試してみる時間取りたいですね。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "roger",
+        "users": [
+          "U09K37WGAF9"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U016AL1NM8T",
+    "type": "message",
+    "ts": "1768895222.642829",
+    "client_msg_id": "d5dff71e-49de-4514-b269-c1b6b95aa048",
+    "text": "<@U01SLEEPKQD>\n本当は自分から色々お願いするところだったのに先んじて対応いただきありがとうございます:ojigi:\n他の箇所でも対応いただきたい部分あるので別途相談させてもらえると助かります:man-bowing:",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "eb9f21a6a3a6",
+      "image_72": "https://avatars.slack-edge.com/2022-09-25/4125334844069_eb9f21a6a3a61198bd28_72.png",
+      "first_name": "Ryosuke",
+      "real_name": "Ryosuke Goto",
+      "display_name": "GT-R",
+      "team": "T07GTV1LW67",
+      "name": "r-goto",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "1yznC",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U01SLEEPKQD"
+              },
+              {
+                "type": "text",
+                "text": "\n本当は自分から色々お願いするところだったのに先んじて対応いただきありがとうございます"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              },
+              {
+                "type": "text",
+                "text": "\n他の箇所でも対応いただきたい部分あるので別途相談させてもらえると助かります"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-200d-2642-fe0f"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "man-bowing::skin-tone-2",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      },
+      {
+        "name": "arigatougozaimasu",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      },
+      {
+        "name": "kansya",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01DXPA51L1",
+    "type": "message",
+    "ts": "1768895613.530909",
+    "client_msg_id": "20562f58-24fa-4e39-8a7c-c784e2d125f0",
+    "text": "<@U01SLEEPKQD>\n次はログボかな（ニッコリ）",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "52f877340d73",
+      "image_72": "https://avatars.slack-edge.com/2020-11-02/1475185784884_52f877340d738be9131d_72.png",
+      "first_name": "Toshikazu",
+      "real_name": "Toshikazu Takahashi",
+      "display_name": "Toshi",
+      "team": "T07GTV1LW67",
+      "name": "t-takahashi",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "PTarU",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U01SLEEPKQD"
+              },
+              {
+                "type": "text",
+                "text": "\n次はログボかな（ニッコリ）"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "genbaneko03",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768895679.142429",
+    "client_msg_id": "453cdd8c-dc50-421d-af95-6866f7c49010",
+    "text": "イベントログボはすでに今回対応済みです:ojigi:\nログボとかデイリー、ウィークリーミッションも必要であれば、1日未満で追加できます:genbaneko03:",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "GFT8A",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "イベントログボはすでに今回対応済みです"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              },
+              {
+                "type": "text",
+                "text": "\nログボとかデイリー、ウィークリーミッションも必要であれば、1日未満で追加できます"
+              },
+              {
+                "type": "emoji",
+                "name": "genbaneko03"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "iidesune",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1768895703.350419",
+    "client_msg_id": "71dc55ca-bef8-49e9-b29b-87e685585074",
+    "text": "今回対応したもの\n• イベントミッション\n• 降臨バトルミッション\n• イベントログボ\n• アチーブメントミッション",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "6xe4i",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "今回対応したもの\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_list",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "イベントミッション"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "降臨バトルミッション"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "イベントログボ"
+                  }
+                ]
+              },
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "アチーブメントミッション"
+                  }
+                ]
+              }
+            ],
+            "style": "bullet",
+            "indent": 0,
+            "border": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1769133466.696419",
+    "client_msg_id": "c650fee7-1c8c-4dec-927a-54df7616e66d",
+    "text": "<!subteam^S07QV7HS76W> お忙しいと思うので...お手隙の際で全く構いません:man-bowing::skin-tone-2:\n上記のGemini Gemを使ってみた方がいらっしゃいましたら、ご評価いただけると嬉しいです！\nまだ使ってないという場合でも、例えば他にこのテーブルでもやって欲しいなどありましたら、教えていただければと思います:ojigi:\n（そもそも使えなさそうであれば、別の方法考えます....）",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "xkG21",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "usergroup",
+                "usergroup_id": "S07QV7HS76W"
+              },
+              {
+                "type": "text",
+                "text": " お忙しいと思うので...お手隙の際で全く構いません"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-1f3fb-200d-2642-fe0f",
+                "skin_tone": 2
+              },
+              {
+                "type": "text",
+                "text": "\n上記のGemini Gemを使ってみた方がいらっしゃいましたら、ご評価いただけると嬉しいです！\nまだ使ってないという場合でも、例えば他にこのテーブルでもやって欲しいなどありましたら、教えていただければと思います"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              },
+              {
+                "type": "text",
+                "text": "\n（そもそも使えなさそうであれば、別の方法考えます....）"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "man-bowing",
+        "users": [
+          "U0129V6BVUL"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U0129V6BVUL",
+    "type": "message",
+    "ts": "1769134142.686399",
+    "client_msg_id": "828f199b-0d49-4b62-a889-f1c11d317d78",
+    "text": "<@U01SLEEPKQD>\n今日の16時〜に時間取ってハーフアニバーサリーのミッションで\n テストしてみます！:man-bowing:\n\n<@U09K37WGAF9>\n直近ミッション触ってるのが自分と橋本さんなのでお時間いただきたいですが、\n16~17時大丈夫でしょうか",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "0a160251035c",
+      "image_72": "https://avatars.slack-edge.com/2020-04-21/1075186263730_0a160251035ce3537ef1_72.jpg",
+      "first_name": "Kento",
+      "real_name": "Kento Hirano",
+      "display_name": "Hirano",
+      "team": "T07GTV1LW67",
+      "name": "hirano032",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "ZqfWy",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U01SLEEPKQD"
+              },
+              {
+                "type": "text",
+                "text": "\n今日の16時〜に時間取ってハーフアニバーサリーのミッションで\n テストしてみます！"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-200d-2642-fe0f"
+              },
+              {
+                "type": "text",
+                "text": "\n\n"
+              },
+              {
+                "type": "user",
+                "user_id": "U09K37WGAF9"
+              },
+              {
+                "type": "text",
+                "text": "\n直近ミッション触ってるのが自分と橋本さんなのでお時間いただきたいですが、\n16~17時大丈夫でしょうか"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "roger",
+        "users": [
+          "U09K37WGAF9"
+        ],
+        "count": 1
+      },
+      {
+        "name": "sho-chi",
+        "users": [
+          "U09K37WGAF9"
+        ],
+        "count": 1
+      },
+      {
+        "name": "man-bowing::skin-tone-2",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1769134630.252529",
+    "client_msg_id": "ee48ce95-129e-49a2-a0af-0d743ad76ae8",
+    "text": "<@U0129V6BVUL> ありがとうございます:man-bowing::skin-tone-2::man-bowing::skin-tone-2:\nもしよろしければ、水谷も参加させていただきたいです！",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "iBpyD",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U0129V6BVUL"
+              },
+              {
+                "type": "text",
+                "text": " ありがとうございます"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-1f3fb-200d-2642-fe0f",
+                "skin_tone": 2
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-1f3fb-200d-2642-fe0f",
+                "skin_tone": 2
+              },
+              {
+                "type": "text",
+                "text": "\nもしよろしければ、水谷も参加させていただきたいです！"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "arigatougozaimasu",
+        "users": [
+          "U0129V6BVUL"
+        ],
+        "count": 1
+      },
+      {
+        "name": "roger",
+        "users": [
+          "U0129V6BVUL"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U0129V6BVUL",
+    "type": "message",
+    "ts": "1769153199.857109",
+    "client_msg_id": "905bf1e4-c931-468d-b06b-bf5cbf85c787",
+    "text": "<@U01SLEEPKQD> <@U09K37WGAF9> (<!subteam^S07QV7HS76W>\nmtgでの使用方法をレクチャーしていただきながら試しで使ってみた所感。\n用法を間違えなければ仕様書テンプレート通りの「*04_ミッション*」の記載であれば\nかなり精度高くマスタを出力してくれていそう。\n\n・今回はふつうの軽音部仕様書でテスト\nMstMissionEventはクエスト条件やクエスト名など確認した範囲では全て間違いなく出力されていた。\n※既存アイテムも報酬に入ってることあるので、該当の仕様書だけではなくID管理のアイテムもまとめて読み込ませると報酬指定の抜け漏れなくなりそう",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "0a160251035c",
+      "image_72": "https://avatars.slack-edge.com/2020-04-21/1075186263730_0a160251035ce3537ef1_72.jpg",
+      "first_name": "Kento",
+      "real_name": "Kento Hirano",
+      "display_name": "Hirano",
+      "team": "T07GTV1LW67",
+      "name": "hirano032",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "l/MDs",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U01SLEEPKQD"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U09K37WGAF9"
+              },
+              {
+                "type": "text",
+                "text": " ("
+              },
+              {
+                "type": "usergroup",
+                "usergroup_id": "S07QV7HS76W"
+              },
+              {
+                "type": "text",
+                "text": "\nmtgでの使用方法をレクチャーしていただきながら試しで使ってみた所感。\n用法を間違えなければ仕様書テンプレート通りの「"
+              },
+              {
+                "type": "text",
+                "text": "04_ミッション",
+                "style": {
+                  "bold": true
+                }
+              },
+              {
+                "type": "text",
+                "text": "」の記載であれば\nかなり精度高くマスタを出力してくれていそう。\n\n・今回はふつうの軽音部仕様書でテスト\nMstMissionEventはクエスト条件やクエスト名など確認した範囲では全て間違いなく出力されていた。\n※既存アイテムも報酬に入ってることあるので、該当の仕様書だけではなくID管理のアイテムもまとめて読み込ませると報酬指定の抜け漏れなくなりそう"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "genbaneko03",
+        "users": [
+          "U01SLEEPKQD",
+          "U09CN1X0C6L"
+        ],
+        "count": 2
+      },
+      {
+        "name": "arigatougozaimasu",
+        "users": [
+          "U01SLEEPKQD"
+        ],
+        "count": 1
+      },
+      {
+        "name": "sugee",
+        "users": [
+          "UMV9ZG9NU"
+        ],
+        "count": 1
+      },
+      {
+        "name": "clapping",
+        "users": [
+          "U01DXPA51L1"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U01SLEEPKQD",
+    "type": "message",
+    "ts": "1769157152.511869",
+    "client_msg_id": "4c6afc05-0e11-4f19-84d7-217bbf7756f1",
+    "text": "<@U0129V6BVUL> <@U09K37WGAF9>\n使ってみていただいてありがとうございます:man-bowing::skin-tone-2:\nうまくいってすごく嬉しいです！\n\nとりあえず今回作ったミッションマスタ作成は、良い感じだったということで、\n方針間違ってなかったと言えそう :genbaneko03:\n\n他のデータでも作って欲しいなどありましたら、お気軽にご相談ください:ojigi:",
+    "team": "T07GTV1LW67",
+    "user_team": "T07GTV1LW67",
+    "source_team": "T07GTV1LW67",
+    "user_profile": {
+      "avatar_hash": "deeb0aa5e6af",
+      "image_72": "https://avatars.slack-edge.com/2021-04-01/1912002852870_deeb0aa5e6af7f2f8cb8_72.jpg",
+      "first_name": "Junki",
+      "real_name": "Junki Mizutani",
+      "display_name": "jun",
+      "team": "T07GTV1LW67",
+      "name": "junki.mizutani",
+      "is_restricted": false,
+      "is_ultra_restricted": false
+    },
+    "thread_ts": "1768885261.090619",
+    "parent_user_id": "U01SLEEPKQD",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "fHmkB",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U0129V6BVUL"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U09K37WGAF9"
+              },
+              {
+                "type": "text",
+                "text": "\n使ってみていただいてありがとうございます"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-1f3fb-200d-2642-fe0f",
+                "skin_tone": 2
+              },
+              {
+                "type": "text",
+                "text": "\nうまくいってすごく嬉しいです！\n\nとりあえず今回作ったミッションマスタ作成は、良い感じだったということで、\n方針間違ってなかったと言えそう "
+              },
+              {
+                "type": "emoji",
+                "name": "genbaneko03"
+              },
+              {
+                "type": "text",
+                "text": "\n\n他のデータでも作って欲しいなどありましたら、お気軽にご相談ください"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "ojigi",
+        "users": [
+          "U016AL1NM8T",
+          "U09K37WGAF9"
+        ],
+        "count": 2
+      }
+    ],
+    "saved": {
+      "is_archived": false,
+      "date_completed": 0,
+      "state": "in_progress"
+    }
+  }
+]
