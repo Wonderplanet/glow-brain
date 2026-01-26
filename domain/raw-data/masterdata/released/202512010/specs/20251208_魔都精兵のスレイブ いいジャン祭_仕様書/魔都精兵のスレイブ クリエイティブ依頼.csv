@@ -1,0 +1,225 @@
+,"クリエイティブ一覧
+https://docs.google.com/spreadsheets/d/1s-5R4ijjb7AXckYDBmqBgHFsZzbOPVe_SvX3hlK5Fdw/edit?gid=576303298#gid=5763032981",,,,,,,,,,,,,,,
+,"監修資料（監修ち提出後にリンクを貼る）
+",,,,,,,,,,,,,,,
+,項目,仕様/補足,数量,工数, 画像,規格,"アップ先
+S3/AB","画像ID
+（PLAN側に確認）
+！アイテムIDとは違うので記載注意！","監修
+ステータス","BNE様へ
+PSDデータ提出
+","デザイナー
+担当者",制作ステータス,"命名規則
+※[ ]内はマスターデータ・運用単位で命名が変化します",,,
+,新規アイテム,,,,,,,,,,,,,,,
+,【カラーメモリー】,"・和倉 青羽のメモリー
+　ブルーメモリー
+　item_icon_memory_chara_sur_00701",1,0.1,,150×150,AB,item_icon_memory_chara_sur_00701,監修不要,提出不要,望月,,stage_icon_[:asset_key],,,
+,,"・無窮の鎖 和倉 優希のメモリー
+　イエローカラーメモリー
+　item_icon_memory_chara_sur_00801",1,,,150×150,AB,item_icon_memory_chara_sur_00801,監修不要,提出不要,望月,,stage_icon_[:asset_key],,,
+,エンブレム,,,,,,,,,,,,,,,
+,【降臨バトルエンブレム】,"屈服の時間だ
+emblem_icon_adventbattle_sur_season01_00001",6,0.2,,120×120,AB,emblem_icon_adventbattle_sur_season01_00001,監修通過,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,,emblem_icon_adventbattle_sur_season01_00002,,,,120×120,AB,emblem_icon_adventbattle_sur_season01_00002,監修通過,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,,emblem_icon_adventbattle_sur_season01_00003,,,,120×120,AB,emblem_icon_adventbattle_sur_season01_00003,監修通過,PNG提出必要,江村,,emblem_icon_[:asset_key],,,0
+,,emblem_icon_adventbattle_sur_season01_00004,,,,120×120,AB,emblem_icon_adventbattle_sur_season01_00004,監修通過,PNG提出必要,江村,,emblem_icon_[:asset_key],,,0
+,,emblem_icon_adventbattle_sur_season01_00005,,,,120×120,AB,emblem_icon_adventbattle_sur_season01_00005,監修通過,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,,emblem_icon_adventbattle_sur_season01_00006,,,,120×120,AB,emblem_icon_adventbattle_sur_season01_00006,監修通過,PNG提出必要,江村,,emblem_icon_[:asset_key],,,
+,【イベントエンブレム】,"魔都防衛隊エンブレム(仮)
+emblem_icon_event_sur_00001
+
+中央の丸と刀の部分だけ(文字と周囲の四角はなしでOK)",1,1,,120×120,AB,emblem_icon_event_sur_00001,監修通過,PNG提出必要,どん,,emblem_icon_[:asset_key],,,
+,,"羽前 京香(仮)
+emblem_icon_event_sur_00002
+怪獣８号のような顔エンブレム
+文字なし",1,1,,120×120,AB,emblem_icon_event_sur_00002,監修通過,PNG提出必要,どん,,emblem_icon_[:asset_key],,,
+,,"出雲 天花(仮)
+emblem_icon_event_sur_00003
+怪獣８号のような顔エンブレム
+文字なし",,1,,120×120,AB,emblem_icon_event_sur_00003,監修通過,PNG提出必要,どん,,,,,
+,,,,,,,,,,,,,,,,
+,原画のかけら,,,,,,,,,,,,,,,
+,【原画のかけら】,"【原画のかけら】a+b
+①※参照先：5巻047P
+artwork_event_sur_0001
+※画像だと下が少し残っているが、綺麗に切る",2×2,0.2,,"524×524
+154×154",AB,artwork_event_sur_0001,監修不要,提出不要,望月,,"artwork_[:asset_key]a
+artwork_[:asset_key]b",,,
+,,"②※参照先：5巻056P
+artwork_event_sur_0002",,,,"524×524
+154×154",AB,artwork_event_sur_0002,監修不要,提出不要,望月,,,,,
+,プレハブ関連,,,,,,,,,,,,,,,
+,【コンテンツTOP】プレハブ,"【コンテンツTOP】 プレハブ
+・誇り高き魔都の剣姫 羽前 京香
+・空間を操る六番組組長 出雲 天花
+・東 日万凛
+・東 八千穂
+・無窮の鎖 和倉 優希
+・和倉 青羽（敵側：対決構図がよさげ）
+※赤字は必須、残りは入れられたらでOK
+",1,2,,"プレハブ
+（画像は1000 × 520）",AB,event_sur_00001_quest_select,監修通過,"PNG/PSD提出必要
+※監修提出前にBNE側にPSDを提出",望月,,[:asset_key]_quest_select ※プレハブ名,,,
+,【クエストバナー】デイリー,"プリズム
+quest_event_sur1_1day",1,0.1,,334×115,AB,sur1_1day_quest_select_cell,監修通過,PNG提出必要,望月,,[:mst_quest.asset_key]_quest_select_cell,,,
+,【クエストバナー】ストーリー1,"【コンテンツTOP】 Sバナーストリー1
+【ストーリー】無窮の鎖 和倉 優希編
+quest_event_sur1_charaget01",1,0.1,,334×115,AB,sur1_charaget01_quest_select_cell,監修通過,PNG提出必要,望月,,[:mst_quest.asset_key]_quest_select_cell,,,
+,【クエストバナー】ストーリー2,"【コンテンツTOP】 Sバナーストリー2
+【ストーリー】和倉 青羽 編
+quest_event_sur1_charaget02",1,0.1,,334×115,AB,sur1_charaget02_quest_select_cell,監修通過,PNG提出必要,望月,,[:mst_quest.asset_key]_quest_select_cell,,,
+,【クエストバナー】チャレンジ,"【コンテンツTOP】 Sバナーチャレンジ
+・空間を操る六番組組長 出雲 天花のかけら
+・誇り高き魔都の剣姫 羽前 京香のかけら
+・東 八千穂のかけら
+
+quest_event_sur1_challenge01",1,0.1,,334×115,AB,sur1_challenge01_quest_select_cell,監修通過,PNG提出必要,望月,,[:mst_quest.asset_key]_quest_select_cell,,,
+,【クエストバナー】高難度,"【コンテンツTOP】 Sバナー高難度
+・エンブレム＊２
+・プリズム
+quest_event_sur1_savage",1,0.1,,334×115,AB,sur1_savage_quest_select_cell,監修通過,PNG提出必要,望月,,[:mst_quest.asset_key]_quest_select_cell,,,
+,【ステージサムネール】,"キャラ_無窮の鎖 和倉 優希
+stage_icon_event_sur1_00001
+無窮の鎖 和倉 優希のかけら        
+stage_icon_event_sur1_00002
+無窮の鎖 和倉 優希のメモリー        
+stage_icon_event_sur1_00003
+
+キャラ_和倉 青羽        
+stage_icon_event_sur1_00004
+和倉 青羽のかけら        
+stage_icon_event_sur1_00005
+和倉 青羽メモリー        
+stage_icon_event_sur1_00006
+
+誇り高き魔都の剣姫 羽前 京香のかけら       
+stage_icon_event_sur1_00007
+空間を操る六番組組長 出雲 天花のかけら     
+stage_icon_event_sur1_00008
+東 八千穂のかけら   
+stage_icon_event_sur1_00009
+
+エンブレム：魔都防衛隊 
+stage_icon_event_sur1_00010
+エンブレム：羽前 京香
+stage_icon_event_sur1_00011
+エンブレム：出雲 天花        
+stage_icon_event_sur1_00012",9,0.3,,126×102,AB,,監修不要,提出不要,望月,,stage_icon_[:asset_key],,,
+,バナー類,,,,,,,,,,,,,,,
+,【イベントミッションバナー】ログインボーナス,"【お知らせ】ログインボーナス_Mバナー
+魔都精兵のスレイブ いいジャン祭 特別ログインボーナス
+・和倉 優希
+・和倉 青羽
+・カラーメモリーをレッドとイエロー
+event_sur_00001_loginbonus",1,0.4,,668×220,AB,event_sur_00001_loginbonus,監修通過,PNG提出必要,望月,,[:asset_key]_loginbonus,,,
+,"【イベントミッションバナー】ミッション
+","魔都精兵のスレイブ いいジャン祭特別ミッション
+「特別ミッション」で名称は今後固定
+【お知らせ】ミッション_Mバナー
+・東 日万凛
+・東 八千穂
+event_sur_00001_mission",1,0.4,,668×220,AB,event_sur_00001_mission,監修通過,PNG提出必要,望月,,[:asset_key]_mission,,,
+,【イベントTOPバナー】いいジャン祭,"報酬：変更なし
+
+「【コンテンツTOP】 プレハブ」の要素を流用して作成",1,0.4,,698×200,AB,event_sur_00001_banner,監修通過,PNG提出必要,望月,,[:asset_key]_banner,,,
+,【お知らせ_Mバナー】いいジャン祭,"キャラ
+・誇り高き魔都の剣姫 羽前 京香
+・空間を操る六番組組長 出雲 天花
+・無窮の鎖 和倉 優希
+notice_event_sur_00001",1,0.4,,668×220,不要,notice_event_sur_00001,監修通過,PNG/PSD提出必要,江村,,notice_[:png_name],,,
+,【ホームバナー】いいジャン祭,「【お知らせ】いいジャン祭開催お知らせ_Mバナー」を流用して作成,1,,,306×100,S3,hometop_event_sur_00001,監修通過,PNG提出必要,江村,,hometop_[:png_name],,,
+,【降臨バトル開催のお知らせ】,"魔防隊と戦う者
+キャラあり",1,0.4,,668×220,不要,,監修通過,PNG提出必要,江村,,,,,
+新規追加11/14,"【パックバナー】お得強化パック
+","キャラ無し
+
+値段：¥980
+パック内容物
+・メモリーフラグメント・初級：50個
+・メモリーフラグメント・中級：30個
+・メモリーフラグメント・上級：3個
+
+単発販売だけでなく継続的に再販するかもしれないとのことです。
+
+F列に貼らせていただいているのはイメージ画像です。(削除していただいて大丈夫です)
+980円なのでいいジャン祭パックよりは価値が低いです。内容物としても丸っとピックアップガシャチケが10枚減らされています",,0.4,,,AB,shop_pack_banner_pack_00017,監修不要,PNG提出必要,江村,,,,,
+新規追加11/14,【お知らせ_Mバナー】お得強化パック,"キャラ無し
+
+値段：¥980
+パック内容物
+・メモリーフラグメント・初級：50個
+・メモリーフラグメント・中級：30個
+・メモリーフラグメント・上級：3個
+
+お知らせやIGNの表示で使うもの",,0.2,,,不要,notice_shop_pack_00014,監修不要,PNG提出必要,江村,,,,,
+,ガシャバナー,,,,,,,,,,,,,,,
+,"【ガシャTOP_Lバナー】
+魔都精兵のスレイブ いいジャン祭ピックアップガシャ
+・空間を操る六番組組長 出雲 天花
+・東 八千穂","・空間を操る六番組組長 出雲 天花:UR
+
+・東 八千穂:SSR
+
+gacha_banner_sur_00001
+",1,0.7,,668×370,S3,gacha_banner_sur_00001,監修通過,PNG提出必要,江村,,gacha_banner_[:banner_url],,,
+,"【お知らせ_Mバナー】
+魔都精兵のスレイブ いいジャン祭ピックアップガシャ
+・空間を操る六番組組長 出雲 天花
+・東 八千穂","・空間を操る六番組組長 出雲 天花:UR
+
+・東 八千穂:SSR
+
+notice_gacha_sur_00001",1,,,668×220,不要,notice_gacha_sur_00001,監修通過,PNG提出必要,江村,,gacha_gacha_[:banner_url],,,
+,"【ホームバナー】
+魔都精兵のスレイブ いいジャン祭ピックアップガシャ
+・空間を操る六番組組長 出雲 天花
+・東 八千穂","・空間を操る六番組組長 出雲 天花:UR
+
+・東 八千穂:SSR
+
+hometop_gacha_sur_00001
+",1,,,"  
+ 	
+306×100
+",S3,hometop_gacha_sur_00001,監修通過,PNG提出必要,江村,アップ済み,hometop_[:png_name],,,
+,"【ガシャTOP_Lバナー】
+魔都精兵のスレイブ いいジャン祭ピックアップガシャ
+・誇り高き魔都の剣姫 羽前 京香
+・東 日万凛","・誇り高き魔都の剣姫 羽前 京香:UR
+・東 八千穂:SSR
+
+・東 日万凛:SR
+
+notice_gacha_sur_00002",1,0.7,,668×370,S3,gacha_banner_sur_00002,監修通過,PNG提出必要,江村,,gacha_banner_[:banner_url],,,
+,"【お知らせ_Mバナー】
+魔都精兵のスレイブ  いいジャン祭ピックアップガシャ
+・誇り高き魔都の剣姫 羽前 京香
+・東 日万凛","・誇り高き魔都の剣姫 羽前 京香:UR
+・東 八千穂:SSR
+
+・東 日万凛:SR
+gacha_banner_sur_00002",1,,,668×220,不要,notice_gacha_sur_00002,監修通過,PNG提出必要,江村,,gacha_gacha_[:banner_url],,,
+,"【ホームバナー】
+魔都精兵のスレイブ  いいジャン祭ピックアップガシャ
+・誇り高き魔都の剣姫 羽前 京香
+・東 日万凛","・誇り高き魔都の剣姫 羽前 京香:UR
+・東 八千穂:SSR
+
+・東 日万凛:SR
+hometop_gacha_sur_00002",1,,,"  
+ 	
+306×100
+",S3,hometop_gacha_sur_00002,監修通過,PNG提出必要,江村,アップ済み,hometop_[:png_name],,,
+,（不要）【図鑑_シリーズバナー】,,1,,,300×300,AB,,,,,,series_banner_[:asset_key],その他,都度,
+,（不要）【図鑑_シリーズロゴ),,1,,,350×245,AB,,,,,,series_logo_[:asset_key],その他,都度,
+,"（不要）クエストバナー降臨バトル
+","
+データ設定で済むか要確認",,,,,,,,,,,,,,
+,（不要）いいジャン祭パック,"既存バナーを流用
+",,,不要かも,,,,,,,,,,,
+,施策ロゴ_作成とチームメンバーへの共有(一番初めにやる),,,0.2,,,,,,PNG/PSD提出必要,望月,,,,,
+,,,,工数の合計値↓,,,,,,,,,,,,
+,,,,10.5,,,,,,,,,,,,
+,,,江村さん工数,3,,,,,,,,,,,,
+,,,望月さん工数,4.5,,,,,,,,,,,,
