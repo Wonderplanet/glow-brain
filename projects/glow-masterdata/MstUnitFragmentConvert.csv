@@ -1,0 +1,9 @@
+ENABLE,id,unit_label,convert_amount,release_key
+e,1,DropR,10,202509010
+e,2,DropSR,10,202509010
+e,3,DropSSR,20,202509010
+e,4,PremiumR,10,202509010
+e,5,PremiumSR,10,202509010
+e,6,PremiumSSR,20,202509010
+e,7,PremiumUR,50,202509010
+e,8,FestivalUR,50,202509010

@@ -1,0 +1,10 @@
+# 機能間の依存関係
+deptrac:
+  paths:
+    - ./app
+
+imports:
+  - deptrac/module/imports/auth.yaml
+  - deptrac/module/imports/common.yaml
+  - deptrac/module/imports/device_link.yaml
+  - deptrac/module/imports/user.yaml

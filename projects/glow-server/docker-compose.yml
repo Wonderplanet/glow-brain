@@ -1,0 +1,186 @@
+version: '3'
+services:
+    nginx: &nginx
+        build:
+            context: ./docker/nginx
+        volumes:
+            -  ./docker/logs/nginx:/var/log/nginx
+            -  ./api/:/var/www
+        ports:
+            - ${NGINX_PORT:-8080}:80
+        restart: "${CONTAINER_RESTART:-no}"
+        profiles:
+            - phpfpm-newrelic
+            - local
+    nginx-admin:
+        build:
+            context: ./docker/nginx-admin
+        volumes:
+            -  ./docker/logs/nginx-admin:/var/log/nginx
+            -  ./admin/:/var/www
+        ports:
+            - ${NGINX_ADMIN_PORT:-8081}:80
+        restart: "${CONTAINER_RESTART:-no}"
+    php:
+        build:
+            context: ./docker/php
+            args:
+                NEWRELIC_KEY: ${NEWRELIC_KEY}
+                NEWRELIC_ENV: ${NEWRELIC_ENV}
+        environment:
+            - XDEBUG_ENABLED
+        volumes:
+            -  ./api/:/var/www
+            -  ./lib/laravel-wp-billing/:/var/local/lib/laravel-wp-billing
+            -  ./lib/laravel-wp-currency/:/var/local/lib/laravel-wp-currency
+            -  ./lib/laravel-wp-encryption/:/var/local/lib/laravel-wp-encryption
+            -  ./lib/laravel-wp-instrumentation/:/var/local/lib/laravel-wp-instrumentation
+            -  ./lib/laravel-wp-common/:/var/local/lib/laravel-wp-common
+            -  ./lib/laravel-wp-master-asset-release/:/var/local/lib/laravel-wp-master-asset-release
+            # GooglePlay Storeの証明書などを配置するディレクトリ
+            #   プロダクトごとに設定する必要がある。このDocker環境ではここにする。
+            #   読み込むファイルパスはwp_currency.phpおよび.envで指定しているため、そちらも合わせて調整すること
+            -  ./docker/php/certificates:/var/local/wonderplanet/certificates:ro
+            -  ./docker/php/update_xdebug_ini.sh:/update_xdebug_ini.sh:ro
+        restart: "${CONTAINER_RESTART:-no}"
+        entrypoint: /update_xdebug_ini.sh
+        command: ["/usr/sbin/php-fpm", "--nodaemonize"]
+        profiles:
+            - phpfpm-newrelic
+            - local
+    php-admin:
+        build:
+            context: ./docker/php-admin
+            args:
+                GIT_USER: ${GIT_USER_ID}
+                GIT_TOKEN: ${GIT_USER_TOKEN}
+                GIT_SSH_KEY: ${GIT_SSH_KEY}
+        volumes:
+            -  ./admin/:/var/www
+            -  ./api/:/var/api
+            -  ./share/:/var/share
+            -  ./lib/:/var/lib
+            -  ./docker/php-admin/:/tmp/docker
+            -  ./docker/php-admin/99-xdebug.ini:/etc/php.d/99-xdebug.ini
+        restart: "${CONTAINER_RESTART:-no}"
+    mysql:
+        image: mysql:8.0
+        volumes:
+            - ./docker/sync/mysql/data:/var/lib/mysql
+            - ./docker/mysql:/etc/mysql/conf.d
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=local
+        ports:
+            - ${MYSQL_PORT:-33060}:3306
+        restart: "${CONTAINER_RESTART:-no}"
+    tidb:
+        build:
+            context: ./docker/tidb
+        volumes:
+            - tidb-data:/tidb-data
+            - ./docker/sync/tidb/data:/var/lib/mysql
+            - ./docker/tidb:/etc/mysql/conf.d
+        command: /bin/sh -c "exec /root/.tiup/bin/tiup playground ${TIDB_VERSION} --host 0.0.0.0 --tag=devenv --db 1 --kv 1 --pd 1 --tiflash 0"
+        ports:
+            - ${TIDB_PORT:-4000}:4000
+            - ${TIDB_HTTP_PORT:-10080}:10080
+            - ${TIDB_DASHBOARD_PORT:-2379}:2379
+            - ${TIDB_GRAFANA_PORT:-3000}:3000
+        restart: "${CONTAINER_RESTART:-no}"
+        profiles:
+            - local
+    redis:
+        image: redis:6.2
+        ports:
+            - ${REDIS_PORT:-6379}:6379
+        restart: "${CONTAINER_RESTART:-no}"
+
+    # glow-schemaのymlからマイグレーションファイルを生成するためのサービス
+    php-generate-migration:
+        build:
+            context: ./docker/php
+        entrypoint: ["php", "artisan", "generate:api:create-mst-migration"]
+        volumes:
+            -  ./api/:/var/www
+            - ../glow-schema/:/var/local/glow-schema
+            # コマンド実行時のClassLoader処理のcomposer autoloadでファイル存在しないエラーになるので、マウントしてます
+            -  ./lib/laravel-wp-billing/:/var/local/lib/laravel-wp-billing
+            -  ./lib/laravel-wp-currency/:/var/local/lib/laravel-wp-currency
+        restart: "no"  # 終了後に再起動しない
+        profiles:
+            - generate-migration
+
+    # datadog_settings_header ※CI環境ではコメントアウト
+    dd-agent:
+        build:
+            context: ./docker/datadog-dev
+            args:
+                DD_REDIS_HOST: ${DD_REDIS_HOST:-redis}
+                DD_REDIS_PORT: ${DD_REDIS_PORT:-6379}
+                DD_CONTAINER_EXCLUDE: "image:.*"
+                DD_CONTAINER_INCLUDE: "${DD_CONTAINER_INCLUDE:-}"
+        environment:
+            - DD_API_KEY=${DD_API_KEY:-}
+            - DD_APM_ENABLED=${DD_APM_ENABLED:-}
+            - DD_SITE=${DD_SITE:-}
+            - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=${DD_DOGSTATSD_NON_LOCAL_TRAFFIC:-}
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock:ro
+            - /proc/:/host/proc/:ro
+            - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
+        restart: "${CONTAINER_RESTART:-no}"
+        profiles:
+            - phpfpm-datadog
+    # datadog_settings_footer ※CI環境ではコメントアウト
+
+    # PHP-FPM + Datadog
+    # php-datadogをdepends_onに設定しているため、nginxとサービスを分ける
+    # 共通する部分はnginxサービスの設定を引き継ぐ
+    nginx-datadog:
+        <<: *nginx
+        profiles:
+            - phpfpm-datadog
+        depends_on:
+            # datadogのphpにdepends_onを設定しているため、nginx-datadogにも設定する
+            # 起動する順番がdatadogのphp -> nginx-datadogとするため
+            # nginx起動時にdatadogのphpが起動していないとホストがみつからずnginxも起動できない
+            - php-datadog
+
+    php-datadog:
+        hostname: php
+        build:
+            context: ./docker/php-datadog
+            args:
+                DD_TRACE_PHP_VERSION: ${DD_TRACE_PHP_VERSION:-1.5.1}
+        environment:
+            - DD_AGENT_HOST=${DD_AGENT_HOST:-dd-agent}
+            - DD_TRACE_AGENT_PORT=${DD_TRACE_AGENT_PORT:-8126}
+            - DD_ENV=${DD_ENV:-}
+            - DD_SERVICE=${DD_SERVICE:-}
+            - DD_VERSION=${DD_VERSION:-}
+            - DD_TRACE_SPANS_LIMIT=${DD_TRACE_SPANS_LIMIT:-}
+            - DD_HTTP_SERVER_ROUTE_BASED_NAMING=${DD_HTTP_SERVER_ROUTE_BASED_NAMING:-}
+            - DD_APPSEC_ENABLED=false
+        volumes:
+            -  ./api/:/var/www
+            -  ./lib/laravel-wp-billing/:/var/local/lib/laravel-wp-billing
+            -  ./lib/laravel-wp-currency/:/var/local/lib/laravel-wp-currency
+            -  ./lib/laravel-wp-encryption/:/var/local/lib/laravel-wp-encryption
+            -  ./lib/laravel-wp-instrumentation/:/var/local/lib/laravel-wp-instrumentation
+            -  ./lib/laravel-wp-common/:/var/local/lib/laravel-wp-common
+            -  ./lib/laravel-wp-master-asset-release/:/var/local/lib/laravel-wp-master-asset-release
+            # GooglePlay Storeの証明書などを配置するディレクトリ
+            #   プロダクトごとに設定する必要がある。このDocker環境ではここにする。
+            #   読み込むファイルパスはwp_currency.phpおよび.envで指定しているため、そちらも合わせて調整すること
+            -  ./docker/php/certificates:/var/local/wonderplanet/certificates:ro
+        links:
+            - dd-agent
+        depends_on:
+            - dd-agent
+        restart: "${CONTAINER_RESTART:-no}"
+        profiles:
+            - phpfpm-datadog
+
+volumes:
+    tidb-data:

@@ -1,0 +1,148 @@
+data:
+  - name: MstOutpost
+    obscure: true
+    #impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: assetKey
+        type: string
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+
+
+  - name: MstEnemyOutpost
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: hp
+        type: int
+      - name: outpostAssetKey
+        type: string
+      - name: artworkAssetKey
+        type: string
+      - name: isDamageInvalidation # 無敵かどうか？
+        type: bool
+
+  - name: MstOutpostEnhancement
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstOutpostId
+        type: string
+      - name: outpostEnhancementType
+        type: OutpostEnhancementType
+      - name: assetKey
+        type: string
+
+  - name: MstOutpostEnhancementI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstOutpostEnhancementId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+
+  - name: MstOutpostEnhancementLevel
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstOutpostEnhancementId
+        type: string
+      - name: level
+        type: int
+      - name: costCoin
+        type: long
+      - name: enhancementValue
+        type: double
+
+  - name: MstOutpostEnhancementLevelI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstOutpostEnhancementLevelId
+        type: string
+      - name: language
+        type: Language
+      - name: description
+        type: string
+
+  - name: UsrOutpost
+    obscure: true
+    params:
+      - name: mstOutpostId
+        type: string
+      - name: mstArtworkId
+        type: string
+      - name: isUsed
+        type: bool
+
+  - name: UsrOutpostEnhancement
+    obscure: true
+    params:
+      - name: mstOutpostId
+        type: string
+      - name: mstOutpostEnhancementId
+        type: string
+      - name: level
+        type: int
+
+  - name: EnhanceResult
+    obscure: true
+    params:
+      - name: beforeLevel
+        type: int
+      - name: afterLevel
+        type: int
+      - name: usrParameter
+        type: UsrParameterData
+
+  - name: ChangeArtworkResult
+    obscure: true
+    params:
+      - name: usrOutpost
+        type: UsrOutpostData
+
+enum:
+  - name: OutpostEnhancementType
+    obscure: true
+    params:
+      - name: LeaderPointSpeed
+      - name: LeaderPointLimit
+      - name: OutpostHP
+      - name: SummonInterval
+      - name: LeaderPointUp
+      - name: RushChargeSpeed
+
+api:
+  - name: Outpost
+    actions:
+      - name: Enhance
+        path: "/api/outpost/enhance"
+        params:
+          - name: mstOutpostEnhancementId
+            type: string
+          - name: level
+            type: int
+        method: POST
+        response: EnhanceResultData
+
+      - name: ChangeArtwork
+        path: "/api/outpost/change_artwork"
+        params:
+          - name: mstOutpostId
+            type: string
+          - name: mstArtworkId
+            type: string
+        method: POST
+        response: ChangeArtworkResultData
