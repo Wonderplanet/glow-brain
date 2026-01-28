@@ -1,0 +1,8 @@
+ENABLE,id,release_key,mission_daily_bonus_type,login_day_count,mst_mission_reward_group_id,sort_order
+e,daily_bonus_1,202509010,DailyBonus,1,daily_bonus_reward_1_1,1
+e,daily_bonus_2,202509010,DailyBonus,2,daily_bonus_reward_1_2,2
+e,daily_bonus_3,202509010,DailyBonus,3,daily_bonus_reward_1_3,3
+e,daily_bonus_4,202509010,DailyBonus,4,daily_bonus_reward_1_4,4
+e,daily_bonus_5,202509010,DailyBonus,5,daily_bonus_reward_1_5,5
+e,daily_bonus_6,202509010,DailyBonus,6,daily_bonus_reward_1_6,6
+e,daily_bonus_7,202509010,DailyBonus,7,daily_bonus_reward_1_7,7

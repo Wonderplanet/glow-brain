@@ -1,0 +1,3 @@
+memo
+TABLE,MstUnitGradeCoefficient,MstUnitGradeCoefficient,MstUnitGradeCoefficient,MstUnitGradeCoefficient,MstUnitGradeCoefficient
+ENABLE,id,grade_level,unit_label,coefficient,release_key

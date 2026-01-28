@@ -1,0 +1,5 @@
+ENABLE,id,mst_event_id,exchange_trade_type,start_at,end_at,lineup_group_id,display_order,release_key
+e,normal_01,__NULL__,NormalExchangeTrade,"2025-12-22 11:30:00",__NULL__,normal_01_lineup,1000,202512015
+e,chara_piece,__NULL__,CharacterFragmentExchangeTrade,"2025-12-22 11:30:00",__NULL__,chara_piece_lineup,1001,202512015
+e,event_osh_00001_01,event_osh_00001,EventExchangeTrade,"2026-01-01 00:00:00","2026-02-02 10:59:59",event_osh_00001_01_lineup,1,202512020
+e,event_hut_00001_01,event_hut_00001,EventExchangeTrade,"2026-03-02 15:00:00","2026-04-03 10:59:59",event_hut_00001_01_lineup,1,202603010

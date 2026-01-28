@@ -1,0 +1,64 @@
+{
+    "environments": [
+        {
+            "env": "dev-ld",
+            "name": "レベルデザイン環境",
+            "description": "レベルデザイン環境に接続します",
+            "api": "https://api.dev-ld.glow.nappers.jp",
+            "assetCdn": "https://dev-ld-asset.dev-ld.glow.nappers.jp",
+            "MasterCdn": "https://dev-ld-master.dev-ld.glow.nappers.jp",
+            "WebCdn": "https://dev-ld-web.dev-ld.glow.nappers.jp",
+            "AnnouncementCdn": "https://dev-ld-information.dev-ld.glow.nappers.jp",
+            "BannerCdn": "https://dev-ld-banner.dev-ld.glow.nappers.jp",
+            "AgreementCdn": "https://sb-agrmt.channel.or.jp"
+        },
+        {
+            "env": "develop",
+            "name": "開発環境",
+            "description": "開発環境に接続します",
+            "api": "https://develop.glow.nappers.jp",
+            "assetCdn": "https://develop-asset.glow.nappers.jp",
+            "MasterCdn": "https://develop-master.glow.nappers.jp",
+            "WebCdn": "https://develop-web.glow.nappers.jp",
+            "AnnouncementCdn": "https://develop-information.glow.nappers.jp",
+            "BannerCdn": "https://develop-banner.glow.nappers.jp",
+            "AgreementCdn": "https://sb-agrmt.channel.or.jp"
+        },
+        {
+            "env": "dev-qa",
+            "name": "DEV-QA環境",
+            "description": "DEV-QA環境に接続します",
+            "api": "https://api.dev-qa.glow.nappers.jp",
+            "assetCdn": "https://dev-qa-asset.dev-qa.glow.nappers.jp",
+            "MasterCdn": "https://dev-qa-master.dev-qa.glow.nappers.jp",
+            "WebCdn": "https://dev-ld-web.dev-ld.glow.nappers.jp",
+            "AnnouncementCdn": "https://dev-ld-information.dev-ld.glow.nappers.jp",
+            "BannerCdn": "https://dev-ld-banner.dev-ld.glow.nappers.jp",
+            "AgreementCdn": "https://sb-agrmt.channel.or.jp"
+        },
+        {
+            "env": "dev-qa2",
+            "name": "DEV-QA2環境",
+            "description": "DEV-QA2環境に接続します",
+            "api": "https://api.dev-qa2.glow.nappers.jp",
+            "assetCdn": "https://dev-qa2-asset.dev-qa2.glow.nappers.jp",
+            "MasterCdn": "https://dev-qa2-master.dev-qa2.glow.nappers.jp",
+            "WebCdn": "https://dev-ld-web.dev-ld.glow.nappers.jp",
+            "AnnouncementCdn": "https://dev-ld-information.dev-ld.glow.nappers.jp",
+            "BannerCdn": "https://dev-ld-banner.dev-ld.glow.nappers.jp",
+            "AgreementCdn": "https://sb-agrmt.channel.or.jp"
+        },
+        {
+            "env": "qa",
+            "name": "QA環境",
+            "description": "QA環境に接続します",
+            "api": "https://api.qa.glow.nappers.jp",
+            "assetCdn": "https://qa-asset.qa.glow.nappers.jp",
+            "MasterCdn": "https://qa-master.qa.glow.nappers.jp",
+            "WebCdn": "https://qa-web.qa.glow.nappers.jp",
+            "AnnouncementCdn": "https://qa-information.qa.glow.nappers.jp",
+            "BannerCdn": "https://qa-banner.qa.glow.nappers.jp",
+            "AgreementCdn": "https://sb-agrmt.channel.or.jp"
+        }
+    ]
+}

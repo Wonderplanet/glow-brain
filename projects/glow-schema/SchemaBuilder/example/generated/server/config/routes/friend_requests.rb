@@ -1,0 +1,5 @@
+  get "friend_requests", to: "friend_requests#index"
+  post "friend_requests", to: "friend_requests#create"
+  post "friend_requests/accept", to: "friend_requests#accept"
+  delete "friend_requests/reject", to: "friend_requests#reject"
+  delete "friend_requests/cancel", to: "friend_requests#cancel"

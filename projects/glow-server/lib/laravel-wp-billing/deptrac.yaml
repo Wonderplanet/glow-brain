@@ -1,0 +1,94 @@
+deptrac:
+  layers:
+    - name: Wp Billing Constant
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Billing\\Constants\\.*
+    - name: Wp Billing Delegator
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Billing\\Delegators\\.*
+    - name: Wp Billing Entity
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Billing\\Entities\\.*
+    - name: Wp Billing Exception
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Billing\\Exceptions\\.*
+    - name: Wp Billing Factory
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Billing\\Database\\Factories\\.*
+    - name: Wp Billing Model
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Billing\\Models\\.*
+    - name: Wp Billing Repository
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Billing\\Repositories\\.*
+    - name: Wp Billing Service
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Billing\\Services\\.*
+    - name: Wp Billing Trait
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Billing\\Traits\\.*
+    - name: Wp Billing Util
+      collectors:
+        - type: class
+          value: Wonderplanet\\Domain\\Billing\\Utils\\.*
+
+  ruleset:
+    Wp Billing Delegator:
+      - Wp Billing Entity
+      - Wp Billing Exception
+      - Wp Billing Model
+      - Wp Billing Service
+      - Wp Billing Util
+      - Wp Currency Entity
+      - Wp Currency Exception
+    Wp Billing Entity:
+      - Wp Billing Model
+      - Wp Billing Trait
+      - Wp Billing Util
+      - Wp Currency BaseEntity
+    Wp Billing Exception:
+      - Wp Billing Constant
+    Wp Billing Factory:
+      - Wp Billing Model
+      - Wp Currency Constant
+    Wp Billing Model:
+      - Wp Billing Entity
+      - Wp Billing Trait
+      - Wp Billing Util
+      - Wp Currency BaseModel
+      - Wp Currency Util
+    Wp Billing Service:
+      - Wp Billing Repository
+      - Wp Billing Constant
+      - Wp Billing Exception
+      - Wp Billing Entity
+      - Wp Billing Model
+      - Wp Billing Trait
+      - Wp Billing Util
+      - Wp Cache Util
+      - Wp Currency Constant
+      - Wp Currency Delegator
+      - Wp Currency Entity
+      - Wp Currency Exception
+      - Wp Currency Model
+      - Wp Currency Repository
+      - Wp Currency Util
+    Wp Billing Repository:
+      - Wp Billing Entity
+      - Wp Billing Model
+      - Wp Billing Trait
+      - Wp Billing Util
+      - Wp Currency Constant
+      - Wp Currency Entity
+      - Wp Currency Util
+    Wp Billing Util:
+      - Wp Currency Constant

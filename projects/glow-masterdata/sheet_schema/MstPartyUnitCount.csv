@@ -1,0 +1,3 @@
+memo
+TABLE,MstPartyUnitCount,MstPartyUnitCount,MstPartyUnitCount,MstPartyUnitCount
+ENABLE,id,MstStageId,MaxCount,release_key
