@@ -1,0 +1,40 @@
+{
+    "mcpServers": {
+        "chrome-devtools": {
+            "command": "npx",
+            "args": [
+                "chrome-devtools-mcp@latest",
+                "--isolated"
+            ]
+        },
+        "glow-server-local-db": {
+            "command": "node",
+            "args": [
+                "/absolute/path/to/glow-server/.ai-context/mcp/glow-server-local-db/index.js"
+            ],
+            "cwd": ".",
+            "env": {
+                "MASTER_DB_HOST": "localhost",
+                "MASTER_DB_PORT": "33060",
+                "MASTER_DB_DATABASE": "local",
+                "MASTER_DB_USERNAME": "root",
+                "MASTER_DB_PASSWORD": "root",
+                "MANAGE_DB_HOST": "localhost",
+                "MANAGE_DB_PORT": "33060",
+                "MANAGE_DB_DATABASE": "mng",
+                "MANAGE_DB_USERNAME": "root",
+                "MANAGE_DB_PASSWORD": "root",
+                "ADMIN_DB_HOST": "localhost",
+                "ADMIN_DB_PORT": "33060",
+                "ADMIN_DB_DATABASE": "admin",
+                "ADMIN_DB_USERNAME": "root",
+                "ADMIN_DB_PASSWORD": "root",
+                "TIDB_HOST": "localhost",
+                "TIDB_PORT": "4000",
+                "TIDB_DATABASE": "local",
+                "TIDB_USERNAME": "root",
+                "TIDB_PASSWORD": ""
+            }
+        }
+    }
+}

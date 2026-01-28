@@ -1,0 +1,3 @@
+memo
+TABLE,MstUnitRankUp,MstUnitRankUp,MstUnitRankUp,MstUnitRankUp,MstUnitRankUp,MstUnitRankUp,MstUnitRankUp,MstUnitRankUp,MstUnitRankUp
+ENABLE,id,unit_label,rank,amount,require_level,sr_memory_fragment_amount,ssr_memory_fragment_amount,ur_memory_fragment_amount,release_key

@@ -1,0 +1,3 @@
+memo
+TABLE,MstStageEnhanceRewardParam,MstStageEnhanceRewardParam,MstStageEnhanceRewardParam,MstStageEnhanceRewardParam,MstStageEnhanceRewardParam
+ENABLE,id,min_threshold_score,coin_reward_amount,coin_reward_size_type,release_key
