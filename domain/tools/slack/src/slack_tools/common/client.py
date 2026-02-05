@@ -140,3 +140,98 @@ class SlackClient:
         response = self.session.get(url)
         response.raise_for_status()
         return response.content
+
+    def get_workspace_info(self) -> dict[str, Any]:
+        """ワークスペース情報を取得（auth.test）
+
+        Returns:
+            ワークスペース情報
+            - url: ワークスペースURL (例: "https://wonderplanet-glow.slack.com/")
+            - team: ワークスペース名
+            - team_id: ワークスペースID
+        """
+        data = self._request("GET", "auth.test")
+        return {
+            "url": data.get("url", ""),
+            "team": data.get("team", ""),
+            "team_id": data.get("team_id", ""),
+        }
+
+    def get_channel_history(
+        self,
+        channel_id: str,
+        oldest: str | None = None,
+        latest: str | None = None,
+        limit: int = 100,
+    ) -> list[dict[str, Any]]:
+        """チャンネル履歴を取得（ページネーション対応）
+
+        Args:
+            channel_id: チャンネルID
+            oldest: 最古のタイムスタンプ（この値以降のメッセージを取得）
+            latest: 最新のタイムスタンプ（この値以前のメッセージを取得）
+            limit: 1回のリクエストで取得するメッセージ数（最大1000）
+
+        Returns:
+            メッセージ一覧（古い順）
+        """
+        all_messages = []
+        cursor = None
+
+        while True:
+            params: dict[str, Any] = {
+                "channel": channel_id,
+                "limit": min(limit, 1000),  # API上限は1000
+            }
+            if oldest:
+                params["oldest"] = oldest
+            if latest:
+                params["latest"] = latest
+            if cursor:
+                params["cursor"] = cursor
+
+            data = self._request("GET", "conversations.history", params=params)
+            messages = data.get("messages", [])
+            all_messages.extend(messages)
+
+            # 次のページがあるかチェック
+            cursor = data.get("response_metadata", {}).get("next_cursor")
+            if not cursor:
+                break
+
+        # 古い順にソート（APIは新しい順で返す）
+        all_messages.sort(key=lambda msg: float(msg.get("ts", "0")))
+        return all_messages
+
+    def search_messages(
+        self,
+        query: str,
+        count: int = 100,
+    ) -> list[dict[str, Any]]:
+        """メッセージを検索（search.messages API）
+
+        Args:
+            query: 検索クエリ（例: "from:@USER in:#CHANNEL after:2024-01-01"）
+            count: 1回のリクエストで取得するメッセージ数（最大100）
+
+        Returns:
+            検索結果のメッセージ一覧
+        """
+        all_messages = []
+        page = 1
+
+        while True:
+            data = self._request(
+                "GET",
+                "search.messages",
+                params={"query": query, "count": count, "page": page},
+            )
+            matches = data.get("messages", {}).get("matches", [])
+            all_messages.extend(matches)
+
+            paging = data.get("messages", {}).get("paging", {})
+            if page >= paging.get("pages", 1):
+                break
+            page += 1
+
+        return all_messages
