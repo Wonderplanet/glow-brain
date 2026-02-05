@@ -3,27 +3,17 @@
     "ENABLE_TOOL_SEARCH": "true"
   },
   "hooks": {
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": ".claude/scripts/detect-manual-changes.sh",
-            "timeout": 5
-          }
+        "Stop": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": ".claude/hooks/save-session.sh",
+                        "timeout": 60,
+                        "async": true
+                    }
+                ]
+            }
         ]
-      }
-    ],
-    "SessionEnd": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": ".claude/scripts/save-session.sh",
-            "timeout": 60
-          }
-        ]
-      }
-    ]
-  }
+    }
 }
