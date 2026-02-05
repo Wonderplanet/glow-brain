@@ -1,0 +1,3 @@
+memo
+TABLE,MstPvpRank,MstPvpRank,MstPvpRank,MstPvpRank,MstPvpRank,MstPvpRank,MstPvpRank,MstPvpRank
+ENABLE,id,release_key,asset_key,rank_class_type,rank_class_level,required_lower_score,win_add_point,lose_sub_point

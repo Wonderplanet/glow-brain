@@ -1,0 +1,20 @@
+data:
+  - name: MstHomeKomaPattern
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: assetKey
+        type: string
+
+  - name: MstHomeKomaPatternI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstHomeKomaPatternId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
