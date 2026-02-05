@@ -1,0 +1,963 @@
+[
+  {
+    "user": "U051HMG121E",
+    "type": "message",
+    "ts": "1767600286.621809",
+    "client_msg_id": "dccad091-7d49-4537-b937-419b307eca7d",
+    "text": "強化クエストの追加について",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "reply_count": 16,
+    "reply_users_count": 2,
+    "latest_reply": "1768545804.647119",
+    "reply_users": [
+      "U051HMG121E",
+      "U016AL1NM8T"
+    ],
+    "is_locked": false,
+    "subscribed": false,
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "0aj/n",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "強化クエストの追加について"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U051HMG121E",
+    "type": "message",
+    "ts": "1767601907.642749",
+    "client_msg_id": "621f1900-3e1e-4321-b937-92ec20ccf82d",
+    "text": "<@U016AL1NM8T>\nお疲れ様です。\n<https://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a6b6ec5007_0_942#slide=id.g3a6b6ec5007_0_942|コイン獲得クエストを強化クエストに_イメージの資料>の資料の以下の記載について確認をさせてください。\n\n```1日5回中は3回スタミナ消費、2回は広告視聴など\nスタミナブースト、再挑戦使用可能にできるようにする```\n１．スタミナブーストなのですが、実際の画面挙動はどの様な想定でしょうか？\n a. スタミナ消費０のままで、コインクエストでは通常のスタミナブーストの表示とは別で専用の画面フローになる(この場合、今後コインクエスト以外の強化クエストが出る場合にもスタミナ消費は０になるか)\n b. スタミナ消費０ではなくし、通常クエスト等に近い画面フローになる。\n\n２．クリア時の報酬について\nクリア報酬ですが、コインクエストはスコアで報酬が決まっています。スタミナブーストで纏めてプレイした場合、シンプルにスコアで決まったコイン数＊Nとなりますが問題ないでしょうか。",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "gLvS+",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U016AL1NM8T"
+              },
+              {
+                "type": "text",
+                "text": "\nお疲れ様です。\n"
+              },
+              {
+                "type": "link",
+                "url": "https://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a6b6ec5007_0_942#slide=id.g3a6b6ec5007_0_942",
+                "text": "コイン獲得クエストを強化クエストに_イメージの資料"
+              },
+              {
+                "type": "text",
+                "text": "の資料の以下の記載について確認をさせてください。\n\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_preformatted",
+            "elements": [
+              {
+                "type": "text",
+                "text": "1日5回中は3回スタミナ消費、2回は広告視聴など\nスタミナブースト、再挑戦使用可能にできるようにする"
+              }
+            ],
+            "border": 0
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "\n１．スタミナブーストなのですが、実際の画面挙動はどの様な想定でしょうか？\n a. スタミナ消費０のままで、コインクエストでは通常のスタミナブーストの表示とは別で専用の画面フローになる(この場合、今後コインクエスト以外の強化クエストが出る場合にもスタミナ消費は０になるか)\n b. スタミナ消費０ではなくし、通常クエスト等に近い画面フローになる。\n\n２．クリア時の報酬について\nクリア報酬ですが、コインクエストはスコアで報酬が決まっています。スタミナブーストで纏めてプレイした場合、シンプルにスコアで決まったコイン数＊Nとなりますが問題ないでしょうか。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U016AL1NM8T",
+    "type": "message",
+    "ts": "1767660656.001609",
+    "client_msg_id": "398d08ed-3f3d-487b-8943-a3ffafd7e5dc",
+    "text": "<@U051HMG121E> <@U1RJ7FH6J>\n返答遅れすいません:man-bowing:\nクライアント実装は乾さんなので一応メンションつけておきやす\n以下でお願いします:ojigi:\n\n&gt; １．スタミナブーストなのですが、実際の画面挙動はどの様な想定でしょうか？\n&gt;  a. スタミナ消費０のままで、コインクエストでは通常のスタミナブーストの表示とは別で専用の画面フローになる(この場合、今後コインクエスト以外の強化クエストが出る場合にもスタミナ消費は０になるか)\n&gt;  b. スタミナ消費０ではなくし、通常クエスト等に近い画面フローになる。\n⇨b.で問題ないです。\n現状のコイン獲得クエストはそのまま残すので、コイン獲得クエストにもスタミナ消費でも挑戦できるように対応いただけますと幸いです。\n広告視聴時の挑戦についてはスタミナブーストは対応なしで良くて、広告視聴による挑戦が2回以上設定されている場合は、再挑戦ボタンをを1回目のプレイ以降のリザルト画面で表示し、再挑戦ボタンを押すと広告再生され、再生終了後にインゲーム開始の既存の視聴プレイの仕様と同じにしていただけますと幸いです。\n\n&gt; ２．クリア時の報酬について\n&gt; クリア報酬ですが、コインクエストはスコアで報酬が決まっています。スタミナブーストで纏めてプレイした場合、シンプルにスコアで決まったコイン数＊Nとなりますが問題ないでしょうか。\n⇨コイン獲得クエストでフリーのプレイ可能回数が3回ある場合に、スタミナブーストでまとめて3回を選択した際は、1回目分は手動プレイ（現状のスタミナブーストと同様の挙動）をし、その1回分と同じ結果を2,3回目にも反映するようにしていただければ問題ないです。",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "XyrlQ",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U051HMG121E"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U1RJ7FH6J"
+              },
+              {
+                "type": "text",
+                "text": "\n返答遅れすいません"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-200d-2642-fe0f"
+              },
+              {
+                "type": "text",
+                "text": "\nクライアント実装は乾さんなので一応メンションつけておきやす\n以下でお願いします"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              },
+              {
+                "type": "text",
+                "text": "\n\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_quote",
+            "elements": [
+              {
+                "type": "text",
+                "text": "１．スタミナブーストなのですが、実際の画面挙動はどの様な想定でしょうか？\n a. スタミナ消費０のままで、コインクエストでは通常のスタミナブーストの表示とは別で専用の画面フローになる(この場合、今後コインクエスト以外の強化クエストが出る場合にもスタミナ消費は０になるか)\n b. スタミナ消費０ではなくし、通常クエスト等に近い画面フローになる。"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "⇨b.で問題ないです。\n現状のコイン獲得クエストはそのまま残すので、コイン獲得クエストにもスタミナ消費でも挑戦できるように対応いただけますと幸いです。\n広告視聴時の挑戦についてはスタミナブーストは対応なしで良くて、広告視聴による挑戦が2回以上設定されている場合は、再挑戦ボタンをを1回目のプレイ以降のリザルト画面で表示し、再挑戦ボタンを押すと広告再生され、再生終了後にインゲーム開始の既存の視聴プレイの仕様と同じにしていただけますと幸いです。\n\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_quote",
+            "elements": [
+              {
+                "type": "text",
+                "text": "２．クリア時の報酬について\nクリア報酬ですが、コインクエストはスコアで報酬が決まっています。スタミナブーストで纏めてプレイした場合、シンプルにスコアで決まったコイン数＊Nとなりますが問題ないでしょうか。"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "⇨コイン獲得クエストでフリーのプレイ可能回数が3回ある場合に、スタミナブーストでまとめて3回を選択した際は、1回目分は手動プレイ（現状のスタミナブーストと同様の挙動）をし、その1回分と同じ結果を2,3回目にも反映するようにしていただければ問題ないです。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "kansya",
+        "users": [
+          "U051HMG121E",
+          "U1RJ7FH6J"
+        ],
+        "count": 2
+      },
+      {
+        "name": "dogezamax",
+        "users": [
+          "U051HMG121E",
+          "U1RJ7FH6J"
+        ],
+        "count": 2
+      }
+    ]
+  },
+  {
+    "user": "U051HMG121E",
+    "type": "message",
+    "ts": "1767691549.410709",
+    "client_msg_id": "fd9a3e1f-21a1-4005-bed6-5da757f45e89",
+    "text": "<@U016AL1NM8T>\nお疲れ様です。\n広告視聴での挑戦についても１点質問させてください。\n既存の<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/332726650/42-5_1+N|強化クエストの仕様書>にて、「広告視聴による挑戦回数回復」との記載がありますが、イメージ資料では「*1日5回中は3回スタミナ消費、2回は広告視聴*」と記載されています。\n広告視聴で挑戦した場合の挙動は以下のどちらが正しいのでしょうか。\n\n１．挑戦回数が回復するだけなのでコスト(スタミナ)を消費する\n２．広告視聴がコストのためスタミナは消費せずに挑戦できる\n\nお手数ですがこちらご回答のほどよろしくお願いします。",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "attachments": [
+      {
+        "id": 1,
+        "blocks": [
+          {
+            "type": "section",
+            "block_id": "page:{\"contentId\":\"332726650\",\"instanceId\":\"461e18ca-7256-3923-9e2f-36d8b2614716\",\"spaceKey\":\"GLOW\"}",
+            "text": {
+              "type": "mrkdwn",
+              "text": "*<https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/332726650/42-5_1+N?atlOrigin=eyJpIjoiMDVhZjY3NDdlYzM1NGZjOGE2NGU1ODdkOTdiYzAwYjgiLCJwIjoiY29uZmx1ZW5jZS1jaGF0cy1pbnQifQ|42-5_1日N回強化クエスト>*",
+              "verbatim": false
+            }
+          },
+          {
+            "type": "context",
+            "block_id": "NtYpx",
+            "elements": [
+              {
+                "type": "image",
+                "image_url": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/70121:12f96bd0-e71e-4b89-85a5-b9a3caeab2f4/572a9c23-ad9f-4691-ba58-5a67bec05360/128",
+                "alt_text": "images"
+              },
+              {
+                "type": "mrkdwn",
+                "text": "Owned by: Shodai Ando | 25+ comments | 38 people viewed",
+                "verbatim": false
+              }
+            ]
+          },
+          {
+            "type": "actions",
+            "block_id": "interactivity:{\"contentType\":\"page\",\"instanceId\":\"461e18ca-7256-3923-9e2f-36d8b2614716\",\"id\":\"332726650\",\"source\":\"unfurl\",\"isSpaceLink\":false,\"spaceId\":\"105873497\"}",
+            "elements": [
+              {
+                "type": "button",
+                "action_id": "view",
+                "text": {
+                  "type": "plain_text",
+                  "text": "View page",
+                  "emoji": true
+                },
+                "style": "primary",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/332726650/42-5_1+N?atlOrigin=eyJpIjoiMmVjZTY4ZTliNGJhNDdjMjk2ZTlhNDFmNzE4YjJlYjYiLCJwIjoiY29uZmx1ZW5jZS1jaGF0cy1pbnQifQ"
+              },
+              {
+                "type": "button",
+                "action_id": "saveContentForLater",
+                "text": {
+                  "type": "plain_text",
+                  "text": ":star: Bookmark",
+                  "emoji": true
+                }
+              },
+              {
+                "type": "static_select",
+                "action_id": "overflowActions",
+                "placeholder": {
+                  "type": "plain_text",
+                  "text": "More actions...",
+                  "emoji": true
+                },
+                "options": [
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Watch page",
+                      "emoji": true
+                    },
+                    "value": "watchContent"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Like page",
+                      "emoji": true
+                    },
+                    "value": "like"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Comment",
+                      "emoji": true
+                    },
+                    "value": "addComment"
+                  },
+                  {
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Share page",
+                      "emoji": true
+                    },
+                    "value": "shareContent"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "color": "#2684ff",
+        "fallback": "42-5_1日N回強化クエスト",
+        "bot_id": "B07TAQA2C58",
+        "bot_team_id": "T07GTV1LW67",
+        "app_unfurl_url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/332726650/42-5_1+N",
+        "is_app_unfurl": true,
+        "app_id": "AC23SDS77"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "Igzg3",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U016AL1NM8T"
+              },
+              {
+                "type": "text",
+                "text": "\nお疲れ様です。\n広告視聴での挑戦についても１点質問させてください。\n既存の"
+              },
+              {
+                "type": "link",
+                "url": "https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/332726650/42-5_1+N",
+                "text": "強化クエストの仕様書"
+              },
+              {
+                "type": "text",
+                "text": "にて、「広告視聴による挑戦回数回復」との記載がありますが、イメージ資料では「"
+              },
+              {
+                "type": "text",
+                "text": "1日5回中は3回スタミナ消費、2回は広告視聴",
+                "style": {
+                  "bold": true
+                }
+              },
+              {
+                "type": "text",
+                "text": "」と記載されています。\n広告視聴で挑戦した場合の挙動は以下のどちらが正しいのでしょうか。\n\n１．挑戦回数が回復するだけなのでコスト(スタミナ)を消費する\n２．広告視聴がコストのためスタミナは消費せずに挑戦できる\n\nお手数ですがこちらご回答のほどよろしくお願いします。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U016AL1NM8T",
+    "type": "message",
+    "ts": "1767691706.251649",
+    "client_msg_id": "9ccc717f-0342-4989-b881-b9f0460a6bb8",
+    "text": "<@U051HMG121E>\n&gt; 広告視聴がコストのためスタミナは消費せずに挑戦できる\nでお願いします:ojigi:",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "CEOpF",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U051HMG121E"
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_quote",
+            "elements": [
+              {
+                "type": "text",
+                "text": "広告視聴がコストのためスタミナは消費せずに挑戦できる"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "でお願いします"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "kansya",
+        "users": [
+          "U051HMG121E"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U051HMG121E",
+    "type": "message",
+    "ts": "1767942233.141569",
+    "client_msg_id": "e5342c8e-163f-4a43-9c43-fcede8dc876e",
+    "text": "<@U016AL1NM8T> cc <@U0113RN4C5S> <@U038MD23A1Z> <@U08KFA64REY>\nお疲れ様です。\n度々の質問で申し訳ありませんが、原画効果の対象と発動条件について確認させてください。\n\n仕様書を確認すると、1つの原画に対して\n・複数の効果\n・複数の対象条件\n・複数の発動条件\nが設定できる要望があると思います。\n<https://docs.google.com/presentation/d/17Azy4I5zLW_29VRXhf84yXLhBO_dHOPfn0LZLOw3Nh8/edit?slide=id.g3a5ce23b033_0_1142#slide=id.g3a5ce23b033_0_1142>\n\n現在、効果対象の条件にある「体数（ランダム）」の扱いでどういう挙動をするべきか悩んでまして、GTRさんのイメージを教えて頂きたいです。\n以下のどちらがイメージに近いでしょうか。\n\n１．原画に対して発動条件と対象条件が掛かっており、発動条件を満たした場合対象条件(AorB? AandB?)を満たす対象に対して全ての効果を発動する。\n２．効果に対して発動条件を対象条件が掛かっており、効果ごとに、発動条件を満たした場合対象条件を満たす対象に対して効果を発動する。\n\n1ではパターンAの設定が出来ますが、パターンBは設定出来ない。\n2,3ではパターンBの設定はできるが、パターンAの設定は出来ない。\n\nパターンA：n体に(効果1 + 効果2)\nパターンB：(n体に効果1) + (m体に効果2)　や　(n属性に効果1) + (m属性に効果2)",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "JHMhk",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U016AL1NM8T"
+              },
+              {
+                "type": "text",
+                "text": " cc "
+              },
+              {
+                "type": "user",
+                "user_id": "U0113RN4C5S"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U038MD23A1Z"
+              },
+              {
+                "type": "text",
+                "text": " "
+              },
+              {
+                "type": "user",
+                "user_id": "U08KFA64REY"
+              },
+              {
+                "type": "text",
+                "text": "\nお疲れ様です。\n度々の質問で申し訳ありませんが、原画効果の対象と発動条件について確認させてください。\n\n仕様書を確認すると、1つの原画に対して\n・複数の効果\n・複数の対象条件\n・複数の発動条件\nが設定できる要望があると思います。\n"
+              },
+              {
+                "type": "link",
+                "url": "https://docs.google.com/presentation/d/17Azy4I5zLW_29VRXhf84yXLhBO_dHOPfn0LZLOw3Nh8/edit?slide=id.g3a5ce23b033_0_1142#slide=id.g3a5ce23b033_0_1142"
+              },
+              {
+                "type": "text",
+                "text": "\n\n現在、効果対象の条件にある「体数（ランダム）」の扱いでどういう挙動をするべきか悩んでまして、GTRさんのイメージを教えて頂きたいです。\n以下のどちらがイメージに近いでしょうか。\n\n１．原画に対して発動条件と対象条件が掛かっており、発動条件を満たした場合対象条件(AorB? AandB?)を満たす対象に対して全ての効果を発動する。\n２．効果に対して発動条件を対象条件が掛かっており、効果ごとに、発動条件を満たした場合対象条件を満たす対象に対して効果を発動する。\n\n1ではパターンAの設定が出来ますが、パターンBは設定出来ない。\n2,3ではパターンBの設定はできるが、パターンAの設定は出来ない。\n\nパターンA：n体に(効果1 + 効果2)\nパターンB：(n体に効果1) + (m体に効果2)　や　(n属性に効果1) + (m属性に効果2)"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "kakunin",
+        "users": [
+          "U016AL1NM8T"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U051HMG121E",
+    "type": "message",
+    "ts": "1767944288.813599",
+    "client_msg_id": "42fdcc6d-78fd-49c0-9613-6542251d95af",
+    "text": "間違えて強化クエストのスレッドに投げてしまっていた、、、",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "wsRwL",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "間違えて強化クエストのスレッドに投げてしまっていた、、、"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "man-bowing",
+        "users": [
+          "U016AL1NM8T"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U051HMG121E",
+    "type": "message",
+    "ts": "1767946690.476939",
+    "edited": {
+      "user": "U051HMG121E",
+      "ts": "1767946701.000000"
+    },
+    "client_msg_id": "d84ea01b-402b-4a7f-a2be-d6d29e048291",
+    "text": "<@U016AL1NM8T>\n原画の効果について追加で質問です。\n現在実装されている原画のコンプリート効果(hp上昇)は引き続き残る認識でよろしいでしょうか。",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "EIQAK",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U016AL1NM8T"
+              },
+              {
+                "type": "text",
+                "text": "\n原画の効果について追加で質問です。\n現在実装されている原画のコンプリート効果(hp上昇)は引き続き残る認識でよろしいでしょうか。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U051HMG121E",
+    "type": "message",
+    "ts": "1767947038.070179",
+    "client_msg_id": "8dfd10af-f15c-40b4-a52c-78ded432fe53",
+    "text": "コンプリート効果が削除される場合、ランクマッチのレスポンスの形は変更せずにデータの中身を編成している原画idにすることでサーバーの対応が完了する。\n残る場合はレスポンスに編成しているidを追加する。",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "rXXzH",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "コンプリート効果が削除される場合、ランクマッチのレスポンスの形は変更せずにデータの中身を編成している原画idにすることでサーバーの対応が完了する。\n残る場合はレスポンスに編成しているidを追加する。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U016AL1NM8T",
+    "type": "message",
+    "ts": "1767947355.450769",
+    "client_msg_id": "548c93ea-6057-4a27-9d54-6928b94b398b",
+    "text": "<@U051HMG121E>\n確認ありがとうございます！\n以下でお願いします:ojigi:\n\n&gt; 効果対象の条件にある「体数（ランダム）」の扱いでどういう挙動をするべきか\n⇨パターンB：(n体に効果1) + (m体に効果2)　や　(n属性に効果1) + (m属性に効果2)\nでお願いします\n\n&gt; 現在実装されている原画のコンプリート効果(hp上昇)は引き続き残る認識\n⇨生き残るでお願いします",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "BekHF",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U051HMG121E"
+              },
+              {
+                "type": "text",
+                "text": "\n確認ありがとうございます！\n以下でお願いします"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              },
+              {
+                "type": "text",
+                "text": "\n\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_quote",
+            "elements": [
+              {
+                "type": "text",
+                "text": "効果対象の条件にある「体数（ランダム）」の扱いでどういう挙動をするべきか"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "⇨パターンB：(n体に効果1) + (m体に効果2)　や　(n属性に効果1) + (m属性に効果2)\nでお願いします\n\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_quote",
+            "elements": [
+              {
+                "type": "text",
+                "text": "現在実装されている原画のコンプリート効果(hp上昇)は引き続き残る認識"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "⇨生き残るでお願いします"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "baoquan",
+        "users": [
+          "U051HMG121E"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U016AL1NM8T",
+    "type": "message",
+    "ts": "1767947570.612879",
+    "client_msg_id": "8b74e87d-6a0a-4351-9745-2644e388a68e",
+    "text": "体数ランダムの場合の効果のかかり方について以下に明記\n```<https://docs.google.com/presentation/d/17Azy4I5zLW_29VRXhf84yXLhBO_dHOPfn0LZLOw3Nh8/edit?slide=id.g3a5ce23b033_0_1142#slide=id.g3a5ce23b033_0_1142>```",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "fTXU3",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "text",
+                "text": "体数ランダムの場合の効果のかかり方について以下に明記\n"
+              }
+            ]
+          },
+          {
+            "type": "rich_text_preformatted",
+            "elements": [
+              {
+                "type": "link",
+                "url": "https://docs.google.com/presentation/d/17Azy4I5zLW_29VRXhf84yXLhBO_dHOPfn0LZLOw3Nh8/edit?slide=id.g3a5ce23b033_0_1142#slide=id.g3a5ce23b033_0_1142"
+              }
+            ],
+            "border": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U051HMG121E",
+    "type": "message",
+    "ts": "1768383676.216889",
+    "client_msg_id": "9aa54f97-bbcc-4b37-9f09-22eee4a618cb",
+    "text": "<@U016AL1NM8T>\nお疲れ様です。\n追加で原画編成について確認です。\n新規で追加される原画編成ですが、初期状態は1つも編成されていない状態から始まる認識でよろしいでしょうか？",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "U4cZJ",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U016AL1NM8T"
+              },
+              {
+                "type": "text",
+                "text": "\nお疲れ様です。\n追加で原画編成について確認です。\n新規で追加される原画編成ですが、初期状態は1つも編成されていない状態から始まる認識でよろしいでしょうか？"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U016AL1NM8T",
+    "type": "message",
+    "ts": "1768385381.365179",
+    "client_msg_id": "7642584e-3db7-4eb8-bc03-ed82a04039c4",
+    "text": "<@U051HMG121E>\n初期状態は、チュートリアルで獲得した原画がセットされているでお願いします:ojigi:",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "10xuQ",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U051HMG121E"
+              },
+              {
+                "type": "text",
+                "text": "\n初期状態は、チュートリアルで獲得した原画がセットされているでお願いします"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "baoquan",
+        "users": [
+          "U051HMG121E"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U051HMG121E",
+    "type": "message",
+    "ts": "1768389447.955679",
+    "client_msg_id": "506dbcce-9e65-4f5f-880f-276bfffa9bfd",
+    "text": "<@U016AL1NM8T>\n`チュートリアルで獲得した原画` との事ですが、こちらは新規開始時に初めから所持している「希望のコマ」がセットされていると言うことで合っていますか？",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "UMRzy",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U016AL1NM8T"
+              },
+              {
+                "type": "text",
+                "text": "\n"
+              },
+              {
+                "type": "text",
+                "text": "チュートリアルで獲得した原画",
+                "style": {
+                  "code": true
+                }
+              },
+              {
+                "type": "text",
+                "text": " との事ですが、こちらは新規開始時に初めから所持している「希望のコマ」がセットされていると言うことで合っていますか？"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U016AL1NM8T",
+    "type": "message",
+    "ts": "1768389785.262579",
+    "client_msg_id": "8338AB0C-9EAF-4984-9D1E-A2F2DD2DA4B5",
+    "text": "<@U051HMG121E> \nあってます:ojigi:",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "IdQze",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U051HMG121E"
+              },
+              {
+                "type": "text",
+                "text": " \nあってます"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "kansya",
+        "users": [
+          "U051HMG121E"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  {
+    "user": "U051HMG121E",
+    "type": "message",
+    "ts": "1768545610.136129",
+    "client_msg_id": "698768fe-8481-4620-a339-3010363174db",
+    "text": "<@U016AL1NM8T>\nお疲れ様です。\n原画編成に関して追加で確認させてください。\n現在のランクマッチではパーティ情報を表示していますが、原画の編成情報は表示しますか？\nまた表示する場合、ダミーユーザーにも原画編成を設定できる必要はありますでしょうか。",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "Bka2c",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U016AL1NM8T"
+              },
+              {
+                "type": "text",
+                "text": "\nお疲れ様です。\n原画編成に関して追加で確認させてください。\n現在のランクマッチではパーティ情報を表示していますが、原画の編成情報は表示しますか？\nまた表示する場合、ダミーユーザーにも原画編成を設定できる必要はありますでしょうか。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user": "U016AL1NM8T",
+    "type": "message",
+    "ts": "1768545804.647119",
+    "client_msg_id": "77b11b71-68f3-4e35-b039-164790a4c8c7",
+    "text": "<@U051HMG121E>\n原画の編成も表示するようにお願いします\n表示の仕方はまとめているのでお待ちいただけますと:man-bowing:\nダミーユーザーは一旦必要なしでOKです:ojigi:",
+    "team": "T07GTV1LW67",
+    "thread_ts": "1767600286.621809",
+    "parent_user_id": "U051HMG121E",
+    "blocks": [
+      {
+        "type": "rich_text",
+        "block_id": "s7qW0",
+        "elements": [
+          {
+            "type": "rich_text_section",
+            "elements": [
+              {
+                "type": "user",
+                "user_id": "U051HMG121E"
+              },
+              {
+                "type": "text",
+                "text": "\n原画の編成も表示するようにお願いします\n表示の仕方はまとめているのでお待ちいただけますと"
+              },
+              {
+                "type": "emoji",
+                "name": "man-bowing",
+                "unicode": "1f647-200d-2642-fe0f"
+              },
+              {
+                "type": "text",
+                "text": "\nダミーユーザーは一旦必要なしでOKです"
+              },
+              {
+                "type": "emoji",
+                "name": "ojigi"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "reactions": [
+      {
+        "name": "kansya",
+        "users": [
+          "U051HMG121E"
+        ],
+        "count": 1
+      }
+    ]
+  }
+]
