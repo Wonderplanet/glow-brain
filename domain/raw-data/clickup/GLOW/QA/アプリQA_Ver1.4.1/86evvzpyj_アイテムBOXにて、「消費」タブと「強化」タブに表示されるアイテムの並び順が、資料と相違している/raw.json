@@ -1,0 +1,2722 @@
+{
+  "task": {
+    "id": "86evvzpyj",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "アイテムBOXにて、「消費」タブと「強化」タブに表示されるアイテムの並び順が、資料と相違している",
+    "text_content": "【発生症状】\nConfluence「81-1_アイテムBOXページ」>「81-1_1_アイテムBOX」>「▼その他アイテムの並び順について」に記載されている並び順と、\n実機上の「消費」タブ、「強化」タブに表示されるアイテムの並び順が相違しております。\n\n------------------------------------------------------------------------------\n【消費】タブ\n\n■資料に記載されている「消費タブ」に該当するアイテムの並び順（タブが分かれたので、各項目に該当する箇所を抜き出し）\n▼「消費」タブに該当するアイテム（先頭から順に、以下の並び順で設定）\n・かけらBOX\n・ランクマッチチケット\n・代替ガシャチケット（フェス＞ピックアップ＞スペシャル＞ノーマル）\n・プレミアムメダル\n・価値が低めのチケット専用ガシャチケット（レアリティ降順：UR、SSR、SR、Rの単発ガシャチケット）\n・特別なチケット専用ガシャチケット（登録早い順：課金チケットやキャンペーン配布チケットなど）\n・イベント配布アイテム（登録早い順）\n・補てんガシャチケット\n\n■実機上での並び順\n▼「消費」タブに表示されているアイテムの並び順\n・かけらBOX\n・ランクマッチチケット\n・イベント配布アイテム（いいジャン祭メダル【赤】）\n　※イベント専用アイテムが、資料と異なった位置に表示されています\n・代替ガシャチケット（スペシャル＞ピックアップ＞フェス）\n　※チケットの並び順が資料と異なっています\n・価値が低めのチケット専用ガシャチケット（実機の並び順：R、SR、SSR、URの単発ガシャチケット）\n　※レアリティが低い順に並んでいます\n・特別なチケット専用ガシャチケット\n　※UR確定10連チケット＞ピックアップUR確定10連チケット＞UR確定フェス10連チケットの順に並んでいますが、\n　　代替チケットに合わせて並び順が逆になるかと思われます\n・補てんガシャチケット\n　※補てん用ガシャチケットが最後の位置に表示されていません\n・課金チケットやキャンペーン配布チケットなど（賀正ガシャチケット Ver.2026）\n・プレミアムメダル\n　※メダルが資料と異なる位置に表示されておりますが、現状の位置でも問題ないかと思われます\n・課金チケットやキャンペーン配布チケットなど（【推しの子】SSR確定ガシャチケット）\n　※キャンペーン配布チケットがプレミアムメダルの後ろに表示されています\n\n------------------------------------------------------------------------------\n【強化】タブ\n\n■資料に記載されている「強化タブ」に該当するアイテムの並び順（タブが分かれたので、各項目に該当する箇所を抜き出し）\n▼「強化」タブに該当するアイテム（先頭から順に、以下の並び順で設定）\n・カラーメモリー（グレー＞レッド＞ブルー＞イエロー＞グリーン）\n・メモリーフラグメント（上級＞中級＞初級）\n・キャラ専用カラーメモリー（登録早い順）\n\n■実機上での並び順\n▼「強化」タブに表示されているアイテムの並び順\n・カラーメモリー（グレー＞レッド＞ブルー＞イエロー＞グリーン）\n・メモリーフラグメント（上級＞中級）\n・キャラ専用カラーメモリー\n　※登録順ではなくID順に表示されておりますが、現状で問題ないかと思われます\n・メモリーフラグメント（初級）\n　※初級のメモリーフラグメントだけが一番最後に表示されています\n\n【補足】\n・デバコマ「ユーザーの所持アイテム付与＆MAX」を使用して確認しております。\n・「かけらタブ」はレアリティ＞ID順に並んでいるため、問題ないかと思われます。\n\n【再現手順】\n1.デバッグメニュー＞リモート＞「ユーザーの所持アイテム付与＆MAX」を選択する\n2.ホーム画面＞「アイテムBOX」アイコンをタップする\n3.「消費タブ」「強化タブ」に並んでいるアイテムと資料の並び順を比較する\n\n【再現性】\n3回中3回\n\n【環境情報】\n接続環境　：dev-qa2\n検証ビルド：iOS  #2551\n　　　　　：AOS  #2551\n検証端末　：iPad mini（第6世代）（iOS:18.2）\n　　　　　：Galaxy S10（AOS:12）\n\n【ユーザー情報】\nユーザーID：A8699084069\n　　　　　：A1792565076\nユーザー名：双ノ子\n　　　　　：ふたりのざ\n\n【参考資料】\nConfluence「81-1_アイテムBOXページ」>「81-1_1_アイテムBOX」>「▼その他アイテムの並び順について」\n \n\n【報告者】\n堤 崇",
+    "description": "【発生症状】\nConfluence「81-1_アイテムBOXページ」>「81-1_1_アイテムBOX」>「▼その他アイテムの並び順について」に記載されている並び順と、\n実機上の「消費」タブ、「強化」タブに表示されるアイテムの並び順が相違しております。\n\n------------------------------------------------------------------------------\n【消費】タブ\n\n■資料に記載されている「消費タブ」に該当するアイテムの並び順（タブが分かれたので、各項目に該当する箇所を抜き出し）\n▼「消費」タブに該当するアイテム（先頭から順に、以下の並び順で設定）\n・かけらBOX\n・ランクマッチチケット\n・代替ガシャチケット（フェス＞ピックアップ＞スペシャル＞ノーマル）\n・プレミアムメダル\n・価値が低めのチケット専用ガシャチケット（レアリティ降順：UR、SSR、SR、Rの単発ガシャチケット）\n・特別なチケット専用ガシャチケット（登録早い順：課金チケットやキャンペーン配布チケットなど）\n・イベント配布アイテム（登録早い順）\n・補てんガシャチケット\n\n■実機上での並び順\n▼「消費」タブに表示されているアイテムの並び順\n・かけらBOX\n・ランクマッチチケット\n・イベント配布アイテム（いいジャン祭メダル【赤】）\n　※イベント専用アイテムが、資料と異なった位置に表示されています\n・代替ガシャチケット（スペシャル＞ピックアップ＞フェス）\n　※チケットの並び順が資料と異なっています\n・価値が低めのチケット専用ガシャチケット（実機の並び順：R、SR、SSR、URの単発ガシャチケット）\n　※レアリティが低い順に並んでいます\n・特別なチケット専用ガシャチケット\n　※UR確定10連チケット＞ピックアップUR確定10連チケット＞UR確定フェス10連チケットの順に並んでいますが、\n　　代替チケットに合わせて並び順が逆になるかと思われます\n・補てんガシャチケット\n　※補てん用ガシャチケットが最後の位置に表示されていません\n・課金チケットやキャンペーン配布チケットなど（賀正ガシャチケット Ver.2026）\n・プレミアムメダル\n　※メダルが資料と異なる位置に表示されておりますが、現状の位置でも問題ないかと思われます\n・課金チケットやキャンペーン配布チケットなど（【推しの子】SSR確定ガシャチケット）\n　※キャンペーン配布チケットがプレミアムメダルの後ろに表示されています\n\n------------------------------------------------------------------------------\n【強化】タブ\n\n■資料に記載されている「強化タブ」に該当するアイテムの並び順（タブが分かれたので、各項目に該当する箇所を抜き出し）\n▼「強化」タブに該当するアイテム（先頭から順に、以下の並び順で設定）\n・カラーメモリー（グレー＞レッド＞ブルー＞イエロー＞グリーン）\n・メモリーフラグメント（上級＞中級＞初級）\n・キャラ専用カラーメモリー（登録早い順）\n\n■実機上での並び順\n▼「強化」タブに表示されているアイテムの並び順\n・カラーメモリー（グレー＞レッド＞ブルー＞イエロー＞グリーン）\n・メモリーフラグメント（上級＞中級）\n・キャラ専用カラーメモリー\n　※登録順ではなくID順に表示されておりますが、現状で問題ないかと思われます\n・メモリーフラグメント（初級）\n　※初級のメモリーフラグメントだけが一番最後に表示されています\n\n【補足】\n・デバコマ「ユーザーの所持アイテム付与＆MAX」を使用して確認しております。\n・「かけらタブ」はレアリティ＞ID順に並んでいるため、問題ないかと思われます。\n\n【再現手順】\n1.デバッグメニュー＞リモート＞「ユーザーの所持アイテム付与＆MAX」を選択する\n2.ホーム画面＞「アイテムBOX」アイコンをタップする\n3.「消費タブ」「強化タブ」に並んでいるアイテムと資料の並び順を比較する\n\n【再現性】\n3回中3回\n\n【環境情報】\n接続環境　：dev-qa2\n検証ビルド：iOS  #2551\n　　　　　：AOS  #2551\n検証端末　：iPad mini（第6世代）（iOS:18.2）\n　　　　　：Galaxy S10（AOS:12）\n\n【ユーザー情報】\nユーザーID：A8699084069\n　　　　　：A1792565076\nユーザー名：双ノ子\n　　　　　：ふたりのざ\n\n【参考資料】\nConfluence「81-1_アイテムBOXページ」>「81-1_1_アイテムBOX」>「▼その他アイテムの並び順について」\n \n\n【報告者】\n堤 崇",
+    "markdown_description": "【発生症状】\nConfluence「81-1\\_アイテムBOXページ」>「81-1\\_1\\_アイテムBOX」>「▼その他アイテムの並び順について」に記載されている並び順と、\n実機上の「消費」タブ、「強化」タブに表示されるアイテムの並び順が相違しております。\n\n\\------------------------------------------------------------------------------\n【消費】タブ\n\n■資料に記載されている「消費タブ」に該当するアイテムの並び順（タブが分かれたので、各項目に該当する箇所を抜き出し）\n▼「消費」タブに該当するアイテム（先頭から順に、以下の並び順で設定）\n・かけらBOX\n・ランクマッチチケット\n・代替ガシャチケット（フェス＞ピックアップ＞スペシャル＞ノーマル）\n・プレミアムメダル\n・価値が低めのチケット専用ガシャチケット（レアリティ降順：UR、SSR、SR、Rの単発ガシャチケット）\n・特別なチケット専用ガシャチケット（登録早い順：課金チケットやキャンペーン配布チケットなど）\n・イベント配布アイテム（登録早い順）\n・補てんガシャチケット\n\n■実機上での並び順\n▼「消費」タブに表示されているアイテムの並び順\n・かけらBOX\n・ランクマッチチケット\n・**イベント配布アイテム（いいジャン祭メダル【赤】）**\n　※イベント専用アイテムが、資料と異なった位置に表示されています\n・**代替ガシャチケット（スペシャル＞ピックアップ＞フェス）**\n　※チケットの並び順が資料と異なっています\n・**価値が低めのチケット専用ガシャチケット（実機の並び順：R、SR、SSR、URの単発ガシャチケット）**\n　※レアリティが低い順に並んでいます\n・**特別なチケット専用ガシャチケット**\n　※UR確定10連チケット＞ピックアップUR確定10連チケット＞UR確定フェス10連チケットの順に並んでいますが、\n　　代替チケットに合わせて並び順が逆になるかと思われます\n・**補てんガシャチケット**\n　※補てん用ガシャチケットが最後の位置に表示されていません\n・課金チケットやキャンペーン配布チケットなど（賀正ガシャチケット Ver.2026）\n・プレミアムメダル\n　※メダルが資料と異なる位置に表示されておりますが、現状の位置でも問題ないかと思われます\n・**課金チケットやキャンペーン配布チケットなど（【推しの子】SSR確定ガシャチケット）**\n　※キャンペーン配布チケットがプレミアムメダルの後ろに表示されています\n\n\\------------------------------------------------------------------------------\n【強化】タブ\n\n■資料に記載されている「強化タブ」に該当するアイテムの並び順（タブが分かれたので、各項目に該当する箇所を抜き出し）\n▼「強化」タブに該当するアイテム（先頭から順に、以下の並び順で設定）\n・カラーメモリー（グレー＞レッド＞ブルー＞イエロー＞グリーン）\n・メモリーフラグメント（上級＞中級＞初級）\n・キャラ専用カラーメモリー（登録早い順）\n\n■実機上での並び順\n▼「強化」タブに表示されているアイテムの並び順\n・カラーメモリー（グレー＞レッド＞ブルー＞イエロー＞グリーン）\n・メモリーフラグメント（上級＞中級）\n・**キャラ専用カラーメモリー**\n　※登録順ではなくID順に表示されておりますが、現状で問題ないかと思われます\n・**メモリーフラグメント（初級）**\n　※初級のメモリーフラグメントだけが一番最後に表示されています\n\n【補足】\n・デバコマ「ユーザーの所持アイテム付与＆MAX」を使用して確認しております。\n・「かけらタブ」はレアリティ＞ID順に並んでいるため、問題ないかと思われます。\n\n【再現手順】\n1.デバッグメニュー＞リモート＞「ユーザーの所持アイテム付与＆MAX」を選択する\n2.ホーム画面＞「アイテムBOX」アイコンをタップする\n3.「消費タブ」「強化タブ」に並んでいるアイテムと資料の並び順を比較する\n\n【再現性】\n3回中3回\n\n【環境情報】\n接続環境　：dev-qa2\n検証ビルド：iOS #2551\n　　　　　：AOS #2551\n検証端末　：iPad mini（第6世代）（iOS:18.2）\n　　　　　：Galaxy S10（AOS:12）\n\n【ユーザー情報】\nユーザーID：A8699084069\n　　　　　：A1792565076\nユーザー名：双ノ子\n　　　　　：ふたりのざ\n\n【参考資料】\nConfluence「81-1\\_アイテムBOXページ」>「81-1\\_1\\_アイテムBOX」>「▼その他アイテムの並び順について」\n[https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/151357316/81-1\\_+BOX#81-1\\_1\\_%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX](https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/151357316/81-1_+BOX#81-1_1_%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX)\n\n【報告者】\n堤 崇\n\n![](https://t5716001.p.clickup-attachments.com/t5716001/a6e46509-b965-4905-b9cd-57d17335cb16/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E6%B6%88%E8%B2%BB%E3%82%BF%E3%83%96%E3%81%A8%E5%BC%B7%E5%8C%96%E3%82%BF%E3%83%96%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E4%B8%A6%E3%81%B3%E9%A0%86%E3%81%8C%E8%B3%87%E6%96%99%E7%9B%B8%E9%81%95.jpg)",
+    "status": {
+      "id": "c90180884069_irfF5nXi",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 8,
+      "type": "closed"
+    },
+    "orderindex": "237885792.00000000000000000000000000000000",
+    "date_created": "1765784464869",
+    "date_updated": "1767752994559",
+    "date_closed": "1767752992848",
+    "date_done": "1767749864636",
+    "archived": false,
+    "creator": {
+      "id": 60970688,
+      "username": "Kazuya Adachi",
+      "color": "",
+      "email": "confidence-q12@cfd-qa.jp",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+    },
+    "assignees": [
+      {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "email": "keisuke.isayama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "color": "#536cfe",
+        "initials": "TT",
+        "email": "t-takahashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 43594915,
+        "username": "wataru shigeyama",
+        "color": "#0388d1",
+        "initials": "WS",
+        "email": "shigeyama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594915_4l9.jpg"
+      },
+      {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "color": "#f57c01",
+        "initials": "RG",
+        "email": "r-goto@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "color": "",
+        "initials": "KA",
+        "email": "confidence-q12@cfd-qa.jp",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "email": "keisuke.isayama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": null,
+    "top_level_parent": null,
+    "priority": {
+      "color": "#f8ae00",
+      "id": "2",
+      "orderindex": "2",
+      "priority": "high"
+    },
+    "due_date": "1765825200000",
+    "start_date": "1765738800000",
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "33339b75-59dd-41ab-93be-a5851eda214f",
+        "name": "Create",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1710513136311",
+        "hide_from_guests": false,
+        "value": "1765738800000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "30b51379-c05c-4160-8a50-b00d922fbae2",
+        "name": "Done",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1710513153601",
+        "hide_from_guests": false,
+        "value": "1767726000000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "9b9b2d63-d009-4ca1-8d56-9134e02aff0a",
+        "name": "QA種別",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "4633edc2-f960-48b3-878e-276b9bc12480",
+              "label": "形式的テスト_機能QA",
+              "color": "#02BCD4",
+              "orderindex": 0
+            },
+            {
+              "id": "1762b0fc-04ee-4d50-a09b-94c940e1c00b",
+              "label": "形式的テスト_データQA",
+              "color": "#FF7FAB",
+              "orderindex": 1
+            },
+            {
+              "id": "20c4c563-1dd1-4b25-b5c3-315c3dfe565e",
+              "label": "仕様QA",
+              "color": "#0231E8",
+              "orderindex": 2
+            },
+            {
+              "id": "dd63823d-711a-483e-b545-4a4e9a17105e",
+              "label": "納品ビルドQA",
+              "color": "#e50000",
+              "orderindex": 3
+            },
+            {
+              "id": "388394ac-3741-4a49-be3c-1536c31ed984",
+              "label": "探索的テスト",
+              "color": "#2ecd6f",
+              "orderindex": 4
+            },
+            {
+              "id": "4441a87d-8ed2-4ecf-a26f-70577c9ac1ec",
+              "label": "データ設定依頼",
+              "color": "#7C4DFF",
+              "orderindex": 5
+            }
+          ]
+        },
+        "date_created": "1713678824862",
+        "hide_from_guests": false,
+        "value": [
+          "388394ac-3741-4a49-be3c-1536c31ed984"
+        ],
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "c9c26e3c-0058-464f-ad26-05f202ba1280",
+        "name": "QA通知用カスタムフィールド",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1738652166515",
+        "hide_from_guests": false,
+        "value": "1765785608.850539",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "a19f03bc-9353-4a4d-8fea-4cedad109c04",
+        "name": "SEED関連",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "ad5bcb51-5f4a-4821-b690-ef56ea3adf74",
+              "name": "基盤システム",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "2e1a03fb-5636-4b63-a0ea-1f203eb8f7ed",
+              "name": "共通ゲーム機能",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1714035568848",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "210de310-253e-4f67-9084-d238847e1c5b",
+        "name": "StatusChange",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1743490160615",
+        "hide_from_guests": true,
+        "value": "1767726000000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "b888a620-455b-459b-8787-9239bd25320b",
+        "name": "TC",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "670e9326-08e0-438e-b87f-c88203208456",
+              "name": "TC不具合",
+              "color": "#FF4081",
+              "orderindex": 0
+            }
+          ]
+        },
+        "date_created": "1752220927691",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "e4796b07-0423-4f12-b671-cdf0c89d4a4f",
+        "name": "バグカテゴリ",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "a224b122-6421-4c9d-934d-d549ce3ff066",
+              "name": "コンプライアンス",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "102367e8-e2ed-4e24-b4f8-7e61327d34c7",
+              "name": "動作",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "97b5d368-a3ba-4093-9374-2694af3d81d7",
+              "name": "テキスト",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "2f72aa85-b8c0-4400-a95d-66eb1ebdd4b2",
+              "name": "サウンド",
+              "color": null,
+              "orderindex": 3
+            }
+          ]
+        },
+        "date_created": "1713679528982",
+        "hide_from_guests": false,
+        "value": 1,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "5d3d19b6-3b80-4f24-acca-4c0e159c62f3",
+        "name": "バグタイプ",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "18e6adeb-d408-4398-8e1c-3d7abbb331bb",
+              "name": "コンプライアンス_動作違反",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "aeab53d0-993d-47fe-8e58-ea1cc658f105",
+              "name": "コンプライアンス_規定用語違反",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "5110cb7c-7b88-4825-bc8d-df5e9620815d",
+              "name": "コンプライアンス_不適切なメッセージ",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "967f9059-288e-4cb2-bcd7-73ee874f1475",
+              "name": "コンプライアンス_テキスト翻訳不備",
+              "color": null,
+              "orderindex": 3
+            },
+            {
+              "id": "b801d244-76b4-4d01-a97d-2a7ad5b4c59d",
+              "name": "コンプライアンス_テキスト表示不備",
+              "color": null,
+              "orderindex": 4
+            },
+            {
+              "id": "b51fdd33-2bbe-4194-aa82-29dff894feca",
+              "name": "動作_クラッシュ",
+              "color": null,
+              "orderindex": 5
+            },
+            {
+              "id": "9ed249a0-5aaf-4aad-a91e-18b39995b30d",
+              "name": "動作_フリーズ",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "7d6d8c27-12bd-4b13-93ac-7d3a02fa9f09",
+              "name": "動作_エラー",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "cd7cd621-8033-4521-9d7e-b9c00397197e",
+              "name": "動作_進行不能",
+              "color": null,
+              "orderindex": 8
+            },
+            {
+              "id": "32c50796-6e51-4523-bc9e-f6fe314ef2e4",
+              "name": "動作_セーブ/ロード",
+              "color": null,
+              "orderindex": 9
+            },
+            {
+              "id": "501548e0-56d4-4f8d-81d6-c1f019d1e295",
+              "name": "動作_AI",
+              "color": null,
+              "orderindex": 10
+            },
+            {
+              "id": "ce319867-efa9-4b4a-a21f-1c2f4da1b496",
+              "name": "動作_仕様問題",
+              "color": null,
+              "orderindex": 11
+            },
+            {
+              "id": "b4b06f4a-d6be-4006-a9a6-704c2a3981f6",
+              "name": "動作_カメラ",
+              "color": null,
+              "orderindex": 12
+            },
+            {
+              "id": "5a7d2d05-169e-42b2-b94c-27275924ff1e",
+              "name": "動作_当たり判定",
+              "color": null,
+              "orderindex": 13
+            },
+            {
+              "id": "d9fae33c-a8e0-44d2-98f1-5b8b4e5f2698",
+              "name": "動作_操作異常",
+              "color": null,
+              "orderindex": 14
+            },
+            {
+              "id": "d7413fd7-da48-42c5-a1ea-11d25a1cb561",
+              "name": "動作_グラフィック",
+              "color": null,
+              "orderindex": 15
+            },
+            {
+              "id": "b1b94ed8-c5ec-46b1-a9d7-a6abdac6b62b",
+              "name": "動作_その他",
+              "color": null,
+              "orderindex": 16
+            },
+            {
+              "id": "b7075045-fb54-4660-8764-446fe867a753",
+              "name": "テキスト_文法間違い",
+              "color": null,
+              "orderindex": 17
+            },
+            {
+              "id": "28abac6a-3464-48c1-b9d6-84d5e68cf245",
+              "name": "テキスト_誤字/脱字",
+              "color": null,
+              "orderindex": 18
+            },
+            {
+              "id": "5958fa96-7f5c-45b3-a67a-56dfb4ec5a96",
+              "name": "テキスト_重なり/途切れ",
+              "color": null,
+              "orderindex": 19
+            },
+            {
+              "id": "345d2b6b-229c-482d-969a-7823d2bf753d",
+              "name": "テキスト_言語間違い",
+              "color": null,
+              "orderindex": 20
+            },
+            {
+              "id": "7b6a3e44-ad19-4449-a88b-c9707a53d85f",
+              "name": "テキスト_間違ったテキスト/翻訳間違い",
+              "color": null,
+              "orderindex": 21
+            },
+            {
+              "id": "682d1998-8757-40eb-b7f9-60dcf4168a11",
+              "name": "テキスト_特殊文字",
+              "color": null,
+              "orderindex": 22
+            },
+            {
+              "id": "d5d903c3-340f-4d8b-8147-53345c8136c9",
+              "name": "テキスト_字幕",
+              "color": null,
+              "orderindex": 23
+            },
+            {
+              "id": "b7da689c-f550-4a5f-ac78-61896e007e64",
+              "name": "テキスト_句読点/大文字/小文字",
+              "color": null,
+              "orderindex": 24
+            },
+            {
+              "id": "c116d051-769f-4430-ad82-d74b927788b8",
+              "name": "サウンド_ボイスの抜け",
+              "color": null,
+              "orderindex": 25
+            },
+            {
+              "id": "dc5f7626-2888-4df2-afbd-385f68294084",
+              "name": "サウンド_ボイスの途切れ",
+              "color": null,
+              "orderindex": 26
+            },
+            {
+              "id": "36d2e4b5-8f36-460a-a368-335200fb2c4d",
+              "name": "サウンド_ボイスの破損",
+              "color": null,
+              "orderindex": 27
+            },
+            {
+              "id": "217fc213-6018-4461-a3fc-9fb7e093e059",
+              "name": "サウンド_字幕",
+              "color": null,
+              "orderindex": 28
+            },
+            {
+              "id": "111c33f6-89c2-4d01-81bb-7a3541f596f3",
+              "name": "サウンド_SE/BGM",
+              "color": null,
+              "orderindex": 29
+            }
+          ]
+        },
+        "date_created": "1713679571042",
+        "hide_from_guests": false,
+        "value": 16,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "861a2d95-f600-4a60-9561-934c0f98f92d",
+        "name": "バグ発生場所（詳細）",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1713679629973",
+        "hide_from_guests": false,
+        "value": "アイテムBOX_「消費」タブ、「強化」タブ",
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "0b3cfe49-851b-4ebd-9c13-86c17a8d98be",
+        "name": "バグ発生箇所",
+        "type": "drop_down",
+        "type_config": {
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "67b29b8c-14bc-48c8-b13d-b45e3d84adb9",
+              "name": "起動〜タイトル画面",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "96607ce6-e30c-49a8-b5e8-4d01803f5a92",
+              "name": "アトラクトデモ",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "d1780893-0723-4a3f-8df9-d7eb57233be8",
+              "name": "通常プレイ",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "228e4556-c6bb-4710-b3a4-b18dcbcc0ba6",
+              "name": "画面表示情報",
+              "color": null,
+              "orderindex": 3
+            },
+            {
+              "id": "7204c659-5817-4ca4-b4e9-0ad8761aebbc",
+              "name": "メニュー",
+              "color": null,
+              "orderindex": 4
+            },
+            {
+              "id": "2d561481-6fe3-4c26-8f24-a0ba9ce498c3",
+              "name": "ムービー/イベントデモ",
+              "color": null,
+              "orderindex": 5
+            },
+            {
+              "id": "7a186166-0780-4e69-84a3-ec608c5e53af",
+              "name": "マルチプレイ",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "9bb558c3-ab5a-4606-8ab0-68e58609b7b7",
+              "name": "オプション",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "1114bd2f-61bf-4b1d-b9c0-a24ff34427a9",
+              "name": "その他",
+              "color": null,
+              "orderindex": 8
+            }
+          ]
+        },
+        "date_created": "1713679608256",
+        "hide_from_guests": false,
+        "value": 8,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "f781176f-19a2-42b1-b3db-cef2923c1990",
+        "name": "フェーズ",
+        "type": "labels",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "52913db9-2eb3-420c-b1d2-274072b837e9",
+              "label": "α2",
+              "color": "#e50000",
+              "orderindex": 0
+            },
+            {
+              "id": "6512e5a6-5932-4ca5-ae27-653911b7c1e6",
+              "label": "α3",
+              "color": "#f900ea",
+              "orderindex": 1
+            },
+            {
+              "id": "7c2fa23d-f746-4557-a2da-284b5bfdb51e",
+              "label": "β",
+              "color": "#ff7800",
+              "orderindex": 2
+            },
+            {
+              "id": "a9466cc9-0465-4a59-b4f0-31631d7d7a2b",
+              "label": "α4",
+              "color": "#0231E8",
+              "orderindex": 3
+            },
+            {
+              "id": "7605117f-6c89-425c-9ef7-1106e0d80991",
+              "label": "マスター",
+              "color": "#02BCD4",
+              "orderindex": 4
+            }
+          ]
+        },
+        "date_created": "1717135495606",
+        "hide_from_guests": false,
+        "value": [
+          "7605117f-6c89-425c-9ef7-1106e0d80991"
+        ],
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "7d962b0d-d8f6-47cb-9822-59ab4b61e285",
+        "name": "プラットフォーム",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "f8342cfb-07bd-40d1-8e7c-deb114bd6ef2",
+              "label": "iOS",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "84342121-5e5c-4083-99a5-b057d3db94e9",
+              "label": "AOS",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1713679380010",
+        "hide_from_guests": false,
+        "value": [
+          "84342121-5e5c-4083-99a5-b057d3db94e9",
+          "f8342cfb-07bd-40d1-8e7c-deb114bd6ef2"
+        ],
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "b3a6f2b7-7ac5-4877-99cf-2ba770098cc5",
+        "name": "不具合種別",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "bd101364-efc3-4995-bcee-33e94e934139",
+              "name": "動作・表示不良",
+              "color": "#81B1FF",
+              "orderindex": 0
+            },
+            {
+              "id": "f6ebab38-be78-4bfc-ac46-5e590c1776b6",
+              "name": "資料相違",
+              "color": "#2ecd6f",
+              "orderindex": 1
+            },
+            {
+              "id": "9d879ef8-4336-412b-9264-3837d3299a84",
+              "name": "BNEレギュ",
+              "color": "#e50000",
+              "orderindex": 2
+            }
+          ]
+        },
+        "date_created": "1747281572777",
+        "hide_from_guests": false,
+        "value": 1,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "476aa1d0-a2fd-4a0c-8681-2a294b01e1a2",
+        "name": "修正完了するスコープ",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "86a37571-d88e-4fb4-915d-bffb5d2c3cfa",
+              "name": "アルファ2",
+              "color": "#EA80FC",
+              "orderindex": 0
+            },
+            {
+              "id": "f51dffad-d374-4a05-b06d-82c2681ec81b",
+              "name": "アルファ3",
+              "color": "#f9d900",
+              "orderindex": 1
+            },
+            {
+              "id": "92bd26f0-d2b5-4d60-ae45-0e37d4fc31fc",
+              "name": "ベータ",
+              "color": "#2ecd6f",
+              "orderindex": 2
+            },
+            {
+              "id": "d8dc05a2-fef7-44d3-92b7-eab81022aecf",
+              "name": "マスター",
+              "color": "#e50000",
+              "orderindex": 3
+            },
+            {
+              "id": "b7cb8b52-9e68-4021-abeb-1262b21295d1",
+              "name": "8/21ROM",
+              "color": "#e50000",
+              "orderindex": 4
+            },
+            {
+              "id": "3d596e3e-cb2a-4cf2-a448-cd022788f73d",
+              "name": "8/28ROM",
+              "color": "#04A9F4",
+              "orderindex": 5
+            },
+            {
+              "id": "d74b1ed6-601e-4b89-8d88-28d14681878b",
+              "name": "8/30ROM",
+              "color": "#7C4DFF",
+              "orderindex": 6
+            },
+            {
+              "id": "f765b0fd-95b8-4e8a-8ea2-6e0f318b5811",
+              "name": "ベータ以降にしたい",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "1e9f9b71-38dd-46aa-a280-ccca059e608c",
+              "name": "直近優先",
+              "color": "#f900ea",
+              "orderindex": 8
+            },
+            {
+              "id": "fdf7323c-9745-439f-aece-26c22aef1d35",
+              "name": "12/10ROM",
+              "color": "#E65100",
+              "orderindex": 9
+            },
+            {
+              "id": "1d7012a4-a719-4a15-8ea5-75ee4cea424e",
+              "name": "12/27ROM",
+              "color": "#9b59b6",
+              "orderindex": 10
+            },
+            {
+              "id": "5f68215e-4fac-4d83-a8b7-8c86c72fb122",
+              "name": "1/22ROM",
+              "color": "#0231E8",
+              "orderindex": 11
+            },
+            {
+              "id": "60119d89-0bf6-4590-bde7-8e8d1ab52c8c",
+              "name": "4/16ROM(必須",
+              "color": "#e50000",
+              "orderindex": 12
+            },
+            {
+              "id": "77730809-a885-4443-a559-82aee343d2c1",
+              "name": "4/16ROM(可能であれば",
+              "color": "#f9d900",
+              "orderindex": 13
+            },
+            {
+              "id": "7029f34d-09a2-4b1d-8c63-9a50c6a7ad32",
+              "name": "4/16以降",
+              "color": "#667684",
+              "orderindex": 14
+            },
+            {
+              "id": "cb5ffcfd-ecbd-478d-a4a5-b8d04a00d714",
+              "name": "リリース時必須",
+              "color": "#e50000",
+              "orderindex": 15
+            },
+            {
+              "id": "2b449347-0f41-4704-9023-da0df7b47d8b",
+              "name": "リリース以降",
+              "color": "#AF7E2E",
+              "orderindex": 16
+            }
+          ]
+        },
+        "date_created": "1713679022358",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "0cf27ca9-f798-4e71-b4a2-9c85943d1e2c",
+        "name": "修正種別",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "ac250576-5c6b-45b1-bb9e-a883fe854247",
+              "label": "機能",
+              "color": "#0231E8",
+              "orderindex": 0
+            },
+            {
+              "id": "6c9508d5-bb4f-46d2-91fc-8650e111ca03",
+              "label": "仕様書",
+              "color": "#2ecd6f",
+              "orderindex": 1
+            },
+            {
+              "id": "b47f0d44-d6cf-4030-ae54-68c118a5c1e1",
+              "label": "BNEレギュ",
+              "color": "#e50000",
+              "orderindex": 2
+            }
+          ]
+        },
+        "date_created": "1747281999811",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "6636220f-5e89-4a3f-9ed2-d9b9fe727a84",
+        "name": "発生環境",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "e2c6ac7b-6f7c-4c92-8b98-dc324f5e7864",
+              "name": "開発環境",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "91438067-9a0d-4b37-b1dd-29c987299252",
+              "name": "本番環境",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1714612061063",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "80822821-c62e-4e67-9277-19b32a977fba",
+        "name": "発生頻度",
+        "type": "drop_down",
+        "type_config": {
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "cb7bd4b2-dac0-44c4-94fc-5e500eadd043",
+              "name": "常に発生",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "83cdbefe-57c8-4bde-ba81-691fa0d170f3",
+              "name": "頻繁に発生",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "19a92f41-e453-44fd-a6e0-4523a65c2677",
+              "name": "時々発生",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "fe8065d2-75e8-4fef-9ee4-5c06320f0629",
+              "name": "一度だけ発生",
+              "color": null,
+              "orderindex": 3
+            }
+          ]
+        },
+        "date_created": "1713679676442",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "cacf3f36-fd1e-4103-bb71-3b91a82cf9a2",
+        "name": "発見version",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1713679757393",
+        "hide_from_guests": false,
+        "value": "#2551",
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "1bbe28dd-d8ab-4f78-9ea0-f31c166aafad",
+        "name": "起票元",
+        "type": "labels",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "b332c6f6-919d-46cd-99ba-3a32ea0bfeb4",
+              "label": "WP",
+              "color": "#04A9F4",
+              "orderindex": 0
+            },
+            {
+              "id": "e9b35e3c-0382-4b79-ab46-480eab530b3f",
+              "label": "BNE",
+              "color": "#e50000",
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1734056226269",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "7ff853ee-87a4-4736-8cd9-6dd68aa7e62f",
+        "name": "QAステータス",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "3332fa61-9be4-4865-91b6-ac8a359aee8f",
+              "name": "1. 起票",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "c6a77a6d-3b34-4560-8841-14cd83bd0a51",
+              "name": "2. 新規",
+              "color": "#f9d900",
+              "orderindex": 1
+            },
+            {
+              "id": "0b47fa49-c36b-4507-83b5-3158e7b7bc71",
+              "name": "3. 着手",
+              "color": "#02BCD4",
+              "orderindex": 2
+            },
+            {
+              "id": "ec6ed7f1-f4ce-493a-8c01-c29682cbfd65",
+              "name": "4. 修正完了",
+              "color": "#667684",
+              "orderindex": 3
+            },
+            {
+              "id": "c0de5c24-5658-4d88-a642-6ac31e17c389",
+              "name": "5.修正確認待ち",
+              "color": "#AF7E2E",
+              "orderindex": 4
+            },
+            {
+              "id": "5a9713db-67e0-4a73-a559-3b025252b783",
+              "name": "6.再発",
+              "color": "#e50000",
+              "orderindex": 5
+            },
+            {
+              "id": "475f5a94-c8e0-47fa-a5f1-9b7fa67e1d79",
+              "name": "7.修正確認完了",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "52e44b18-f6f7-479e-b67b-2d8f18dec533",
+              "name": "9.仕様",
+              "color": "#1bbc9c",
+              "orderindex": 7
+            },
+            {
+              "id": "06f592d2-0cee-4760-8e1c-30455c7ffc8d",
+              "name": "10.仕様確認完了",
+              "color": "#2ecd6f",
+              "orderindex": 8
+            }
+          ]
+        },
+        "date_created": "1713679979962",
+        "hide_from_guests": false,
+        "value": 6,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "e2fae355-c7f8-444c-9731-0c5f3d8b5f7a",
+        "name": "バグランク",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "37d2a87a-74d9-4556-94d4-f094c5680e23",
+              "name": "MF（修正必須）",
+              "color": "#e50000",
+              "orderindex": 0
+            },
+            {
+              "id": "42e43fc9-c7e6-4135-bd84-45de0577e923",
+              "name": "A（要修正）",
+              "color": "#FF7FAB",
+              "orderindex": 1
+            },
+            {
+              "id": "87f36273-b86e-4f73-804f-2e02e6cc4193",
+              "name": "B（原則修正）",
+              "color": "#f9d900",
+              "orderindex": 2
+            },
+            {
+              "id": "d2d3fbd0-e552-4aa1-9f35-5f8a1d81905b",
+              "name": "C（修正推奨）",
+              "color": "#02BCD4",
+              "orderindex": 3
+            },
+            {
+              "id": "5f2e6883-e9fe-42a1-bb20-3a1d57ef88d9",
+              "name": "D（質問）",
+              "color": "#1bbc9c",
+              "orderindex": 4
+            },
+            {
+              "id": "f49e74c6-11ac-412e-8c41-0d8b33837d40",
+              "name": "E（要望）",
+              "color": "#b5bcc2",
+              "orderindex": 5
+            }
+          ]
+        },
+        "date_created": "1713679476223",
+        "hide_from_guests": false,
+        "value": 2,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "b449c257-f716-48b3-b8a6-e87eec292868",
+        "name": "修正ビルド",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1716194086347",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [
+      {
+        "id": "901806930266",
+        "name": "クライアントタスク集約リスト"
+      }
+    ],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86evvzpyj",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812770558",
+      "name": "アプリQA_Ver1.4.1",
+      "access": true
+    },
+    "project": {
+      "id": "90180884069",
+      "name": "QA",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180884069",
+      "name": "QA",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": [
+      {
+        "id": "b453b456-8b18-4da5-88d5-b1c1a8065580.jpg",
+        "date": "1767693315354",
+        "title": "アイテムBOX_並び順再修正.jpg",
+        "type": 2,
+        "source": 1,
+        "version": 0,
+        "extension": "jpg",
+        "thumbnail_small": "https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580_small.jpg",
+        "thumbnail_medium": "https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580_medium.jpg",
+        "thumbnail_large": "https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580_large.jpg",
+        "is_folder": null,
+        "mimetype": "image/jpeg",
+        "hidden": false,
+        "parent_id": "90180182507669",
+        "size": 722574,
+        "total_comments": 0,
+        "resolved_comments": 0,
+        "user": {
+          "id": 60970688,
+          "username": "Kazuya Adachi",
+          "email": "confidence-q12@cfd-qa.jp",
+          "initials": "KA",
+          "color": "",
+          "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+        },
+        "deleted": false,
+        "orientation": null,
+        "url": "https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg",
+        "email_data": null,
+        "workspace_id": null,
+        "url_w_query": "https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg?view=open",
+        "url_w_host": "https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg"
+      },
+      {
+        "id": "8775d067-6edf-4d0e-bca5-8c786d6f2709.jpg",
+        "date": "1767667274909",
+        "title": "アイテムBOX_並び順修正後.jpg",
+        "type": 2,
+        "source": 1,
+        "version": 0,
+        "extension": "jpg",
+        "thumbnail_small": "https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709_small.jpg",
+        "thumbnail_medium": "https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709_medium.jpg",
+        "thumbnail_large": "https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709_large.jpg",
+        "is_folder": null,
+        "mimetype": "image/jpeg",
+        "hidden": false,
+        "parent_id": "90180182387521",
+        "size": 1398823,
+        "total_comments": 0,
+        "resolved_comments": 0,
+        "user": {
+          "id": 60970688,
+          "username": "Kazuya Adachi",
+          "email": "confidence-q12@cfd-qa.jp",
+          "initials": "KA",
+          "color": "",
+          "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+        },
+        "deleted": false,
+        "orientation": null,
+        "url": "https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg",
+        "email_data": null,
+        "workspace_id": null,
+        "url_w_query": "https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg?view=open",
+        "url_w_host": "https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg"
+      },
+      {
+        "id": "a6e46509-b965-4905-b9cd-57d17335cb16.jpg",
+        "date": "1765784524861",
+        "title": "アイテムBOX_消費タブと強化タブのアイテム並び順が資料相違.jpg",
+        "type": 1,
+        "source": 1,
+        "version": 0,
+        "extension": "jpg",
+        "thumbnail_small": "https://t5716001.p.clickup-attachments.com/t5716001/a6e46509-b965-4905-b9cd-57d17335cb16_small.jpg",
+        "thumbnail_medium": "https://t5716001.p.clickup-attachments.com/t5716001/a6e46509-b965-4905-b9cd-57d17335cb16_medium.jpg",
+        "thumbnail_large": "https://t5716001.p.clickup-attachments.com/t5716001/a6e46509-b965-4905-b9cd-57d17335cb16_large.jpg",
+        "is_folder": null,
+        "mimetype": "image/jpeg",
+        "hidden": false,
+        "parent_id": "86evvzpyj",
+        "size": 1353154,
+        "total_comments": 0,
+        "resolved_comments": 0,
+        "user": {
+          "id": 60970688,
+          "username": "Kazuya Adachi",
+          "email": "confidence-q12@cfd-qa.jp",
+          "initials": "KA",
+          "color": "",
+          "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+        },
+        "deleted": false,
+        "orientation": null,
+        "url": "https://t5716001.p.clickup-attachments.com/t5716001/a6e46509-b965-4905-b9cd-57d17335cb16/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E6%B6%88%E8%B2%BB%E3%82%BF%E3%83%96%E3%81%A8%E5%BC%B7%E5%8C%96%E3%82%BF%E3%83%96%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E4%B8%A6%E3%81%B3%E9%A0%86%E3%81%8C%E8%B3%87%E6%96%99%E7%9B%B8%E9%81%95.jpg",
+        "email_data": null,
+        "workspace_id": null,
+        "url_w_query": "https://t5716001.p.clickup-attachments.com/t5716001/a6e46509-b965-4905-b9cd-57d17335cb16/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E6%B6%88%E8%B2%BB%E3%82%BF%E3%83%96%E3%81%A8%E5%BC%B7%E5%8C%96%E3%82%BF%E3%83%96%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E4%B8%A6%E3%81%B3%E9%A0%86%E3%81%8C%E8%B3%87%E6%96%99%E7%9B%B8%E9%81%95.jpg?view=open",
+        "url_w_host": "https://t5716001.p.clickup-attachments.com/t5716001/a6e46509-b965-4905-b9cd-57d17335cb16/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E6%B6%88%E8%B2%BB%E3%82%BF%E3%83%96%E3%81%A8%E5%BC%B7%E5%8C%96%E3%82%BF%E3%83%96%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E4%B8%A6%E3%81%B3%E9%A0%86%E3%81%8C%E8%B3%87%E6%96%99%E7%9B%B8%E9%81%95.jpg"
+      }
+    ]
+  },
+  "comments": [
+    {
+      "id": "90180182700299",
+      "comment": [
+        {
+          "text": "1/7 堤",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5830904d-2105-4c1e-a018-29d5e23855bf"
+          }
+        },
+        {
+          "text": "「強化」タブ内のアイテムを名称でソートすると複雑化してしまうため、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e46e8fd7-240a-487e-8ba3-15f5d6c320f6"
+          }
+        },
+        {
+          "text": "各「単発ガシャチケット」がバラバラの並び順になっていることは仕様とする旨、承知いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-14c724fe-f960-4512-ba14-21e070bd7ac1"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4fd8bd15-c4d5-4487-a5bd-8554a96eb24c"
+          }
+        },
+        {
+          "text": "コメントに記載の並び順に修正されておりますので、修正確認済みとさせていただきます。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9d523c1e-2101-4127-a52d-afe51d87c9ac"
+          }
+        },
+        {
+          "text": "ご対応いただき、ありがとうございました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d71d08b5-8409-43f9-adbb-bb0f2d2a0c0e"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c809d78f-604c-4897-8edc-a1e830cf3bfd"
+          }
+        },
+        {
+          "text": "検証ビルド：iOS #41(530)、AOS #40(533)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-154c72c6-34a8-4dfc-95fc-e73f4017e723"
+          }
+        },
+        {
+          "text": "確認環境 ：dev-qa",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a42ec1e1-f0bf-433d-9c0d-2d2e054ab864"
+          }
+        },
+        {
+          "text": "検証端末 ：iPad mini（第6世代）（iOS:18.2）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cfdf4f5e-f7c3-4541-99d9-0d5ff5f2ec03"
+          }
+        },
+        {
+          "text": "　　　　 ：Galaxy S10（AOS:12）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0bd22b46-ba82-4c44-b90f-dcc4a0e4a5e2"
+          }
+        }
+      ],
+      "comment_text": "1/7 堤\n「強化」タブ内のアイテムを名称でソートすると複雑化してしまうため、\n各「単発ガシャチケット」がバラバラの並び順になっていることは仕様とする旨、承知いたしました。\n\nコメントに記載の並び順に修正されておりますので、修正確認済みとさせていただきます。\nご対応いただき、ありがとうございました。\n\n検証ビルド：iOS #41(530)、AOS #40(533)\n確認環境 ：dev-qa\n検証端末 ：iPad mini（第6世代）（iOS:18.2）\n　　　　 ：Galaxy S10（AOS:12）\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767752930764",
+      "reply_count": 0
+    },
+    {
+      "id": "90180182508201",
+      "comment": [
+        {
+          "text": "すいません",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5889fe58-8baf-48b4-9654-b5535f3ff17f"
+          }
+        },
+        {
+          "text": "こちらはガシャチケットのカテゴリー内でID順で括っているので、名称一致でソート対応するなど複雑化してきてしまうので、現状ので仕様とさせていただけますと幸いです。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a18e4a3b-ce41-4cd5-b02f-eb0f36ae1eae"
+          }
+        }
+      ],
+      "comment_text": "すいません\nこちらはガシャチケットのカテゴリー内でID順で括っているので、名称一致でソート対応するなど複雑化してきてしまうので、現状ので仕様とさせていただけますと幸いです。\n",
+      "user": {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "email": "r-goto@wonderpla.net",
+        "color": "#f57c01",
+        "initials": "RG",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767693470761",
+      "reply_count": 0
+    },
+    {
+      "id": "90180182507669",
+      "comment": [
+        {
+          "text": "1/6 堤",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-025ed1ec-0d33-45d6-8a55-8ab551058505"
+          }
+        },
+        {
+          "text": "アイテムBOXの「消費、強化」タブ内のアイテムがコメントに記載されている並び順になっていることを確認いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0507229f-6409-4e12-9ff8-e418f54dcfba"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8f35ada3-0f46-459c-a332-138ebe298f98"
+          }
+        },
+        {
+          "text": "1点確認となりますが、「単発ガシャチケット」がガシャチケットで分類され、その中でレアリティ順になっているため",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-70b73d2e-6b56-49aa-b9e2-c9176a0ed6b2"
+          }
+        },
+        {
+          "text": "以前と変わらずバラバラに表示されております。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1a747965-2358-4c67-8cdb-859f2636a5de"
+          }
+        },
+        {
+          "text": "こちらに関しましては現状の表示順で問題ないということでよろしいでしょうか。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4c2d004d-0495-4e93-a64e-ef170f5cbca9"
+          }
+        },
+        {
+          "text": "お手数をお掛けして申し訳ありませんが、ご確認の程よろしくお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-85dd8de4-b1c2-4bf6-be25-930afc2be034"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7acecaad-eaf2-4000-83eb-94f296601861"
+          }
+        },
+        {
+          "type": "image",
+          "text": "%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg",
+          "image": {
+            "id": "b453b456-8b18-4da5-88d5-b1c1a8065580.jpg",
+            "name": "%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg",
+            "title": "%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg",
+            "type": "jpg",
+            "extension": "image/jpg",
+            "thumbnail_large": "https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg",
+            "thumbnail_medium": "https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg",
+            "thumbnail_small": "https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg",
+            "url": "https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg",
+            "uploaded": true
+          },
+          "attributes": {
+            "width": "164",
+            "data-id": "b453b456-8b18-4da5-88d5-b1c1a8065580.jpg",
+            "data-attachment": "{\"id\":\"b453b456-8b18-4da5-88d5-b1c1a8065580.jpg\",\"version\":\"0\",\"date\":1767693315354,\"name\":\"アイテムBOX_並び順再修正.jpg\",\"title\":\"アイテムBOX_並び順再修正.jpg\",\"extension\":\"jpg\",\"source\":1,\"thumbnail_small\":\"https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580_small.jpg\",\"thumbnail_medium\":\"https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580_medium.jpg\",\"thumbnail_large\":\"https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580_large.jpg\",\"url\":\"https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg\",\"url_w_query\":\"https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg?view=open\",\"url_w_host\":\"https://t5716001.p.clickup-attachments.com/t5716001/b453b456-8b18-4da5-88d5-b1c1a8065580/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg\"}",
+            "data-natural-width": "1488",
+            "data-natural-height": "2266"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b7c44e39-3b4b-468c-b809-3536546d0e17"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bb3c1b6e-8a93-4456-ae26-a2561834ae9e"
+          }
+        },
+        {
+          "text": "検証ビルド：iOS #37(527)、AOS #37(530)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ea79af81-0f9b-4519-b3c0-b7d59361cdd8"
+          }
+        },
+        {
+          "text": "確認環境 ：dev-qa",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d003c54a-1a76-458c-9458-a48158553974"
+          }
+        },
+        {
+          "text": "検証端末 ：iPad mini（第6世代）（iOS:18.2）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bbaae159-def2-41fc-941b-cce498ba9997"
+          }
+        },
+        {
+          "text": "　　　　 ：Galaxy S10（AOS:12）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9aad5766-5d4c-46b8-b131-a1fa151dfbc7"
+          }
+        }
+      ],
+      "comment_text": "1/6 堤\nアイテムBOXの「消費、強化」タブ内のアイテムがコメントに記載されている並び順になっていることを確認いたしました。\n\n1点確認となりますが、「単発ガシャチケット」がガシャチケットで分類され、その中でレアリティ順になっているため\n以前と変わらずバラバラに表示されております。\nこちらに関しましては現状の表示順で問題ないということでよろしいでしょうか。\nお手数をお掛けして申し訳ありませんが、ご確認の程よろしくお願いいたします。\n\n%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E5%86%8D%E4%BF%AE%E6%AD%A3.jpg\n\n検証ビルド：iOS #37(527)、AOS #37(530)\n確認環境 ：dev-qa\n検証端末 ：iPad mini（第6世代）（iOS:18.2）\n　　　　 ：Galaxy S10（AOS:12）\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767693331341",
+      "reply_count": 0
+    },
+    {
+      "id": "90180182495314",
+      "comment": [
+        {
+          "text": "アイテムBOXのソートを再度以下のように調整いたしましたので、ご確認のほどよろしくお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-69a5e00a-7e21-4392-afcc-165cb983805e"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8ff243e3-8935-4bac-a53e-c4a90ef2f4f4"
+          }
+        },
+        {
+          "text": "消費、強化タブ内のアイテムをアイテムのカテゴリー別内のレアリティUR＞SSR＞SR＞R順で表示するように変更。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cae4c5d4-3394-4032-a6a7-f1f18858bdd8"
+          }
+        },
+        {
+          "text": "かけらBOX、ガシャチケット、収集アイテム（その他のアイテム）の順に表示し、その中でレアリティ順に表示する",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ddcb7a22-540b-4832-bf2f-7fcafac8a9e4"
+          }
+        },
+        {
+          "text": "メモリーフラグメント、カラーメモリーの順に表示し、その中でレアリティ順に表示する",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c06bcada-c6ab-4ff4-86e4-867444d29d86"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cc3d0ff3-eff2-4825-bab9-d3b1517b5e29"
+          }
+        },
+        {
+          "text": "ビルド番号",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0f1a2ebf-e019-4220-b330-558bc9c3772e"
+          }
+        },
+        {
+          "text": "android:#532",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d48b90dd-1d60-4bb8-9820-b22a77aa885e"
+          }
+        },
+        {
+          "text": "ios:#529",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ea54c22d-c0d3-4670-a64e-e1c34ec64cf5"
+          }
+        }
+      ],
+      "comment_text": "アイテムBOXのソートを再度以下のように調整いたしましたので、ご確認のほどよろしくお願いいたします。\n\n消費、強化タブ内のアイテムをアイテムのカテゴリー別内のレアリティUR＞SSR＞SR＞R順で表示するように変更。\nかけらBOX、ガシャチケット、収集アイテム（その他のアイテム）の順に表示し、その中でレアリティ順に表示する\nメモリーフラグメント、カラーメモリーの順に表示し、その中でレアリティ順に表示する\n\nビルド番号\nandroid:#532\nios:#529\n",
+      "user": {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "email": "keisuke.isayama@wonderpla.net",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767690914244",
+      "reply_count": 0
+    },
+    {
+      "id": "90180182387521",
+      "comment": [
+        {
+          "text": "1/6 堤",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3379262c-32c8-4866-934e-d2b575ef5221"
+          }
+        },
+        {
+          "text": "アイテムBOXの並び順がコメント通りに修正されていることを確認いたしましたが、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-294fafa3-4294-444a-a8a6-66d0cca4212b"
+          }
+        },
+        {
+          "text": "以下の箇所で不自然な並び順になっていることを確認いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a750621f-18f0-43a6-bd6b-3d2bb9b36122"
+          }
+        },
+        {
+          "text": "お手数をお掛け致しますが、ご確認の程よろしくお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e8f07588-2a0c-4280-98ed-62222f2f61d4"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-70d6da8c-3ae7-41c9-9ff5-bf94c36ef202"
+          }
+        },
+        {
+          "text": "▼「消費」タブ内のアイテムについて",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e188ef76-327b-4f8b-86b1-ccf8a707f61b"
+          }
+        },
+        {
+          "text": "・チケット類が全て一つのグループで括られていると思われるため、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cd2915ee-da26-42d3-8b30-dc77b9576d1a"
+          }
+        },
+        {
+          "text": "　「単発ガシャチケット」がレアリティでソートされてバラバラに並んでおります。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a5ff9977-3a7c-4c1c-92ec-3293c5a6c2be"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3322cd0e-b69a-4887-96f5-c94f29f0a820"
+          }
+        },
+        {
+          "text": "▼「強化」タブ内のアイテムについて",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-66182dd4-a51a-4dc8-b960-39b62e9db56c"
+          }
+        },
+        {
+          "text": "・「カラーメモリー」「メモリーフラグメント」と「各キャラのメモリー」が同じグループになっていると思われるため、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d592cec4-b317-422c-99e0-c0c47a50fddc"
+          }
+        },
+        {
+          "text": "　「メモリーフラグメント・初級」がレアリティのソートでR枠の最後に並んでおります。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e8896815-a3ce-4776-8e1e-b615cf87572e"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d17d9023-2bc9-4b64-8818-12aa5379b626"
+          }
+        },
+        {
+          "type": "image",
+          "text": "%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg",
+          "image": {
+            "id": "8775d067-6edf-4d0e-bca5-8c786d6f2709.jpg",
+            "name": "%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg",
+            "title": "%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg",
+            "type": "jpg",
+            "extension": "image/jpg",
+            "thumbnail_large": "https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg",
+            "thumbnail_medium": "https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg",
+            "thumbnail_small": "https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg",
+            "url": "https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg",
+            "uploaded": true
+          },
+          "attributes": {
+            "width": "300",
+            "data-id": "8775d067-6edf-4d0e-bca5-8c786d6f2709.jpg",
+            "data-attachment": "{\"id\":\"8775d067-6edf-4d0e-bca5-8c786d6f2709.jpg\",\"version\":\"0\",\"date\":1767667274909,\"name\":\"アイテムBOX_並び順修正後.jpg\",\"title\":\"アイテムBOX_並び順修正後.jpg\",\"extension\":\"jpg\",\"source\":1,\"thumbnail_small\":\"https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709_small.jpg\",\"thumbnail_medium\":\"https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709_medium.jpg\",\"thumbnail_large\":\"https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709_large.jpg\",\"url\":\"https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg\",\"url_w_query\":\"https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg?view=open\",\"url_w_host\":\"https://t5716001.p.clickup-attachments.com/t5716001/8775d067-6edf-4d0e-bca5-8c786d6f2709/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg\"}",
+            "data-natural-width": "3019",
+            "data-natural-height": "2266"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-101f28ab-9cb5-4a6f-bf6b-5f8d0c03bd3a"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0c446303-e13c-4656-aaec-620f3dcb3924"
+          }
+        },
+        {
+          "text": "検証ビルド：iOS #35(526)、AOS #35(529)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e7f30454-b6aa-478d-acc1-a92822f91603"
+          }
+        },
+        {
+          "text": "確認環境 ：dev-qa",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ecb3979d-a026-48e1-a717-256e8bcc9151"
+          }
+        },
+        {
+          "text": "検証端末 ：iPad mini（第6世代）（iOS:18.2）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0eb470e4-f640-46cb-9518-92c559df4ee9"
+          }
+        },
+        {
+          "text": "　　　　 ：Galaxy S10（AOS:12）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-476c6827-04ce-4600-b95d-22980a9710bb"
+          }
+        }
+      ],
+      "comment_text": "1/6 堤\nアイテムBOXの並び順がコメント通りに修正されていることを確認いたしましたが、\n以下の箇所で不自然な並び順になっていることを確認いたしました。\nお手数をお掛け致しますが、ご確認の程よろしくお願いいたします。\n\n▼「消費」タブ内のアイテムについて\n・チケット類が全て一つのグループで括られていると思われるため、\n　「単発ガシャチケット」がレアリティでソートされてバラバラに並んでおります。\n\n▼「強化」タブ内のアイテムについて\n・「カラーメモリー」「メモリーフラグメント」と「各キャラのメモリー」が同じグループになっていると思われるため、\n　「メモリーフラグメント・初級」がレアリティのソートでR枠の最後に並んでおります。\n\n%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0BOX_%E4%B8%A6%E3%81%B3%E9%A0%86%E4%BF%AE%E6%AD%A3%E5%BE%8C.jpg\n\n検証ビルド：iOS #35(526)、AOS #35(529)\n確認環境 ：dev-qa\n検証端末 ：iPad mini（第6世代）（iOS:18.2）\n　　　　 ：Galaxy S10（AOS:12）\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767667303050",
+      "reply_count": 0
+    },
+    {
+      "id": "90180182176662",
+      "comment": [
+        {
+          "text": "アイテムBOXの並び順を",
+          "attributes": {}
+        },
+        {
+          "text": "上記コメント",
+          "attributes": {
+            "link": "https://app.clickup.com/t/86evvzpyj?comment=90180182144885"
+          }
+        },
+        {
+          "text": "に沿うよう修正いたしましたので、ご確認のほどよろしくお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bf7752ce-53e4-420e-8c8b-0bec01338023"
+          }
+        },
+        {
+          "text": "ビルド番号",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6d963d8a-f7b2-45f7-9d49-39774103be41"
+          }
+        },
+        {
+          "text": "android:#528",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9bd567df-a14b-45ca-bfce-f12f6343597e"
+          }
+        },
+        {
+          "text": "ios:#525",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-36dc87ec-2c4d-4261-a982-d9c8ddf3a531"
+          }
+        }
+      ],
+      "comment_text": "アイテムBOXの並び順を上記コメントに沿うよう修正いたしましたので、ご確認のほどよろしくお願いいたします。\nビルド番号\nandroid:#528\nios:#525\n",
+      "user": {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "email": "keisuke.isayama@wonderpla.net",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767606347166",
+      "reply_count": 0
+    },
+    {
+      "id": "90180182144885",
+      "comment": [
+        {
+          "text": "▼「消費」タブ内のアイテムについて",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-148bc3e7-cca0-4e44-a4ea-33686972cb25"
+          }
+        },
+        {
+          "text": "1）「かけらBOX」や「単発ガシャチケット」などの並び順が昇順となり、今までのレアリティの並びと逆になっている",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2d4be7ec-a333-43d5-9f9f-2e4f904c3c9c"
+          }
+        },
+        {
+          "text": "　 ※ガシャの提供割合やキャラ一覧画面、キャラのかけらBOX交換所などの表示では、UR＞SSR＞SR＞R の降順に並んでいます",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-86b3129e-a329-459a-8654-bde666908cbc"
+          }
+        },
+        {
+          "text": "⇨UR＞SSR＞SR＞R の降順に修正致します。",
+          "attributes": {
+            "bold": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e110f8c8-a25e-49b8-b36e-3b2dce1a0d2c"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9bcf806d-0974-41b4-865d-6c47d9928fae"
+          }
+        },
+        {
+          "text": "2）「補てんガシャチケット」が最後の位置に表示されていない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-404f1575-8c4d-48ea-956f-edaf5d04be5d"
+          }
+        },
+        {
+          "text": "　 ※補てんガシャチケットは通常とは異なるアイテムとなるため、分かり易く最後に表示されていなくてよろしいでしょうか",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3cd0b170-6016-445f-b86a-6151bf214521"
+          }
+        },
+        {
+          "text": "⇨こちらは問題ございません。",
+          "attributes": {
+            "bold": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6c9b22a3-0262-4110-af85-3e25439cd51f"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-300aaef6-74fb-4546-8aeb-323bd087ea8f"
+          }
+        },
+        {
+          "text": "3）「特別なガシャチケット（推しの子SSR確定）」が最後の位置に表示されている",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d02e126a-58d5-41e8-bccc-6d34fe17881f"
+          }
+        },
+        {
+          "text": "　 ※今後「a～f」作品のチケットが実装された場合はいいジャン祭メダルの後に表示されたり、実装順には並ばないかと思われます",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7e5a8cb6-eaac-46fe-bb3f-50ea5a1e4929"
+          }
+        },
+        {
+          "text": "⇨UR＞SSR＞SR＞R が第一ソートで、第二ソートでID順になるように修正致します。",
+          "attributes": {
+            "bold": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8a405979-ec0f-40e4-b38f-c9bd55ae5319"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2c919a15-b758-456a-857e-33338155f1b7"
+          }
+        },
+        {
+          "text": "▼「強化」タブ内のアイテムについて",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-86397813-44cd-4d3e-8b4f-32ea14c55f4e"
+          }
+        },
+        {
+          "text": "4）「カラーメモリー」「メモリーフラグメント」がまとめて最後に表示されている",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-dceca8ff-7492-4012-99d8-2ad87b8f19ee"
+          }
+        },
+        {
+          "text": "5）「メモリーフラグメント」の並び順が 初級＞中級＞上級となり、今までの並び順と逆になっている",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9c366af0-2819-40ef-9a1c-61b680b7f51b"
+          }
+        },
+        {
+          "text": "　 ※今までと異なる並び順やレアリティ降順になっていない点など、現状で問題ありませんでしょうか",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-aa5be591-53ce-451f-ad00-6ab498738ab3"
+          }
+        },
+        {
+          "text": "⇨UR＞SSR＞SR＞R が第一ソートで、第二ソートでID順になるように修正致します。",
+          "attributes": {
+            "bold": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cf899910-260c-4fbc-9fb2-26aefcd6a353"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1916c6c4-42c6-4b59-aee8-154652e43411"
+          }
+        },
+        {
+          "text": "▼「かけら」タブ内のアイテムについて",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-69d17a66-44f2-4f8e-9ff3-3da70822800a"
+          }
+        },
+        {
+          "text": "6）id順（各作品ごと）に並んでいますが、レアリティ降順に並んでいないことについて",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-984cf67e-9409-49d8-8e76-7b1025cbae26"
+          }
+        },
+        {
+          "text": "　 ※各作品内でのレアリティについては現状で問題ないでしょうか（現在はレアリティに関係なく作品内でほぼ実装順に並んでいます）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6b6ff949-3fa3-43a4-9c8a-11adc71ea284"
+          }
+        },
+        {
+          "text": "　 ※現状の実装順での並び順で問題ないと思われますが、念のため確認させていただきます",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c326b6b6-20b5-4010-8ad1-ce49b49fd71d"
+          }
+        },
+        {
+          "text": "　　（視認性について、作品をレアリティで区切ることで見やすくなるのではないかと気になりましたので、質問させていただきました）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f7109220-0a6c-436b-8846-7803ea6d5db9"
+          }
+        },
+        {
+          "text": "⇨こちらは問題ございません。",
+          "attributes": {
+            "bold": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d544384c-d4a2-4171-97d4-d75050d9c2d5"
+          }
+        }
+      ],
+      "comment_text": "▼「消費」タブ内のアイテムについて\n1）「かけらBOX」や「単発ガシャチケット」などの並び順が昇順となり、今までのレアリティの並びと逆になっている\n　 ※ガシャの提供割合やキャラ一覧画面、キャラのかけらBOX交換所などの表示では、UR＞SSR＞SR＞R の降順に並んでいます\n⇨UR＞SSR＞SR＞R の降順に修正致します。\n\n2）「補てんガシャチケット」が最後の位置に表示されていない\n　 ※補てんガシャチケットは通常とは異なるアイテムとなるため、分かり易く最後に表示されていなくてよろしいでしょうか\n⇨こちらは問題ございません。\n\n3）「特別なガシャチケット（推しの子SSR確定）」が最後の位置に表示されている\n　 ※今後「a～f」作品のチケットが実装された場合はいいジャン祭メダルの後に表示されたり、実装順には並ばないかと思われます\n⇨UR＞SSR＞SR＞R が第一ソートで、第二ソートでID順になるように修正致します。\n\n▼「強化」タブ内のアイテムについて\n4）「カラーメモリー」「メモリーフラグメント」がまとめて最後に表示されている\n5）「メモリーフラグメント」の並び順が 初級＞中級＞上級となり、今までの並び順と逆になっている\n　 ※今までと異なる並び順やレアリティ降順になっていない点など、現状で問題ありませんでしょうか\n⇨UR＞SSR＞SR＞R が第一ソートで、第二ソートでID順になるように修正致します。\n\n▼「かけら」タブ内のアイテムについて\n6）id順（各作品ごと）に並んでいますが、レアリティ降順に並んでいないことについて\n　 ※各作品内でのレアリティについては現状で問題ないでしょうか（現在はレアリティに関係なく作品内でほぼ実装順に並んでいます）\n　 ※現状の実装順での並び順で問題ないと思われますが、念のため確認させていただきます\n　　（視認性について、作品をレアリティで区切ることで見やすくなるのではないかと気になりましたので、質問させていただきました）\n⇨こちらは問題ございません。\n",
+      "user": {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "email": "r-goto@wonderpla.net",
+        "color": "#f57c01",
+        "initials": "RG",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767599866531",
+      "reply_count": 0
+    },
+    {
+      "id": "90180182122319",
+      "comment": [
+        {
+          "text": "1/5 堤",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-26832242-33c5-424a-85ac-7de8873aebe6"
+          }
+        },
+        {
+          "text": "アイテムBOXの並び順に関しまして、id順になっていることを確認いたしましたが、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-614db45b-d887-4839-8266-b20d47ff42a8"
+          }
+        },
+        {
+          "text": "現在の並び順に関して質問がございますのでご確認いただけますでしょうか。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cba3934c-1898-4854-8ef9-a4406a4ffa6c"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7787cef7-c636-48bf-b944-9237e537d95e"
+          }
+        },
+        {
+          "text": "▼「消費」タブ内のアイテムについて",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-872583a5-6749-480a-a692-72c8c6eccb5e"
+          }
+        },
+        {
+          "text": "1）「かけらBOX」や「単発ガシャチケット」などの並び順が昇順となり、今までのレアリティの並びと逆になっている",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0b83ed68-eff9-4764-ae90-c433d2a697f7"
+          }
+        },
+        {
+          "text": "　 ※ガシャの提供割合やキャラ一覧画面、キャラのかけらBOX交換所などの表示では、UR＞SSR＞SR＞R の降順に並んでいます",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2f623f32-931d-41fa-93d4-c4f5ae4bd433"
+          }
+        },
+        {
+          "text": "2）「補てんガシャチケット」が最後の位置に表示されていない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e0420e6c-325b-44aa-9416-542bb82f3065"
+          }
+        },
+        {
+          "text": "　 ※補てんガシャチケットは通常とは異なるアイテムとなるため、分かり易く最後に表示されていなくてよろしいでしょうか",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ecf6eaf8-0cab-41d2-9ef7-a4b463366ddb"
+          }
+        },
+        {
+          "text": "3）「特別なガシャチケット（推しの子SSR確定）」が最後の位置に表示されている",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-66c334f5-528e-47d7-ad7c-c12876a7c7d8"
+          }
+        },
+        {
+          "text": "　 ※今後「a～f」作品のチケットが実装された場合はいいジャン祭メダルの後に表示されたり、実装順には並ばないかと思われます",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1b6077c0-31d4-43b0-9f44-c32662723eb4"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-93311e21-630a-47a3-b63b-5d55d801fd92"
+          }
+        },
+        {
+          "text": "▼「強化」タブ内のアイテムについて",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c058b895-87af-430f-a670-804d77456bbb"
+          }
+        },
+        {
+          "text": "4）「カラーメモリー」「メモリーフラグメント」がまとめて最後に表示されている",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-563e58b3-6eff-4be5-8792-016c411a09c2"
+          }
+        },
+        {
+          "text": "5）「メモリーフラグメント」の並び順が 初級＞中級＞上級となり、今までの並び順と逆になっている",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e56afea6-32a1-4a1a-a87c-e0a39d669fd6"
+          }
+        },
+        {
+          "text": "　 ※今までと異なる並び順やレアリティ降順になっていない点など、現状で問題ありませんでしょうか",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-dd39d908-e90b-4c4c-9efa-0094e4e965e0"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4977e8cb-c540-464d-9062-a1c0cb5a42c4"
+          }
+        },
+        {
+          "text": "▼「かけら」タブ内のアイテムについて",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-665b4248-dd18-4076-bfbc-9e425cc0f50e"
+          }
+        },
+        {
+          "text": "6）id順（各作品ごと）に並んでいますが、レアリティ降順に並んでいないことについて",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-57ed92bf-d140-486d-960c-57364a4c1d26"
+          }
+        },
+        {
+          "text": "　 ※各作品内でのレアリティについては現状で問題ないでしょうか（現在はレアリティに関係なく作品内でほぼ実装順に並んでいます）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-91c44aa3-cd0e-46f3-a472-7ef005c0762d"
+          }
+        },
+        {
+          "text": "　 ※現状の実装順での並び順で問題ないと思われますが、念のため確認させていただきます",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-de462abc-85de-4583-bdae-975321db08a0"
+          }
+        },
+        {
+          "text": "　　（視認性について、作品をレアリティで区切ることで見やすくなるのではないかと気になりましたので、質問させていただきました）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-426453cf-e77f-4076-af3c-79735c235b67"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-82fe8659-5b2d-4654-a013-7aa31f21db05"
+          }
+        },
+        {
+          "text": "検証ビルド：iOS #32(523)、AOS #32(526)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1137c364-f8b4-48b4-92d4-fa83b2215907"
+          }
+        },
+        {
+          "text": "確認環境 ：dev-qa",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c0b8c0ab-16b8-48d4-8f4b-8fd358bcd6d7"
+          }
+        },
+        {
+          "text": "検証端末 ：iPad mini（第6世代）（iOS:18.2）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-dcbf5dde-7711-4f7f-a615-6bd822b6975a"
+          }
+        },
+        {
+          "text": "　　　　 ：Galaxy S10（AOS:12）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6310c161-c178-4721-90cc-047d6bcdb48e"
+          }
+        }
+      ],
+      "comment_text": "1/5 堤\nアイテムBOXの並び順に関しまして、id順になっていることを確認いたしましたが、\n現在の並び順に関して質問がございますのでご確認いただけますでしょうか。\n\n▼「消費」タブ内のアイテムについて\n1）「かけらBOX」や「単発ガシャチケット」などの並び順が昇順となり、今までのレアリティの並びと逆になっている\n　 ※ガシャの提供割合やキャラ一覧画面、キャラのかけらBOX交換所などの表示では、UR＞SSR＞SR＞R の降順に並んでいます\n2）「補てんガシャチケット」が最後の位置に表示されていない\n　 ※補てんガシャチケットは通常とは異なるアイテムとなるため、分かり易く最後に表示されていなくてよろしいでしょうか\n3）「特別なガシャチケット（推しの子SSR確定）」が最後の位置に表示されている\n　 ※今後「a～f」作品のチケットが実装された場合はいいジャン祭メダルの後に表示されたり、実装順には並ばないかと思われます\n\n▼「強化」タブ内のアイテムについて\n4）「カラーメモリー」「メモリーフラグメント」がまとめて最後に表示されている\n5）「メモリーフラグメント」の並び順が 初級＞中級＞上級となり、今までの並び順と逆になっている\n　 ※今までと異なる並び順やレアリティ降順になっていない点など、現状で問題ありませんでしょうか\n\n▼「かけら」タブ内のアイテムについて\n6）id順（各作品ごと）に並んでいますが、レアリティ降順に並んでいないことについて\n　 ※各作品内でのレアリティについては現状で問題ないでしょうか（現在はレアリティに関係なく作品内でほぼ実装順に並んでいます）\n　 ※現状の実装順での並び順で問題ないと思われますが、念のため確認させていただきます\n　　（視認性について、作品をレアリティで区切ることで見やすくなるのではないかと気になりましたので、質問させていただきました）\n\n検証ビルド：iOS #32(523)、AOS #32(526)\n確認環境 ：dev-qa\n検証端末 ：iPad mini（第6世代）（iOS:18.2）\n　　　　 ：Galaxy S10（AOS:12）\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767595344897",
+      "reply_count": 0
+    },
+    {
+      "id": "90180182033867",
+      "comment": [
+        {
+          "text": "アイテムの並び順をid順になるよう修正いたしましたので、ご確認のほどよろしくお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cd6dd77b-a5c7-4915-ab19-3a19242935b5"
+          }
+        },
+        {
+          "text": "ビルド番号",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f3795cc6-6b92-4996-bd1e-c05763230d39"
+          }
+        },
+        {
+          "text": "android:#521",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f6b16b58-eaaa-4885-b95d-b86c22e512dc"
+          }
+        },
+        {
+          "text": "ios:#519",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-01c4c5dd-fdf5-453d-bf9d-c3d026942331"
+          }
+        }
+      ],
+      "comment_text": "アイテムの並び順をid順になるよう修正いたしましたので、ご確認のほどよろしくお願いいたします。\nビルド番号\nandroid:#521\nios:#519\n",
+      "user": {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "email": "keisuke.isayama@wonderpla.net",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767576085680",
+      "reply_count": 0
+    },
+    {
+      "id": "90180178460611",
+      "comment": [
+        {
+          "text": "12/22 堤",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-efe42fe1-dd48-4650-bd10-f83a70a3337b"
+          }
+        },
+        {
+          "text": "最新ビルドで dev-Id 環境 にて確認を行いましたが、アイテムの並び順が変わっておらず報告時と同じ順番のままでした。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3c17741c-cc06-4527-a7b0-f3b409e2eea1"
+          }
+        },
+        {
+          "text": "お手数をお掛け致しますが、ご確認の程よろしくお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9499eaf2-9052-4955-9d55-e1c9a3a87795"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-66a2e869-760d-430c-9073-564cd2293f11"
+          }
+        },
+        {
+          "text": "※デバコマの「ユーザーの所持アイテム付与＆MAX」にて確認を行っております",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b423bd93-a6e0-4a29-a95e-fc7051b36141"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-19dd3fc5-ac07-4fd9-9a72-04e7ada8ece4"
+          }
+        },
+        {
+          "text": "検証ビルド：iOS #18、AOS #19",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b9365be9-b2c1-4a68-b652-10459a0ab184"
+          }
+        },
+        {
+          "text": "確認環境 ：dev-Id",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9ed435c2-c9ef-4f06-b837-3d293e2d0359"
+          }
+        },
+        {
+          "text": "検証端末 ：iPad mini（第6世代）（iOS:18.2）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3049d8c5-f7dc-44f2-a43b-b6097b1a83ad"
+          }
+        },
+        {
+          "text": "　　　　 ：Galaxy S10（AOS:12）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-76d0628d-c10e-4073-9717-784db6652dc3"
+          }
+        }
+      ],
+      "comment_text": "12/22 堤\n最新ビルドで dev-Id 環境 にて確認を行いましたが、アイテムの並び順が変わっておらず報告時と同じ順番のままでした。\nお手数をお掛け致しますが、ご確認の程よろしくお願いいたします。\n\n※デバコマの「ユーザーの所持アイテム付与＆MAX」にて確認を行っております\n\n検証ビルド：iOS #18、AOS #19\n確認環境 ：dev-Id\n検証端末 ：iPad mini（第6世代）（iOS:18.2）\n　　　　 ：Galaxy S10（AOS:12）\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1766385975502",
+      "reply_count": 0
+    },
+    {
+      "id": "90180177026050",
+      "comment": [
+        {
+          "text": "表示順をIDを順にするようになったので、お手数おかけして申し訳ありませんが、再度最新ビルドでご確認のほどよろしくお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6e7f1b70-ca4b-4a19-b72a-61c1dcd1c433"
+          }
+        }
+      ],
+      "comment_text": "表示順をIDを順にするようになったので、お手数おかけして申し訳ありませんが、再度最新ビルドでご確認のほどよろしくお願いいたします。\n",
+      "user": {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "email": "keisuke.isayama@wonderpla.net",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765851377678",
+      "reply_count": 0
+    },
+    {
+      "id": "90180176829971",
+      "comment": [
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/presentation/d/10vFEQKrOIrJNeSVQJ7SGUqhrgoVl5Nd915PWWDepupg/edit?slide=id.g39e76f1982f_0_326#slide=id.g39e76f1982f_0_326"
+          },
+          "text": ""
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-467cb7a4-7808-4666-97d2-3573f188d2af"
+          }
+        },
+        {
+          "text": "表示順を設定されたID順になるように修正する（1.4.1以降で対応）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b3b9ed5b-96ad-49d1-a694-c9f790e8e225"
+          }
+        }
+      ],
+      "comment_text": "docs.google.com/presentation/d/10vFEQKrOIrJNeSVQJ7SGUqhrgoVl5Nd915PWWDepupg/edit?slide=id.g39e76f1982f_0_326#slide=id.g39e76f1982f_0_326 \n \n表示順を設定されたID順になるように修正する（1.4.1以降で対応）\n",
+      "user": {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "email": "r-goto@wonderpla.net",
+        "color": "#f57c01",
+        "initials": "RG",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765792646747",
+      "reply_count": 0
+    },
+    {
+      "id": "90180176796797",
+      "comment": [
+        {
+          "text": "### 調査方針・解決策の提案\n\n#### 調査方針\n本件「アイテムBOXにて、『消費』『強化』タブに表示されるアイテムの並び順が資料と相違している」については、これまでに近しいアイテムBOX関連タスクや「アイテム並び順の資料との差異」を問う仕様確認タスクの対応実績が直近ではないため、**新規課題として、仕様の徹底確認および設計データ/実機差分の詳細調査**を行っていきます。\n\n- 並び順仕様の基準となるConfluence「81-1_アイテムBOXページ」の該当セクションを再確認します。\n- アイテムBOX制御関連のリスト生成・ソート実装（並び替えロジック）において資料との差分となるポイントを、DB設計値／フロント表示で双方確認します。\n- 並び順相違の発生原因（例：ソート条件実装漏れ、追加カテゴリーやチケット属性のソート優先度ミスなど）をログから抽出し、該当コード/設定箇所修正方針を洗い出します。\n\n#### 解決策の提案\n1. **仕様確認および振る舞い定義の明文化**  \n　並び順規則（例：「イベント配布＞チケット＞メダル」など多階層化されている場合の優先順位、レアリティや登録順の扱い）がConfluenceと実装で正確に一致するよう、エンジニア／データ設定者と認識をすり合わせます。\n\n2. **ソートロジックの見直し・対応実装**  \n　既存実装またはデータ生成時の並び順処理を精査し、  \n　- 「イベントアイテム」「ガシャチケット」等カテゴリ別グルーピングの見直し  \n　- レアリティや登録順の昇順／降順統一  \n　- タブ追加等による仕様・データ拡張時にも仕様通りになるようユニットテストを追加\n　などのリファクタリングを行います。\n\n3. **検証観点・再発防止策**\n　- 複数端末・複数パターンのユーザー所持構成で並び順変動がないか再現確認を徹底します。\n　- 並び順変更API/DB操作の影響範囲を事前に網羅リストアップしておきます。\n\n#### アサイン提案\nアイテムBOXUI設計・並び順仕様の実装・調査に強い担当者の割当が有効となります。\n**過去「ガシャチケット詳細画面にて、複数のアイテム詳細の内容が実機と資料で相違している」の調査と実機改修を担当した**  \n- Kenta Inui さん  \n- Hirano Kento さん\n\nの2名での対応を推奨します。\n\n---\n\n#### 参考: 類似タスク\n- [ガシャチケット詳細画面にて、複数のアイテム詳細の内容が実機と資料で相違している](https://app.clickup.com/t/86et2gxu8)  \n  ┗ 並び順・表示仕様の実装修正/DB連携実績あり（担当：Kenta Inuiさん、Hirano Kentoさん）\n\n---\n\n以上の方針で調査・対応進行予定です。  \nリーダーレビュー、追加観点等あればご指摘ください。"
+        }
+      ],
+      "comment_text": "### 調査方針・解決策の提案\n\n#### 調査方針\n本件「アイテムBOXにて、『消費』『強化』タブに表示されるアイテムの並び順が資料と相違している」については、これまでに近しいアイテムBOX関連タスクや「アイテム並び順の資料との差異」を問う仕様確認タスクの対応実績が直近ではないため、**新規課題として、仕様の徹底確認および設計データ/実機差分の詳細調査**を行っていきます。\n\n- 並び順仕様の基準となるConfluence「81-1_アイテムBOXページ」の該当セクションを再確認します。\n- アイテムBOX制御関連のリスト生成・ソート実装（並び替えロジック）において資料との差分となるポイントを、DB設計値／フロント表示で双方確認します。\n- 並び順相違の発生原因（例：ソート条件実装漏れ、追加カテゴリーやチケット属性のソート優先度ミスなど）をログから抽出し、該当コード/設定箇所修正方針を洗い出します。\n\n#### 解決策の提案\n1. **仕様確認および振る舞い定義の明文化**  \n　並び順規則（例：「イベント配布＞チケット＞メダル」など多階層化されている場合の優先順位、レアリティや登録順の扱い）がConfluenceと実装で正確に一致するよう、エンジニア／データ設定者と認識をすり合わせます。\n\n2. **ソートロジックの見直し・対応実装**  \n　既存実装またはデータ生成時の並び順処理を精査し、  \n　- 「イベントアイテム」「ガシャチケット」等カテゴリ別グルーピングの見直し  \n　- レアリティや登録順の昇順／降順統一  \n　- タブ追加等による仕様・データ拡張時にも仕様通りになるようユニットテストを追加\n　などのリファクタリングを行います。\n\n3. **検証観点・再発防止策**\n　- 複数端末・複数パターンのユーザー所持構成で並び順変動がないか再現確認を徹底します。\n　- 並び順変更API/DB操作の影響範囲を事前に網羅リストアップしておきます。\n\n#### アサイン提案\nアイテムBOXUI設計・並び順仕様の実装・調査に強い担当者の割当が有効となります。\n**過去「ガシャチケット詳細画面にて、複数のアイテム詳細の内容が実機と資料で相違している」の調査と実機改修を担当した**  \n- Kenta Inui さん  \n- Hirano Kento さん\n\nの2名での対応を推奨します。\n\n---\n\n#### 参考: 類似タスク\n- [ガシャチケット詳細画面にて、複数のアイテム詳細の内容が実機と資料で相違している](https://app.clickup.com/t/86et2gxu8)  \n  ┗ 並び順・表示仕様の実装修正/DB連携実績あり（担当：Kenta Inuiさん、Hirano Kentoさん）\n\n---\n\n以上の方針で調査・対応進行予定です。  \nリーダーレビュー、追加観点等あればご指摘ください。",
+      "user": {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "email": "t-takahashi@wonderpla.net",
+        "color": "#536cfe",
+        "initials": "TT",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765785155932",
+      "reply_count": 0
+    }
+  ]
+}
