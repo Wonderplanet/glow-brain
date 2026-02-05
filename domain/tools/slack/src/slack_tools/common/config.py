@@ -16,7 +16,9 @@ class Config:
         self.slack_token = os.getenv("SLACK_TOKEN")
 
         # glow-brainルートから固定パスを構築
-        self.output_base = self._get_glow_brain_root() / "domain/raw-data/slack"
+        glow_brain_root = self._get_glow_brain_root()
+        self.output_base = glow_brain_root / "domain/raw-data/slack"
+        self.raw_data_dir = str(glow_brain_root / "domain/raw-data/slack")
 
     @staticmethod
     def _get_glow_brain_root() -> Path:
@@ -52,3 +54,14 @@ class Config:
             完全な出力パス
         """
         return self.output_base.joinpath(*parts)
+
+    @classmethod
+    def from_env(cls) -> "Config":
+        """環境変数から設定を読み込む（クラスメソッド版）
+
+        Returns:
+            設定オブジェクト
+        """
+        config = cls()
+        config.validate()
+        return config

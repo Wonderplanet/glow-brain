@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "searched_at": "2026-01-23T23:25:40.252505+09:00",
+  "workspace": "wonderplanet-glow",
+  "params": {
+    "channels": [
+      "C08GP5JLSGJ"
+    ],
+    "channel_names": [
+      "glow_plan_wp"
+    ],
+    "users": [
+      "U051HMG121E"
+    ],
+    "user_names": [
+      "daiki kawasaki"
+    ],
+    "start_date": "2026-01-16",
+    "end_date": "2026-01-16"
+  },
+  "stats": {
+    "channels_searched": 1,
+    "messages_scanned": 1,
+    "threads_found": 1,
+    "matching_threads": 1
+  },
+  "threads": [
+    {
+      "channel_id": "C08GP5JLSGJ",
+      "channel_name": "glow_plan_wp",
+      "thread_ts": "1767600286.621809",
+      "parent_user_id": "U051HMG121E",
+      "parent_text": "強化クエストの追加について",
+      "reply_count": 16,
+      "matching_users": [
+        "U051HMG121E"
+      ],
+      "url": "https://wonderplanet-glow.slack.com/archives/C08GP5JLSGJ/p1767600286621809?thread_ts=1767600286.621809"
+    }
+  ]
+}
