@@ -1,14 +1,29 @@
-# API設計原則ガイド
+---
+name: api-design-principles
+description: |
+  【トリガー】API設計書作成、DB設計検討、テーブル設計、既存流用検討、ミッション設計、仕様書分析
 
+  API設計書作成時に設計思想を注入し、最適な設計判断を支援するスキル。
+
+  設計原則:
+  - データベース設計の慎重性（無駄なテーブル・列を増やさない）
+  - 仕様書の批判的検討（既存実装での対応可能性を深く検討）
+  - ミッション実装のコスト意識（既存流用を最優先）
+
+  Examples:
+  <example>
+  Context: ゲーム体験仕様書からAPI設計書を作成する状況
+  user: 'API設計書を作りたい'
+  assistant: 'api-design-principlesスキルの設計原則を参照します'
+  <commentary>設計思想の注入が必要</commentary>
+  </example>
+
+  <example>user: '新しいテーブルが必要か検討したい' → api-design-principles参照</example>
+  <example>user: 'ミッションを既存流用できるか確認したい' → api-design-principles参照</example>
+user-invocable: false
 ---
-description: API設計書作成時に設計思想を注入し、最適な設計判断をサポート
-keywords: ["API設計", "設計原則", "DB設計", "既存流用", "コスト意識"]
-userInvocable: false
-version: 1.0.0
-status: stable
-appliesTo: ["api-design", "database-design", "requirement-analysis"]
-lastUpdated: 2025-02-07
----
+
+# API設計原則ガイド
 
 ## スキルの目的
 
@@ -61,4 +76,4 @@ API設計書を作成する際、設計思想についてのコンテキスト�
 
 1. `principles/` 配下に新しいMarkdownファイルを作成
 2. 本ファイルの「設計原則」セクションに項目を追加
-3. 適切な `keywords` と `appliesTo` を更新
+3. frontmatterの `description` を更新（必要に応じて）
