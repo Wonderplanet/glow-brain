@@ -28,105 +28,175 @@
 
 GLOWにおけるミッションは、以下のように分類されます:
 
-### 1. デイリーミッション
+### 1. デイリーミッション (`MstMissionDaily`)
 - **表示画面**: デイリーミッション画面
 - **特徴**: 毎日リセット、固定の達成条件
 - **識別データ**: なし（画面で一意に識別）
+- **マスタテーブル**: `mst_mission_dailies`
 
-### 2. ウィークリーミッション
+### 2. ウィークリーミッション (`MstMissionWeekly`)
 - **表示画面**: ウィークリーミッション画面
 - **特徴**: 毎週リセット、固定の達成条件
 - **識別データ**: なし（画面で一意に識別）
+- **マスタテーブル**: `mst_mission_weeklies`
 
-### 3. 通常ミッション（常設）
-- **表示画面**: 通常ミッション画面
-- **特徴**: リセットなし、永続的
+### 3. 達成ミッション (`MstMissionAchievement`)
+- **表示画面**: 達成ミッション画面（常設）
+- **特徴**: リセットなし、永続的、順次解放可能
 - **識別データ**: なし（画面で一意に識別）
+- **マスタテーブル**: `mst_mission_achievements`
 
-### 4. 期間限定ミッション
-- **表示画面**: 機能ごとに異なる（例: 降臨バトル画面、イベント画面）
-- **特徴**: 期間指定、機能に紐づく
-- **識別データ**: **機能ごとに識別できるデータが存在** (例: `mst_advent_battle_id`)
+### 4. ビギナーミッション (`MstMissionBeginner`)
+- **表示画面**: ビギナーミッション画面
+- **特徴**: 初心者向け、日数で順次解放
+- **識別データ**: `unlockDay`（開始日からの経過日数）
+- **マスタテーブル**: `mst_mission_beginners`
+
+### 5. イベントミッション (`MstMissionEvent`)
+- **表示画面**: イベント画面内
+- **特徴**: イベントに紐づく、期間指定
+- **識別データ**: **`mstEventId`（どのイベントに紐づくか）**
+- **追加識別**: `eventCategory`（AdventBattle等）
+- **マスタテーブル**: `mst_mission_events`
+
+### 6. イベントデイリーミッション (`MstMissionEventDaily`)
+- **表示画面**: イベント画面内
+- **特徴**: イベント期間中、毎日リセット
+- **識別データ**: **`mstEventId`（どのイベントに紐づくか）**
+- **マスタテーブル**: `mst_mission_event_dailies`
+
+### 7. 期間限定ミッション (`MstMissionLimitedTerm`)
+- **表示画面**: 機能ごとに異なる（例: 降臨バトル画面）
+- **特徴**: 期間指定、機能に紐づく、進行状況を`progressGroupKey`で管理
+- **識別データ**: **`missionCategory`（AdventBattle等）+ `progressGroupKey`**
+- **マスタテーブル**: `mst_mission_limited_terms`
 
 ## 流用戦略
 
 上記の分類を踏まえ、以下の戦略で既存ミッションを流用します:
 
-### 戦略1: 期間限定ミッションの流用を最優先
+### 戦略1: イベントミッション・期間限定ミッションの流用を最優先
 
-期間限定ミッションは**機能ごとに識別できるデータ**を持っているため、新しい機能でも流用しやすい設計になっています。
+#### 1-A: イベントミッション (`MstMissionEvent`) の活用
 
-**例: 降臨バトルミッション**
-- マスタデータ: `mst_advent_battle_missions`
-- 識別データ: `mst_advent_battle_id`（どの降臨バトルに紐づくか）
-- 表示画面: 降臨バトル画面内
+イベントミッションは**`mstEventId`で機能を識別**できるため、新しいイベント機能でも流用しやすい設計です。
+
+**構造**:
+```
+mst_mission_events
+├─ id (ミッションID)
+├─ mstEventId (どのイベントに紐づくか)
+├─ criterionType (達成条件の種類)
+├─ criterionValue (達成条件の値)
+├─ criterionCount (達成条件の回数)
+├─ eventCategory (AdventBattle等の機能種別)
+└─ mstMissionRewardGroupId (報酬グループID)
+```
 
 **新機能での流用例**:
-- 新イベント「討伐クエスト」を実装する場合
-- マスタデータ: `mst_raid_quest_missions`（新規）
-- 識別データ: `mst_raid_quest_id`（どの討伐クエストに紐づくか）
-- 表示画面: 討伐クエスト画面内
-- **サーバーロジック**: 期間限定ミッションの既存実装を流用
+- 新イベント「降臨バトル」を実装する場合
+- マスタデータ: `MstMissionEvent`（既存）
+- 識別データ: `mstEventId`（降臨バトルのイベントID）
+- 機能種別: `eventCategory: AdventBattle`
+- 表示画面: 降臨バトル画面内
+- **サーバーロジック**: イベントミッションの既存実装を流用
+
+#### 1-B: 期間限定ミッション (`MstMissionLimitedTerm`) の活用
+
+期間限定ミッションは**`missionCategory`で機能種別を識別**し、`progressGroupKey`で進行状況を管理します。
+
+**構造**:
+```
+mst_mission_limited_terms
+├─ id (ミッションID)
+├─ progressGroupKey (進行状況グループキー)
+├─ missionCategory (AdventBattle等の機能種別)
+├─ criterionType (達成条件の種類)
+├─ startAt / endAt (期間)
+└─ mstMissionRewardGroupId (報酬グループID)
+```
+
+**使い分け**:
+- **イベントミッション**: イベント全体に紐づくミッション（イベント単位で管理）
+- **期間限定ミッション**: より細かい粒度の期間管理が必要な場合（降臨バトル個別等）
 
 ### 戦略2: 既存ミッション種別で対応可能か検討
 
-新しい要求が、既存のミッション種別で実現できないか必ず検討します。
+新しい要求が、既存の7種類のミッションで実現できないか必ず検討します。
 
 **判断基準**:
-- リセット周期は既存種別と一致するか？
-- 達成条件の種類は既存で対応可能か？
+- リセット周期は既存種別（Daily/Weekly/なし）と一致するか？
+- 達成条件の種類は`MissionCriterionType`（90種類以上）で対応可能か？
 - 表示場所は既存画面で問題ないか？
+- イベントに紐づく場合は`MstMissionEvent`を検討
+- 特定機能に紐づく期間限定ミッションは`MstMissionLimitedTerm`を検討
 
 ### 戦略3: マスタデータでの差別化を優先
 
 新しい要求の大半は、**マスタデータのパラメータで制御**することで実現できます。
 
-**悪い例**: 新規ミッション種別を実装
+**悪い例**: 新規ミッション種別を追加
 ```typescript
-// 新しいミッション種別を追加
+// MissionTypeに新しい種別を追加
 enum MissionType {
-  Daily,
-  Weekly,
-  Normal,
-  Event,        // 既存
-  AdventBattle, // 既存
-  NewFeature,   // ❌ 新規追加
+  Achievement,      // 既存
+  Daily,            // 既存
+  Weekly,           // 既存
+  Beginner,         // 既存
+  Event,            // 既存
+  EventDaily,       // 既存
+  LimitedTerm,      // 既存
+  NewFeature,       // ❌ 新規追加（不要）
 }
 ```
 
-**良い例**: 期間限定ミッションとして実装
+**良い例1**: イベントミッションとして実装
 ```csv
-# mst_new_feature_missions.csv
-id,mst_new_feature_id,mission_type,condition_type,condition_value,...
-mission_001,feature_001,clear_count,complete_stage,5,...
+# MstMissionEvent.csv - 降臨バトルミッション
+id,mstEventId,criterionType,criterionValue,criterionCount,eventCategory,...
+mission_001,advent_battle_001,AdventBattleChallengeCount,,3,AdventBattle,...
+mission_002,advent_battle_001,AdventBattleTotalScore,,10000,AdventBattle,...
+```
+
+**良い例2**: 期間限定ミッションとして実装
+```csv
+# MstMissionLimitedTerm.csv
+id,progressGroupKey,missionCategory,criterionType,startAt,endAt,...
+mission_001,tower_battle_01,AdventBattle,StageClearCount,2026-02-01,2026-02-28,...
 ```
 
 ### 戦略4: 新規実装が必要な場合の判断
 
 以下の条件を**すべて満たす場合のみ**、新規ミッション実装を検討します:
 
-- [ ] 既存のミッション種別では達成条件が表現できない
-- [ ] 期間限定ミッションの流用では設計が歪む
-- [ ] マスタデータの拡張では対応不可能
+- [ ] 既存の7種類のミッション種別では達成条件が表現できない
+- [ ] 90種類以上の`MissionCriterionType`では対応不可能
+- [ ] `MstMissionEvent`または`MstMissionLimitedTerm`の流用では設計が歪む
+- [ ] マスタデータの拡張（新しい`eventCategory`や`missionCategory`）では対応不可能
 - [ ] 将来的に他の機能でも再利用できる汎用性がある
 - [ ] 実装・保守コストを正当化できるビジネス価値がある
 
+**重要**: 新しい達成条件を追加したい場合、まず`MissionCriterionType`のenumに追加できないか検討してください。
+
 ## 具体例
 
-### 例1: 新イベント「タワーバトル」のミッション
+### 例1: 新イベント「降臨バトル」のミッション
 
 **要求**:
-> タワーバトル専用のミッション機能。階層クリアごとに達成判定。
+> 降臨バトル専用のミッション機能。バトル挑戦回数やスコアで達成判定。
 
 **検討プロセス**:
-1. **既存種別で対応可能か？**: NO（デイリー/ウィークリーは不適）
-2. **期間限定ミッションで流用可能か？**: YES
-   - 識別データ: `mst_tower_battle_id`
-   - 達成条件: 既存の「ステージクリア」系で対応可能
-   - 表示画面: タワーバトル画面内
-3. **マスタデータで差別化**: マスタCSVで階層ごとの条件を定義
+1. **既存種別で対応可能か？**: YES
+   - イベントミッション（`MstMissionEvent`）で実装可能
+   - 達成条件: `AdventBattleChallengeCount`、`AdventBattleTotalScore`等が既に存在
+2. **期間限定ミッションも選択肢**:
+   - `MstMissionLimitedTerm`でも実装可能
+   - `missionCategory: AdventBattle`で識別
+3. **マスタデータで差別化**:
+   - `mstEventId`で降臨バトルイベントに紐づけ
+   - `eventCategory: AdventBattle`で機能種別を明示
 
-**結論**: 期間限定ミッションを流用。新規実装不要。
+**結論**: `MstMissionEvent`を使用。新規テーブル不要。
 
 ---
 
@@ -137,58 +207,96 @@ mission_001,feature_001,clear_count,complete_stage,5,...
 
 **検討プロセス**:
 1. **既存種別で対応可能か？**: YES
-   - 通常ミッション（常設）として実装可能
-   - 達成条件: 既存の「ログイン日数」で対応可能
-2. **マスタデータで差別化**: `mst_missions` に新しい条件を追加
+   - 達成ミッション（`MstMissionAchievement`）として実装可能
+   - 達成条件: 既存の`LoginCount`で対応可能
+2. **マスタデータで差別化**: `MstMissionAchievement`に新しいミッションを追加
 
-**結論**: 通常ミッションを流用。新規実装不要。
+**結論**: `MstMissionAchievement`を流用。新規実装不要。
 
 ---
 
-### 例3: 「連続ログインボーナス」との混同
+### 例3: 「デイリーボーナス」との混同
 
 **要求**:
-> 連続ログインボーナスを実装したい。
+> デイリーログインボーナスを実装したい。
 
 **検討プロセス**:
-1. **ミッションで実装すべきか？**: **NO**
-   - 連続ログインボーナスは「ミッション」ではなく「ログインボーナス」機能
-   - GLOWでは `mst_login_bonuses` が既に存在
-2. **既存のログインボーナス機能で対応**: YES
+1. **ミッションで実装すべきか？**: YES、ただし専用種別が存在
+   - `MstMissionDailyBonus`が既に存在
+   - ログイン日数に応じた報酬を段階的に付与
+2. **既存のデイリーボーナス機能で対応**: YES
 
-**結論**: ミッションとして実装しない。既存のログインボーナス機能を使用。
+**結論**: `MstMissionDailyBonus`を使用。新規実装不要。
 
 ## チェックリスト
 
 新しいミッション要求を受けたら、以下を確認してください:
 
-- [ ] 既存の4種類のミッション（デイリー/ウィークリー/通常/期間限定）を調査した
-- [ ] 期間限定ミッションの流用可能性を最優先で検討した
-- [ ] マスタデータでの差別化可能性を検討した
+- [ ] 既存の7種類のミッション種別を調査した
+  - `MstMissionAchievement`, `MstMissionDaily`, `MstMissionWeekly`, `MstMissionBeginner`
+  - `MstMissionEvent`, `MstMissionEventDaily`, `MstMissionLimitedTerm`
+- [ ] 90種類以上の`MissionCriterionType`で達成条件が表現可能か確認した
+- [ ] イベントに紐づく場合、`MstMissionEvent`または`MstMissionEventDaily`を検討した
+- [ ] 期間限定・機能別の場合、`MstMissionLimitedTerm`の流用を検討した
+- [ ] マスタデータでの差別化（`eventCategory`や`missionCategory`の追加）を検討した
 - [ ] 新規実装が必要な理由を明確に説明できる
-- [ ] 他機能（ログインボーナス等）での実現可能性を検討した
+- [ ] 他機能（デイリーボーナス等）での実現可能性を検討した
 
 ## 関連原則
 
 - [データベース設計の慎重性](database-design.md) - 安易なテーブル追加を避ける
 - [仕様書の批判的検討](specification-review.md) - 仕様書の要求を鵜呑みにしない
 
-## 補足: 降臨バトルミッションの設計
+## 補足: 実際のミッション設計パターン
 
-降臨バトルミッションは、期間限定ミッションの良い設計例です:
+### パターン1: イベントミッション (`MstMissionEvent`)
+
+イベントに紐づくミッションの良い設計例です:
 
 ```
-mst_advent_battle_missions
+mst_mission_events
 ├─ id (ミッションID)
-├─ mst_advent_battle_id (どの降臨バトルに紐づくか)
-├─ mission_type (達成条件の種類)
-├─ condition_value (達成条件の値)
-├─ reward_* (報酬定義)
-└─ start_at / end_at (期間)
+├─ mstEventId (どのイベントに紐づくか)
+├─ criterionType (達成条件の種類: MissionCriterionType)
+├─ criterionValue (達成条件の値)
+├─ criterionCount (達成条件の回数)
+├─ eventCategory (AdventBattle等の機能種別)
+├─ mstMissionRewardGroupId (報酬グループID)
+└─ destinationScene (遷移先シーン)
 ```
 
 **この設計の優れた点**:
-- 降臨バトルごとに独立したミッションを定義できる
-- サーバーロジックは汎用的（降臨バトルIDで絞り込むだけ）
-- 新しい降臨バトルでも同じ構造を使える
+- イベントごとに独立したミッションを定義できる
+- `eventCategory`で機能種別を柔軟に識別
+- サーバーロジックは汎用的（イベントIDで絞り込むだけ）
+- 新しいイベントでも同じ構造を使える
+
+### パターン2: 期間限定ミッション (`MstMissionLimitedTerm`)
+
+より細かい期間管理が必要な場合の設計例です:
+
+```
+mst_mission_limited_terms
+├─ id (ミッションID)
+├─ progressGroupKey (進行状況グループキー)
+├─ missionCategory (AdventBattle等の機能種別)
+├─ criterionType (達成条件の種類: MissionCriterionType)
+├─ criterionValue (達成条件の値)
+├─ criterionCount (達成条件の回数)
+├─ startAt / endAt (期間)
+└─ mstMissionRewardGroupId (報酬グループID)
+```
+
+**この設計の優れた点**:
+- イベントより細かい粒度での期間管理
+- `progressGroupKey`で進行状況を柔軟にグルーピング
+- `missionCategory`で機能種別を識別
 - 他の機能でも同じパターンを適用できる
+
+### 使い分けの指針
+
+| 要件 | 推奨テーブル | 理由 |
+|------|------------|------|
+| イベント単位で管理 | `MstMissionEvent` | イベントIDで自然に管理できる |
+| 個別の期間設定が必要 | `MstMissionLimitedTerm` | `startAt/endAt`で柔軟に期間設定 |
+| 毎日リセット | `MstMissionEventDaily` | イベント期間中の日次ミッション |
