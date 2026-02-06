@@ -20,7 +20,6 @@ description: |
 
   <example>user: '新しいテーブルが必要か検討したい' → api-design-principles参照</example>
   <example>user: 'ミッションを既存流用できるか確認したい' → api-design-principles参照</example>
-user-invocable: false
 ---
 
 # API設計原則ガイド
