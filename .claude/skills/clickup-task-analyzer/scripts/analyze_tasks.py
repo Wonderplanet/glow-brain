@@ -170,13 +170,15 @@ class ClickUpTaskAnalyzer:
     def get_project_and_list_name(self, dir_path: Path) -> tuple:
         """ディレクトリパスからプロジェクト名とリスト名を抽出"""
         # 例: domain/raw-data/clickup/GLOW/GLOW(開発)/v1.5.0
+        # 戻り値: ("GLOW/GLOW(開発)", "v1.5.0")
         parts = dir_path.parts
         if 'clickup' in parts:
             idx = parts.index('clickup')
-            if len(parts) > idx + 2:
-                project = parts[idx + 1]
-                list_name = parts[idx + 2]
-                return project, list_name
+            if len(parts) > idx + 3:
+                space = parts[idx + 1]
+                folder = parts[idx + 2]
+                list_name = parts[idx + 3]
+                return f"{space}/{folder}", list_name
         return "Unknown", "Unknown"
 
     def calculate_date_range(self) -> tuple:
@@ -388,9 +390,28 @@ def main():
         sys.exit(1)
 
     # 出力ファイルパス
-    project, list_name = input_dir.parts[-2], input_dir.parts[-1]
-    output_filename = f"clickup_{project}_{list_name}-タスク分析.md"
-    output_path = Path("domain/knowledge/project-management") / output_filename
+    # 入力パス: domain/raw-data/clickup/{Space}/{Folder}/{List}/
+    # 出力パス: domain/knowledge/project-management/clickup/{Space}/{Folder}/{List}/タスク分析.md
+    if 'clickup' not in input_dir.parts:
+        print(f"❌ エラー: 入力パスに'clickup'が含まれていません: {input_dir}")
+        sys.exit(1)
+
+    clickup_index = input_dir.parts.index('clickup')
+    if len(input_dir.parts) < clickup_index + 4:
+        print(f"❌ エラー: 入力パスが短すぎます（Space/Folder/Listが必要）: {input_dir}")
+        print(f"期待される形式: domain/raw-data/clickup/{{Space}}/{{Folder}}/{{List}}/")
+        sys.exit(1)
+
+    space = input_dir.parts[clickup_index + 1]
+    folder = input_dir.parts[clickup_index + 2]
+    list_name = input_dir.parts[clickup_index + 3]
+
+    output_filename = "タスク分析.md"
+    output_path = Path("domain/knowledge/project-management") / "clickup" / space / folder / list_name / output_filename
+
+    print(f"📂 入力: {json_path}")
+    print(f"📂 出力: {output_path}")
+    print(f"📊 Space: {space}, Folder: {folder}, List: {list_name}")
 
     # 分析実行
     analyzer = ClickUpTaskAnalyzer(json_path)

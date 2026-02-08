@@ -1,6 +1,6 @@
 ---
 name: clickup-task-analyzer
-description: ClickUpタスクJSONから構造化されたプロジェクト分析レポート（Markdown形式）を自動生成します。「ClickUpタスク分析」「プロジェクト分析レポート」「タスク情報分析」「開発プロジェクト分析」などで使用します。インプット: domain/raw-data/clickup/{プロジェクト名}/{リスト名}/_list_tasks_raw_phase2_with_subtasks.json、アウトプット: domain/knowledge/project-management/clickup_{プロジェクト名}_{リスト名}-タスク分析.md
+description: ClickUpタスクJSONから構造化されたプロジェクト分析レポート（Markdown形式）を自動生成します。「ClickUpタスク分析」「プロジェクト分析レポート」「タスク情報分析」「開発プロジェクト分析」などで使用します。インプット: domain/raw-data/clickup/{Space}/{Folder}/{List}/_list_tasks_raw_phase2_with_subtasks.json、アウトプット: domain/knowledge/project-management/clickup/{Space}/{Folder}/{List}/タスク分析.md
 disable-model-invocation: false
 ---
 
@@ -55,7 +55,7 @@ Pythonスクリプトで基本レポートを生成：
 python3 .claude/skills/clickup-task-analyzer/scripts/analyze_tasks.py <clickup-list-directory>
 ```
 
-出力先: `domain/knowledge/project-management/clickup_{プロジェクト名}_{リスト名}-タスク分析.md`
+出力先: `domain/knowledge/project-management/clickup/{Space}/{Folder}/{List}/タスク分析.md`
 
 **重要**: このスクリプトは以下を自動実行します：
 - メンバー一覧.csvから職種情報を取得して正確な職種分類を実施
