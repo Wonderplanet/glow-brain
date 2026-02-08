@@ -1,0 +1,323 @@
+{
+  "task": {
+    "id": "86ev0fwfx",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "降臨バトルエンブレム名",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "",
+    "status": {
+      "id": "sc901811947180_fc1UMie9",
+      "status": "未着手",
+      "color": "#87909e",
+      "orderindex": 0,
+      "type": "open"
+    },
+    "orderindex": "237774593.00000000000000000000000000000000",
+    "date_created": "1759150195405",
+    "date_updated": "1765257135883",
+    "date_closed": null,
+    "date_done": null,
+    "archived": false,
+    "creator": {
+      "id": 43534825,
+      "username": "Junki Furusawa",
+      "color": "#7c4dff",
+      "email": "junki.furusawa@bp.wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/43534825_c6O.jpg"
+    },
+    "assignees": [
+      {
+        "id": 89597485,
+        "username": "Eri Morinaga",
+        "color": "#5d4037",
+        "initials": "EM",
+        "email": "eri.maeda@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597485_sAp.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 43594934,
+        "username": "Shingo Maeda",
+        "color": "#622aea",
+        "initials": "SM",
+        "email": "shingo.maeda@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594934_wew.jpg"
+      },
+      {
+        "id": 89597485,
+        "username": "Eri Morinaga",
+        "color": "#5d4037",
+        "initials": "EM",
+        "email": "eri.maeda@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597485_sAp.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": "86ev0fwfq",
+    "top_level_parent": "86ev0fwfk",
+    "priority": null,
+    "due_date": "1765911600000",
+    "start_date": "1765738800000",
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "8c7a4faf-c1b7-44d9-8ce9-50889e524ef6",
+        "name": "Task Category",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "d5e3a563-93ea-45c6-8c80-0ff39ef083ad",
+              "name": "PL",
+              "color": "#f9d900",
+              "orderindex": 0
+            },
+            {
+              "id": "ee855b4c-7b36-4950-b2f7-42ef93cd6400",
+              "name": "PL/デザイナー",
+              "color": "#94ffbf",
+              "orderindex": 1
+            },
+            {
+              "id": "a802c475-4301-4eb3-baf5-e869338907ec",
+              "name": "デザイナー",
+              "color": "#2ecd6f",
+              "orderindex": 2
+            },
+            {
+              "id": "a86a8d8b-47b1-48ae-96bc-545b67574542",
+              "name": "PL/P/D",
+              "color": "#0231E8",
+              "orderindex": 3
+            },
+            {
+              "id": "4d3331ca-1034-4bda-b54d-187ae093e1fd",
+              "name": "PL/BNE",
+              "color": "#e50000",
+              "orderindex": 4
+            },
+            {
+              "id": "de90c07e-2123-4c08-af0a-1471612cf8be",
+              "name": "BNE",
+              "color": "#e50000",
+              "orderindex": 5
+            },
+            {
+              "id": "4dde391d-5a39-4b34-87cd-f409666bd703",
+              "name": "全員",
+              "color": "#04A9F4",
+              "orderindex": 6
+            }
+          ]
+        },
+        "date_created": "1750126558746",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "b8d91fa5-ba72-466e-9a83-1fc5f6f55421",
+        "name": "フェーズ",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "79010b91-5667-4b10-b4a1-70117870a628",
+              "name": "01_企画フェーズ",
+              "color": "#02BCD4",
+              "orderindex": 0
+            },
+            {
+              "id": "2713ddbf-69d7-47a7-b1cd-1b7619356fc4",
+              "name": "02_設計フェーズ",
+              "color": "#2ecd6f",
+              "orderindex": 1
+            },
+            {
+              "id": "009f8cfb-cbd7-43c1-8bc8-b155fe8150c2",
+              "name": "03_制作フェーズ",
+              "color": "#f9d900",
+              "orderindex": 2
+            },
+            {
+              "id": "cff5ee15-02dd-4a54-b870-22cec8f3d2fe",
+              "name": "04_設定フェーズ",
+              "color": "#e50000",
+              "orderindex": 3
+            },
+            {
+              "id": "c5214bb3-23e7-42b6-91d6-f33f5ef427fa",
+              "name": "05_昇格フェーズ",
+              "color": "#800000",
+              "orderindex": 4
+            }
+          ]
+        },
+        "date_created": "1759148656133",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "48c07e49-c47e-4f08-8c5d-31a761997dd4",
+        "name": "企画フェーズスケジュール用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1753710872375",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "a381ba30-11bc-4396-842b-462f614283e6",
+        "name": "資料",
+        "type": "url",
+        "type_config": {},
+        "date_created": "1750125904163",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "91b46dd6-b218-4fce-8887-8e79218dd641",
+        "name": "セクション",
+        "type": "labels",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "e9d9a745-a729-4f11-a4c4-752680f8bf91",
+              "label": "企画",
+              "color": "#2ecd6f",
+              "orderindex": 0
+            },
+            {
+              "id": "39e867ca-e443-4339-a289-6fe784b78754",
+              "label": "UI",
+              "color": "#04A9F4",
+              "orderindex": 1
+            },
+            {
+              "id": "24814a6d-0cb4-4dce-a835-d0d39cf4c4d8",
+              "label": "クライアント",
+              "color": "#f9d900",
+              "orderindex": 2
+            },
+            {
+              "id": "0d2103d2-bfc1-4851-a7e2-193173e6ab25",
+              "label": "サーバー",
+              "color": "#ff7800",
+              "orderindex": 3
+            },
+            {
+              "id": "80df3124-c608-421e-ab7e-e381159bbbaf",
+              "label": "レベルデザイン",
+              "color": "#2ecd6f",
+              "orderindex": 4
+            },
+            {
+              "id": "806fe698-5fa0-44f1-8cf9-920aa00f8f6b",
+              "label": "監修",
+              "color": "#2ecd6f",
+              "orderindex": 5
+            },
+            {
+              "id": "f262ec64-c47c-429b-bb09-ad12297e6427",
+              "label": "アセット",
+              "color": "#3082B7",
+              "orderindex": 6
+            },
+            {
+              "id": "4b48d55c-8a2f-45c2-bc7b-26c6cdfe9a6c",
+              "label": "モーション",
+              "color": "#81B1FF",
+              "orderindex": 7
+            },
+            {
+              "id": "ad3c2743-b2cf-4c17-a325-30b694b29709",
+              "label": "イラスト",
+              "color": "#bf55ec",
+              "orderindex": 8
+            },
+            {
+              "id": "2726327f-b05a-401b-b611-35caf39ce4e1",
+              "label": "QA",
+              "color": "#e50000",
+              "orderindex": 9
+            },
+            {
+              "id": "23462410-7e7b-49e9-b378-9298cab7b8ad",
+              "label": "なし",
+              "color": "#b5bcc2",
+              "orderindex": 10
+            }
+          ]
+        },
+        "date_created": "1723660505265",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86ev0fwfx",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901811947180",
+      "name": "【202601010】地獄楽いいジャン祭",
+      "access": true
+    },
+    "project": {
+      "id": "90186898293",
+      "name": "GLOW(運営)企画タスク",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90186898293",
+      "name": "GLOW(運営)企画タスク",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": []
+}

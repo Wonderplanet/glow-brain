@@ -1,0 +1,40 @@
+# ホームバナー設定 - メタ情報
+
+## 基本情報
+
+| 項目 | 値 |
+| --- | --- |
+| タスク ID | 86ev0fwep |
+| ステータス | 完了 |
+| 優先度 | なし |
+| 作成者 | Junki Furusawa |
+| 担当者 | Taishi Hashimoto, Hirano Kento |
+| タグ | なし |
+| 作成日時 | 2025-09-29 21:49:46 |
+| 更新日時 | 2025-12-18 12:16:15 |
+| 期限 | 2025-12-17 04:00:00 |
+| URL | [ClickUp で開く](https://app.clickup.com/t/86ev0fwep) |
+
+## 親タスク
+
+親タスクID: `86ev0fwe4`
+
+## リスト情報
+
+| 項目 | 値 |
+| --- | --- |
+| リスト名 | 【202601010】地獄楽いいジャン祭 |
+| スペース | GLOW |
+| フォルダ | GLOW(運営)企画タスク |
+
+## カスタムフィールド
+
+| フィールド名 | 値 | 型 |
+| --- | --- | --- |
+| Task Category | 未設定 | drop_down |
+| アートTL非表示用 | 未設定 | checkbox |
+| フェーズ | 未設定 | drop_down |
+| 企画フェーズスケジュール用 | 未設定 | checkbox |
+| 資料 | https://docs.google.com/spreadsheets/d/1UzjTg1JnhhuZ_yq2nGf1sygSgkRX_2FPFCLiSJ2bdDo/edit?gid=289913871#gid=289913871 | url |
+| セクション | 未設定 | labels |
+

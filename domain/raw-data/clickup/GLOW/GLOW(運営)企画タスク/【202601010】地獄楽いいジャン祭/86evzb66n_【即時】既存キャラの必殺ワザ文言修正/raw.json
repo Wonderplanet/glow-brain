@@ -1,0 +1,664 @@
+{
+  "task": {
+    "id": "86evzb66n",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "【即時】既存キャラの必殺ワザ文言修正",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "",
+    "status": {
+      "id": "sc901811947180_BFlXieAZ",
+      "status": "完了",
+      "color": "#d33d44",
+      "orderindex": 11,
+      "type": "done"
+    },
+    "orderindex": "237857206.00000000000000000000000000000000",
+    "date_created": "1766655825535",
+    "date_updated": "1767592538280",
+    "date_closed": null,
+    "date_done": "1767582569507",
+    "archived": false,
+    "creator": {
+      "id": 43594934,
+      "username": "Shingo Maeda",
+      "color": "#622aea",
+      "email": "shingo.maeda@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/43594934_wew.jpg"
+    },
+    "assignees": [
+      {
+        "id": 89597486,
+        "username": "Issei Takahashi",
+        "color": "#006063",
+        "initials": "IT",
+        "email": "issei.takahashi@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597486_MOo.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 43594934,
+        "username": "Shingo Maeda",
+        "color": "#622aea",
+        "initials": "SM",
+        "email": "shingo.maeda@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594934_wew.jpg"
+      },
+      {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "color": "",
+        "initials": "KA",
+        "email": "confidence-q12@cfd-qa.jp",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      {
+        "id": 89597486,
+        "username": "Issei Takahashi",
+        "color": "#006063",
+        "initials": "IT",
+        "email": "issei.takahashi@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597486_MOo.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": "86ev8fh5d",
+    "top_level_parent": "86ev8fh5d",
+    "priority": null,
+    "due_date": null,
+    "start_date": null,
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "8c7a4faf-c1b7-44d9-8ce9-50889e524ef6",
+        "name": "Task Category",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "d5e3a563-93ea-45c6-8c80-0ff39ef083ad",
+              "name": "PL",
+              "color": "#f9d900",
+              "orderindex": 0
+            },
+            {
+              "id": "ee855b4c-7b36-4950-b2f7-42ef93cd6400",
+              "name": "PL/デザイナー",
+              "color": "#94ffbf",
+              "orderindex": 1
+            },
+            {
+              "id": "a802c475-4301-4eb3-baf5-e869338907ec",
+              "name": "デザイナー",
+              "color": "#2ecd6f",
+              "orderindex": 2
+            },
+            {
+              "id": "a86a8d8b-47b1-48ae-96bc-545b67574542",
+              "name": "PL/P/D",
+              "color": "#0231E8",
+              "orderindex": 3
+            },
+            {
+              "id": "4d3331ca-1034-4bda-b54d-187ae093e1fd",
+              "name": "PL/BNE",
+              "color": "#e50000",
+              "orderindex": 4
+            },
+            {
+              "id": "de90c07e-2123-4c08-af0a-1471612cf8be",
+              "name": "BNE",
+              "color": "#e50000",
+              "orderindex": 5
+            },
+            {
+              "id": "4dde391d-5a39-4b34-87cd-f409666bd703",
+              "name": "全員",
+              "color": "#04A9F4",
+              "orderindex": 6
+            }
+          ]
+        },
+        "date_created": "1750126558746",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "b8d91fa5-ba72-466e-9a83-1fc5f6f55421",
+        "name": "フェーズ",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "79010b91-5667-4b10-b4a1-70117870a628",
+              "name": "01_企画フェーズ",
+              "color": "#02BCD4",
+              "orderindex": 0
+            },
+            {
+              "id": "2713ddbf-69d7-47a7-b1cd-1b7619356fc4",
+              "name": "02_設計フェーズ",
+              "color": "#2ecd6f",
+              "orderindex": 1
+            },
+            {
+              "id": "009f8cfb-cbd7-43c1-8bc8-b155fe8150c2",
+              "name": "03_制作フェーズ",
+              "color": "#f9d900",
+              "orderindex": 2
+            },
+            {
+              "id": "cff5ee15-02dd-4a54-b870-22cec8f3d2fe",
+              "name": "04_設定フェーズ",
+              "color": "#e50000",
+              "orderindex": 3
+            },
+            {
+              "id": "c5214bb3-23e7-42b6-91d6-f33f5ef427fa",
+              "name": "05_昇格フェーズ",
+              "color": "#800000",
+              "orderindex": 4
+            }
+          ]
+        },
+        "date_created": "1759148656133",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "48c07e49-c47e-4f08-8c5d-31a761997dd4",
+        "name": "企画フェーズスケジュール用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1753710872375",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "a381ba30-11bc-4396-842b-462f614283e6",
+        "name": "資料",
+        "type": "url",
+        "type_config": {},
+        "date_created": "1750125904163",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "91b46dd6-b218-4fce-8887-8e79218dd641",
+        "name": "セクション",
+        "type": "labels",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "e9d9a745-a729-4f11-a4c4-752680f8bf91",
+              "label": "企画",
+              "color": "#2ecd6f",
+              "orderindex": 0
+            },
+            {
+              "id": "39e867ca-e443-4339-a289-6fe784b78754",
+              "label": "UI",
+              "color": "#04A9F4",
+              "orderindex": 1
+            },
+            {
+              "id": "24814a6d-0cb4-4dce-a835-d0d39cf4c4d8",
+              "label": "クライアント",
+              "color": "#f9d900",
+              "orderindex": 2
+            },
+            {
+              "id": "0d2103d2-bfc1-4851-a7e2-193173e6ab25",
+              "label": "サーバー",
+              "color": "#ff7800",
+              "orderindex": 3
+            },
+            {
+              "id": "80df3124-c608-421e-ab7e-e381159bbbaf",
+              "label": "レベルデザイン",
+              "color": "#2ecd6f",
+              "orderindex": 4
+            },
+            {
+              "id": "806fe698-5fa0-44f1-8cf9-920aa00f8f6b",
+              "label": "監修",
+              "color": "#2ecd6f",
+              "orderindex": 5
+            },
+            {
+              "id": "f262ec64-c47c-429b-bb09-ad12297e6427",
+              "label": "アセット",
+              "color": "#3082B7",
+              "orderindex": 6
+            },
+            {
+              "id": "4b48d55c-8a2f-45c2-bc7b-26c6cdfe9a6c",
+              "label": "モーション",
+              "color": "#81B1FF",
+              "orderindex": 7
+            },
+            {
+              "id": "ad3c2743-b2cf-4c17-a325-30b694b29709",
+              "label": "イラスト",
+              "color": "#bf55ec",
+              "orderindex": 8
+            },
+            {
+              "id": "2726327f-b05a-401b-b611-35caf39ce4e1",
+              "label": "QA",
+              "color": "#e50000",
+              "orderindex": 9
+            },
+            {
+              "id": "23462410-7e7b-49e9-b378-9298cab7b8ad",
+              "label": "なし",
+              "color": "#b5bcc2",
+              "orderindex": 10
+            }
+          ]
+        },
+        "date_created": "1723660505265",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86evzb66n",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901811947180",
+      "name": "【202601010】地獄楽いいジャン祭",
+      "access": true
+    },
+    "project": {
+      "id": "90186898293",
+      "name": "GLOW(運営)企画タスク",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90186898293",
+      "name": "GLOW(運営)企画タスク",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": [
+    {
+      "id": "90180182108809",
+      "comment": [
+        {
+          "text": "1/5 安達",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ae5bb97a-7279-4a33-a62e-d2ac11896c4a"
+          }
+        },
+        {
+          "text": "パワーにおいて、グレード2の必殺ワザ文言が以下に変更されていることを確認しました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-dc050ed5-0ba5-46f9-bbf1-7cc26f3fdf98"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b26f11ac-e2ee-4b76-84ff-96fecb254423"
+          }
+        },
+        {
+          "text": "　▼グレード2必殺ワザ文言",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-33fb0d22-5de4-4c4b-9d35-f77167fd3ae3"
+          }
+        },
+        {
+          "text": "　敵複数体に自身の攻撃ステータスの75%のダメージ(敵が赤属性の場合は93.75%のダメージ)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0dcaf8b2-2836-4bb9-a149-90c2ef57cabe"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-aae2b5fb-0517-4dcb-83ec-6688c029ca5d"
+          }
+        },
+        {
+          "text": "※アウトゲーム/インゲームのキャラ詳細、グレードアップダイアログで確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fd791cbc-cea2-4a75-8a61-d43c89050424"
+          }
+        },
+        {
+          "text": "※実際に与えるダメージも「攻撃力×1.5(赤属性への属性相性)×93.75%」であることを確認済み",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b283cb60-f656-4f7a-8dbc-2e60c3fbab33"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-873d89a8-9ba0-4826-b4d6-0486d4e01ee6"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bdbe5ccb-1384-4d8e-b173-22598790127a"
+          }
+        },
+        {
+          "text": "確認ビルド：iOS#32(523)、AOS#32(526)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-dc600c48-487e-4991-8f45-e5c1303a3d69"
+          }
+        },
+        {
+          "text": "確認環境：dev-qa",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-18c8d844-cfc7-469d-897f-76926f5cc678"
+          }
+        },
+        {
+          "text": "確認端末：iPhoneSE3(iOS:18.6)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-eeeda3e6-8366-4531-af4a-79cda7219324"
+          }
+        },
+        {
+          "text": "　　　　　ZenFone6(AOS:9.0)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-22a9122e-0d7f-4924-8a8b-94fd0e909c3f"
+          }
+        }
+      ],
+      "comment_text": "1/5 安達\nパワーにおいて、グレード2の必殺ワザ文言が以下に変更されていることを確認しました。\n\n　▼グレード2必殺ワザ文言\n　敵複数体に自身の攻撃ステータスの75%のダメージ(敵が赤属性の場合は93.75%のダメージ)\n\n※アウトゲーム/インゲームのキャラ詳細、グレードアップダイアログで確認\n※実際に与えるダメージも「攻撃力×1.5(赤属性への属性相性)×93.75%」であることを確認済み\n\n\n確認ビルド：iOS#32(523)、AOS#32(526)\n確認環境：dev-qa\n確認端末：iPhoneSE3(iOS:18.6)\n　　　　　ZenFone6(AOS:9.0)\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767592234956",
+      "reply_count": 0
+    },
+    {
+      "id": "90180182041007",
+      "comment": [
+        {
+          "type": "bookmark",
+          "bookmark": {
+            "service": "gsheets",
+            "id": "https://docs.google.com/spreadsheets/d/1wDo6PPkWGbAZi14MQ6NHW6suy39Q-P6Mwrtvy9xU4mU/edit",
+            "url": "https://docs.google.com/spreadsheets/d/1wDo6PPkWGbAZi14MQ6NHW6suy39Q-P6Mwrtvy9xU4mU/edit?gid=523149893#gid=523149893"
+          },
+          "attributes": {
+            "block-id": "block-a2e85a53-4f7f-43bc-9fe3-2ce02c779303",
+            "body-type": "image",
+            "unfurled": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-87740f75-182b-4be6-89da-562c1d33ad4b"
+          }
+        }
+      ],
+      "comment_text": "undefined\n",
+      "user": {
+        "id": 89597486,
+        "username": "Issei Takahashi",
+        "email": "issei.takahashi@bp.wonderpla.net",
+        "color": "#006063",
+        "initials": "IT",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597486_MOo.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767578835758",
+      "reply_count": 0
+    },
+    {
+      "id": "90180179329110",
+      "comment": [
+        {
+          "text": "【対応内容】",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e6e94ffa-119e-4251-b154-57a271dc54be"
+          }
+        },
+        {
+          "text": "・1.41に入れる",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-458dcd64-0736-447e-a026-d30a0d1aff92"
+          }
+        },
+        {
+          "text": "・マスタ修正対応日：2026/1/5(月)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ca1c6674-d7c1-4c90-95d4-df5bdda0c97b"
+          }
+        },
+        {
+          "text": "　└プラン側：髙橋対応　※対象QA環境：dev-qa",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ac405351-a09b-4a0f-8ab3-d2a0fa96f075"
+          }
+        },
+        {
+          "text": "・対象キャラ：パワー(chara_chi_00301)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-19cdec14-8e06-462f-95d3-30a7083b32d1"
+          }
+        },
+        {
+          "text": "・対象グレード：グレード2",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-49193dba-9297-450e-8d73-7fd998727aed"
+          }
+        },
+        {
+          "text": "・修正後グレード2説明文言",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-95c58963-cb60-4ad4-a384-7c6a32caddee"
+          }
+        },
+        {
+          "text": "敵複数体に自身の攻撃ステータスの75%のダメージ(敵が赤属性の場合は93.75%のダメージ)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b465112a-8766-4859-808a-d9ac06c63fd1",
+            "code-block": {
+              "code-block": "scss"
+            }
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8c09cb6a-badf-44df-a6b9-1ccb4c4a3892",
+            "code-block": {
+              "code-block": "scss"
+            }
+          }
+        },
+        {
+          "text": "※修正前(いま)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c2807439-8e86-4d5e-aa34-a6839b924fc9",
+            "code-block": {
+              "code-block": "scss"
+            }
+          }
+        },
+        {
+          "text": "敵複数体に自身の攻撃ステータスの75%のダメージ(敵が赤属性の場合は93.7%のダメージ)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b89f983a-bb04-4b98-9e02-9f75c455e89c",
+            "code-block": {
+              "code-block": "scss"
+            }
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-253ed76e-df94-40b8-8927-babca5937fdb"
+          }
+        }
+      ],
+      "comment_text": "【対応内容】\n・1.41に入れる\n・マスタ修正対応日：2026/1/5(月)\n　└プラン側：髙橋対応　※対象QA環境：dev-qa\n・対象キャラ：パワー(chara_chi_00301)\n・対象グレード：グレード2\n・修正後グレード2説明文言\n敵複数体に自身の攻撃ステータスの75%のダメージ(敵が赤属性の場合は93.75%のダメージ)\n\n※修正前(いま)\n敵複数体に自身の攻撃ステータスの75%のダメージ(敵が赤属性の場合は93.7%のダメージ)\n\n",
+      "user": {
+        "id": 89597486,
+        "username": "Issei Takahashi",
+        "email": "issei.takahashi@bp.wonderpla.net",
+        "color": "#006063",
+        "initials": "IT",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597486_MOo.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1766661989232",
+      "reply_count": 2
+    }
+  ]
+}
