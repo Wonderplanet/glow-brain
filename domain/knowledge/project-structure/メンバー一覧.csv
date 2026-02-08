@@ -15,11 +15,11 @@
 本多 德行,Noriyuki Honda,エンジニア,クライアント,インゲーム・アウトゲーム | 設計 | 実装 | テスト,honda@wonderpla.net
 澤田 和臣,Kazuomi Sawada,エンジニア,クライアント,インゲーム・アウトゲーム | 設計 | 実装 | テスト,kazuomi.sawada@wonderpla.net
 瀧島 大地,Daichi Takishima,エンジニア,クライアント,スケジュール管理 | 設計 | 実装 | テスト | インゲーム・アウトゲーム,takishima@wonderpla.net
-諌山 京亮,Kyosuke Isayama,エンジニア,クライアント,クライアント実装 | 設計 | 実装 | テスト,
+諌山 京亮,Kyosuke Isayama,エンジニア,クライアント,クライアント実装 | 設計 | 実装 | テスト,keisuke.isayama@wonderpla.net
 遠藤 大介,Daisuke Endo,エンジニア,クライアント,クライアント実装 | 設計 | 実装 | テスト,d-endo@wonderpla.net
 重山 渉,Wataru Shigeyama,エンジニア,クライアント,インゲーム・アウトゲーム | 設計 | 実装 | テスト,shigeyama@wonderpla.net
 上岡 純,Jun Ueoka,エンジニア,サーバー,APIメイン | 設計 | 実装 | テスト,jun.ueoka@bp.wonderpla.net
-川崎 大樹,Daiki Kawasaki,エンジニア,サーバー,API・ツール・インフラ | 設計 | 実装 | テスト,
+川崎 大樹,Daiki Kawasaki,エンジニア,サーバー,API・ツール・インフラ | 設計 | 実装 | テスト,daiki.kawasaki@wonderpla.net
 川村 泰央,Yasuhisa Kawamura,エンジニア,サーバー,APIメイン | 設計 | 実装 | テスト | 高速・堅牢なサーバ/インフラを構築・運用する,yasuhisa.kawamura@bp.wonderpla.net
 水谷 純暉,Junki Mizutani,エンジニア,サーバー,API・ツール・インフラ | 設計 | 実装 | テスト | 高速・堅牢なサーバ/インフラを構築・運用する,junki.mizutani@wonderpla.net
 稲葉 洋平,Yohei Inaba,エンジニア,サーバー,ツールメイン | 設計 | 実装 | テスト | 高速・堅牢なサーバ/インフラを構築・運用する,yohei.inaba@bp.wonderpla.net
@@ -36,7 +36,7 @@
 正清 彩,Masakiyo Aya,デザイナー,アセット,キャライラスト制作/赤入れ | 背景イラスト制作/赤入れ | 素材作成 | 実装,masakiyo@wonderpla.net
 江村 瑳八佳,Sayaka Emura,デザイナー,アセット,キャライラスト制作/赤入れ | 背景イラスト制作/赤入れ | 素材作成 | 実装 | UIレイアウト制作 | UI演出関連,sayaka.emura@wonderpla.net
 金 東焃,Donghyeok Kim,デザイナー,アセット,演出制作 | 実装,donghyeok-kim@wonderpla.net
-長潟 聡太,Sota Nagagata,デザイナー,アセット,アセット制作 | イラスト制作,
+長潟 聡太,Sota Nagagata,デザイナー,アセット,アセット制作 | イラスト制作,sota.nagagata@wonderpla.net
 齋藤 絵理,Eri Saito,デザイナー,アセット,外注窓口 | 単価、予算管理 | 発注や精算処理などの事務処理 | アセット制作スケジュール管理 | 制作物のリスト管理 | Savepointでの制作物管理 | キャラクターの監修資料作成,eri.saito@bp.wonderpla.net
 山本 健一,Kenichi Yamamoto,デザイナー,UI,UIレイアウト制作 | 素材作成 | UI演出関連 | 実装,kenichi.yamamoto@bp.wonderpla.net
 望月 りら,Rira Mochizuki,デザイナー,UI,AD補佐 | UIレイアウト制作 | 素材作成 | 実装,mochizuki@wonderpla.net
@@ -55,7 +55,7 @@
 渡辺 雅俊,Masatoshi Watanabe,プランナー,開発企画,レベルデザイン | 仮データ設定,masatoshi.watanabe@bp.wonderpla.net
 天野 一星,Issei Amano,プランナー,運営企画,運営フォーマット作成 | 企画書作成 | 企画詳細資料作成 | お知らせフォーマット作成 | お知らせ、SNS作成 | 監修窓口業務 | 監修物とりまとめ | キャラ設定発案,issei.amano@wonderpla.net
 小林里佳子,Rikako Kobayashi,プランナー,運営企画,お知らせフォーマット作成 | お知らせ、SNS作成 | キャラ設定発案 | 原画の選定と加工、設定,r-kobayashi@wonderpla.net
-村松,Muramatsu,プランナー,運営企画,運営企画 | お知らせ作成,
+村松,Muramatsu,プランナー,運営企画,運営企画 | お知らせ作成,takuya.muramatsu@bp.wonderpla.net
 福谷 優大,Yudai Fukutani,プランナー,運営企画,運営企画 | お知らせ作成,fukutani@wonderpla.net
 高橋 一生,Issei Takahashi,プランナー,運営企画,レベルデザイン | 仮データ設定,issei.takahashi@bp.wonderpla.net
 森永 恵理,Eri Morinaga,プランナー,監修,監修窓口業務 | 監修物とりまとめ | キャラ設定発案（名称、フレーバーテキスト） | 原画の選定と加工、設定,eri.maeda@bp.wonderpla.net
