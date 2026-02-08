@@ -33,10 +33,11 @@ mkdir -p "$OUTPUT_DIR"
 # 一時ファイル
 TMP_MEMBER_MAP=$(mktemp)
 TMP_DATA=$(mktemp)
+TMP_CSV_UNSORTED=$(mktemp)
 
 # クリーンアップ関数
 cleanup() {
-  rm -f "$TMP_MEMBER_MAP" "$TMP_DATA"
+  rm -f "$TMP_MEMBER_MAP" "$TMP_DATA" "$TMP_CSV_UNSORTED"
 }
 trap cleanup EXIT
 
@@ -64,8 +65,8 @@ tail -n +2 "$MEMBERS_CSV" | awk -F',' '
   }
 }' > "$TMP_MEMBER_MAP"
 
-# CSVヘッダー出力
-echo "名前,専門領域,タスクID,タスク名,フォルダ名,リスト名,開始日時,終了日時" > "$OUTPUT_CSV"
+# CSVヘッダー出力（一時ファイルに出力）
+echo "名前,専門領域,タスクID,タスク名,フォルダ名,リスト名,開始日時,終了日時" > "$TMP_CSV_UNSORTED"
 
 # 全タスクを処理
 echo "タスクデータを抽出中..." >&2
@@ -165,9 +166,16 @@ while IFS=$'\t' read -r email task_id task_name folder_name list_name start_date
     fi
   }
 
-  # CSV行を出力
-  echo "$(escape_csv "$name"),$(escape_csv "$senmon_ryoiki"),$(escape_csv "$task_id"),$(escape_csv "$task_name"),$(escape_csv "$folder_name"),$(escape_csv "$list_name"),$start_date_formatted,$due_date_formatted" >> "$OUTPUT_CSV"
+  # CSV行を出力（一時ファイルに出力）
+  echo "$(escape_csv "$name"),$(escape_csv "$senmon_ryoiki"),$(escape_csv "$task_id"),$(escape_csv "$task_name"),$(escape_csv "$folder_name"),$(escape_csv "$list_name"),$start_date_formatted,$due_date_formatted" >> "$TMP_CSV_UNSORTED"
 done < "$TMP_DATA"
+
+# ソート処理
+echo "CSVデータをソート中..." >&2
+# ヘッダー行を抽出
+head -1 "$TMP_CSV_UNSORTED" > "$OUTPUT_CSV"
+# データ行をソートして追加
+tail -n +2 "$TMP_CSV_UNSORTED" | sort -t, -k1,1 -k2,2 -k3,3 >> "$OUTPUT_CSV"
 
 echo "" >&2
 echo "============================================" >&2
