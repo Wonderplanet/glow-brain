@@ -1,0 +1,1359 @@
+{
+  "task": {
+    "id": "86ew8p1xr",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "いいジャンくじ引換所で、くじ実行後の通信中に特定のボタンがタップ可能になっている",
+    "text_content": "【発生症状】\nいいジャンくじ引換所で、くじ実行後の通信中に、\n下記のボタンがタップ可能になっています。\n\n＜該当箇所＞\n・報酬アイコン・・・・・・・・・3回中3回\n・「戻る」ボタン・・・・・・・・3回中3回\n・ヘッダー・・・・・・・・・・・3回中3回\n・「アイテムで引く」ボタン・・・10回中1回\n・「ラインナップ一覧」ボタン・・20回中1回\n・「切り替え」ボタン・・・・・・20回中1回\n\n【再現手順】\n※「アイテムで引く」ボタンの場合\n1.いいジャンくじ引換所に遷移する\n2.「アイテムで引く」ボタンをタップする\n3.「くじを引く」ボタンをタップする\n4.くじ結果ダイアログが表示されるまでに「アイテムで引く」ボタンをタップする\n\n【補足】\n「アイテムで引く」「ラインナップ一覧」「切り替え」ボタンは、くじ結果ダイアログが表示される直前の\nボタンがグレーアウトからアクティブに変わった瞬間にタップ可能となり、再現します。\n\n【再現性】\n「発生症状」に記載\n\n【環境情報】\n接続環境：develop\n検証ビルド：iOS #24(566)\n　　　　　　aOS #24(567)\n検証端末：iPhone 13(iOS:17.0.3)\n　　　　　Xperia 1 Ⅲ(SO-51B) (aOS:13.0.0)\n\n【ユーザー情報】\nユーザーID：A6277712128\n　　　　　　A8316291551\nユーザー名：プルダウンフォン\n　　　　　　プルダウンドロ",
+    "description": "【発生症状】\nいいジャンくじ引換所で、くじ実行後の通信中に、\n下記のボタンがタップ可能になっています。\n\n＜該当箇所＞\n・報酬アイコン・・・・・・・・・3回中3回\n・「戻る」ボタン・・・・・・・・3回中3回\n・ヘッダー・・・・・・・・・・・3回中3回\n・「アイテムで引く」ボタン・・・10回中1回\n・「ラインナップ一覧」ボタン・・20回中1回\n・「切り替え」ボタン・・・・・・20回中1回\n\n【再現手順】\n※「アイテムで引く」ボタンの場合\n1.いいジャンくじ引換所に遷移する\n2.「アイテムで引く」ボタンをタップする\n3.「くじを引く」ボタンをタップする\n4.くじ結果ダイアログが表示されるまでに「アイテムで引く」ボタンをタップする\n\n【補足】\n「アイテムで引く」「ラインナップ一覧」「切り替え」ボタンは、くじ結果ダイアログが表示される直前の\nボタンがグレーアウトからアクティブに変わった瞬間にタップ可能となり、再現します。\n\n【再現性】\n「発生症状」に記載\n\n【環境情報】\n接続環境：develop\n検証ビルド：iOS #24(566)\n　　　　　　aOS #24(567)\n検証端末：iPhone 13(iOS:17.0.3)\n　　　　　Xperia 1 Ⅲ(SO-51B) (aOS:13.0.0)\n\n【ユーザー情報】\nユーザーID：A6277712128\n　　　　　　A8316291551\nユーザー名：プルダウンフォン\n　　　　　　プルダウンドロ",
+    "markdown_description": "【発生症状】\nいいジャンくじ引換所で、くじ実行後の通信中に、\n下記のボタンがタップ可能になっています。\n\n＜該当箇所＞\n・報酬アイコン・・・・・・・・・3回中3回\n・「戻る」ボタン・・・・・・・・3回中3回\n・ヘッダー・・・・・・・・・・・3回中3回\n・「アイテムで引く」ボタン・・・10回中1回\n・「ラインナップ一覧」ボタン・・20回中1回\n・「切り替え」ボタン・・・・・・20回中1回\n\n【再現手順】\n※「アイテムで引く」ボタンの場合\n1.いいジャンくじ引換所に遷移する\n2.「アイテムで引く」ボタンをタップする\n3.「くじを引く」ボタンをタップする\n4.くじ結果ダイアログが表示されるまでに「アイテムで引く」ボタンをタップする\n\n【補足】\n「アイテムで引く」「ラインナップ一覧」「切り替え」ボタンは、くじ結果ダイアログが表示される直前の\nボタンがグレーアウトからアクティブに変わった瞬間にタップ可能となり、再現します。\n\n【再現性】\n「発生症状」に記載\n\n【環境情報】\n接続環境：develop\n検証ビルド：iOS #24(566)\n　　　　　　aOS #24(567)\n検証端末：iPhone 13(iOS:17.0.3)\n　　　　　Xperia 1 Ⅲ(SO-51B) (aOS:13.0.0)\n\n【ユーザー情報】\nユーザーID：A6277712128\n　　　　　　A8316291551\nユーザー名：プルダウンフォン\n　　　　　　プルダウンドロ",
+    "status": {
+      "id": "c90180884069_irfF5nXi",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 8,
+      "type": "closed"
+    },
+    "orderindex": "237921901.86908050000000000000000000000000",
+    "date_created": "1768810862411",
+    "date_updated": "1769043831802",
+    "date_closed": "1769043829601",
+    "date_done": "1768874278434",
+    "archived": false,
+    "creator": {
+      "id": 95406444,
+      "username": "Hiroto Kikuchi",
+      "color": "#4466ff",
+      "email": "h_kikuchi@qa.geeq.co.jp",
+      "profilePicture": null
+    },
+    "assignees": [
+      {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "color": "#455963",
+        "initials": "KY",
+        "email": "k-yamashita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "color": "#455963",
+        "initials": "KY",
+        "email": "k-yamashita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      },
+      {
+        "id": 95406444,
+        "username": "Hiroto Kikuchi",
+        "color": "#4466ff",
+        "initials": "HK",
+        "email": "h_kikuchi@qa.geeq.co.jp",
+        "profilePicture": null
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": null,
+    "top_level_parent": null,
+    "priority": {
+      "color": "#f8ae00",
+      "id": "2",
+      "orderindex": "2",
+      "priority": "high"
+    },
+    "due_date": null,
+    "start_date": null,
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "33339b75-59dd-41ab-93be-a5851eda214f",
+        "name": "Create",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1710513136311",
+        "hide_from_guests": false,
+        "value": "1768762800000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "30b51379-c05c-4160-8a50-b00d922fbae2",
+        "name": "Done",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1710513153601",
+        "hide_from_guests": false,
+        "value": "1768849200000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "9b9b2d63-d009-4ca1-8d56-9134e02aff0a",
+        "name": "QA種別",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "4633edc2-f960-48b3-878e-276b9bc12480",
+              "label": "形式的テスト_機能QA",
+              "color": "#02BCD4",
+              "orderindex": 0
+            },
+            {
+              "id": "1762b0fc-04ee-4d50-a09b-94c940e1c00b",
+              "label": "形式的テスト_データQA",
+              "color": "#FF7FAB",
+              "orderindex": 1
+            },
+            {
+              "id": "20c4c563-1dd1-4b25-b5c3-315c3dfe565e",
+              "label": "仕様QA",
+              "color": "#0231E8",
+              "orderindex": 2
+            },
+            {
+              "id": "dd63823d-711a-483e-b545-4a4e9a17105e",
+              "label": "納品ビルドQA",
+              "color": "#e50000",
+              "orderindex": 3
+            },
+            {
+              "id": "388394ac-3741-4a49-be3c-1536c31ed984",
+              "label": "探索的テスト",
+              "color": "#2ecd6f",
+              "orderindex": 4
+            },
+            {
+              "id": "4441a87d-8ed2-4ecf-a26f-70577c9ac1ec",
+              "label": "データ設定依頼",
+              "color": "#7C4DFF",
+              "orderindex": 5
+            }
+          ]
+        },
+        "date_created": "1713678824862",
+        "hide_from_guests": false,
+        "value": [
+          "4633edc2-f960-48b3-878e-276b9bc12480"
+        ],
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "c9c26e3c-0058-464f-ad26-05f202ba1280",
+        "name": "QA通知用カスタムフィールド",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1738652166515",
+        "hide_from_guests": false,
+        "value": "1768810867.644299",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "a19f03bc-9353-4a4d-8fea-4cedad109c04",
+        "name": "SEED関連",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "ad5bcb51-5f4a-4821-b690-ef56ea3adf74",
+              "name": "基盤システム",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "2e1a03fb-5636-4b63-a0ea-1f203eb8f7ed",
+              "name": "共通ゲーム機能",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1714035568848",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "210de310-253e-4f67-9084-d238847e1c5b",
+        "name": "StatusChange",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1743490160615",
+        "hide_from_guests": true,
+        "value": "1769022000000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "b888a620-455b-459b-8787-9239bd25320b",
+        "name": "TC",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "670e9326-08e0-438e-b87f-c88203208456",
+              "name": "TC不具合",
+              "color": "#FF4081",
+              "orderindex": 0
+            }
+          ]
+        },
+        "date_created": "1752220927691",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "e4796b07-0423-4f12-b671-cdf0c89d4a4f",
+        "name": "バグカテゴリ",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "a224b122-6421-4c9d-934d-d549ce3ff066",
+              "name": "コンプライアンス",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "102367e8-e2ed-4e24-b4f8-7e61327d34c7",
+              "name": "動作",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "97b5d368-a3ba-4093-9374-2694af3d81d7",
+              "name": "テキスト",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "2f72aa85-b8c0-4400-a95d-66eb1ebdd4b2",
+              "name": "サウンド",
+              "color": null,
+              "orderindex": 3
+            }
+          ]
+        },
+        "date_created": "1713679528982",
+        "hide_from_guests": false,
+        "value": 1,
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "5d3d19b6-3b80-4f24-acca-4c0e159c62f3",
+        "name": "バグタイプ",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "18e6adeb-d408-4398-8e1c-3d7abbb331bb",
+              "name": "コンプライアンス_動作違反",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "aeab53d0-993d-47fe-8e58-ea1cc658f105",
+              "name": "コンプライアンス_規定用語違反",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "5110cb7c-7b88-4825-bc8d-df5e9620815d",
+              "name": "コンプライアンス_不適切なメッセージ",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "967f9059-288e-4cb2-bcd7-73ee874f1475",
+              "name": "コンプライアンス_テキスト翻訳不備",
+              "color": null,
+              "orderindex": 3
+            },
+            {
+              "id": "b801d244-76b4-4d01-a97d-2a7ad5b4c59d",
+              "name": "コンプライアンス_テキスト表示不備",
+              "color": null,
+              "orderindex": 4
+            },
+            {
+              "id": "b51fdd33-2bbe-4194-aa82-29dff894feca",
+              "name": "動作_クラッシュ",
+              "color": null,
+              "orderindex": 5
+            },
+            {
+              "id": "9ed249a0-5aaf-4aad-a91e-18b39995b30d",
+              "name": "動作_フリーズ",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "7d6d8c27-12bd-4b13-93ac-7d3a02fa9f09",
+              "name": "動作_エラー",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "cd7cd621-8033-4521-9d7e-b9c00397197e",
+              "name": "動作_進行不能",
+              "color": null,
+              "orderindex": 8
+            },
+            {
+              "id": "32c50796-6e51-4523-bc9e-f6fe314ef2e4",
+              "name": "動作_セーブ/ロード",
+              "color": null,
+              "orderindex": 9
+            },
+            {
+              "id": "501548e0-56d4-4f8d-81d6-c1f019d1e295",
+              "name": "動作_AI",
+              "color": null,
+              "orderindex": 10
+            },
+            {
+              "id": "ce319867-efa9-4b4a-a21f-1c2f4da1b496",
+              "name": "動作_仕様問題",
+              "color": null,
+              "orderindex": 11
+            },
+            {
+              "id": "b4b06f4a-d6be-4006-a9a6-704c2a3981f6",
+              "name": "動作_カメラ",
+              "color": null,
+              "orderindex": 12
+            },
+            {
+              "id": "5a7d2d05-169e-42b2-b94c-27275924ff1e",
+              "name": "動作_当たり判定",
+              "color": null,
+              "orderindex": 13
+            },
+            {
+              "id": "d9fae33c-a8e0-44d2-98f1-5b8b4e5f2698",
+              "name": "動作_操作異常",
+              "color": null,
+              "orderindex": 14
+            },
+            {
+              "id": "d7413fd7-da48-42c5-a1ea-11d25a1cb561",
+              "name": "動作_グラフィック",
+              "color": null,
+              "orderindex": 15
+            },
+            {
+              "id": "b1b94ed8-c5ec-46b1-a9d7-a6abdac6b62b",
+              "name": "動作_その他",
+              "color": null,
+              "orderindex": 16
+            },
+            {
+              "id": "b7075045-fb54-4660-8764-446fe867a753",
+              "name": "テキスト_文法間違い",
+              "color": null,
+              "orderindex": 17
+            },
+            {
+              "id": "28abac6a-3464-48c1-b9d6-84d5e68cf245",
+              "name": "テキスト_誤字/脱字",
+              "color": null,
+              "orderindex": 18
+            },
+            {
+              "id": "5958fa96-7f5c-45b3-a67a-56dfb4ec5a96",
+              "name": "テキスト_重なり/途切れ",
+              "color": null,
+              "orderindex": 19
+            },
+            {
+              "id": "345d2b6b-229c-482d-969a-7823d2bf753d",
+              "name": "テキスト_言語間違い",
+              "color": null,
+              "orderindex": 20
+            },
+            {
+              "id": "7b6a3e44-ad19-4449-a88b-c9707a53d85f",
+              "name": "テキスト_間違ったテキスト/翻訳間違い",
+              "color": null,
+              "orderindex": 21
+            },
+            {
+              "id": "682d1998-8757-40eb-b7f9-60dcf4168a11",
+              "name": "テキスト_特殊文字",
+              "color": null,
+              "orderindex": 22
+            },
+            {
+              "id": "d5d903c3-340f-4d8b-8147-53345c8136c9",
+              "name": "テキスト_字幕",
+              "color": null,
+              "orderindex": 23
+            },
+            {
+              "id": "b7da689c-f550-4a5f-ac78-61896e007e64",
+              "name": "テキスト_句読点/大文字/小文字",
+              "color": null,
+              "orderindex": 24
+            },
+            {
+              "id": "c116d051-769f-4430-ad82-d74b927788b8",
+              "name": "サウンド_ボイスの抜け",
+              "color": null,
+              "orderindex": 25
+            },
+            {
+              "id": "dc5f7626-2888-4df2-afbd-385f68294084",
+              "name": "サウンド_ボイスの途切れ",
+              "color": null,
+              "orderindex": 26
+            },
+            {
+              "id": "36d2e4b5-8f36-460a-a368-335200fb2c4d",
+              "name": "サウンド_ボイスの破損",
+              "color": null,
+              "orderindex": 27
+            },
+            {
+              "id": "217fc213-6018-4461-a3fc-9fb7e093e059",
+              "name": "サウンド_字幕",
+              "color": null,
+              "orderindex": 28
+            },
+            {
+              "id": "111c33f6-89c2-4d01-81bb-7a3541f596f3",
+              "name": "サウンド_SE/BGM",
+              "color": null,
+              "orderindex": 29
+            }
+          ]
+        },
+        "date_created": "1713679571042",
+        "hide_from_guests": false,
+        "value": 16,
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "861a2d95-f600-4a60-9561-934c0f98f92d",
+        "name": "バグ発生場所（詳細）",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1713679629973",
+        "hide_from_guests": false,
+        "value": "いいジャンくじ引換所",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "0b3cfe49-851b-4ebd-9c13-86c17a8d98be",
+        "name": "バグ発生箇所",
+        "type": "drop_down",
+        "type_config": {
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "67b29b8c-14bc-48c8-b13d-b45e3d84adb9",
+              "name": "起動〜タイトル画面",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "96607ce6-e30c-49a8-b5e8-4d01803f5a92",
+              "name": "アトラクトデモ",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "d1780893-0723-4a3f-8df9-d7eb57233be8",
+              "name": "通常プレイ",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "228e4556-c6bb-4710-b3a4-b18dcbcc0ba6",
+              "name": "画面表示情報",
+              "color": null,
+              "orderindex": 3
+            },
+            {
+              "id": "7204c659-5817-4ca4-b4e9-0ad8761aebbc",
+              "name": "メニュー",
+              "color": null,
+              "orderindex": 4
+            },
+            {
+              "id": "2d561481-6fe3-4c26-8f24-a0ba9ce498c3",
+              "name": "ムービー/イベントデモ",
+              "color": null,
+              "orderindex": 5
+            },
+            {
+              "id": "7a186166-0780-4e69-84a3-ec608c5e53af",
+              "name": "マルチプレイ",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "9bb558c3-ab5a-4606-8ab0-68e58609b7b7",
+              "name": "オプション",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "1114bd2f-61bf-4b1d-b9c0-a24ff34427a9",
+              "name": "その他",
+              "color": null,
+              "orderindex": 8
+            }
+          ]
+        },
+        "date_created": "1713679608256",
+        "hide_from_guests": false,
+        "value": 2,
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "f781176f-19a2-42b1-b3db-cef2923c1990",
+        "name": "フェーズ",
+        "type": "labels",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "52913db9-2eb3-420c-b1d2-274072b837e9",
+              "label": "α2",
+              "color": "#e50000",
+              "orderindex": 0
+            },
+            {
+              "id": "6512e5a6-5932-4ca5-ae27-653911b7c1e6",
+              "label": "α3",
+              "color": "#f900ea",
+              "orderindex": 1
+            },
+            {
+              "id": "7c2fa23d-f746-4557-a2da-284b5bfdb51e",
+              "label": "β",
+              "color": "#ff7800",
+              "orderindex": 2
+            },
+            {
+              "id": "a9466cc9-0465-4a59-b4f0-31631d7d7a2b",
+              "label": "α4",
+              "color": "#0231E8",
+              "orderindex": 3
+            },
+            {
+              "id": "7605117f-6c89-425c-9ef7-1106e0d80991",
+              "label": "マスター",
+              "color": "#02BCD4",
+              "orderindex": 4
+            }
+          ]
+        },
+        "date_created": "1717135495606",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "7d962b0d-d8f6-47cb-9822-59ab4b61e285",
+        "name": "プラットフォーム",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "f8342cfb-07bd-40d1-8e7c-deb114bd6ef2",
+              "label": "iOS",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "84342121-5e5c-4083-99a5-b057d3db94e9",
+              "label": "AOS",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1713679380010",
+        "hide_from_guests": false,
+        "value": [
+          "84342121-5e5c-4083-99a5-b057d3db94e9",
+          "f8342cfb-07bd-40d1-8e7c-deb114bd6ef2"
+        ],
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "b3a6f2b7-7ac5-4877-99cf-2ba770098cc5",
+        "name": "不具合種別",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "bd101364-efc3-4995-bcee-33e94e934139",
+              "name": "動作・表示不良",
+              "color": "#81B1FF",
+              "orderindex": 0
+            },
+            {
+              "id": "f6ebab38-be78-4bfc-ac46-5e590c1776b6",
+              "name": "資料相違",
+              "color": "#2ecd6f",
+              "orderindex": 1
+            },
+            {
+              "id": "9d879ef8-4336-412b-9264-3837d3299a84",
+              "name": "BNEレギュ",
+              "color": "#e50000",
+              "orderindex": 2
+            }
+          ]
+        },
+        "date_created": "1747281572777",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "476aa1d0-a2fd-4a0c-8681-2a294b01e1a2",
+        "name": "修正完了するスコープ",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "86a37571-d88e-4fb4-915d-bffb5d2c3cfa",
+              "name": "アルファ2",
+              "color": "#EA80FC",
+              "orderindex": 0
+            },
+            {
+              "id": "f51dffad-d374-4a05-b06d-82c2681ec81b",
+              "name": "アルファ3",
+              "color": "#f9d900",
+              "orderindex": 1
+            },
+            {
+              "id": "92bd26f0-d2b5-4d60-ae45-0e37d4fc31fc",
+              "name": "ベータ",
+              "color": "#2ecd6f",
+              "orderindex": 2
+            },
+            {
+              "id": "d8dc05a2-fef7-44d3-92b7-eab81022aecf",
+              "name": "マスター",
+              "color": "#e50000",
+              "orderindex": 3
+            },
+            {
+              "id": "b7cb8b52-9e68-4021-abeb-1262b21295d1",
+              "name": "8/21ROM",
+              "color": "#e50000",
+              "orderindex": 4
+            },
+            {
+              "id": "3d596e3e-cb2a-4cf2-a448-cd022788f73d",
+              "name": "8/28ROM",
+              "color": "#04A9F4",
+              "orderindex": 5
+            },
+            {
+              "id": "d74b1ed6-601e-4b89-8d88-28d14681878b",
+              "name": "8/30ROM",
+              "color": "#7C4DFF",
+              "orderindex": 6
+            },
+            {
+              "id": "f765b0fd-95b8-4e8a-8ea2-6e0f318b5811",
+              "name": "ベータ以降にしたい",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "1e9f9b71-38dd-46aa-a280-ccca059e608c",
+              "name": "直近優先",
+              "color": "#f900ea",
+              "orderindex": 8
+            },
+            {
+              "id": "fdf7323c-9745-439f-aece-26c22aef1d35",
+              "name": "12/10ROM",
+              "color": "#E65100",
+              "orderindex": 9
+            },
+            {
+              "id": "1d7012a4-a719-4a15-8ea5-75ee4cea424e",
+              "name": "12/27ROM",
+              "color": "#9b59b6",
+              "orderindex": 10
+            },
+            {
+              "id": "5f68215e-4fac-4d83-a8b7-8c86c72fb122",
+              "name": "1/22ROM",
+              "color": "#0231E8",
+              "orderindex": 11
+            },
+            {
+              "id": "60119d89-0bf6-4590-bde7-8e8d1ab52c8c",
+              "name": "4/16ROM(必須",
+              "color": "#e50000",
+              "orderindex": 12
+            },
+            {
+              "id": "77730809-a885-4443-a559-82aee343d2c1",
+              "name": "4/16ROM(可能であれば",
+              "color": "#f9d900",
+              "orderindex": 13
+            },
+            {
+              "id": "7029f34d-09a2-4b1d-8c63-9a50c6a7ad32",
+              "name": "4/16以降",
+              "color": "#667684",
+              "orderindex": 14
+            },
+            {
+              "id": "cb5ffcfd-ecbd-478d-a4a5-b8d04a00d714",
+              "name": "リリース時必須",
+              "color": "#e50000",
+              "orderindex": 15
+            },
+            {
+              "id": "2b449347-0f41-4704-9023-da0df7b47d8b",
+              "name": "リリース以降",
+              "color": "#AF7E2E",
+              "orderindex": 16
+            }
+          ]
+        },
+        "date_created": "1713679022358",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "0cf27ca9-f798-4e71-b4a2-9c85943d1e2c",
+        "name": "修正種別",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "ac250576-5c6b-45b1-bb9e-a883fe854247",
+              "label": "機能",
+              "color": "#0231E8",
+              "orderindex": 0
+            },
+            {
+              "id": "6c9508d5-bb4f-46d2-91fc-8650e111ca03",
+              "label": "仕様書",
+              "color": "#2ecd6f",
+              "orderindex": 1
+            },
+            {
+              "id": "b47f0d44-d6cf-4030-ae54-68c118a5c1e1",
+              "label": "BNEレギュ",
+              "color": "#e50000",
+              "orderindex": 2
+            }
+          ]
+        },
+        "date_created": "1747281999811",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "6636220f-5e89-4a3f-9ed2-d9b9fe727a84",
+        "name": "発生環境",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "e2c6ac7b-6f7c-4c92-8b98-dc324f5e7864",
+              "name": "開発環境",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "91438067-9a0d-4b37-b1dd-29c987299252",
+              "name": "本番環境",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1714612061063",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "80822821-c62e-4e67-9277-19b32a977fba",
+        "name": "発生頻度",
+        "type": "drop_down",
+        "type_config": {
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "cb7bd4b2-dac0-44c4-94fc-5e500eadd043",
+              "name": "常に発生",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "83cdbefe-57c8-4bde-ba81-691fa0d170f3",
+              "name": "頻繁に発生",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "19a92f41-e453-44fd-a6e0-4523a65c2677",
+              "name": "時々発生",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "fe8065d2-75e8-4fef-9ee4-5c06320f0629",
+              "name": "一度だけ発生",
+              "color": null,
+              "orderindex": 3
+            }
+          ]
+        },
+        "date_created": "1713679676442",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "cacf3f36-fd1e-4103-bb71-3b91a82cf9a2",
+        "name": "発見version",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1713679757393",
+        "hide_from_guests": false,
+        "value": "iOS #24(566)、aOS #24(567)",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "1bbe28dd-d8ab-4f78-9ea0-f31c166aafad",
+        "name": "起票元",
+        "type": "labels",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "b332c6f6-919d-46cd-99ba-3a32ea0bfeb4",
+              "label": "WP",
+              "color": "#04A9F4",
+              "orderindex": 0
+            },
+            {
+              "id": "e9b35e3c-0382-4b79-ab46-480eab530b3f",
+              "label": "BNE",
+              "color": "#e50000",
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1734056226269",
+        "hide_from_guests": false,
+        "value": [
+          "e9b35e3c-0382-4b79-ab46-480eab530b3f"
+        ],
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "7ff853ee-87a4-4736-8cd9-6dd68aa7e62f",
+        "name": "QAステータス",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "3332fa61-9be4-4865-91b6-ac8a359aee8f",
+              "name": "1. 起票",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "c6a77a6d-3b34-4560-8841-14cd83bd0a51",
+              "name": "2. 新規",
+              "color": "#f9d900",
+              "orderindex": 1
+            },
+            {
+              "id": "0b47fa49-c36b-4507-83b5-3158e7b7bc71",
+              "name": "3. 着手",
+              "color": "#02BCD4",
+              "orderindex": 2
+            },
+            {
+              "id": "ec6ed7f1-f4ce-493a-8c01-c29682cbfd65",
+              "name": "4. 修正完了",
+              "color": "#667684",
+              "orderindex": 3
+            },
+            {
+              "id": "c0de5c24-5658-4d88-a642-6ac31e17c389",
+              "name": "5.修正確認待ち",
+              "color": "#AF7E2E",
+              "orderindex": 4
+            },
+            {
+              "id": "5a9713db-67e0-4a73-a559-3b025252b783",
+              "name": "6.再発",
+              "color": "#e50000",
+              "orderindex": 5
+            },
+            {
+              "id": "475f5a94-c8e0-47fa-a5f1-9b7fa67e1d79",
+              "name": "7.修正確認完了",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "52e44b18-f6f7-479e-b67b-2d8f18dec533",
+              "name": "9.仕様",
+              "color": "#1bbc9c",
+              "orderindex": 7
+            },
+            {
+              "id": "06f592d2-0cee-4760-8e1c-30455c7ffc8d",
+              "name": "10.仕様確認完了",
+              "color": "#2ecd6f",
+              "orderindex": 8
+            }
+          ]
+        },
+        "date_created": "1713679979962",
+        "hide_from_guests": false,
+        "value": 6,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "e2fae355-c7f8-444c-9731-0c5f3d8b5f7a",
+        "name": "バグランク",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "37d2a87a-74d9-4556-94d4-f094c5680e23",
+              "name": "MF（修正必須）",
+              "color": "#e50000",
+              "orderindex": 0
+            },
+            {
+              "id": "42e43fc9-c7e6-4135-bd84-45de0577e923",
+              "name": "A（要修正）",
+              "color": "#FF7FAB",
+              "orderindex": 1
+            },
+            {
+              "id": "87f36273-b86e-4f73-804f-2e02e6cc4193",
+              "name": "B（原則修正）",
+              "color": "#f9d900",
+              "orderindex": 2
+            },
+            {
+              "id": "d2d3fbd0-e552-4aa1-9f35-5f8a1d81905b",
+              "name": "C（修正推奨）",
+              "color": "#02BCD4",
+              "orderindex": 3
+            },
+            {
+              "id": "5f2e6883-e9fe-42a1-bb20-3a1d57ef88d9",
+              "name": "D（質問）",
+              "color": "#1bbc9c",
+              "orderindex": 4
+            },
+            {
+              "id": "f49e74c6-11ac-412e-8c41-0d8b33837d40",
+              "name": "E（要望）",
+              "color": "#b5bcc2",
+              "orderindex": 5
+            }
+          ]
+        },
+        "date_created": "1713679476223",
+        "hide_from_guests": false,
+        "value": 2,
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "b449c257-f716-48b3-b8a6-e87eec292868",
+        "name": "修正ビルド",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1716194086347",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [
+      {
+        "id": "901806930266",
+        "name": "クライアントタスク集約リスト"
+      }
+    ],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86ew8p1xr",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812719255",
+      "name": "アプリQA_Ver1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180884069",
+      "name": "QA",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180884069",
+      "name": "QA",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": [
+      {
+        "id": "8a6b4a68-82d4-4e2a-84d6-b1d412e4c5cb.mp4",
+        "date": "1768810851515",
+        "title": "くじ通信中にタップ可能.mp4",
+        "type": 1,
+        "source": 1,
+        "version": 0,
+        "extension": "mp4",
+        "thumbnail_small": null,
+        "thumbnail_medium": null,
+        "thumbnail_large": null,
+        "is_folder": null,
+        "mimetype": "video/mp4",
+        "hidden": false,
+        "parent_id": "86ew8p1xr",
+        "size": 9495644,
+        "total_comments": 0,
+        "resolved_comments": 0,
+        "user": {
+          "id": 95406444,
+          "username": "Hiroto Kikuchi",
+          "email": "h_kikuchi@qa.geeq.co.jp",
+          "initials": "HK",
+          "color": "#4466ff",
+          "profilePicture": null
+        },
+        "deleted": false,
+        "orientation": null,
+        "url": "https://t5716001.p.clickup-attachments.com/t5716001/8a6b4a68-82d4-4e2a-84d6-b1d412e4c5cb/%E3%81%8F%E3%81%98%E9%80%9A%E4%BF%A1%E4%B8%AD%E3%81%AB%E3%82%BF%E3%83%83%E3%83%97%E5%8F%AF%E8%83%BD.mp4",
+        "email_data": null,
+        "workspace_id": null,
+        "url_w_query": "https://t5716001.p.clickup-attachments.com/t5716001/8a6b4a68-82d4-4e2a-84d6-b1d412e4c5cb/%E3%81%8F%E3%81%98%E9%80%9A%E4%BF%A1%E4%B8%AD%E3%81%AB%E3%82%BF%E3%83%83%E3%83%97%E5%8F%AF%E8%83%BD.mp4?view=open",
+        "url_w_host": "https://t5716001.p.clickup-attachments.com/t5716001/8a6b4a68-82d4-4e2a-84d6-b1d412e4c5cb/%E3%81%8F%E3%81%98%E9%80%9A%E4%BF%A1%E4%B8%AD%E3%81%AB%E3%82%BF%E3%83%83%E3%83%97%E5%8F%AF%E8%83%BD.mp4"
+      }
+    ]
+  },
+  "comments": [
+    {
+      "id": "90180186913394",
+      "comment": [
+        {
+          "text": "いいジャンくじ引換所で、くじの実行および切り替え時の通信中に、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-38cc913f-f1be-4daf-9836-5dd3ee1b8580"
+          }
+        },
+        {
+          "text": "下記のボタンがタップできないことを確認いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d263fb0c-d589-4b56-8420-31587df03bd4"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1a5b83fd-d72c-4ab6-a787-6623c007d91a"
+          }
+        },
+        {
+          "text": "＜確認箇所＞",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7dc6f687-981c-4266-8eaa-0260019290cc"
+          }
+        },
+        {
+          "text": "・報酬アイコン・・・・・・・・・5回中0回",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d5e5edda-35f0-45f5-94fd-479e67134974"
+          }
+        },
+        {
+          "text": "・「戻る」ボタン・・・・・・・・5回中0回",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6ad8bf47-5dee-4f6b-af2c-35c87b8d5136"
+          }
+        },
+        {
+          "text": "・ヘッダー・・・・・・・・・・・5回中0回",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c028c033-3dea-4a2e-b68d-d5aece1b9fe8"
+          }
+        },
+        {
+          "text": "・「アイテムで引く」ボタン・・・20回中0回",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-52ec3b68-38d9-4d34-8b8e-f891a2466d75"
+          }
+        },
+        {
+          "text": "・「ラインナップ一覧」ボタン・・30回中0回",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b0ad6cd7-ae92-4e66-bdab-76d788f2f42e"
+          }
+        },
+        {
+          "text": "・「切り替え」ボタン・・・・・・30回中0回",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a96c2064-7d84-4bf5-b16b-d4098e1c1262"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b411ea48-be71-440c-92b5-9d96db194392"
+          }
+        },
+        {
+          "text": "確認ビルド：iOS #30(571)、aOS #30(572)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-507c5aba-0e8c-4188-b270-b1ead1abf3ae"
+          }
+        },
+        {
+          "text": "確認環境：develop",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-88e33f67-b21a-4ef7-90f8-fddb7ad8a943"
+          }
+        },
+        {
+          "text": "検証端末：iPhone 13(iOS:17.0.3)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-30012c32-bc82-4cde-a988-6ca6ee3863ce"
+          }
+        },
+        {
+          "text": "　　　　　Xperia 1 Ⅲ(SO-51B) (aOS:13.0.0)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a8b1189d-1c4e-4dcb-ae3f-48a73f59e08f"
+          }
+        }
+      ],
+      "comment_text": "いいジャンくじ引換所で、くじの実行および切り替え時の通信中に、\n下記のボタンがタップできないことを確認いたしました。\n\n＜確認箇所＞\n・報酬アイコン・・・・・・・・・5回中0回\n・「戻る」ボタン・・・・・・・・5回中0回\n・ヘッダー・・・・・・・・・・・5回中0回\n・「アイテムで引く」ボタン・・・20回中0回\n・「ラインナップ一覧」ボタン・・30回中0回\n・「切り替え」ボタン・・・・・・30回中0回\n\n確認ビルド：iOS #30(571)、aOS #30(572)\n確認環境：develop\n検証端末：iPhone 13(iOS:17.0.3)\n　　　　　Xperia 1 Ⅲ(SO-51B) (aOS:13.0.0)\n",
+      "user": {
+        "id": 95406444,
+        "username": "Hiroto Kikuchi",
+        "email": "h_kikuchi@qa.geeq.co.jp",
+        "color": "#4466ff",
+        "initials": "HK",
+        "profilePicture": null
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1768970131713",
+      "reply_count": 0
+    },
+    {
+      "id": "90180186537081",
+      "comment": [
+        {
+          "text": "iOS : 569",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1a152b34-5695-47f6-bce8-cdd54e5eb501"
+          }
+        },
+        {
+          "text": "android : 570",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-962b4190-b309-49bd-aef0-ece99cbf7d13"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-33474fe8-ba6a-4e1e-8b5f-ff1c638d348b"
+          }
+        },
+        {
+          "text": "上記にて修正を含めました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-20ccba87-2fd4-427b-8c4f-e9d691a35175"
+          }
+        },
+        {
+          "text": "くじを引いている時、くじをリセットしている時の通信時に画面をタップしても反応しないように調整いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fd754b9d-bae5-4b02-872a-03cde67c33ed"
+          }
+        },
+        {
+          "text": "よろしくお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c6a26d8b-f579-4417-99da-bfa689684ec7"
+          }
+        }
+      ],
+      "comment_text": "iOS : 569\nandroid : 570\n\n上記にて修正を含めました。\nくじを引いている時、くじをリセットしている時の通信時に画面をタップしても反応しないように調整いたしました。\nよろしくお願いいたします。\n",
+      "user": {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "email": "k-yamashita@wonderpla.net",
+        "color": "#455963",
+        "initials": "KY",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1768874273143",
+      "reply_count": 0
+    }
+  ]
+}
