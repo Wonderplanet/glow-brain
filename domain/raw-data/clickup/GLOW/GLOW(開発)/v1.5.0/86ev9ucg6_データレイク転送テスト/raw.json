@@ -1,0 +1,230 @@
+{
+  "task": {
+    "id": "86ev9ucg6",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "データレイク転送テスト",
+    "text_content": "データレイク転送テスト行うかどうかを判断するところから\n行う場合は、QA開始前後で行う。\n行わない場合は、Activityに明記してタスクを閉じる",
+    "description": "データレイク転送テスト行うかどうかを判断するところから\n行う場合は、QA開始前後で行う。\n行わない場合は、Activityに明記してタスクを閉じる",
+    "markdown_description": "データレイク転送テスト行うかどうかを判断するところから\n行う場合は、QA開始前後で行う。\n行わない場合は、Activityに明記してタスクを閉じる",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "237823154.00000000000000000000000000000000",
+    "date_created": "1761549643146",
+    "date_updated": "1770175299782",
+    "date_closed": "1770175299782",
+    "date_done": "1769407202959",
+    "archived": false,
+    "creator": {
+      "id": 25540505,
+      "username": "Toshikazu Takahashi",
+      "color": "#536cfe",
+      "email": "t-takahashi@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+    },
+    "assignees": [
+      {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "email": "junki.mizutani@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "color": "#536cfe",
+        "initials": "TT",
+        "email": "t-takahashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "email": "junki.mizutani@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      {
+        "id": 37714028,
+        "username": "Shun Endo",
+        "color": "#d60800",
+        "initials": "SE",
+        "email": "endo@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714028_l8a.jpg"
+      },
+      {
+        "id": 43594915,
+        "username": "wataru shigeyama",
+        "color": "#0388d1",
+        "initials": "WS",
+        "email": "shigeyama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594915_4l9.jpg"
+      },
+      {
+        "id": 48905355,
+        "username": "Ken Wakahara",
+        "color": "#ff897f",
+        "initials": "KW",
+        "email": "wakahara@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/48905355_3oi.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": null,
+    "top_level_parent": null,
+    "priority": null,
+    "due_date": "1769108400000",
+    "start_date": "1768935600000",
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86ev9ucg6",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": [
+    {
+      "id": "90180188128244",
+      "comment": [
+        {
+          "text": "先方に報告した",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8b52fb3a-f700-40fe-8ab2-ae2059c5961c"
+          }
+        },
+        {
+          "type": "bookmark",
+          "bookmark": {
+            "service": "custom",
+            "id": "https://wonderplanet-glow.slack.com/archives/C07BSURPF51/p1769407135516169?thread_ts=1764744381.503399&cid=C07BSURPF51",
+            "url": "https://wonderplanet-glow.slack.com/archives/C07BSURPF51/p1769407135516169?thread_ts=1764744381.503399&cid=C07BSURPF51"
+          },
+          "attributes": {
+            "block-id": "block-530b74cb-53b8-4adf-a7cb-50f40d86da96",
+            "body-type": "message",
+            "unfurled": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-871b25be-7049-4ba0-afee-39db54d8c7f4"
+          }
+        }
+      ],
+      "comment_text": "先方に報告した\nwonderplanet-glow.slack.com/archives/C07BSURPF51/p1769407135516169?thread_ts=1764744381.503399&cid=C07BSURPF51 \n \n",
+      "user": {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "email": "junki.mizutani@wonderpla.net",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1769407197933",
+      "reply_count": 0
+    },
+    {
+      "id": "90180187000672",
+      "comment": [
+        {
+          "text": "boxガシャのデータがまだ入っておらずqa環境でプレイできない状態なので予定移動した",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-92f687aa-bb5c-4fff-805e-3e51dff3e8ef"
+          }
+        }
+      ],
+      "comment_text": "boxガシャのデータがまだ入っておらずqa環境でプレイできない状態なので予定移動した\n",
+      "user": {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "email": "junki.mizutani@wonderpla.net",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1768988047021",
+      "reply_count": 0
+    }
+  ]
+}

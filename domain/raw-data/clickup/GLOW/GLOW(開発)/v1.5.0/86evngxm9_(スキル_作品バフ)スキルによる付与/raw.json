@@ -1,0 +1,240 @@
+{
+  "task": {
+    "id": "86evngxm9",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "(スキル_作品バフ)スキルによる付与",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "0.54000795000000000000000000000000",
+    "date_created": "1764151120308",
+    "date_updated": "1768791986623",
+    "date_closed": "1770175300038",
+    "date_done": "1768791986623",
+    "archived": false,
+    "creator": {
+      "id": 7807756,
+      "username": "daichi_takishima",
+      "color": "#04a9f4",
+      "email": "takishima@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/7807756_rQr.jpg"
+    },
+    "assignees": [
+      {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "color": "#388d3c",
+        "initials": "KI",
+        "email": "inui@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 7807756,
+        "username": "daichi_takishima",
+        "color": "#04a9f4",
+        "initials": "D",
+        "email": "takishima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7807756_rQr.jpg"
+      },
+      {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "color": "#388d3c",
+        "initials": "KI",
+        "email": "inui@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": "86ew4yy7u",
+    "top_level_parent": "86ew4yy7u",
+    "priority": null,
+    "due_date": "1766430000000",
+    "start_date": "1765998000000",
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86evngxm9",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": [
+    {
+      "id": "90180182064181",
+      "comment": [
+        {
+          "text": "D確認スレッド",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-51832f8e-bdf6-43a9-85e2-61d19b6c911b"
+          }
+        },
+        {
+          "text": "https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1767582245203269?thread_ts=1767582212.486509&cid=C069N3UL80H",
+          "attributes": {
+            "link": "https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1767582245203269?thread_ts=1767582212.486509&cid=C069N3UL80H"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2e60afc0-4060-447d-9e56-81efa6ed3915"
+          }
+        }
+      ],
+      "comment_text": "D確認スレッド\nhttps://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1767582245203269?thread_ts=1767582212.486509&cid=C069N3UL80H\n",
+      "user": {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "email": "inui@wonderpla.net",
+        "color": "#388d3c",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767582993380",
+      "reply_count": 0
+    },
+    {
+      "id": "90180179311783",
+      "comment": [
+        {
+          "text": "確認シート",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f2281d92-62a3-401d-85ad-edba0a2bd473"
+          }
+        },
+        {
+          "text": "https://docs.google.com/spreadsheets/d/1FDf8iDMA7xYDaMndFcVhS9Ck1xi66MUnj3Ck_un0Mq8/edit?gid=0#gid=0",
+          "attributes": {
+            "link": "https://docs.google.com/spreadsheets/d/1FDf8iDMA7xYDaMndFcVhS9Ck1xi66MUnj3Ck_un0Mq8/edit?gid=0#gid=0"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1fa36c72-122e-4104-8457-c67b623368ab"
+          }
+        }
+      ],
+      "comment_text": "確認シート\nhttps://docs.google.com/spreadsheets/d/1FDf8iDMA7xYDaMndFcVhS9Ck1xi66MUnj3Ck_un0Mq8/edit?gid=0#gid=0\n",
+      "user": {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "email": "inui@wonderpla.net",
+        "color": "#388d3c",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1766652775570",
+      "reply_count": 0
+    },
+    {
+      "id": "90180178001325",
+      "comment": [
+        {
+          "text": "遅くとも1/13にマージして渡したい",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8f80c70e-5bd4-4fa7-8c79-63ed14c68fe1"
+          }
+        }
+      ],
+      "comment_text": "遅くとも1/13にマージして渡したい\n",
+      "user": {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "email": "inui@wonderpla.net",
+        "color": "#388d3c",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1766126344393",
+      "reply_count": 0
+    }
+  ]
+}

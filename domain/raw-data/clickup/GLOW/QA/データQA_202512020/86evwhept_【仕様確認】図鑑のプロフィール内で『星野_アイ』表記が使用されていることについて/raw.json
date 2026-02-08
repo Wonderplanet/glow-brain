@@ -1,0 +1,1673 @@
+{
+  "task": {
+    "id": "86evwhept",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "【仕様確認】図鑑のプロフィール内で『星野 アイ』表記が使用されていることについて",
+    "text_content": "【発生症状】   \n図鑑の「復讐を誓う片星 星野 アクア」および「星野 ルビー」のプロフィールにおいて、\n文言内に『星野 アイ』の表記が使用されています。\n\n以下タスクにおいて『星野 アイ』の名称がNGと伺っておりますので、問題がないかご確認をお願いいたします。\nなお、変更や修正を行われる場合は、ファントム版の該当キャラも同じ文言のため、合わせてご対応をお願いいたします。\n\n\n\n　▼「復讐を誓う片星 星野 アクア」のプロフィール\n　-------------------------------------------------\n　苺プロダクションに所属する俳優で、陽東高校一般科1年生。\n　アクアは通称で本名は星野 愛久愛海(あくあまりん)。子供時代に芸能デビューし、一時休止を挟んで現在は復帰している。\n　母親である星野 アイを大切に思い、クールな性格で勉強もできるが、復讐のためには冷酷になる一面も持つ。\n　-------------------------------------------------\n\n　▼「星野 ルビー」のプロフィール\n　-------------------------------------------------\n　苺プロダクション所属のアイドルで、再始動した新生B小町のメンバー。陽東高校芸能科1年生。\n　ルビーは通称で本名は星野 瑠美衣(るびい)。明るい性格で、母親である星野 アイのような輝くアイドルになることを夢に見続け、\n　何度もオーディションを受け続けていた。\n　-------------------------------------------------\n\n【再現手順】\n 1.図鑑>【推しの子】に遷移する。\n 2.「復讐を誓う片星 星野 アクア」、「星野 ルビー」を選択する。\n 3.プロフィール文言を確認する。\n\n【補足】\nなし\n\n【再現性】\n3回中3回  \n\n【環境情報】\n接続環境：dev-qa2\n検証ビルド：iOS #2558\n　　　　　　aOS #2558\n検証端末：iPhoneSE3(iOS:18.6)\n　　　　　ZenFone6(AOS:9.0)\n\n【ユーザー情報】\nユーザーID：A4903316221\n　　　　　　A4846393046\nユーザー名：公衆電話\n　　　　　　携帯電話\n\n【参考資料】\n\n【報告者】\n安達 和也",
+    "description": "【発生症状】   \n図鑑の「復讐を誓う片星 星野 アクア」および「星野 ルビー」のプロフィールにおいて、\n文言内に『星野 アイ』の表記が使用されています。\n\n以下タスクにおいて『星野 アイ』の名称がNGと伺っておりますので、問題がないかご確認をお願いいたします。\nなお、変更や修正を行われる場合は、ファントム版の該当キャラも同じ文言のため、合わせてご対応をお願いいたします。\n\n\n\n　▼「復讐を誓う片星 星野 アクア」のプロフィール\n　-------------------------------------------------\n　苺プロダクションに所属する俳優で、陽東高校一般科1年生。\n　アクアは通称で本名は星野 愛久愛海(あくあまりん)。子供時代に芸能デビューし、一時休止を挟んで現在は復帰している。\n　母親である星野 アイを大切に思い、クールな性格で勉強もできるが、復讐のためには冷酷になる一面も持つ。\n　-------------------------------------------------\n\n　▼「星野 ルビー」のプロフィール\n　-------------------------------------------------\n　苺プロダクション所属のアイドルで、再始動した新生B小町のメンバー。陽東高校芸能科1年生。\n　ルビーは通称で本名は星野 瑠美衣(るびい)。明るい性格で、母親である星野 アイのような輝くアイドルになることを夢に見続け、\n　何度もオーディションを受け続けていた。\n　-------------------------------------------------\n\n【再現手順】\n 1.図鑑>【推しの子】に遷移する。\n 2.「復讐を誓う片星 星野 アクア」、「星野 ルビー」を選択する。\n 3.プロフィール文言を確認する。\n\n【補足】\nなし\n\n【再現性】\n3回中3回  \n\n【環境情報】\n接続環境：dev-qa2\n検証ビルド：iOS #2558\n　　　　　　aOS #2558\n検証端末：iPhoneSE3(iOS:18.6)\n　　　　　ZenFone6(AOS:9.0)\n\n【ユーザー情報】\nユーザーID：A4903316221\n　　　　　　A4846393046\nユーザー名：公衆電話\n　　　　　　携帯電話\n\n【参考資料】\n\n【報告者】\n安達 和也",
+    "markdown_description": "【発生症状】\n図鑑の「復讐を誓う片星 星野 アクア」および「星野 ルビー」のプロフィールにおいて、\n文言内に『星野 アイ』の表記が使用されています。\n\n以下タスクにおいて『星野 アイ』の名称がNGと伺っておりますので、問題がないかご確認をお願いいたします。\nなお、変更や修正を行われる場合は、ファントム版の該当キャラも同じ文言のため、合わせてご対応をお願いいたします。\n\n🚨必読！推しの子の注意事項！！🚨 ([https://app.clickup.com/t/86ev6kdj5](https://app.clickup.com/t/86ev6kdj5))\n\n　▼「復讐を誓う片星 星野 アクア」のプロフィール\n　-------------------------------------------------\n　苺プロダクションに所属する俳優で、陽東高校一般科1年生。\n　アクアは通称で本名は星野 愛久愛海(あくあまりん)。子供時代に芸能デビューし、一時休止を挟んで現在は復帰している。\n　母親である星野 アイを大切に思い、クールな性格で勉強もできるが、復讐のためには冷酷になる一面も持つ。\n　-------------------------------------------------\n\n　▼「星野 ルビー」のプロフィール\n　-------------------------------------------------\n　苺プロダクション所属のアイドルで、再始動した新生B小町のメンバー。陽東高校芸能科1年生。\n　ルビーは通称で本名は星野 瑠美衣(るびい)。明るい性格で、母親である星野 アイのような輝くアイドルになることを夢に見続け、\n　何度もオーディションを受け続けていた。\n　-------------------------------------------------\n\n【再現手順】\n1.図鑑>【推しの子】に遷移する。\n2.「復讐を誓う片星 星野 アクア」、「星野 ルビー」を選択する。\n3.プロフィール文言を確認する。\n\n【補足】\nなし\n\n【再現性】\n3回中3回\n\n【環境情報】\n接続環境：dev-qa2\n検証ビルド：iOS #2558\n　　　　　　aOS #2558\n検証端末：iPhoneSE3(iOS:18.6)\n　　　　　ZenFone6(AOS:9.0)\n\n【ユーザー情報】\nユーザーID：A4903316221\n　　　　　　A4846393046\nユーザー名：公衆電話\n　　　　　　携帯電話\n\n【参考資料】\n\n【報告者】\n安達 和也\n\n![](https://t5716001.p.clickup-attachments.com/t5716001/0e05dd41-bb7b-4764-8b5f-81e879dc6c3c/%E3%82%A2%E3%82%AF%E3%82%A2_%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.jpg)\n![](https://t5716001.p.clickup-attachments.com/t5716001/bede2e6d-234b-4dd7-8e1a-3908ea866f12/%E3%83%AB%E3%83%93%E3%83%BC_%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.jpg)",
+    "status": {
+      "id": "c90180884069_irfF5nXi",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 8,
+      "type": "closed"
+    },
+    "orderindex": "237875064.26816055000000000000000000000000",
+    "date_created": "1765879373067",
+    "date_updated": "1766027187057",
+    "date_closed": "1766027185005",
+    "date_done": "1766018951180",
+    "archived": false,
+    "creator": {
+      "id": 60970688,
+      "username": "Kazuya Adachi",
+      "color": "",
+      "email": "confidence-q12@cfd-qa.jp",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+    },
+    "assignees": [
+      {
+        "id": 89597485,
+        "username": "Eri Morinaga",
+        "color": "#5d4037",
+        "initials": "EM",
+        "email": "eri.maeda@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597485_sAp.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "color": "#536cfe",
+        "initials": "TT",
+        "email": "t-takahashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "color": "",
+        "initials": "KA",
+        "email": "confidence-q12@cfd-qa.jp",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      {
+        "id": 89597485,
+        "username": "Eri Morinaga",
+        "color": "#5d4037",
+        "initials": "EM",
+        "email": "eri.maeda@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597485_sAp.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": null,
+    "top_level_parent": null,
+    "priority": {
+      "color": "#d8d8d8",
+      "id": "4",
+      "orderindex": "4",
+      "priority": "low"
+    },
+    "due_date": null,
+    "start_date": null,
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "33339b75-59dd-41ab-93be-a5851eda214f",
+        "name": "Create",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1710513136311",
+        "hide_from_guests": false,
+        "value": "1765825200000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "30b51379-c05c-4160-8a50-b00d922fbae2",
+        "name": "Done",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1710513153601",
+        "hide_from_guests": false,
+        "value": "1765998000000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "9b9b2d63-d009-4ca1-8d56-9134e02aff0a",
+        "name": "QA種別",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "4633edc2-f960-48b3-878e-276b9bc12480",
+              "label": "形式的テスト_機能QA",
+              "color": "#02BCD4",
+              "orderindex": 0
+            },
+            {
+              "id": "1762b0fc-04ee-4d50-a09b-94c940e1c00b",
+              "label": "形式的テスト_データQA",
+              "color": "#FF7FAB",
+              "orderindex": 1
+            },
+            {
+              "id": "20c4c563-1dd1-4b25-b5c3-315c3dfe565e",
+              "label": "仕様QA",
+              "color": "#0231E8",
+              "orderindex": 2
+            },
+            {
+              "id": "dd63823d-711a-483e-b545-4a4e9a17105e",
+              "label": "納品ビルドQA",
+              "color": "#e50000",
+              "orderindex": 3
+            },
+            {
+              "id": "388394ac-3741-4a49-be3c-1536c31ed984",
+              "label": "探索的テスト",
+              "color": "#2ecd6f",
+              "orderindex": 4
+            },
+            {
+              "id": "4441a87d-8ed2-4ecf-a26f-70577c9ac1ec",
+              "label": "データ設定依頼",
+              "color": "#7C4DFF",
+              "orderindex": 5
+            }
+          ]
+        },
+        "date_created": "1713678824862",
+        "hide_from_guests": false,
+        "value": [
+          "1762b0fc-04ee-4d50-a09b-94c940e1c00b"
+        ],
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "c9c26e3c-0058-464f-ad26-05f202ba1280",
+        "name": "QA通知用カスタムフィールド",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1738652166515",
+        "hide_from_guests": false,
+        "value": "1765879599.357689",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "a19f03bc-9353-4a4d-8fea-4cedad109c04",
+        "name": "SEED関連",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "ad5bcb51-5f4a-4821-b690-ef56ea3adf74",
+              "name": "基盤システム",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "2e1a03fb-5636-4b63-a0ea-1f203eb8f7ed",
+              "name": "共通ゲーム機能",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1714035568848",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "210de310-253e-4f67-9084-d238847e1c5b",
+        "name": "StatusChange",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1743490160615",
+        "hide_from_guests": true,
+        "value": "1765998000000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "b888a620-455b-459b-8787-9239bd25320b",
+        "name": "TC",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "670e9326-08e0-438e-b87f-c88203208456",
+              "name": "TC不具合",
+              "color": "#FF4081",
+              "orderindex": 0
+            }
+          ]
+        },
+        "date_created": "1752220927691",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "e4796b07-0423-4f12-b671-cdf0c89d4a4f",
+        "name": "バグカテゴリ",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "a224b122-6421-4c9d-934d-d549ce3ff066",
+              "name": "コンプライアンス",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "102367e8-e2ed-4e24-b4f8-7e61327d34c7",
+              "name": "動作",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "97b5d368-a3ba-4093-9374-2694af3d81d7",
+              "name": "テキスト",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "2f72aa85-b8c0-4400-a95d-66eb1ebdd4b2",
+              "name": "サウンド",
+              "color": null,
+              "orderindex": 3
+            }
+          ]
+        },
+        "date_created": "1713679528982",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "5d3d19b6-3b80-4f24-acca-4c0e159c62f3",
+        "name": "バグタイプ",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "18e6adeb-d408-4398-8e1c-3d7abbb331bb",
+              "name": "コンプライアンス_動作違反",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "aeab53d0-993d-47fe-8e58-ea1cc658f105",
+              "name": "コンプライアンス_規定用語違反",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "5110cb7c-7b88-4825-bc8d-df5e9620815d",
+              "name": "コンプライアンス_不適切なメッセージ",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "967f9059-288e-4cb2-bcd7-73ee874f1475",
+              "name": "コンプライアンス_テキスト翻訳不備",
+              "color": null,
+              "orderindex": 3
+            },
+            {
+              "id": "b801d244-76b4-4d01-a97d-2a7ad5b4c59d",
+              "name": "コンプライアンス_テキスト表示不備",
+              "color": null,
+              "orderindex": 4
+            },
+            {
+              "id": "b51fdd33-2bbe-4194-aa82-29dff894feca",
+              "name": "動作_クラッシュ",
+              "color": null,
+              "orderindex": 5
+            },
+            {
+              "id": "9ed249a0-5aaf-4aad-a91e-18b39995b30d",
+              "name": "動作_フリーズ",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "7d6d8c27-12bd-4b13-93ac-7d3a02fa9f09",
+              "name": "動作_エラー",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "cd7cd621-8033-4521-9d7e-b9c00397197e",
+              "name": "動作_進行不能",
+              "color": null,
+              "orderindex": 8
+            },
+            {
+              "id": "32c50796-6e51-4523-bc9e-f6fe314ef2e4",
+              "name": "動作_セーブ/ロード",
+              "color": null,
+              "orderindex": 9
+            },
+            {
+              "id": "501548e0-56d4-4f8d-81d6-c1f019d1e295",
+              "name": "動作_AI",
+              "color": null,
+              "orderindex": 10
+            },
+            {
+              "id": "ce319867-efa9-4b4a-a21f-1c2f4da1b496",
+              "name": "動作_仕様問題",
+              "color": null,
+              "orderindex": 11
+            },
+            {
+              "id": "b4b06f4a-d6be-4006-a9a6-704c2a3981f6",
+              "name": "動作_カメラ",
+              "color": null,
+              "orderindex": 12
+            },
+            {
+              "id": "5a7d2d05-169e-42b2-b94c-27275924ff1e",
+              "name": "動作_当たり判定",
+              "color": null,
+              "orderindex": 13
+            },
+            {
+              "id": "d9fae33c-a8e0-44d2-98f1-5b8b4e5f2698",
+              "name": "動作_操作異常",
+              "color": null,
+              "orderindex": 14
+            },
+            {
+              "id": "d7413fd7-da48-42c5-a1ea-11d25a1cb561",
+              "name": "動作_グラフィック",
+              "color": null,
+              "orderindex": 15
+            },
+            {
+              "id": "b1b94ed8-c5ec-46b1-a9d7-a6abdac6b62b",
+              "name": "動作_その他",
+              "color": null,
+              "orderindex": 16
+            },
+            {
+              "id": "b7075045-fb54-4660-8764-446fe867a753",
+              "name": "テキスト_文法間違い",
+              "color": null,
+              "orderindex": 17
+            },
+            {
+              "id": "28abac6a-3464-48c1-b9d6-84d5e68cf245",
+              "name": "テキスト_誤字/脱字",
+              "color": null,
+              "orderindex": 18
+            },
+            {
+              "id": "5958fa96-7f5c-45b3-a67a-56dfb4ec5a96",
+              "name": "テキスト_重なり/途切れ",
+              "color": null,
+              "orderindex": 19
+            },
+            {
+              "id": "345d2b6b-229c-482d-969a-7823d2bf753d",
+              "name": "テキスト_言語間違い",
+              "color": null,
+              "orderindex": 20
+            },
+            {
+              "id": "7b6a3e44-ad19-4449-a88b-c9707a53d85f",
+              "name": "テキスト_間違ったテキスト/翻訳間違い",
+              "color": null,
+              "orderindex": 21
+            },
+            {
+              "id": "682d1998-8757-40eb-b7f9-60dcf4168a11",
+              "name": "テキスト_特殊文字",
+              "color": null,
+              "orderindex": 22
+            },
+            {
+              "id": "d5d903c3-340f-4d8b-8147-53345c8136c9",
+              "name": "テキスト_字幕",
+              "color": null,
+              "orderindex": 23
+            },
+            {
+              "id": "b7da689c-f550-4a5f-ac78-61896e007e64",
+              "name": "テキスト_句読点/大文字/小文字",
+              "color": null,
+              "orderindex": 24
+            },
+            {
+              "id": "c116d051-769f-4430-ad82-d74b927788b8",
+              "name": "サウンド_ボイスの抜け",
+              "color": null,
+              "orderindex": 25
+            },
+            {
+              "id": "dc5f7626-2888-4df2-afbd-385f68294084",
+              "name": "サウンド_ボイスの途切れ",
+              "color": null,
+              "orderindex": 26
+            },
+            {
+              "id": "36d2e4b5-8f36-460a-a368-335200fb2c4d",
+              "name": "サウンド_ボイスの破損",
+              "color": null,
+              "orderindex": 27
+            },
+            {
+              "id": "217fc213-6018-4461-a3fc-9fb7e093e059",
+              "name": "サウンド_字幕",
+              "color": null,
+              "orderindex": 28
+            },
+            {
+              "id": "111c33f6-89c2-4d01-81bb-7a3541f596f3",
+              "name": "サウンド_SE/BGM",
+              "color": null,
+              "orderindex": 29
+            }
+          ]
+        },
+        "date_created": "1713679571042",
+        "hide_from_guests": false,
+        "value": 1,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "861a2d95-f600-4a60-9561-934c0f98f92d",
+        "name": "バグ発生場所（詳細）",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1713679629973",
+        "hide_from_guests": false,
+        "value": "図鑑",
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "0b3cfe49-851b-4ebd-9c13-86c17a8d98be",
+        "name": "バグ発生箇所",
+        "type": "drop_down",
+        "type_config": {
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "67b29b8c-14bc-48c8-b13d-b45e3d84adb9",
+              "name": "起動〜タイトル画面",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "96607ce6-e30c-49a8-b5e8-4d01803f5a92",
+              "name": "アトラクトデモ",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "d1780893-0723-4a3f-8df9-d7eb57233be8",
+              "name": "通常プレイ",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "228e4556-c6bb-4710-b3a4-b18dcbcc0ba6",
+              "name": "画面表示情報",
+              "color": null,
+              "orderindex": 3
+            },
+            {
+              "id": "7204c659-5817-4ca4-b4e9-0ad8761aebbc",
+              "name": "メニュー",
+              "color": null,
+              "orderindex": 4
+            },
+            {
+              "id": "2d561481-6fe3-4c26-8f24-a0ba9ce498c3",
+              "name": "ムービー/イベントデモ",
+              "color": null,
+              "orderindex": 5
+            },
+            {
+              "id": "7a186166-0780-4e69-84a3-ec608c5e53af",
+              "name": "マルチプレイ",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "9bb558c3-ab5a-4606-8ab0-68e58609b7b7",
+              "name": "オプション",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "1114bd2f-61bf-4b1d-b9c0-a24ff34427a9",
+              "name": "その他",
+              "color": null,
+              "orderindex": 8
+            }
+          ]
+        },
+        "date_created": "1713679608256",
+        "hide_from_guests": false,
+        "value": 8,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "f781176f-19a2-42b1-b3db-cef2923c1990",
+        "name": "フェーズ",
+        "type": "labels",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "52913db9-2eb3-420c-b1d2-274072b837e9",
+              "label": "α2",
+              "color": "#e50000",
+              "orderindex": 0
+            },
+            {
+              "id": "6512e5a6-5932-4ca5-ae27-653911b7c1e6",
+              "label": "α3",
+              "color": "#f900ea",
+              "orderindex": 1
+            },
+            {
+              "id": "7c2fa23d-f746-4557-a2da-284b5bfdb51e",
+              "label": "β",
+              "color": "#ff7800",
+              "orderindex": 2
+            },
+            {
+              "id": "a9466cc9-0465-4a59-b4f0-31631d7d7a2b",
+              "label": "α4",
+              "color": "#0231E8",
+              "orderindex": 3
+            },
+            {
+              "id": "7605117f-6c89-425c-9ef7-1106e0d80991",
+              "label": "マスター",
+              "color": "#02BCD4",
+              "orderindex": 4
+            }
+          ]
+        },
+        "date_created": "1717135495606",
+        "hide_from_guests": false,
+        "value": [
+          "7605117f-6c89-425c-9ef7-1106e0d80991"
+        ],
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "7d962b0d-d8f6-47cb-9822-59ab4b61e285",
+        "name": "プラットフォーム",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "f8342cfb-07bd-40d1-8e7c-deb114bd6ef2",
+              "label": "iOS",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "84342121-5e5c-4083-99a5-b057d3db94e9",
+              "label": "AOS",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1713679380010",
+        "hide_from_guests": false,
+        "value": [
+          "84342121-5e5c-4083-99a5-b057d3db94e9",
+          "f8342cfb-07bd-40d1-8e7c-deb114bd6ef2"
+        ],
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "b3a6f2b7-7ac5-4877-99cf-2ba770098cc5",
+        "name": "不具合種別",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "bd101364-efc3-4995-bcee-33e94e934139",
+              "name": "動作・表示不良",
+              "color": "#81B1FF",
+              "orderindex": 0
+            },
+            {
+              "id": "f6ebab38-be78-4bfc-ac46-5e590c1776b6",
+              "name": "資料相違",
+              "color": "#2ecd6f",
+              "orderindex": 1
+            },
+            {
+              "id": "9d879ef8-4336-412b-9264-3837d3299a84",
+              "name": "BNEレギュ",
+              "color": "#e50000",
+              "orderindex": 2
+            }
+          ]
+        },
+        "date_created": "1747281572777",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "476aa1d0-a2fd-4a0c-8681-2a294b01e1a2",
+        "name": "修正完了するスコープ",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "86a37571-d88e-4fb4-915d-bffb5d2c3cfa",
+              "name": "アルファ2",
+              "color": "#EA80FC",
+              "orderindex": 0
+            },
+            {
+              "id": "f51dffad-d374-4a05-b06d-82c2681ec81b",
+              "name": "アルファ3",
+              "color": "#f9d900",
+              "orderindex": 1
+            },
+            {
+              "id": "92bd26f0-d2b5-4d60-ae45-0e37d4fc31fc",
+              "name": "ベータ",
+              "color": "#2ecd6f",
+              "orderindex": 2
+            },
+            {
+              "id": "d8dc05a2-fef7-44d3-92b7-eab81022aecf",
+              "name": "マスター",
+              "color": "#e50000",
+              "orderindex": 3
+            },
+            {
+              "id": "b7cb8b52-9e68-4021-abeb-1262b21295d1",
+              "name": "8/21ROM",
+              "color": "#e50000",
+              "orderindex": 4
+            },
+            {
+              "id": "3d596e3e-cb2a-4cf2-a448-cd022788f73d",
+              "name": "8/28ROM",
+              "color": "#04A9F4",
+              "orderindex": 5
+            },
+            {
+              "id": "d74b1ed6-601e-4b89-8d88-28d14681878b",
+              "name": "8/30ROM",
+              "color": "#7C4DFF",
+              "orderindex": 6
+            },
+            {
+              "id": "f765b0fd-95b8-4e8a-8ea2-6e0f318b5811",
+              "name": "ベータ以降にしたい",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "1e9f9b71-38dd-46aa-a280-ccca059e608c",
+              "name": "直近優先",
+              "color": "#f900ea",
+              "orderindex": 8
+            },
+            {
+              "id": "fdf7323c-9745-439f-aece-26c22aef1d35",
+              "name": "12/10ROM",
+              "color": "#E65100",
+              "orderindex": 9
+            },
+            {
+              "id": "1d7012a4-a719-4a15-8ea5-75ee4cea424e",
+              "name": "12/27ROM",
+              "color": "#9b59b6",
+              "orderindex": 10
+            },
+            {
+              "id": "5f68215e-4fac-4d83-a8b7-8c86c72fb122",
+              "name": "1/22ROM",
+              "color": "#0231E8",
+              "orderindex": 11
+            },
+            {
+              "id": "60119d89-0bf6-4590-bde7-8e8d1ab52c8c",
+              "name": "4/16ROM(必須",
+              "color": "#e50000",
+              "orderindex": 12
+            },
+            {
+              "id": "77730809-a885-4443-a559-82aee343d2c1",
+              "name": "4/16ROM(可能であれば",
+              "color": "#f9d900",
+              "orderindex": 13
+            },
+            {
+              "id": "7029f34d-09a2-4b1d-8c63-9a50c6a7ad32",
+              "name": "4/16以降",
+              "color": "#667684",
+              "orderindex": 14
+            },
+            {
+              "id": "cb5ffcfd-ecbd-478d-a4a5-b8d04a00d714",
+              "name": "リリース時必須",
+              "color": "#e50000",
+              "orderindex": 15
+            },
+            {
+              "id": "2b449347-0f41-4704-9023-da0df7b47d8b",
+              "name": "リリース以降",
+              "color": "#AF7E2E",
+              "orderindex": 16
+            }
+          ]
+        },
+        "date_created": "1713679022358",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "0cf27ca9-f798-4e71-b4a2-9c85943d1e2c",
+        "name": "修正種別",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "ac250576-5c6b-45b1-bb9e-a883fe854247",
+              "label": "機能",
+              "color": "#0231E8",
+              "orderindex": 0
+            },
+            {
+              "id": "6c9508d5-bb4f-46d2-91fc-8650e111ca03",
+              "label": "仕様書",
+              "color": "#2ecd6f",
+              "orderindex": 1
+            },
+            {
+              "id": "b47f0d44-d6cf-4030-ae54-68c118a5c1e1",
+              "label": "BNEレギュ",
+              "color": "#e50000",
+              "orderindex": 2
+            }
+          ]
+        },
+        "date_created": "1747281999811",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "6636220f-5e89-4a3f-9ed2-d9b9fe727a84",
+        "name": "発生環境",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "e2c6ac7b-6f7c-4c92-8b98-dc324f5e7864",
+              "name": "開発環境",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "91438067-9a0d-4b37-b1dd-29c987299252",
+              "name": "本番環境",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1714612061063",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "80822821-c62e-4e67-9277-19b32a977fba",
+        "name": "発生頻度",
+        "type": "drop_down",
+        "type_config": {
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "cb7bd4b2-dac0-44c4-94fc-5e500eadd043",
+              "name": "常に発生",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "83cdbefe-57c8-4bde-ba81-691fa0d170f3",
+              "name": "頻繁に発生",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "19a92f41-e453-44fd-a6e0-4523a65c2677",
+              "name": "時々発生",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "fe8065d2-75e8-4fef-9ee4-5c06320f0629",
+              "name": "一度だけ発生",
+              "color": null,
+              "orderindex": 3
+            }
+          ]
+        },
+        "date_created": "1713679676442",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "cacf3f36-fd1e-4103-bb71-3b91a82cf9a2",
+        "name": "発見version",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1713679757393",
+        "hide_from_guests": false,
+        "value": "#2558",
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "1bbe28dd-d8ab-4f78-9ea0-f31c166aafad",
+        "name": "起票元",
+        "type": "labels",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "b332c6f6-919d-46cd-99ba-3a32ea0bfeb4",
+              "label": "WP",
+              "color": "#04A9F4",
+              "orderindex": 0
+            },
+            {
+              "id": "e9b35e3c-0382-4b79-ab46-480eab530b3f",
+              "label": "BNE",
+              "color": "#e50000",
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1734056226269",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "7ff853ee-87a4-4736-8cd9-6dd68aa7e62f",
+        "name": "QAステータス",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "3332fa61-9be4-4865-91b6-ac8a359aee8f",
+              "name": "1. 起票",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "c6a77a6d-3b34-4560-8841-14cd83bd0a51",
+              "name": "2. 新規",
+              "color": "#f9d900",
+              "orderindex": 1
+            },
+            {
+              "id": "0b47fa49-c36b-4507-83b5-3158e7b7bc71",
+              "name": "3. 着手",
+              "color": "#02BCD4",
+              "orderindex": 2
+            },
+            {
+              "id": "ec6ed7f1-f4ce-493a-8c01-c29682cbfd65",
+              "name": "4. 修正完了",
+              "color": "#667684",
+              "orderindex": 3
+            },
+            {
+              "id": "c0de5c24-5658-4d88-a642-6ac31e17c389",
+              "name": "5.修正確認待ち",
+              "color": "#AF7E2E",
+              "orderindex": 4
+            },
+            {
+              "id": "5a9713db-67e0-4a73-a559-3b025252b783",
+              "name": "6.再発",
+              "color": "#e50000",
+              "orderindex": 5
+            },
+            {
+              "id": "475f5a94-c8e0-47fa-a5f1-9b7fa67e1d79",
+              "name": "7.修正確認完了",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "52e44b18-f6f7-479e-b67b-2d8f18dec533",
+              "name": "9.仕様",
+              "color": "#1bbc9c",
+              "orderindex": 7
+            },
+            {
+              "id": "06f592d2-0cee-4760-8e1c-30455c7ffc8d",
+              "name": "10.仕様確認完了",
+              "color": "#2ecd6f",
+              "orderindex": 8
+            }
+          ]
+        },
+        "date_created": "1713679979962",
+        "hide_from_guests": false,
+        "value": 6,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "e2fae355-c7f8-444c-9731-0c5f3d8b5f7a",
+        "name": "バグランク",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "37d2a87a-74d9-4556-94d4-f094c5680e23",
+              "name": "MF（修正必須）",
+              "color": "#e50000",
+              "orderindex": 0
+            },
+            {
+              "id": "42e43fc9-c7e6-4135-bd84-45de0577e923",
+              "name": "A（要修正）",
+              "color": "#FF7FAB",
+              "orderindex": 1
+            },
+            {
+              "id": "87f36273-b86e-4f73-804f-2e02e6cc4193",
+              "name": "B（原則修正）",
+              "color": "#f9d900",
+              "orderindex": 2
+            },
+            {
+              "id": "d2d3fbd0-e552-4aa1-9f35-5f8a1d81905b",
+              "name": "C（修正推奨）",
+              "color": "#02BCD4",
+              "orderindex": 3
+            },
+            {
+              "id": "5f2e6883-e9fe-42a1-bb20-3a1d57ef88d9",
+              "name": "D（質問）",
+              "color": "#1bbc9c",
+              "orderindex": 4
+            },
+            {
+              "id": "f49e74c6-11ac-412e-8c41-0d8b33837d40",
+              "name": "E（要望）",
+              "color": "#b5bcc2",
+              "orderindex": 5
+            }
+          ]
+        },
+        "date_created": "1713679476223",
+        "hide_from_guests": false,
+        "value": 4,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "b449c257-f716-48b3-b8a6-e87eec292868",
+        "name": "修正ビルド",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1716194086347",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86evwhept",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901813785587",
+      "name": "データQA_202512020",
+      "access": true
+    },
+    "project": {
+      "id": "90180884069",
+      "name": "QA",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180884069",
+      "name": "QA",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": [
+      {
+        "id": "b2cac48c-e0cd-470c-be47-a965cd23ae58.PNG",
+        "date": "1765935708448",
+        "title": "ファントム_ルビー.PNG",
+        "type": 2,
+        "source": 1,
+        "version": 0,
+        "extension": "PNG",
+        "thumbnail_small": "https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58_small.PNG",
+        "thumbnail_medium": "https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58_medium.PNG",
+        "thumbnail_large": "https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58_large.PNG",
+        "is_folder": null,
+        "mimetype": "image/png",
+        "hidden": false,
+        "parent_id": "90180177340439",
+        "size": 674116,
+        "total_comments": 0,
+        "resolved_comments": 0,
+        "user": {
+          "id": 60970688,
+          "username": "Kazuya Adachi",
+          "email": "confidence-q12@cfd-qa.jp",
+          "initials": "KA",
+          "color": "",
+          "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+        },
+        "deleted": false,
+        "orientation": "1",
+        "url": "https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG",
+        "email_data": null,
+        "workspace_id": null,
+        "url_w_query": "https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG?view=open",
+        "url_w_host": "https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG"
+      },
+      {
+        "id": "bede2e6d-234b-4dd7-8e1a-3908ea866f12.jpg",
+        "date": "1765879407661",
+        "title": "ルビー_プロフィール.jpg",
+        "type": 1,
+        "source": 1,
+        "version": 0,
+        "extension": "jpg",
+        "thumbnail_small": "https://t5716001.p.clickup-attachments.com/t5716001/bede2e6d-234b-4dd7-8e1a-3908ea866f12_small.jpg",
+        "thumbnail_medium": "https://t5716001.p.clickup-attachments.com/t5716001/bede2e6d-234b-4dd7-8e1a-3908ea866f12_medium.jpg",
+        "thumbnail_large": "https://t5716001.p.clickup-attachments.com/t5716001/bede2e6d-234b-4dd7-8e1a-3908ea866f12_large.jpg",
+        "is_folder": null,
+        "mimetype": "image/jpeg",
+        "hidden": false,
+        "parent_id": "86evwhept",
+        "size": 224089,
+        "total_comments": 0,
+        "resolved_comments": 0,
+        "user": {
+          "id": 60970688,
+          "username": "Kazuya Adachi",
+          "email": "confidence-q12@cfd-qa.jp",
+          "initials": "KA",
+          "color": "",
+          "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+        },
+        "deleted": false,
+        "orientation": "1",
+        "url": "https://t5716001.p.clickup-attachments.com/t5716001/bede2e6d-234b-4dd7-8e1a-3908ea866f12/%E3%83%AB%E3%83%93%E3%83%BC_%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.jpg",
+        "email_data": null,
+        "workspace_id": null,
+        "url_w_query": "https://t5716001.p.clickup-attachments.com/t5716001/bede2e6d-234b-4dd7-8e1a-3908ea866f12/%E3%83%AB%E3%83%93%E3%83%BC_%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.jpg?view=open",
+        "url_w_host": "https://t5716001.p.clickup-attachments.com/t5716001/bede2e6d-234b-4dd7-8e1a-3908ea866f12/%E3%83%AB%E3%83%93%E3%83%BC_%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.jpg"
+      },
+      {
+        "id": "0e05dd41-bb7b-4764-8b5f-81e879dc6c3c.jpg",
+        "date": "1765879397889",
+        "title": "アクア_プロフィール.jpg",
+        "type": 1,
+        "source": 1,
+        "version": 0,
+        "extension": "jpg",
+        "thumbnail_small": "https://t5716001.p.clickup-attachments.com/t5716001/0e05dd41-bb7b-4764-8b5f-81e879dc6c3c_small.jpg",
+        "thumbnail_medium": "https://t5716001.p.clickup-attachments.com/t5716001/0e05dd41-bb7b-4764-8b5f-81e879dc6c3c_medium.jpg",
+        "thumbnail_large": "https://t5716001.p.clickup-attachments.com/t5716001/0e05dd41-bb7b-4764-8b5f-81e879dc6c3c_large.jpg",
+        "is_folder": null,
+        "mimetype": "image/jpeg",
+        "hidden": false,
+        "parent_id": "86evwhept",
+        "size": 227035,
+        "total_comments": 0,
+        "resolved_comments": 0,
+        "user": {
+          "id": 60970688,
+          "username": "Kazuya Adachi",
+          "email": "confidence-q12@cfd-qa.jp",
+          "initials": "KA",
+          "color": "",
+          "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+        },
+        "deleted": false,
+        "orientation": "1",
+        "url": "https://t5716001.p.clickup-attachments.com/t5716001/0e05dd41-bb7b-4764-8b5f-81e879dc6c3c/%E3%82%A2%E3%82%AF%E3%82%A2_%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.jpg",
+        "email_data": null,
+        "workspace_id": null,
+        "url_w_query": "https://t5716001.p.clickup-attachments.com/t5716001/0e05dd41-bb7b-4764-8b5f-81e879dc6c3c/%E3%82%A2%E3%82%AF%E3%82%A2_%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.jpg?view=open",
+        "url_w_host": "https://t5716001.p.clickup-attachments.com/t5716001/0e05dd41-bb7b-4764-8b5f-81e879dc6c3c/%E3%82%A2%E3%82%AF%E3%82%A2_%E3%83%97%E3%83%AD%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB.jpg"
+      }
+    ]
+  },
+  "comments": [
+    {
+      "id": "90180177643269",
+      "comment": [
+        {
+          "text": "12/18 安達",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-098f4d40-ad14-4c64-b606-32774e43d399"
+          }
+        },
+        {
+          "text": "ご対応ありがとうございます。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cb171f95-3baa-45c9-a904-fe0624540f9f"
+          }
+        },
+        {
+          "text": "資料「GLOW_キャラ名称＆キャラセリフ資料」において、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d61cedb8-11c0-4858-9404-0829767b0e35"
+          }
+        },
+        {
+          "text": "「復讐を誓う片星 星野 アクア」および「星野 ルビー」のプロフィール文言が修正されていることを確認しました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4b38b001-6f44-4498-b641-2204a1104afb"
+          }
+        }
+      ],
+      "comment_text": "12/18 安達\nご対応ありがとうございます。\n資料「GLOW_キャラ名称＆キャラセリフ資料」において、\n「復讐を誓う片星 星野 アクア」および「星野 ルビー」のプロフィール文言が修正されていることを確認しました。\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1766025969876",
+      "reply_count": 0
+    },
+    {
+      "id": "90180177628606",
+      "comment": [
+        {
+          "text": "こちらこそお手数をおかけして申し訳ございません！",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b2991935-0825-47f7-9d5f-b3d390445c67"
+          }
+        },
+        {
+          "text": "GLOW_キャラ名称＆キャラセリフ資料を修正いたしましたので、今一度ご確認をお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-13a99a78-a495-4df3-bd30-0ff460114379"
+          }
+        }
+      ],
+      "comment_text": "こちらこそお手数をおかけして申し訳ございません！\nGLOW_キャラ名称＆キャラセリフ資料を修正いたしましたので、今一度ご確認をお願いいたします。\n",
+      "user": {
+        "id": 89597485,
+        "username": "Eri Morinaga",
+        "email": "eri.maeda@bp.wonderpla.net",
+        "color": "#5d4037",
+        "initials": "EM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597485_sAp.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1766018944421",
+      "reply_count": 0
+    },
+    {
+      "id": "90180177431296",
+      "comment": [
+        {
+          "text": "12/17 安達",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c0e9613b-8f22-4735-bd5e-5fa12dd72764"
+          }
+        },
+        {
+          "text": "ファントムの「星野 ルビー」のプロフィールにおいて、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c68d6d66-ce94-468c-8910-762d20f4509f"
+          }
+        },
+        {
+          "text": "「星野 アイ」表記が『アイ』に修正されていることを確認しました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b87fa176-a86d-4224-b867-addccd4d5ecd"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f152533d-af0c-4721-9ae2-1a5f9a31c7a1"
+          }
+        },
+        {
+          "text": "1度目の差し戻しで連絡できておらず大変申し訳ございませんが、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-429996d2-1a3f-4390-848a-18ad82546669"
+          }
+        },
+        {
+          "text": "資料「GLOW_キャラ名称＆キャラセリフ資料」では『星野 アイ』表記のままのため、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6de9276a-8ee5-43f3-bc50-6ef0bc28cd2f"
+          }
+        },
+        {
+          "text": "お手数ですがこちらについてもご対応をお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a445c343-c00e-4261-8a42-70a92654ce03"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-02f62af3-92bd-4e71-bc29-db9657dba93f"
+          }
+        },
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/spreadsheets/d/1IkiS0rrzjKzg8ddE1n44RBj_Mg3ZABH1D_62pIGQTJg/edit?gid=2146475190#gid=2146475190"
+          },
+          "text": ""
+        },
+        {
+          "text": " ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4199da6a-1c84-412a-8a05-295c322fd723"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b17b9637-239e-41fd-8466-1ab45d8ca167"
+          }
+        },
+        {
+          "text": "確認ビルド：iOS#2566、AOS#2566",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-02c2cfc8-de4a-49be-b190-d6b859e73567"
+          }
+        },
+        {
+          "text": "確認環境：dev-qa2",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a7bcc219-6557-40f6-8018-ebc2f88246c5"
+          }
+        },
+        {
+          "text": "確認端末：iPhoneSE3(iOS:18.6)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-42eea705-960e-4f54-a21c-71a3d655e784"
+          }
+        },
+        {
+          "text": "　　　　　ZenFone6(AOS:9.0)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6e01ff3f-e9e0-41de-aa47-eb62bda5be13"
+          }
+        }
+      ],
+      "comment_text": "12/17 安達\nファントムの「星野 ルビー」のプロフィールにおいて、\n「星野 アイ」表記が『アイ』に修正されていることを確認しました。\n\n1度目の差し戻しで連絡できておらず大変申し訳ございませんが、\n資料「GLOW_キャラ名称＆キャラセリフ資料」では『星野 アイ』表記のままのため、\nお手数ですがこちらについてもご対応をお願いいたします。\n\ndocs.google.com/spreadsheets/d/1IkiS0rrzjKzg8ddE1n44RBj_Mg3ZABH1D_62pIGQTJg/edit?gid=2146475190#gid=2146475190 \n  \n\n確認ビルド：iOS#2566、AOS#2566\n確認環境：dev-qa2\n確認端末：iPhoneSE3(iOS:18.6)\n　　　　　ZenFone6(AOS:9.0)\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765960237063",
+      "reply_count": 0
+    },
+    {
+      "id": "90180177340439",
+      "comment": [
+        {
+          "text": "12/17 安達",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-16462436-24a5-4d11-9b78-ddf241452d12"
+          }
+        },
+        {
+          "text": "「復讐を誓う片星 星野 アクア」および「星野 ルビー」のプロフィールにおいて、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-93163ce9-a4ce-469f-b12f-422fad35397a"
+          }
+        },
+        {
+          "text": "「星野 アイ」と表記されていた箇所が『アイ』に修正されていることを確認しました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d0607340-1370-4383-9f10-7ca2b5e962c5"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-87c0fdd9-c34e-4dec-ac55-07423f858160"
+          }
+        },
+        {
+          "text": "しかしながら、ファントム版の「星野 ルビー」のプロフィールでは",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b5160b06-252a-4943-8430-08781501db61"
+          }
+        },
+        {
+          "text": "現状も「星野 アイ」表記が使用されております。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ef60993f-0634-4dbf-9446-48bc9cced88b"
+          }
+        },
+        {
+          "text": "なお、現状ファントム版の「復讐を誓う片星 星野 アクア」は出現しないため確認はできませんが、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4c18a398-a290-4af4-938c-c48b17dd9474"
+          }
+        },
+        {
+          "text": "こちらも「星野 アイ」表記となっている場合は、今後使用されることも考え合わせて修正されることを推奨いたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3b495556-7dc5-422b-bf69-475c64f430f1"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6a25f17d-fd0d-4334-97a5-d906ee400e36"
+          }
+        },
+        {
+          "text": "確認ビルド：iOS#2566、AOS#2566",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d0e887cd-c05b-4526-a765-ac27e79698bf"
+          }
+        },
+        {
+          "text": "確認環境：dev-qa2",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cb90cfcb-ff95-4ab7-a810-46fc9f00f843"
+          }
+        },
+        {
+          "text": "確認端末：iPhoneSE3(iOS:18.6)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-aba4d5b1-d66d-458e-a0e6-6b5efeaca9b5"
+          }
+        },
+        {
+          "text": "　　　　　ZenFone6(AOS:9.0)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-89f847cb-a7b3-45dc-a369-3502cb281d88"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8b81a065-23e8-4fb7-96e4-10d8570733cc"
+          }
+        },
+        {
+          "type": "image",
+          "text": "%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG",
+          "image": {
+            "id": "b2cac48c-e0cd-470c-be47-a965cd23ae58.PNG",
+            "name": "%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG",
+            "title": "%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG",
+            "type": "PNG",
+            "extension": "image/PNG",
+            "thumbnail_large": "https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG",
+            "thumbnail_medium": "https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG",
+            "thumbnail_small": "https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG",
+            "url": "https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG",
+            "uploaded": true
+          },
+          "attributes": {
+            "width": "140",
+            "data-id": "b2cac48c-e0cd-470c-be47-a965cd23ae58.PNG",
+            "data-attachment": "{\"id\":\"b2cac48c-e0cd-470c-be47-a965cd23ae58.PNG\",\"version\":\"0\",\"date\":1765935708448,\"name\":\"ファントム_ルビー.PNG\",\"title\":\"ファントム_ルビー.PNG\",\"extension\":\"PNG\",\"source\":1,\"thumbnail_small\":\"https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58_small.PNG\",\"thumbnail_medium\":\"https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58_medium.PNG\",\"thumbnail_large\":\"https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58_large.PNG\",\"url\":\"https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG\",\"url_w_query\":\"https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG?view=open\",\"url_w_host\":\"https://t5716001.p.clickup-attachments.com/t5716001/b2cac48c-e0cd-470c-be47-a965cd23ae58/%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG\"}",
+            "data-natural-width": "750",
+            "data-natural-height": "1334"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-42fb6668-1d72-4526-b001-096301cf3a5b"
+          }
+        }
+      ],
+      "comment_text": "12/17 安達\n「復讐を誓う片星 星野 アクア」および「星野 ルビー」のプロフィールにおいて、\n「星野 アイ」と表記されていた箇所が『アイ』に修正されていることを確認しました。\n\nしかしながら、ファントム版の「星野 ルビー」のプロフィールでは\n現状も「星野 アイ」表記が使用されております。\nなお、現状ファントム版の「復讐を誓う片星 星野 アクア」は出現しないため確認はできませんが、\nこちらも「星野 アイ」表記となっている場合は、今後使用されることも考え合わせて修正されることを推奨いたします。\n\n確認ビルド：iOS#2566、AOS#2566\n確認環境：dev-qa2\n確認端末：iPhoneSE3(iOS:18.6)\n　　　　　ZenFone6(AOS:9.0)\n\n%E3%83%95%E3%82%A1%E3%83%B3%E3%83%88%E3%83%A0_%E3%83%AB%E3%83%93%E3%83%BC.PNG\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765935714082",
+      "reply_count": 0
+    },
+    {
+      "id": "90180177180791",
+      "comment": [
+        {
+          "text": "確認ののち、レギュレーションに従う形で(ゲーム内キャラクター名表記に合わせる)修正いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-800b2fb7-36d0-48d8-aa37-820087aadf91"
+          }
+        }
+      ],
+      "comment_text": "確認ののち、レギュレーションに従う形で(ゲーム内キャラクター名表記に合わせる)修正いたしました。\n",
+      "user": {
+        "id": 89597485,
+        "username": "Eri Morinaga",
+        "email": "eri.maeda@bp.wonderpla.net",
+        "color": "#5d4037",
+        "initials": "EM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597485_sAp.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765883344899",
+      "reply_count": 0
+    },
+    {
+      "id": "90180177163488",
+      "comment": [
+        {
+          "text": "### 調査方針・解決策の提案\n\n本件は【仕様確認】図鑑内のキャラクタープロフィールに「星野 アイ」表記が存在していることに関する報告です。報告内では過去タスクにて『星野 アイ』の名称がNGである旨が共有されていますが、正式な対応方法・経緯が管理チケットからは確認できませんでした（過去の同様指摘・仕様案件は未確認）。\n\n#### 1. 調査方針\n- まずは該当キャラクター（「復讐を誓う片星 星野 アクア」「星野 ルビー」）、およびファントム版キャラのプロフィール文言に「星野 アイ」表記が入っている箇所を抜粋し、NGワードリスト／最新仕様と照合します。\n- 併せて、【推しの子】関連タスク（特にピックアップガシャ等）で「星野 アイ」取り扱いに関する実装・データ制御例がないか、マスタ周辺も確認します。\n- 該当キャラの同文言が図鑑以外（例：ガシャ、クエスト、プロフィール等）でも利用されていないか横展開で洗い出しを行い、修正方針を明確化します。\n\n#### 2. 解決策の提案\n- 過去タスクから類似の表記NG・用語修正フローの担当は、リリースまわりのデータ・文言管理で頻出する**Hirano Kentoさん**となっておりますので、今回もHiranoさんを中心とした対応が最も適切です。\n- 仕様確認のため、プロダクトオーナーまたはIP管理窓口にも念のため確認を依頼し、「星野 アイ」使用可否の正式な文書あるいはコンフルエンス該当ページの所在があれば併せて確認ください。\n- 修正となる場合は、**ファントム版を含めプロフィール全箇所の統一修正版文言案**（回避表現、または固有名詞を伏せた「母親」等）を原稿化、事前に監修が必要な場合はIP側との調整を依頼してください。\n- コンテンツ全体の横断チェック・修正反映を確実に行うため、ヒアリング・文言反映後は、該当データの配信/更新まで手順を併記してください。\n\n#### アサイン案\n- メイン対応：**Hirano Kento**\n- 監修・方針確認（必要時）：IP管理窓口、プロダクト責任者\n\n#### 参考：過去の類似タスク\n- 類似する「名称表記修正」「文言不一致」関連チケットは以下の事例があります。いずれも表記修正＋IP監修プロセスが必要となっています。\n  - 「チェーンソーマンのクエスト選択画面のフレーバーテキストで、誤字がある」  \n    https://app.clickup.com/t/86eux5evw\n  - 「特定のお知らせで、新規キャラを獲得した場合の一部の注意文言が記載されていない」  \n    https://app.clickup.com/t/86eut6e7k\n  - 「資料『GLOW_ID 管理』にて、【推しの子】関連の原画のリリースキーが記載されていない」  \n    https://app.clickup.com/t/86evvwekw\n\n---\n\n**次アクション**としては、上記の観点で【現状仕様・資料再確認】→【修正指示・監修フロー設定】→【データ反映】をセットで進められるよう、Hirano Kentoさんへ本タスクのアサイン＆確認依頼をお願いいたします。"
+        }
+      ],
+      "comment_text": "### 調査方針・解決策の提案\n\n本件は【仕様確認】図鑑内のキャラクタープロフィールに「星野 アイ」表記が存在していることに関する報告です。報告内では過去タスクにて『星野 アイ』の名称がNGである旨が共有されていますが、正式な対応方法・経緯が管理チケットからは確認できませんでした（過去の同様指摘・仕様案件は未確認）。\n\n#### 1. 調査方針\n- まずは該当キャラクター（「復讐を誓う片星 星野 アクア」「星野 ルビー」）、およびファントム版キャラのプロフィール文言に「星野 アイ」表記が入っている箇所を抜粋し、NGワードリスト／最新仕様と照合します。\n- 併せて、【推しの子】関連タスク（特にピックアップガシャ等）で「星野 アイ」取り扱いに関する実装・データ制御例がないか、マスタ周辺も確認します。\n- 該当キャラの同文言が図鑑以外（例：ガシャ、クエスト、プロフィール等）でも利用されていないか横展開で洗い出しを行い、修正方針を明確化します。\n\n#### 2. 解決策の提案\n- 過去タスクから類似の表記NG・用語修正フローの担当は、リリースまわりのデータ・文言管理で頻出する**Hirano Kentoさん**となっておりますので、今回もHiranoさんを中心とした対応が最も適切です。\n- 仕様確認のため、プロダクトオーナーまたはIP管理窓口にも念のため確認を依頼し、「星野 アイ」使用可否の正式な文書あるいはコンフルエンス該当ページの所在があれば併せて確認ください。\n- 修正となる場合は、**ファントム版を含めプロフィール全箇所の統一修正版文言案**（回避表現、または固有名詞を伏せた「母親」等）を原稿化、事前に監修が必要な場合はIP側との調整を依頼してください。\n- コンテンツ全体の横断チェック・修正反映を確実に行うため、ヒアリング・文言反映後は、該当データの配信/更新まで手順を併記してください。\n\n#### アサイン案\n- メイン対応：**Hirano Kento**\n- 監修・方針確認（必要時）：IP管理窓口、プロダクト責任者\n\n#### 参考：過去の類似タスク\n- 類似する「名称表記修正」「文言不一致」関連チケットは以下の事例があります。いずれも表記修正＋IP監修プロセスが必要となっています。\n  - 「チェーンソーマンのクエスト選択画面のフレーバーテキストで、誤字がある」  \n    https://app.clickup.com/t/86eux5evw\n  - 「特定のお知らせで、新規キャラを獲得した場合の一部の注意文言が記載されていない」  \n    https://app.clickup.com/t/86eut6e7k\n  - 「資料『GLOW_ID 管理』にて、【推しの子】関連の原画のリリースキーが記載されていない」  \n    https://app.clickup.com/t/86evvwekw\n\n---\n\n**次アクション**としては、上記の観点で【現状仕様・資料再確認】→【修正指示・監修フロー設定】→【データ反映】をセットで進められるよう、Hirano Kentoさんへ本タスクのアサイン＆確認依頼をお願いいたします。",
+      "user": {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "email": "t-takahashi@wonderpla.net",
+        "color": "#536cfe",
+        "initials": "TT",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765879455191",
+      "reply_count": 0
+    }
+  ]
+}

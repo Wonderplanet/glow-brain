@@ -3,7 +3,7 @@
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 
 from clickup_tools.common import (
     ClickUpClient,
@@ -16,6 +16,8 @@ from clickup_tools.common import (
     save_text,
 )
 from clickup_tools.common.models import Task, ListInfo
+from clickup_tools.common.task_fetcher import get_tasks_two_phase
+from clickup_tools.common.task_filter import HolidayTaskFilter
 
 
 @dataclass
@@ -50,6 +52,8 @@ class ListExporter:
         skip_attachments: bool = False,
         debug_limit: Optional[int] = None,
         dry_run: bool = False,
+        include_subtasks: bool = False,
+        exclude_holiday_tasks: bool = True,
     ) -> ExportResult:
         """リスト内のチケットをエクスポート
 
@@ -60,6 +64,8 @@ class ListExporter:
             skip_attachments: 添付ファイルをスキップ
             debug_limit: デバッグ用の処理件数制限
             dry_run: ドライラン（ファイル出力しない）
+            include_subtasks: サブタスクを含めるか（デフォルト: False）
+            exclude_holiday_tasks: 「休日」親タスクとその配下を除外（デフォルト: True）
 
         Returns:
             エクスポート結果
@@ -82,20 +88,59 @@ class ListExporter:
         else:
             print("\n全タスクを取得中...")
 
+        if include_subtasks:
+            print("  → サブタスクも含めて取得")
+
         include_closed = statuses is None or "closed" in statuses
-        tasks = self.client.get_tasks(list_id, statuses=statuses, include_closed=include_closed)
+
+        # 出力ディレクトリを決定（タスク取得前に確定）
+        if output_dir is None:
+            output_dir = self._build_output_path(list_info)
+
+        # タスク取得（常に2段階取得）
+        if include_subtasks:
+            # 2段階取得: 親タスク（Closedも含む）を確実に取得
+            # dry_runでなければ各フェーズのデータを保存
+            tasks = get_tasks_two_phase(
+                client=self.client,
+                list_id=list_id,
+                statuses=statuses,
+                include_closed=include_closed,
+                output_dir=output_dir if not dry_run else None
+            )
+        else:
+            # サブタスク不要な場合は1回の取得
+            tasks = self.client.get_tasks(
+                list_id,
+                statuses=statuses,
+                include_closed=include_closed,
+                include_subtasks=False
+            )
+
         print(f"取得件数: {len(tasks)}")
+
+        # 「休日」タスクの除外
+        if exclude_holiday_tasks:
+            before_count = len(tasks)
+            holiday_filter = HolidayTaskFilter()
+            tasks = holiday_filter.filter(tasks)
+            after_count = len(tasks)
+            print(f"休日タスクフィルタリング: {before_count}件 → {after_count}件 ({before_count - after_count}件除外)")
+
+        if include_subtasks:
+            subtask_count = sum(1 for task in tasks if task.parent)
+            print(f"  → うちサブタスク: {subtask_count}")
 
         # デバッグ制限
         if debug_limit and len(tasks) > debug_limit:
             print(f"\n⚠️ デバッグモード: 最初の {debug_limit} 件のみ処理")
             tasks = tasks[:debug_limit]
 
-        # 出力ディレクトリを決定
-        if output_dir is None:
-            output_dir = self._build_output_path(list_info)
-
         print(f"\n出力先: {output_dir}")
+
+        # 一覧取得データを保存
+        if not dry_run:
+            self._save_list_tasks_raw(tasks, output_dir)
 
         # タスクをエクスポート
         exported = 0
@@ -255,6 +300,11 @@ class ListExporter:
         lines.append(md.heading("基本情報", level=2))
         lines.append(md.task_basic_info_table(task))
 
+        # 親タスク情報（サブタスクの場合のみ）
+        if task.parent:
+            lines.append(md.heading("親タスク", level=2))
+            lines.append(f"親タスクID: `{task.parent}`\n\n")
+
         # リスト情報
         lines.append(md.heading("リスト情報", level=2))
         list_rows = [
@@ -276,6 +326,51 @@ class ListExporter:
             lines.append(md.attachments_table(task.attachments))
 
         return "".join(lines)
+
+    def _save_list_tasks_raw(self, tasks: List[Task], output_dir: Path) -> None:
+        """タスク一覧の生データを保存
+
+        Args:
+            tasks: タスクリスト
+            output_dir: 出力ディレクトリ
+        """
+        try:
+            # ディレクトリを作成
+            ensure_directory(output_dir)
+
+            # タスクリストをJSON形式に変換
+            tasks_data = []
+            for task in tasks:
+                # Taskオブジェクトから辞書形式に変換
+                task_dict = {
+                    "id": task.id,
+                    "name": task.name,
+                    "description": task.description,
+                    "status": task.status,
+                    "priority": task.priority,
+                    "due_date": task.due_date.isoformat() if task.due_date else None,
+                    "created_date": task.created_date.isoformat(),
+                    "updated_date": task.updated_date.isoformat() if task.updated_date else None,
+                    "url": task.url,
+                    "creator_name": task.creator_name,
+                    "assignees": task.assignees,
+                    "tags": task.tags,
+                    "parent": task.parent,
+                    "markdown_description": task.markdown_description,
+                }
+                tasks_data.append(task_dict)
+
+            # ファイルに保存
+            raw_path = output_dir / "_list_tasks_raw.json"
+            raw_content = json.dumps({
+                "total_count": len(tasks),
+                "tasks": tasks_data
+            }, ensure_ascii=False, indent=2)
+
+            save_text(raw_content, raw_path)
+            print(f"  ✓ タスク一覧データを保存: _list_tasks_raw.json ({len(tasks)}件)")
+        except Exception as e:
+            print(f"  ⚠️ タスク一覧データの保存に失敗: {e}")
 
     def _generate_activity_markdown(self, task: Task, comments) -> str:
         """コメント情報を Markdown 形式で生成

@@ -1,0 +1,177 @@
+{
+  "task": {
+    "id": "86evnrw61",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "(サバ)スタミナ回復アイテム",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "[\n\ndocs.google.com\n\nhttps://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a6b6ec5007\\_0\\_571#slide=id.g3a6b6ec5007\\_0\\_571\n\n](https://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a6b6ec5007_0_571#slide=id.g3a6b6ec5007_0_571)",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "237848780.00000000000000000000000000000000",
+    "date_created": "1764214649555",
+    "date_updated": "1764744431138",
+    "date_closed": "1770175300038",
+    "date_done": "1764740402000",
+    "archived": false,
+    "creator": {
+      "id": 37714028,
+      "username": "Shun Endo",
+      "color": "#d60800",
+      "email": "endo@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/37714028_l8a.jpg"
+    },
+    "assignees": [
+      {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "email": "junki.mizutani@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "email": "junki.mizutani@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      {
+        "id": 37714028,
+        "username": "Shun Endo",
+        "color": "#d60800",
+        "initials": "SE",
+        "email": "endo@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714028_l8a.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": "86evnbw8u",
+    "top_level_parent": "86evnbw8u",
+    "priority": null,
+    "due_date": "1764874800000",
+    "start_date": "1764529200000",
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86evnrw61",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": [
+    {
+      "id": "90180173903954",
+      "comment": [
+        {
+          "text": "クラサバすり合わせ済み",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5d8caf14-037a-4515-a0ff-77de60fb5776"
+          }
+        },
+        {
+          "type": "bookmark",
+          "bookmark": {
+            "service": "custom",
+            "id": "https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1764734241342039?thread_ts=1764731617.695069&cid=C069N3UL80H",
+            "url": "https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1764734241342039?thread_ts=1764731617.695069&cid=C069N3UL80H"
+          },
+          "attributes": {
+            "block-id": "block-7d5ccaa4-1c3c-4431-909a-983f9b977ad1",
+            "body-type": "message",
+            "unfurled": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b1fc103d-f64b-48b8-8bb9-b4411f602587"
+          }
+        }
+      ],
+      "comment_text": "クラサバすり合わせ済み\nwonderplanet-glow.slack.com/archives/C069N3UL80H/p1764734241342039?thread_ts=1764731617.695069&cid=C069N3UL80H \n \n",
+      "user": {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "email": "junki.mizutani@wonderpla.net",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1764744431138",
+      "reply_count": 0
+    }
+  ]
+}

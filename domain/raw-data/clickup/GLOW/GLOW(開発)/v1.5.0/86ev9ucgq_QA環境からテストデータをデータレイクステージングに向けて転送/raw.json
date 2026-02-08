@@ -1,0 +1,111 @@
+{
+  "task": {
+    "id": "86ev9ucgq",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "QA環境からテストデータをデータレイクステージングに向けて転送",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "237816404.00000000000000000000000000000000",
+    "date_created": "1761549645091",
+    "date_updated": "1761549645091",
+    "date_closed": "1770175300038",
+    "date_done": null,
+    "archived": false,
+    "creator": {
+      "id": 25540505,
+      "username": "Toshikazu Takahashi",
+      "color": "#536cfe",
+      "email": "t-takahashi@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+    },
+    "assignees": [],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 37714028,
+        "username": "Shun Endo",
+        "color": "#d60800",
+        "initials": "SE",
+        "email": "endo@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714028_l8a.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": "86ev9ucg6",
+    "top_level_parent": "86ev9ucg6",
+    "priority": null,
+    "due_date": null,
+    "start_date": null,
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86ev9ucgq",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": []
+}

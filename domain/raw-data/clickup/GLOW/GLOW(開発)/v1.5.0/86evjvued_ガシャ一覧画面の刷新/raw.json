@@ -1,0 +1,825 @@
+{
+  "task": {
+    "id": "86evjvued",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "ガシャ一覧画面の刷新",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "237848533.00000000000000000000000000000000",
+    "date_created": "1763540194293",
+    "date_updated": "1770175299782",
+    "date_closed": "1770175299782",
+    "date_done": "1769401511451",
+    "archived": false,
+    "creator": {
+      "id": 25540505,
+      "username": "Toshikazu Takahashi",
+      "color": "#536cfe",
+      "email": "t-takahashi@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+    },
+    "assignees": [
+      {
+        "id": 7807756,
+        "username": "daichi_takishima",
+        "color": "#04a9f4",
+        "initials": "D",
+        "email": "takishima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7807756_rQr.jpg"
+      },
+      {
+        "id": 7859650,
+        "username": "donghyeok kim",
+        "color": "#3e2724",
+        "initials": "DK",
+        "email": "donghyeok-kim@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7859650_EMB.jpg"
+      },
+      {
+        "id": 43594922,
+        "username": "Rira Mochizuki",
+        "color": "#8ac34a",
+        "initials": "RM",
+        "email": "mochizuki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594922_r9h.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 7807756,
+        "username": "daichi_takishima",
+        "color": "#04a9f4",
+        "initials": "D",
+        "email": "takishima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7807756_rQr.jpg"
+      },
+      {
+        "id": 7859650,
+        "username": "donghyeok kim",
+        "color": "#3e2724",
+        "initials": "DK",
+        "email": "donghyeok-kim@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7859650_EMB.jpg"
+      },
+      {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "color": "#536cfe",
+        "initials": "TT",
+        "email": "t-takahashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      {
+        "id": 43566206,
+        "username": "Kazuomi Sawada",
+        "color": "#ff897f",
+        "initials": "KS",
+        "email": "kazuomi.sawada@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43566206_K5I.jpg"
+      },
+      {
+        "id": 43594922,
+        "username": "Rira Mochizuki",
+        "color": "#8ac34a",
+        "initials": "RM",
+        "email": "mochizuki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594922_r9h.jpg"
+      },
+      {
+        "id": 95406444,
+        "username": "Hiroto Kikuchi",
+        "color": "#4466ff",
+        "initials": "HK",
+        "email": "h_kikuchi@qa.geeq.co.jp",
+        "profilePicture": null
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": null,
+    "top_level_parent": null,
+    "priority": null,
+    "due_date": "1768503600000",
+    "start_date": null,
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "value": "true",
+        "value_richtext": null,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86evjvued",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": [
+    {
+      "id": "90180188102190",
+      "comment": [
+        {
+          "text": "ガシャ一覧画面の刷新について、追加で下記内容を確認いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d5ad11be-416b-49da-b3f3-ecc8682e80b9"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-025b3ceb-2903-473f-8d41-7db6df60da65"
+          }
+        },
+        {
+          "text": "・メンテナンス中",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-92a56d47-068e-47bb-9a11-18747ae76e16"
+          }
+        },
+        {
+          "text": "├ガシャ画面に遷移できないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3c0ff731-0da8-4998-89d7-aa1c0f969119"
+          }
+        },
+        {
+          "text": "└一部ガシャの部分メンテナンスでは該当ガシャが引けないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4845fe4c-c339-4927-919f-b8473af86d2f"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-da1fb8ad-ab1b-4d61-9cbb-a9f9a33570d5"
+          }
+        },
+        {
+          "text": "確認ビルド：iOS #37(580)、aOS #37(581)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b412c3f8-95e0-4c46-b157-8755b4ee44d6"
+          }
+        },
+        {
+          "text": "確認環境：develop",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0187a1b0-ceef-43d1-8c13-625125e4c967"
+          }
+        },
+        {
+          "text": "確認端末：iPhone SE2 (iOS:18.1.1)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-96e18ad8-53f8-4f75-8fb9-a498718c54a3"
+          }
+        },
+        {
+          "text": "　　　　　ELE-L29(HUAWEI P30) (aOS:10.0.0)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8b72de2e-ff17-4f2c-8da6-f582cb29adf5"
+          }
+        }
+      ],
+      "comment_text": "ガシャ一覧画面の刷新について、追加で下記内容を確認いたしました。\n\n・メンテナンス中\n├ガシャ画面に遷移できないことを確認\n└一部ガシャの部分メンテナンスでは該当ガシャが引けないことを確認\n\n確認ビルド：iOS #37(580)、aOS #37(581)\n確認環境：develop\n確認端末：iPhone SE2 (iOS:18.1.1)\n　　　　　ELE-L29(HUAWEI P30) (aOS:10.0.0)\n",
+      "user": {
+        "id": 95406444,
+        "username": "Hiroto Kikuchi",
+        "email": "h_kikuchi@qa.geeq.co.jp",
+        "color": "#4466ff",
+        "initials": "HK",
+        "profilePicture": null
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1769401502689",
+      "reply_count": 0
+    },
+    {
+      "id": "90180187690304",
+      "comment": [
+        {
+          "text": "ガシャ一覧画面の刷新について、下記内容を確認いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-911e82a7-d94f-4287-96ab-26ebd870eb44"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1b919c18-6252-43a5-b993-398ccf726385"
+          }
+        },
+        {
+          "text": "▼チュートリアル",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-78cb9cba-910e-4bd8-b62e-15923a84d7a4"
+          }
+        },
+        {
+          "text": "・表示、挙動",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ee9b78b4-dada-4359-8f4f-c39e2d4f6d69"
+          }
+        },
+        {
+          "text": "└刷新されたガシャ画面が表示され、ガシャを引く際の挙動に問題がないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c5e8db58-9089-46ca-bcae-600a9f3dc365"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-518d38fd-54fb-4c04-b5d3-0b46d09dcc63"
+          }
+        },
+        {
+          "text": "▼ホーム画面",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6d995959-fb59-4839-a5d9-988cfdf15bd9"
+          }
+        },
+        {
+          "text": "・ホームバナー",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-67010b37-f273-4199-a4e9-79d3943c601b"
+          }
+        },
+        {
+          "text": "└ホームバナータップ時、紐付けられているガシャが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1398d71f-2fa4-4178-b931-d9c84803402b"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1c952922-3c15-4c15-b0ea-0f630804fbae"
+          }
+        },
+        {
+          "text": "▼ミッション",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-93f9fa35-5ebf-4671-b24f-61e54c19f001"
+          }
+        },
+        {
+          "text": "・遷移",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a3de20e2-aa77-4091-8c92-a9fd3b840ff6"
+          }
+        },
+        {
+          "text": "└ガシャに遷移するミッションで、「挑戦する」ボタンタップ時、ガシャ画面遷移できることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-868180d9-1d09-47a2-b5d9-3652e59c8cf8"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8ad515b3-ca6b-44f6-8169-75bfe552a84d"
+          }
+        },
+        {
+          "text": "▼ショップ画面",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-76b97a37-5c15-4892-8bac-862a777d3857"
+          }
+        },
+        {
+          "text": "・パック内のガシャチケット",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-581b0dcd-bfd4-4620-aa08-0298f0866430"
+          }
+        },
+        {
+          "text": "├詳細情報モーダルから「提供割合表示」ボタンをタップしてエラーが発生しないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d61e2c06-5ac4-4dcd-83d1-e97066d06370"
+          }
+        },
+        {
+          "text": "└「提供割合表示」ボタンタップ後、操作してもエラーが発生しないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d1694fdc-c3fd-47da-ac78-4cf95120890b"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a760650b-6cda-4b4f-a6f1-4917ecd7f148"
+          }
+        },
+        {
+          "text": "▼ガシャ画面",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-06d116c1-0fd2-44b6-828f-6b7d622f6676"
+          }
+        },
+        {
+          "text": "・帯の表示",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a4c6ff96-6b03-4f91-9c1e-8a186b746799"
+          }
+        },
+        {
+          "text": "├帯のガシャ名部分は、ガシャの種別名称が表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f2670ac4-b623-4b46-bfc6-498718cb6845"
+          }
+        },
+        {
+          "text": "├残り開催期間が正常に表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f72e6683-a489-4b6f-b988-5c5667acb9df"
+          }
+        },
+        {
+          "text": "└開催期間が無い場合は表示自体がないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-97ede583-ab6c-463b-b346-97c450ad6c12"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-59a9c0d6-53a6-430e-b79c-2438bb024dca"
+          }
+        },
+        {
+          "text": "・ガシャの切り替え",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9d384c6d-fdd6-4b0f-b98e-50a2dd834348"
+          }
+        },
+        {
+          "text": "├ガシャバナー、矢印ボタンタップで、フラッシュ演出を行い、ガシャを切り替えられることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-32a2733e-981f-42e9-9e1d-aeb1f03c9aca"
+          }
+        },
+        {
+          "text": "├ガシャ画面表示・切り替えを行った後、ガシャの表示要素が切り替わっていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-94f30603-e0fd-42ec-8438-b21d292e4c25"
+          }
+        },
+        {
+          "text": "├ガシャ切り替え後、切り替え後のガシャの提供割合、ガシャ詳細が表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-42d922e2-9a0f-457e-b6fd-fd741591ba29"
+          }
+        },
+        {
+          "text": "└提供割合、ガシャ詳細は表示されているガシャの表示になることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e956ab30-018f-46d6-9382-7e9446e2e9f2"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bdd44d19-e6fb-4a89-9685-6ed560f443bd"
+          }
+        },
+        {
+          "text": "・ピックアップのあるガシャ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-90ede074-c272-415f-987d-bca3d8685db3"
+          }
+        },
+        {
+          "text": "├扉絵をタップ、または時間経過により、扉絵が切り替わることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fb7a4445-47a3-414a-9be6-3aa0d7f9d9ba"
+          }
+        },
+        {
+          "text": "├キャラ紹介ページで、キャラ詳細の表示、必殺ワザボタンが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b9d35989-25f4-4298-8c8f-31cd308d7844"
+          }
+        },
+        {
+          "text": "└キャラ詳細の表示、必殺ワザボタンタップ時、表示しているピックアップキャラの表示になることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d8dc9692-dbf7-495e-84ab-b24b1fc52281"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d6450426-bee4-4845-8e93-3b50ae35fe6d"
+          }
+        },
+        {
+          "text": "・ガシャを引く",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ab1236d2-5d77-4ce5-b95a-002b8f277684"
+          }
+        },
+        {
+          "text": "├ガシャを引く流れが既存ガシャと同じことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a1e4810c-01b6-489c-a32f-68816660f34e"
+          }
+        },
+        {
+          "text": "├ガシャを1回引いた時、エラーが発生しないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-017a1bfe-7d58-47b1-8c4b-f90cbfad3900"
+          }
+        },
+        {
+          "text": "├ガシャを10回引いた時、エラーが発生しないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-030a7903-97df-4605-9110-d60e572115c5"
+          }
+        },
+        {
+          "text": "├ガシャを引いた後、プリズムが正常な量消費されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b139de60-16a3-4019-8f39-2e541cf10c05"
+          }
+        },
+        {
+          "text": "├ガシャを広告で引いた時、エラーが発生しないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-06ab3bcd-03d0-4d59-be8e-ebb6ea1ade64"
+          }
+        },
+        {
+          "text": "├広告視聴でガシャを引いた後、残り時間が正常に表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b2b5c1fe-a106-400d-8443-39ea157d3153"
+          }
+        },
+        {
+          "text": "├パス特典で広告をスキップして引いた時、エラーが発生しないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0ccc724f-145a-4f81-8128-2f0ff3170e11"
+          }
+        },
+        {
+          "text": "└パス特典で広告をスキップして引いた後、残り時間が正常に表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-459d9b39-ed46-49bd-a5bb-4214ee7bded4"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-92272bb5-eab0-4d40-9e9d-39ccda3398ef"
+          }
+        },
+        {
+          "text": "・開催期間外",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ae1b0ef1-474d-4b85-9055-435ff44a28bc"
+          }
+        },
+        {
+          "text": "├開催期間を超えた状態でガシャを引くとき、確認ダイアログが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c4b0f444-75e6-4129-9b72-abfe3e976a01"
+          }
+        },
+        {
+          "text": "└確認ダイアログを閉じると、ガシャ画面が更新されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7d0cea40-7bfd-44bc-80ca-05f1c7f495a5"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d1738923-8113-4e78-a691-78f5c00bc282"
+          }
+        },
+        {
+          "text": "・文言の表示",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fe5405ad-2471-422c-91c1-5fc401d76aa2"
+          }
+        },
+        {
+          "text": "├ガシャ訴求文言が表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-533930b0-076b-48fb-ba31-d9b765aba3b1"
+          }
+        },
+        {
+          "text": "├キャラ訴求文言が表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d83afe15-4a9f-4548-8c5b-58fc2fb86a62"
+          }
+        },
+        {
+          "text": "└インジゲーターをタップした場合は何も起きないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-78cb44f3-d997-4920-ba48-4fe294c497da"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-404df128-dc1e-4d1d-b308-39111b9da481"
+          }
+        },
+        {
+          "text": "メンテナンス時の挙動についてはバグ修正後、確認が出来次第、追加で連絡いたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bb1fc499-4751-4f1d-bcf6-57fd9b966469"
+          }
+        }
+      ],
+      "comment_text": "ガシャ一覧画面の刷新について、下記内容を確認いたしました。\n\n▼チュートリアル\n・表示、挙動\n└刷新されたガシャ画面が表示され、ガシャを引く際の挙動に問題がないことを確認\n\n▼ホーム画面\n・ホームバナー\n└ホームバナータップ時、紐付けられているガシャが表示されることを確認\n\n▼ミッション\n・遷移\n└ガシャに遷移するミッションで、「挑戦する」ボタンタップ時、ガシャ画面遷移できることを確認\n\n▼ショップ画面\n・パック内のガシャチケット\n├詳細情報モーダルから「提供割合表示」ボタンをタップしてエラーが発生しないことを確認\n└「提供割合表示」ボタンタップ後、操作してもエラーが発生しないことを確認\n\n▼ガシャ画面\n・帯の表示\n├帯のガシャ名部分は、ガシャの種別名称が表示されることを確認\n├残り開催期間が正常に表示されることを確認\n└開催期間が無い場合は表示自体がないことを確認\n\n・ガシャの切り替え\n├ガシャバナー、矢印ボタンタップで、フラッシュ演出を行い、ガシャを切り替えられることを確認\n├ガシャ画面表示・切り替えを行った後、ガシャの表示要素が切り替わっていることを確認\n├ガシャ切り替え後、切り替え後のガシャの提供割合、ガシャ詳細が表示されることを確認\n└提供割合、ガシャ詳細は表示されているガシャの表示になることを確認\n\n・ピックアップのあるガシャ\n├扉絵をタップ、または時間経過により、扉絵が切り替わることを確認\n├キャラ紹介ページで、キャラ詳細の表示、必殺ワザボタンが表示されることを確認\n└キャラ詳細の表示、必殺ワザボタンタップ時、表示しているピックアップキャラの表示になることを確認\n\n・ガシャを引く\n├ガシャを引く流れが既存ガシャと同じことを確認\n├ガシャを1回引いた時、エラーが発生しないことを確認\n├ガシャを10回引いた時、エラーが発生しないことを確認\n├ガシャを引いた後、プリズムが正常な量消費されていることを確認\n├ガシャを広告で引いた時、エラーが発生しないことを確認\n├広告視聴でガシャを引いた後、残り時間が正常に表示されることを確認\n├パス特典で広告をスキップして引いた時、エラーが発生しないことを確認\n└パス特典で広告をスキップして引いた後、残り時間が正常に表示されることを確認\n\n・開催期間外\n├開催期間を超えた状態でガシャを引くとき、確認ダイアログが表示されることを確認\n└確認ダイアログを閉じると、ガシャ画面が更新されることを確認\n\n・文言の表示\n├ガシャ訴求文言が表示されていることを確認\n├キャラ訴求文言が表示されていることを確認\n└インジゲーターをタップした場合は何も起きないことを確認\n\nメンテナンス時の挙動についてはバグ修正後、確認が出来次第、追加で連絡いたします。\n",
+      "user": {
+        "id": 95406444,
+        "username": "Hiroto Kikuchi",
+        "email": "h_kikuchi@qa.geeq.co.jp",
+        "color": "#4466ff",
+        "initials": "HK",
+        "profilePicture": null
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1769159552088",
+      "reply_count": 0
+    }
+  ]
+}

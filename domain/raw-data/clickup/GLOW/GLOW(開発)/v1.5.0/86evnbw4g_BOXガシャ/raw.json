@@ -1,0 +1,2084 @@
+{
+  "task": {
+    "id": "86evnbw4g",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "BOXガシャ",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "237864626.00000000000000000000000000000000",
+    "date_created": "1764130262256",
+    "date_updated": "1770175299782",
+    "date_closed": "1770175299782",
+    "date_done": "1769405669591",
+    "archived": false,
+    "creator": {
+      "id": 25540505,
+      "username": "Toshikazu Takahashi",
+      "color": "#536cfe",
+      "email": "t-takahashi@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+    },
+    "assignees": [
+      {
+        "id": 60917984,
+        "username": "Daiki Kawasaki",
+        "color": "#0197a7",
+        "initials": "DK",
+        "email": "daiki.kawasaki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60917984_L1r.jpg"
+      },
+      {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "color": "#455963",
+        "initials": "KY",
+        "email": "k-yamashita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      },
+      {
+        "id": 7859650,
+        "username": "donghyeok kim",
+        "color": "#3e2724",
+        "initials": "DK",
+        "email": "donghyeok-kim@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7859650_EMB.jpg"
+      },
+      {
+        "id": 43594922,
+        "username": "Rira Mochizuki",
+        "color": "#8ac34a",
+        "initials": "RM",
+        "email": "mochizuki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594922_r9h.jpg"
+      },
+      {
+        "id": 43594920,
+        "username": "Miharu Kimura",
+        "color": "#536cfe",
+        "initials": "MK",
+        "email": "kimura@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594920_7gR.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 7807756,
+        "username": "daichi_takishima",
+        "color": "#04a9f4",
+        "initials": "D",
+        "email": "takishima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7807756_rQr.jpg"
+      },
+      {
+        "id": 7859650,
+        "username": "donghyeok kim",
+        "color": "#3e2724",
+        "initials": "DK",
+        "email": "donghyeok-kim@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7859650_EMB.jpg"
+      },
+      {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "color": "#536cfe",
+        "initials": "TT",
+        "email": "t-takahashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      {
+        "id": 43566206,
+        "username": "Kazuomi Sawada",
+        "color": "#ff897f",
+        "initials": "KS",
+        "email": "kazuomi.sawada@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43566206_K5I.jpg"
+      },
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "color": "#455963",
+        "initials": "KY",
+        "email": "k-yamashita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      },
+      {
+        "id": 43594920,
+        "username": "Miharu Kimura",
+        "color": "#536cfe",
+        "initials": "MK",
+        "email": "kimura@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594920_7gR.jpg"
+      },
+      {
+        "id": 43594922,
+        "username": "Rira Mochizuki",
+        "color": "#8ac34a",
+        "initials": "RM",
+        "email": "mochizuki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594922_r9h.jpg"
+      },
+      {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "color": "#f57c01",
+        "initials": "RG",
+        "email": "r-goto@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      {
+        "id": 60917984,
+        "username": "Daiki Kawasaki",
+        "color": "#0197a7",
+        "initials": "DK",
+        "email": "daiki.kawasaki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60917984_L1r.jpg"
+      },
+      {
+        "id": 95406444,
+        "username": "Hiroto Kikuchi",
+        "color": "#4466ff",
+        "initials": "HK",
+        "email": "h_kikuchi@qa.geeq.co.jp",
+        "profilePicture": null
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": null,
+    "top_level_parent": null,
+    "priority": null,
+    "due_date": "1768330800000",
+    "start_date": null,
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "value": "true",
+        "value_richtext": null,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86evnbw4g",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": [
+    {
+      "id": "90180188133773",
+      "comment": [
+        {
+          "text": "1/26 菊地",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-45bd9b27-89f2-4d63-a4c4-4746159db6db"
+          }
+        },
+        {
+          "text": "下記内容に関しまして、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-02e02fa2-9ff7-47b5-9922-ba753b18f186"
+          }
+        },
+        {
+          "text": "直近のイベント施策にBOXガシャの実装予定が無いため、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cd9cd788-a8a7-4999-a1d2-4e8032cb1eb2"
+          }
+        },
+        {
+          "text": "実装時に別途確認させていただきます。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4add3842-d15f-400e-845d-6522f882250a"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a46f37a9-8173-47fa-9e09-b19fd0aaedec"
+          }
+        },
+        {
+          "text": "・禁止ワード",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-53ae2fde-9ca7-485b-adcf-7746783285ba"
+          }
+        },
+        {
+          "text": "└ゲーム内のユーザーの目に触れる箇所(お知らせ、ヘルプ)において、「BOXガチャ」「ボックスガシャ」の文言が使用されていないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a3b8a24c-a04c-4a87-8df1-5017c61c12a7"
+          }
+        }
+      ],
+      "comment_text": "1/26 菊地\n下記内容に関しまして、\n直近のイベント施策にBOXガシャの実装予定が無いため、\n実装時に別途確認させていただきます。\n\n・禁止ワード\n└ゲーム内のユーザーの目に触れる箇所(お知らせ、ヘルプ)において、「BOXガチャ」「ボックスガシャ」の文言が使用されていないことを確認\n",
+      "user": {
+        "id": 95406444,
+        "username": "Hiroto Kikuchi",
+        "email": "h_kikuchi@qa.geeq.co.jp",
+        "color": "#4466ff",
+        "initials": "HK",
+        "profilePicture": null
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1769408362399",
+      "reply_count": 0
+    },
+    {
+      "id": "90180187702470",
+      "comment": [
+        {
+          "text": "BOXガシャ（いいジャンくじ）について、下記内容を確認いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-caeb2040-edd0-415d-ad76-027b4b3c7380"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-375efbb6-945c-4687-8a00-7df683a1cec3"
+          }
+        },
+        {
+          "text": "▼イベントクエスト選択画面",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0e737e2a-bfb4-4e15-b05e-1ccfdb1252e8"
+          }
+        },
+        {
+          "text": "・遷移ボタン",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-278443cb-65f9-4a2f-b332-a1374b1eef40"
+          }
+        },
+        {
+          "text": "├遷移ボタンがあることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bde9c1a9-9ee4-4a36-a499-644db359643d"
+          }
+        },
+        {
+          "text": "├くじを引ける状態によって、遷移ボタンに赤バッジ表示、非表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-93c86c67-0adf-4a06-98de-215400db1728"
+          }
+        },
+        {
+          "text": "└BOXガシャ設定がない場合は表示されないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c6842e84-50b3-4b61-8039-2e192751fade"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3491eb42-efaf-4129-8558-1a1f48969cfd"
+          }
+        },
+        {
+          "text": "▼イベントクエストステージ選択画面",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-266aec3b-46ac-4684-80af-c6b8e3e71d30"
+          }
+        },
+        {
+          "text": "・遷移ボタン",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-dd205c46-58f7-4cc2-ab67-09df6948debf"
+          }
+        },
+        {
+          "text": "├遷移ボタンがあることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2c7fa7fc-c3d5-4001-88d4-90a0a51448d5"
+          }
+        },
+        {
+          "text": "├くじを引ける状態によって、遷移ボタンに赤バッジ表示、非表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2b0bccee-a7cb-4632-9646-c17f2a3cccc4"
+          }
+        },
+        {
+          "text": "└BOXガシャ設定がない場合は表示されないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-48c43009-b40f-4e17-9503-9d1b75d3ea79"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f96193fb-b549-4787-ad0f-6ab9f28593fb"
+          }
+        },
+        {
+          "text": "▼いいジャンくじTOP画面",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-abc026d0-9185-4e80-a978-3066abb22616"
+          }
+        },
+        {
+          "text": "・帯1",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c54929e8-15fa-443d-817a-e92e2569767a"
+          }
+        },
+        {
+          "text": "└名前が表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e0c1d07b-bf4a-4b04-abdf-dc3c34d2bb2d"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-026f1b3a-df0e-4e71-aaa4-de11867dc1d5"
+          }
+        },
+        {
+          "text": "・帯2",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ca0136fe-965d-49d3-b150-77be0b403f92"
+          }
+        },
+        {
+          "text": "├「いいジャンくじラインナップ」と表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2818418f-dd64-480f-bb92-9ecfe8fbb9d5"
+          }
+        },
+        {
+          "text": "├「現在：X箱目」と表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f0a35664-9476-4826-9a02-de67c99c8350"
+          }
+        },
+        {
+          "text": "└「獲得済み報酬：（引いた回数）/（残っている報酬数）」と表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d853c9b3-dfd7-4601-a946-e520482b8b6c"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-174f1e70-b600-4c99-aa34-81b755bc3fde"
+          }
+        },
+        {
+          "text": "・SDキャラ表示",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b30bd75a-2b9a-4902-a124-14fe11eff73b"
+          }
+        },
+        {
+          "text": "├SDキャラが表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-619974a3-d725-46b6-ad29-6db6646528b5"
+          }
+        },
+        {
+          "text": "└喜びの表情で表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7c468e37-e6a6-469a-8066-a396fb0d000f"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-17b5f1ca-9e6e-4f0a-9a4d-a1d5d9d0d160"
+          }
+        },
+        {
+          "text": "・背景表示",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-232085ba-31f7-414c-a688-1eb47a56c142"
+          }
+        },
+        {
+          "text": "└背景が設定されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0015a4c6-724c-46a7-9df0-478d1b995649"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0377f11e-2972-4f15-93dc-f849665a0401"
+          }
+        },
+        {
+          "text": "・ラインナップ表示",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b05463f4-0a48-47ef-a87a-7088d030c99d"
+          }
+        },
+        {
+          "text": "├「アイテム」「原画」「プリズム」「コイン」「キャラ」が報酬に設定可能なことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cc925f36-8235-44ef-9a20-6da88da6b807"
+          }
+        },
+        {
+          "text": "├ユーザーごとで、ラインナップに表示される報酬が相違していないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-679045df-fde5-4ba3-9967-fc000d553b69"
+          }
+        },
+        {
+          "text": "├1列に4つのアイコンが表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-60846b51-ef49-4125-ba6f-ced8d3ef2b14"
+          }
+        },
+        {
+          "text": "├1番下が4つ以下の場合、不要なアイコンが表示されないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1a5eae47-bdde-4a98-a3e9-61a55491e6e4"
+          }
+        },
+        {
+          "text": "├目玉報酬の枠が特別なものであり、目玉とわかるアイコン表示であることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3e55d770-2445-480f-a2ed-54d89a5f33f0"
+          }
+        },
+        {
+          "text": "├報酬アイコン下部に初期在庫数に対する「現在の獲得数」が表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c3944984-34ab-430a-95fe-9c79ccfb72b2"
+          }
+        },
+        {
+          "text": "├報酬アイコンタップ時にタップした報酬の種類に対応した詳細ダイアログが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9f8406b2-58d1-4a9e-b0c7-33292c2254c6"
+          }
+        },
+        {
+          "text": "├引ける数分全て引かれたものはグレーアウト&チェックマークが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-59791354-c307-4e4b-81bc-9c1e05481f3e"
+          }
+        },
+        {
+          "text": "└原画を報酬として並べた時、画像が汎用の原画アイコンが使用されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5187b872-ebe3-48cc-bcc4-47cc7a3cfe77"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d9d78433-e3b3-4741-930e-ea6f3e48b81f"
+          }
+        },
+        {
+          "text": "・ラインナップ一覧ボタン",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-af8de4f3-adab-4cbd-a4b6-2d544c5d3e90"
+          }
+        },
+        {
+          "text": "└タップ時、ラインナップダイアログが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8dd32619-7c30-4c65-863a-264f3c985709"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-79d08b53-7791-4276-91ce-647c042bd64a"
+          }
+        },
+        {
+          "text": "・切り替えボタン",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-324c4274-6757-445e-92a3-6af1695fa811"
+          }
+        },
+        {
+          "text": "└タップ時、切り替え確認ダイアログが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2eb0d809-2d99-48f0-8ee9-96607530965f"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4b915d33-e19c-496a-9a80-c92aeada2ce8"
+          }
+        },
+        {
+          "text": "・引くボタン",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d961517f-74bd-48d3-a85d-20178607e7db"
+          }
+        },
+        {
+          "text": "├「アイテムで引く」と表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e3fa5701-3d47-428d-b501-2b5395f20e15"
+          }
+        },
+        {
+          "text": "├引くのに必要なアイテムと個数が表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-05053498-abc0-4627-8484-e7a436c1bed2"
+          }
+        },
+        {
+          "text": "└タップ時、引く回数を設定できるくじ確認ダイアログが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fc26bfcd-3f10-441b-8b9c-eb29563ec915"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-820b359f-9106-4542-ac48-b0b4bc1034be"
+          }
+        },
+        {
+          "text": "・開催期間",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5c02fccb-26b5-4269-a0b2-b2deb0107a89"
+          }
+        },
+        {
+          "text": "├終了までの残り時間が表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0804ed01-7aac-492b-8bde-1a4a83754d7d"
+          }
+        },
+        {
+          "text": "├開催期間を超えた状態で、「引くボタン」「ラインナップ一覧ボタン」「切り替えボタン」をタップした時、期間終了を告げるダイアログが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b3818d25-70fa-40e0-a38e-6b06d62a30d8"
+          }
+        },
+        {
+          "text": "└ダイアログを閉じた時、一つ前の画面に戻ることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-976c80f1-4be5-4b62-8ebf-7f80a0f71b78"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-745148f9-ac99-4ac8-922c-dedd8ac71556"
+          }
+        },
+        {
+          "text": "▼ラインナップダイアログ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-665574d9-a9e7-4442-8dea-e3c0af2634c7"
+          }
+        },
+        {
+          "text": "・ダイアログタイトル",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-be71a09c-63d4-49ce-94d6-319643ecbc4d"
+          }
+        },
+        {
+          "text": "└「N回目いいジャンくじ ラインナップ」と表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-48996e20-bdce-48d7-9bbb-f1535f07e8ab"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d9efe617-5db0-4b31-bf38-a277c9feb9c4"
+          }
+        },
+        {
+          "text": "・提供一覧",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-46b61398-dc43-49f2-bec0-e1214018fcb1"
+          }
+        },
+        {
+          "text": "├UR＞SSR＞SR＞Rの順で表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2d459b84-0287-4a69-bf4a-95a871b242ca"
+          }
+        },
+        {
+          "text": "├アイコン、報酬名、幾つ箱に含まれているか表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-64d67e87-d73c-4437-8c2d-67815d626d5f"
+          }
+        },
+        {
+          "text": "├アイコンタップ時に詳細画面が表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-95b772fa-ac57-4374-bc4e-0d05d139a5e9"
+          }
+        },
+        {
+          "text": "└BOX切り替え後、ラインナップが切り替わった後の物になっていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-65ab1939-b9ef-40d5-bd74-743a50d70409"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-54866c8f-0475-441f-bb4c-5c44a386b76a"
+          }
+        },
+        {
+          "text": "・文言",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4d85661f-eb7f-4059-984a-231e59834cb1"
+          }
+        },
+        {
+          "text": "└ラインナップにキャラがいる場合、下部に「キャラアイコンタップでキャラ詳細を確認できます。」と表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-07f5c92c-582d-4c2e-9af8-d8e9d01fee1c"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2b63d5c8-26b5-4d4c-b423-c1e20ef81e79"
+          }
+        },
+        {
+          "text": "▼切り替え確認ダイアログ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8ce08f02-6dd1-4b8b-a5fa-9b03d79e02b0"
+          }
+        },
+        {
+          "text": "・文言",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2f2fe462-274c-4188-b7e7-e44701678887"
+          }
+        },
+        {
+          "text": "└「次の「いいジャンくじ」へ切り替えますか？」と表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5b34fcd9-fca8-48b5-a979-42fd67c414eb"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5919f00f-bd67-4e36-b4bf-0fc5a449c59a"
+          }
+        },
+        {
+          "text": "・注意表示",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-707f4cca-5dc1-4bff-8f4d-54e81c505c38"
+          }
+        },
+        {
+          "text": "└「※現在の「いいジャンくじ」に含まれる未獲得の報酬は、これ以降獲得できなくなります。」と表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-27825b6b-e115-4614-99f6-f3ccaac0b736"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f403c39d-f384-4985-abd6-d2f98be1abb2"
+          }
+        },
+        {
+          "text": "・切り替えボタン",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a886dc47-06ec-4eb3-95fd-789f5e25a80c"
+          }
+        },
+        {
+          "text": "├タップ時、実行条件なく切り替えが行われることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ce65e033-05a0-492e-9680-dac7a26e80e8"
+          }
+        },
+        {
+          "text": "├常に活性化しており、条件によってボタンが光るなどの表示がないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-68bee3e8-a0c1-4b48-89de-a1d1b68cd4d9"
+          }
+        },
+        {
+          "text": "└切り替え回数に上限がないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-491560c6-f5db-4b4c-8583-e444898278fe"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2a97a4d4-bc12-4958-baed-2e34b6102199"
+          }
+        },
+        {
+          "text": "・切り替え実行時",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2963cead-ab01-4353-90d9-e1d87995e0d1"
+          }
+        },
+        {
+          "text": "├切り替え演出が再生されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-78807929-8365-4a0d-b52c-eb7c0618c5d1"
+          }
+        },
+        {
+          "text": "└切り替え演出中、他ボタンがグレーアウトしてタップできないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8d9177e9-4443-4535-8e30-c1b08ccada16"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-13e6dc56-2b72-4569-a56b-2551c673dc13"
+          }
+        },
+        {
+          "text": "・切り替え実行後",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c7936957-69fe-41b2-9db7-1ac3b846e14d"
+          }
+        },
+        {
+          "text": "├獲得状況を全てクリアし、ラインナップが切り替わっていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-65b25f44-eda6-4ab2-8828-e47f06bf9918"
+          }
+        },
+        {
+          "text": "└グレーアウトが解除されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9f157800-f026-403a-a2a2-4b62a4acf022"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fcc69aff-0dc5-4474-abdb-8a51e765eae7"
+          }
+        },
+        {
+          "text": "▼くじ確認ダイアログ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b36ac1c0-fb75-487c-a016-40e6ceff89ff"
+          }
+        },
+        {
+          "text": "・文言",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-124bc40d-bd06-4378-b15f-b04e93bb317d"
+          }
+        },
+        {
+          "text": "└「（消費アイテム名）をX枚使用して、いいジャンくじ（いいジャンくじ(dev1)）をN回引きますか？」と表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ff072ef4-fff8-440a-a173-e398e282069b"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-27ff58e3-562d-461a-ae80-6e21c5716256"
+          }
+        },
+        {
+          "text": "・注意表示",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b939c4e6-50f1-40df-bbd1-ae6ac2024553"
+          }
+        },
+        {
+          "text": "├「※一度に引ける最大回数は10回までとなります。」と表示されていることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-716ce431-5380-408a-9d44-1723dd0f8642"
+          }
+        },
+        {
+          "text": "└くじ券の所持枚数が引きたい回数より不足している場合、ダイアログ内に「いいジャンくじ券が不足しています。」と表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8c5f287a-710e-4f00-985c-22837bb4828f"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-053f63f1-331d-4060-8040-b5e52b92c70f"
+          }
+        },
+        {
+          "text": "・くじを引く回数",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c38ceed9-1b54-4856-b8ad-744bee28c1e8"
+          }
+        },
+        {
+          "text": "├アイテム量に応じた回数（最大10回）まで選択できることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a691c2aa-216e-47a1-a238-5045c380720f"
+          }
+        },
+        {
+          "text": "└残り報酬数が10未満の場合、残り報酬数と同じ回数まで選択できることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4cae5b69-a0f4-4e38-b158-afa621ba9544"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-61a39177-c18c-4060-80ee-e6889a056570"
+          }
+        },
+        {
+          "text": "・引くボタン",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0d73fbd0-6a8f-49b6-8803-7783f5dae09d"
+          }
+        },
+        {
+          "text": "├引くボタンタップ時、くじが引かれることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e6913848-a044-4bae-a500-dfeb3fd65cc4"
+          }
+        },
+        {
+          "text": "├くじを引く通信中、他ボタンがタップできないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e49f6322-9f8f-474d-bebb-f44258b6ef04"
+          }
+        },
+        {
+          "text": "├通信中、ローディング表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-562b6778-187e-45a9-9f25-67934a6d6fe1"
+          }
+        },
+        {
+          "text": "└くじを引いた回数分、獲得済み報酬表示が更新されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bd475c8c-a7cd-4cd0-a360-3357d2b89623"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ca82e831-d2b8-46de-8189-a16132458d3a"
+          }
+        },
+        {
+          "text": "▼くじを引いた結果",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7c390ed1-4ed3-4062-9d36-720883acd2f0"
+          }
+        },
+        {
+          "text": "・アイコン表示",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e28514d1-1bac-40d5-9310-53bcea8e545f"
+          }
+        },
+        {
+          "text": "├引いた数に応じて最大10個のアイコンが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8cc2d484-b168-4c3b-a65e-523391ecaa39"
+          }
+        },
+        {
+          "text": "└アイコンアニメーションが通常ガシャと同様なことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-36241c66-3800-4c40-9526-0ab8cef424de"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e9f35233-3f01-4ec7-b34c-09a7e58f9d82"
+          }
+        },
+        {
+          "text": "・キャラ獲得時",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7c1c0cb4-1fd1-4b4b-a8f2-85bf1a0f84bc"
+          }
+        },
+        {
+          "text": "├未所持キャラ獲得時、キャラ獲得演出が再生されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f7f74237-a72d-47fb-8cd8-b439eda808ad"
+          }
+        },
+        {
+          "text": "├キャラ獲得演出の黒背景表示では「タップして閉じる」と表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bd1ce45d-ab15-45e8-ad92-54cdae102670"
+          }
+        },
+        {
+          "text": "├キャラ獲得演出後の結果画面の黒背景表示では「タップして次へ」と表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-93191871-3a39-4da2-943c-fb2f4472c711"
+          }
+        },
+        {
+          "text": "├結果画面でタップ後、リーダーアイコン獲得演出が再生されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6c329ce0-99cf-4037-8570-9043d213e756"
+          }
+        },
+        {
+          "text": "└所持キャラ獲得時、アイコンアニメーション再生後に変換アニメーションが再生されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8fff52c2-7fd2-4395-9e51-781cac27d9ae"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c71fd75a-e495-4d3a-9283-da92ab1e5736"
+          }
+        },
+        {
+          "text": "・所持上限時",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-604c1050-1a16-4c68-a7ba-079f275bfecb"
+          }
+        },
+        {
+          "text": "└獲得した報酬が所持上限に達している場合「所持上限に達しているため、受け取ることができませんでした。」とダイアログが表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5464bb5c-94ab-4ddf-9ac5-92acffd97ae7"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f9428d4d-7b57-4fa0-9812-b7e80caf1dfa"
+          }
+        },
+        {
+          "text": "・演出",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-01a6938b-666d-4d1a-ab5b-b0e27142a129"
+          }
+        },
+        {
+          "text": "├「所持時上限ダイアログ」＞「キャラ獲得演出」＞「原画獲得演出」＞「アイコンアニメーション」＞「キャラのかけら変換アニメーション」の順で演出が再生されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a6d347e1-280b-45d4-8161-5c99678473f5"
+          }
+        },
+        {
+          "text": "└全ての演出終了時、アニメーション終了後黒背景の上に「タップして閉じる」と表示されることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-414ddfd2-51ab-4ee8-8a55-7f9ec05b722c"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cc40dc42-78db-4987-b289-ac37a37b97b5"
+          }
+        },
+        {
+          "text": "・スキップ処理",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-26c81d89-06c0-40dc-ae93-151378032d12"
+          }
+        },
+        {
+          "text": "├アイコンアニメーション時、グレー背景部分タップで、アニメーション終了時までスキップされることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-188b406b-8558-4131-ae2d-790d96e91c8a"
+          }
+        },
+        {
+          "text": "├リーダーアイコン獲得演出時、グレー背景部分タップで、アニメーション終了時までスキップされることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d74b064f-7978-4abd-a553-3a98449ac2e3"
+          }
+        },
+        {
+          "text": "├グレー背景上に文言が出てタップ可能になることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bf105637-46d3-4de3-98fa-09ab2a2dc35a"
+          }
+        },
+        {
+          "text": "├演出中、バックキータップで、トースト表示され、スキップは発生せず閉じないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-130bcb2a-bf9a-40b0-ad33-6c65de2f4ff4"
+          }
+        },
+        {
+          "text": "└演出終了後、バックキータップで、画面を閉じれることを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ca4a1347-ed18-4c5c-9ef5-fc778dd54259"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d3b093fb-1fc5-4b7b-a567-678daef20a50"
+          }
+        },
+        {
+          "text": "▼全体",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f47c1de5-4c01-4438-a2f9-62894cfc3f24"
+          }
+        },
+        {
+          "text": "・禁止ワード",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ee69d4ea-8003-492a-a4ce-28dc6718e629"
+          }
+        },
+        {
+          "text": "└ゲーム内のユーザーの目に触れる箇所(UI等)において、「BOXガチャ」「ボックスガシャ」の文言が使用されていないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-37ce542d-b569-4a0a-a4f6-77208a7bb165"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-728c7d8b-973d-4222-9427-56f7b45d3fbc"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b3dda0d4-c61a-423f-b60c-a8a71be50d36"
+          }
+        },
+        {
+          "text": "下記お知らせ、ヘルプについては実装があり次第の確認とさせていただきます。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5c4b6d4e-265e-4ac2-98e5-b6bdf5d25368"
+          }
+        },
+        {
+          "text": "・禁止ワード",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bda9e604-ed2a-488d-83cc-1fcc90eb5cbb"
+          }
+        },
+        {
+          "text": "└ゲーム内のユーザーの目に触れる箇所(お知らせ、ヘルプ)において、「BOXガチャ」「ボックスガシャ」の文言が使用されていないことを確認",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9cc49075-5979-49b9-8608-3010364437f1"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ab659efa-645b-44c4-9a9b-1f8ee0ffd422"
+          }
+        },
+        {
+          "text": "確認ビルド：iOS #36(577)、aOS #36(578)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-852a65b8-ad48-441d-b1f0-f96fcef91d70"
+          }
+        },
+        {
+          "text": "確認環境：develop",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3142b821-c569-4b11-8e5f-a727678caf25"
+          }
+        },
+        {
+          "text": "検証端末：iPhone 13(iOS:17.0.3)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-87ace2ab-400a-4a17-b6de-c1b6ad2e3a18"
+          }
+        },
+        {
+          "text": "　　　　　Xperia 1 Ⅲ(SO-51B) (aOS:13.0.0)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b1fee6ca-dcf7-4193-aca7-013317a56418"
+          }
+        }
+      ],
+      "comment_text": "BOXガシャ（いいジャンくじ）について、下記内容を確認いたしました。\n\n▼イベントクエスト選択画面\n・遷移ボタン\n├遷移ボタンがあることを確認\n├くじを引ける状態によって、遷移ボタンに赤バッジ表示、非表示されることを確認\n└BOXガシャ設定がない場合は表示されないことを確認\n\n▼イベントクエストステージ選択画面\n・遷移ボタン\n├遷移ボタンがあることを確認\n├くじを引ける状態によって、遷移ボタンに赤バッジ表示、非表示されることを確認\n└BOXガシャ設定がない場合は表示されないことを確認\n\n▼いいジャンくじTOP画面\n・帯1\n└名前が表示されていることを確認\n\n・帯2\n├「いいジャンくじラインナップ」と表示されていることを確認\n├「現在：X箱目」と表示されていることを確認\n└「獲得済み報酬：（引いた回数）/（残っている報酬数）」と表示されていることを確認\n\n・SDキャラ表示\n├SDキャラが表示されていることを確認\n└喜びの表情で表示されていることを確認\n\n・背景表示\n└背景が設定されていることを確認\n\n・ラインナップ表示\n├「アイテム」「原画」「プリズム」「コイン」「キャラ」が報酬に設定可能なことを確認\n├ユーザーごとで、ラインナップに表示される報酬が相違していないことを確認\n├1列に4つのアイコンが表示されていることを確認\n├1番下が4つ以下の場合、不要なアイコンが表示されないことを確認\n├目玉報酬の枠が特別なものであり、目玉とわかるアイコン表示であることを確認\n├報酬アイコン下部に初期在庫数に対する「現在の獲得数」が表示されていることを確認\n├報酬アイコンタップ時にタップした報酬の種類に対応した詳細ダイアログが表示されることを確認\n├引ける数分全て引かれたものはグレーアウト&チェックマークが表示されることを確認\n└原画を報酬として並べた時、画像が汎用の原画アイコンが使用されていることを確認\n\n・ラインナップ一覧ボタン\n└タップ時、ラインナップダイアログが表示されることを確認\n\n・切り替えボタン\n└タップ時、切り替え確認ダイアログが表示されることを確認\n\n・引くボタン\n├「アイテムで引く」と表示されていることを確認\n├引くのに必要なアイテムと個数が表示されていることを確認\n└タップ時、引く回数を設定できるくじ確認ダイアログが表示されることを確認\n\n・開催期間\n├終了までの残り時間が表示されていることを確認\n├開催期間を超えた状態で、「引くボタン」「ラインナップ一覧ボタン」「切り替えボタン」をタップした時、期間終了を告げるダイアログが表示されることを確認\n└ダイアログを閉じた時、一つ前の画面に戻ることを確認\n\n▼ラインナップダイアログ\n・ダイアログタイトル\n└「N回目いいジャンくじ ラインナップ」と表示されていることを確認\n\n・提供一覧\n├UR＞SSR＞SR＞Rの順で表示されていることを確認\n├アイコン、報酬名、幾つ箱に含まれているか表示されていることを確認\n├アイコンタップ時に詳細画面が表示されることを確認\n└BOX切り替え後、ラインナップが切り替わった後の物になっていることを確認\n\n・文言\n└ラインナップにキャラがいる場合、下部に「キャラアイコンタップでキャラ詳細を確認できます。」と表示されることを確認\n\n▼切り替え確認ダイアログ\n・文言\n└「次の「いいジャンくじ」へ切り替えますか？」と表示されていることを確認\n\n・注意表示\n└「※現在の「いいジャンくじ」に含まれる未獲得の報酬は、これ以降獲得できなくなります。」と表示されていることを確認\n\n・切り替えボタン\n├タップ時、実行条件なく切り替えが行われることを確認\n├常に活性化しており、条件によってボタンが光るなどの表示がないことを確認\n└切り替え回数に上限がないことを確認\n\n・切り替え実行時\n├切り替え演出が再生されることを確認\n└切り替え演出中、他ボタンがグレーアウトしてタップできないことを確認\n\n・切り替え実行後\n├獲得状況を全てクリアし、ラインナップが切り替わっていることを確認\n└グレーアウトが解除されることを確認\n\n▼くじ確認ダイアログ\n・文言\n└「（消費アイテム名）をX枚使用して、いいジャンくじ（いいジャンくじ(dev1)）をN回引きますか？」と表示されていることを確認\n\n・注意表示\n├「※一度に引ける最大回数は10回までとなります。」と表示されていることを確認\n└くじ券の所持枚数が引きたい回数より不足している場合、ダイアログ内に「いいジャンくじ券が不足しています。」と表示されることを確認\n\n・くじを引く回数\n├アイテム量に応じた回数（最大10回）まで選択できることを確認\n└残り報酬数が10未満の場合、残り報酬数と同じ回数まで選択できることを確認\n\n・引くボタン\n├引くボタンタップ時、くじが引かれることを確認\n├くじを引く通信中、他ボタンがタップできないことを確認\n├通信中、ローディング表示されることを確認\n└くじを引いた回数分、獲得済み報酬表示が更新されることを確認\n\n▼くじを引いた結果\n・アイコン表示\n├引いた数に応じて最大10個のアイコンが表示されることを確認\n└アイコンアニメーションが通常ガシャと同様なことを確認\n\n・キャラ獲得時\n├未所持キャラ獲得時、キャラ獲得演出が再生されることを確認\n├キャラ獲得演出の黒背景表示では「タップして閉じる」と表示されることを確認\n├キャラ獲得演出後の結果画面の黒背景表示では「タップして次へ」と表示されることを確認\n├結果画面でタップ後、リーダーアイコン獲得演出が再生されることを確認\n└所持キャラ獲得時、アイコンアニメーション再生後に変換アニメーションが再生されることを確認\n\n・所持上限時\n└獲得した報酬が所持上限に達している場合「所持上限に達しているため、受け取ることができませんでした。」とダイアログが表示されることを確認\n\n・演出\n├「所持時上限ダイアログ」＞「キャラ獲得演出」＞「原画獲得演出」＞「アイコンアニメーション」＞「キャラのかけら変換アニメーション」の順で演出が再生されることを確認\n└全ての演出終了時、アニメーション終了後黒背景の上に「タップして閉じる」と表示されることを確認\n\n・スキップ処理\n├アイコンアニメーション時、グレー背景部分タップで、アニメーション終了時までスキップされることを確認\n├リーダーアイコン獲得演出時、グレー背景部分タップで、アニメーション終了時までスキップされることを確認\n├グレー背景上に文言が出てタップ可能になることを確認\n├演出中、バックキータップで、トースト表示され、スキップは発生せず閉じないことを確認\n└演出終了後、バックキータップで、画面を閉じれることを確認\n\n▼全体\n・禁止ワード\n└ゲーム内のユーザーの目に触れる箇所(UI等)において、「BOXガチャ」「ボックスガシャ」の文言が使用されていないことを確認\n\n\n下記お知らせ、ヘルプについては実装があり次第の確認とさせていただきます。\n・禁止ワード\n└ゲーム内のユーザーの目に触れる箇所(お知らせ、ヘルプ)において、「BOXガチャ」「ボックスガシャ」の文言が使用されていないことを確認\n\n確認ビルド：iOS #36(577)、aOS #36(578)\n確認環境：develop\n検証端末：iPhone 13(iOS:17.0.3)\n　　　　　Xperia 1 Ⅲ(SO-51B) (aOS:13.0.0)\n",
+      "user": {
+        "id": 95406444,
+        "username": "Hiroto Kikuchi",
+        "email": "h_kikuchi@qa.geeq.co.jp",
+        "color": "#4466ff",
+        "initials": "HK",
+        "profilePicture": null
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1769161699417",
+      "reply_count": 0
+    },
+    {
+      "id": "90180185382176",
+      "comment": [
+        {
+          "text": "iOS : 555 ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d6eab0d7-6482-4d6c-8e32-82756c9711c8"
+          }
+        },
+        {
+          "text": "android : 558 ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d3e095b1-3a8d-480d-8eeb-408924a7a28d"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6ac40fed-aaf8-4afa-bc50-5a7be0645337"
+          }
+        },
+        {
+          "text": "下記について修正が入りましたのでよろしくお願いいたします。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b289a2e7-0d7f-4001-9f5b-e15df1e4ade9"
+          }
+        },
+        {
+          "text": "Boxガチャ リザルト画面 ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2030e33e-eb62-4400-8246-475b0872d591",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "-> ユニット獲得、原画獲得、所持数上限時の挙動について ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c6b4992a-ec63-486b-8698-4f20dc3936c1",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-279a8f8f-a7d6-470f-ac90-690202ba86a9",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "修正前 ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0e1a8436-2d06-4f49-a50a-85189283a2a4",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "アイコンのアニメーションの再生の前にキャラ獲得時はキャラ獲得演出、原画獲得時は原画獲得演出、所持数上限時は所持数上限のダイアログを表示し、それらを閉じたらアニメーションが再生される  ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-993aa130-c818-4a33-9f82-80217d478462",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d26f0c82-ca03-4a64-97a1-459e1db125ab",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "修正後 ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-129a917c-4b6f-4ed6-a8c7-14bc7e86e405",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "1. 所持数上限時は「所持上限に達しているため、受け取ることができませんでした。」とダイアログが出ること ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e52793ef-0d25-435f-9bd8-9ebbd8cc3526",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "2. 1の後アイコンのアニメーションが再生開始になること ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fab4c6d5-06ca-4d43-8334-d49c88eb6af1",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "3. ユニットを新規獲得した場合、キャラ獲得演出がアイコンのアニメーションの前に表示されること ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8f47d4a3-e5bf-416a-8901-42fd92ac1fdd",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "4. 原画を新規獲得した場合、原画獲得演出がアイコンのアニメーションの前に表示されること  ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-10d60128-cedd-4777-a242-5b90e6c4ae37",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bb4298a8-d10b-4514-ba87-21d9b95632c1",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "影響範囲シートについては修正済み(赤字になっている部分)  ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f517b124-0b4c-42bb-a14f-b28502cb4d9b",
+            "code-block": {
+              "code-block": "rust"
+            }
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0be3ad16-436e-4f9e-9d5c-c2e8e7a3beb9"
+          }
+        }
+      ],
+      "comment_text": "iOS : 555 \nandroid : 558 \n\n下記について修正が入りましたのでよろしくお願いいたします。\nBoxガチャ リザルト画面 \n-> ユニット獲得、原画獲得、所持数上限時の挙動について \n\n修正前 \nアイコンのアニメーションの再生の前にキャラ獲得時はキャラ獲得演出、原画獲得時は原画獲得演出、所持数上限時は所持数上限のダイアログを表示し、それらを閉じたらアニメーションが再生される  \n\n修正後 \n1. 所持数上限時は「所持上限に達しているため、受け取ることができませんでした。」とダイアログが出ること \n2. 1の後アイコンのアニメーションが再生開始になること \n3. ユニットを新規獲得した場合、キャラ獲得演出がアイコンのアニメーションの前に表示されること \n4. 原画を新規獲得した場合、原画獲得演出がアイコンのアニメーションの前に表示されること  \n\n影響範囲シートについては修正済み(赤字になっている部分)  \n\n",
+      "user": {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "email": "k-yamashita@wonderpla.net",
+        "color": "#455963",
+        "initials": "KY",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1768470365573",
+      "reply_count": 0
+    },
+    {
+      "id": "90180185037974",
+      "comment": [
+        {
+          "text": "iOS : 549",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f6767039-0f40-4e2b-9971-c043d413fe7a"
+          }
+        },
+        {
+          "text": "android : 552",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e126d5e8-69dd-4f68-94cd-a80bb148e015"
+          }
+        },
+        {
+          "text": "環境 : develop(ユーザー時間変更は特になし)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a5152b16-1968-458c-8c64-3e133ee1c4f3"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e872288e-02a9-4d0e-bdf4-44aa023da042"
+          }
+        },
+        {
+          "text": "引くのに必要なアイテム(いいジャンくじ)はショップの商品で配置しましたので、ご活用いただけますと幸いです。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-749b2757-dac9-480b-8e05-a64def4d531c"
+          }
+        },
+        {
+          "text": "2箱目にキャラ、原画を配置しておりますので、こちらもご活用いただけますと幸いです。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b1745259-c4be-4dd0-baa3-bfbfd55e1396"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-057b8476-998f-47a9-85f6-6af2c792f6f8"
+          }
+        },
+        {
+          "text": "影響範囲シート、テストケースは下記になります。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f340aaa3-cf4e-46a7-b81d-bf9891a7264d"
+          }
+        },
+        {
+          "text": "[Task Embed: 86evnbw4g]",
+          "type": "task_embed",
+          "task_embed": {
+            "taskId": "86evnbw4g",
+            "commentId": "90180184841076"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-266c90f3-3158-491e-af63-db7d5a006460"
+          }
+        }
+      ],
+      "comment_text": "iOS : 549\nandroid : 552\n環境 : develop(ユーザー時間変更は特になし)\n\n引くのに必要なアイテム(いいジャンくじ)はショップの商品で配置しましたので、ご活用いただけますと幸いです。\n2箱目にキャラ、原画を配置しておりますので、こちらもご活用いただけますと幸いです。\n\n影響範囲シート、テストケースは下記になります。\n[Task Embed: 86evnbw4g]\n",
+      "user": {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "email": "k-yamashita@wonderpla.net",
+        "color": "#455963",
+        "initials": "KY",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1768388065086",
+      "reply_count": 0
+    },
+    {
+      "id": "90180184841076",
+      "comment": [
+        {
+          "type": "bookmark",
+          "bookmark": {
+            "service": "gsheets",
+            "id": "https://docs.google.com/spreadsheets/d/1_vZ5XaYAZw5hYF3bu4a2tHU5h2t8CDnqPFAF0Uj36Q4/edit",
+            "url": "https://docs.google.com/spreadsheets/d/1_vZ5XaYAZw5hYF3bu4a2tHU5h2t8CDnqPFAF0Uj36Q4/edit?gid=1803164155#gid=1803164155"
+          },
+          "attributes": {
+            "block-id": "block-a9ff95c0-ca62-49c2-af54-1f92b9a00f4d",
+            "body-type": "image",
+            "unfurled": "true"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c3b634e4-4816-4762-9818-51a04c755c94"
+          }
+        }
+      ],
+      "comment_text": "undefined\n",
+      "user": {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "email": "k-yamashita@wonderpla.net",
+        "color": "#455963",
+        "initials": "KY",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1768371363341",
+      "reply_count": 0
+    },
+    {
+      "id": "90180173199611",
+      "comment": [
+        {
+          "text": "要件仕様書は下記",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-33791065-9e81-4ba2-88d1-00ccd6f5c238"
+          }
+        },
+        {
+          "text": "",
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/presentation/d/1aiA8rlRjf3ifynSPg3mMaUgCbXRI1qvYkYIGcCQ5W8Y/edit?slide=id.g3aa4af27e96_0_315#slide=id.g3aa4af27e96_0_315"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-88093cfb-44da-49a2-8e31-79ff45e691ba"
+          }
+        }
+      ],
+      "comment_text": "要件仕様書は下記\n\n",
+      "user": {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "email": "r-goto@wonderpla.net",
+        "color": "#f57c01",
+        "initials": "RG",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1764559162717",
+      "reply_count": 0
+    }
+  ]
+}

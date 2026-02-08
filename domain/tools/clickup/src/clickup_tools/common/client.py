@@ -91,6 +91,7 @@ class ClickUpClient:
         list_id: str,
         statuses: Optional[List[str]] = None,
         include_closed: bool = False,
+        include_subtasks: bool = False,
     ) -> List[Task]:
         """リスト内のタスクを取得
 
@@ -98,6 +99,7 @@ class ClickUpClient:
             list_id: リスト ID
             statuses: フィルタするステータス（指定しない場合は全て）
             include_closed: クローズドタスクを含めるか
+            include_subtasks: サブタスクを含めるか（デフォルト: False）
 
         Returns:
             タスクのリスト
@@ -105,6 +107,7 @@ class ClickUpClient:
         params: Dict[str, Any] = {
             "include_closed": str(include_closed).lower(),
             "include_markdown_description": "true",
+            "subtasks": str(include_subtasks).lower(),
         }
 
         if statuses:
@@ -181,3 +184,56 @@ class ClickUpClient:
         response = self.session.get(url)
         response.raise_for_status()
         return response.content
+
+    def get_space(self, space_id: str) -> Dict[str, Any]:
+        """スペース情報を取得
+
+        Args:
+            space_id: スペース ID
+
+        Returns:
+            スペース情報
+        """
+        return self._request("GET", f"/space/{space_id}")
+
+    def get_space_folders(self, space_id: str, archived: bool = False) -> List[Dict[str, Any]]:
+        """スペース配下のフォルダ一覧を取得
+
+        Args:
+            space_id: スペース ID
+            archived: アーカイブされたフォルダを含めるか
+
+        Returns:
+            フォルダ一覧
+        """
+        params = {"archived": str(archived).lower()}
+        data = self._request("GET", f"/space/{space_id}/folder", params=params)
+        return data.get("folders", [])
+
+    def get_folder_lists(self, folder_id: str, archived: bool = False) -> List[Dict[str, Any]]:
+        """フォルダ配下のリスト一覧を取得
+
+        Args:
+            folder_id: フォルダ ID
+            archived: アーカイブされたリストを含めるか
+
+        Returns:
+            リスト一覧
+        """
+        params = {"archived": str(archived).lower()}
+        data = self._request("GET", f"/folder/{folder_id}/list", params=params)
+        return data.get("lists", [])
+
+    def get_folderless_lists(self, space_id: str, archived: bool = False) -> List[Dict[str, Any]]:
+        """スペース直下のフォルダレスリスト一覧を取得
+
+        Args:
+            space_id: スペース ID
+            archived: アーカイブされたリストを含めるか
+
+        Returns:
+            フォルダレスリスト一覧
+        """
+        params = {"archived": str(archived).lower()}
+        data = self._request("GET", f"/space/{space_id}/list", params=params)
+        return data.get("lists", [])

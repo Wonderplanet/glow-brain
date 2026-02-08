@@ -1,0 +1,396 @@
+{
+  "task": {
+    "id": "86ew4yy7u",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "スキル：作品・キャラID絞り込み",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "237919310.00000000000000000000000000000000",
+    "date_created": "1767925989686",
+    "date_updated": "1770175299782",
+    "date_closed": "1770175299782",
+    "date_done": "1769149370629",
+    "archived": false,
+    "creator": {
+      "id": 37714240,
+      "username": "Kenta Inui",
+      "color": "#388d3c",
+      "email": "inui@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+    },
+    "assignees": [
+      {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "color": "#388d3c",
+        "initials": "KI",
+        "email": "inui@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "color": "#388d3c",
+        "initials": "KI",
+        "email": "inui@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "color": "",
+        "initials": "KA",
+        "email": "confidence-q12@cfd-qa.jp",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": null,
+    "top_level_parent": null,
+    "priority": null,
+    "due_date": null,
+    "start_date": null,
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86ew4yy7u",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": [
+    {
+      "id": "90180187644440",
+      "comment": [
+        {
+          "text": "1/23 安達",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-00bd9e99-06c2-452e-aab0-f10d11ce901c"
+          }
+        },
+        {
+          "text": "作品バフ/デバフスキルについて、作品およびキャラIDの対象/対象外の動作、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a50e574e-4dfe-4743-8373-d3fdab862f2f"
+          }
+        },
+        {
+          "text": "他バフ/デバフとの組み合わせ等に問題がないことを確認しました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f3749942-a6d3-44e3-b5d8-3da49cc19e1a"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-10906531-f3c3-4a8e-9f35-877904be733a"
+          }
+        },
+        {
+          "text": "※検証内容の詳細については下記項目書を参照",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c4698584-17bc-4dc4-b3f7-2526ccbb3278"
+          }
+        },
+        {
+          "text": "【v1.5.0】作品バフギミック/スキル検証_項目書＞作品バフスキル検証",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-00ddc102-ccbb-45d6-9f63-e1933d0bcb5f"
+          }
+        },
+        {
+          "text": "",
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/spreadsheets/d/1FxxZTCcO89Y2vWmScd9DjuAfLzOS4IHC-oZWAkQdlkU/edit?gid=918773003#gid=918773003"
+          }
+        },
+        {
+          "text": " ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-adc280cb-0fe3-4cde-ac25-1646561a76cd"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ec63424e-2d7a-4716-b608-9434e742e457"
+          }
+        },
+        {
+          "text": "確認ビルド：iOS#36(577)、AOS#36(578)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-668903cc-c383-4c70-829e-a239cbd3ed85"
+          }
+        },
+        {
+          "text": "確認環境：develop",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-a71658cc-f492-4e24-87ef-6e51042fdcb6"
+          }
+        },
+        {
+          "text": "確認端末：iPhoneSE3(iOS:18.6)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b1e1fe81-0adf-46ab-8fbc-f15e5efbced4"
+          }
+        },
+        {
+          "text": "　　　　　ZenFone6(AOS:9.0)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-012b3fd2-490d-4281-8d27-3be2cde0b5cc"
+          }
+        }
+      ],
+      "comment_text": "1/23 安達\n作品バフ/デバフスキルについて、作品およびキャラIDの対象/対象外の動作、\n他バフ/デバフとの組み合わせ等に問題がないことを確認しました。\n\n※検証内容の詳細については下記項目書を参照\n【v1.5.0】作品バフギミック/スキル検証_項目書＞作品バフスキル検証\n \n\n確認ビルド：iOS#36(577)、AOS#36(578)\n確認環境：develop\n確認端末：iPhoneSE3(iOS:18.6)\n　　　　　ZenFone6(AOS:9.0)\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1769148697326",
+      "reply_count": 0
+    },
+    {
+      "id": "90180183420099",
+      "comment": [
+        {
+          "text": "P承認スレッド",
+          "attributes": {
+            "link": "https://wonderplanet-glow.slack.com/archives/C06GQBV2N3H/p1767936140757429"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-29a52f1e-aa59-42f7-9652-b402dcf89344"
+          }
+        }
+      ],
+      "comment_text": "P承認スレッド\n",
+      "user": {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "email": "inui@wonderpla.net",
+        "color": "#388d3c",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767937716893",
+      "reply_count": 0
+    },
+    {
+      "id": "90180183325609",
+      "comment": [
+        {
+          "text": "確認シート",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ce55f196-a4e8-4060-81f7-2e16319dbd2d"
+          }
+        },
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/spreadsheets/d/1FDf8iDMA7xYDaMndFcVhS9Ck1xi66MUnj3Ck_un0Mq8/edit?gid=0#gid=0"
+          },
+          "text": ""
+        },
+        {
+          "text": " ",
+          "attributes": {
+            "link": "https://docs.google.com/spreadsheets/d/1FDf8iDMA7xYDaMndFcVhS9Ck1xi66MUnj3Ck_un0Mq8/edit?gid=0#gid=0"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-65ef5f23-f875-40c5-821f-e7c7c9da1795"
+          }
+        }
+      ],
+      "comment_text": "確認シート\ndocs.google.com/spreadsheets/d/1FDf8iDMA7xYDaMndFcVhS9Ck1xi66MUnj3Ck_un0Mq8/edit?gid=0#gid=0 \n  \n",
+      "user": {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "email": "inui@wonderpla.net",
+        "color": "#388d3c",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767926470159",
+      "reply_count": 0
+    },
+    {
+      "id": "90180183321070",
+      "comment": [
+        {
+          "text": "作品バフスキル（スキルの対象設定箇所を増やすのみ）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-03195d3b-92f4-49d1-838f-de9989aff5b9"
+          }
+        },
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/presentation/d/1v5w0gN0OJxczmtDa2MUVWqXSXFlMS-wkffQjl_i3FPY/edit?slide=id.g3b0ef0bd6b5_0_23#slide=id.g3b0ef0bd6b5_0_23"
+          },
+          "text": ""
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-dbe9a04e-efdf-44dc-87d3-585a7233851a"
+          }
+        }
+      ],
+      "comment_text": "作品バフスキル（スキルの対象設定箇所を増やすのみ）\ndocs.google.com/presentation/d/1v5w0gN0OJxczmtDa2MUVWqXSXFlMS-wkffQjl_i3FPY/edit?slide=id.g3b0ef0bd6b5_0_23#slide=id.g3b0ef0bd6b5_0_23 \n \n",
+      "user": {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "email": "inui@wonderpla.net",
+        "color": "#388d3c",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767926208816",
+      "reply_count": 0
+    }
+  ]
+}
