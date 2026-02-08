@@ -7,10 +7,11 @@ ClickUpリストのタスクJSONから構造化された分析レポートを生
 
 import json
 import sys
+import csv
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any, Optional, Tuple
 
 class ClickUpTaskAnalyzer:
     """ClickUpタスク分析クラス"""
@@ -22,13 +23,144 @@ class ClickUpTaskAnalyzer:
         """
         self.json_path = json_path
         self.tasks = []
+        self.member_roles = {}
         self.load_tasks()
+        self.member_roles = self.load_member_roles()
 
     def load_tasks(self):
         """タスクJSONを読み込む"""
         with open(self.json_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             self.tasks = data.get('tasks', [])
+
+    def load_member_roles(self) -> Dict[str, Tuple[str, str]]:
+        """
+        メンバー一覧.csvから職種情報を読み込む
+
+        Returns:
+            Dict[str, Tuple[str, str]]: {正規化名: (職種, 専門領域)}
+        """
+        csv_path = Path("domain/knowledge/project-structure/メンバー一覧.csv")
+
+        if not csv_path.exists():
+            print(f"⚠️  警告: {csv_path} が見つかりません。職種判定はフォールバックロジックのみになります。")
+            return {}
+
+        member_roles = {}
+
+        with open(csv_path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                name = row.get('名前(英語)', '').strip()
+                role = row.get('職種', '').strip()
+                specialization = row.get('専門領域', '').strip()
+
+                if name:  # 名前が空でない場合のみ追加
+                    normalized_name = self.normalize_name(name)
+                    member_roles[normalized_name] = (role, specialization)
+
+        print(f"✅ メンバー一覧.csvから{len(member_roles)}名の職種情報を読み込みました")
+        return member_roles
+
+    def normalize_name(self, name: str) -> str:
+        """
+        名前を正規化（小文字化、統一形式に変換）
+
+        Examples:
+            "Daiki Kawasaki" -> "daiki kawasaki"
+            "daichi_takishima" -> "daichi takishima"
+            "donghyeok kim" -> "donghyeok kim"
+            "KobayashiRikaco" -> "kobayashirikaco"
+        """
+        if not name:
+            return ""
+
+        # 小文字化
+        name = name.lower()
+
+        # アンダースコアをスペースに変換
+        name = name.replace('_', ' ')
+
+        # 前後の空白を削除
+        name = name.strip()
+
+        return name
+
+    def get_role_from_member_csv(self, assignee: str) -> Optional[str]:
+        """
+        メンバー一覧.csvから職種を取得
+
+        Args:
+            assignee: ClickUpタスクのassignee名
+
+        Returns:
+            職種（例: "クライアントエンジニア", "UIデザイナー"）
+            見つからない場合はNone
+        """
+        normalized_assignee = self.normalize_name(assignee)
+
+        if normalized_assignee not in self.member_roles:
+            return None
+
+        role, specialization = self.member_roles[normalized_assignee]
+
+        # 職種と専門領域から詳細職種を決定
+        if role == "エンジニア":
+            if "クライアント" in specialization:
+                return "クライアントエンジニア"
+            elif "サーバー" in specialization:
+                return "サーバーエンジニア"
+            elif "SRE" in specialization:
+                return "SRE"
+            else:
+                return "エンジニア"
+        elif role == "デザイナー":
+            if "UI" in specialization:
+                return "UIデザイナー"
+            elif "アセット" in specialization or "アートディレクター" in specialization:
+                return "アセットデザイナー"
+            else:
+                return "デザイナー"
+        elif role == "プランナー":
+            return "プランナー"
+        elif role == "QA":
+            return "QA・テスト"
+        elif role == "マネジメント":
+            return "マネジメント"
+        elif role == "ビジネス":
+            return "ビジネス"
+        else:
+            return role
+
+    def classify_role_with_fallback(self, task_name: str, assignees: List[str]) -> str:
+        """
+        職種を分類（メンバー一覧.csv優先、フォールバックあり）
+
+        優先順位:
+        1. メンバー一覧.csvから取得
+        2. タスク名プレフィックスから推測
+        3. "その他"
+        """
+        # 担当者から職種を取得（複数担当者の場合は最初の一人）
+        for assignee in assignees:
+            role = self.get_role_from_member_csv(assignee)
+            if role:
+                return role
+
+        # フォールバック: タスク名プレフィックスから推測
+        if task_name.startswith('(サバ)') or '管理ツール' in task_name:
+            return 'サーバーエンジニア'
+        elif task_name.startswith('(クラ)') or task_name.startswith('(スキル'):
+            return 'クライアントエンジニア'
+        elif task_name.startswith('(UI)') or '_T' in task_name and '(UI)' in task_name:
+            return 'UIデザイナー'
+        elif 'qa期間' in task_name.lower():
+            return 'QA・テスト'
+        elif 'リリース' in task_name or 'サブミット' in task_name:
+            return 'リリース管理'
+
+        # デフォルト
+        return 'その他'
 
     def get_version_from_path(self, dir_path: Path) -> str:
         """ディレクトリパスからバージョン名を抽出"""
@@ -74,6 +206,19 @@ class ClickUpTaskAnalyzer:
 
         return dict(assignee_tasks)
 
+    def group_tasks_by_role(self) -> Dict[str, List[Dict]]:
+        """職種ごとにタスクをグループ化（メンバー一覧.csv使用）"""
+        role_tasks = defaultdict(list)
+
+        for task in self.tasks:
+            role = self.classify_role_with_fallback(
+                task['name'],
+                task.get('assignees', [])
+            )
+            role_tasks[role].append(task)
+
+        return dict(role_tasks)
+
     def get_parent_tasks(self) -> List[Dict]:
         """親タスク（主要機能）を取得"""
         parent_task_ids = set(task.get('parent') for task in self.tasks if task.get('parent'))
@@ -112,12 +257,13 @@ class ClickUpTaskAnalyzer:
             return f"約{months}ヶ月"
 
     def generate_report(self, output_path: Path):
-        """基本レポートを生成（職種分類なし、AIが後で詳細化）"""
+        """職種別レポートを生成（メンバー一覧.csv使用）"""
         version = self.get_version_from_path(self.json_path.parent)
         project, list_name = self.get_project_and_list_name(self.json_path.parent)
         start_date, end_date = self.calculate_date_range()
 
-        # 担当者別タスクグループ
+        # 職種別タスクグループ
+        role_tasks = self.group_tasks_by_role()
         assignee_tasks = self.group_tasks_by_assignee()
 
         # レポート生成
@@ -149,43 +295,73 @@ class ClickUpTaskAnalyzer:
             subtask_count = self.count_subtasks(parent['id'])
             report_lines.append(f"- サブタスク: {subtask_count}件\n")
 
-        # タスク一覧（担当者別、職種分類なし）
-        report_lines.append("## タスク一覧（担当者別）\n")
-        report_lines.append("**注意**: この一覧は担当者ごとにグループ化されています。職種分類はAIが後で行います。\n")
+        # 職種別作業分析
+        report_lines.append("## 職種別作業分析\n")
+        report_lines.append("**注意**: 職種はメンバー一覧.csvから判定しています。未登録メンバーはタスク名プレフィックスから推測しています。\n")
 
-        for assignee, tasks in sorted(assignee_tasks.items()):
-            if assignee == '未割り当て':
+        # 職種の優先順位（表示順）
+        role_order = [
+            'サーバーエンジニア',
+            'クライアントエンジニア',
+            'UIデザイナー',
+            'アセットデザイナー',
+            'プランナー',
+            'QA・テスト',
+            'マネジメント',
+            'その他'
+        ]
+
+        for role in role_order:
+            if role not in role_tasks:
                 continue
 
-            report_lines.append(f"### 担当者: {assignee}\n")
-            for task in tasks[:15]:  # 各担当者の上位15タスク
+            tasks = role_tasks[role]
+            report_lines.append(f"### {role}\n")
+
+            # この職種の主な担当者を抽出
+            assignees_in_role = set()
+            for task in tasks:
+                assignees_in_role.update(task.get('assignees', []))
+
+            if assignees_in_role:
+                report_lines.append(f"**主な担当者**: {', '.join(sorted(assignees_in_role))}\n")
+
+            # タスク件数
+            report_lines.append(f"**タスク数**: {len(tasks)}件\n")
+
+            # 主要タスク（上位10件）
+            report_lines.append("**主な作業内容**:\n")
+            for task in tasks[:10]:
+                assignees_str = ', '.join(task.get('assignees', ['未割り当て']))
                 due_date = self.format_date(task.get('due_date'))
-                report_lines.append(f"1. **{task['name']}** - 期限: {due_date}")
+                report_lines.append(f"1. {task['name']} ({assignees_str}) - 期限: {due_date}")
 
-            if len(tasks) > 15:
-                report_lines.append(f"\n*(他{len(tasks) - 15}タスク)*")
+            if len(tasks) > 10:
+                report_lines.append(f"\n*(他{len(tasks) - 10}タスク)*")
 
-            report_lines.append("")
-
-        # 未割り当てタスク
-        if '未割り当て' in assignee_tasks:
-            report_lines.append("### 未割り当てタスク\n")
-            for task in assignee_tasks['未割り当て'][:10]:
-                due_date = self.format_date(task.get('due_date'))
-                report_lines.append(f"1. **{task['name']}** - 期限: {due_date}")
             report_lines.append("")
 
         # 基本統計
         report_lines.append("## 基本統計\n")
         report_lines.append(f"- **担当者数**: {len([a for a in assignee_tasks.keys() if a != '未割り当て'])}名")
+        report_lines.append(f"- **職種数**: {len(role_tasks)}職種")
         report_lines.append(f"- **タスク総数**: {total_count}タスク")
         report_lines.append(f"- **完了率**: {closed_count}/{total_count}タスク ({100*closed_count//total_count if total_count > 0 else 0}%)\n")
+
+        # 職種別タスク数
+        report_lines.append("### 職種別タスク数\n")
+        for role in role_order:
+            if role in role_tasks:
+                count = len(role_tasks[role])
+                percentage = 100 * count // total_count if total_count > 0 else 0
+                report_lines.append(f"- **{role}**: {count}タスク ({percentage}%)")
+        report_lines.append("")
 
         # フッター
         report_lines.append("---\n")
         report_lines.append(f"*分析日: {datetime.now().strftime('%Y-%m-%d')}*")
-        report_lines.append(f"*データソース: ClickUp {version}タスク情報*\n")
-        report_lines.append("**次のステップ**: このレポートをAIが読み込み、職種分類と詳細分析を行います。")
+        report_lines.append(f"*データソース: ClickUp {version}タスク情報*")
+        report_lines.append(f"*職種判定: メンバー一覧.csv + タスク名プレフィックス*")
 
         # ファイル書き込み
         output_path.parent.mkdir(parents=True, exist_ok=True)
