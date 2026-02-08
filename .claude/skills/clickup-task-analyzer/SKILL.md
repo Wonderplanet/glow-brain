@@ -1,6 +1,7 @@
 ---
 name: clickup-task-analyzer
 description: ClickUpタスクJSONから構造化されたプロジェクト分析レポート（Markdown形式）を自動生成します。「ClickUpタスク分析」「プロジェクト分析レポート」「タスク情報分析」「開発プロジェクト分析」などで使用します。インプット: domain/raw-data/clickup/{プロジェクト名}/{リスト名}/_list_tasks_raw_phase2_with_subtasks.json、アウトプット: domain/knowledge/project-management/clickup_{プロジェクト名}_{リスト名}-タスク分析.md
+disable-model-invocation: false
 ---
 
 # ClickUpタスク分析スキル
