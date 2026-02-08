@@ -1,0 +1,1728 @@
+{
+  "task": {
+    "id": "86evv6360",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "【メインクエスト】【推しの子】にて、ステージ詳細情報の内容が実機と相違している箇所がある",
+    "text_content": "【発生症状】\n【メインクエスト】【推しの子】にて、ステージ詳細情報の内容が実機と相違している箇所があります。\n\n■難易度「ハード」\n▼実機と資料の内容が全体的に相違している\n・1話\n・3話\n※実機上の【属性情報】にて、表示されている属性の敵は出現しないなど\n\n▼資料に記載されている内容の敵が出てこない\n・2話\n　└敵自身の攻撃UPを使用する敵が出現しない\n\n---------------------------------------------------------------------\n■難易度「エクストラ」\n▼実機と資料の内容が相違している\n・2話\n　├敵全体の回復ではなく自身しか回復しない\n　├火傷攻撃をしてくる敵がいない\n　├ノックバック攻撃をしてくる敵がいる\n　└毒攻撃をしてくる敵がいる\n\n・3話\n　├【コマ効果情報】で、火傷コマはないが火傷ダメージ軽減の特性について記載されている\n　└敵全体の回復ではなく自身しか回復しない\n\n【再現手順】\n1.管理ツールで日時を「2026/1/1 00:00:00 ～」に設定する\n2.【メインクエスト】【推しの子】の該当ステージをタップする\n3.ステージ詳細情報ダイアログに表示されている内容が資料と相違していることを確認する\n4.該当ステージでの敵の動作がステージ詳細情報の内容と異なっていることを確認する\n\n【補足】\nなし\n\n【再現性】\n3回中3回\n\n【環境情報】\n接続環境　：dev-qa2\n検証ビルド：iOS  #2543\n　　　　　：AOS  #2543\n検証端末　：iPad mini（第6世代）（iOS:18.2）\n　　　　　：Galaxy S10（AOS:12）\n\n【ユーザー情報】\nユーザーID：A8699084069\n　　　　　：A1792565076\nユーザー名：双ノ子\n　　　　　：ふたりのざ\n\n【参考資料】\n「【17.【推しの子】】メインクエスト基礎設計」>「1話_h」「2話_h」「3話_h」「2話_Ex」「3話_Ex」\n \n\n【報告者】\n堤 崇",
+    "description": "【発生症状】\n【メインクエスト】【推しの子】にて、ステージ詳細情報の内容が実機と相違している箇所があります。\n\n■難易度「ハード」\n▼実機と資料の内容が全体的に相違している\n・1話\n・3話\n※実機上の【属性情報】にて、表示されている属性の敵は出現しないなど\n\n▼資料に記載されている内容の敵が出てこない\n・2話\n　└敵自身の攻撃UPを使用する敵が出現しない\n\n---------------------------------------------------------------------\n■難易度「エクストラ」\n▼実機と資料の内容が相違している\n・2話\n　├敵全体の回復ではなく自身しか回復しない\n　├火傷攻撃をしてくる敵がいない\n　├ノックバック攻撃をしてくる敵がいる\n　└毒攻撃をしてくる敵がいる\n\n・3話\n　├【コマ効果情報】で、火傷コマはないが火傷ダメージ軽減の特性について記載されている\n　└敵全体の回復ではなく自身しか回復しない\n\n【再現手順】\n1.管理ツールで日時を「2026/1/1 00:00:00 ～」に設定する\n2.【メインクエスト】【推しの子】の該当ステージをタップする\n3.ステージ詳細情報ダイアログに表示されている内容が資料と相違していることを確認する\n4.該当ステージでの敵の動作がステージ詳細情報の内容と異なっていることを確認する\n\n【補足】\nなし\n\n【再現性】\n3回中3回\n\n【環境情報】\n接続環境　：dev-qa2\n検証ビルド：iOS  #2543\n　　　　　：AOS  #2543\n検証端末　：iPad mini（第6世代）（iOS:18.2）\n　　　　　：Galaxy S10（AOS:12）\n\n【ユーザー情報】\nユーザーID：A8699084069\n　　　　　：A1792565076\nユーザー名：双ノ子\n　　　　　：ふたりのざ\n\n【参考資料】\n「【17.【推しの子】】メインクエスト基礎設計」>「1話_h」「2話_h」「3話_h」「2話_Ex」「3話_Ex」\n \n\n【報告者】\n堤 崇",
+    "markdown_description": "【発生症状】\n【メインクエスト】【推しの子】にて、ステージ詳細情報の内容が実機と相違している箇所があります。\n\n■難易度「ハード」\n▼実機と資料の内容が全体的に相違している\n・1話\n・3話\n※実機上の【属性情報】にて、表示されている属性の敵は出現しないなど\n\n▼資料に記載されている内容の敵が出てこない\n・2話\n　└敵自身の攻撃UPを使用する敵が出現しない\n\n\\---------------------------------------------------------------------\n■難易度「エクストラ」\n▼実機と資料の内容が相違している\n・2話\n　├敵全体の回復ではなく自身しか回復しない\n　├火傷攻撃をしてくる敵がいない\n　├ノックバック攻撃をしてくる敵がいる\n　└毒攻撃をしてくる敵がいる\n\n・3話\n　├【コマ効果情報】で、火傷コマはないが火傷ダメージ軽減の特性について記載されている\n　└敵全体の回復ではなく自身しか回復しない\n\n【再現手順】\n1.管理ツールで日時を「2026/1/1 00:00:00 ～」に設定する\n2.【メインクエスト】【推しの子】の該当ステージをタップする\n3.ステージ詳細情報ダイアログに表示されている内容が資料と相違していることを確認する\n4.該当ステージでの敵の動作がステージ詳細情報の内容と異なっていることを確認する\n\n【補足】\nなし\n\n【再現性】\n3回中3回\n\n【環境情報】\n接続環境　：dev-qa2\n検証ビルド：iOS #2543\n　　　　　：AOS #2543\n検証端末　：iPad mini（第6世代）（iOS:18.2）\n　　　　　：Galaxy S10（AOS:12）\n\n【ユーザー情報】\nユーザーID：A8699084069\n　　　　　：A1792565076\nユーザー名：双ノ子\n　　　　　：ふたりのざ\n\n【参考資料】\n「【17.【推しの子】】メインクエスト基礎設計」>「1話\\_h」「2話\\_h」「3話\\_h」「2話\\_Ex」「3話\\_Ex」\n[https://docs.google.com/spreadsheets/d/1gcclhKTvr7Q7c9-6qJjgCCITirbU9GOiAhhQWDrOEsw/edit?gid=1033186906#gid=1033186906](https://docs.google.com/spreadsheets/d/1gcclhKTvr7Q7c9-6qJjgCCITirbU9GOiAhhQWDrOEsw/edit?gid=1033186906#gid=1033186906)\n\n【報告者】\n堤 崇",
+    "status": {
+      "id": "c90180884069_irfF5nXi",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 8,
+      "type": "closed"
+    },
+    "orderindex": "237875113.23684087000000000000000000000000",
+    "date_created": "1765512016775",
+    "date_updated": "1766048138821",
+    "date_closed": "1766048136916",
+    "date_done": "1766018683918",
+    "archived": false,
+    "creator": {
+      "id": 60970688,
+      "username": "Kazuya Adachi",
+      "color": "",
+      "email": "confidence-q12@cfd-qa.jp",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+    },
+    "assignees": [
+      {
+        "id": 43594934,
+        "username": "Shingo Maeda",
+        "color": "#622aea",
+        "initials": "SM",
+        "email": "shingo.maeda@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594934_wew.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "color": "#536cfe",
+        "initials": "TT",
+        "email": "t-takahashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 43594934,
+        "username": "Shingo Maeda",
+        "color": "#622aea",
+        "initials": "SM",
+        "email": "shingo.maeda@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594934_wew.jpg"
+      },
+      {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "color": "",
+        "initials": "KA",
+        "email": "confidence-q12@cfd-qa.jp",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": null,
+    "top_level_parent": null,
+    "priority": {
+      "color": "#f8ae00",
+      "id": "2",
+      "orderindex": "2",
+      "priority": "high"
+    },
+    "due_date": null,
+    "start_date": null,
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "33339b75-59dd-41ab-93be-a5851eda214f",
+        "name": "Create",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1710513136311",
+        "hide_from_guests": false,
+        "value": "1765479600000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "30b51379-c05c-4160-8a50-b00d922fbae2",
+        "name": "Done",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1710513153601",
+        "hide_from_guests": false,
+        "value": "1765998000000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "9b9b2d63-d009-4ca1-8d56-9134e02aff0a",
+        "name": "QA種別",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "4633edc2-f960-48b3-878e-276b9bc12480",
+              "label": "形式的テスト_機能QA",
+              "color": "#02BCD4",
+              "orderindex": 0
+            },
+            {
+              "id": "1762b0fc-04ee-4d50-a09b-94c940e1c00b",
+              "label": "形式的テスト_データQA",
+              "color": "#FF7FAB",
+              "orderindex": 1
+            },
+            {
+              "id": "20c4c563-1dd1-4b25-b5c3-315c3dfe565e",
+              "label": "仕様QA",
+              "color": "#0231E8",
+              "orderindex": 2
+            },
+            {
+              "id": "dd63823d-711a-483e-b545-4a4e9a17105e",
+              "label": "納品ビルドQA",
+              "color": "#e50000",
+              "orderindex": 3
+            },
+            {
+              "id": "388394ac-3741-4a49-be3c-1536c31ed984",
+              "label": "探索的テスト",
+              "color": "#2ecd6f",
+              "orderindex": 4
+            },
+            {
+              "id": "4441a87d-8ed2-4ecf-a26f-70577c9ac1ec",
+              "label": "データ設定依頼",
+              "color": "#7C4DFF",
+              "orderindex": 5
+            }
+          ]
+        },
+        "date_created": "1713678824862",
+        "hide_from_guests": false,
+        "value": [
+          "1762b0fc-04ee-4d50-a09b-94c940e1c00b"
+        ],
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "c9c26e3c-0058-464f-ad26-05f202ba1280",
+        "name": "QA通知用カスタムフィールド",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1738652166515",
+        "hide_from_guests": false,
+        "value": "1765515866.284709",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "a19f03bc-9353-4a4d-8fea-4cedad109c04",
+        "name": "SEED関連",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "ad5bcb51-5f4a-4821-b690-ef56ea3adf74",
+              "name": "基盤システム",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "2e1a03fb-5636-4b63-a0ea-1f203eb8f7ed",
+              "name": "共通ゲーム機能",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1714035568848",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "210de310-253e-4f67-9084-d238847e1c5b",
+        "name": "StatusChange",
+        "type": "date",
+        "type_config": {},
+        "date_created": "1743490160615",
+        "hide_from_guests": true,
+        "value": "1765998000000",
+        "value_richtext": null,
+        "required": false
+      },
+      {
+        "id": "b888a620-455b-459b-8787-9239bd25320b",
+        "name": "TC",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "670e9326-08e0-438e-b87f-c88203208456",
+              "name": "TC不具合",
+              "color": "#FF4081",
+              "orderindex": 0
+            }
+          ]
+        },
+        "date_created": "1752220927691",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "e4796b07-0423-4f12-b671-cdf0c89d4a4f",
+        "name": "バグカテゴリ",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "a224b122-6421-4c9d-934d-d549ce3ff066",
+              "name": "コンプライアンス",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "102367e8-e2ed-4e24-b4f8-7e61327d34c7",
+              "name": "動作",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "97b5d368-a3ba-4093-9374-2694af3d81d7",
+              "name": "テキスト",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "2f72aa85-b8c0-4400-a95d-66eb1ebdd4b2",
+              "name": "サウンド",
+              "color": null,
+              "orderindex": 3
+            }
+          ]
+        },
+        "date_created": "1713679528982",
+        "hide_from_guests": false,
+        "value": 1,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "5d3d19b6-3b80-4f24-acca-4c0e159c62f3",
+        "name": "バグタイプ",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "18e6adeb-d408-4398-8e1c-3d7abbb331bb",
+              "name": "コンプライアンス_動作違反",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "aeab53d0-993d-47fe-8e58-ea1cc658f105",
+              "name": "コンプライアンス_規定用語違反",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "5110cb7c-7b88-4825-bc8d-df5e9620815d",
+              "name": "コンプライアンス_不適切なメッセージ",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "967f9059-288e-4cb2-bcd7-73ee874f1475",
+              "name": "コンプライアンス_テキスト翻訳不備",
+              "color": null,
+              "orderindex": 3
+            },
+            {
+              "id": "b801d244-76b4-4d01-a97d-2a7ad5b4c59d",
+              "name": "コンプライアンス_テキスト表示不備",
+              "color": null,
+              "orderindex": 4
+            },
+            {
+              "id": "b51fdd33-2bbe-4194-aa82-29dff894feca",
+              "name": "動作_クラッシュ",
+              "color": null,
+              "orderindex": 5
+            },
+            {
+              "id": "9ed249a0-5aaf-4aad-a91e-18b39995b30d",
+              "name": "動作_フリーズ",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "7d6d8c27-12bd-4b13-93ac-7d3a02fa9f09",
+              "name": "動作_エラー",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "cd7cd621-8033-4521-9d7e-b9c00397197e",
+              "name": "動作_進行不能",
+              "color": null,
+              "orderindex": 8
+            },
+            {
+              "id": "32c50796-6e51-4523-bc9e-f6fe314ef2e4",
+              "name": "動作_セーブ/ロード",
+              "color": null,
+              "orderindex": 9
+            },
+            {
+              "id": "501548e0-56d4-4f8d-81d6-c1f019d1e295",
+              "name": "動作_AI",
+              "color": null,
+              "orderindex": 10
+            },
+            {
+              "id": "ce319867-efa9-4b4a-a21f-1c2f4da1b496",
+              "name": "動作_仕様問題",
+              "color": null,
+              "orderindex": 11
+            },
+            {
+              "id": "b4b06f4a-d6be-4006-a9a6-704c2a3981f6",
+              "name": "動作_カメラ",
+              "color": null,
+              "orderindex": 12
+            },
+            {
+              "id": "5a7d2d05-169e-42b2-b94c-27275924ff1e",
+              "name": "動作_当たり判定",
+              "color": null,
+              "orderindex": 13
+            },
+            {
+              "id": "d9fae33c-a8e0-44d2-98f1-5b8b4e5f2698",
+              "name": "動作_操作異常",
+              "color": null,
+              "orderindex": 14
+            },
+            {
+              "id": "d7413fd7-da48-42c5-a1ea-11d25a1cb561",
+              "name": "動作_グラフィック",
+              "color": null,
+              "orderindex": 15
+            },
+            {
+              "id": "b1b94ed8-c5ec-46b1-a9d7-a6abdac6b62b",
+              "name": "動作_その他",
+              "color": null,
+              "orderindex": 16
+            },
+            {
+              "id": "b7075045-fb54-4660-8764-446fe867a753",
+              "name": "テキスト_文法間違い",
+              "color": null,
+              "orderindex": 17
+            },
+            {
+              "id": "28abac6a-3464-48c1-b9d6-84d5e68cf245",
+              "name": "テキスト_誤字/脱字",
+              "color": null,
+              "orderindex": 18
+            },
+            {
+              "id": "5958fa96-7f5c-45b3-a67a-56dfb4ec5a96",
+              "name": "テキスト_重なり/途切れ",
+              "color": null,
+              "orderindex": 19
+            },
+            {
+              "id": "345d2b6b-229c-482d-969a-7823d2bf753d",
+              "name": "テキスト_言語間違い",
+              "color": null,
+              "orderindex": 20
+            },
+            {
+              "id": "7b6a3e44-ad19-4449-a88b-c9707a53d85f",
+              "name": "テキスト_間違ったテキスト/翻訳間違い",
+              "color": null,
+              "orderindex": 21
+            },
+            {
+              "id": "682d1998-8757-40eb-b7f9-60dcf4168a11",
+              "name": "テキスト_特殊文字",
+              "color": null,
+              "orderindex": 22
+            },
+            {
+              "id": "d5d903c3-340f-4d8b-8147-53345c8136c9",
+              "name": "テキスト_字幕",
+              "color": null,
+              "orderindex": 23
+            },
+            {
+              "id": "b7da689c-f550-4a5f-ac78-61896e007e64",
+              "name": "テキスト_句読点/大文字/小文字",
+              "color": null,
+              "orderindex": 24
+            },
+            {
+              "id": "c116d051-769f-4430-ad82-d74b927788b8",
+              "name": "サウンド_ボイスの抜け",
+              "color": null,
+              "orderindex": 25
+            },
+            {
+              "id": "dc5f7626-2888-4df2-afbd-385f68294084",
+              "name": "サウンド_ボイスの途切れ",
+              "color": null,
+              "orderindex": 26
+            },
+            {
+              "id": "36d2e4b5-8f36-460a-a368-335200fb2c4d",
+              "name": "サウンド_ボイスの破損",
+              "color": null,
+              "orderindex": 27
+            },
+            {
+              "id": "217fc213-6018-4461-a3fc-9fb7e093e059",
+              "name": "サウンド_字幕",
+              "color": null,
+              "orderindex": 28
+            },
+            {
+              "id": "111c33f6-89c2-4d01-81bb-7a3541f596f3",
+              "name": "サウンド_SE/BGM",
+              "color": null,
+              "orderindex": 29
+            }
+          ]
+        },
+        "date_created": "1713679571042",
+        "hide_from_guests": false,
+        "value": 16,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "861a2d95-f600-4a60-9561-934c0f98f92d",
+        "name": "バグ発生場所（詳細）",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1713679629973",
+        "hide_from_guests": false,
+        "value": "【メインクエスト】【推しの子】",
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "0b3cfe49-851b-4ebd-9c13-86c17a8d98be",
+        "name": "バグ発生箇所",
+        "type": "drop_down",
+        "type_config": {
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "67b29b8c-14bc-48c8-b13d-b45e3d84adb9",
+              "name": "起動〜タイトル画面",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "96607ce6-e30c-49a8-b5e8-4d01803f5a92",
+              "name": "アトラクトデモ",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "d1780893-0723-4a3f-8df9-d7eb57233be8",
+              "name": "通常プレイ",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "228e4556-c6bb-4710-b3a4-b18dcbcc0ba6",
+              "name": "画面表示情報",
+              "color": null,
+              "orderindex": 3
+            },
+            {
+              "id": "7204c659-5817-4ca4-b4e9-0ad8761aebbc",
+              "name": "メニュー",
+              "color": null,
+              "orderindex": 4
+            },
+            {
+              "id": "2d561481-6fe3-4c26-8f24-a0ba9ce498c3",
+              "name": "ムービー/イベントデモ",
+              "color": null,
+              "orderindex": 5
+            },
+            {
+              "id": "7a186166-0780-4e69-84a3-ec608c5e53af",
+              "name": "マルチプレイ",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "9bb558c3-ab5a-4606-8ab0-68e58609b7b7",
+              "name": "オプション",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "1114bd2f-61bf-4b1d-b9c0-a24ff34427a9",
+              "name": "その他",
+              "color": null,
+              "orderindex": 8
+            }
+          ]
+        },
+        "date_created": "1713679608256",
+        "hide_from_guests": false,
+        "value": 8,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "f781176f-19a2-42b1-b3db-cef2923c1990",
+        "name": "フェーズ",
+        "type": "labels",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "52913db9-2eb3-420c-b1d2-274072b837e9",
+              "label": "α2",
+              "color": "#e50000",
+              "orderindex": 0
+            },
+            {
+              "id": "6512e5a6-5932-4ca5-ae27-653911b7c1e6",
+              "label": "α3",
+              "color": "#f900ea",
+              "orderindex": 1
+            },
+            {
+              "id": "7c2fa23d-f746-4557-a2da-284b5bfdb51e",
+              "label": "β",
+              "color": "#ff7800",
+              "orderindex": 2
+            },
+            {
+              "id": "a9466cc9-0465-4a59-b4f0-31631d7d7a2b",
+              "label": "α4",
+              "color": "#0231E8",
+              "orderindex": 3
+            },
+            {
+              "id": "7605117f-6c89-425c-9ef7-1106e0d80991",
+              "label": "マスター",
+              "color": "#02BCD4",
+              "orderindex": 4
+            }
+          ]
+        },
+        "date_created": "1717135495606",
+        "hide_from_guests": false,
+        "value": [
+          "7605117f-6c89-425c-9ef7-1106e0d80991"
+        ],
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "7d962b0d-d8f6-47cb-9822-59ab4b61e285",
+        "name": "プラットフォーム",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "f8342cfb-07bd-40d1-8e7c-deb114bd6ef2",
+              "label": "iOS",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "84342121-5e5c-4083-99a5-b057d3db94e9",
+              "label": "AOS",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1713679380010",
+        "hide_from_guests": false,
+        "value": [
+          "84342121-5e5c-4083-99a5-b057d3db94e9",
+          "f8342cfb-07bd-40d1-8e7c-deb114bd6ef2"
+        ],
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "b3a6f2b7-7ac5-4877-99cf-2ba770098cc5",
+        "name": "不具合種別",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "bd101364-efc3-4995-bcee-33e94e934139",
+              "name": "動作・表示不良",
+              "color": "#81B1FF",
+              "orderindex": 0
+            },
+            {
+              "id": "f6ebab38-be78-4bfc-ac46-5e590c1776b6",
+              "name": "資料相違",
+              "color": "#2ecd6f",
+              "orderindex": 1
+            },
+            {
+              "id": "9d879ef8-4336-412b-9264-3837d3299a84",
+              "name": "BNEレギュ",
+              "color": "#e50000",
+              "orderindex": 2
+            }
+          ]
+        },
+        "date_created": "1747281572777",
+        "hide_from_guests": false,
+        "value": 1,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "476aa1d0-a2fd-4a0c-8681-2a294b01e1a2",
+        "name": "修正完了するスコープ",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "86a37571-d88e-4fb4-915d-bffb5d2c3cfa",
+              "name": "アルファ2",
+              "color": "#EA80FC",
+              "orderindex": 0
+            },
+            {
+              "id": "f51dffad-d374-4a05-b06d-82c2681ec81b",
+              "name": "アルファ3",
+              "color": "#f9d900",
+              "orderindex": 1
+            },
+            {
+              "id": "92bd26f0-d2b5-4d60-ae45-0e37d4fc31fc",
+              "name": "ベータ",
+              "color": "#2ecd6f",
+              "orderindex": 2
+            },
+            {
+              "id": "d8dc05a2-fef7-44d3-92b7-eab81022aecf",
+              "name": "マスター",
+              "color": "#e50000",
+              "orderindex": 3
+            },
+            {
+              "id": "b7cb8b52-9e68-4021-abeb-1262b21295d1",
+              "name": "8/21ROM",
+              "color": "#e50000",
+              "orderindex": 4
+            },
+            {
+              "id": "3d596e3e-cb2a-4cf2-a448-cd022788f73d",
+              "name": "8/28ROM",
+              "color": "#04A9F4",
+              "orderindex": 5
+            },
+            {
+              "id": "d74b1ed6-601e-4b89-8d88-28d14681878b",
+              "name": "8/30ROM",
+              "color": "#7C4DFF",
+              "orderindex": 6
+            },
+            {
+              "id": "f765b0fd-95b8-4e8a-8ea2-6e0f318b5811",
+              "name": "ベータ以降にしたい",
+              "color": null,
+              "orderindex": 7
+            },
+            {
+              "id": "1e9f9b71-38dd-46aa-a280-ccca059e608c",
+              "name": "直近優先",
+              "color": "#f900ea",
+              "orderindex": 8
+            },
+            {
+              "id": "fdf7323c-9745-439f-aece-26c22aef1d35",
+              "name": "12/10ROM",
+              "color": "#E65100",
+              "orderindex": 9
+            },
+            {
+              "id": "1d7012a4-a719-4a15-8ea5-75ee4cea424e",
+              "name": "12/27ROM",
+              "color": "#9b59b6",
+              "orderindex": 10
+            },
+            {
+              "id": "5f68215e-4fac-4d83-a8b7-8c86c72fb122",
+              "name": "1/22ROM",
+              "color": "#0231E8",
+              "orderindex": 11
+            },
+            {
+              "id": "60119d89-0bf6-4590-bde7-8e8d1ab52c8c",
+              "name": "4/16ROM(必須",
+              "color": "#e50000",
+              "orderindex": 12
+            },
+            {
+              "id": "77730809-a885-4443-a559-82aee343d2c1",
+              "name": "4/16ROM(可能であれば",
+              "color": "#f9d900",
+              "orderindex": 13
+            },
+            {
+              "id": "7029f34d-09a2-4b1d-8c63-9a50c6a7ad32",
+              "name": "4/16以降",
+              "color": "#667684",
+              "orderindex": 14
+            },
+            {
+              "id": "cb5ffcfd-ecbd-478d-a4a5-b8d04a00d714",
+              "name": "リリース時必須",
+              "color": "#e50000",
+              "orderindex": 15
+            },
+            {
+              "id": "2b449347-0f41-4704-9023-da0df7b47d8b",
+              "name": "リリース以降",
+              "color": "#AF7E2E",
+              "orderindex": 16
+            }
+          ]
+        },
+        "date_created": "1713679022358",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "0cf27ca9-f798-4e71-b4a2-9c85943d1e2c",
+        "name": "修正種別",
+        "type": "labels",
+        "type_config": {
+          "options": [
+            {
+              "id": "ac250576-5c6b-45b1-bb9e-a883fe854247",
+              "label": "機能",
+              "color": "#0231E8",
+              "orderindex": 0
+            },
+            {
+              "id": "6c9508d5-bb4f-46d2-91fc-8650e111ca03",
+              "label": "仕様書",
+              "color": "#2ecd6f",
+              "orderindex": 1
+            },
+            {
+              "id": "b47f0d44-d6cf-4030-ae54-68c118a5c1e1",
+              "label": "BNEレギュ",
+              "color": "#e50000",
+              "orderindex": 2
+            }
+          ]
+        },
+        "date_created": "1747281999811",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "6636220f-5e89-4a3f-9ed2-d9b9fe727a84",
+        "name": "発生環境",
+        "type": "drop_down",
+        "type_config": {
+          "options": [
+            {
+              "id": "e2c6ac7b-6f7c-4c92-8b98-dc324f5e7864",
+              "name": "開発環境",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "91438067-9a0d-4b37-b1dd-29c987299252",
+              "name": "本番環境",
+              "color": null,
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1714612061063",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "80822821-c62e-4e67-9277-19b32a977fba",
+        "name": "発生頻度",
+        "type": "drop_down",
+        "type_config": {
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "cb7bd4b2-dac0-44c4-94fc-5e500eadd043",
+              "name": "常に発生",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "83cdbefe-57c8-4bde-ba81-691fa0d170f3",
+              "name": "頻繁に発生",
+              "color": null,
+              "orderindex": 1
+            },
+            {
+              "id": "19a92f41-e453-44fd-a6e0-4523a65c2677",
+              "name": "時々発生",
+              "color": null,
+              "orderindex": 2
+            },
+            {
+              "id": "fe8065d2-75e8-4fef-9ee4-5c06320f0629",
+              "name": "一度だけ発生",
+              "color": null,
+              "orderindex": 3
+            }
+          ]
+        },
+        "date_created": "1713679676442",
+        "hide_from_guests": false,
+        "value": 0,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "cacf3f36-fd1e-4103-bb71-3b91a82cf9a2",
+        "name": "発見version",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1713679757393",
+        "hide_from_guests": false,
+        "value": "#2543",
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "1bbe28dd-d8ab-4f78-9ea0-f31c166aafad",
+        "name": "起票元",
+        "type": "labels",
+        "type_config": {
+          "sorting": "manual",
+          "options": [
+            {
+              "id": "b332c6f6-919d-46cd-99ba-3a32ea0bfeb4",
+              "label": "WP",
+              "color": "#04A9F4",
+              "orderindex": 0
+            },
+            {
+              "id": "e9b35e3c-0382-4b79-ab46-480eab530b3f",
+              "label": "BNE",
+              "color": "#e50000",
+              "orderindex": 1
+            }
+          ]
+        },
+        "date_created": "1734056226269",
+        "hide_from_guests": false,
+        "required": false
+      },
+      {
+        "id": "7ff853ee-87a4-4736-8cd9-6dd68aa7e62f",
+        "name": "QAステータス",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "3332fa61-9be4-4865-91b6-ac8a359aee8f",
+              "name": "1. 起票",
+              "color": null,
+              "orderindex": 0
+            },
+            {
+              "id": "c6a77a6d-3b34-4560-8841-14cd83bd0a51",
+              "name": "2. 新規",
+              "color": "#f9d900",
+              "orderindex": 1
+            },
+            {
+              "id": "0b47fa49-c36b-4507-83b5-3158e7b7bc71",
+              "name": "3. 着手",
+              "color": "#02BCD4",
+              "orderindex": 2
+            },
+            {
+              "id": "ec6ed7f1-f4ce-493a-8c01-c29682cbfd65",
+              "name": "4. 修正完了",
+              "color": "#667684",
+              "orderindex": 3
+            },
+            {
+              "id": "c0de5c24-5658-4d88-a642-6ac31e17c389",
+              "name": "5.修正確認待ち",
+              "color": "#AF7E2E",
+              "orderindex": 4
+            },
+            {
+              "id": "5a9713db-67e0-4a73-a559-3b025252b783",
+              "name": "6.再発",
+              "color": "#e50000",
+              "orderindex": 5
+            },
+            {
+              "id": "475f5a94-c8e0-47fa-a5f1-9b7fa67e1d79",
+              "name": "7.修正確認完了",
+              "color": null,
+              "orderindex": 6
+            },
+            {
+              "id": "52e44b18-f6f7-479e-b67b-2d8f18dec533",
+              "name": "9.仕様",
+              "color": "#1bbc9c",
+              "orderindex": 7
+            },
+            {
+              "id": "06f592d2-0cee-4760-8e1c-30455c7ffc8d",
+              "name": "10.仕様確認完了",
+              "color": "#2ecd6f",
+              "orderindex": 8
+            }
+          ]
+        },
+        "date_created": "1713679979962",
+        "hide_from_guests": false,
+        "value": 6,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "e2fae355-c7f8-444c-9731-0c5f3d8b5f7a",
+        "name": "バグランク",
+        "type": "drop_down",
+        "type_config": {
+          "sorting": "manual",
+          "new_drop_down": true,
+          "options": [
+            {
+              "id": "37d2a87a-74d9-4556-94d4-f094c5680e23",
+              "name": "MF（修正必須）",
+              "color": "#e50000",
+              "orderindex": 0
+            },
+            {
+              "id": "42e43fc9-c7e6-4135-bd84-45de0577e923",
+              "name": "A（要修正）",
+              "color": "#FF7FAB",
+              "orderindex": 1
+            },
+            {
+              "id": "87f36273-b86e-4f73-804f-2e02e6cc4193",
+              "name": "B（原則修正）",
+              "color": "#f9d900",
+              "orderindex": 2
+            },
+            {
+              "id": "d2d3fbd0-e552-4aa1-9f35-5f8a1d81905b",
+              "name": "C（修正推奨）",
+              "color": "#02BCD4",
+              "orderindex": 3
+            },
+            {
+              "id": "5f2e6883-e9fe-42a1-bb20-3a1d57ef88d9",
+              "name": "D（質問）",
+              "color": "#1bbc9c",
+              "orderindex": 4
+            },
+            {
+              "id": "f49e74c6-11ac-412e-8c41-0d8b33837d40",
+              "name": "E（要望）",
+              "color": "#b5bcc2",
+              "orderindex": 5
+            }
+          ]
+        },
+        "date_created": "1713679476223",
+        "hide_from_guests": false,
+        "value": 2,
+        "value_richtext": "",
+        "required": false
+      },
+      {
+        "id": "b449c257-f716-48b3-b8a6-e87eec292868",
+        "name": "修正ビルド",
+        "type": "short_text",
+        "type_config": {},
+        "date_created": "1716194086347",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [
+      {
+        "id": "901807730258",
+        "name": "プランタスク集約リスト"
+      }
+    ],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86evv6360",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901813785587",
+      "name": "データQA_202512020",
+      "access": true
+    },
+    "project": {
+      "id": "90180884069",
+      "name": "QA",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180884069",
+      "name": "QA",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": [
+      {
+        "id": "bf9a02e8-65af-4148-af10-120d808e8fd5.mov",
+        "date": "1765996724856",
+        "title": "ScreenRecording_12-18-2025 03-09-03_1.mov",
+        "type": 2,
+        "source": 1,
+        "version": 0,
+        "extension": "mov",
+        "thumbnail_small": null,
+        "thumbnail_medium": null,
+        "thumbnail_large": null,
+        "is_folder": null,
+        "mimetype": "video/quicktime",
+        "hidden": false,
+        "parent_id": "90180177591311",
+        "size": 41449489,
+        "total_comments": 0,
+        "resolved_comments": 0,
+        "user": {
+          "id": 43594934,
+          "username": "Shingo Maeda",
+          "email": "shingo.maeda@wonderpla.net",
+          "initials": "SM",
+          "color": "#622aea",
+          "profilePicture": "https://attachments.clickup.com/profilePictures/43594934_wew.jpg"
+        },
+        "deleted": false,
+        "orientation": null,
+        "url": "https://t5716001.p.clickup-attachments.com/t5716001/bf9a02e8-65af-4148-af10-120d808e8fd5/ScreenRecording_12-18-2025%2003-09-03_1.mov",
+        "email_data": null,
+        "workspace_id": null,
+        "url_w_query": "https://t5716001.p.clickup-attachments.com/t5716001/bf9a02e8-65af-4148-af10-120d808e8fd5/ScreenRecording_12-18-2025%2003-09-03_1.mov?view=open",
+        "url_w_host": "https://t5716001.p.clickup-attachments.com/t5716001/bf9a02e8-65af-4148-af10-120d808e8fd5/ScreenRecording_12-18-2025%2003-09-03_1.mov"
+      }
+    ]
+  },
+  "comments": [
+    {
+      "id": "90180177720468",
+      "comment": [
+        {
+          "text": "12/18 堤",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-38b9cbc3-9f7c-40ef-86d1-8a79e1763bd2"
+          }
+        },
+        {
+          "text": "【メインクエスト】【推しの子】の各ステージ詳細情報が修正されていることを確認いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-37c57eba-b6be-49c9-9eed-2d28eaa75ba2"
+          }
+        },
+        {
+          "text": "また、ステージ詳細情報の内容が、実機上の動作と一致していることを併せて確認しております。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d66a859a-8da9-4b9b-bf0a-faf381dbb47b"
+          }
+        },
+        {
+          "text": "ご対応頂き、ありがとうございました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e5ff16f4-0653-424d-acca-6867f4d665b2"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-18a19d89-92a2-4446-a281-75c2236801f1"
+          }
+        },
+        {
+          "text": "【修正OK】",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-308552f9-6606-4687-afdc-d22d8360309c"
+          }
+        },
+        {
+          "text": "▼ハード",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5c72dcf2-3ac4-4d64-bfe6-5ea2ffb91d08"
+          }
+        },
+        {
+          "text": "・1話、2話、3話",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-44bf386e-b38b-461a-a322-c8bdc68405d4"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9ce8cd98-23a5-4eb6-9dc3-19f274dbb0a7"
+          }
+        },
+        {
+          "text": "▼エクストラ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b3d3aad1-f15d-491a-94f6-fac9d3823116"
+          }
+        },
+        {
+          "text": "・2話、3話",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3fb87f7a-718c-4642-8eb3-45ea821008dd"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fb616ef0-34ab-437b-95dd-966443864d63"
+          }
+        },
+        {
+          "text": "検証ビルド：iOS #2566、AOS #2566",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b68d21cd-19f9-4d8a-868c-bff9074950fa"
+          }
+        },
+        {
+          "text": "確認環境 ：dev-qa2",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8b36920f-bf91-459f-a67b-62511a4acc51"
+          }
+        },
+        {
+          "text": "検証端末 ：iPad mini（第6世代）（iOS:18.2）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1f550732-4eaf-40d3-8592-0d9e0b2600fa"
+          }
+        },
+        {
+          "text": "　　　　 ：Galaxy S10（AOS:12）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bc883a27-d2c4-4ae7-95e4-baae81c7605d"
+          }
+        }
+      ],
+      "comment_text": "12/18 堤\n【メインクエスト】【推しの子】の各ステージ詳細情報が修正されていることを確認いたしました。\nまた、ステージ詳細情報の内容が、実機上の動作と一致していることを併せて確認しております。\nご対応頂き、ありがとうございました。\n\n【修正OK】\n▼ハード\n・1話、2話、3話\n\n▼エクストラ\n・2話、3話\n\n検証ビルド：iOS #2566、AOS #2566\n確認環境 ：dev-qa2\n検証端末 ：iPad mini（第6世代）（iOS:18.2）\n　　　　 ：Galaxy S10（AOS:12）\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1766045590952",
+      "reply_count": 0
+    },
+    {
+      "id": "90180177591311",
+      "comment": [
+        {
+          "type": "frame",
+          "frame": {
+            "id": "bf9a02e8-65af-4148-af10-120d808e8fd5.mov",
+            "service": "clickup_video",
+            "url": "https://t5716001.p.clickup-attachments.com/t5716001/bf9a02e8-65af-4148-af10-120d808e8fd5/ScreenRecording_12-18-2025%2003-09-03_1.mov?view=open",
+            "src": "https://t5716001.p.clickup-attachments.com/t5716001/bf9a02e8-65af-4148-af10-120d808e8fd5/ScreenRecording_12-18-2025%2003-09-03_1.mov?view=open",
+            "source": 1
+          },
+          "text": "https://t5716001.p.clickup-attachments.com/t5716001/bf9a02e8-65af-4148-af10-120d808e8fd5/ScreenRecording_12-18-2025%2003-09-03_1.mov?view=open",
+          "attributes": {
+            "block-id": "block-d4ffeb9e-4e4f-4494-910a-e415bfaa56d6",
+            "data-size": "large",
+            "data-origin": "attachment"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-11f8f236-80be-4b3e-b3c0-7180d0da5bff"
+          }
+        }
+      ],
+      "comment_text": "https://t5716001.p.clickup-attachments.com/t5716001/bf9a02e8-65af-4148-af10-120d808e8fd5/ScreenRecording_12-18-2025%2003-09-03_1.mov?view=open\n",
+      "user": {
+        "id": 43594934,
+        "username": "Shingo Maeda",
+        "email": "shingo.maeda@wonderpla.net",
+        "color": "#622aea",
+        "initials": "SM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594934_wew.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765996728130",
+      "reply_count": 0
+    },
+    {
+      "id": "90180177591236",
+      "comment": [
+        {
+          "text": "■難易度「ハード」",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5e07ae82-65bb-4b5a-9d98-00b411e71c86",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "▼実機と資料の内容が全体的に相違している",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ffdf368e-3a01-4acf-bfa8-0101d9199e69",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "・1話",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-19f006f2-c254-4367-8647-9fb0ce872753",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "・3話",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-76eb720c-696d-4830-9975-812da9205544",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "※実機上の【属性情報】にて、表示されている属性の敵は出現しないなど",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c92e9bee-e181-48f8-a235-730112ac2c14",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "→承認時に1話と3話の内容を入れ替えた関係で修正漏れておりました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-85d59708-9d0c-40e4-81d5-119cb72b8289"
+          }
+        },
+        {
+          "text": "1話と3話のステージ詳細を入れ替えました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2042402f-1b84-41f2-aa45-5028ebe2f943"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f8bad80c-112c-45e9-ba81-d42abd82e6d6"
+          }
+        },
+        {
+          "text": "▼資料に記載されている内容の敵が出てこない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8b02866a-c98b-4696-a19a-8dcfb321731d",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "・2話",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1db0bbf0-e3e6-4949-ac4a-a0599bd5412b",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "　└敵自身の攻撃UPを使用する敵が出現しない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c2277383-beec-4de6-a765-f3190176b595",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "→こちら該当の記載を削除しました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f98af002-f78c-4707-9c8f-caca0d8a5c49"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-19f9d742-9b88-40d8-8a47-35bdc9131094"
+          }
+        },
+        {
+          "text": "■難易度「エクストラ」",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fce9535a-f242-4b25-b8e1-f54e0ac92494",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "▼実機と資料の内容が相違している",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-30aae06e-d26f-4964-ab11-ec69a0646a3f",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "・2話",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-99f538e0-da47-4709-a91c-870d7295c378",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "　├敵全体の回復ではなく自身しか回復しない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8326d816-e416-41a2-84dc-e29934f5eba5",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "　├火傷攻撃をしてくる敵がいない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d4c86677-dc09-48eb-9dd3-c7090f1ddf65",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "　├ノックバック攻撃をしてくる敵がいる",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ff13e131-713e-47a8-8eca-97f2ec6b9d82",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "　└毒攻撃をしてくる敵がいる",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-54ab61c5-2bed-4625-ba05-d22552e8bee5",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "敵全体の回復ではなく自身しか回復しない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f1147312-655d-4bfd-9703-9f5f87ba9f4f"
+          }
+        },
+        {
+          "text": "→設定確認したら範囲はステージ全体なのですが、対象が1体になってました。現状の対象1体を正として設定はそのままで、ステージ詳細を「敵自身の体力を回復してくる敵」の記載に変更しました",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5e4dd49c-f838-48df-b011-ab7ae5e72fda"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d9d786c7-3c18-4df9-a202-9645139bf88c"
+          }
+        },
+        {
+          "text": "火傷攻撃をしてくる敵がいない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c36c9e88-9e11-445a-aa3e-85f0cd40e348"
+          }
+        },
+        {
+          "text": "→記載削除しました。対抗で火傷軽減の特性を持つキャラを編成しようの記載も同様に削除しました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e85aad12-8e07-4b11-b2b6-ed6a73a2cde1"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4939ed84-ee0a-4292-b828-2aee5ea5c8fb"
+          }
+        },
+        {
+          "text": "ノックバック攻撃をしてくる敵がいる",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b3bb1fd3-c1b6-4632-bc27-d15f0b280bd8"
+          }
+        },
+        {
+          "text": "　└毒攻撃をしてくる敵がいる",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-43e27321-ce15-4fe5-a52a-ca75ba612c25"
+          }
+        },
+        {
+          "text": "→記載追加しました（耐性キャラについてはコマ効果のでの記載と被るので省略しています）。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7947ee91-2015-4033-9ccb-18d82ea749a8"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-12cc390a-ce39-4a12-a3a3-81b8e644e707"
+          }
+        },
+        {
+          "text": "・3話",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-052bb661-90eb-4a0a-88cd-9976faed5128",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "　├【コマ効果情報】で、火傷コマはないが火傷ダメージ軽減の特性について記載されている",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8c9cfae6-cbe2-4041-a71b-0819f555d069",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "　└敵全体の回復ではなく自身しか回復しない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-299d1832-9922-4c5c-a29e-f1959f26fe25",
+            "blockquote": {}
+          }
+        },
+        {
+          "text": "→火傷ダメージ軽減→突風コマ無効化に変更しました",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-627f8789-3c77-40e4-b32d-e453e7771625"
+          }
+        },
+        {
+          "text": "→こちらのキャラは全体に回復効果が発生します（参考動画添付）回復効果は敵のHPが減少しているときにのみ発生していそうです。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-017a8e38-c0b1-40b3-b782-587347e7be9b"
+          }
+        }
+      ],
+      "comment_text": "■難易度「ハード」\n▼実機と資料の内容が全体的に相違している\n・1話\n・3話\n※実機上の【属性情報】にて、表示されている属性の敵は出現しないなど\n→承認時に1話と3話の内容を入れ替えた関係で修正漏れておりました。\n1話と3話のステージ詳細を入れ替えました。\n\n▼資料に記載されている内容の敵が出てこない\n・2話\n　└敵自身の攻撃UPを使用する敵が出現しない\n→こちら該当の記載を削除しました。\n\n■難易度「エクストラ」\n▼実機と資料の内容が相違している\n・2話\n　├敵全体の回復ではなく自身しか回復しない\n　├火傷攻撃をしてくる敵がいない\n　├ノックバック攻撃をしてくる敵がいる\n　└毒攻撃をしてくる敵がいる\n敵全体の回復ではなく自身しか回復しない\n→設定確認したら範囲はステージ全体なのですが、対象が1体になってました。現状の対象1体を正として設定はそのままで、ステージ詳細を「敵自身の体力を回復してくる敵」の記載に変更しました\n\n火傷攻撃をしてくる敵がいない\n→記載削除しました。対抗で火傷軽減の特性を持つキャラを編成しようの記載も同様に削除しました。\n\nノックバック攻撃をしてくる敵がいる\n　└毒攻撃をしてくる敵がいる\n→記載追加しました（耐性キャラについてはコマ効果のでの記載と被るので省略しています）。\n\n・3話\n　├【コマ効果情報】で、火傷コマはないが火傷ダメージ軽減の特性について記載されている\n　└敵全体の回復ではなく自身しか回復しない\n→火傷ダメージ軽減→突風コマ無効化に変更しました\n→こちらのキャラは全体に回復効果が発生します（参考動画添付）回復効果は敵のHPが減少しているときにのみ発生していそうです。\n",
+      "user": {
+        "id": 43594934,
+        "username": "Shingo Maeda",
+        "email": "shingo.maeda@wonderpla.net",
+        "color": "#622aea",
+        "initials": "SM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594934_wew.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765996712203",
+      "reply_count": 0
+    },
+    {
+      "id": "90180176182218",
+      "comment": [
+        {
+          "text": "### 調査方針・解決策の提案\n\n【状況整理】\n本件「【メインクエスト】【推しの子】にて、ステージ詳細情報の内容が実機と相違している箇所がある」は、難易度「ハード」「エクストラ」にて資料と実機で下記相違点が発生しています。\n\n- ステージ詳細情報（属性・敵の出現・行動等）が資料と一致しない\n- エクストラのギミック/コマ効果情報/敵行動内容が異なる\n- 一部敵の行動パターンや特殊効果、出現情報、表示テキストに齟齬あり\n\n【関連・類似タスクの確認】\n同系統の過去事例として、下記タスクが参考となります。\n\n#### 類似事例\n- 「ガシャチケット詳細画面にて、複数のアイテム詳細の内容が実機と資料で相違している」\n  - https://app.clickup.com/t/86et2gxu8\n  - 解決策：\n    - 資料とマスター、実機表示内容の3者間での相違箇所洗い出し・特定\n    - マスターの根本修正 or 資料側修正の判断・改修\n    - 資料側に意図がある場合は、設計or仕様すり合わせ\n  - 担当者：Kenta Inui / Hirano Kento\n\n- 「『リミックスクエスト Vol.2』3話で、詳細情報ダイアログの『ギミック情報』と実際の挙動が相違している」\n  - https://app.clickup.com/t/86euv1nrk\n  - 解決策：\n    - 資料・実機・マスター間の差分調査\n    - 実装またはデータ修正およびダイアログ文言調整\n\n- 「ストーリークエストなどで出現ファントム、ギミック、報酬など設定の実機・資料差異/齟齬報告」（各種多数事例）\n  - 対応パターン：資料/マスター/実装担当者を交えた三者精査→修正方針の決定\n\n---\n【解決策の提案】\n過去類似タスクの運用および本件の規模性から、以下の進め方を推奨します。\n\n#### 1. 資料・マスターデータ・実機差分調査\n- 指摘箇所の「資料」「マスターDB登録値」「実機表示データ・実際挙動」の3点で齟齬点を一覧化します。\n- 資料の「【17.【推しの子】】メインクエスト基礎設計」の該当話数セクションについて、原本を必ず参照ください。\n\n#### 2. 齟齬発生原因の特定\n- マスター側反映漏れ or 資料の未更新 or 実装仕様とのズレ等の観点で分類\n- 効果や属性など、データまわりが複雑な場合は他作品実装と比較しロジックパターン逸脱有無も確認\n\n#### 3. 修正方針のすり合わせ\n- マスター修正、資料修正、またはUI側のみ調整かを開発・プランナー交えて決定\n- ダイアログUI、属性アイコン、行動ロジックなど多岐に渡る場合、改修スコープを明確化\n\n#### 4. 対応実務\n- 原則、[Kenta Inui](mailto:inui@wonderpla.net)さん、[Hirano Kento](mailto:hirano@wonderpla.net)さんが類似案件担当のため、優先アサインを推奨します。\n\n---\n【今回の担当者アサイン提案】\n- 主担当：**Kenta Inui**（データ・DB起点での資料/実装精査および調整実績豊富のため）\n- サブ担当：**Hirano Kento**（資料与件やUIテキスト調整周りの経験あり）\n\n---\n【関連・過去タスク一覧】\n- 「ガシャチケット詳細画面にて、複数のアイテム詳細の内容が実機と資料で相違している」  \n  https://app.clickup.com/t/86et2gxu8\n- 「『リミックスクエスト Vol.2』3話 詳細情報ダイアログと実際の挙動の不整合」  \n  https://app.clickup.com/t/86euv1nrk\n\n---\n\n【備考】\n- クエスト演出やギミックも複数該当が見られるため、QA観点でも他話、他作品での技術的な横展開も視野に入れてください。\n- 修正対象が資料/DB/実装いずれかだけで収まらない場合は、工数・リリースマイルストーンへの影響も合わせてご提示が望ましいです。\n\n---\n\nご対応のほど、よろしくお願いいたします。"
+        }
+      ],
+      "comment_text": "### 調査方針・解決策の提案\n\n【状況整理】\n本件「【メインクエスト】【推しの子】にて、ステージ詳細情報の内容が実機と相違している箇所がある」は、難易度「ハード」「エクストラ」にて資料と実機で下記相違点が発生しています。\n\n- ステージ詳細情報（属性・敵の出現・行動等）が資料と一致しない\n- エクストラのギミック/コマ効果情報/敵行動内容が異なる\n- 一部敵の行動パターンや特殊効果、出現情報、表示テキストに齟齬あり\n\n【関連・類似タスクの確認】\n同系統の過去事例として、下記タスクが参考となります。\n\n#### 類似事例\n- 「ガシャチケット詳細画面にて、複数のアイテム詳細の内容が実機と資料で相違している」\n  - https://app.clickup.com/t/86et2gxu8\n  - 解決策：\n    - 資料とマスター、実機表示内容の3者間での相違箇所洗い出し・特定\n    - マスターの根本修正 or 資料側修正の判断・改修\n    - 資料側に意図がある場合は、設計or仕様すり合わせ\n  - 担当者：Kenta Inui / Hirano Kento\n\n- 「『リミックスクエスト Vol.2』3話で、詳細情報ダイアログの『ギミック情報』と実際の挙動が相違している」\n  - https://app.clickup.com/t/86euv1nrk\n  - 解決策：\n    - 資料・実機・マスター間の差分調査\n    - 実装またはデータ修正およびダイアログ文言調整\n\n- 「ストーリークエストなどで出現ファントム、ギミック、報酬など設定の実機・資料差異/齟齬報告」（各種多数事例）\n  - 対応パターン：資料/マスター/実装担当者を交えた三者精査→修正方針の決定\n\n---\n【解決策の提案】\n過去類似タスクの運用および本件の規模性から、以下の進め方を推奨します。\n\n#### 1. 資料・マスターデータ・実機差分調査\n- 指摘箇所の「資料」「マスターDB登録値」「実機表示データ・実際挙動」の3点で齟齬点を一覧化します。\n- 資料の「【17.【推しの子】】メインクエスト基礎設計」の該当話数セクションについて、原本を必ず参照ください。\n\n#### 2. 齟齬発生原因の特定\n- マスター側反映漏れ or 資料の未更新 or 実装仕様とのズレ等の観点で分類\n- 効果や属性など、データまわりが複雑な場合は他作品実装と比較しロジックパターン逸脱有無も確認\n\n#### 3. 修正方針のすり合わせ\n- マスター修正、資料修正、またはUI側のみ調整かを開発・プランナー交えて決定\n- ダイアログUI、属性アイコン、行動ロジックなど多岐に渡る場合、改修スコープを明確化\n\n#### 4. 対応実務\n- 原則、[Kenta Inui](mailto:inui@wonderpla.net)さん、[Hirano Kento](mailto:hirano@wonderpla.net)さんが類似案件担当のため、優先アサインを推奨します。\n\n---\n【今回の担当者アサイン提案】\n- 主担当：**Kenta Inui**（データ・DB起点での資料/実装精査および調整実績豊富のため）\n- サブ担当：**Hirano Kento**（資料与件やUIテキスト調整周りの経験あり）\n\n---\n【関連・過去タスク一覧】\n- 「ガシャチケット詳細画面にて、複数のアイテム詳細の内容が実機と資料で相違している」  \n  https://app.clickup.com/t/86et2gxu8\n- 「『リミックスクエスト Vol.2』3話 詳細情報ダイアログと実際の挙動の不整合」  \n  https://app.clickup.com/t/86euv1nrk\n\n---\n\n【備考】\n- クエスト演出やギミックも複数該当が見られるため、QA観点でも他話、他作品での技術的な横展開も視野に入れてください。\n- 修正対象が資料/DB/実装いずれかだけで収まらない場合は、工数・リリースマイルストーンへの影響も合わせてご提示が望ましいです。\n\n---\n\nご対応のほど、よろしくお願いいたします。",
+      "user": {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "email": "t-takahashi@wonderpla.net",
+        "color": "#536cfe",
+        "initials": "TT",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765512126241",
+      "reply_count": 0
+    }
+  ]
+}
