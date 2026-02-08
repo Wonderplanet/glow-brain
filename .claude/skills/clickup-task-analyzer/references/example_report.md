@@ -30,19 +30,19 @@
 ### サーバーエンジニア
 
 **主な担当者**:
-- Daiki Kawasaki
-- Junki Mizutani
+- Takeshi Tanaka
+- Yuki Suzuki
 
 **作業内容**:
-1. **(サバ)スタミナ回復アイテム** (Junki Mizutani)
+1. **(サバ)スタミナ回復アイテム** (Yuki Suzuki)
    - 期限: 2025-12-05
    - 固定値回復アイテム対応、プリズム・広告視聴上限拡張
 
-2. **(サバ)BOXガシャ** (Daiki Kawasaki)
+2. **(サバ)BOXガシャ** (Takeshi Tanaka)
    - 期限: 2025-12-19
    - BOXガシャのサーバー側API実装
 
-3. **管理ツール_BOXガシャ** (Daiki Kawasaki)
+3. **管理ツール_BOXガシャ** (Takeshi Tanaka)
    - 期限: 2025-12-26
    - 管理ツールでのBOXガシャ設定機能
 
@@ -52,13 +52,13 @@
 ### クライアントエンジニア
 
 **主な担当者**:
-- Kiryu Yamashita（BOXガシャメイン担当）
-- Keisuke Isayama（スタミナ回復、作品バフ担当）
-- daichi_takishima（ガシャ一覧、全体調整担当）
+- Hiroshi Sato（BOXガシャメイン担当）
+- Kentaro Ito（スタミナ回復、作品バフ担当）
+- kenji_watanabe（ガシャ一覧、全体調整担当）
 
 **作業内容**:
 
-#### Kiryu Yamashita
+#### Hiroshi Sato
 1. **(クラ)BOXガシャ(Data層対応)** - 期限: 2025-12-18
 2. **(クラ)BOXガシャ(Domain層対応1)** - 期限: 2025-12-24
 3. **(クラ)BOXガシャ(Boxガチャラインナップ画面)** - 期限: 2025-12-25
@@ -69,21 +69,21 @@
 **所要期間**: 約1ヶ月（段階的実装）
 **実装順序**: Data層 → Domain層 → UI層（ラインナップ画面・結果画面）→ 統合
 
-#### Keisuke Isayama
+#### Kentaro Ito
 1. **(クラ)スタミナ回復アイテム** - 期限: 2025-12-25
-2. **(スキル_作品バフ)ステージスペシャルルールによる付与** - 期限: 2025-12-23（wataru shigeyamaと共同）
+2. **(スキル_作品バフ)ステージスペシャルルールによる付与** - 期限: 2025-12-23（Taro Yamadaと共同）
 
-#### Kenta Inui
+#### Masato Kobayashi
 1. **(スキル_作品バフ)スキルによる付与** - 期限: 2025-12-23
 2. **スキル：作品・キャラID絞り込み** - 期限: なし
 
-#### wataru shigeyama
-1. **(スキル_作品バフ)ステージスペシャルルールによる付与** - 期限: 2025-12-23（Keisuke Isayamaと共同）
+#### Taro Yamada
+1. **(スキル_作品バフ)ステージスペシャルルールによる付与** - 期限: 2025-12-23（Kentaro Itoと共同）
 
 **作業フェーズ**: 12月下旬（スキルシステム拡張）
 **所要期間**: 約1週間
 
-#### daichi_takishima
+#### kenji_watanabe
 1. **GachaListViewでContentView出す** - 期限: 2025-12-11
 2. **チュートリアル周り調整** - 期限: 2025-12-11
 3. **(クラ)ガシャ一覧画面の刷新** - 期限: 2026-01-13
@@ -94,21 +94,21 @@
 ### UIデザイナー
 
 **主な担当者**:
-- Rira Mochizuki
-- Miharu Kimura
-- donghyeok kim
+- Yumi Nakamura
+- Aiko Takahashi
+- Souta Matsumoto
 
 **作業内容**:
 
-#### Rira Mochizuki
+#### Yumi Nakamura
 1. **v1.5.0(01_07)3_(UI)スタミナ回復アイテムT8** - 期限: 2025-12-09
 2. **地獄楽分のガシャプレハブ作成とテンプレート作成** - 期限: 2026-01-06
 3. **v1.5.0(01_07)5_(UI)ガシャ一覧画面の刷新_T3** - 期限: 2026-01-07
 
-#### Miharu Kimura
+#### Aiko Takahashi
 1. **v1.5.0(01_07)11_(UI)BOXガシャT9** - 期限: 2026-01-05
 
-#### donghyeok kim
+#### Souta Matsumoto
 - 複数機能のUI作成に参画（BOXガシャ、ガシャ一覧画面、スタミナ回復アイテム）
 
 **作業フェーズ**: 12月上旬～1月上旬（クライアント実装と並行）
@@ -117,7 +117,7 @@
 ### プランナー/ディレクター
 
 **主な担当者**:
-- Ryosuke Goto（要件定義）
+- Shinji Yamamoto（要件定義）
 
 **作業内容**:
 - 各機能の要件定義・仕様策定
@@ -143,7 +143,7 @@
 ### その他
 
 **データエンジニア**:
-- **データレイク転送テスト** (Junki Mizutani) - 期限: 2026-01-23
+- **データレイク転送テスト** (Yuki Suzuki) - 期限: 2026-01-23
 
 **リリース管理**:
 - **サブミット対応** - 期限: 2026-01-30（担当未割り当て）
@@ -155,26 +155,26 @@
 
 ```
 2025-12-05  プロジェクト開始
-   |        - スタミナ回復アイテム実装開始 (Junki)
+   |        - スタミナ回復アイテム実装開始 (Yuki)
    v
 12月上旬   サーバー実装開始
-   |        - UI実装開始 (Rira)
+   |        - UI実装開始 (Yumi)
    |
    v
 12月中旬   クライアント実装本格化
-   |        - BOXガシャ Data層 (Kiryu)
-   |        - サーバーBOXガシャ完了 (Daiki)
+   |        - BOXガシャ Data層 (Hiroshi)
+   |        - サーバーBOXガシャ完了 (Takeshi)
    |
    v
 12月下旬   各機能実装進行
-   |        - BOXガシャ Domain層 (Kiryu)
+   |        - BOXガシャ Domain層 (Hiroshi)
    |        - 作品バフスキル実装 (Kenta, wataru, Keisuke)
    |        - スタミナ回復完了
    |
    v
 1月上旬    UI実装完了
    |        - BOXガシャUI完成 (Miharu, Rira)
-   |        - 結果画面実装 (Kiryu)
+   |        - 結果画面実装 (Hiroshi)
    |
    v
 1月中旬    各機能統合完了
@@ -297,8 +297,8 @@
 | UIデザイナー | 3名 | 12月上旬～1月上旬 | 中 |
 
 **備考**:
-- クライアントエンジニア（特にKiryu Yamashita）がBOXガシャの大部分を担当し、高負荷
-- Kenta Inui、wataru shigeyamaはスキルシステム拡張を担当
+- クライアントエンジニア（特にHiroshi Sato）がBOXガシャの大部分を担当し、高負荷
+- Masato Kobayashi、Taro Yamadaはスキルシステム拡張を担当
 - UIデザイナーは複数機能に分散して参画
 - QA専任メンバーはタスク管理システムに記録されず（開発メンバー全員がQA期間に参加）
 

@@ -67,10 +67,10 @@ class ClickUpTaskAnalyzer:
         名前を正規化（小文字化、統一形式に変換）
 
         Examples:
-            "Daiki Kawasaki" -> "daiki kawasaki"
-            "daichi_takishima" -> "daichi takishima"
-            "donghyeok kim" -> "donghyeok kim"
-            "KobayashiRikaco" -> "kobayashirikaco"
+            "Takeshi Tanaka" -> "takeshi tanaka"
+            "kenji_watanabe" -> "kenji watanabe"
+            "souta matsumoto" -> "souta matsumoto"
+            "EriYoshida" -> "eriyoshida"
         """
         if not name:
             return ""

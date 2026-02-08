@@ -162,13 +162,13 @@ MM月XX旬   フェーズ名
 ### 例
 ```
 2025-12-05  プロジェクト開始
-   |        - スタミナ回復アイテム実装開始 (Junki)
+   |        - スタミナ回復アイテム実装開始 (Yuki)
    v
 12月上旬   サーバー実装開始
-   |        - UI実装開始 (Rira)
+   |        - UI実装開始 (Yumi)
    v
 12月中旬   クライアント実装本格化
-   |        - BOXガシャ Data層 (Kiryu)
+   |        - BOXガシャ Data層 (Hiroshi)
 ```
 
 ## 工数分析ルール
@@ -204,7 +204,7 @@ MM月XX旬   フェーズ名
 ```markdown
 ### プランナー/ディレクター
 
-#### Kenta Inui
+#### Masato Kobayashi
 1. (スキル_作品バフ)スキルによる付与  ← 誤り（クライアントエンジニアの作業）
 ```
 
@@ -212,7 +212,7 @@ MM月XX旬   フェーズ名
 ```markdown
 ### クライアントエンジニア
 
-#### Kenta Inui
+#### Masato Kobayashi
 1. (スキル_作品バフ)スキルによる付与  ← 正しい
 ```
 
@@ -222,9 +222,9 @@ MM月XX旬   フェーズ名
 ### QA
 
 **担当者**:
-- daichi_takishima
-- Kazuomi Sawada
-- wataru shigeyama
+- kenji_watanabe
+- Daisuke Fujita
+- Taro Yamada
 ...（開発メンバー全員） ← 誤り
 ```
 
