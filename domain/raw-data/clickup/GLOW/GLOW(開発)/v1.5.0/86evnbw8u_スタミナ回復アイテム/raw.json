@@ -1,0 +1,1257 @@
+{
+  "task": {
+    "id": "86evnbw8u",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "スタミナ回復アイテム",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "237864690.00000000000000000000000000000000",
+    "date_created": "1764130285072",
+    "date_updated": "1770175299782",
+    "date_closed": "1770175299782",
+    "date_done": "1768893376178",
+    "archived": false,
+    "creator": {
+      "id": 25540505,
+      "username": "Toshikazu Takahashi",
+      "color": "#536cfe",
+      "email": "t-takahashi@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+    },
+    "assignees": [
+      {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "email": "keisuke.isayama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      },
+      {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "email": "junki.mizutani@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      {
+        "id": 43594922,
+        "username": "Rira Mochizuki",
+        "color": "#8ac34a",
+        "initials": "RM",
+        "email": "mochizuki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594922_r9h.jpg"
+      },
+      {
+        "id": 7859650,
+        "username": "donghyeok kim",
+        "color": "#3e2724",
+        "initials": "DK",
+        "email": "donghyeok-kim@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7859650_EMB.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 7807756,
+        "username": "daichi_takishima",
+        "color": "#04a9f4",
+        "initials": "D",
+        "email": "takishima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7807756_rQr.jpg"
+      },
+      {
+        "id": 7859650,
+        "username": "donghyeok kim",
+        "color": "#3e2724",
+        "initials": "DK",
+        "email": "donghyeok-kim@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7859650_EMB.jpg"
+      },
+      {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "color": "#536cfe",
+        "initials": "TT",
+        "email": "t-takahashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "email": "junki.mizutani@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 43594922,
+        "username": "Rira Mochizuki",
+        "color": "#8ac34a",
+        "initials": "RM",
+        "email": "mochizuki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594922_r9h.jpg"
+      },
+      {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "color": "#f57c01",
+        "initials": "RG",
+        "email": "r-goto@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "color": "",
+        "initials": "KA",
+        "email": "confidence-q12@cfd-qa.jp",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "email": "keisuke.isayama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": null,
+    "top_level_parent": null,
+    "priority": null,
+    "due_date": "1766602800000",
+    "start_date": null,
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "value": "true",
+        "value_richtext": null,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86evnbw8u",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": [
+    {
+      "id": "90180189415784",
+      "comment": [
+        {
+          "text": "(PRからの自動投稿です)\n\n## 実装内容について\n\n### 影響範囲\n- 21-1_ヘッダー\n\n### QA連絡事項\nサーバー観点で下記の確認もお願いできますと幸いです。\n- 下記のような条件内で、1度に複数個のスタミナ回復アイテムを消費し、その分回復できること。消費個数が多すぎる場合は、回復できないこと。\n  - 例：スタミナが50/180の場合（アイテム1個で+90回復）\n    - 1個目使用: 50+90=140（< 180なので、まだ2個目も使用可能）\n    - 2個目使用: 140+90=230（> 180だが、230まで回復OK）\n    - 2個目使用後は「現在スタミナ230」>「スタミナ上限180」なので、3個目は使用不可\n\n---\n\nPR: [#2186 1.5.0 → STAGING デプロイPR](https://github.com/Wonderplanet/glow-server/pull/2186)"
+        }
+      ],
+      "comment_text": "(PRからの自動投稿です)\n\n## 実装内容について\n\n### 影響範囲\n- 21-1_ヘッダー\n\n### QA連絡事項\nサーバー観点で下記の確認もお願いできますと幸いです。\n- 下記のような条件内で、1度に複数個のスタミナ回復アイテムを消費し、その分回復できること。消費個数が多すぎる場合は、回復できないこと。\n  - 例：スタミナが50/180の場合（アイテム1個で+90回復）\n    - 1個目使用: 50+90=140（< 180なので、まだ2個目も使用可能）\n    - 2個目使用: 140+90=230（> 180だが、230まで回復OK）\n    - 2個目使用後は「現在スタミナ230」>「スタミナ上限180」なので、3個目は使用不可\n\n---\n\nPR: [#2186 1.5.0 → STAGING デプロイPR](https://github.com/Wonderplanet/glow-server/pull/2186)",
+      "user": {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "email": "junki.mizutani@wonderpla.net",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1769754760048",
+      "reply_count": 0
+    },
+    {
+      "id": "90180186633477",
+      "comment": [
+        {
+          "text": "1/20 安達",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0a90843d-883c-43b6-b7c2-4044e05ac11b"
+          }
+        },
+        {
+          "text": "スタミナドリンク、およびスタミナボトルに関する表示、各動作について",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2e3cbaee-4234-4c8f-951a-c29443f15ee2"
+          }
+        },
+        {
+          "text": "問題がないことを確認いたしました。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f915aa1c-5303-4888-a9ce-b246dd14fba2"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7a4b9e32-1b1b-4531-9b0c-e7b9fbe5f7f4"
+          }
+        },
+        {
+          "text": "※検証内容の詳細については下記項目書を参照",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cf0b8c7f-7123-4b5f-846b-db2ebd52d994"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8f796fcd-ade0-4249-a637-b6a3ce47d3e9"
+          }
+        },
+        {
+          "text": "【v1.5.0】スタミナ回復アイテム検証_項目書",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2c4346d6-951f-4918-bc35-66868bad1229"
+          }
+        },
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/spreadsheets/d/1RPxtUOYo63bJ2Tl8L-I7xC7uulWddCW_VCiTpN28lvI/edit?gid=684778255#gid=684778255"
+          },
+          "text": ""
+        },
+        {
+          "text": " ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b3acc6b5-267d-4a17-975a-c3ed8b4f4035"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-19401d08-4d10-49a5-9272-4e4cc75ace52"
+          }
+        },
+        {
+          "text": "確認ビルド：iOS#27(569)、AOS#27(570)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-00108b43-610e-4612-b08f-611afaf481bc"
+          }
+        },
+        {
+          "text": "確認環境：develop",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f83331ec-0bb5-4d73-a73b-b0498aa995b7"
+          }
+        },
+        {
+          "text": "確認端末：iPhoneSE3(iOS:18.6)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0e1c83a6-4209-4f80-8ea0-d9bd46c5eb99"
+          }
+        },
+        {
+          "text": "　　　　　ZenFone6(AOS:9.0)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-85681ffa-2020-4803-b2eb-6fc9ebe88a0f"
+          }
+        }
+      ],
+      "comment_text": "1/20 安達\nスタミナドリンク、およびスタミナボトルに関する表示、各動作について\n問題がないことを確認いたしました。\n\n※検証内容の詳細については下記項目書を参照\n\n【v1.5.0】スタミナ回復アイテム検証_項目書\ndocs.google.com/spreadsheets/d/1RPxtUOYo63bJ2Tl8L-I7xC7uulWddCW_VCiTpN28lvI/edit?gid=684778255#gid=684778255 \n  \n\n確認ビルド：iOS#27(569)、AOS#27(570)\n確認環境：develop\n確認端末：iPhoneSE3(iOS:18.6)\n　　　　　ZenFone6(AOS:9.0)\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1768893193962",
+      "reply_count": 0
+    },
+    {
+      "id": "90180186293507",
+      "comment": [
+        {
+          "text": "(PRからの自動投稿です)\n\n## 実装内容について\n\n### 影響範囲\n- 21-1_ヘッダー\n\n### QA連絡事項\nサーバー観点で下記の確認もお願いできますと幸いです。\n- 下記のような条件内で、1度に複数個のスタミナ回復アイテムを消費し、その分回復できること。消費個数が多すぎる場合は、回復できないこと。\n  - 例：スタミナが50/180の場合（アイテム1個で+90回復）\n    - 1個目使用: 50+90=140（< 180なので、まだ2個目も使用可能）\n    - 2個目使用: 140+90=230（> 180だが、230まで回復OK）\n    - 2個目使用後は「現在スタミナ230」>「スタミナ上限180」なので、3個目は使用不可\n\n---\n\nPR: [#2156 v1.5.0 QAデプロイ](https://github.com/Wonderplanet/glow-server/pull/2156)"
+        }
+      ],
+      "comment_text": "(PRからの自動投稿です)\n\n## 実装内容について\n\n### 影響範囲\n- 21-1_ヘッダー\n\n### QA連絡事項\nサーバー観点で下記の確認もお願いできますと幸いです。\n- 下記のような条件内で、1度に複数個のスタミナ回復アイテムを消費し、その分回復できること。消費個数が多すぎる場合は、回復できないこと。\n  - 例：スタミナが50/180の場合（アイテム1個で+90回復）\n    - 1個目使用: 50+90=140（< 180なので、まだ2個目も使用可能）\n    - 2個目使用: 140+90=230（> 180だが、230まで回復OK）\n    - 2個目使用後は「現在スタミナ230」>「スタミナ上限180」なので、3個目は使用不可\n\n---\n\nPR: [#2156 v1.5.0 QAデプロイ](https://github.com/Wonderplanet/glow-server/pull/2156)",
+      "user": {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "email": "junki.mizutani@wonderpla.net",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1768812917173",
+      "reply_count": 0
+    },
+    {
+      "id": "90180183310067",
+      "comment": [
+        {
+          "type": "bookmark",
+          "bookmark": {
+            "service": "gsheets",
+            "id": "https://docs.google.com/spreadsheets/d/1cCieFqVSDvLlO-5mdm61YBLggtklRyUg8QV4I_q7mCk/edit",
+            "url": "https://docs.google.com/spreadsheets/d/1cCieFqVSDvLlO-5mdm61YBLggtklRyUg8QV4I_q7mCk/edit?gid=0#gid=0"
+          },
+          "attributes": {
+            "block-id": "block-aeee9a6c-3f2e-411f-878d-c3ec25d71d88",
+            "body-type": "image",
+            "unfurled": "true"
+          }
+        },
+        {
+          "text": "ビルド番号",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-c09e941d-0684-4768-a727-23dde2cbc3bd"
+          }
+        },
+        {
+          "text": "ios:#722",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6d89089a-5e00-4bd2-837f-83d4a77147de"
+          }
+        },
+        {
+          "text": "android:#698",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7067b7c9-2e8d-4dcd-9fe5-7c9d65393818"
+          }
+        }
+      ],
+      "comment_text": "undefinedビルド番号\nios:#722\nandroid:#698\n",
+      "user": {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "email": "keisuke.isayama@wonderpla.net",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767924489048",
+      "reply_count": 0
+    },
+    {
+      "id": "90180177650745",
+      "comment": [
+        {
+          "text": "## 実装内容について",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b99aaccd-93ec-4f14-8dac-acf49b2eb4dc"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f1a3328a-c20b-4153-bdef-b7ed3f56e0bd"
+          }
+        },
+        {
+          "text": "### 影響範囲",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bcbe2175-d369-4126-b0c8-e2690598d225"
+          }
+        },
+        {
+          "text": "- 21-1_ヘッダー：スタミナ購入周り全て（広告視聴、プリズム消費 でのスタミナ回復も含む）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8147bd35-9a71-4e48-a201-6aada492b501"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-190e1c39-8d33-4606-981a-417fea4eba6f"
+          }
+        },
+        {
+          "text": "### QA連絡事項",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3d12a3bb-19cd-424d-b88a-e588d7720b26"
+          }
+        },
+        {
+          "text": "サーバー観点で下記の確認もお願いできますと幸いです。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9081cebc-d61d-421a-a44a-0d142e4ba682"
+          }
+        },
+        {
+          "text": "- プリズム消費、広告視聴、アイテム 全てにおいて下記の挙動になること",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7bcd8066-a3df-4b69-9a38-c94c5c9e4b30"
+          }
+        },
+        {
+          "text": "  - 回復前に999だった場合は、回復できない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-11b7a583-0692-4a8d-8eb2-2403c7f8c553"
+          }
+        },
+        {
+          "text": "  - 回復前に999未満だった場合は、回復できる",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b576d95b-1de3-402c-9317-cb78910bf0b9"
+          }
+        },
+        {
+          "text": "- アイテム回復において、下記の挙動になること",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-78a20236-09b2-4a9b-b61e-d18e7cf9a785"
+          }
+        },
+        {
+          "text": "  - 回復前に999未満で、アイテムを複数消費した際に、完全に破棄されるアイテムがある場合は、回復できない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-21d0db00-b58d-418c-b1f6-25b3ce228079"
+          }
+        },
+        {
+          "text": "    - 例：回復前に800で、100回復アイテムを、3つ消費しようとした場合は、回復できない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3fde53b0-95e4-4efa-9091-e58db7d89650"
+          }
+        },
+        {
+          "text": "      - 2個分は切り捨てありで正常に回復できる：800 + 100 + 99(999を超えないように1は切り捨て)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1cff583c-c518-4536-be99-28954e7aebe7"
+          }
+        },
+        {
+          "text": "      - 残りの1個は、完全に切り捨てになるため",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-e8c3d9d8-c6a9-4daf-a9e2-c9e093f6b20e"
+          }
+        },
+        {
+          "text": "      - ユーザーに無駄な消費をさせないために、回復できない",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-864fd162-17aa-41f9-8d75-886a03dee743"
+          }
+        },
+        {
+          "text": "    - 個数選択ダイアログで、上記ケースができない状態であれば問題ないです",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b3673246-e54d-4a48-af3c-b3c833778bae"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b82b382f-96c4-49ec-85ba-60e0a1950dde"
+          }
+        },
+        {
+          "text": "---",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-86eb713a-b8d8-4114-b80e-99f4ff810e3e"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ff1d8b0c-2a48-49d2-a023-322b5393938a"
+          }
+        },
+        {
+          "text": "PR: [#2100 スタミナ回復アイテム：固定値回復アイテム追加とシステム上限チェックの対応](",
+          "attributes": {}
+        },
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://github.com/Wonderplanet/glow-server/pull/2100"
+          },
+          "text": ""
+        },
+        {
+          "text": " ",
+          "attributes": {
+            "link": "https://github.com/Wonderplanet/glow-server/pull/2100"
+          }
+        },
+        {
+          "text": ")",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-25aaef21-ebf1-47a1-8d90-3186bee4b6a4"
+          }
+        }
+      ],
+      "comment_text": "## 実装内容について\n\n### 影響範囲\n- 21-1_ヘッダー：スタミナ購入周り全て（広告視聴、プリズム消費 でのスタミナ回復も含む）\n\n### QA連絡事項\nサーバー観点で下記の確認もお願いできますと幸いです。\n- プリズム消費、広告視聴、アイテム 全てにおいて下記の挙動になること\n  - 回復前に999だった場合は、回復できない\n  - 回復前に999未満だった場合は、回復できる\n- アイテム回復において、下記の挙動になること\n  - 回復前に999未満で、アイテムを複数消費した際に、完全に破棄されるアイテムがある場合は、回復できない\n    - 例：回復前に800で、100回復アイテムを、3つ消費しようとした場合は、回復できない\n      - 2個分は切り捨てありで正常に回復できる：800 + 100 + 99(999を超えないように1は切り捨て)\n      - 残りの1個は、完全に切り捨てになるため\n      - ユーザーに無駄な消費をさせないために、回復できない\n    - 個数選択ダイアログで、上記ケースができない状態であれば問題ないです\n\n---\n\nPR: [#2100 スタミナ回復アイテム：固定値回復アイテム追加とシステム上限チェックの対応](github.com/Wonderplanet/glow-server/pull/2100 \n  )\n",
+      "user": {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "email": "junki.mizutani@wonderpla.net",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1766027930542",
+      "reply_count": 0
+    },
+    {
+      "id": "90180176713759",
+      "comment": [
+        {
+          "text": "2025/12/15 12:00 mtgで、話したことメモ（",
+          "attributes": {}
+        },
+        {
+          "text": "slack",
+          "attributes": {
+            "link": "https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1765769117646539?thread_ts=1765530849.876079&cid=C069N3UL80H"
+          }
+        },
+        {
+          "text": "）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f895277a-5dcb-4bd5-b4d7-eccda5673eda"
+          }
+        },
+        {
+          "text": "サーバー実装の割合回復の実装は残しておく",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-aaea9bca-a255-4c82-995f-9c0add569cbb",
+            "list": {
+              "list": "bullet"
+            }
+          }
+        },
+        {
+          "text": "プリズム、広告視聴のスタミナ回復の上限もシステム上限999に変更",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-bdaef2c7-a0ba-41e7-a05e-2504311287c6",
+            "list": {
+              "list": "bullet"
+            }
+          }
+        },
+        {
+          "text": "システム上限を超えるか超えないかで、回復ボタンを押せるか押せないか について",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1e7a43f9-491f-4259-beaf-c6591b4f5d91",
+            "list": {
+              "list": "bullet"
+            }
+          }
+        },
+        {
+          "text": "一部回復できて、一部切り捨てのケースでは、回復はできる",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "indent": 1,
+            "block-id": "block-79adc9dd-4ede-4fad-843f-3b8519cace20",
+            "list": {
+              "list": "bullet"
+            }
+          }
+        },
+        {
+          "text": "例：901 + 100 の回復はできるが、999になる。2は切り捨て。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "indent": 2,
+            "block-id": "block-640dc48d-efbf-4795-a66d-9a2b5bdd08d0",
+            "list": {
+              "list": "bullet"
+            }
+          }
+        },
+        {
+          "text": "全て切り捨てのケースでは、回復不可。サーバーエラーを出して、エラーダイアログ出す。",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "indent": 1,
+            "block-id": "block-b10a7aed-3e83-4d14-a025-c4e4d46732a1",
+            "list": {
+              "list": "bullet"
+            }
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-11f28657-0257-4f0b-b9d4-485a261b7108"
+          }
+        }
+      ],
+      "comment_text": "2025/12/15 12:00 mtgで、話したことメモ（slack）\nサーバー実装の割合回復の実装は残しておく\nプリズム、広告視聴のスタミナ回復の上限もシステム上限999に変更\nシステム上限を超えるか超えないかで、回復ボタンを押せるか押せないか について\n一部回復できて、一部切り捨てのケースでは、回復はできる\n例：901 + 100 の回復はできるが、999になる。2は切り捨て。\n全て切り捨てのケースでは、回復不可。サーバーエラーを出して、エラーダイアログ出す。\n\n",
+      "user": {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "email": "junki.mizutani@wonderpla.net",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765769246057",
+      "reply_count": 0
+    },
+    {
+      "id": "90180174700553",
+      "comment": [
+        {
+          "text": "仕様要件書は以下です",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0857b452-e606-407d-aaf3-1a2bbfcb255e"
+          }
+        },
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/presentation/d/1tBpInDJcKFMsXyQ0u7Ig4uI9l1FG4fBB7n_5DoWiRHg/edit?slide=id.g3ae01cfc717_0_231#slide=id.g3ae01cfc717_0_231"
+          },
+          "text": ""
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-43baacb4-660b-46f3-9b6b-3c0ec11223b0"
+          }
+        }
+      ],
+      "comment_text": "仕様要件書は以下です\ndocs.google.com/presentation/d/1tBpInDJcKFMsXyQ0u7Ig4uI9l1FG4fBB7n_5DoWiRHg/edit?slide=id.g3ae01cfc717_0_231#slide=id.g3ae01cfc717_0_231 \n \n",
+      "user": {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "email": "r-goto@wonderpla.net",
+        "color": "#f57c01",
+        "initials": "RG",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1764990226109",
+      "reply_count": 0
+    },
+    {
+      "id": "90180173889899",
+      "comment": [
+        {
+          "text": "仕様変更前の内容なので、コメントアウト",
+          "attributes": {
+            "bold": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-85bfbf04-62d6-4dfa-b726-970af0a98c3f"
+          }
+        },
+        {
+          "text": "---",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3ff2bd7b-203f-4678-8b20-b19e7c3c9430"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6132a4ab-0112-4b81-ae30-8befbbe4f8dc"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ddcf6c36-8067-44d2-a8d8-bbf66b137c1e"
+          }
+        },
+        {
+          "text": "(PRからの自動投稿です)",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fea14a9b-67a2-42b9-81fa-633d2744df67"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-62ea01e2-df50-4de5-83bb-8adfc4be5768"
+          }
+        },
+        {
+          "text": "## 実装内容について",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0709bb17-5f91-4407-a6f6-f91e73a30f61"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-fb6f95d8-d78b-436c-bae5-e9c1b9d0d5eb"
+          }
+        },
+        {
+          "text": "### 影響範囲",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-260fcf89-bc0a-46d1-95e7-f9bf52a92c82"
+          }
+        },
+        {
+          "text": "- 21-1_ヘッダー",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7389bbf7-920d-4f5e-a8c5-92e6e9dfad55"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-91655877-5a88-4ae2-a268-40d2c167bcf2"
+          }
+        },
+        {
+          "text": "### QA連絡事項",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8836352a-9e0a-4121-aa7f-dc72faa97e20"
+          }
+        },
+        {
+          "text": "サーバー観点で下記の確認もお願いできますと幸いです。",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-6646e8b7-8c4a-493c-8d28-457101304019"
+          }
+        },
+        {
+          "text": "- 下記のような条件内で、1度に複数個のスタミナ回復アイテムを消費し、その分回復できること。消費個数が多すぎる場合は、回復できないこと。",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-3f7bd59c-d1ed-4407-9f85-42f987258720"
+          }
+        },
+        {
+          "text": "  - 例：スタミナが50/180の場合（アイテム1個で+90回復）",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-882140df-838e-4900-a5f4-c067ef72e738"
+          }
+        },
+        {
+          "text": "    - 1個目使用: 50+90=140（< 180なので、まだ2個目も使用可能）",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-cc80eadc-4103-40a5-9b5a-4f2512f136e5"
+          }
+        },
+        {
+          "text": "    - 2個目使用: 140+90=230（> 180だが、230まで回復OK）",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7f81943a-5459-4a86-8e59-c8f7829eae41"
+          }
+        },
+        {
+          "text": "    - 2個目使用後は「現在スタミナ230」>「スタミナ上限180」なので、3個目は使用不可",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-16d8c7aa-5e99-4a4c-a724-5883a6de75b0"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-2b50accc-022b-4467-9dfc-0fa5f6b49a77"
+          }
+        },
+        {
+          "text": "---",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8a5c43d2-cd3b-42e6-a4ef-e7f944b9fe5b"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-8d63b63d-22c5-4c8a-9200-93bf2b78bcd5"
+          }
+        },
+        {
+          "text": "PR: [#2048 スタミナ回復アイテムの新規実装](https://github.com/Wonderplanet/glow-server/pull/2048)",
+          "attributes": {
+            "strike": true
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-146ba052-7161-4c82-baa6-0d335f1cf6ae"
+          }
+        }
+      ],
+      "comment_text": "仕様変更前の内容なので、コメントアウト\n---\n\n\n(PRからの自動投稿です)\n\n## 実装内容について\n\n### 影響範囲\n- 21-1_ヘッダー\n\n### QA連絡事項\nサーバー観点で下記の確認もお願いできますと幸いです。\n- 下記のような条件内で、1度に複数個のスタミナ回復アイテムを消費し、その分回復できること。消費個数が多すぎる場合は、回復できないこと。\n  - 例：スタミナが50/180の場合（アイテム1個で+90回復）\n    - 1個目使用: 50+90=140（< 180なので、まだ2個目も使用可能）\n    - 2個目使用: 140+90=230（> 180だが、230まで回復OK）\n    - 2個目使用後は「現在スタミナ230」>「スタミナ上限180」なので、3個目は使用不可\n\n---\n\nPR: [#2048 スタミナ回復アイテムの新規実装](https://github.com/Wonderplanet/glow-server/pull/2048)\n",
+      "user": {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "email": "junki.mizutani@wonderpla.net",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1764740401822",
+      "reply_count": 0
+    },
+    {
+      "id": "90180173543923",
+      "comment": [
+        {
+          "text": "仕様確認した内容を記載します：",
+          "attributes": {}
+        },
+        {
+          "text": "slack",
+          "attributes": {
+            "link": "https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1764567562869119"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-79fbc2ce-3e48-4ab0-b493-784b5add65b5"
+          }
+        },
+        {
+          "text": "スタミナ回復アイテム消費時の、回復量の計算式について",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "list": {
+              "list": "bullet"
+            },
+            "block-id": "block-d424c5f5-1b80-4ff1-9ff9-bdc55763be62"
+          }
+        },
+        {
+          "text": "(ユーザーのスタミナ上限値 × 50%) の小数点を切り捨てした値 を回復量とする",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "list": {
+              "list": "bullet"
+            },
+            "indent": 1,
+            "block-id": "block-6df508e8-4d68-408f-81c6-f9bfbda5bf53"
+          }
+        },
+        {
+          "text": "※ 既存のプリズムや広告視聴での回復量計算でも同様",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "list": {
+              "list": "bullet"
+            },
+            "indent": 1,
+            "block-id": "block-eea79be2-18bd-4b92-856d-8e9a49e5546b"
+          }
+        },
+        {
+          "text": "既存のプリズム・広告視聴によるスタミナ回復のUIとは異なり、個数選択をできるようにする",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "list": {
+              "list": "bullet"
+            },
+            "block-id": "block-673e1d7d-ffd7-4684-a607-853429fb8c89"
+          }
+        },
+        {
+          "text": "スタミナ上限を超えない限り、スタミナ回復アイテムを1度に2つ以上消費して、回復可能",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "list": {
+              "list": "bullet"
+            },
+            "indent": 1,
+            "block-id": "block-2e04eac5-91ed-4fe9-a351-97756ce04172"
+          }
+        },
+        {
+          "text": "例：スタミナが50/180の場合",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "list": {
+              "list": "bullet"
+            },
+            "indent": 1,
+            "block-id": "block-b59c12f6-e56f-4b53-8214-cc31cf386fd4"
+          }
+        },
+        {
+          "text": "アイテム1つ消費で+90(=140)で、まだスタミナ上限の180には届かないので、さらにもう1つ消費して、回復可能",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "list": {
+              "list": "bullet"
+            },
+            "indent": 2,
+            "block-id": "block-ed324672-9142-46b3-b618-dc55bd709585"
+          }
+        },
+        {
+          "text": "→ 1回で2つ消費して+180回復OK",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "list": {
+              "list": "bullet"
+            },
+            "indent": 2,
+            "block-id": "block-eab4ed58-d182-4b9f-a366-f6357d03929d"
+          }
+        },
+        {
+          "text": "180を超えたあとは、追加で回復はできない（3つ消費で回復はできない）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "list": {
+              "list": "bullet"
+            },
+            "indent": 2,
+            "block-id": "block-3ab65e9c-03ba-4430-b18c-a5285a311483"
+          }
+        }
+      ],
+      "comment_text": "仕様確認した内容を記載します：slack\nスタミナ回復アイテム消費時の、回復量の計算式について\n(ユーザーのスタミナ上限値 × 50%) の小数点を切り捨てした値 を回復量とする\n※ 既存のプリズムや広告視聴での回復量計算でも同様\n既存のプリズム・広告視聴によるスタミナ回復のUIとは異なり、個数選択をできるようにする\nスタミナ上限を超えない限り、スタミナ回復アイテムを1度に2つ以上消費して、回復可能\n例：スタミナが50/180の場合\nアイテム1つ消費で+90(=140)で、まだスタミナ上限の180には届かないので、さらにもう1つ消費して、回復可能\n→ 1回で2つ消費して+180回復OK\n180を超えたあとは、追加で回復はできない（3つ消費で回復はできない）\n",
+      "user": {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "email": "junki.mizutani@wonderpla.net",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1764648681723",
+      "reply_count": 0
+    }
+  ]
+}

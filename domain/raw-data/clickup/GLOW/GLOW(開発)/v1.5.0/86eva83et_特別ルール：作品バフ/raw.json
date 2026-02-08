@@ -1,0 +1,634 @@
+{
+  "task": {
+    "id": "86eva83et",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "特別ルール：作品バフ",
+    "text_content": "要件書",
+    "description": "要件書",
+    "markdown_description": "[\n\ndocs.google.com\n\nhttps://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a9277c4eee\\_0\\_295#slide=id.g3a9277c4eee\\_0\\_295\n\n](https://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a9277c4eee_0_295#slide=id.g3a9277c4eee_0_295)\n\n要件書",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "237828478.00000000000000000000000000000000",
+    "date_created": "1761636832442",
+    "date_updated": "1770175299782",
+    "date_closed": "1770175299782",
+    "date_done": "1769407582125",
+    "archived": false,
+    "creator": {
+      "id": 43594926,
+      "username": "Ryosuke Goto",
+      "color": "#f57c01",
+      "email": "r-goto@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+    },
+    "assignees": [
+      {
+        "id": 43594915,
+        "username": "wataru shigeyama",
+        "color": "#0388d1",
+        "initials": "WS",
+        "email": "shigeyama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594915_4l9.jpg"
+      },
+      {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "color": "#388d3c",
+        "initials": "KI",
+        "email": "inui@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "email": "keisuke.isayama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 7807756,
+        "username": "daichi_takishima",
+        "color": "#04a9f4",
+        "initials": "D",
+        "email": "takishima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7807756_rQr.jpg"
+      },
+      {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "color": "#388d3c",
+        "initials": "KI",
+        "email": "inui@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 43594915,
+        "username": "wataru shigeyama",
+        "color": "#0388d1",
+        "initials": "WS",
+        "email": "shigeyama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594915_4l9.jpg"
+      },
+      {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "color": "#f57c01",
+        "initials": "RG",
+        "email": "r-goto@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "color": "",
+        "initials": "KA",
+        "email": "confidence-q12@cfd-qa.jp",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "email": "keisuke.isayama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": null,
+    "top_level_parent": null,
+    "priority": null,
+    "due_date": "1767726000000",
+    "start_date": "1767207600000",
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "value": "true",
+        "value_richtext": null,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86eva83et",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": [
+    {
+      "id": "90180188129688",
+      "comment": [
+        {
+          "text": "1/26 安達",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-f80a7e7b-1eba-4885-b848-cbd07bddda42"
+          }
+        },
+        {
+          "text": "作品バフギミックについて、作品IDの対象/対象外の動作、",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-91910189-f6fa-4b72-bfcb-3383fedfc6fe"
+          }
+        },
+        {
+          "text": "他バフとの組み合わせ等に問題がないことを確認しました",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-83f87912-1f83-4655-9e20-5de190ea2db5"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5bd24353-6b07-4c80-a667-bb0add048106"
+          }
+        },
+        {
+          "text": "※検証内容の詳細については下記項目書を参照",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-934a02e0-0a2a-463a-91d7-25841b0a1263"
+          }
+        },
+        {
+          "text": "【v1.5.0】作品バフギミック/スキル検証_項目書＞作品バフギミック",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-592df3eb-0a77-4aa4-a64d-049dbb90ccaa"
+          }
+        },
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/spreadsheets/d/1FxxZTCcO89Y2vWmScd9DjuAfLzOS4IHC-oZWAkQdlkU/edit?gid=393523044#gid=393523044"
+          },
+          "text": ""
+        },
+        {
+          "text": " ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1e0971dd-c4a9-4f2d-8292-4f8fe4afe5dc"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-d170afb3-6a55-4fb0-a582-f477b7b9d69b"
+          }
+        },
+        {
+          "text": "確認ビルド：iOS#37(580)、AOS#1180(581)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9413c7ca-801e-4f51-bfee-db01142fc041"
+          }
+        },
+        {
+          "text": "確認環境：dev-qa2",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ff560014-226f-4c4d-b43a-51a90ea03a05"
+          }
+        },
+        {
+          "text": "確認端末：iPhoneSE3(iOS:18.6)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-0336d4b9-6e64-4acc-865a-93dd55588f19"
+          }
+        },
+        {
+          "text": "　　　　　ZenFone6(AOS:9.0)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-ddb7c63a-f936-4ad0-b67a-d7ba1a680f0c"
+          }
+        }
+      ],
+      "comment_text": "1/26 安達\n作品バフギミックについて、作品IDの対象/対象外の動作、\n他バフとの組み合わせ等に問題がないことを確認しました\n\n※検証内容の詳細については下記項目書を参照\n【v1.5.0】作品バフギミック/スキル検証_項目書＞作品バフギミック\ndocs.google.com/spreadsheets/d/1FxxZTCcO89Y2vWmScd9DjuAfLzOS4IHC-oZWAkQdlkU/edit?gid=393523044#gid=393523044 \n  \n\n確認ビルド：iOS#37(580)、AOS#1180(581)\n確認環境：dev-qa2\n確認端末：iPhoneSE3(iOS:18.6)\n　　　　　ZenFone6(AOS:9.0)\n",
+      "user": {
+        "id": 60970688,
+        "username": "Kazuya Adachi",
+        "email": "confidence-q12@cfd-qa.jp",
+        "color": "",
+        "initials": "KA",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60970688_UQl.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1769407352206",
+      "reply_count": 0
+    },
+    {
+      "id": "90180183455072",
+      "comment": [
+        {
+          "text": "iOS : 1.5.0 (539)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9f384c56-fce8-422f-91d6-0d0fa7537393"
+          }
+        },
+        {
+          "text": "Android : 1.5.0 (542)",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-946ec36f-8f8b-48ef-a32e-5ee39c176d0d"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-91e1e3fd-3766-407c-b1c1-a6493a81c672"
+          }
+        },
+        {
+          "text": "develop環境にデータ設定行っています",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-652e77a3-af68-4d6f-ad0d-b2d3a3d8f62d"
+          }
+        },
+        {
+          "text": "ステージ1",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-5ce973c5-bfea-45e1-8e06-cf0103e24d7e"
+          }
+        },
+        {
+          "text": "→属性制限",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-62ba59ae-3951-4c0a-a4cf-ed8bff99f650"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1373d362-5842-4bd6-930b-1bd3f6a86cb9"
+          }
+        },
+        {
+          "text": "ランクマッチ",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-31fa286c-1c6d-432c-837f-c5003aefe0ba"
+          }
+        },
+        {
+          "text": "→全てのキャラ：召喚クールタイム -1秒",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-006396bc-cfc7-4570-9e9c-2770f0deff38"
+          }
+        },
+        {
+          "text": "→全てのキャラ：必殺ワザクールタイム -1秒",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-4a96155e-d1d4-4bbc-93e5-ebeeb7ed7869"
+          }
+        },
+        {
+          "text": "→ダンダダン作品キャラ：攻撃力 50%UP",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-23ed1ada-80df-430a-96ad-9c593ec02dd6"
+          }
+        }
+      ],
+      "comment_text": "iOS : 1.5.0 (539)\nAndroid : 1.5.0 (542)\n\ndevelop環境にデータ設定行っています\nステージ1\n→属性制限\n\nランクマッチ\n→全てのキャラ：召喚クールタイム -1秒\n→全てのキャラ：必殺ワザクールタイム -1秒\n→ダンダダン作品キャラ：攻撃力 50%UP\n",
+      "user": {
+        "id": 43594915,
+        "username": "wataru shigeyama",
+        "email": "shigeyama@wonderpla.net",
+        "color": "#0388d1",
+        "initials": "WS",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594915_4l9.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767945208916",
+      "reply_count": 0
+    },
+    {
+      "id": "90180183449383",
+      "comment": [
+        {
+          "type": "bookmark",
+          "bookmark": {
+            "service": "gsheets",
+            "id": "https://docs.google.com/spreadsheets/d/1EH9nyfJANUNnYU-FniJLxpYUC0ar4l9wLFzBqFa23S4/edit",
+            "url": "https://docs.google.com/spreadsheets/d/1EH9nyfJANUNnYU-FniJLxpYUC0ar4l9wLFzBqFa23S4/edit?gid=0#gid=0"
+          },
+          "attributes": {
+            "block-id": "block-ec21d8d9-a68b-4ad4-8760-37b64823676d",
+            "body-type": "image",
+            "unfurled": "true"
+          }
+        },
+        {
+          "text": "実装後確認シート",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-50802947-b89f-4440-89fd-47fa3e0ca698"
+          }
+        }
+      ],
+      "comment_text": "undefined実装後確認シート\n",
+      "user": {
+        "id": 43594915,
+        "username": "wataru shigeyama",
+        "email": "shigeyama@wonderpla.net",
+        "color": "#0388d1",
+        "initials": "WS",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594915_4l9.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767943921065",
+      "reply_count": 0
+    },
+    {
+      "id": "90180183321525",
+      "comment": [
+        {
+          "text": "作品バフスキル（スキルの対象設定箇所を増やすのみ）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-233cbaec-c365-4df8-97eb-fe5f64434574"
+          }
+        },
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/presentation/d/1v5w0gN0OJxczmtDa2MUVWqXSXFlMS-wkffQjl_i3FPY/edit?slide=id.g3b0ef0bd6b5_0_23#slide=id.g3b0ef0bd6b5_0_23"
+          },
+          "text": ""
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-9cc03778-3cea-4f8e-9eda-19126e0d7d6b"
+          }
+        },
+        {
+          "text": "に関しては下記タスクに分離",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-b2290c6d-76b2-4821-9857-caf3a989181b"
+          }
+        },
+        {
+          "type": "task_mention",
+          "task_mention": {
+            "task_id": "86ew4yy7u"
+          },
+          "text": "86ew4yy7u"
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-688d3c13-1428-43e5-9ae0-0e3ece382fba"
+          }
+        }
+      ],
+      "comment_text": "作品バフスキル（スキルの対象設定箇所を増やすのみ）\ndocs.google.com/presentation/d/1v5w0gN0OJxczmtDa2MUVWqXSXFlMS-wkffQjl_i3FPY/edit?slide=id.g3b0ef0bd6b5_0_23#slide=id.g3b0ef0bd6b5_0_23 \n \nに関しては下記タスクに分離\n86ew4yy7u\n",
+      "user": {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "email": "inui@wonderpla.net",
+        "color": "#388d3c",
+        "initials": "KI",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1767926248297",
+      "reply_count": 0
+    },
+    {
+      "id": "90180177184447",
+      "comment": [
+        {
+          "text": "要件仕様書は下記",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-1942e929-f21e-4291-920c-757ccdbeaaa3"
+          }
+        },
+        {
+          "text": "作品バフギミック（設定マスターは特別ルールの設定ている場所を使用する）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-84793705-b910-46f0-a58e-ae96574e2613"
+          }
+        },
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/presentation/d/1v5w0gN0OJxczmtDa2MUVWqXSXFlMS-wkffQjl_i3FPY/edit?slide=id.g3a7097fed0f_0_251#slide=id.g3a7097fed0f_0_251"
+          },
+          "text": ""
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7b60ae91-e051-48d2-a03a-6e5c568dce93"
+          }
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-277c29fa-64a1-4999-8241-ced3286e6a13"
+          }
+        },
+        {
+          "text": "作品バフスキル（スキルの対象設定箇所を増やすのみ）",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-30d35547-d583-486a-9bb4-ff44c4e9c6dc"
+          }
+        },
+        {
+          "type": "link_mention",
+          "link_mention": {
+            "url": "https://docs.google.com/presentation/d/1v5w0gN0OJxczmtDa2MUVWqXSXFlMS-wkffQjl_i3FPY/edit?slide=id.g3b0ef0bd6b5_0_23#slide=id.g3b0ef0bd6b5_0_23"
+          },
+          "text": ""
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-7aeeda08-e36d-4f1d-a030-3494d9200fc0"
+          }
+        }
+      ],
+      "comment_text": "要件仕様書は下記\n作品バフギミック（設定マスターは特別ルールの設定ている場所を使用する）\ndocs.google.com/presentation/d/1v5w0gN0OJxczmtDa2MUVWqXSXFlMS-wkffQjl_i3FPY/edit?slide=id.g3a7097fed0f_0_251#slide=id.g3a7097fed0f_0_251 \n \n\n作品バフスキル（スキルの対象設定箇所を増やすのみ）\ndocs.google.com/presentation/d/1v5w0gN0OJxczmtDa2MUVWqXSXFlMS-wkffQjl_i3FPY/edit?slide=id.g3b0ef0bd6b5_0_23#slide=id.g3b0ef0bd6b5_0_23 \n \n",
+      "user": {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "email": "r-goto@wonderpla.net",
+        "color": "#f57c01",
+        "initials": "RG",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765884346155",
+      "reply_count": 0
+    }
+  ]
+}
