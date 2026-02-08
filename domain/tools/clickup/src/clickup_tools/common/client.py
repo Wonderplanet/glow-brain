@@ -184,3 +184,56 @@ class ClickUpClient:
         response = self.session.get(url)
         response.raise_for_status()
         return response.content
+
+    def get_space(self, space_id: str) -> Dict[str, Any]:
+        """スペース情報を取得
+
+        Args:
+            space_id: スペース ID
+
+        Returns:
+            スペース情報
+        """
+        return self._request("GET", f"/space/{space_id}")
+
+    def get_space_folders(self, space_id: str, archived: bool = False) -> List[Dict[str, Any]]:
+        """スペース配下のフォルダ一覧を取得
+
+        Args:
+            space_id: スペース ID
+            archived: アーカイブされたフォルダを含めるか
+
+        Returns:
+            フォルダ一覧
+        """
+        params = {"archived": str(archived).lower()}
+        data = self._request("GET", f"/space/{space_id}/folder", params=params)
+        return data.get("folders", [])
+
+    def get_folder_lists(self, folder_id: str, archived: bool = False) -> List[Dict[str, Any]]:
+        """フォルダ配下のリスト一覧を取得
+
+        Args:
+            folder_id: フォルダ ID
+            archived: アーカイブされたリストを含めるか
+
+        Returns:
+            リスト一覧
+        """
+        params = {"archived": str(archived).lower()}
+        data = self._request("GET", f"/folder/{folder_id}/list", params=params)
+        return data.get("lists", [])
+
+    def get_folderless_lists(self, space_id: str, archived: bool = False) -> List[Dict[str, Any]]:
+        """スペース直下のフォルダレスリスト一覧を取得
+
+        Args:
+            space_id: スペース ID
+            archived: アーカイブされたリストを含めるか
+
+        Returns:
+            フォルダレスリスト一覧
+        """
+        params = {"archived": str(archived).lower()}
+        data = self._request("GET", f"/space/{space_id}/list", params=params)
+        return data.get("lists", [])

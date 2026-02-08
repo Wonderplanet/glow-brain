@@ -29,7 +29,12 @@ domain/tools/clickup/
         │   └── config.py              # 設定管理
         │
         └── exporters/                 # ユースケース別エクスポーター
-            └── list_exporter/         # リストエクスポート
+            ├── list_exporter/         # リストエクスポート
+            │   ├── __init__.py
+            │   ├── __main__.py
+            │   ├── main.py
+            │   └── exporter.py
+            └── space_structure_exporter/  # スペース構造エクスポート
                 ├── __init__.py
                 ├── __main__.py
                 ├── main.py
@@ -61,6 +66,112 @@ cp .env.example .env
 3. "Generate" をクリックして API キーを生成
 
 ## 利用可能なツール
+
+### Space Structure Exporter
+
+スペース配下の全フォルダとリストを一覧化し、CSV形式で出力します。
+
+#### 基本的な使い方
+
+```bash
+cd domain/tools/clickup
+
+# スペースURLで指定
+uv run python -m clickup_tools.exporters.space_structure_exporter \
+  --url "https://app.clickup.com/12345678/v/s/987654321"
+
+# スペースIDで直接指定
+uv run python -m clickup_tools.exporters.space_structure_exporter \
+  --space-id "987654321"
+```
+
+#### オプション
+
+```bash
+# スペースURL
+--url, -u URL            # ClickUp スペース URL
+
+# スペースID（URLの代わり）
+--space-id, -s ID        # スペースIDを直接指定
+```
+
+#### 出力データ構造
+
+```
+domain/raw-data/clickup/
+└── {space_name}/
+    └── _space_structure.csv    # スペース構造一覧
+```
+
+#### CSV出力仕様
+
+| 列名 | 説明 | データ型 | 例 |
+|------|------|----------|-----|
+| スペース名 | スペースの名前 | 文字列 | `GLOW` |
+| スペースID | スペースの一意ID | 文字列 | `987654321` |
+| フォルダ名 | フォルダ名（フォルダレスの場合は空） | 文字列 | `QA` |
+| フォルダID | フォルダID（フォルダレスの場合は空） | 文字列 | `123456789` |
+| フォルダアーカイブ | フォルダがアーカイブ済みか | 文字列 | `TRUE`/`FALSE` |
+| フォルダ作成日時 | フォルダの作成日時 | 文字列 | （API未提供のため空） |
+| リスト名 | リストの名前 | 文字列 | `アプリQA_Ver1.5.0` |
+| リストID | リストの一意ID | 文字列 | `901234567` |
+| リストアーカイブ | リストがアーカイブ済みか | 文字列 | `TRUE`/`FALSE` |
+| リスト作成日時 | リストの作成日時 | 文字列 | （API未提供のため空） |
+
+**特徴**:
+- アーカイブ済み/未アーカイブの全データを取得
+- フォルダレスリスト（スペース直下のリスト）も含む
+- UTF-8 BOM付きCSV（Excel互換）
+
+#### 実行例
+
+実行例とサンプル出力:
+
+```bash
+# スペース構造をエクスポート
+uv run python -m clickup_tools.exporters.space_structure_exporter \
+  --space-id "90100408512"
+
+# 出力例:
+# ============================================================
+# ClickUp Space Structure Exporter
+# ============================================================
+# スペース情報を取得中... (ID: 90100408512)
+# スペース名: GLOW
+#
+# フォルダ一覧を取得中...
+#   取得フォルダ数: 21
+#
+#   フォルダ: QA
+#     リスト数: 43
+#
+#   フォルダ: GLOW(開発)
+#     リスト数: 31
+#
+# フォルダレスリストを取得中...
+#   フォルダレスリスト数: 12
+#
+# CSV出力中: domain/raw-data/clickup/GLOW/_space_structure.csv
+#   ✓ 出力完了
+#
+# ============================================================
+# エクスポート完了
+# ============================================================
+# スペース名:     GLOW
+# スペースID:     90100408512
+# フォルダ数:     21
+# リスト数:       224
+# 出力先:         domain/raw-data/clickup/GLOW/_space_structure.csv
+```
+
+**CSVサンプル出力**:
+```csv
+スペース名,スペースID,フォルダ名,フォルダID,フォルダアーカイブ,フォルダ作成日時,リスト名,リストID,リストアーカイブ,リスト作成日時
+GLOW,90100408512,QA,123456789,FALSE,,アプリQA_Ver1.5.0,901234567,FALSE,
+GLOW,90100408512,QA,123456789,FALSE,,アプリQA_Ver1.4.1,901234566,TRUE,
+GLOW,90100408512,開発,123456790,FALSE,,機能開発リスト,901234568,FALSE,
+GLOW,90100408512,,,,,バックログ,901234569,FALSE,
+```
 
 ### List Exporter
 
@@ -284,11 +395,12 @@ Markdown 形式のテキストを生成するヘルパーです。
 
 ```
 exporters/
-├── list_exporter/             # ✅ 実装済み（全ステータス対応、フィルタ可能）
-├── task_exporter/             # 単一タスク
-├── space_exporter/            # スペース全体
-├── tag_filter_exporter/       # タグでフィルタ
-└── date_range_exporter/       # 期間指定
+├── list_exporter/                # ✅ 実装済み（全ステータス対応、フィルタ可能）
+├── space_structure_exporter/     # ✅ 実装済み（フォルダ・リスト一覧CSV出力）
+├── task_exporter/                # 単一タスク
+├── space_exporter/               # スペース全体
+├── tag_filter_exporter/          # タグでフィルタ
+└── date_range_exporter/          # 期間指定
 ```
 
 ## トラブルシューティング
