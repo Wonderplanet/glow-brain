@@ -93,14 +93,20 @@ class ListExporter:
 
         include_closed = statuses is None or "closed" in statuses
 
+        # 出力ディレクトリを決定（タスク取得前に確定）
+        if output_dir is None:
+            output_dir = self._build_output_path(list_info)
+
         # タスク取得（常に2段階取得）
         if include_subtasks:
             # 2段階取得: 親タスク（Closedも含む）を確実に取得
+            # dry_runでなければ各フェーズのデータを保存
             tasks = get_tasks_two_phase(
                 client=self.client,
                 list_id=list_id,
                 statuses=statuses,
-                include_closed=include_closed
+                include_closed=include_closed,
+                output_dir=output_dir if not dry_run else None
             )
         else:
             # サブタスク不要な場合は1回の取得
@@ -129,10 +135,6 @@ class ListExporter:
         if debug_limit and len(tasks) > debug_limit:
             print(f"\n⚠️ デバッグモード: 最初の {debug_limit} 件のみ処理")
             tasks = tasks[:debug_limit]
-
-        # 出力ディレクトリを決定
-        if output_dir is None:
-            output_dir = self._build_output_path(list_info)
 
         print(f"\n出力先: {output_dir}")
 
