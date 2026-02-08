@@ -101,6 +101,9 @@ uv run python -m clickup_tools.exporters.list_exporter \
 
 # サブタスクも含めてエクスポート
 --include-subtasks
+
+# 「休日」タスクも含める（デフォルトでは除外される）
+--include-holiday-tasks
 ```
 
 #### 実行例
@@ -135,10 +138,41 @@ uv run python -m clickup_tools.exporters.list_exporter \
   --url "https://app.clickup.com/12345678/v/li/987654321" \
   --output ./my-exports
 
-# サブタスクも含めてエクスポート
+# サブタスクも含めてエクスポート（「休日」は自動的に除外される）
 uv run python -m clickup_tools.exporters.list_exporter \
   --url "https://app.clickup.com/12345678/v/li/987654321" \
   --include-subtasks
+
+# 「休日」タスクも含めてエクスポート
+uv run python -m clickup_tools.exporters.list_exporter \
+  --url "https://app.clickup.com/12345678/v/li/987654321" \
+  --include-subtasks \
+  --include-holiday-tasks
+```
+
+#### フィルタリング機能
+
+##### 「休日」タスクの除外
+
+プロジェクト管理リストには、開発期間外の「休日」タスクとその配下のサブタスク（各祝日）が含まれています。
+**デフォルトで、これらは自動的に除外されます。**
+
+「休日」タスクも含めてエクスポートしたい場合は、`--include-holiday-tasks` オプションを使用してください。
+
+**除外ルール**（デフォルト動作）:
+- 親タスク（トップレベル）で名前が完全一致で「休日」のタスク
+- その配下のサブタスク全て（孫タスク以降も含む）
+
+**除外されないケース**:
+- サブタスクとして存在する「休日」（親タスクを持つ）
+- 「休日管理」「2024年休日」などの部分一致
+
+**「休日」も含める場合の使用例**:
+```bash
+uv run python -m clickup_tools.exporters.list_exporter \
+  --url "https://app.clickup.com/.../v/li/..." \
+  --include-subtasks \
+  --include-holiday-tasks
 ```
 
 #### 出力データ構造

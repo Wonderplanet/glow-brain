@@ -3,7 +3,7 @@
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 
 from clickup_tools.common import (
     ClickUpClient,
@@ -51,6 +51,7 @@ class ListExporter:
         debug_limit: Optional[int] = None,
         dry_run: bool = False,
         include_subtasks: bool = False,
+        exclude_holiday_tasks: bool = True,
     ) -> ExportResult:
         """リスト内のチケットをエクスポート
 
@@ -62,6 +63,7 @@ class ListExporter:
             debug_limit: デバッグ用の処理件数制限
             dry_run: ドライラン（ファイル出力しない）
             include_subtasks: サブタスクを含めるか（デフォルト: False）
+            exclude_holiday_tasks: 「休日」親タスクとその配下を除外（デフォルト: True）
 
         Returns:
             エクスポート結果
@@ -95,6 +97,11 @@ class ListExporter:
             include_subtasks=include_subtasks
         )
         print(f"取得件数: {len(tasks)}")
+
+        # 「休日」タスクの除外
+        if exclude_holiday_tasks:
+            tasks = self._filter_holiday_tasks(tasks)
+            print(f"フィルタ後の件数: {len(tasks)}")
 
         if include_subtasks:
             subtask_count = sum(1 for task in tasks if task.parent)
@@ -295,6 +302,58 @@ class ListExporter:
             lines.append(md.attachments_table(task.attachments))
 
         return "".join(lines)
+
+    def _filter_holiday_tasks(self, tasks: List[Task]) -> List[Task]:
+        """「休日」親タスクとその配下を除外
+
+        Args:
+            tasks: フィルタ前のタスクリスト
+
+        Returns:
+            フィルタ後のタスクリスト
+
+        除外ルール:
+        - 親タスク（parent=None）で名前が完全一致で「休日」
+        - その配下のサブタスク全て（孫タスク以降も含む）
+        """
+        # ステップ1: 除外対象の親タスクIDを特定
+        holiday_parent_ids = {
+            task.id for task in tasks
+            if task.parent is None and task.name == "休日"
+        }
+
+        if not holiday_parent_ids:
+            return tasks  # 「休日」タスクが存在しない場合はそのまま返す
+
+        # ステップ2: 親子マップを構築
+        parent_child_map = {}
+        for task in tasks:
+            if task.parent:
+                parent_child_map.setdefault(task.parent, []).append(task.id)
+
+        # ステップ3: 除外対象のタスクIDを再帰的に収集
+        excluded_task_ids = set(holiday_parent_ids)
+
+        def collect_descendants(parent_id: str):
+            """再帰的に子孫タスクを収集"""
+            children = parent_child_map.get(parent_id, [])
+            for child_id in children:
+                excluded_task_ids.add(child_id)
+                collect_descendants(child_id)  # 孫以降も再帰的に
+
+        for parent_id in holiday_parent_ids:
+            collect_descendants(parent_id)
+
+        # ステップ4: フィルタリング
+        filtered_tasks = [
+            task for task in tasks
+            if task.id not in excluded_task_ids
+        ]
+
+        # ログ出力
+        print(f"  → 「休日」タスクとその配下を除外: {len(excluded_task_ids)}件")
+
+        return filtered_tasks
 
     def _generate_activity_markdown(self, task: Task, comments) -> str:
         """コメント情報を Markdown 形式で生成

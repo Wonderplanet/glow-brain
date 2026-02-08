@@ -44,10 +44,16 @@ def main():
     --url "https://app.clickup.com/12345678/v/li/987654321" \\
     --dry-run
 
-  # サブタスクも含めてエクスポート
+  # サブタスクも含めてエクスポート（休日は自動的に除外される）
   python -m clickup_tools.exporters.list_exporter \\
     --url "https://app.clickup.com/12345678/v/li/987654321" \\
     --include-subtasks
+
+  # 「休日」タスクも含めてエクスポート
+  python -m clickup_tools.exporters.list_exporter \\
+    --url "https://app.clickup.com/12345678/v/li/987654321" \\
+    --include-subtasks \\
+    --include-holiday-tasks
         """,
     )
 
@@ -97,6 +103,16 @@ def main():
         help="サブタスクも含めてエクスポート（デフォルト: 含めない）",
     )
 
+    parser.add_argument(
+        "--include-holiday-tasks",
+        dest="exclude_holiday_tasks",
+        action="store_false",
+        help="「休日」タスクも含めてエクスポート（デフォルト: 除外する）",
+    )
+
+    # デフォルト値を設定
+    parser.set_defaults(exclude_holiday_tasks=True)
+
     args = parser.parse_args()
 
     try:
@@ -126,6 +142,7 @@ def main():
             debug_limit=args.debug_limit,
             dry_run=args.dry_run,
             include_subtasks=args.include_subtasks,
+            exclude_holiday_tasks=args.exclude_holiday_tasks,
         )
 
         # 結果を表示
