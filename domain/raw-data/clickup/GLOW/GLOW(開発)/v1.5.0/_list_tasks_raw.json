@@ -1,0 +1,660 @@
+{
+  "total_count": 36,
+  "tasks": [
+    {
+      "id": "86ew4zhz1",
+      "name": "サブミット対応向け新規DeployGateでのAndroid起動対応",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-14T04:00:00",
+      "created_date": "2026-01-09T12:17:32.909000",
+      "updated_date": "2026-02-04T12:21:39.782000",
+      "url": "https://app.clickup.com/t/86ew4zhz1",
+      "creator_name": "daichi_takishima",
+      "assignees": [
+        "daichi_takishima"
+      ],
+      "tags": [],
+      "parent": null,
+      "markdown_description": ""
+    },
+    {
+      "id": "86ew4yy7u",
+      "name": "スキル：作品・キャラID絞り込み",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": null,
+      "created_date": "2026-01-09T11:33:09.686000",
+      "updated_date": "2026-02-04T12:21:39.782000",
+      "url": "https://app.clickup.com/t/86ew4yy7u",
+      "creator_name": "Kenta Inui",
+      "assignees": [
+        "Kenta Inui"
+      ],
+      "tags": [],
+      "parent": null,
+      "markdown_description": ""
+    },
+    {
+      "id": "86evnbw8u",
+      "name": "スタミナ回復アイテム",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-25T04:00:00",
+      "created_date": "2025-11-26T13:11:25.072000",
+      "updated_date": "2026-02-04T12:21:39.782000",
+      "url": "https://app.clickup.com/t/86evnbw8u",
+      "creator_name": "Toshikazu Takahashi",
+      "assignees": [
+        "Keisuke Isayama",
+        "Junki Mizutani",
+        "Rira Mochizuki",
+        "donghyeok kim"
+      ],
+      "tags": [],
+      "parent": null,
+      "markdown_description": ""
+    },
+    {
+      "id": "86evnbw4g",
+      "name": "BOXガシャ",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-14T04:00:00",
+      "created_date": "2025-11-26T13:11:02.256000",
+      "updated_date": "2026-02-04T12:21:39.782000",
+      "url": "https://app.clickup.com/t/86evnbw4g",
+      "creator_name": "Toshikazu Takahashi",
+      "assignees": [
+        "Daiki Kawasaki",
+        "Kiryu Yamashita",
+        "donghyeok kim",
+        "Rira Mochizuki",
+        "Miharu Kimura"
+      ],
+      "tags": [],
+      "parent": null,
+      "markdown_description": ""
+    },
+    {
+      "id": "86evjvued",
+      "name": "ガシャ一覧画面の刷新",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-16T04:00:00",
+      "created_date": "2025-11-19T17:16:34.293000",
+      "updated_date": "2026-02-04T12:21:39.782000",
+      "url": "https://app.clickup.com/t/86evjvued",
+      "creator_name": "Toshikazu Takahashi",
+      "assignees": [
+        "daichi_takishima",
+        "donghyeok kim",
+        "Rira Mochizuki"
+      ],
+      "tags": [],
+      "parent": null,
+      "markdown_description": ""
+    },
+    {
+      "id": "86eva83et",
+      "name": "特別ルール：作品バフ",
+      "description": "要件書",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-07T04:00:00",
+      "created_date": "2025-10-28T16:33:52.442000",
+      "updated_date": "2026-02-04T12:21:39.782000",
+      "url": "https://app.clickup.com/t/86eva83et",
+      "creator_name": "Ryosuke Goto",
+      "assignees": [
+        "Kenta Inui",
+        "wataru shigeyama",
+        "Keisuke Isayama"
+      ],
+      "tags": [],
+      "parent": null,
+      "markdown_description": "[\n\ndocs.google.com\n\nhttps://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a9277c4eee\\_0\\_295#slide=id.g3a9277c4eee\\_0\\_295\n\n](https://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a9277c4eee_0_295#slide=id.g3a9277c4eee_0_295)\n\n要件書"
+    },
+    {
+      "id": "86ev9uch1",
+      "name": "サブミット対応",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-30T04:00:00",
+      "created_date": "2025-10-27T16:20:46.288000",
+      "updated_date": "2026-02-04T12:21:39.782000",
+      "url": "https://app.clickup.com/t/86ev9uch1",
+      "creator_name": "Toshikazu Takahashi",
+      "assignees": [],
+      "tags": [],
+      "parent": null,
+      "markdown_description": ""
+    },
+    {
+      "id": "86ev9ucgw",
+      "name": "リリース",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-02-02T04:00:00",
+      "created_date": "2025-10-27T16:20:45.793000",
+      "updated_date": "2026-02-04T12:21:39.782000",
+      "url": "https://app.clickup.com/t/86ev9ucgw",
+      "creator_name": "Toshikazu Takahashi",
+      "assignees": [],
+      "tags": [],
+      "parent": null,
+      "markdown_description": ""
+    },
+    {
+      "id": "86ev9ucg6",
+      "name": "データレイク転送テスト",
+      "description": "データレイク転送テスト行うかどうかを判断するところから\n行う場合は、QA開始前後で行う。\n行わない場合は、Activityに明記してタスクを閉じる",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-23T04:00:00",
+      "created_date": "2025-10-27T16:20:43.146000",
+      "updated_date": "2026-02-04T12:21:39.782000",
+      "url": "https://app.clickup.com/t/86ev9ucg6",
+      "creator_name": "Toshikazu Takahashi",
+      "assignees": [
+        "Junki Mizutani"
+      ],
+      "tags": [],
+      "parent": null,
+      "markdown_description": "データレイク転送テスト行うかどうかを判断するところから\n行う場合は、QA開始前後で行う。\n行わない場合は、Activityに明記してタスクを閉じる"
+    },
+    {
+      "id": "86ev9ubu0",
+      "name": "[1.5.0]QA期間",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-23T04:00:00",
+      "created_date": "2025-10-27T16:19:30.232000",
+      "updated_date": "2026-02-04T12:21:39.782000",
+      "url": "https://app.clickup.com/t/86ev9ubu0",
+      "creator_name": "Toshikazu Takahashi",
+      "assignees": [
+        "daichi_takishima",
+        "Kazuomi Sawada",
+        "wataru shigeyama",
+        "Kenta Inui",
+        "Kiryu Yamashita",
+        "Keisuke Isayama",
+        "donghyeok kim",
+        "Rira Mochizuki"
+      ],
+      "tags": [],
+      "parent": null,
+      "markdown_description": ""
+    },
+    {
+      "id": "86ew6hyg4",
+      "name": "(受け入れ)ガシャ一覧画面の刷新",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-16T04:00:00",
+      "created_date": "2026-01-13T17:10:31.540000",
+      "updated_date": "2026-01-16T11:46:54.608000",
+      "url": "https://app.clickup.com/t/86ew6hyg4",
+      "creator_name": "daichi_takishima",
+      "assignees": [
+        "daichi_takishima"
+      ],
+      "tags": [],
+      "parent": "86evjvued",
+      "markdown_description": ""
+    },
+    {
+      "id": "86ew54rrn",
+      "name": "Boxガシャ 受け入れ、D承認、P承認",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-14T04:00:00",
+      "created_date": "2026-01-09T17:56:40.457000",
+      "updated_date": "2026-01-26T19:15:55.986000",
+      "url": "https://app.clickup.com/t/86ew54rrn",
+      "creator_name": "Kiryu Yamashita",
+      "assignees": [
+        "Kiryu Yamashita"
+      ],
+      "tags": [],
+      "parent": "86evnbw4g",
+      "markdown_description": ""
+    },
+    {
+      "id": "86ew4yqjy",
+      "name": "デザイン適用",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-13T04:00:00",
+      "created_date": "2026-01-09T11:14:16.854000",
+      "updated_date": "2026-01-09T11:14:23.256000",
+      "url": "https://app.clickup.com/t/86ew4yqjy",
+      "creator_name": "daichi_takishima",
+      "assignees": [],
+      "tags": [],
+      "parent": "86evnj1g5",
+      "markdown_description": ""
+    },
+    {
+      "id": "86ew39u8k",
+      "name": "(クラ)BOXガシャ(BoxガチャTOP画面)",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-13T04:00:00",
+      "created_date": "2026-01-06T10:52:06.692000",
+      "updated_date": "2026-01-14T15:16:14.192000",
+      "url": "https://app.clickup.com/t/86ew39u8k",
+      "creator_name": "Kiryu Yamashita",
+      "assignees": [
+        "Kiryu Yamashita"
+      ],
+      "tags": [],
+      "parent": "86evnbw4g",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evyrfrr",
+      "name": "(クラ)BOXガシャ(Boxガチャラインナップ画面)",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-25T04:00:00",
+      "created_date": "2025-12-23T18:40:46.075000",
+      "updated_date": "2026-01-14T15:16:22.200000",
+      "url": "https://app.clickup.com/t/86evyrfrr",
+      "creator_name": "Kiryu Yamashita",
+      "assignees": [
+        "Kiryu Yamashita"
+      ],
+      "tags": [],
+      "parent": "86evnbw4g",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evyrfhu",
+      "name": "(クラ)BOXガシャ(Boxガチャ結果画面)",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-05T04:00:00",
+      "created_date": "2025-12-23T18:40:16.004000",
+      "updated_date": "2026-01-14T15:16:22.200000",
+      "url": "https://app.clickup.com/t/86evyrfhu",
+      "creator_name": "Kiryu Yamashita",
+      "assignees": [
+        "Kiryu Yamashita"
+      ],
+      "tags": [],
+      "parent": "86evnbw4g",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evxg554",
+      "name": "(クラ)BOXガシャ(Domain層対応1)",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-24T04:00:00",
+      "created_date": "2025-12-19T10:53:40.297000",
+      "updated_date": "2026-01-14T15:16:22.200000",
+      "url": "https://app.clickup.com/t/86evxg554",
+      "creator_name": "Kiryu Yamashita",
+      "assignees": [
+        "Kiryu Yamashita"
+      ],
+      "tags": [],
+      "parent": "86evnbw4g",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evx79bf",
+      "name": "(クラ)BOXガシャ(Data層対応)",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-18T04:00:00",
+      "created_date": "2025-12-18T14:55:35.334000",
+      "updated_date": "2026-01-14T15:16:22.200000",
+      "url": "https://app.clickup.com/t/86evx79bf",
+      "creator_name": "Kiryu Yamashita",
+      "assignees": [
+        "Kiryu Yamashita"
+      ],
+      "tags": [],
+      "parent": "86evnbw4g",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evx5pvx",
+      "name": "地獄楽分のガシャプレハブ作成とテンプレート作成",
+      "description": "業務フローの流れ\n今後、監修提出への影響ややり取りの手間が少ないようにしたい。\n→ガシャTOPの画像をクリエイティブ班で作成し、監修提出\n→UI班は作成されたPSDを基にプレハブ化\n　→安定してきたら、プレハブ組み込みもバナー班にお願いしても良さそう\n\nテンプレート作成について\n決まったレイアウトやルールを基にクリエイティブ班で制作ができるように\nテンプレイートPSDを作成\n\n↑参考用ですが、画面ピッタリに作るではなく、余白がある感じにすると\n表示領域も素材の画像もそれぞれ自動生成してしまえば、楽に書き出しできるかと思います。\n（ピッタリだと素材が切れたりめんどいので）\n※自動生成時、バグったりするので書き出した素材は正しい見た目になっているかチェック必要",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-06T04:00:00",
+      "created_date": "2025-12-18T11:58:06.149000",
+      "updated_date": "2026-01-13T11:03:36.625000",
+      "url": "https://app.clickup.com/t/86evx5pvx",
+      "creator_name": "donghyeok kim",
+      "assignees": [
+        "Rira Mochizuki"
+      ],
+      "tags": [],
+      "parent": "86evnyp3g",
+      "markdown_description": "*   業務フローの流れ\n今後、監修提出への影響ややり取りの手間が少ないようにしたい。\n→ガシャTOPの画像をクリエイティブ班で作成し、監修提出\n→UI班は作成されたPSDを基にプレハブ化\n　→安定してきたら、プレハブ組み込みもバナー班にお願いしても良さそう\n\n*   テンプレート作成について\n決まったレイアウトやルールを基にクリエイティブ班で制作ができるように\nテンプレイートPSDを作成\n![](https://t5716001.p.clickup-attachments.com/t5716001/972a9e3a-2936-4a30-9507-1c79379a2592/image.png)\n↑参考用ですが、画面ピッタリに作るではなく、余白がある感じにすると\n表示領域も素材の画像もそれぞれ自動生成してしまえば、楽に書き出しできるかと思います。\n（ピッタリだと素材が切れたりめんどいので）\n※自動生成時、バグったりするので書き出した素材は正しい見た目になっているかチェック必要"
+    },
+    {
+      "id": "86evvwq6d",
+      "name": "(サバ) スタミナ回復アイテム：固定値回復アイテム対応、プリズム/広告視聴の上限を999にする",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-18T04:00:00",
+      "created_date": "2025-12-15T12:28:03.336000",
+      "updated_date": "2025-12-18T12:20:28.775000",
+      "url": "https://app.clickup.com/t/86evvwq6d",
+      "creator_name": "Junki Mizutani",
+      "assignees": [
+        "Junki Mizutani"
+      ],
+      "tags": [],
+      "parent": "86evnbw8u",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evrdjbg",
+      "name": "チュートリアル周り調整",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-11T04:00:00",
+      "created_date": "2025-12-04T12:05:05.491000",
+      "updated_date": "2026-01-09T11:14:05.461000",
+      "url": "https://app.clickup.com/t/86evrdjbg",
+      "creator_name": "daichi_takishima",
+      "assignees": [
+        "daichi_takishima"
+      ],
+      "tags": [],
+      "parent": "86evnj1g5",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evrdjae",
+      "name": "GachaListViewでContentView出す",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-11T04:00:00",
+      "created_date": "2025-12-04T12:05:00.097000",
+      "updated_date": "2026-01-09T11:14:10.488000",
+      "url": "https://app.clickup.com/t/86evrdjae",
+      "creator_name": "daichi_takishima",
+      "assignees": [
+        "daichi_takishima"
+      ],
+      "tags": [],
+      "parent": "86evnj1g5",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evnz1k1",
+      "name": "v1.5.0(01/07)3 (UI)スタミナ回復アイテムT8",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-09T04:00:00",
+      "created_date": "2025-11-27T20:06:42.834000",
+      "updated_date": "2025-12-08T19:43:01.637000",
+      "url": "https://app.clickup.com/t/86evnz1k1",
+      "creator_name": "donghyeok kim",
+      "assignees": [
+        "Rira Mochizuki"
+      ],
+      "tags": [],
+      "parent": "86evnbw8u",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evnz0vj",
+      "name": "v1.5.0(01/07)11 (UI)BOXガシャT9",
+      "description": "仕様要件書",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-05T04:00:00",
+      "created_date": "2025-11-27T20:05:27.119000",
+      "updated_date": "2026-01-19T12:05:56.249000",
+      "url": "https://app.clickup.com/t/86evnz0vj",
+      "creator_name": "donghyeok kim",
+      "assignees": [
+        "Miharu Kimura"
+      ],
+      "tags": [],
+      "parent": "86evnbw4g",
+      "markdown_description": "仕様要件書\n\n[\n\ndocs.google.com\n\nhttps://docs.google.com/presentation/d/1aiA8rlRjf3ifynSPg3mMaUgCbXRI1qvYkYIGcCQ5W8Y/edit?slide=id.g3aa4af27e96\\_0\\_315#slide=id.g3aa4af27e96\\_0\\_315\n\n](https://docs.google.com/presentation/d/1aiA8rlRjf3ifynSPg3mMaUgCbXRI1qvYkYIGcCQ5W8Y/edit?slide=id.g3aa4af27e96_0_315#slide=id.g3aa4af27e96_0_315)"
+    },
+    {
+      "id": "86evnyp3g",
+      "name": "v1.5.0(01/07)5 (UI)ガシャ一覧画面の刷新 T3",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-07T04:00:00",
+      "created_date": "2025-11-27T19:46:37.414000",
+      "updated_date": "2026-01-13T11:04:09.653000",
+      "url": "https://app.clickup.com/t/86evnyp3g",
+      "creator_name": "donghyeok kim",
+      "assignees": [
+        "Rira Mochizuki"
+      ],
+      "tags": [],
+      "parent": "86evjvued",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evnt27t",
+      "name": "管理ツール BOXガシャ",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-26T04:00:00",
+      "created_date": "2025-11-27T12:56:22.444000",
+      "updated_date": "2026-01-19T12:05:56.249000",
+      "url": "https://app.clickup.com/t/86evnt27t",
+      "creator_name": "Shun Endo",
+      "assignees": [
+        "Daiki Kawasaki"
+      ],
+      "tags": [],
+      "parent": "86evnbw4g",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evnrw61",
+      "name": "(サバ)スタミナ回復アイテム",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-05T04:00:00",
+      "created_date": "2025-11-27T12:37:29.555000",
+      "updated_date": "2025-12-03T15:47:11.138000",
+      "url": "https://app.clickup.com/t/86evnrw61",
+      "creator_name": "Shun Endo",
+      "assignees": [
+        "Junki Mizutani"
+      ],
+      "tags": [],
+      "parent": "86evnbw8u",
+      "markdown_description": "[\n\ndocs.google.com\n\nhttps://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a6b6ec5007\\_0\\_571#slide=id.g3a6b6ec5007\\_0\\_571\n\n](https://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a6b6ec5007_0_571#slide=id.g3a6b6ec5007_0_571)"
+    },
+    {
+      "id": "86evnrw1w",
+      "name": "(サバ)BOXガシャ",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-19T04:00:00",
+      "created_date": "2025-11-27T12:37:02.179000",
+      "updated_date": "2026-01-19T12:05:56.249000",
+      "url": "https://app.clickup.com/t/86evnrw1w",
+      "creator_name": "Shun Endo",
+      "assignees": [
+        "Daiki Kawasaki"
+      ],
+      "tags": [],
+      "parent": "86evnbw4g",
+      "markdown_description": "[\n\ndocs.google.com\n\nhttps://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a6b6ec5007\\_0\\_589#slide=id.g3a6b6ec5007\\_0\\_589\n\n](https://docs.google.com/presentation/d/1UTFvGlKhWw1MIbPCFX-1bjvxOHopNgaVKSeVXh10t5A/edit?slide=id.g3a6b6ec5007_0_589#slide=id.g3a6b6ec5007_0_589)"
+    },
+    {
+      "id": "86evnj2jg",
+      "name": "(クラ)スタミナ回復アイテム",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-25T04:00:00",
+      "created_date": "2025-11-26T20:20:33.506000",
+      "updated_date": "2026-01-09T11:08:24.067000",
+      "url": "https://app.clickup.com/t/86evnj2jg",
+      "creator_name": "daichi_takishima",
+      "assignees": [
+        "Keisuke Isayama"
+      ],
+      "tags": [],
+      "parent": "86evnbw8u",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evnj1g5",
+      "name": "(クラ)ガシャ一覧画面の刷新",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-13T04:00:00",
+      "created_date": "2025-11-26T20:16:53.227000",
+      "updated_date": "2026-01-13T17:10:37.215000",
+      "url": "https://app.clickup.com/t/86evnj1g5",
+      "creator_name": "daichi_takishima",
+      "assignees": [
+        "daichi_takishima"
+      ],
+      "tags": [],
+      "parent": "86evjvued",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evngxm9",
+      "name": "(スキル_作品バフ)スキルによる付与",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-23T04:00:00",
+      "created_date": "2025-11-26T18:58:40.308000",
+      "updated_date": "2026-01-19T12:06:26.623000",
+      "url": "https://app.clickup.com/t/86evngxm9",
+      "creator_name": "daichi_takishima",
+      "assignees": [
+        "Kenta Inui"
+      ],
+      "tags": [],
+      "parent": "86ew4yy7u",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evngxk0",
+      "name": "(スキル_作品バフ)ステージスペシャルルールによる付与",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2025-12-23T04:00:00",
+      "created_date": "2025-11-26T18:58:33.105000",
+      "updated_date": "2026-01-09T14:25:05.060000",
+      "url": "https://app.clickup.com/t/86evngxk0",
+      "creator_name": "daichi_takishima",
+      "assignees": [
+        "wataru shigeyama",
+        "Keisuke Isayama"
+      ],
+      "tags": [],
+      "parent": "86eva83et",
+      "markdown_description": ""
+    },
+    {
+      "id": "86evngwn3",
+      "name": "(クラ)BOXガシャ",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": "2026-01-13T04:00:00",
+      "created_date": "2025-11-26T18:55:23.254000",
+      "updated_date": "2026-01-14T15:21:42.339000",
+      "url": "https://app.clickup.com/t/86evngwn3",
+      "creator_name": "daichi_takishima",
+      "assignees": [
+        "Kiryu Yamashita"
+      ],
+      "tags": [],
+      "parent": "86evnbw4g",
+      "markdown_description": ""
+    },
+    {
+      "id": "86ev9ucgq",
+      "name": "QA環境からテストデータをデータレイクステージングに向けて転送",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": null,
+      "created_date": "2025-10-27T16:20:45.091000",
+      "updated_date": "2025-10-27T16:20:45.091000",
+      "url": "https://app.clickup.com/t/86ev9ucgq",
+      "creator_name": "Toshikazu Takahashi",
+      "assignees": [],
+      "tags": [],
+      "parent": "86ev9ucg6",
+      "markdown_description": ""
+    },
+    {
+      "id": "86ev9ucgk",
+      "name": "テーブル定義書の更新",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": null,
+      "created_date": "2025-10-27T16:20:44.513000",
+      "updated_date": "2025-10-27T16:20:44.513000",
+      "url": "https://app.clickup.com/t/86ev9ucgk",
+      "creator_name": "Toshikazu Takahashi",
+      "assignees": [],
+      "tags": [],
+      "parent": "86ev9ucg6",
+      "markdown_description": ""
+    },
+    {
+      "id": "86ev9ucgb",
+      "name": "データレイク対応の要否を判断",
+      "description": "",
+      "status": "Closed",
+      "priority": null,
+      "due_date": null,
+      "created_date": "2025-10-27T16:20:43.890000",
+      "updated_date": "2025-10-27T16:20:43.890000",
+      "url": "https://app.clickup.com/t/86ev9ucgb",
+      "creator_name": "Toshikazu Takahashi",
+      "assignees": [],
+      "tags": [],
+      "parent": "86ev9ucg6",
+      "markdown_description": ""
+    }
+  ]
+}
