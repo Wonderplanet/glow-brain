@@ -50,6 +50,7 @@ class ListExporter:
         skip_attachments: bool = False,
         debug_limit: Optional[int] = None,
         dry_run: bool = False,
+        include_subtasks: bool = False,
     ) -> ExportResult:
         """リスト内のチケットをエクスポート
 
@@ -60,6 +61,7 @@ class ListExporter:
             skip_attachments: 添付ファイルをスキップ
             debug_limit: デバッグ用の処理件数制限
             dry_run: ドライラン（ファイル出力しない）
+            include_subtasks: サブタスクを含めるか（デフォルト: False）
 
         Returns:
             エクスポート結果
@@ -82,9 +84,21 @@ class ListExporter:
         else:
             print("\n全タスクを取得中...")
 
+        if include_subtasks:
+            print("  → サブタスクも含めて取得")
+
         include_closed = statuses is None or "closed" in statuses
-        tasks = self.client.get_tasks(list_id, statuses=statuses, include_closed=include_closed)
+        tasks = self.client.get_tasks(
+            list_id,
+            statuses=statuses,
+            include_closed=include_closed,
+            include_subtasks=include_subtasks
+        )
         print(f"取得件数: {len(tasks)}")
+
+        if include_subtasks:
+            subtask_count = sum(1 for task in tasks if task.parent)
+            print(f"  → うちサブタスク: {subtask_count}")
 
         # デバッグ制限
         if debug_limit and len(tasks) > debug_limit:
@@ -254,6 +268,11 @@ class ListExporter:
         # 基本情報
         lines.append(md.heading("基本情報", level=2))
         lines.append(md.task_basic_info_table(task))
+
+        # 親タスク情報（サブタスクの場合のみ）
+        if task.parent:
+            lines.append(md.heading("親タスク", level=2))
+            lines.append(f"親タスクID: `{task.parent}`\n\n")
 
         # リスト情報
         lines.append(md.heading("リスト情報", level=2))

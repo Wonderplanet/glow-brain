@@ -98,6 +98,9 @@ uv run python -m clickup_tools.exporters.list_exporter \
 
 # ドライラン（ファイル出力なし）
 --dry-run
+
+# サブタスクも含めてエクスポート
+--include-subtasks
 ```
 
 #### 実行例
@@ -131,6 +134,11 @@ uv run python -m clickup_tools.exporters.list_exporter \
 uv run python -m clickup_tools.exporters.list_exporter \
   --url "https://app.clickup.com/12345678/v/li/987654321" \
   --output ./my-exports
+
+# サブタスクも含めてエクスポート
+uv run python -m clickup_tools.exporters.list_exporter \
+  --url "https://app.clickup.com/12345678/v/li/987654321" \
+  --include-subtasks
 ```
 
 #### 出力データ構造

@@ -91,6 +91,7 @@ class ClickUpClient:
         list_id: str,
         statuses: Optional[List[str]] = None,
         include_closed: bool = False,
+        include_subtasks: bool = False,
     ) -> List[Task]:
         """リスト内のタスクを取得
 
@@ -98,6 +99,7 @@ class ClickUpClient:
             list_id: リスト ID
             statuses: フィルタするステータス（指定しない場合は全て）
             include_closed: クローズドタスクを含めるか
+            include_subtasks: サブタスクを含めるか（デフォルト: False）
 
         Returns:
             タスクのリスト
@@ -105,6 +107,7 @@ class ClickUpClient:
         params: Dict[str, Any] = {
             "include_closed": str(include_closed).lower(),
             "include_markdown_description": "true",
+            "subtasks": str(include_subtasks).lower(),
         }
 
         if statuses:

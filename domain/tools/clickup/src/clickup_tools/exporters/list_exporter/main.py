@@ -43,6 +43,11 @@ def main():
   python -m clickup_tools.exporters.list_exporter \\
     --url "https://app.clickup.com/12345678/v/li/987654321" \\
     --dry-run
+
+  # サブタスクも含めてエクスポート
+  python -m clickup_tools.exporters.list_exporter \\
+    --url "https://app.clickup.com/12345678/v/li/987654321" \\
+    --include-subtasks
         """,
     )
 
@@ -86,6 +91,12 @@ def main():
         help="ドライラン（ファイル出力しない）",
     )
 
+    parser.add_argument(
+        "--include-subtasks",
+        action="store_true",
+        help="サブタスクも含めてエクスポート（デフォルト: 含めない）",
+    )
+
     args = parser.parse_args()
 
     try:
@@ -114,6 +125,7 @@ def main():
             skip_attachments=args.skip_attachments,
             debug_limit=args.debug_limit,
             dry_run=args.dry_run,
+            include_subtasks=args.include_subtasks,
         )
 
         # 結果を表示
