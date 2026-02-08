@@ -8,7 +8,7 @@
 | ステータス | Closed |
 | 優先度 | なし |
 | 作成者 | Ryosuke Goto |
-| 担当者 | Kenta Inui, wataru shigeyama, Keisuke Isayama |
+| 担当者 | wataru shigeyama, Kenta Inui, Keisuke Isayama |
 | タグ | なし |
 | 作成日時 | 2025-10-28 16:33:52 |
 | 更新日時 | 2026-02-04 12:21:39 |

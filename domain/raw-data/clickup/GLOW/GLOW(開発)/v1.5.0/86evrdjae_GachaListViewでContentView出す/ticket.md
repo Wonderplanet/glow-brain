@@ -1,0 +1,2 @@
+# GachaListViewでContentView出す
+

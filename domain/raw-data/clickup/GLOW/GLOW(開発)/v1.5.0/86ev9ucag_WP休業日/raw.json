@@ -1,0 +1,680 @@
+{
+  "task": {
+    "id": "86ev9ucag",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "WP休業日",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "237816378.00000000000000000000000000000000",
+    "date_created": "1761549621752",
+    "date_updated": "1764239161922",
+    "date_closed": "1764239161922",
+    "date_done": "1747057823597",
+    "archived": false,
+    "creator": {
+      "id": 25540505,
+      "username": "Toshikazu Takahashi",
+      "color": "#536cfe",
+      "email": "t-takahashi@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+    },
+    "assignees": [
+      {
+        "id": 7807756,
+        "username": "daichi_takishima",
+        "color": "#04a9f4",
+        "initials": "D",
+        "email": "takishima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7807756_rQr.jpg"
+      },
+      {
+        "id": 7859650,
+        "username": "donghyeok kim",
+        "color": "#3e2724",
+        "initials": "DK",
+        "email": "donghyeok-kim@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7859650_EMB.jpg"
+      },
+      {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "color": "#536cfe",
+        "initials": "TT",
+        "email": "t-takahashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "email": "junki.mizutani@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      {
+        "id": 25570691,
+        "username": "Motoki Oohashi",
+        "color": "#827718",
+        "initials": "MO",
+        "email": "oohashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570691_8QB.jpg"
+      },
+      {
+        "id": 37689484,
+        "username": "ando_ayumi",
+        "color": "#795548",
+        "initials": "A",
+        "email": "a-ando@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37689484_t9Y.jpg"
+      },
+      {
+        "id": 37694112,
+        "username": "Yamashiro Hiroshi",
+        "color": "#536cfe",
+        "initials": "YH",
+        "email": "yamashiro@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37694112_3Br.jpg"
+      },
+      {
+        "id": 37714028,
+        "username": "Shun Endo",
+        "color": "#d60800",
+        "initials": "SE",
+        "email": "endo@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714028_l8a.jpg"
+      },
+      {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "color": "#388d3c",
+        "initials": "KI",
+        "email": "inui@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      {
+        "id": 43534825,
+        "username": "Junki Furusawa",
+        "color": "#7c4dff",
+        "initials": "JF",
+        "email": "junki.furusawa@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43534825_c6O.jpg"
+      },
+      {
+        "id": 43566206,
+        "username": "Kazuomi Sawada",
+        "color": "#ff897f",
+        "initials": "KS",
+        "email": "kazuomi.sawada@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43566206_K5I.jpg"
+      },
+      {
+        "id": 43588402,
+        "username": "sayaka goto",
+        "color": "#795548",
+        "initials": "SG",
+        "email": "goto@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588402_jyP.jpg"
+      },
+      {
+        "id": 43588404,
+        "username": "Shodai Ando",
+        "color": "#ff7fab",
+        "initials": "SA",
+        "email": "s-ando@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588404_NmU.jpg"
+      },
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 43588408,
+        "username": "Minenori Matsuo",
+        "color": "#006063",
+        "initials": "MM",
+        "email": "matsuo@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588408_LGk.jpg"
+      },
+      {
+        "id": 43588409,
+        "username": "Aya Masakiyo",
+        "color": "#536cfe",
+        "initials": "AM",
+        "email": "masakiyo@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588409_GJY.jpg"
+      },
+      {
+        "id": 43588410,
+        "username": "Tomoko Ookawa",
+        "color": "#e65100",
+        "initials": "TO",
+        "email": "ookawa@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588410_5BE.jpg"
+      },
+      {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "color": "#455963",
+        "initials": "KY",
+        "email": "k-yamashita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      },
+      {
+        "id": 43594915,
+        "username": "wataru shigeyama",
+        "color": "#0388d1",
+        "initials": "WS",
+        "email": "shigeyama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594915_4l9.jpg"
+      },
+      {
+        "id": 43594917,
+        "username": "Hirano Kento",
+        "color": "#ea80fc",
+        "initials": "HK",
+        "email": "hirano@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594917_dla.jpg"
+      },
+      {
+        "id": 43594922,
+        "username": "Rira Mochizuki",
+        "color": "#8ac34a",
+        "initials": "RM",
+        "email": "mochizuki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594922_r9h.jpg"
+      },
+      {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "color": "#f57c01",
+        "initials": "RG",
+        "email": "r-goto@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      {
+        "id": 43594930,
+        "username": "KobayashiRikaco",
+        "color": "#827718",
+        "initials": "K",
+        "email": "r-kobayashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594930_Nra.jpg"
+      },
+      {
+        "id": 43594934,
+        "username": "Shingo Maeda",
+        "color": "#622aea",
+        "initials": "SM",
+        "email": "shingo.maeda@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594934_wew.jpg"
+      },
+      {
+        "id": 43594940,
+        "username": "Tomoko Yamada",
+        "color": "#0197a7",
+        "initials": "TY",
+        "email": "yamada@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594940_OWf.jpg"
+      },
+      {
+        "id": 43594941,
+        "username": "Sayaka Emura",
+        "color": "#304ffe",
+        "initials": "SE",
+        "email": "sayaka.emura@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594941_0nM.jpg"
+      },
+      {
+        "id": 43594943,
+        "username": "OSHIMA RYUTO",
+        "color": "#536cfe",
+        "initials": "OR",
+        "email": "oshima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594943_C9J.jpg"
+      },
+      {
+        "id": 48905355,
+        "username": "Ken Wakahara",
+        "color": "#ff897f",
+        "initials": "KW",
+        "email": "wakahara@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/48905355_3oi.jpg"
+      },
+      {
+        "id": 48979096,
+        "username": "Noriyuki Honda",
+        "color": "#e65100",
+        "initials": "NH",
+        "email": "honda@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/48979096_7Ki.jpg"
+      },
+      {
+        "id": 60917984,
+        "username": "Daiki Kawasaki",
+        "color": "#0197a7",
+        "initials": "DK",
+        "email": "daiki.kawasaki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60917984_L1r.jpg"
+      },
+      {
+        "id": 89547981,
+        "username": "Eri Saito",
+        "color": "#5f7c8a",
+        "initials": "ES",
+        "email": "eri.saito@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89547981_ag6.jpg"
+      },
+      {
+        "id": 89597485,
+        "username": "Eri Morinaga",
+        "color": "#5d4037",
+        "initials": "EM",
+        "email": "eri.maeda@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597485_sAp.jpg"
+      },
+      {
+        "id": 89597486,
+        "username": "Issei Takahashi",
+        "color": "#006063",
+        "initials": "IT",
+        "email": "issei.takahashi@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597486_MOo.jpg"
+      },
+      {
+        "id": 89598989,
+        "username": "Jun Ueoka",
+        "color": "#5f55ee",
+        "initials": "JU",
+        "email": "jun.ueoka@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89598989_CZV.jpg"
+      },
+      {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "email": "keisuke.isayama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      },
+      {
+        "id": 95515882,
+        "username": "Sota Nagagata",
+        "color": "#536cfe",
+        "initials": "SN",
+        "email": "sota.nagagata@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515882_XbY.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 7807756,
+        "username": "daichi_takishima",
+        "color": "#04a9f4",
+        "initials": "D",
+        "email": "takishima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7807756_rQr.jpg"
+      },
+      {
+        "id": 7859650,
+        "username": "donghyeok kim",
+        "color": "#3e2724",
+        "initials": "DK",
+        "email": "donghyeok-kim@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7859650_EMB.jpg"
+      },
+      {
+        "id": 25540505,
+        "username": "Toshikazu Takahashi",
+        "color": "#536cfe",
+        "initials": "TT",
+        "email": "t-takahashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25540505_Ng0.jpg"
+      },
+      {
+        "id": 25570442,
+        "username": "Junki Mizutani",
+        "color": "#81b1ff",
+        "initials": "JM",
+        "email": "junki.mizutani@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570442_3sK.jpg"
+      },
+      {
+        "id": 25570691,
+        "username": "Motoki Oohashi",
+        "color": "#827718",
+        "initials": "MO",
+        "email": "oohashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/25570691_8QB.jpg"
+      },
+      {
+        "id": 37689484,
+        "username": "ando_ayumi",
+        "color": "#795548",
+        "initials": "A",
+        "email": "a-ando@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37689484_t9Y.jpg"
+      },
+      {
+        "id": 37694112,
+        "username": "Yamashiro Hiroshi",
+        "color": "#536cfe",
+        "initials": "YH",
+        "email": "yamashiro@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37694112_3Br.jpg"
+      },
+      {
+        "id": 37714028,
+        "username": "Shun Endo",
+        "color": "#d60800",
+        "initials": "SE",
+        "email": "endo@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714028_l8a.jpg"
+      },
+      {
+        "id": 37714240,
+        "username": "Kenta Inui",
+        "color": "#388d3c",
+        "initials": "KI",
+        "email": "inui@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/37714240_5tG.jpg"
+      },
+      {
+        "id": 43534825,
+        "username": "Junki Furusawa",
+        "color": "#7c4dff",
+        "initials": "JF",
+        "email": "junki.furusawa@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43534825_c6O.jpg"
+      },
+      {
+        "id": 43566206,
+        "username": "Kazuomi Sawada",
+        "color": "#ff897f",
+        "initials": "KS",
+        "email": "kazuomi.sawada@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43566206_K5I.jpg"
+      },
+      {
+        "id": 43588402,
+        "username": "sayaka goto",
+        "color": "#795548",
+        "initials": "SG",
+        "email": "goto@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588402_jyP.jpg"
+      },
+      {
+        "id": 43588404,
+        "username": "Shodai Ando",
+        "color": "#ff7fab",
+        "initials": "SA",
+        "email": "s-ando@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588404_NmU.jpg"
+      },
+      {
+        "id": 43588405,
+        "username": "hiroki fujita",
+        "color": "#388d3c",
+        "initials": "HF",
+        "email": "fujita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588405_ON8.jpg"
+      },
+      {
+        "id": 43588408,
+        "username": "Minenori Matsuo",
+        "color": "#006063",
+        "initials": "MM",
+        "email": "matsuo@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588408_LGk.jpg"
+      },
+      {
+        "id": 43588409,
+        "username": "Aya Masakiyo",
+        "color": "#536cfe",
+        "initials": "AM",
+        "email": "masakiyo@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588409_GJY.jpg"
+      },
+      {
+        "id": 43588410,
+        "username": "Tomoko Ookawa",
+        "color": "#e65100",
+        "initials": "TO",
+        "email": "ookawa@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43588410_5BE.jpg"
+      },
+      {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "color": "#455963",
+        "initials": "KY",
+        "email": "k-yamashita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      },
+      {
+        "id": 43594915,
+        "username": "wataru shigeyama",
+        "color": "#0388d1",
+        "initials": "WS",
+        "email": "shigeyama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594915_4l9.jpg"
+      },
+      {
+        "id": 43594917,
+        "username": "Hirano Kento",
+        "color": "#ea80fc",
+        "initials": "HK",
+        "email": "hirano@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594917_dla.jpg"
+      },
+      {
+        "id": 43594922,
+        "username": "Rira Mochizuki",
+        "color": "#8ac34a",
+        "initials": "RM",
+        "email": "mochizuki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594922_r9h.jpg"
+      },
+      {
+        "id": 43594926,
+        "username": "Ryosuke Goto",
+        "color": "#f57c01",
+        "initials": "RG",
+        "email": "r-goto@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594926_heL.jpg"
+      },
+      {
+        "id": 43594930,
+        "username": "KobayashiRikaco",
+        "color": "#827718",
+        "initials": "K",
+        "email": "r-kobayashi@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594930_Nra.jpg"
+      },
+      {
+        "id": 43594934,
+        "username": "Shingo Maeda",
+        "color": "#622aea",
+        "initials": "SM",
+        "email": "shingo.maeda@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594934_wew.jpg"
+      },
+      {
+        "id": 43594940,
+        "username": "Tomoko Yamada",
+        "color": "#0197a7",
+        "initials": "TY",
+        "email": "yamada@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594940_OWf.jpg"
+      },
+      {
+        "id": 43594941,
+        "username": "Sayaka Emura",
+        "color": "#304ffe",
+        "initials": "SE",
+        "email": "sayaka.emura@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594941_0nM.jpg"
+      },
+      {
+        "id": 43594943,
+        "username": "OSHIMA RYUTO",
+        "color": "#536cfe",
+        "initials": "OR",
+        "email": "oshima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594943_C9J.jpg"
+      },
+      {
+        "id": 48905355,
+        "username": "Ken Wakahara",
+        "color": "#ff897f",
+        "initials": "KW",
+        "email": "wakahara@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/48905355_3oi.jpg"
+      },
+      {
+        "id": 48979096,
+        "username": "Noriyuki Honda",
+        "color": "#e65100",
+        "initials": "NH",
+        "email": "honda@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/48979096_7Ki.jpg"
+      },
+      {
+        "id": 60917984,
+        "username": "Daiki Kawasaki",
+        "color": "#0197a7",
+        "initials": "DK",
+        "email": "daiki.kawasaki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60917984_L1r.jpg"
+      },
+      {
+        "id": 89547981,
+        "username": "Eri Saito",
+        "color": "#5f7c8a",
+        "initials": "ES",
+        "email": "eri.saito@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89547981_ag6.jpg"
+      },
+      {
+        "id": 89597485,
+        "username": "Eri Morinaga",
+        "color": "#5d4037",
+        "initials": "EM",
+        "email": "eri.maeda@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597485_sAp.jpg"
+      },
+      {
+        "id": 89597486,
+        "username": "Issei Takahashi",
+        "color": "#006063",
+        "initials": "IT",
+        "email": "issei.takahashi@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89597486_MOo.jpg"
+      },
+      {
+        "id": 89598989,
+        "username": "Jun Ueoka",
+        "color": "#5f55ee",
+        "initials": "JU",
+        "email": "jun.ueoka@bp.wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/89598989_CZV.jpg"
+      },
+      {
+        "id": 95515865,
+        "username": "Keisuke Isayama",
+        "color": "#1b5e20",
+        "initials": "KI",
+        "email": "keisuke.isayama@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515865_NHT.jpg"
+      },
+      {
+        "id": 95515882,
+        "username": "Sota Nagagata",
+        "color": "#536cfe",
+        "initials": "SN",
+        "email": "sota.nagagata@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/95515882_XbY.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": "86ev9ubu3",
+    "top_level_parent": "86ev9ubu3",
+    "priority": null,
+    "due_date": "1798689600000",
+    "start_date": null,
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86ev9ucag",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": []
+}

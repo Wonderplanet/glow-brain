@@ -1,0 +1,187 @@
+{
+  "task": {
+    "id": "86evyrfhu",
+    "custom_id": null,
+    "custom_item_id": 0,
+    "name": "(クラ)BOXガシャ(Boxガチャ結果画面)",
+    "text_content": "",
+    "description": "",
+    "markdown_description": "",
+    "status": {
+      "id": "c90180278154_1Lj3odaw",
+      "status": "Closed",
+      "color": "#008844",
+      "orderindex": 15,
+      "type": "closed"
+    },
+    "orderindex": "237856526.00000000000000000000000000000000",
+    "date_created": "1766482816004",
+    "date_updated": "1768371382200",
+    "date_closed": "1770175300038",
+    "date_done": "1768371382200",
+    "archived": false,
+    "creator": {
+      "id": 43594913,
+      "username": "Kiryu Yamashita",
+      "color": "#455963",
+      "email": "k-yamashita@wonderpla.net",
+      "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+    },
+    "assignees": [
+      {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "color": "#455963",
+        "initials": "KY",
+        "email": "k-yamashita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      }
+    ],
+    "group_assignees": [],
+    "watchers": [
+      {
+        "id": 7807756,
+        "username": "daichi_takishima",
+        "color": "#04a9f4",
+        "initials": "D",
+        "email": "takishima@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/7807756_rQr.jpg"
+      },
+      {
+        "id": 43566206,
+        "username": "Kazuomi Sawada",
+        "color": "#ff897f",
+        "initials": "KS",
+        "email": "kazuomi.sawada@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43566206_K5I.jpg"
+      },
+      {
+        "id": 43594913,
+        "username": "Kiryu Yamashita",
+        "color": "#455963",
+        "initials": "KY",
+        "email": "k-yamashita@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/43594913_VNd.jpg"
+      },
+      {
+        "id": 60917984,
+        "username": "Daiki Kawasaki",
+        "color": "#0197a7",
+        "initials": "DK",
+        "email": "daiki.kawasaki@wonderpla.net",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60917984_L1r.jpg"
+      }
+    ],
+    "checklists": [],
+    "tags": [],
+    "parent": "86evnbw4g",
+    "top_level_parent": "86evnbw4g",
+    "priority": null,
+    "due_date": "1767553200000",
+    "start_date": "1766689200000",
+    "points": null,
+    "time_estimate": null,
+    "time_spent": 0,
+    "custom_fields": [
+      {
+        "id": "037ae8ce-a9d8-4a06-9550-20663f645443",
+        "name": "アートTL非表示用",
+        "type": "checkbox",
+        "type_config": {},
+        "date_created": "1749799499483",
+        "hide_from_guests": false,
+        "required": false
+      }
+    ],
+    "dependencies": [],
+    "linked_tasks": [],
+    "locations": [],
+    "team_id": "5716001",
+    "url": "https://app.clickup.com/t/86evyrfhu",
+    "sharing": {
+      "public": false,
+      "public_share_expires_on": null,
+      "public_fields": [
+        "assignees",
+        "priority",
+        "due_date",
+        "content",
+        "comments",
+        "attachments",
+        "customFields",
+        "subtasks",
+        "tags",
+        "checklists",
+        "coverimage"
+      ],
+      "token": null,
+      "seo_optimized": false
+    },
+    "permission_level": "create",
+    "list": {
+      "id": "901812696739",
+      "name": "v1.5.0",
+      "access": true
+    },
+    "project": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "folder": {
+      "id": "90180278154",
+      "name": "GLOW(開発)",
+      "hidden": false,
+      "access": true
+    },
+    "space": {
+      "id": "90100408512"
+    },
+    "attachments": []
+  },
+  "comments": [
+    {
+      "id": "90180178827173",
+      "comment": [
+        {
+          "type": "bookmark",
+          "bookmark": {
+            "id": "https://github.com/Wonderplanet/glow-schema/pull/507",
+            "url": "https://github.com/Wonderplanet/glow-schema/pull/507",
+            "service": "custom"
+          },
+          "attributes": {
+            "block-id": "block-9162e41b-f759-42f4-8331-a9a2b42d6582",
+            "unfurled": "true",
+            "body-type": "table"
+          }
+        },
+        {
+          "text": "schemaです",
+          "attributes": {}
+        },
+        {
+          "text": "\n",
+          "attributes": {
+            "block-id": "block-05a4d993-1f79-4201-9961-60194b4261f8"
+          }
+        }
+      ],
+      "comment_text": "undefinedschemaです\n",
+      "user": {
+        "id": 60917984,
+        "username": "Daiki Kawasaki",
+        "email": "daiki.kawasaki@wonderpla.net",
+        "color": "#0197a7",
+        "initials": "DK",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/60917984_L1r.jpg"
+      },
+      "assignee": null,
+      "group_assignee": null,
+      "reactions": [],
+      "date": "1765778625775",
+      "reply_count": 0
+    }
+  ]
+}
