@@ -1,0 +1,11 @@
+　作品ID,作品名,ゲート_ID,asset_key,ゲート名（管理用）,ゲート位置,制作番号,valid_start_date,valid_end_date,デプロイ,補足
+gom,姫様“拷問”の時間です,outpost_gom_ally_0001,gom_ally_0001,姫+エクス,ally,1,,,,
+gom,姫様“拷問”の時間です,outpost_gom_enemy_0001,gom_enemy_0001,トーチャー（ピック）+アイアンメイデン,enemy,1,,,,
+gom,姫様“拷問”の時間です,outpost_gom_enemy_0002,gom_enemy_0002,トーチャー（ゴリラ）,enemy,2,,,,
+gom,姫様“拷問”の時間です,outpost_gom_enemy_0003,gom_enemy_0003,クロル,enemy,3,,,,
+kim,君のことが大大大大大好きな100人の彼女,outpost_kim_enemy_0001,kim_enemy_0001,愛城恋太郎,enemy,1,,,,
+glo,GLOW,outpost_glo_enemy_0001,glo_enemy_0001,宝箱,enemy,1,,,,
+sample,サンプル1,outpost_sample_ally_0001,sample_ally_0001,ID発行イメージサンプル,ally,1,,,,"命名規則：
+outpost_作品ID_ゲート位置_制作番号4桁"
+sample,サンプル2,outpost_sample_ally_0002,sample_ally_0002,ID発行イメージサンプル,ally,2,,,,
+sample,サンプル3,outpost_sample_enemy_0001,sample_enemy_0001,ID発行イメージサンプル,enemy,1,,,,

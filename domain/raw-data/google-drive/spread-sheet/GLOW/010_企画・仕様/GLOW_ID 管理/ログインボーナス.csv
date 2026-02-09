@@ -1,0 +1,15 @@
+ログボ種類,名称,作品ID,作品名,識別ID,識別番号,asset_key,ログボバナーID
+定常,定常ログインボーナス,glo,GLOW,general_glo,00001,general_glo_00001,general_glo_00001_loginbonus
+イベント,怪獣8号いいジャン祭ログインボーナス,kai,怪獣８号,event_kai,00001,event_kai_00001,event_kai_00001_loginbonus
+定常,カムバックログボ,glo,GLOW,general_glo,00002,general_glo_00002,general_glo_00002_loginbonus
+イベント,SPY×FAMILYいいジャン祭ログインボーナス,spy,SPY×FAMILY,event_spy,00001,event_spy_00001,event_spy_00001_loginbonus
+イベント,ダンダダン いいジャン祭ログインボーナス,dan,ダンダダン,event_dan,00001,event_dan_00001,event_dan_00001_loginbonus
+イベント,株式会社マジルミエ いいジャン祭ログインボーナス,mag,株式会社マジルミエ,event_mag,00001,event_mag_00001,event_mag_00001_loginbonus
+イベント,2.5次元の誘惑 いいジャン祭 特別ログインボーナス,yuw,2.5次元の誘惑,event_yuw,00001,event_yuw_00001,event_yuw_00001_loginbonus
+イベント,魔都精兵のスレイブ いいジャン祭 特別ログインボーナス,sur,魔都精兵のスレイブ,event_sur,00001,event_sur_00001,event_sur_00001_loginbonus
+イベント,【推しの子】 いいジャン祭 特別ログインボーナス,osh,【推しの子】,event_osh,00001,event_osh_00001,event_osh_00001_loginbonus
+イベント,地獄楽 いいジャン祭 特別ログインボーナス,jig,地獄楽,event_jig,00001,event_jig_00001,event_jig_00001_loginbonus
+イベント,幼稚園WARS いいジャン祭 特別ログインボーナス,you,幼稚園WARS,event_you,00001,event_you_00001,event_you_00001_loginbonus
+イベント,君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス,kim,君のことが大大大大大好きな100人の彼女,event_kim,00001,event_kim_00001,event_kim_00001_loginbonus
+イベント,ハーフアニバーサリー 感謝祭！ 前半ログインボーナス,hav1,ハーフアニバーサリー 感謝祭！ 前半,event_hav1,00001,event_hav1_00001,event_hav1_00001_loginbonus
+イベント,ハーフアニバーサリー 感謝祭！後半 ログインボーナス,hav2,ハーフアニバーサリー 感謝祭！ 後半,event_hav2,00001,event_hav2_00001,event_hav2_00001_loginbonus

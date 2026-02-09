@@ -1,0 +1,70 @@
+施策内容,識別番号,asset_key,ショップ画面バナーID,ホームバナーID,ホームバナー昇格タグ,備考
+【お一人様1回まで購入可】わくわく アーニャ パック,00001,pack_00001,shop_pack_banner_pack_00001,hometop_shop_pack_00001,event_kai_00001_01,
+【お一人様1回まで購入可】スタートダッシュパック,00002,pack_00002,shop_pack_banner_pack_00002,hometop_shop_pack_00002,event_kai_00001_01,
+【お一人様1回まで購入可】スタートダッシュジャンブルパック,00003,pack_00003,shop_pack_banner_pack_00003,hometop_shop_pack_00003,event_kai_00001_01,
+【毎日更新】強化パック,00004,pack_00004,shop_pack_banner_pack_00004,hometop_shop_pack_00004,event_kai_00001_01,
+【お一人様1回まで購入可】いいジャン祭 開催記念パック,00005,pack_00005,shop_pack_banner_pack_00005,hometop_shop_pack_00005,event_kai_00001_01,
+BLACKFRIDAY お得パック・A,00006,pack_00006,shop_pack_banner_pack_00006,なし,,
+BLACKFRIDAY お得パック・B,00007,pack_00007,shop_pack_banner_pack_00007,なし,,
+BLACKFRIDAY お得パック・C,00008,pack_00008,shop_pack_banner_pack_00008,なし,,
+クリスマス お得パック・A,00009,pack_00009,shop_pack_banner_pack_00009,なし,,
+クリスマス お得パック・B,00010,pack_00010,shop_pack_banner_pack_00010,なし,,
+クリスマス お得パック・C,00011,pack_00011,shop_pack_banner_pack_00011,なし,,
+お正月 DXお得パック梅,00012,pack_00012,shop_pack_banner_pack_00012,なし,,下位
+お正月 DXお得パック竹,00013,pack_00013,shop_pack_banner_pack_00013,なし,,中位
+お正月 DXお得パック松,00014,pack_00014,shop_pack_banner_pack_00014,なし,,高位
+"BLACK FRIDAYパック お得なパック登場お知らせ
+まとめお知らせ
+・BLACK FRIDAY お得パック・A
+・BLACK FRIDAY お得パック・B
+・BLACK FRIDAY お得パック・C",00015,pack_00015,なし,hometop_shop_pack_00015,,
+"クリスマスお得パック お得なパック登場お知らせ
+まとめお知らせ
+・クリスマス お得パック・A
+・クリスマス お得パック・B
+・クリスマス お得パック・C",00016,pack_00016,なし,hometop_shop_pack_00016,,
+お得強化パック,00017,pack_00017,shop_pack_banner_pack_00017,hometop_shop_pack_00017,,
+お正月パック お得なパック登場お知らせ,00018,pack_00018,なし,hometop_shop_pack_00018,,"まとめお知らせ
+・お正月 DXお得パック梅
+・お正月 DXお得パック竹
+・お正月 DXお得パック松"
+お正月 超DX ジャンブルパック,00019,pack_00019,shop_pack_banner_pack_00019,なし,,
+お得パック,00020,pack_00020,shop_pack_banner_pack_00020,なし,ex_Xmas_2025_01,"オファーコード用に作成
+「プリズム画像」と「お得パック」だけを表示"
+バレンタイン お得なパック登場お知らせ,00021,pack_00021,なし,hometop_shop_pack_00021,,"まとめお知らせ
+・バレンタインキャラパック(7種)"
+「ヨル」バレンタインキャラパック,00022,pack_00022,shop_pack_banner_pack_00022,なし,,
+「姫様」バレンタインキャラパック,00023,pack_00023,shop_pack_banner_pack_00023,なし,,
+「天乃 リリサ」バレンタインキャラパック,00024,pack_00024,shop_pack_banner_pack_00024,なし,,
+「橘 美花莉」バレンタインキャラパック,00025,pack_00025,shop_pack_banner_pack_00025,なし,,
+「羽前 京香」バレンタインキャラパック,00026,pack_00026,shop_pack_banner_pack_00026,なし,,
+「桜木 カナ」バレンタインキャラパック,00027,pack_00027,shop_pack_banner_pack_00027,なし,,
+「小舟 潮」バレンタインキャラパック,00028,pack_00028,shop_pack_banner_pack_00028,なし,,
+いいジャン!スタミナドリンクパック,00029,pack_00029,shop_pack_banner_pack_00029,なし,,
+スタミナブースト応援パック,00030,pack_00030,shop_pack_banner_pack_00030,なし,,
+即戦力!キャラ強化パック,00031,pack_00031,shop_pack_banner_pack_00031,なし,,
+ホワイトデー お得なパック登場お知らせ,00032,pack_00032,なし,hometop_shop_pack_00032,,"まとめお知らせ
+・ホワイトデーキャラパック(5種)"
+「<黄昏> ロイド」ホワイトデーキャラパック,00033,pack_00033,shop_pack_banner_pack_00033,なし,,
+「ターボババアの霊力 オカルン」ホワイトデーキャラパック,00034,pack_00034,shop_pack_banner_pack_00034,なし,,
+「悪魔が恐れる悪魔 チェンソーマン」ホワイトデーキャラパック,00035,pack_00035,shop_pack_banner_pack_00035,なし,,
+「隠された英雄の姿 怪獣８号」ホワイトデーキャラパック,00036,pack_00036,shop_pack_banner_pack_00036,なし,,
+「がらんの画眉丸」ホワイトデーキャラパック,00037,pack_00037,shop_pack_banner_pack_00037,なし,,
+ハーフアニバーサリー お得なパック登場お知らせ,00038,pack_00038,なし,hometop_shop_pack_00038,,"まとめお知らせ
+・ハーフアニバーサリー DXお得パック梅
+・ハーフアニバーサリー DXお得パック竹
+・ハーフアニバーサリー DXお得パック松
+・ハーフアニバーサリー 超DX ジャンブルパック"
+ハーフアニバーサリー DXお得パック梅,00039,pack_00039,shop_pack_banner_pack_00039,なし,,下位
+ハーフアニバーサリー DXお得パック竹,00040,pack_00040,shop_pack_banner_pack_00040,なし,,中位
+ハーフアニバーサリー DXお得パック松,00041,pack_00041,shop_pack_banner_pack_00041,なし,,高位
+ハーフアニバーサリー 超DX ジャンブルパック,00042,pack_00042,shop_pack_banner_pack_00042,なし,,
+アニバ限定いいジャン!スタミナドリンクパック,00043,pack_00043,shop_pack_banner_pack_00043,なし,,
+原画強化パック,00044,pack_00044,shop_pack_banner_pack_00044,なし,,機能実装されてから詳細設計
+いいジャン祭 楽しもうパック,00045,pack_00045,shop_pack_banner_pack_00045,なし,,
+初心者オススメ いいジャンパック,00046,pack_00046,shop_pack_banner_pack_00046,hometop_shop_pack_00046,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,#NAME?,#NAME?,#NAME?,なし,,

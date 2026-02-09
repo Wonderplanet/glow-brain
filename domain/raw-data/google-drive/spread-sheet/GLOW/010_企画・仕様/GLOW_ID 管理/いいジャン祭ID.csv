@@ -1,0 +1,22 @@
+　作品_ID,作品名,特集祭名,識別番号,特集祭ID(quest_group),"イベント画面バナーID
+（イベントTOPバナー）","イベントトップバナーID(prefab)
+(コンテンツTOPバナー)",ホームバナーID,ミッションバナーID,昇格タグ,開始日,終了日,デプロイ,備考
+jig,地獄楽,地獄楽特集祭,00001,event_jig_00001,,,,,,2024-08-13 00:00:00,2025-12-30 23:59:59,,仮
+kai,怪獣８号,怪獣８号いいジャン祭,00001,event_kai_00001,event_kai_00001_banner,event_kai_00001_quest_select,hometop_event_kai_00001,event_kai_00001_mission,event_kai_00001_01,2025-09-22 11:00:00,2025-10-22 14:59:59,,本番ID
+spy,SPY×FAMILY,SPY×FAMILYいいジャン祭,00001,event_spy_00001,event_spy_00001_banner,event_spy_00001_quest_select,hometop_event_spy_00001,event_spy_00001_mission,event_spy_00001_01,2025-10-06 15:00:00,2025-10-31 14:59:59,,本番ID
+dan,ダンダダン,ダンダダン いいジャン祭,00001,event_dan_00001,event_dan_00001_banner,event_dan_00001_quest_select,hometop_event_dan_00001,event_dan_00001_mission,event_dan_00001_01,2025-10-22 15:00:00,2025-11-21 14:59:59,,
+mag,株式会社マジルミエ,株式会社マジルミエ いいジャン祭,00001,event_mag_00001,event_mag_00001_banner,event_mag_00001_quest_select,hometop_event_mag_00001,event_mag_00001_mission,event_mag_00001_01,2025-11-06 15:00:00,2025-12-08 14:59:59,,
+glo,GLOW,ブラックフライデーキャンペーン,00001,なし,なし,なし,hometop_event_glo_00001,なし,event_glo_00001_01,2025-11-21 15:00:00,2025-12-01 14:59:59,,
+yuw,2.5次元の誘惑,2.5次元の誘惑 いいジャン祭 ,00001,event_yuw_00001,event_yuw_00001_banner,event_yuw_00001_quest_select,hometop_event_yuw_00001,event_yuw_00001_mission,event_yuw_00001_01,2025-11-25 15:00:00,2025-12-31 23:59:59,,
+sur,魔都精兵のスレイブ,魔都精兵のスレイブ いいジャン祭 ,00001,event_sur_00001,event_sur_00001_banner,event_sur_00001_quest_select,hometop_event_sur_00001,event_sur_00001_mission,event_sur_00001_01,2025-12-08 15:00:00,2026-01-16 10:59:59,,
+glo,GLOW,2026正月 キャンペーン,00001,event_glo_00001,event_glo_00001_banner,event_glo_00001_quest_select,hometop_event_glo_00001,event_glo_00001_mission,event_osh_00001_01,2026-01-01 00:00:00,2026-02-02 10:59:59,,昇格タグは推しの子と共有
+osh,【推しの子】,【推しの子】 いいジャン祭,00001,event_osh_00001,event_osh_00001_banner,event_osh_00001_quest_select,hometop_event_osh_00001,event_osh_00001_mission,event_osh_00001_01,2026-01-01 00:00:00,2026-02-02 10:59:59,,
+jig,地獄楽,地獄楽 いいジャン祭,00001,event_jig_00001,event_jig_00001_banner,event_jig_00001_quest_select,hometop_event_jig_00001,event_jig_00001_mission,event_jig_00001_01,2026-01-16 15:00:00,2026-02-16 10:59:59,,
+you,幼稚園WARS,幼稚園WARS いいジャン祭,00001,event_you_00001,event_you_00001_banner,event_you_00001_quest_select,hometop_event_you_00001,event_you_00001_mission,event_you_00001_01,2026-02-02 15:00:00,2026-03-02 10:59:59,,
+kim,君のことが大大大大大好きな100人の彼女,君のことが大大大大大好きな100人の彼女 いいジャン祭,00001,event_kim_00001,event_kim_00001_banner,event_kim_00001_quest_select,hometop_event_kim_00001,event_kim_00001_mission,event_kim_00001_01,2026-02-16 15:00:00,2026-03-16 10:59:59,,
+hav1,ハーフアニバーサリー 感謝祭！　前半,ハーフアニバーサリー 感謝祭！前半,00001,event_hav1_00001,event_hav1_00001_banner,event_hav1_00001_quest_select,hometop_event_hav1_00001,event_hav1_00001_mission,event_hav1_00001_01,2026-03-16 15:00:00,2026-04-13 10:59:60,,
+hav2,ハーフアニバーサリー 感謝祭！　後半,ハーフアニバーサリー 感謝祭！後半,00002,event_hav2_00002,event_hav2_00002_banner,event_hav2_00002_quest_select,hometop_event_hav2_00002,event_hav2_00002_mission,event_hav2_00002_01,2026-03-30 15:00:00,2026-04-13 10:59:60,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+いいジャン祭画面無し・昇格タグ必要,,,,,,,,,,,,,
+glo,GLOW,2025クリスマス,なし,なし,なし,なし,なし,なし,ex_Xmas_2025_01,2025-12-22 15:00:00,2026-01-31 23:59:59,,

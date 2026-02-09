@@ -1,0 +1,173 @@
+種類,掲載内容,作品ID,識別名称,識別番号,お知らせバナーID,昇格タグ,備考
+パック,【お一人様1回まで購入可】わくわく アーニャ パック,spy,shop_pack_,00001,notice_shop_pack_00001,,
+パック,"まとめお知らせ
+・【お一人様1回まで購入可】スタートダッシュパック
+・【お一人様1回まで購入可】スタートダッシュジャンブルパック
+・【毎日更新】強化パック",glo,shop_pack_,00002,notice_shop_pack_00002,,
+パック,【お一人様1回まで購入可】いいジャン祭 開催記念パック,glo,shop_pack_,00003,notice_shop_pack_00003,,
+パス,マンスリーパス,,shop_pass_,00001,notice_shop_pass_00001,,オミット
+パス,ウィークリーパス,,shop_pass_,00002,notice_shop_pass_00002,,オミット
+パス,プレミアムパス,,shop_pass_,00003,notice_shop_pass_00003,,
+イベント,怪獣8号いいジャン祭,kai,event_kai_,00001,notice_event_kai_00001,event_kai_00001_01,
+ガシャ,怪獣8号いいジャン祭ピックアップガシャ,kai,gacha_kai_,00001,notice_gacha_kai_00001,event_kai_00001_01,
+ガシャ,有償限定UR確定10連ガシャ,,gacha_,00001,notice_gacha_00001,,
+キャンペーン,特別割引プリズム,,campaign_,00001,notice_campaign_00001,,
+その他,メンテ告知,,other_,00001,notice_other_00001,,
+その他,アプデ告知,,other_,00002,notice_other_00002,,
+キャンペーン,キャンペーンお知らせ,,campaign_,00002,notice_campaign_00002,,
+ランクマッチ,ランクマッチ特別ルールのお知らせ,,pvp_,00001,notice_pvp_00001,,
+パック,【お一人様1回まで購入可】スタートダッシュパック,,shop_pack_,00004,notice_shop_pack_00004,,
+パック,【お一人様1回まで購入可】スタートダッシュジャンブルパック,,shop_pack_,00005,notice_shop_pack_00005,,
+ガシャ,SPY×FAMILYいいジャン祭ピックアップガシャA,spy,gacha_spy_,00001,notice_gacha_spy_00001,event_spy_00001_01,
+ガシャ,SPY×FAMILYいいジャン祭ピックアップガシャB,spy,gacha_spy_,00002,notice_gacha_spy_00002,event_spy_00001_01,
+イベント,SPY×FAMILYいいジャン祭,spy,event_spy_,00001,notice_event_spy_00001,event_spy_00001_01,
+ガシャ,ダンダダン いいジャン祭ピックアップガシャ A,dan,gacha_dan_,00001,notice_gacha_dan_00001,event_dan_00001_01,
+ガシャ,ダンダダン いいジャン祭ピックアップガシャ B,dan,gacha_dan_,00002,notice_gacha_dan_00002,event_dan_00001_01,
+イベント,ダンダダン いいジャン祭,dan,event_dan_,00001,notice_event_dan_00001,event_dan_00001_01,
+ガシャ,72時間限定スタートダッシュガシャ,startdash,gacha_startdash_,00001,notice_gacha_startdash_00001,,
+ガシャ,2.5次元の誘惑 いいジャン祭ピックアップガシャA,yuw,gacha_yuw_,00001,notice_gacha_yuw_00001,event_yuw_00001_01,
+ガシャ,2.5次元の誘惑 いいジャン祭ピックアップガシャB,yuw,gacha_yuw_,00002,notice_gacha_yuw_00002,event_yuw_00001_01,
+イベント,2.5次元の誘惑 いいジャン祭,yuw,event_yuw_,00001,notice_event_yuw_00001,event_yuw_00001_01,
+ガシャ,クリスマス限定フェスガシャ,glo,gacha_glo_,00001,notice_gacha_glo_00001,event_yuw_00001_01,
+パック,・BLACK FRIDAY お得パック・A,glo,shop_pack_,00006,notice_shop_pack_00006,,
+パック,・BLACK FRIDAY お得パック・B,glo,shop_pack_,00007,notice_shop_pack_00007,,
+パック,・BLACK FRIDAY お得パック・C,glo,shop_pack_,00008,notice_shop_pack_00008,,
+パック,"BLACK FRIDAYパック お得なパック登場お知らせ
+まとめお知らせ
+・BLACK FRIDAY お得パック・A
+・BLACK FRIDAY お得パック・B
+・BLACK FRIDAY お得パック・C",glo,shop_pack_,00009,notice_shop_pack_00009,,
+キャンペーン,BLACK FRIDAYお得プリズム,glo,campaign_,00003,notice_campaign_00003,,
+パック,クリスマス お得パック・A,glo,shop_pack_,00010,notice_shop_pack_00010,,
+パック,クリスマス お得パック・B,glo,shop_pack_,00011,notice_shop_pack_00011,,
+パック,クリスマス お得パック・C,glo,shop_pack_,00012,notice_shop_pack_00012,,
+パック,"クリスマスパック お得なパック登場お知らせ
+まとめお知らせ
+・クリスマス お得パック・A
+・クリスマス お得パック・B
+・クリスマス お得パック・C",glo,shop_pack_,00013,notice_shop_pack_00013,,
+キャンペーン,クリスマスお得プリズム,glo,campaign_,00004,notice_campaign_00004,,
+降臨バトル,降臨バトル「怪獣退治の時間」,kai,advent_kai_,00001,notice_advent_kai_00001,,
+降臨バトル,降臨バトル「業務実行!!」,mag,advent_mag_,00001,notice_advent_mag_00001,,
+降臨バトル,降臨バトル「夏コミの魔物」,yuw,advent_yuw_,00001,notice_advent_yuw_00001,,
+降臨バトル,降臨バトル「魔防隊と戦う者」,sur,advent_sur_,00001,notice_advent_sur_00001,,
+降臨バトル,汎用の降臨バトル開催バナー,glo,advent_glo_,00001,notice_advent_glo_00001,,
+パック,お得強化パック,glo,shop_pack_,00014,notice_shop_pack_00014,,
+ガシャ,地獄楽 いいジャン祭ピックアップガシャA,jig,gacha_jig_,00001,notice_gacha_jig_00001,,
+ガシャ,地獄楽 いいジャン祭ピックアップガシャB,jig,gacha_jig_,00002,notice_gacha_jig_00002,,
+ガシャ,幼稚園WARS いいジャン祭ピックアップガシャ,you,gacha_you_,00001,notice_gacha_you_00001,,
+,,,,,,,
+SNS,みかりシルエット（SNS）,glo,sns_,00001,notice_sns_00001,,
+SNS,アイシルエット（SNS）,glo,sns_,00002,notice_sns_00002,,
+キャンペーン,冬のWフェス告知,glo,campaign_,00005,notice_campaign_00005,,
+SNS,冬のWフェス告知（SNS）,glo,sns_,00003,notice_sns_00003,,
+SNS,冬のWフェスキャンペーン（SNS）_アイ,glo,sns_,00004,notice_sns_00004,,
+SNS,冬のWフェスキャンペーン（SNS）_美花莉,glo,sns_,00005,notice_sns_00005,,
+キャンペーン,【投稿促進施策】美花莉に愛❤️を届けよう！,glo,campaign_,00006,notice_campaign_00006,,
+SNS,【投稿促進施策】美花莉に愛❤️を届けよう！（SNS）,glo,sns_,00006,notice_sns_00006,,
+SNS,"【投稿促進施策】美花莉に愛❤️を届けよう！
+リアクション１（SNS）",glo,sns_,00007,notice_sns_00007,,
+SNS,"【投稿促進施策】美花莉に愛❤️を届けよう！
+リアクション２（SNS）",glo,sns_,00008,notice_sns_00008,,
+SNS,"【投稿促進施策】美花莉に愛❤️を届けよう！
+リアクション３（SNS）",glo,sns_,00009,notice_sns_00009,,
+SNS,"【投稿促進施策】美花莉に愛❤️を届けよう！
+プレゼント",glo,sns_,00010,notice_sns_00010,,
+キャンペーン,【推しの子】参戦決定,osh,campaign_,00007,notice_campaign_00007,,
+キャンペーン,"配布用テンプレート（M）
+特別プレゼント　ロゴと汎用の報酬のみ（プリズムとコイン）キャラなし",glo,campaign_,00008,notice_campaign_00008,,
+SNS,"配布用テンプレート（SNS、）
+特別プレゼント　ロゴと汎用の報酬のみ（プリズムとコイン）キャラなし",glo,sns_,00011,notice_sns_00011,,
+キャンペーン,「冬のWフェス」開催決定記念！特別プレゼント、Mバナー,glo,campaign_,00009,notice_campaign_00009,,
+キャンペーン,ジャンプフェスタ出展！特別プレゼント、Mバナー,glo,campaign_,00010,notice_campaign_00010,,
+キャンペーン,フェス開催記念特別プレゼント、Mバナー,glo,campaign_,00011,notice_campaign_00011,,
+降臨バトル,降臨バトル「ファーストライブ」,osh,advent_osh_,00001,notice_advent_osh_00001,,
+その他,【お知らせ_Mバナー】メインクエスト追加,glo,other_,00003,notice_other_00003,,
+ガシャ,【お知らせ_Mバナー】正月DXフェスガシャ,glo,gacha_glo_,00002,notice_gacha_glo_00002,,
+ガシャ,【お知らせ_Mバナー】【推しの子】いいジャン祭ピックアップガシャ,osh,gacha_osh_,00001,notice_gacha_osh_00001,,
+ガシャ,【お知らせ_Mバナー】【推しの子】いいジャン祭SSR確定チケットガシャ,osh,gacha_osh_,00002,notice_gacha_osh_00002,,
+交換所,【お知らせ_Mバナー】【推しの子】いいジャン祭 交換所,osh,exchange_osh_,00001,notice_exchange_osh_00001,,
+SNS,【推しの子】カウントダウンSNSキャンペーン,osh,sns_,00012,notice_sns_00012,,
+SNS,【推しの子】カウントダウンSNSキャンペーン（アイ）,osh,sns_,00013,notice_sns_00013,,
+SNS,【推しの子】カウントダウンSNSキャンペーン（ルビー）,osh,sns_,00014,notice_sns_00014,,
+SNS,【推しの子】カウントダウンSNSキャンペーン（MEMちょ）,osh,sns_,00015,notice_sns_00015,,
+SNS,【推しの子】カウントダウンSNSキャンペーン（あかね）,osh,sns_,00016,notice_sns_00016,,
+SNS,【推しの子】カウントダウンSNSキャンペーン（かな）,osh,sns_,00017,notice_sns_00017,,
+ガシャ,【お知らせ_Mバナー】2026年正月記念！UR1体確定ガシャ,glo,gacha_glo_,00003,notice_gacha_glo_00003,,
+SNS,SNS新年2026年カウントダウンギフト配布,glo,sns_,00018,notice_sns_00018,,
+キャンペーン,【お知らせ_Mバナー】新年2026年カウントダウンギフト配布,glo,campaign_,00012,notice_campaign_00012,,
+キャンペーン,【お知らせ】Mバナー】最大100連無料！正月キャンペーン,glo,campaign_,00013,notice_campaign_00013,,
+その他,【お知らせ_Mバナー】年賀状2026年,glo,other_,00004,notice_other_00004,,
+ガシャ,【お知らせ_Mバナー】初夢ガシャ 2026,glo,gacha_glo_,00004,notice_gacha_glo_00004,,
+ガシャ,【お知らせ_Mバナー】賀正ガシャ 2026,glo,gacha_glo_,00005,notice_gacha_glo_00005,,
+パック,正月 DXお得パック梅,glo,shop_pack_,00015,notice_shop_pack_00015,,
+パック,正月 DXお得パック竹,glo,shop_pack_,00016,notice_shop_pack_00016,,
+パック,正月 DXお得パック松,glo,shop_pack_,00017,notice_shop_pack_00017,,
+パック,"お正月パック お得なパック登場お知らせ
+まとめお知らせ
+・お正月 DXお得パック梅
+・お正月 DXお得パック竹
+・お正月 DXお得パック松",glo,shop_pack_,00018,notice_shop_pack_00018,,
+パック,お正月 超DX ジャンブルパック,glo,shop_pack_,00019,notice_shop_pack_00019,,
+キャンペーン,お正月お得プリズム,glo,campaign_,00014,notice_campaign_00014,,
+パス,謹賀新年パス,glo,shop_pass_,00004,notice_shop_pass_00004,,
+その他,クリスマス限定！高難易度！お知らせMバナー,glo,other_,00005,notice_other_00005,,
+ガシャ,君のことが大大大大大好きな100人の彼女 いいジャン祭ピックアップガシャ,kim,gacha_kim_,00001,notice_gacha_kim_00001,,
+ガシャ,【お知らせ_Mバナー】バレンタインピックアップガシャ,glo,gacha_glo_,00006,notice_gacha_glo_00006,,
+パック,"バレンタイン お得なパック登場お知らせ
+まとめお知らせ
+・バレンタインキャラパック(7種)",glo,shop_pack_,00020,notice_shop_pack_00020,,
+パック,「ヨル」バレンタインキャラパック,glo,shop_pack_,00021,notice_shop_pack_00021,,
+パック,「姫様」バレンタインキャラパック,glo,shop_pack_,00022,notice_shop_pack_00022,,
+パック,「天乃 リリサ」バレンタインキャラパック,glo,shop_pack_,00023,notice_shop_pack_00023,,
+パック,「橘 美花莉」バレンタインキャラパック,glo,shop_pack_,00024,notice_shop_pack_00024,,
+パック,「羽前 京香」バレンタインキャラパック,glo,shop_pack_,00025,notice_shop_pack_00025,,
+パック,「桜木 カナ」バレンタインキャラパック,glo,shop_pack_,00026,notice_shop_pack_00026,,
+パック,「小舟 潮」バレンタインキャラパック,glo,shop_pack_,00027,notice_shop_pack_00027,,
+パック,いいジャン!スタミナドリンクパック,glo,shop_pack_,00028,notice_shop_pack_00028,,
+パック,スタミナブースト応援パック,glo,shop_pack_,00029,notice_shop_pack_00029,,
+パック,即戦力!キャラ強化パック,glo,shop_pack_,00030,notice_shop_pack_00030,,
+交換所,【お知らせ_Mバナー】ふつうの軽音部 いいジャン祭 交換所,hut,exchange_hut_,00001,notice_exchange_hut_00001,,
+SNS,内田桃の誕生日お祝いCPバナー,hut,sns_,00019,notice_sns_00019,,
+パック,"ホワイトデー お得なパック登場お知らせ
+まとめお知らせ
+・ホワイトデーキャラパック(5種)",glo,shop_pack_,00031,notice_shop_pack_00031,,
+パック,「<黄昏> ロイド」ホワイトデーキャラパック,glo,shop_pack_,00032,notice_shop_pack_00032,,
+パック,「ターボババアの霊力 オカルン」ホワイトデーキャラパック,glo,shop_pack_,00033,notice_shop_pack_00033,,
+パック,「悪魔が恐れる悪魔 チェンソーマン」ホワイトデーキャラパック,glo,shop_pack_,00034,notice_shop_pack_00034,,
+パック,「隠された英雄の姿 怪獣８号」ホワイトデーキャラパック,glo,shop_pack_,00035,notice_shop_pack_00035,,
+パック,「がらんの画眉丸」ホワイトデーキャラパック,glo,shop_pack_,00036,notice_shop_pack_00036,,
+その他,ハーフアニバーサリーキャラ紹介バナー,hav1,other_,00006,notice_other_00006,,
+その他,【お知らせ_Mバナー】カウントダウンプレゼントキャンペーン！,hav1,other_,00007,notice_other_00007,,
+イベント,復刻イベント開催,hav1,event_hav1_,00001,notice_event_hav1_00001,,
+キャンペーン,ハーフアニバーサリー お得プリズム,glo,campaign_,00015,notice_campaign_00015,,
+パック,"ハーフアニバーサリー お得なパック登場お知らせ
+まとめお知らせ
+・ハーフアニバーサリー DXお得パック梅
+・ハーフアニバーサリー DXお得パック竹
+・ハーフアニバーサリー DXお得パック松
+・ハーフアニバーサリー 超DX ジャンブルパック",glo,shop_pack_,00037,notice_shop_pack_00037,,
+パック,ハーフアニバーサリー DXお得パック梅,glo,shop_pack_,00038,notice_shop_pack_00038,,
+パック,ハーフアニバーサリー DXお得パック竹,glo,shop_pack_,00039,notice_shop_pack_00039,,
+パック,ハーフアニバーサリー DXお得パック松,glo,shop_pack_,00040,notice_shop_pack_00040,,
+パック,ハーフアニバーサリー 超DX ジャンブルパック,glo,shop_pack_,00041,notice_shop_pack_00041,,
+パック,アニバ限定いいジャン!スタミナドリンクパック,glo,shop_pack_,00042,notice_shop_pack_00042,,
+パック,原画強化パック,glo,shop_pack_,00043,notice_shop_pack_00043,,機能実装されてから詳細設計
+パック,いいジャン祭 楽しもうパック,glo,shop_pack_,00044,notice_shop_pack_00044,,
+パス,ハーフアニバーサリー限定 特別パス,glo,shop_pass_,00005,notice_shop_pass_00005,,
+交換所,あやかしトライアングル交換所,aya,exchange_aya_,00001,notice_exchange_aya_00001,,
+イベント,【開催お知らせ_Mバナー】ハーフアニバーサリー 感謝祭！前半,hav1,event_hav1_,00002,notice_event_hav1_00002,,
+降臨バトル,【降臨バトル開催のお知らせ】前半,hav1,advent_hav1_,00001,notice_advent_hav1_00001,,
+イベント,【開催お知らせ_Mバナー】ハーフアニバーサリー 感謝祭！後半,hav2,event_hav2_,00001,notice_event_hav2_00001,,
+イベント,【お知らせ_Mバナー】ハーフアニバーサリー いいジャンくじ,hav2,event_hav2_,00002,notice_event_hav2_00002,,
+ガシャ,【お知らせ_Mバナー】ハーフアニバーサリー 感謝祭!DXフェスガシャ A,glo,gacha_glo_,00007,notice_gacha_glo_00007,,
+ガシャ,【お知らせ_Mバナー】ハーフアニバーサリー 感謝祭!DXフェスガシャ B,glo,gacha_glo_,00008,notice_gacha_glo_00008,,
+ガシャ,【お知らせ_Mバナー】ハーフアニバーサリー 感謝祭!ピックアップガシャ,glo,gacha_glo_,00009,notice_gacha_glo_00009,,
+ガシャ,【お知らせ_Mバナー】ハーフアニバーサリー 感謝祭!記念ステップアップガシャ,glo,gacha_glo_,00010,notice_gacha_glo_00010,,
+ガシャ,【お知らせ_Mバナー】ありがとうメダルガシャ,glo,gacha_glo_,00011,notice_gacha_glo_00011,,
+パック,初心者オススメ いいジャンパック,glo,shop_pack_,00045,notice_shop_pack_00045,,
+降臨バトル,【降臨バトル開催のお知らせ】後半　英雄への挑戦編,hav2,advent_hav2_,00001,notice_advent_hav2_00001,,
+,,,,,,,
+,,,,,,,
+,,,#N/A,00001,#N/A,,
+,,,#N/A,00002,#N/A,,

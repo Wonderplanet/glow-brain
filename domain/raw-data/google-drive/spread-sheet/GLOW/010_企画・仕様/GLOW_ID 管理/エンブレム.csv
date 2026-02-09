@@ -1,0 +1,204 @@
+,,,所持上限数の仕様については⇩,,,,,,,,,,,
+,,,https://wonderplanet.atlassian.net/wiki/spaces/GLOW/pages/292127891/WIP+API,,,,,,,,,,,
+マスタ設定状況,テキスト状況,　作品ID,作品名,エンブレムカテゴリー,識別ID,エンブレム_ID,asset_key,画像ファイルID,エンブレム名称,フレーバーテキスト,valid_start_date,valid_end_date,監修状況,リリースキー
+マスタ設定済,記入のみ,spy,SPY×FAMILY,normal,00001,emblem_normal_spy_00001,normal_spy_00001,emblem_icon_normal_spy_00001,SPY×FAMILY,メインクエスト『SPY×FAMILY』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,未作成,aka,ラーメン赤猫,normal,00001,emblem_normal_aka_00001,normal_aka_00001,emblem_icon_normal_aka_00001,ラーメン赤猫,メインクエスト『ラーメン赤猫』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,マスタ設定済,rik,トマトイプーのリコピン,normal,00001,emblem_normal_rik_00001,normal_rik_00001,emblem_icon_normal_rik_00001,トマトイプーのリコピン,メインクエスト『トマトイプーのリコピン』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,,dan,ダンダダン,normal,00001,emblem_normal_dan_00001,normal_dan_00001,emblem_icon_normal_dan_00001,ダンダダン,メインクエスト『ダンダダン』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,,gom,姫様“拷問”の時間です,normal,00001,emblem_normal_gom_00001,normal_gom_00001,emblem_icon_normal_gom_00001,姫様“拷問”の時間です,メインクエスト『姫様“拷問”の時間です』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,,chi,チェンソーマン,normal,00001,emblem_normal_chi_00001,normal_chi_00001,emblem_icon_normal_chi_00001,チェンソーマン,メインクエスト『チェンソーマン』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,,bat,忘却バッテリー,normal,00001,emblem_normal_bat_00001,normal_bat_00001,emblem_icon_normal_bat_00001,忘却バッテリー,クエスト『忘却バッテリー」の作品ロゴを模ったエンブレム,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,999999999
+マスタ設定済,,kai,怪獣８号,normal,00001,emblem_normal_kai_00001,normal_kai_00001,emblem_icon_normal_kai_00001,怪獣８号,メインクエスト『怪獣８号』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,,yuw,2.5次元の誘惑,normal,00001,emblem_normal_yuw_00001,normal_yuw_00001,emblem_icon_normal_yuw_00001,2.5次元の誘惑,クエスト『2.5次元の誘惑」の作品ロゴを模ったエンブレム,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,999999999
+マスタ設定済,,sur,魔都精兵のスレイブ,normal,00001,emblem_normal_sur_00001,normal_sur_00001,emblem_icon_normal_sur_00001,魔都精兵のスレイブ,メインクエスト『魔都精兵のスレイブ』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,,ron,鴨乃橋ロンの禁断推理,normal,00001,emblem_normal_ron_00001,normal_ron_00001,emblem_icon_normal_ron_00001,鴨乃橋ロンの禁断推理,クエスト『鴨乃橋ロンの禁断推理」の作品ロゴを模ったエンブレム,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,999999999
+マスタ設定済,,aha,阿波連さんははかれない,normal,00001,emblem_normal_aha_00001,normal_aha_00001,emblem_icon_normal_aha_00001,阿波連さんははかれない,クエスト『阿波連さんははかれない」の作品ロゴを模ったエンブレム,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,999999999
+マスタ設定済,,tak,タコピーの原罪,normal,00001,emblem_normal_tak_00001,normal_tak_00001,emblem_icon_normal_tak_00001,タコピーの原罪,メインクエスト『タコピーの原罪』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,,jig,地獄楽,normal,00001,emblem_normal_jig_00001,normal_jig_00001,emblem_icon_normal_jig_00001,地獄楽,メインクエスト『地獄楽』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,,mag,株式会社マジルミエ,normal,00001,emblem_normal_mag_00001,normal_mag_00001,emblem_icon_normal_mag_00001,株式会社マジルミエ,メインクエスト『株式会社マジルミエ』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+状況確認中,,dos,道産子ギャルはなまらめんこい,normal,00001,emblem_normal_dos_00001,normal_dos_00001,emblem_icon_normal_dos_00001,道産子ギャルはなまらめんこい,クエスト『道産子ギャルはなまらめんこい」の作品ロゴを模ったエンブレム,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,999999999
+マスタ設定済,,sum,サマータイムレンダ,normal,00001,emblem_normal_sum_00001,normal_sum_00001,emblem_icon_normal_sum_00001,サマータイムレンダ,メインクエスト『サマータイムレンダ』のステージを全てクリアした証,2025-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+IDのみ採番,記入のみ,osh,【推しの子】,normal,00001,emblem_normal_osh_00001,normal_osh_00001,emblem_icon_normal_osh_00001,【推しの子】,メインクエスト『【推しの子】』のステージを全てクリアした証,2026-01-01 0:00:00,2970-01-01 11:59:59,,
+IDのみ採番,記入のみ,you,幼稚園WARS,normal,00001,emblem_normal_you_00001,normal_you_00001,emblem_icon_normal_you_00001,幼稚園WARS,,,,,
+IDのみ採番,記入のみ,aya,あやかしトライアングル,normal,00001,emblem_normal_aya_00001,normal_aya_00001,emblem_icon_normal_aya_00001,あやかしトライアングル,,,,,
+IDのみ採番,記入のみ,mar,マリッジトキシン,normal,00001,emblem_normal_mar_00001,normal_mar_00001,emblem_icon_normal_mar_00001,マリッジトキシン,,,,,
+,,,error,normal,00001,emblem_normal__00001,normal__00001,emblem_icon_normal__00001,,,,,,
+イベント,,,,,,,,,,,,,,
+IDのみ採番,未作成,glo,GLOW,event,00001,emblem_event_glo_00001,event_glo_00001,emblem_icon_event_glo_00001,祝！2026,あけましておめでとう！2026年も素敵なジャンブラライフになりますように！,2026-01-01 0:00:00,2970-01-01 11:59:59,,
+IDのみ採番,未作成,glo,GLOW,event,00002,emblem_event_glo_00002,event_glo_00002,emblem_icon_event_glo_00002,開運,脅威の確率を引き当てた証。これを手にしたリーダーの運の良さは天下一。まさに「強運」の持ち主！,2026-01-01 0:00:00,2970-01-01 11:59:59,,
+未作成,未作成,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,kai,怪獣８号,event,00001,emblem_event_kai_00001,event_kai_00001,emblem_icon_event_kai_00001,怪獣２号,札幌市を壊滅させた恐竜型の巨大怪獣のエンブレム,2025-09-22 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,マスタ設定済,kai,怪獣８号,event,00002,emblem_event_kai_00002,event_kai_00002,emblem_icon_event_kai_00002,怪獣８号,フォルティチュードは驚異の9.8の突如現れた人型怪獣のエンブレム,2025-09-22 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,マスタ設定済,kai,怪獣８号,event,00003,emblem_event_kai_00003,event_kai_00003,emblem_icon_event_kai_00003,怪獣９号,知能が高く小型怪獣を使役する人型怪獣のエンブレム,2025-09-22 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,マスタ設定済,kai,怪獣８号,event,00004,emblem_event_kai_00004,event_kai_00004,emblem_icon_event_kai_00004,怪獣１０号,好戦的で力を求める人型怪獣のエンブレム,2025-09-22 0:00:00,2970-01-01 11:59:59,監修通過,202509010
+マスタ設定済,マスタ設定済,dan,ダンダダン,event,00001,emblem_event_dan_00001,event_dan_00001,emblem_icon_event_dan_00001,金の玉,"オカルンがターボババアに奪われてしまった体の一部。
+ターボババアの霊力に包まれ金色に光っている玉のエンブレム",2025-10-22 15:00:00,2970-01-01 11:59:59,監修通過,202510020
+マスタ設定済,マスタ設定済,dan,ダンダダン,event,00002,emblem_event_dan_00002,event_dan_00002,emblem_icon_event_dan_00002,萎えるぜ,ターボババアの霊力により変身したオカルンのエンブレム,2025-10-22 15:00:00,2970-01-01 11:59:59,監修通過,202510020
+マスタ設定済,マスタ設定済,dan,ダンダダン,event,00003,emblem_event_dan_00003,event_dan_00003,emblem_icon_event_dan_00003,無駄ですわ!!,アクロバティックさらさらの炎(オーラ)の力で変身したアイラのエンブレム,2025-10-22 15:00:00,2970-01-01 11:59:59,監修通過,202510020
+マスタ設定済,マスタ設定済,spy,SPY×FAMILY,event,00001,emblem_event_spy_00001,event_spy_00001,emblem_icon_event_spy_00001,WISEのピン,西国(ウェスタリス)情報局対東課<WISE(ワイズ)>のシンボルマークを模したピン,2025-10-06 0:00:00,2970-01-01 11:59:59,監修通過,202510010
+マスタ設定済,マスタ設定済,mag,株式会社マジルミエ,event,00001,emblem_event_mag_00001,event_mag_00001,emblem_icon_event_mag_00001,「株式会社マジルミエ」のロゴ,桜木 カナが所属している魔法少女企業。社長の重本をはじめ、個性的だが実力のある社員が集まる。,2025-11-06 15:00:00,2970-01-01 11:59:59,監修通過,202511010
+マスタ設定済,マスタ設定済,mag,株式会社マジルミエ,event,00002,emblem_event_mag_00002,event_mag_00002,emblem_icon_event_mag_00002,桜木 カナの社員証,桜木 カナの社員証。「株式会社マジルミエ」の魔法少女は社員証が変身アイテムになっている。,2025-11-06 15:00:00,2970-01-01 11:59:59,監修通過,202511010
+マスタ設定済,マスタ設定済,mag,株式会社マジルミエ,event,00003,emblem_event_mag_00003,event_mag_00003,emblem_icon_event_mag_00003,葵 リリーの鍵,葵 リリーが身に着けている鍵のネックレス。葵 リリーが魔法少女に変身するためのアイテムにもなる。,2025-11-06 15:00:00,2970-01-01 11:59:59,監修通過,202511010
+マスタ設定済,マスタ設定済,yuw,2.5次元の誘惑,event,00001,emblem_event_yuw_00001,event_yuw_00001,emblem_icon_event_yuw_00001,ラスタロッテ,『コスプレイヤー四天王』まゆらがラスタロッテにコスプレした姿のエンブレム,2025-11-25 15:00:00,2970-01-01 11:59:59,監修通過,202511020
+マスタ設定済,マスタ設定済,yuw,2.5次元の誘惑,event,00002,emblem_event_yuw_00002,event_yuw_00002,emblem_icon_event_yuw_00002,イコラ,『コスプレイヤー四天王』753♡がイコラにコスプレした姿のエンブレム,2025-11-25 15:00:00,2970-01-01 11:59:59,監修通過,202511020
+マスタ設定済,マスタ設定済,sur,魔都精兵のスレイブ,event,00001,emblem_event_sur_00001,event_sur_00001,emblem_icon_event_sur_00001,魔都防衛隊章,魔都の脅威から日本を守護するために編成された組織の証。,2025-12-08 15:00:00,2970-01-01 11:59:59,監修通過,202512010
+マスタ設定済,マスタ設定済,sur,魔都精兵のスレイブ,event,00002,emblem_event_sur_00002,event_sur_00002,emblem_icon_event_sur_00002,七番組組長 羽前 京香,魔防隊七番組組長である羽前 京香のエンブレム,2025-12-08 15:00:00,2970-01-01 11:59:59,監修通過,202512010
+マスタ設定済,マスタ設定済,sur,魔都精兵のスレイブ,event,00003,emblem_event_sur_00003,event_sur_00003,emblem_icon_event_sur_00003,六番組組長 出雲 天花 ,魔防隊六番組組長である出雲 天花のエンブレム,2025-12-08 15:00:00,2970-01-01 11:59:59,監修通過,202512010
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00001,emblem_event_osh_00001,event_osh_00001,emblem_icon_event_osh_00001,嘘吐き,復讐を誓う星を模ったエンブレム,2026-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00002,emblem_event_osh_00002,event_osh_00002,emblem_icon_event_osh_00002,B小町,苺プロ所属のアイドルグループ「B小町」のロゴのエンブレム,2026-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00003,emblem_event_osh_00003,event_osh_00003,emblem_icon_event_osh_00003,アイ推し！,B小町のアイドル、アイ推しであることの証,2026-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00004,emblem_event_osh_00004,event_osh_00004,emblem_icon_event_osh_00004,ルビー推し！,新生B小町のアイドル、ルビー推しであることの証,2026-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00005,emblem_event_osh_00005,event_osh_00005,emblem_icon_event_osh_00005,MEMちょ推し！,新生B小町のアイドル、MEMちょ推しであることの証,2026-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00006,emblem_event_osh_00006,event_osh_00006,emblem_icon_event_osh_00006,有馬かな推し！,新生B小町のアイドル、有馬 かな推しであることの証,2026-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00007,emblem_event_osh_00007,event_osh_00007,emblem_icon_event_osh_00007,黒川あかね推し！,女優、黒川 あかね推しであることの証,2026-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00008,emblem_event_osh_00008,event_osh_00008,emblem_icon_event_osh_00008,筋肉推し！,ぴえヨンにも匹敵するその筋肉…！そう、筋肉は全てを解決する！,2026-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00009,emblem_event_osh_00009,event_osh_00009,emblem_icon_event_osh_00009,アクア推し！,俳優、アクア推しであることの証,2026-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00010,emblem_event_osh_00010,event_osh_00010,emblem_icon_event_osh_00010,アイのサイン,B小町のアイドル、アイのサインのエンブレム,2026-01-01 0:00:00,2970-01-01 11:59:59,監修通過,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,event,00011,emblem_event_osh_00011,event_osh_00011,emblem_icon_event_osh_00011,,未作成,,,,
+マスタ設定済,マスタ設定済,jig,地獄楽,event,00001,emblem_event_jig_00001,event_jig_00001,emblem_icon_event_jig_00001,神仙郷,仙薬探しのため、死罪人と打ち首執行人たちが上陸した秘境の島,2026-01-16 15:00:00,2970-01-01 11:59:59,監修通過,202601010
+マスタ設定済,マスタ設定済,you,幼稚園WARS,event,00001,emblem_event_you_00001,event_you_00001,emblem_icon_event_you_00001,ブラック幼稚園園章,世界一安全な幼稚園・ブラック幼稚園園章を模ったエンブレム,2026-02-02 15:00:00,2970-01-01 11:59:59,監修通過,202602010
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,event,00001,emblem_event_kim_00001,event_kim_00001,emblem_icon_event_kim_00001,神様,とある神社の恋の神様を模したエンブレム,2026-02-16 15:00:00,2970-01-01 11:59:59,監修通過,202602020
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,event,00002,emblem_event_kim_00002,event_kim_00002,emblem_icon_event_kim_00002,花園 羽々里の大好きな気持ち,花園 羽々里の大好きな気持ちを模したエンブレム,2026-02-16 15:00:00,2970-01-01 11:59:59,監修通過,202602020
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,event,00003,emblem_event_kim_00003,event_kim_00003,emblem_icon_event_kim_00003,花園 羽香里の大好きな気持ち,花園 羽香里の大好きな気持ちを模したエンブレム,2026-02-16 15:00:00,2970-01-01 11:59:59,監修通過,202602020
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,event,00004,emblem_event_kim_00004,event_kim_00004,emblem_icon_event_kim_00004,院田 唐音の大好きな気持ち,院田 唐音の大好きな気持ちを模したエンブレム,2026-02-16 15:00:00,2970-01-01 11:59:59,監修通過,202602020
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,event,00005,emblem_event_kim_00005,event_kim_00005,emblem_icon_event_kim_00005,好本 静の大好きな気持ち,好本 静の大好きな気持ちを模したエンブレム,2026-02-16 15:00:00,2970-01-01 11:59:59,監修通過,202602020
+マスタ設定済,マスタ設定済,hut,ふつうの軽音部,event,00001,emblem_event_hut_00001,event_hut_00001,emblem_icon_event_hut_00001,機熟,はとちゃん、その言葉ひとつだけで私はなんだってやれる…！機は熟した……,2026-03-02 15:00:00,2970-01-01 11:59:59,,202603010
+マスタ設定済,マスタ設定済,hut,ふつうの軽音部,event,00002,emblem_event_hut_00002,event_hut_00002,emblem_icon_event_hut_00002,木彫りの鳩野 ちひろ,鳩野 ちひろの誕生日に、幸山 厘が送った木彫りの像を模ったエンブレム,2026-03-02 15:00:00,2970-01-01 11:59:59,,202603010
+マスタ設定済,マスタ設定済,hut,ふつうの軽音部,event,00003,emblem_event_hut_00003,event_hut_00003,emblem_icon_event_hut_00003,自意識アニマル,鳩野 ちひろの自意識が高まったときに現れる謎の動物を模ったエンブレム,2026-03-02 15:00:00,2970-01-01 11:59:59,,202603010
+IDのみ採番,未作成,aya,あやかしトライアングル,event,00001,emblem_event_aya_00001,event_aya_00001,emblem_icon_event_aya_00001,宗牙,未作成,2026-04-17 15:00:00,2970-01-01 11:59:59,,202604010
+IDのみ採番,未作成,aya,あやかしトライアングル,event,00002,emblem_event_aya_00002,event_aya_00002,emblem_icon_event_aya_00002,恋緒,未作成,2026-04-17 15:00:00,2970-01-01 11:59:59,,202604010
+IDのみ採番,未作成,aya,あやかしトライアングル,event,00003,emblem_event_aya_00003,event_aya_00003,emblem_icon_event_aya_00003,祭里,未作成,2026-04-17 15:00:00,2970-01-01 11:59:59,,202604010
+IDのみ採番,未作成,aya,あやかしトライアングル,event,00004,emblem_event_aya_00004,event_aya_00004,emblem_icon_event_aya_00004,すず,未作成,2026-04-17 15:00:00,2970-01-01 11:59:59,,202604010
+IDのみ採番,未作成,aya,あやかしトライアングル,event,00005,emblem_event_aya_00005,event_aya_00005,emblem_icon_event_aya_00005,シロガネ,未作成,2026-04-17 15:00:00,2970-01-01 11:59:59,,202604010
+IDのみ採番,未作成,hav1,error,event,00001,emblem_event_hav1_00001,event_hav1_00001,emblem_icon_event_hav1_00001,セバスチャン,"男なら
+光の速さで
+連コイン
+※監修前",2026-03-16 15:00:00,2970-01-01 11:59:59,,202603020
+IDのみ採番,未作成,hav1,error,event,00002,emblem_event_hav1_00002,event_hav1_00002,emblem_icon_event_hav1_00002,魔防隊総組長 山城 恋,魔防隊総組長である山城 恋のエンブレム,2026-03-16 15:00:00,2970-01-01 11:59:59,,202603020
+IDのみ採番,未作成,hav2,error,event,00001,emblem_event_hav2_00001,event_hav2_00001,emblem_icon_event_hav2_00001,怪獣１号,未作成,,2970-01-01 11:59:59,,
+IDのみ採番,未作成,hav2,error,event,00002,emblem_event_hav2_00002,event_hav2_00002,emblem_icon_event_hav2_00002,御意に…,未作成,,2970-01-01 11:59:59,,
+IDのみ採番,未作成,mar,マリッジトキシン,event,00001,emblem_event_mar_00001,event_mar_00001,emblem_icon_event_mar_00001,音使い 鳴子,未作成,2026-05-01 15:00:00,2970-01-01 11:59:59,,202605010
+IDのみ採番,未作成,mar,マリッジトキシン,event,00002,emblem_event_mar_00002,event_mar_00002,emblem_icon_event_mar_00002,姫川 杏子,未作成,2026-05-01 15:00:00,2970-01-01 11:59:59,,202605010
+IDのみ採番,未作成,mar,マリッジトキシン,event,00003,emblem_event_mar_00003,event_mar_00003,emblem_icon_event_mar_00003,城崎 メイ,未作成,2026-05-01 15:00:00,2970-01-01 11:59:59,,202605010
+IDのみ採番,未作成,mar,マリッジトキシン,event,00004,emblem_event_mar_00004,event_mar_00004,emblem_icon_event_mar_00004,下呂 ヒカル,未作成,2026-05-01 15:00:00,2970-01-01 11:59:59,,202605010
+IDのみ採番,未作成,mar,マリッジトキシン,event,00005,emblem_event_mar_00005,event_mar_00005,emblem_icon_event_mar_00005,水使い 潮,未作成,2026-05-01 15:00:00,2970-01-01 11:59:59,,202605010
+,,,,,,,,,,,,,,
+決闘,,,,,,,,,,,,,,
+IDのみ採番,未作成,glo,GLOW,duel,00001,emblem_icon_duel_glo_00001,,,,,,,,
+IDのみ採番,未作成,glo,GLOW,duel,00002,emblem_icon_duel_glo_00002,,,,,,,,
+,,,,,,,,,,,,,,
+IDのみ採番,未作成,spy,SPY×FAMILY,raid,00001,emblem_icon_raid_spy_00001,,,,,,,,
+IDのみ採番,未作成,aka,ラーメン赤猫,raid,00001,emblem_icon_raid_aka_00001,,,,,,,,
+IDのみ採番,未作成,rik,トマトイプーのリコピン,raid,00001,emblem_icon_raid_rik_00001,,,,,,,,
+IDのみ採番,未作成,dan,ダンダダン,raid,00001,emblem_icon_raid_dan_00001,,,,,,,,
+IDのみ採番,未作成,gom,姫様“拷問”の時間です,raid,00001,emblem_icon_raid_gom_00001,,,,,,,,
+,,,,,,,,,,,,,,
+降臨バトル,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,spy,SPY×FAMILY,adventbattle,season01_00001,emblem_adventbattle_spy_season01_00001,adventbattle_spy_season01_00001,emblem_icon_adventbattle_spy_season01_00001,影なき英雄(1位),2025年10月開催降臨バトル『SPY×FAMILY』ランキング1位の証,,,監修通過,
+マスタ設定済,マスタ設定済,spy,SPY×FAMILY,adventbattle,season01_00002,emblem_adventbattle_spy_season01_00002,adventbattle_spy_season01_00002,emblem_icon_adventbattle_spy_season01_00002,影なき英雄(2位),2025年10月開催降臨バトル『SPY×FAMILY』ランキング2位の証,,,監修通過,
+マスタ設定済,マスタ設定済,spy,SPY×FAMILY,adventbattle,season01_00003,emblem_adventbattle_spy_season01_00003,adventbattle_spy_season01_00003,emblem_icon_adventbattle_spy_season01_00003,影なき英雄(3位),2025年10月開催降臨バトル『SPY×FAMILY』ランキング3位の証,,,監修通過,
+マスタ設定済,マスタ設定済,spy,SPY×FAMILY,adventbattle,season01_00004,emblem_adventbattle_spy_season01_00004,adventbattle_spy_season01_00004,emblem_icon_adventbattle_spy_season01_00004,影なき英雄(4~50位),2025年10月開催降臨バトル『SPY×FAMILY』ランキング4~50位の証,,,監修通過,
+マスタ設定済,マスタ設定済,spy,SPY×FAMILY,adventbattle,season01_00005,emblem_adventbattle_spy_season01_00005,adventbattle_spy_season01_00005,emblem_icon_adventbattle_spy_season01_00005,影なき英雄(51~300位),2025年10月開催降臨バトル『SPY×FAMILY』ランキング51~300位の証,,,監修通過,
+マスタ設定済,マスタ設定済,spy,SPY×FAMILY,adventbattle,season01_00006,emblem_adventbattle_spy_season01_00006,adventbattle_spy_season01_00006,emblem_icon_adventbattle_spy_season01_00006,"影なき英雄(301~1,000位)","2025年10月開催降臨バトル『SPY×FAMILY』ランキング301~1,000位の証",,,監修通過,
+,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,kai,怪獣８号,adventbattle,season01_00001,emblem_adventbattle_kai_season01_00001,adventbattle_kai_season01_00001,emblem_icon_adventbattle_kai_season01_00001,歴史に残る大怪獣(1位),降臨バトル『怪獣退治の時間』1位の証,,,監修通過,
+マスタ設定済,マスタ設定済,kai,怪獣８号,adventbattle,season01_00002,emblem_adventbattle_kai_season01_00002,adventbattle_kai_season01_00002,emblem_icon_adventbattle_kai_season01_00002,歴史に残る大怪獣(2位),降臨バトル『怪獣退治の時間』2位の証,,,監修通過,
+マスタ設定済,マスタ設定済,kai,怪獣８号,adventbattle,season01_00003,emblem_adventbattle_kai_season01_00003,adventbattle_kai_season01_00003,emblem_icon_adventbattle_kai_season01_00003,歴史に残る大怪獣(3位),降臨バトル『怪獣退治の時間』3位の証,,,監修通過,
+マスタ設定済,マスタ設定済,kai,怪獣８号,adventbattle,season01_00004,emblem_adventbattle_kai_season01_00004,adventbattle_kai_season01_00004,emblem_icon_adventbattle_kai_season01_00004,歴史に残る大怪獣(4~50位),降臨バトル『怪獣退治の時間』4~50位の証,,,監修通過,
+マスタ設定済,マスタ設定済,kai,怪獣８号,adventbattle,season01_00005,emblem_adventbattle_kai_season01_00005,adventbattle_kai_season01_00005,emblem_icon_adventbattle_kai_season01_00005,歴史に残る大怪獣(51~300位),降臨バトル『怪獣退治の時間』51~300位の証,,,監修通過,
+マスタ設定済,マスタ設定済,kai,怪獣８号,adventbattle,season01_00006,emblem_adventbattle_kai_season01_00006,adventbattle_kai_season01_00006,emblem_icon_adventbattle_kai_season01_00006,"歴史に残る大怪獣(301~1,000位)","降臨バトル『怪獣退治の時間』301~1,000位の証",,,監修通過,
+,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,dan,ダンダダン,adventbattle,season01_00001,emblem_adventbattle_dan_season01_00001,adventbattle_dan_season01_00001,emblem_icon_adventbattle_dan_season01_00001,ブッ飛ばせるわい!!(1位),2025年11月開催降臨バトル『ダンダダン』ランキング1位の証,,,監修通過,
+マスタ設定済,マスタ設定済,dan,ダンダダン,adventbattle,season01_00002,emblem_adventbattle_dan_season01_00002,adventbattle_dan_season01_00002,emblem_icon_adventbattle_dan_season01_00002,ブッ飛ばせるわい!!(2位),2025年11月開催降臨バトル『ダンダダン』ランキング2位の証,,,監修通過,
+マスタ設定済,マスタ設定済,dan,ダンダダン,adventbattle,season01_00003,emblem_adventbattle_dan_season01_00003,adventbattle_dan_season01_00003,emblem_icon_adventbattle_dan_season01_00003,ブッ飛ばせるわい!!(3位),2025年11月開催降臨バトル『ダンダダン』ランキング3位の証,,,監修通過,
+マスタ設定済,マスタ設定済,dan,ダンダダン,adventbattle,season01_00004,emblem_adventbattle_dan_season01_00004,adventbattle_dan_season01_00004,emblem_icon_adventbattle_dan_season01_00004,ブッ飛ばせるわい!!(4~50位),2025年11月開催降臨バトル『ダンダダン』ランキング4~50位の証,,,監修通過,
+マスタ設定済,マスタ設定済,dan,ダンダダン,adventbattle,season01_00005,emblem_adventbattle_dan_season01_00005,adventbattle_dan_season01_00005,emblem_icon_adventbattle_dan_season01_00005,ブッ飛ばせるわい!!(51~300位),2025年11月開催降臨バトル『ダンダダン』ランキング51~300位の証,,,監修通過,
+マスタ設定済,マスタ設定済,dan,ダンダダン,adventbattle,season01_00006,emblem_adventbattle_dan_season01_00006,adventbattle_dan_season01_00006,emblem_icon_adventbattle_dan_season01_00006,"ブッ飛ばせるわい!!(301~1,000位)","2025年11月開催降臨バトル『ダンダダン』ランキング301~1,000位の証",,,監修通過,
+,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,mag,株式会社マジルミエ,adventbattle,season01_00001,emblem_adventbattle_mag_season01_00001,adventbattle_mag_season01_00001,emblem_icon_adventbattle_mag_season01_00001,魔法少女(1位),2025年11月開催降臨バトル『業務実行!!』ランキング1位の証,,,監修通過,
+マスタ設定済,マスタ設定済,mag,株式会社マジルミエ,adventbattle,season01_00002,emblem_adventbattle_mag_season01_00002,adventbattle_mag_season01_00002,emblem_icon_adventbattle_mag_season01_00002,魔法少女(2位),2025年11月開催降臨バトル『業務実行!!』ランキング2位の証,,,監修通過,
+マスタ設定済,マスタ設定済,mag,株式会社マジルミエ,adventbattle,season01_00003,emblem_adventbattle_mag_season01_00003,adventbattle_mag_season01_00003,emblem_icon_adventbattle_mag_season01_00003,魔法少女(3位),2025年11月開催降臨バトル『業務実行!!』ランキング3位の証,,,監修通過,
+マスタ設定済,マスタ設定済,mag,株式会社マジルミエ,adventbattle,season01_00004,emblem_adventbattle_mag_season01_00004,adventbattle_mag_season01_00004,emblem_icon_adventbattle_mag_season01_00004,魔法少女(4~50位),2025年11月開催降臨バトル『業務実行!!』ランキング4~50位の証,,,監修通過,
+マスタ設定済,マスタ設定済,mag,株式会社マジルミエ,adventbattle,season01_00005,emblem_adventbattle_mag_season01_00005,adventbattle_mag_season01_00005,emblem_icon_adventbattle_mag_season01_00005,魔法少女(51~300位),2025年11月開催降臨バトル『業務実行!!』ランキング51~300位の証,,,監修通過,
+マスタ設定済,マスタ設定済,mag,株式会社マジルミエ,adventbattle,season01_00006,emblem_adventbattle_mag_season01_00006,adventbattle_mag_season01_00006,emblem_icon_adventbattle_mag_season01_00006,"魔法少女(301~1,000位)","2025年11月開催降臨バトル『業務実行!!』ランキング301~1,000位の証",,,監修通過,
+,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,yuw,2.5次元の誘惑,adventbattle,season01_00001,emblem_adventbattle_yuw_season01_00001,adventbattle_yuw_season01_00001,emblem_icon_adventbattle_yuw_season01_00001,天使空挺隊(1位),2025年12月開催降臨バトル『夏コミの魔物』1位の証,,,監修通過,202511020
+マスタ設定済,マスタ設定済,yuw,2.5次元の誘惑,adventbattle,season01_00002,emblem_adventbattle_yuw_season01_00002,adventbattle_yuw_season01_00002,emblem_icon_adventbattle_yuw_season01_00002,天使空挺隊(2位),2025年12月開催降臨バトル『夏コミの魔物』2位の証,,,監修通過,202511020
+マスタ設定済,マスタ設定済,yuw,2.5次元の誘惑,adventbattle,season01_00003,emblem_adventbattle_yuw_season01_00003,adventbattle_yuw_season01_00003,emblem_icon_adventbattle_yuw_season01_00003,天使空挺隊(3位),2025年12月開催降臨バトル『夏コミの魔物』3位の証,,,監修通過,202511020
+マスタ設定済,マスタ設定済,yuw,2.5次元の誘惑,adventbattle,season01_00004,emblem_adventbattle_yuw_season01_00004,adventbattle_yuw_season01_00004,emblem_icon_adventbattle_yuw_season01_00004,天使空挺隊(4~50位),2025年12月開催降臨バトル『夏コミの魔物』4~50位の証,,,監修通過,202511020
+マスタ設定済,マスタ設定済,yuw,2.5次元の誘惑,adventbattle,season01_00005,emblem_adventbattle_yuw_season01_00005,adventbattle_yuw_season01_00005,emblem_icon_adventbattle_yuw_season01_00005,天使空挺隊(51~300位),2025年12月開催降臨バトル『夏コミの魔物』51~300位の証,,,監修通過,202511020
+マスタ設定済,マスタ設定済,yuw,2.5次元の誘惑,adventbattle,season01_00006,emblem_adventbattle_yuw_season01_00006,adventbattle_yuw_season01_00006,emblem_icon_adventbattle_yuw_season01_00006,"天使空挺隊(301~1,000位)","2025年12月開催降臨バトル『夏コミの魔物』301~1,000位の証",,,監修通過,202511020
+,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,sur,魔都精兵のスレイブ,adventbattle,season01_00001,emblem_adventbattle_sur_season01_00001,adventbattle_sur_season01_00001,emblem_icon_adventbattle_sur_season01_00001,屈服の時間だ(1位),2025年12月開催降臨バトル『魔防隊と戦う者』1位の証,2025-12-22 15:00:00,,監修通過,202512010
+マスタ設定済,マスタ設定済,sur,魔都精兵のスレイブ,adventbattle,season01_00002,emblem_adventbattle_sur_season01_00002,adventbattle_sur_season01_00002,emblem_icon_adventbattle_sur_season01_00002,屈服の時間だ(2位),2025年12月開催降臨バトル『魔防隊と戦う者』2位の証,2025-12-22 15:00:00,,監修通過,202512010
+マスタ設定済,マスタ設定済,sur,魔都精兵のスレイブ,adventbattle,season01_00003,emblem_adventbattle_sur_season01_00003,adventbattle_sur_season01_00003,emblem_icon_adventbattle_sur_season01_00003,屈服の時間だ(3位),2025年12月開催降臨バトル『魔防隊と戦う者』3位の証,2025-12-22 15:00:00,,監修通過,202512010
+マスタ設定済,マスタ設定済,sur,魔都精兵のスレイブ,adventbattle,season01_00004,emblem_adventbattle_sur_season01_00004,adventbattle_sur_season01_00004,emblem_icon_adventbattle_sur_season01_00004,屈服の時間だ(4~50位),2025年12月開催降臨バトル『魔防隊と戦う者』4~50位の証,2025-12-22 15:00:00,,監修通過,202512010
+マスタ設定済,マスタ設定済,sur,魔都精兵のスレイブ,adventbattle,season01_00005,emblem_adventbattle_sur_season01_00005,adventbattle_sur_season01_00005,emblem_icon_adventbattle_sur_season01_00005,屈服の時間だ(51~300位),2025年12月開催降臨バトル『魔防隊と戦う者』51~300位の証,2025-12-22 15:00:00,,監修通過,202512010
+マスタ設定済,マスタ設定済,sur,魔都精兵のスレイブ,adventbattle,season01_00006,emblem_adventbattle_sur_season01_00006,adventbattle_sur_season01_00006,emblem_icon_adventbattle_sur_season01_00006,"屈服の時間だ(301~1,000位)","2025年12月開催降臨バトル『魔防隊と戦う者』301~1,000位の証",2025-12-22 15:00:00,,監修通過,202512010
+,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,osh,【推しの子】,adventbattle,season01_00001,emblem_adventbattle_osh_season01_00001,adventbattle_osh_season01_00001,emblem_icon_adventbattle_osh_season01_00001,最強で無敵のアイドル(1位),2026年1月開催降臨バトル『ファーストライブ』1位の証,,,監修まだ,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,adventbattle,season01_00002,emblem_adventbattle_osh_season01_00002,adventbattle_osh_season01_00002,emblem_icon_adventbattle_osh_season01_00002,最強で無敵のアイドル(2位),2026年1月開催降臨バトル『ファーストライブ』2位の証,,,監修まだ,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,adventbattle,season01_00003,emblem_adventbattle_osh_season01_00003,adventbattle_osh_season01_00003,emblem_icon_adventbattle_osh_season01_00003,最強で無敵のアイドル(3位),2026年1月開催降臨バトル『ファーストライブ』3位の証,,,監修まだ,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,adventbattle,season01_00004,emblem_adventbattle_osh_season01_00004,adventbattle_osh_season01_00004,emblem_icon_adventbattle_osh_season01_00004,最強で無敵のアイドル(4~50位),2026年1月開催降臨バトル『ファーストライブ』4~50位の証,,,監修まだ,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,adventbattle,season01_00005,emblem_adventbattle_osh_season01_00005,adventbattle_osh_season01_00005,emblem_icon_adventbattle_osh_season01_00005,最強で無敵のアイドル(51~300位),2026年1月開催降臨バトル『ファーストライブ』51~300位の証,,,監修まだ,202512020
+マスタ設定済,マスタ設定済,osh,【推しの子】,adventbattle,season01_00006,emblem_adventbattle_osh_season01_00006,adventbattle_osh_season01_00006,emblem_icon_adventbattle_osh_season01_00006,"最強で無敵のアイドル(301~1,000位)","2026年1月開催降臨バトル『ファーストライブ』301~1,000位の証",,,監修まだ,202512020
+,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,jig,地獄楽,adventbattle,season01_00001,emblem_adventbattle_jig_season01_00001,adventbattle_jig_season01_00001,emblem_icon_adventbattle_jig_season01_00001,罪人(1位),2026年1月開催降臨バトル『まるで 悪夢を見ているようだ』1位の証,,,監修通過,202601010
+マスタ設定済,マスタ設定済,jig,地獄楽,adventbattle,season01_00002,emblem_adventbattle_jig_season01_00002,adventbattle_jig_season01_00002,emblem_icon_adventbattle_jig_season01_00002,罪人(2位),2026年1月開催降臨バトル『まるで 悪夢を見ているようだ』2位の証,,,監修通過,202601010
+マスタ設定済,マスタ設定済,jig,地獄楽,adventbattle,season01_00003,emblem_adventbattle_jig_season01_00003,adventbattle_jig_season01_00003,emblem_icon_adventbattle_jig_season01_00003,罪人(3位),2026年1月開催降臨バトル『まるで 悪夢を見ているようだ』3位の証,,,監修通過,202601010
+マスタ設定済,マスタ設定済,jig,地獄楽,adventbattle,season01_00004,emblem_adventbattle_jig_season01_00004,adventbattle_jig_season01_00004,emblem_icon_adventbattle_jig_season01_00004,罪人(4~50位),2026年1月開催降臨バトル『まるで 悪夢を見ているようだ』4~50位の証,,,監修通過,202601010
+マスタ設定済,マスタ設定済,jig,地獄楽,adventbattle,season01_00005,emblem_adventbattle_jig_season01_00005,adventbattle_jig_season01_00005,emblem_icon_adventbattle_jig_season01_00005,罪人(51~300位),2026年1月開催降臨バトル『まるで 悪夢を見ているようだ』51~300位の証,,,監修通過,202601010
+マスタ設定済,マスタ設定済,jig,地獄楽,adventbattle,season01_00006,emblem_adventbattle_jig_season01_00006,adventbattle_jig_season01_00006,emblem_icon_adventbattle_jig_season01_00006,"罪人(301~1,000位)","2026年1月開催降臨バトル『まるで 悪夢を見ているようだ』301~1,000位の証",,,監修通過,202601010
+,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,you,幼稚園WARS,adventbattle,season01_00001,emblem_adventbattle_you_season01_00001,adventbattle_you_season01_00001,emblem_icon_adventbattle_you_season01_00001,元・伝説の殺し屋(1位),2026年2月開催降臨バトル『誰の依頼だ？』1位の証,,,監修まだ,202602010
+マスタ設定済,マスタ設定済,you,幼稚園WARS,adventbattle,season01_00002,emblem_adventbattle_you_season01_00002,adventbattle_you_season01_00002,emblem_icon_adventbattle_you_season01_00002,元・伝説の殺し屋(2位),2026年2月開催降臨バトル『誰の依頼だ？』2位の証,,,監修まだ,202602010
+マスタ設定済,マスタ設定済,you,幼稚園WARS,adventbattle,season01_00003,emblem_adventbattle_you_season01_00003,adventbattle_you_season01_00003,emblem_icon_adventbattle_you_season01_00003,元・伝説の殺し屋(3位),2026年2月開催降臨バトル『誰の依頼だ？』3位の証,,,監修まだ,202602010
+マスタ設定済,マスタ設定済,you,幼稚園WARS,adventbattle,season01_00004,emblem_adventbattle_you_season01_00004,adventbattle_you_season01_00004,emblem_icon_adventbattle_you_season01_00004,元・伝説の殺し屋(4~50位),2026年2月開催降臨バトル『誰の依頼だ？』4~50位の証,,,監修まだ,202602010
+マスタ設定済,マスタ設定済,you,幼稚園WARS,adventbattle,season01_00005,emblem_adventbattle_you_season01_00005,adventbattle_you_season01_00005,emblem_icon_adventbattle_you_season01_00005,元・伝説の殺し屋(51~300位),2026年2月開催降臨バトル『誰の依頼だ？』51~300位の証,,,監修まだ,202602010
+マスタ設定済,マスタ設定済,you,幼稚園WARS,adventbattle,season01_00006,emblem_adventbattle_you_season01_00006,adventbattle_you_season01_00006,emblem_icon_adventbattle_you_season01_00006,"元・伝説の殺し屋(301~1,000位)","2026年2月開催降臨バトル『誰の依頼だ？』301~1,000位の証",,,監修まだ,202602010
+,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,adventbattle,season01_00001,emblem_adventbattle_kim_season01_00001,adventbattle_kim_season01_00001,emblem_icon_adventbattle_kim_season01_00001,恋愛勇者(1位),2026年2月開催降臨バトル『100カノ編』1位の証,,,監修まだ,202602020
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,adventbattle,season01_00002,emblem_adventbattle_kim_season01_00002,adventbattle_kim_season01_00002,emblem_icon_adventbattle_kim_season01_00002,恋愛勇者(2位),2026年2月開催降臨バトル『100カノ編』2位の証,,,監修まだ,202602020
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,adventbattle,season01_00003,emblem_adventbattle_kim_season01_00003,adventbattle_kim_season01_00003,emblem_icon_adventbattle_kim_season01_00003,恋愛勇者(3位),2026年2月開催降臨バトル『100カノ編』3位の証,,,監修まだ,202602020
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,adventbattle,season01_00004,emblem_adventbattle_kim_season01_00004,adventbattle_kim_season01_00004,emblem_icon_adventbattle_kim_season01_00004,恋愛勇者(4~50位),2026年2月開催降臨バトル『100カノ編』4~50位の証,,,監修まだ,202602020
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,adventbattle,season01_00005,emblem_adventbattle_kim_season01_00005,adventbattle_kim_season01_00005,emblem_icon_adventbattle_kim_season01_00005,恋愛勇者(51~300位),2026年2月開催降臨バトル『100カノ編』51~300位の証,,,監修まだ,202602020
+マスタ設定済,マスタ設定済,kim,君のことが大大大大大好きな100人の彼女,adventbattle,season01_00006,emblem_adventbattle_kim_season01_00006,adventbattle_kim_season01_00006,emblem_icon_adventbattle_kim_season01_00006,"恋愛勇者(301~1,000位)","2026年2月開催降臨バトル『100カノ編』301~1,000位の証",,,監修まだ,202602020
+,,,,,,,,,,,,,,
+マスタ設定済,マスタ設定済,hut,ふつうの軽音部,adventbattle,season01_00001,emblem_adventbattle_hut_season01_00001,adventbattle_hut_season01_00001,emblem_icon_adventbattle_hut_season01_00001,はとちゃんは神(1位),2026年3月開催降臨バトル『片鱗を示す』1位の証,,,監修まだ,202603010
+マスタ設定済,マスタ設定済,hut,ふつうの軽音部,adventbattle,season01_00002,emblem_adventbattle_hut_season01_00002,adventbattle_hut_season01_00002,emblem_icon_adventbattle_hut_season01_00002,はとちゃんは神(2位),2026年3月開催降臨バトル『片鱗を示す』2位の証,,,監修まだ,202603010
+マスタ設定済,マスタ設定済,hut,ふつうの軽音部,adventbattle,season01_00003,emblem_adventbattle_hut_season01_00003,adventbattle_hut_season01_00003,emblem_icon_adventbattle_hut_season01_00003,はとちゃんは神(3位),2026年3月開催降臨バトル『片鱗を示す』3位の証,,,監修まだ,202603010
+マスタ設定済,マスタ設定済,hut,ふつうの軽音部,adventbattle,season01_00004,emblem_adventbattle_hut_season01_00004,adventbattle_hut_season01_00004,emblem_icon_adventbattle_hut_season01_00004,はとちゃんは神(4~50位),2026年3月開催降臨バトル『片鱗を示す』4～50位の証,,,監修まだ,202603010
+マスタ設定済,マスタ設定済,hut,ふつうの軽音部,adventbattle,season01_00005,emblem_adventbattle_hut_season01_00005,adventbattle_hut_season01_00005,emblem_icon_adventbattle_hut_season01_00005,はとちゃんは神(51~300位),2026年3月開催降臨バトル『片鱗を示す』51～300位の証,,,監修まだ,202603010
+マスタ設定済,マスタ設定済,hut,ふつうの軽音部,adventbattle,season01_00006,emblem_adventbattle_hut_season01_00006,adventbattle_hut_season01_00006,emblem_icon_adventbattle_hut_season01_00006,"はとちゃんは神(301~1,000位)","2026年3月開催降臨バトル『片鱗を示す』301~1,000位の証",,,監修まだ,202603010
+,,,,,,,,,,,,,,
+IDのみ採番,記入のみ,aya,あやかしトライアングル,adventbattle,season01_00001,emblem_adventbattle_aya_season01_00001,adventbattle_aya_season01_00001,emblem_icon_adventbattle_aya_season01_00001,祓忍(1位),2026年4月開催降臨バトル『祓忍』1位の証,,,監修まだ,202604010
+IDのみ採番,記入のみ,aya,あやかしトライアングル,adventbattle,season01_00002,emblem_adventbattle_aya_season01_00002,adventbattle_aya_season01_00002,emblem_icon_adventbattle_aya_season01_00002,祓忍(2位),2026年4月開催降臨バトル『祓忍』2位の証,,,監修まだ,202604010
+IDのみ採番,記入のみ,aya,あやかしトライアングル,adventbattle,season01_00003,emblem_adventbattle_aya_season01_00003,adventbattle_aya_season01_00003,emblem_icon_adventbattle_aya_season01_00003,祓忍(3位),2026年4月開催降臨バトル『祓忍』3位の証,,,監修まだ,202604010
+IDのみ採番,記入のみ,aya,あやかしトライアングル,adventbattle,season01_00004,emblem_adventbattle_aya_season01_00004,adventbattle_aya_season01_00004,emblem_icon_adventbattle_aya_season01_00004,祓忍(4~50位),2026年4月開催降臨バトル『祓忍』4～50位の証,,,監修まだ,202604010
+IDのみ採番,記入のみ,aya,あやかしトライアングル,adventbattle,season01_00005,emblem_adventbattle_aya_season01_00005,adventbattle_aya_season01_00005,emblem_icon_adventbattle_aya_season01_00005,祓忍(51~300位),2026年4月開催降臨バトル『祓忍』51～300位の証,,,監修まだ,202604010
+IDのみ採番,記入のみ,aya,あやかしトライアングル,adventbattle,season01_00006,emblem_adventbattle_aya_season01_00006,adventbattle_aya_season01_00006,emblem_icon_adventbattle_aya_season01_00006,"祓忍(301~1,000位)","2026年4月開催降臨バトル『祓忍』301~1,000位の証",,,監修まだ,202604010
+,,,,,,,,,,,,,,
+IDのみ採番,記入のみ,hav1,error,adventbattle,season01_00001,emblem_adventbattle_hav1_season01_00001,adventbattle_hav1_season01_00001,emblem_icon_adventbattle_hav1_season01_00001,覇者(1位),2026年3月開催降臨バトル『覇者』1位の証,,,監修まだ,202603020
+IDのみ採番,記入のみ,hav1,error,adventbattle,season01_00002,emblem_adventbattle_hav1_season01_00002,adventbattle_hav1_season01_00002,emblem_icon_adventbattle_hav1_season01_00002,覇者(2位),2026年3月開催降臨バトル『覇者』2位の証,,,監修まだ,202603020
+IDのみ採番,記入のみ,hav1,error,adventbattle,season01_00003,emblem_adventbattle_hav1_season01_00003,adventbattle_hav1_season01_00003,emblem_icon_adventbattle_hav1_season01_00003,覇者(3位),2026年3月開催降臨バトル『覇者』3位の証,,,監修まだ,202603020
+IDのみ採番,記入のみ,hav1,error,adventbattle,season01_00004,emblem_adventbattle_hav1_season01_00004,adventbattle_hav1_season01_00004,emblem_icon_adventbattle_hav1_season01_00004,覇者(4~50位),2026年3月開催降臨バトル『覇者』4～50位の証,,,監修まだ,202603020
+IDのみ採番,記入のみ,hav1,error,adventbattle,season01_00005,emblem_adventbattle_hav1_season01_00005,adventbattle_hav1_season01_00005,emblem_icon_adventbattle_hav1_season01_00005,覇者(51~300位),2026年3月開催降臨バトル『覇者』51～300位の証,,,監修まだ,202603020
+IDのみ採番,記入のみ,hav1,error,adventbattle,season01_00006,emblem_adventbattle_hav1_season01_00006,adventbattle_hav1_season01_00006,emblem_icon_adventbattle_hav1_season01_00006,"覇者(301~1,000位)","2026年3月開催降臨バトル『覇者』301~1,000位の証",,,監修まだ,202603020
+,,,,,,,,,,,,,,
+IDのみ採番,記入のみ,hav2,error,adventbattle,season02_00001,emblem_adventbattle_hav2_season02_00001,adventbattle_hav2_season02_00001,emblem_icon_adventbattle_hav2_season02_00001,英雄(1位),2026年4月開催降臨バトル『英雄』1位の証,,,,
+IDのみ採番,記入のみ,hav2,error,adventbattle,season02_00002,emblem_adventbattle_hav2_season02_00002,adventbattle_hav2_season02_00002,emblem_icon_adventbattle_hav2_season02_00002,英雄(2位),2026年4月開催降臨バトル『英雄』2位の証,,,,
+IDのみ採番,記入のみ,hav2,error,adventbattle,season02_00003,emblem_adventbattle_hav2_season02_00003,adventbattle_hav2_season02_00003,emblem_icon_adventbattle_hav2_season02_00003,英雄(3位),2026年4月開催降臨バトル『英雄』3位の証,,,,
+IDのみ採番,記入のみ,hav2,error,adventbattle,season02_00004,emblem_adventbattle_hav2_season02_00004,adventbattle_hav2_season02_00004,emblem_icon_adventbattle_hav2_season02_00004,英雄(4~50位),2026年4月開催降臨バトル『英雄』4～50位の証,,,,
+IDのみ採番,記入のみ,hav2,error,adventbattle,season02_00005,emblem_adventbattle_hav2_season02_00005,adventbattle_hav2_season02_00005,emblem_icon_adventbattle_hav2_season02_00005,英雄(51~300位),2026年4月開催降臨バトル『英雄』51～300位の証,,,,
+IDのみ採番,記入のみ,hav2,error,adventbattle,season02_00006,emblem_adventbattle_hav2_season02_00006,adventbattle_hav2_season02_00006,emblem_icon_adventbattle_hav2_season02_00006,"英雄(301~1,000位)","2026年4月開催降臨バトル『英雄』301~1,000位の証",,,,
+,,,,,,,,,,,,,,
+IDのみ採番,記入のみ,mar,マリッジトキシン,adventbattle,season02_00001,emblem_adventbattle_mar_season02_00001,adventbattle_mar_season02_00001,emblem_icon_adventbattle_mar_season02_00001,毒使い(1位),2026年5月開催降臨バトル『毒使い』1位の証,,,,
+IDのみ採番,記入のみ,mar,マリッジトキシン,adventbattle,season02_00002,emblem_adventbattle_mar_season02_00002,adventbattle_mar_season02_00002,emblem_icon_adventbattle_mar_season02_00002,毒使い(2位),2026年5月開催降臨バトル『毒使い』2位の証,,,,
+IDのみ採番,記入のみ,mar,マリッジトキシン,adventbattle,season02_00003,emblem_adventbattle_mar_season02_00003,adventbattle_mar_season02_00003,emblem_icon_adventbattle_mar_season02_00003,毒使い(3位),2026年5月開催降臨バトル『毒使い』3位の証,,,,
+IDのみ採番,記入のみ,mar,マリッジトキシン,adventbattle,season02_00004,emblem_adventbattle_mar_season02_00004,adventbattle_mar_season02_00004,emblem_icon_adventbattle_mar_season02_00004,毒使い(4~50位),2026年5月開催降臨バトル『毒使い』4～50位の証,,,,
+IDのみ採番,記入のみ,mar,マリッジトキシン,adventbattle,season02_00005,emblem_adventbattle_mar_season02_00005,adventbattle_mar_season02_00005,emblem_icon_adventbattle_mar_season02_00005,毒使い(51~300位),2026年5月開催降臨バトル『毒使い』51～300位の証,,,,
+IDのみ採番,記入のみ,mar,マリッジトキシン,adventbattle,season02_00006,emblem_adventbattle_mar_season02_00006,adventbattle_mar_season02_00006,emblem_icon_adventbattle_mar_season02_00006,"毒使い(301~1,000位)","2026年5月開催降臨バトル『毒使い』301～1,000位の証",,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+IDのみ採番,未作成,glo,GLOW,limited,00001,emblem_icon_limited_glo_00001,,,,,,,,
+IDのみ採番,未作成,glo,GLOW,limited,00002,emblem_icon_limited_glo_00002,,,,,,,,
