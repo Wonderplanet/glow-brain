@@ -103,6 +103,7 @@ X 日後(カムバック判定)にログインし
 指定作品Xの原画をYつ完成させよう,図鑑,達成条件,SpecificSeriesArtworkCompletedCount,作品ID（mst_series.id）,完成させてほしい原画数,全て対象,,
 原画をYつ完成させよう,図鑑,達成条件,ArtworkCompletedCount,NULL(未指定),完成させてほしい原画数,全て対象,,
 指定原画Xを1つ完成させよう,図鑑,達成条件,SpecificArtworkCompletedCount,原画ID（mst_artworks.id）,完成させてほしい原画数（原画完成は生涯1回のみなので、実質1のみ設定可）,全て対象,,
+指定原画XのグレードレベルがYに到達する,図鑑,達成条件,SpecificArtworkGradeLevel,原画ID（mst_artworks.id）,到達して欲しいグレードレベル,全て対象,,
 降臨バトルを X 回挑戦する,降臨バトル,達成条件,AdventBattleChallengeCount,NULL(未指定),挑戦してほしい回数,全て対象,,
 降臨バトルの累計スコアが X 達成,降臨バトル,達成条件,AdventBattleTotalScore,NULL(未指定),降臨バトルに複数回挑戦した時の累計として獲得してほしいスコア,全て対象,,
 降臨バトルのハイスコアが X 達成,降臨バトル,達成条件,AdventBattleScore,NULL(未指定),"獲得してほしいハイスコア。
