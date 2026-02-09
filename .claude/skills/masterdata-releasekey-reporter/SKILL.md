@@ -1,6 +1,7 @@
 ---
 name: masterdata-releasekey-reporter
 description: GLOWマスタデータのリリースキー別抽出とレポート生成。テーブル別CSV・統計JSON・DuckDBクエリで柔軟な分析が可能。「リリースキー」「release key」「マスタデータ抽出」「データ投入」「リリース内容」などのキーワードで使用します。
+disable-model-invocation: false
 ---
 
 # Masterdata Release Key Reporter
@@ -22,7 +23,7 @@ GLOWプロジェクトのマスタデータから特定のリリースキーに�
 リリースキーごとに以下のディレクトリ構造で出力します:
 
 ```
-マスタデータ/リリース/{RELEASE_KEY}/
+domain/raw-data/masterdata/released/{RELEASE_KEY}/
 ├── stats/
 │   ├── summary.json          # 全体統計（テーブル数、行数、カテゴリ集計）
 │   └── tables.json           # テーブル別詳細統計
@@ -95,7 +96,7 @@ GLOWプロジェクトのマスタデータから特定のリリースキーに�
 `stats/summary.json` を読み込んで全体像を把握します:
 
 ```bash
-cat マスタデータ/リリース/202512020/stats/summary.json | jq .
+cat domain/raw-data/masterdata/released/202512020/stats/summary.json | jq .
 ```
 
 **確認すべき情報:**
@@ -111,7 +112,7 @@ cat マスタデータ/リリース/202512020/stats/summary.json | jq .
 
 ```bash
 # Readツールで直接読み込み
-/Users/.../マスタデータ/リリース/202512020/tables/MstEvent.csv
+/Users/.../domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv
 ```
 
 #### 方法2: DuckDBクエリ
@@ -135,9 +136,9 @@ SELECT
   e.start_at,
   e.end_at,
   i.name
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') e
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstEventI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEventI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON e.id = i.mst_event_id
 WHERE i.language = 'ja';
@@ -150,7 +151,7 @@ SELECT
   resource_type,
   COUNT(*) as count,
   SUM(resource_amount) as total
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattleReward.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattleReward.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 GROUP BY resource_type
 ORDER BY count DESC;
@@ -163,7 +164,7 @@ ORDER BY count DESC;
 統計JSONと分析結果をもとに、Markdownレポートを作成します。
 
 **レポート保存先:**
-`マスタデータ/リリース/{リリースキー}/release_{RELEASE_KEY}_report.md`
+`domain/raw-data/masterdata/released/{リリースキー}/release_{RELEASE_KEY}_report.md`
 
 **レポートに含める内容:**
 1. **概要セクション**: リリースキー、テーブル数、総行数、抽出日時
@@ -204,8 +205,8 @@ ORDER BY count DESC;
 ```bash
 # イベント + 日本語名
 .claude/skills/masterdata-releasekey-reporter/scripts/query_release.sh {KEY} sql \
-  "SELECT e.id, i.name FROM read_csv('マスタデータ/リリース/{KEY}/tables/MstEvent.csv', AUTO_DETECT=TRUE) e \
-   LEFT JOIN read_csv('マスタデータ/リリース/{KEY}/tables/MstEventI18n.csv', AUTO_DETECT=TRUE) i \
+  "SELECT e.id, i.name FROM read_csv('domain/raw-data/masterdata/released/{KEY}/tables/MstEvent.csv', AUTO_DETECT=TRUE) e \
+   LEFT JOIN read_csv('domain/raw-data/masterdata/released/{KEY}/tables/MstEventI18n.csv', AUTO_DETECT=TRUE) i \
    ON e.id = i.mst_event_id AND i.language = 'ja'"
 ```
 
@@ -327,9 +328,9 @@ https://duckdb.org/docs/installation/
 5. 統計JSON（summary.json / tables.json）を生成
 
 **出力:**
-- `マスタデータ/リリース/{リリースキー}/tables/{テーブル名}.csv`
-- `マスタデータ/リリース/{リリースキー}/stats/summary.json`
-- `マスタデータ/リリース/{リリースキー}/stats/tables.json`
+- `domain/raw-data/masterdata/released/{リリースキー}/tables/{テーブル名}.csv`
+- `domain/raw-data/masterdata/released/{リリースキー}/stats/summary.json`
+- `domain/raw-data/masterdata/released/{リリースキー}/stats/tables.json`
 
 ### query_release.sh
 
@@ -371,7 +372,7 @@ SELECT
   ab.id as battle_id,
   r.resource_type,
   SUM(r.resource_amount) as total
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattle.csv', ...) ab
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattle.csv', ...) ab
 JOIN ...
 GROUP BY ab.id, r.resource_type;
 ```

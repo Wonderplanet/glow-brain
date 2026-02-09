@@ -14,7 +14,7 @@ fi
 
 RELEASE_KEY="$1"
 MASTERDATA_DIR="projects/glow-masterdata"
-OUTPUT_DIR="マスタデータ/リリース/${RELEASE_KEY}"
+OUTPUT_DIR="domain/raw-data/masterdata/released/${RELEASE_KEY}"
 TABLES_DIR="${OUTPUT_DIR}/tables"
 STATS_DIR="${OUTPUT_DIR}/stats"
 

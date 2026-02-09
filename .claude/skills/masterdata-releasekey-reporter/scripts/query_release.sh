@@ -36,8 +36,8 @@ fi
 
 RELEASE_KEY="$1"
 COMMAND="$2"
-TABLES_DIR="マスタデータ/リリース/${RELEASE_KEY}/tables"
-STATS_DIR="マスタデータ/リリース/${RELEASE_KEY}/stats"
+TABLES_DIR="domain/raw-data/masterdata/released/${RELEASE_KEY}/tables"
+STATS_DIR="domain/raw-data/masterdata/released/${RELEASE_KEY}/stats"
 DUCKDB_INIT=".claude/skills/masterdata-releasekey-reporter/.duckdbrc"
 
 # DuckDBの存在確認
