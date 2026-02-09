@@ -1,0 +1,6 @@
+ENABLE,release_key,id,mst_quest_id,language,name,category_name,flavor_text
+e,202601010,quest_event_jig1_charaget01_ja,quest_event_jig1_charaget01,ja,必ず生きて帰る,ストーリー,
+e,202601010,quest_event_jig1_challenge01_ja,quest_event_jig1_challenge01,ja,死罪人と首切り役人,チャレンジ,
+e,202601010,quest_event_jig1_charaget02_ja,quest_event_jig1_charaget02,ja,朱印の者たち,ストーリー,
+e,202601010,quest_event_jig1_savage_ja,quest_event_jig1_savage,ja,手負いの獣は恐ろしいぞ,高難易度,
+e,202601010,quest_event_jig1_1day_ja,quest_event_jig1_1day,ja,"本能が告げている 危険だと",デイリー,

@@ -1,0 +1,13 @@
+ENABLE,id,mst_unit_id,rank,require_level,amount,unit_memory_amount,sr_memory_fragment_amount,ssr_memory_fragment_amount,ur_memory_fragment_amount,release_key
+e,chara_jig_00701_rank1,chara_jig_00701,1,20,0,200,0,0,0,202601010
+e,chara_jig_00701_rank2,chara_jig_00701,2,30,0,250,5,0,0,202601010
+e,chara_jig_00701_rank3,chara_jig_00701,3,40,0,300,10,5,0,202601010
+e,chara_jig_00701_rank4,chara_jig_00701,4,50,0,350,15,10,0,202601010
+e,chara_jig_00701_rank5,chara_jig_00701,5,60,0,400,20,15,3,202601010
+e,chara_jig_00701_rank6,chara_jig_00701,6,70,0,450,25,20,5,202601010
+e,chara_jig_00601_rank1,chara_jig_00601,1,20,0,200,0,0,0,202601010
+e,chara_jig_00601_rank2,chara_jig_00601,2,30,0,250,5,0,0,202601010
+e,chara_jig_00601_rank3,chara_jig_00601,3,40,0,300,10,5,0,202601010
+e,chara_jig_00601_rank4,chara_jig_00601,4,50,0,350,15,10,0,202601010
+e,chara_jig_00601_rank5,chara_jig_00601,5,60,0,400,20,15,3,202601010
+e,chara_jig_00601_rank6,chara_jig_00601,6,70,0,450,25,20,5,202601010

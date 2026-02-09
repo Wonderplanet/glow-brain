@@ -1,0 +1,6 @@
+ENABLE,release_key,id,mst_series_id,asset_key,is_phantomized,is_displayed_encyclopedia,mst_attack_hit_onomatopeia_group_id
+e,202601010,chara_jig_00401,jig,chara_jig_00401,1,1,
+e,202601010,chara_jig_00501,jig,chara_jig_00501,1,1,
+e,202601010,chara_jig_00601,jig,chara_jig_00601,1,1,
+e,202601010,enemy_jig_00501,jig,enemy_jig_00501,0,1,
+e,202601010,enemy_jig_00601,jig,enemy_jig_00601,0,1,

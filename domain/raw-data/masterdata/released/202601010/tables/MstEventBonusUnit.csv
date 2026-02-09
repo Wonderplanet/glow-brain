@@ -1,0 +1,8 @@
+ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
+e,54,chara_jig_00401,20,raid_jig1_00001,,202601010
+e,55,chara_jig_00001,15,raid_jig1_00001,,202601010
+e,56,chara_jig_00101,10,raid_jig1_00001,,202601010
+e,57,chara_jig_00201,10,raid_jig1_00001,,202601010
+e,58,chara_jig_00501,10,raid_jig1_00001,,202601010
+e,59,chara_jig_00601,10,raid_jig1_00001,,202601010
+e,60,chara_jig_00301,5,raid_jig1_00001,,202601010
