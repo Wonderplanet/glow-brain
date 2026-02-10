@@ -1,6 +1,6 @@
 {
   "release_key": "202602010",
-  "extraction_date": "2026-02-10T09:18:29Z",
+  "extraction_date": "2026-02-10T14:40:28Z",
   "total_tables": 30,
   "total_rows": 218,
   "categories": {
@@ -58,5 +58,9 @@
       "name": "OprGachaDisplayUnitI18n",
       "rows": 4
     }
-  ]
+  ],
+  "past_tables": {
+    "total_tables": 155,
+    "total_rows": 42947
+  }
 }
