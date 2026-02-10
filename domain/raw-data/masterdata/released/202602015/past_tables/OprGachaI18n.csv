@@ -1,0 +1,28 @@
+ENABLE,release_key,id,opr_gacha_id,language,name,description,max_rarity_upper_description,pickup_upper_description,fixed_prize_description,banner_url,logo_asset_key,logo_banner_url,gacha_background_color,gacha_banner_size
+e,202509010,Tutorial_001_ja,Tutorial_001,ja,チュートリアルガシャ,引き直し可能！！\nUR1体とSSR以下9体が出現する10連ガシャ！,"","",UR1体確定,tutorial_00001,tutorial_00001,"",Yellow,SizeL
+e,202509010,Special_001_ja,Special_001,ja,スペシャルガシャ,少年ジャンプ＋のキャラが大集合!,URキャラ1体確定！,"",SR以上1体確定,special_00001,special_00001,"",Blue,SizeL
+e,202509010,Pickup_kai_001_ja,Pickup_kai_001,ja,怪獣８号 いいジャン祭ピックアップガシャ,「亜白 ミナ」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,kai_00001,pickup_00001,"",Yellow,SizeL
+e,202509010,Premiummedal_001_ja,Premiummedal_001,ja,プレミアムメダルガシャ,プレミアムメダル限定キャラと\n強化アイテムをGET!,"","","",medal_00001,medal_00001,"",Yellow,SizeL
+e,202509010,UR_10Ticket_001_ja,UR_10Ticket_001,ja,UR1体確定10連ガシャ,URキャラ1体確定!,URキャラ1体確定,"",UR1体確定,UR_Ticket_00001,ur_10_00001,"",Blue,SizeL
+e,202509010,StartDash_001_ja,StartDash_001,ja,72時間限定スタートダッシュガシャ,"有償プリズム1,500個で引ける！\nURキャラ1体確定！",URキャラ1体確定,"",UR1体確定,startdash_00001,startdash_00001,"",Purple,SizeL
+e,202509010,StartDash_Ticket_001_ja,StartDash_Ticket_001,ja,72時間限定スタートダッシュガシャ,URキャラ1体確定!,URキャラ1体確定,"",UR1体確定,startdash_00001,startdash_00001,"",Purple,SizeL
+e,202510010,Pickup_spy_001_ja,Pickup_spy_001,ja,SPY×FAMILY いいジャン祭ピックアップガシャ A,「姉を想う盲愛 ユーリ・ブライア」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,spy_00001,pickup_a_00001,"",Yellow,SizeL
+e,202510010,Pickup_spy_002_ja,Pickup_spy_002,ja,SPY×FAMILY いいジャン祭ピックアップガシャ B,「<黄昏> ロイド」と「<いばら姫>ヨル」\nと「わくわく アーニャ」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,spy_00002,pickup_b_00001,"",Yellow,SizeL
+e,202511010,Pickup_mag_001_ja,Pickup_mag_001,ja,株式会社マジルミエ いいジャン祭ピックアップガシャ A,「絶対効率の体現者 土刃 メイ」と\n「葵 リリー」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,mag_00001,pickup_a_00001,"",Yellow,SizeL
+e,202511010,Pickup_mag_002_ja,Pickup_mag_002,ja,株式会社マジルミエ いいジャン祭ピックアップガシャ B,「新人魔法少女 桜木 カナ」と\n「葵 リリー」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,mag_00002,pickup_b_00001,"",Yellow,SizeL
+e,202510020,Pickup_dan_001_ja,Pickup_dan_001,ja,ダンダダン いいジャン祭ピックアップガシャ A,「アクさらの愛 アイラ」と\n「モモ」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,dan_00001,pickup_a_00001,"",Yellow,SizeL
+e,202510020,Pickup_dan_002_ja,Pickup_dan_002,ja,ダンダダン いいジャン祭ピックアップガシャ B,「ターボババアの霊力 オカルン」と\n「モモ」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,dan_00002,pickup_b_00001,"",Yellow,SizeL
+e,202511020,Pickup_yuw_001_ja,Pickup_yuw_001,ja,2.5次元の誘惑 いいジャン祭ピックアップガシャ A,2.5次元の誘惑から新URキャラ2体と\n新SSRキャラ1体の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,yuw_00001,pickup_a_00001,"",Yellow,SizeL
+e,202511020,Pickup_yuw_002_ja,Pickup_yuw_002,ja,2.5次元の誘惑 いいジャン祭ピックアップガシャ B,2.5次元の誘惑からURキャラ2体と\n新SSRキャラ1体の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,yuw_00002,pickup_b_00001,"",Yellow,SizeL
+e,202512010,Pickup_sur_001_ja,Pickup_sur_001,ja,魔都精兵のスレイブ いいジャン祭ピックアップガシャ A,「空間を操る六番組組長 出雲 天花」と\n「東 八千穂」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,sur_00001,pickup_a_00001,"",Yellow,SizeL
+e,202512010,Pickup_sur_002_ja,Pickup_sur_002,ja,魔都精兵のスレイブ いいジャン祭ピックアップガシャ B,「誇り高き魔都の剣姫 羽前 京香」と\n「東 八千穂」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,sur_00002,pickup_b_00001,"",Yellow,SizeL
+e,202512015,Fest_Xmas_001_ja,Fest_Xmas_001,ja,クリスマスDXフェスガシャ,「愛届ける聖夜のサンタ 橘 美花莉」\nの出現率UP中!,"",ピックアップURキャラ1体確定!,SSR以上1体確定,glo_00001,fes_00001,"",Yellow,SizeL
+e,202512020,Fest_osh_001_ja,Fest_osh_001,ja,正月DXフェスガシャ,「B小町不動のセンター アイ」の出現率UP中!,"",ピックアップURキャラ1体確定!,SSR以上1体確定,glo_00002,fes_00001,"",Yellow,SizeL
+e,202512020,Pickup_osh_001_ja,Pickup_osh_001,ja,【推しの子】 いいジャン祭ピックアップガシャ,【推しの子】から新URキャラ1体と\n新SSRキャラ4体の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,osh_00001,pickup_00001,"",Yellow,SizeL
+e,202512020,UR_newyear_001_ja,UR_newyear_001,ja,2026年正月記念！UR1体確定ガシャ,"有償プリズム1,500個で引ける！\nURキャラ1体確定！",URキャラ1体確定,"",UR1体確定,glo_00003,"","",Purple,SizeL
+e,202512020,UR_newyear_Ticket_001_ja,UR_newyear_Ticket_001,ja,2026年正月記念！UR1体確定ガシャ,URキャラ1体確定！,URキャラ1体確定,"",UR1体確定,glo_00003,"","",Purple,SizeL
+e,202512020,gasho_001_ja,gasho_001,ja,賀正ガシャ2026,賀正ガシャチケット引ける!,"","","",glo_00005,"","",Yellow,SizeL
+e,202512020,SSRticket_osh_001_ja,SSRticket_osh_001,ja,【推しの子】SSR確定チケットガシャ,【推しの子】作品のSSRキャラのみ出現！,"",SSR確定！,"",osh_00002,"","",Yellow,SizeL
+e,202601010,Pickup_jig_001_ja,Pickup_jig_001,ja,地獄楽 いいジャン祭ピックアップガシャ A,「賊王 亜左 弔兵衛」と\n「山田浅ェ門 桐馬」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,jig_00001,pickup_a_00001,"",Yellow,SizeL
+e,202601010,Pickup_jig_002_ja,Pickup_jig_002,ja,地獄楽 いいジャン祭ピックアップガシャ B,「がらんの画眉丸」と\n「山田浅ェ門 桐馬」の出現率UP中!,"",ピックアップURキャラ1体確定!,SR以上1体確定,jig_00002,pickup_b_00001,"",Yellow,SizeL
+e,202602010,Pickup_Valentine_001_ja,Pickup_Valentine_001,ja,バレンタインピックアップガシャ,バレンタインピックアップガシャチケットでも引ける!\n女の子のみ登場ガシャ!,"",ピックアップURキャラ1体確定!,SSR以上1体確定,glo_00006,"","",Yellow,SizeL
