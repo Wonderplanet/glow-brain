@@ -346,6 +346,17 @@
       <p>Google DriveフォルダのURLまたはIDを入力すると、フォルダ以下の全ファイル情報をCSVで出力します。</p>
       <label for="filelist-folder-input">フォルダURL / ID：</label>
       <input type="text" id="filelist-folder-input" placeholder="https://drive.google.com/drive/folders/... または フォルダID">
+
+      <label for="filelist-max-depth" style="margin-top: 10px;">階層制限：</label>
+      <select id="filelist-max-depth" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px;">
+        <option value="0">1階層（ルートフォルダのみ）</option>
+        <option value="1">2階層</option>
+        <option value="2">3階層</option>
+        <option value="3">4階層</option>
+        <option value="4">5階層</option>
+        <option value="null" selected>全て（無制限）</option>
+      </select>
+
       <button id="btn-filelist" onclick="generateFileListCsvHandler()">CSV生成</button>
 
       <div class="note">
@@ -960,11 +971,15 @@
     // ファイル一覧CSV生成
     function generateFileListCsvHandler() {
       const folderInput = document.getElementById('filelist-folder-input').value;
+      const maxDepthSelect = document.getElementById('filelist-max-depth').value;
 
       if (!folderInput) {
         alert('フォルダURL または IDを入力してください');
         return;
       }
+
+      // maxDepth の値を変換
+      const maxDepth = maxDepthSelect === 'null' ? null : parseInt(maxDepthSelect, 10);
 
       const btn = document.getElementById('btn-filelist');
       btn.disabled = true;
@@ -976,7 +991,7 @@
       google.script.run
         .withSuccessHandler(onFileListComplete)
         .withFailureHandler(onError)
-        .generateFileListCsv(folderInput, sessionId);
+        .generateFileListCsv(folderInput, sessionId, maxDepth);
     }
 
     // ファイル一覧CSV生成完了

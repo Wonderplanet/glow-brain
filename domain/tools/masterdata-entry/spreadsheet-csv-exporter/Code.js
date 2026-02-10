@@ -806,8 +806,10 @@ function generateCsvContent(fileList) {
  * @param {Function} addLog - ログ関数
  * @param {string} sessionId - セッションID
  * @param {number} startTime - 処理開始時刻（ミリ秒）
+ * @param {number|null} maxDepth - 最大階層深さ。nullの場合は無制限
+ * @param {number} currentDepth - 現在の階層深さ（0始まり）
  */
-function collectFilesRecursively(folder, currentPath, fileList, addLog, sessionId, startTime) {
+function collectFilesRecursively(folder, currentPath, fileList, addLog, sessionId, startTime, maxDepth, currentDepth) {
   // 中断フラグチェック
   if (checkAbortFlag(sessionId)) {
     addLog({ type: 'warn', message: '処理が中断されました' });
@@ -856,8 +858,14 @@ function collectFilesRecursively(folder, currentPath, fileList, addLog, sessionI
         const subFolderName = subFolder.getName();
         const subPath = `${currentPath}/${subFolderName}`;
 
-        // 再帰呼び出し
-        collectFilesRecursively(subFolder, subPath, fileList, addLog, sessionId, startTime);
+        // 階層制限チェック
+        if (maxDepth !== null && currentDepth >= maxDepth) {
+          addLog({ type: 'info', message: `階層制限によりスキップ: ${subPath}` });
+          continue;
+        }
+
+        // 再帰呼び出し（階層を1つ深くする）
+        collectFilesRecursively(subFolder, subPath, fileList, addLog, sessionId, startTime, maxDepth, currentDepth + 1);
 
         // レートリミット対策（フォルダ処理ごとに300msスリープ）
         Utilities.sleep(300);
@@ -877,15 +885,27 @@ function collectFilesRecursively(folder, currentPath, fileList, addLog, sessionI
  * フォルダ内の全ファイル一覧をCSVで出力（再帰的）
  * @param {string} folderInput - フォルダURL または ID
  * @param {string} sessionId - セッションID
+ * @param {number|null} maxDepth - 最大階層深さ。nullの場合は無制限
  * @returns {object} - { data: base64文字列, fileName: CSV名, fileCount: 件数, message }
  */
-function generateFileListCsv(folderInput, sessionId) {
+function generateFileListCsv(folderInput, sessionId, maxDepth) {
   const addLog = (log) => {
     Logger.log(`[${log.type.toUpperCase()}] ${log.message}`);
     saveLog(sessionId, log);
   };
 
   try {
+    // maxDepth のバリデーション
+    if (maxDepth !== null && (typeof maxDepth !== 'number' || maxDepth < 0)) {
+      addLog({ type: 'error', message: '階層制限の値が不正です' });
+      return {
+        data: null,
+        fileName: null,
+        fileCount: 0,
+        error: '階層制限の値が不正です'
+      };
+    }
+
     addLog({ type: 'info', message: 'フォルダにアクセス中...' });
 
     // フォルダID抽出（既存関数を再利用）
@@ -900,7 +920,14 @@ function generateFileListCsv(folderInput, sessionId) {
     const fileList = [];
     const startTime = Date.now();
 
-    collectFilesRecursively(rootFolder, `/${rootFolderName}`, fileList, addLog, sessionId, startTime);
+    // 階層制限のログ出力
+    if (maxDepth === null) {
+      addLog({ type: 'info', message: '階層制限: 無制限（全階層を走査）' });
+    } else {
+      addLog({ type: 'info', message: `階層制限: ${maxDepth + 1}階層まで走査` });
+    }
+
+    collectFilesRecursively(rootFolder, `/${rootFolderName}`, fileList, addLog, sessionId, startTime, maxDepth, 0);
 
     addLog({ type: 'success', message: `${fileList.length}件のファイルを検出` });
 
