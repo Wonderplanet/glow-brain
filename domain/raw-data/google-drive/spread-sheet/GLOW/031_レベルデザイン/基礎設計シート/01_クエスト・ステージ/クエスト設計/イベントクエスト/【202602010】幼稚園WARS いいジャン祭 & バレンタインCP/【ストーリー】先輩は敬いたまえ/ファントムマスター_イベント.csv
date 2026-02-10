@@ -1,0 +1,884 @@
+,※同IDが存在してないように使用用途を識別に入力する。　「general」や「normal_01only」など,,,,,,,※手打ち可能,,,,,,,,,,,,,,,,,,,,,
+,master_id,識別,enemy_ID,作品,キャラ名(監修名),識別キャラ名,unit_kind,role_type,color,HP,knock_back,move_speed,well_distance,attack_power,start_range,end_range,攻撃範囲,撃破リーダーP,通常攻撃モーション秒,通常攻撃発生秒,通常攻撃CDF,必殺攻撃モーション秒,必殺攻撃発生秒,必殺ワザ内容,必殺発動回数,特性,オノマトペ,通常攻撃備考,備考
+,,,__Normal_,none,none,none,Normal,none,,,,,,,,,,,none,none,,none,none,,,,none,,
+,enemy_glo_00001,_event_spy1_artwork,e_glo_00001_event_spy1_artwork_Normal_Colorless,GLOW,ファントム,ファントム_event_spy1_artwork,Normal,Attack,Colorless,3000,3,34,0.22,100,0,0.23,1,300,1.00,0.50,50,,,,,,dageki_1,test,
+,enemy_glo_00001,_event_spy1_artwork,e_glo_00001_event_spy1_artwork_Boss_Colorless,GLOW,ファントム,ファントム_event_spy1_artwork,Boss,Attack,Colorless,5000,2,25,0.25,100,0,0.23,1,500,1.00,0.50,100,,,,,,dageki_1,,
+,enemy_glo_00001,_event_spy1_artwork,e_glo_00001_event_spy1_artwork_Boss_Yellow,GLOW,ファントム,ファントム_event_spy1_artwork,Boss,Attack,Yellow,5000,2,25,0.25,300,0,0.26,1,500,1.00,0.50,100,,,,,,dageki_1,,
+,enemy_glo_00001,_event_spy1_artwork,e_glo_00001_event_spy1_artwork_Boss_Blue,GLOW,ファントム,ファントム_event_spy1_artwork,Boss,Attack,Blue,5000,2,25,0.25,300,0,0.26,1,500,1.00,0.50,100,,,,,,dageki_1,,
+,enemy_glo_00001,_isaoget,e_glo_00001_isaoget_Normal_Yellow,GLOW,ファントム,ファントム_isaoget,Normal,Attack,Yellow,5000,2,31,0.2,300,0,0.21,1,150,1.00,0.50,100,,,,,,dageki_1,,
+,,,,,none,,,,,,,,,,,,,,,,,,,,,,none,,
+,chara_kai_00001,_1d1c,c_kai_00001_1d1c_Boss_Colorless,怪獣８号,日比野 カフカ,日比野 カフカ_1d1c,Boss,Attack,Colorless,10000,2,10,0.17,100,0,0.23,100,1000,1.83,1.00,75,2.33,1.33,単体に攻撃,5,,dageki_1,,アニメーションを見せるだけ
+,chara_kai_00001,_iharuget,c_kai_00001_iharuget_Normal_Yellow,怪獣８号,日比野 カフカ,日比野 カフカ_iharuget,Normal,Defense,Yellow,10000,2,10,0.17,100,0,0.23,100,500,1.83,1.00,75,2.33,1.33,単体に攻撃,5,,dageki_1,,アニメーションを見せるだけ
+,chara_kai_00601,_iharuget,c_kai_00601_iharuget_Normal_Yellow,怪獣８号,古橋 伊春,古橋 伊春_iharuget,Normal,Attack,Yellow,10000,3,25,0.3,500,0,0.31,1,500,1.37,stop有:1回目 0.71,25,1.83,stop無:1回目 0.93,次回(1回)の攻撃力100%Up,4,,shageki_1,,
+,chara_kai_00601,_iharuget,c_kai_00601_iharuget_Boss_Red,怪獣８号,古橋 伊春,古橋 伊春_iharuget,Boss,Attack,Red,100000,3,25,0.3,500,0,0.31,1,500,1.37,stop有:1回目 0.71,25,1.83,stop無:1回目 0.93,次回(1回)の攻撃力100%Up,4,,shageki_1,,
+,chara_kai_00101,_iharuget,c_kai_00101_iharuget_Normal_Yellow,怪獣８号,市川 レノ,市川 レノ_iharuget,Normal,Technical,Yellow,10000,3,36,0.4,100,0,0.41,1,200,1.40,stop無:1回目 0.91,100,3.17,"stop無:1回目 1.05
+stop無:2回目 1.33
+stop無:3回目 1.76",単体に攻撃＋攻撃力30%DOWN,4,,shageki_1,,
+,enemy_kai_00201,_iharuget,e_kai_00201_iharuget_Normal_Colorless,怪獣８号,怪獣９号,怪獣９号_iharuget,Normal,Attack,Colorless,100000,3,40,0.35,1000,0,0.5,100,250,2.47,stop有:1回目 1.26,75,-,-,,-,,shageki_1,,
+,enemy_kai_00201,_iharuget,e_kai_00201_iharuget_Boss_Blue,怪獣８号,怪獣９号,怪獣９号_iharuget,Boss,Attack,Blue,100000,3,31,0.35,1000,0,0.5,100,250,2.47,stop有:1回目 1.26,200,-,-,,-,,shageki_1,,
+,chara_kai_00401,_iharuget,c_kai_00401_iharuget_Normal_Yellow,怪獣８号,保科 宗四郎,保科 宗四郎_iharuget,Normal,Attack,Yellow,10000,3,35,0.24,100,0,0.25,1,300,1.27,stop有:1回目 0.43,75,2.67,"stop無:1回目 0.25
+stop無:2回目 0.91
+stop無:3回目 1.05
+stop無:4回目 1.15
+stop有:5回目 1.66",単体に攻撃,5,,zangeki_1,,
+,,,,,none,,,,,,,,,,,,,,,,,,,,,,,,
+,chara_kai_00401,_isaoget,c_kai_00401_isaoget_Normal_Blue,怪獣８号,保科 宗四郎,保科 宗四郎_isaoget,Normal,Attack,Blue,10000,3,41,0.24,100,0,0.25,1,300,1.27,stop有:1回目 0.43,75,2.67,"stop無:1回目 0.25
+stop無:2回目 0.91
+stop無:3回目 1.05
+stop無:4回目 1.15
+stop有:5回目 1.66",単体に攻撃,5,,zangeki_1,,
+,chara_kai_00501,_isaoget,c_kai_00501_isaoget_Boss_Yellow,怪獣８号,四ノ宮 功,四ノ宮 功_isaoget,Boss,Technical,Yellow,100000,1,25,0.25,1000,0,0.26,1,400,1.97,1.10,75,2.67,1.62,自信の体力を10%回復,4,,dageki_1,,
+,chara_kai_00501,_isaoget,c_kai_00501_isaoget_Normal_Blue,怪獣８号,四ノ宮 功,四ノ宮 功_isaoget,Normal,Technical,Blue,100000,1,25,0.25,1000,0,0.26,1,400,1.97,1.10,75,2.67,1.62,自信の体力を10%回復,4,,dageki_1,,
+,chara_kai_00002,_isaoget,c_kai_00002_isaoget_Normal_Blue,怪獣８号,隠された英雄の姿 怪獣８号,隠された英雄の姿 怪獣８号_isaoget,Normal,Attack,Blue,100000,2,35,0.21,500,0,0.22,1,500,1.50,stop無:1回目 0.54,100,2.40,"stop有:1回目 1.00
+stop無:2回目 1.37
+stop無:3回目 1.54
+stop無:4回目 1.70
+stop無:5回目 1.87
+stop無:6回目 2.04",単体に300%攻撃,5,,dageki_1,,
+,chara_kai_00002,_isaoget,c_kai_00002_isaoget_Boss_Blue,怪獣８号,隠された英雄の姿 怪獣８号,隠された英雄の姿 怪獣８号_isaoget,Boss,Attack,Blue,100000,2,40,0.21,500,0,0.22,1,500,1.50,stop無:1回目 0.54,100,2.40,"stop有:1回目 1.00
+stop無:2回目 1.37
+stop無:3回目 1.54
+stop無:4回目 1.70
+stop無:5回目 1.87
+stop無:6回目 2.04",単体に300%攻撃,5,,dageki_1,,
+,enemy_kai_00401,_isaoget,e_kai_00401_isaoget_Normal_Yellow,怪獣８号,怪獣１０号,怪獣１０号_isaoget,Normal,Attack,Yellow,100000,2,45,0.3,500,0,0.31,1,500,1.30,stop有:1回目 0.55,25,-,-,,-,,dageki_1,,
+,enemy_kai_00401,_isaoget,e_kai_00401_isaoget_Normal_Blue,怪獣８号,怪獣１０号,怪獣１０号_isaoget,Normal,Attack,Blue,100000,3,40,0.3,500,0,0.31,1,500,1.30,stop有:1回目 0.55,25,-,-,,-,,dageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,enemy_kai_00101,_eventchallenge01,e_kai_00101_eventchallenge01_Normal_Colorless,怪獣８号,怪獣 余獣,怪獣 余獣_eventchallenge01,Normal,Attack,Colorless,10000,3,21,0.22,500,0,0.23,1,200,1.23,stop有:1回目 0.56,50,-,-,,-,,dageki_1,,
+,enemy_kai_00101,_eventchallenge01,e_kai_00101_eventchallenge01_Normal_Blue,怪獣８号,怪獣 余獣,怪獣 余獣_eventchallenge01,Normal,Attack,Blue,10000,3,23,0.25,500,0,0.26,1,200,1.23,stop有:1回目 0.56,75,-,-,,-,,dageki_1,,
+,enemy_kai_00101,_eventchallenge01,e_kai_00101_eventchallenge01_Normal_Green,怪獣８号,怪獣 余獣,怪獣 余獣_eventchallenge01,Normal,Attack,Green,10000,3,35,0.24,500,0,0.25,1,200,1.23,stop有:1回目 0.56,75,-,-,,-,,dageki_1,,
+,enemy_kai_00101,_eventchallenge01,e_kai_00101_eventchallenge01_Normal_Red,怪獣８号,怪獣 余獣,怪獣 余獣_eventchallenge01,Normal,Attack,Red,10000,3,20,0.19,500,0,0.2,1,200,1.23,stop有:1回目 0.56,75,-,-,,-,,dageki_1,,
+,enemy_kai_00101,_eventchallenge01,e_kai_00101_eventchallenge01_Normal_Yellow,怪獣８号,怪獣 余獣,怪獣 余獣_eventchallenge01,Normal,Attack,Yellow,10000,3,31,0.2,500,0,0.21,1,200,1.23,stop有:1回目 0.56,75,-,-,,-,,dageki_1,,
+,enemy_kai_00001,_eventchallenge01,e_kai_00001_eventchallenge01_Boss_Blue,怪獣８号,怪獣 本獣,怪獣 本獣_eventchallenge01,Boss,Defense,Blue,10000,2,30,0.18,300,0,0.21,100,300,2.34,stop有:1回目 1.00,150,-,-,,-,,dageki_1,,
+,enemy_kai_00001,_eventchallenge01,e_kai_00001_eventchallenge01_Boss_Red,怪獣８号,怪獣 本獣,怪獣 本獣_eventchallenge01,Boss,Attack,Red,10000,3,30,0.2,500,0,0.23,100,300,2.34,stop有:1回目 1.00,100,-,-,,-,,dageki_1,,
+,enemy_kai_00001,_eventchallenge01,e_kai_00001_eventchallenge01_Normal_Yellow,怪獣８号,怪獣 本獣,怪獣 本獣_eventchallenge01,Normal,Attack,Yellow,10000,3,35,0.23,500,0,0.26,100,300,2.34,stop有:1回目 1.00,100,-,-,,-,,dageki_1,,
+,chara_kai_00401,_eventchallenge01,c_kai_00401_eventchallenge01_Boss_Red,怪獣８号,保科 宗四郎,保科 宗四郎_eventchallenge01,Boss,Attack,Red,10000,3,41,0.24,500,0,0.25,1,500,1.27,stop有:1回目 0.43,75,2.67,"stop無:1回目 0.25
+stop無:2回目 0.91
+stop無:3回目 1.05
+stop無:4回目 1.15
+stop有:5回目 1.66",単体に攻撃+50%の確率で3秒のスタン攻撃,4,,zangeki_1,,
+,chara_kai_00201,_eventchallenge01,c_kai_00201_eventchallenge01_Boss_Red,怪獣８号,第三部隊隊長 亜白 ミナ,第三部隊隊長 亜白 ミナ_eventchallenge01,Boss,Attack,Red,10000,3,31,0.4,500,0,0.6,1,500,1.50,0.75,100,4.41,"stop無:1回目 1.42
+stop無:2回目 1.85
+stop無:3回目 2.29
+stop無:4回目 2.73
+stop有:5回目 3.17",範囲に攻撃+75%の確率で3秒のスタン攻撃,4,,shageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,enemy_kai_00301,_eventchallenge01,e_kai_00301_eventchallenge01_Boss_Green,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_eventchallenge01,Boss,Technical,Green,10000,2,50,0.3,500,0,0.31,1,300,1.00,0.40,20,-,-,,-,,dageki_1,,
+,enemy_kai_00301,_eventchallenge01,e_kai_00301_eventchallenge01_Boss_Yellow,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_eventchallenge01,Boss,Technical,Yellow,10000,2,30,0.34,500,0,0.35,1,300,1.00,0.40,75,-,-,,-,,dageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,enemy_kai_00301,_savage01,e_kai_00301_savage01_Normal_Yellow,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_savage01,Normal,Technical,Yellow,10000,2,30,0.34,500,0,0.35,1,300,1.00,0.40,75,-,-,,-,,dageki_1,,
+,enemy_kai_00201,_savage01,e_kai_00201_savage01_Boss_Yellow,怪獣８号,怪獣９号,怪獣９号_savage01,Boss,Attack,Yellow,100000,3,35,0.27,1000,0,0.47,100,250,2.47,stop有:1回目 1.26,125,-,-,,-,,shageki_1,,
+,enemy_kai_00201,_savage01,e_kai_00201_savage01_Boss_Red,怪獣８号,怪獣９号,怪獣９号_savage01,Boss,Attack,Red,100000,3,35,0.27,1000,0,0.47,100,250,2.47,stop有:1回目 1.26,125,-,-,,-,,shageki_1,,
+,enemy_kai_00001,_savage01,e_kai_00001_savage01_Normal_Red,怪獣８号,怪獣 本獣,怪獣 本獣_savage01,Normal,Attack,Red,10000,3,8,0.2,500,0,0.23,100,300,2.34,stop有:1回目 1.00,100,-,-,,-,,dageki_1,,
+,enemy_kai_00401,_savage01,e_kai_00401_savage01_Normal_Red,怪獣８号,怪獣１０号,怪獣１０号_savage01,Normal,Attack,Red,100000,2,55,0.3,2000,0,0.31,1,500,1.30,stop有:1回目 0.55,25,-,-,,-,,dageki_1,,
+,enemy_kai_00401,_savage01,e_kai_00401_savage01_Boss_Red,怪獣８号,怪獣１０号,怪獣１０号_savage01,Boss,Attack,Red,100000,2,55,0.3,2000,0,0.31,1,500,1.30,stop有:1回目 0.55,25,-,-,,-,,dageki_1,,45%の確率で2秒間スタン攻撃
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,chara_kai_00001,_artwork01,c_kai_00001_artwork01_Boss_Colorless,怪獣８号,日比野 カフカ,日比野 カフカ_artwork01,Boss,Attack,Colorless,10000,3,25,0.2,100,0,0.21,1,400,1.83,1.00,100,2.33,1.33,単体に200%ダメージ,5,,dageki_1,,
+,chara_kai_00301,_artwork01,c_kai_00301_artwork01_Normal_Colorless,怪獣８号,四ノ宮 キコル,四ノ宮 キコル_artwork01,Normal,Defense,Colorless,10000,3,34,0.17,100,0,0.27,100,400,2.04,0.70,100,3.34,1.07,広範囲に125%ダメージ,5,,zangeki_1,,
+,chara_kai_00301,_artwork01,c_kai_00301_artwork01_Boss_Colorless,怪獣８号,四ノ宮 キコル,四ノ宮 キコル_artwork01,Boss,Defense,Colorless,10000,3,34,0.17,100,0,0.27,100,400,2.04,0.70,100,3.34,1.07,広範囲に125%ダメージ,5,,zangeki_1,,
+,chara_kai_00101,_artwork01,c_kai_00101_artwork01_Normal_Colorless,怪獣８号,市川 レノ,市川 レノ_artwork01,Normal,Technical,Colorless,10000,3,30,0.3,100,0,0.31,1,400,1.40,stop無:1回目 0.91,100,3.17,"stop無:1回目 1.05
+stop無:2回目 1.33
+stop無:3回目 1.76",単体に100%3秒間氷結,5,,shageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,chara_spy_00101,_1d1c,c_spy_00101_1d1c_Normal_Colorless,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_1d1c,Normal,Attack,Colorless,20000,2,25,0.35,100,0,0.36,1,1000,1.64,0.83,75,2.50,1.33,単体に200%ダメージ,5,,shageki_1,,
+,chara_spy_00101,_damianget,c_spy_00101_damianget_Boss_Colorless,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_damianget,Boss,Attack,Colorless,25000,1,30,0.35,400,0,0.36,1,500,1.64,0.83,90,2.50,1.33,単体に200%ダメージ,5,,shageki_1,,
+,chara_spy_00101,_damianget,c_spy_00101_damianget_Boss_Red,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_damianget,Boss,Attack,Red,25000,1,30,0.35,400,0,0.36,1,500,1.64,0.83,80,2.50,1.33,単体に200%ダメージ,5,,shageki_1,,
+,chara_spy_00101,_spy1savage,c_spy_00101_spy1savage_Boss_Blue,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_spy1savage,Boss,Attack,Blue,25000,1,30,0.35,400,0,0.36,1,100,1.64,0.83,80,2.50,1.33,単体に200%ダメージ,5,,shageki_1,,
+,chara_spy_00101,_frankyget,c_spy_00101_frankyget_Boss_Yellow,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_frankyget,Boss,Attack,Yellow,25000,1,30,0.35,400,0,0.36,1,500,1.64,0.83,100,2.50,1.33,単体に200%ダメージ,5,,shageki_1,,
+,chara_spy_00201,_damianget,c_spy_00201_damianget_Boss_Red,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_damianget,Boss,Attack,Red,40000,2,40,0.22,500,0,0.28,1,500,1.42,stop無:1回目 0.61,85,2.50,stop有:1回目 0.73,敵複数体に200%ダメージ,5,,zangeki_1,,
+,chara_spy_00201,_spy1savage,c_spy_00201_spy1savage_Normal_Blue,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_spy1savage,Normal,Technical,Blue,100000,2,40,0.21,500,0,0.25,1,200,1.42,stop無:1回目 0.61,90,2.50,stop有:1回目 0.73,敵複数体に200%ダメージ+範囲小ノックバック,5,,zangeki_1,,
+,chara_spy_00201,_frankyget,c_spy_00201_frankyget_Boss_Yellow,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_frankyget,Boss,Attack,Yellow,40000,2,40,0.22,500,0,0.28,1,500,1.42,stop無:1回目 0.61,80,2.50,stop有:1回目 0.73,敵複数体に200%ダメージ,5,,zangeki_1,,
+,chara_spy_00401,_frankyget,c_spy_00401_frankyget_Normal_Colorless,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_frankyget,Normal,Defense,Colorless,40000,3,30,0.17,100,0,0.18,1,500,1.20,0.50,60,2.75,1.34,単体に150%ダメージ,7,,dageki_2,,
+,chara_spy_00401,_frankyget,c_spy_00401_frankyget_Boss_Colorless,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_frankyget,Boss,Defense,Colorless,40000,3,30,0.17,100,0,0.18,1,500,1.20,0.50,60,2.75,1.34,単体に150%ダメージ,7,,dageki_2,,
+,chara_spy_00401,_frankyget,c_spy_00401_frankyget_Boss_Red,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_frankyget,Boss,Technical,Red,40000,3,28,0.18,100,0,0.19,1,500,1.20,0.50,30,2.75,1.34,単体に100%ダメージ+6秒間、小ノックバック攻撃,3,,dageki_2,,
+,chara_spy_00401,_frankyget,c_spy_00401_frankyget_Boss_Yellow,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_frankyget,Boss,Technical,Yellow,40000,3,28,0.18,100,0,0.19,1,500,1.20,0.50,75,2.75,1.34,単体に100%ダメージ+6秒間、20%攻撃DOWN,5,,dageki_2,,
+,chara_spy_00501,_spy1challenge,c_spy_00501_spy1challenge_Boss_Blue,SPY×FAMILY,姉を想う盲愛 ユーリ・ブライア,ユーリ・ブライア_spy1challenge,Boss,Defense,Blue,100000,2,25,0.17,100,0,0.18,1,500,1.13,stop有:1回目 0.33,80,2.33,stop無:1回目 1.17,20秒間、自身が受けるダメージ20%カット,6,,dageki_1,,
+,enemy_spy_00001,_frankyget,e_spy_00001_frankyget_Normal_Colorless,SPY×FAMILY,密輸組織の残党,密輸組織の残党_frankyget,Normal,Attack,Colorless,5000,3,25,0.32,300,0,0.33,1,250,1.00,0.17,50,-,-,,-,,shageki_1,,
+,enemy_spy_00001,_spy1savage,e_spy_00001_spy1savage_Normal_Colorless,SPY×FAMILY,密輸組織の残党,密輸組織の残党_spy1savage,Normal,Attack,Colorless,5000,3,70,0.32,300,0,0.33,1,250,1.00,0.17,50,-,-,,-,,shageki_1,,
+,enemy_spy_00001,_damianget,e_spy_00001_damianget_Normal_Red,SPY×FAMILY,密輸組織の残党,密輸組織の残党_damianget,Normal,Attack,Red,5000,3,25,0.32,300,0,0.33,1,250,1.00,0.17,50,-,-,,-,,shageki_1,,
+,enemy_spy_00001,_spy1challenge,e_spy_00001_spy1challenge_Normal_Blue,SPY×FAMILY,密輸組織の残党,密輸組織の残党_spy1challenge,Normal,Attack,Blue,5000,3,25,0.32,300,0,0.33,1,250,1.00,0.17,50,-,-,,-,,shageki_1,,
+,enemy_spy_00001,_spy1challenge,e_spy_00001_spy1challenge_Normal_Green,SPY×FAMILY,密輸組織の残党,密輸組織の残党_spy1challenge,Normal,Attack,Green,5000,3,25,0.32,300,0,0.33,1,250,1.00,0.17,50,-,-,,-,,shageki_1,,
+,enemy_spy_00001,_spy1challenge,e_spy_00001_spy1challenge_Normal_Yellow,SPY×FAMILY,密輸組織の残党,密輸組織の残党_spy1challenge,Normal,Attack,Yellow,5000,3,25,0.32,300,0,0.33,1,250,1.00,0.17,50,-,-,,-,,shageki_1,,
+,enemy_spy_00101,_damianget,e_spy_00101_damianget_Normal_Colorless,SPY×FAMILY,グエン,グエン_damianget,Normal,Attack,Colorless,2500,3,30,0.18,200,0,0.19,1,250,1.20,0.50,75,-,-,,-,,dageki_1,,
+,enemy_spy_00101,_spy1challenge,e_spy_00101_spy1challenge_Normal_Red,SPY×FAMILY,グエン,グエン_spy1challenge,Normal,Attack,Red,5000,2,30,0.18,200,0,0.19,1,250,1.20,0.50,75,-,-,,-,,dageki_1,,
+,enemy_spy_00101,_spy1challenge,e_spy_00101_spy1challenge_Normal_Blue,SPY×FAMILY,グエン,グエン_spy1challenge,Normal,Attack,Blue,5000,2,30,0.18,200,0,0.19,1,250,1.20,0.50,30,-,-,,-,,dageki_1,,
+,enemy_spy_00101,_spy1savage,e_spy_00101_spy1savage_Normal_Blue,SPY×FAMILY,グエン,グエン_spy1savage,Normal,Technical,Blue,10000,3,32,0.19,500,0,0.2,1,100,1.20,0.50,50,-,-,,-,,dageki_1,小ノックバック,
+,enemy_spy_00101,_spy1challenge,e_spy_00101_spy1challenge_Normal_Green,SPY×FAMILY,グエン,グエン_spy1challenge,Normal,Technical,Green,5000,2,30,0.18,200,0,0.19,1,250,1.20,0.50,100,-,-,,-,,dageki_1,小ノックバック,
+,enemy_spy_00101,_frankyget,e_spy_00101_frankyget_Normal_Yellow,SPY×FAMILY,グエン,グエン_frankyget,Normal,Attack,Yellow,2500,3,30,0.18,200,0,0.19,1,250,1.20,0.50,75,-,-,,-,,dageki_1,,
+,enemy_glo_00001,_spy1general01,e_glo_00001_spy1general01_Normal_Colorless,GLOW,ファントム,ファントム_spy1general01,Normal,Attack,Colorless,2500,3,30,0.18,200,0,0.19,1,250,1.00,0.50,75,,,,-,,dageki_1,,グエン無属性の代替品
+,enemy_glo_00001,_spy1general02,e_glo_00001_spy1general02_Normal_Colorless,GLOW,ファントム,ファントム_spy1general02,Normal,Attack,Colorless,5000,3,25,0.25,300,0,0.26,1,250,1.00,0.50,50,,,,-,,dageki_1,,残党無属性の代替品
+,enemy_glo_00001,_spy1general03,e_glo_00001_spy1general03_Normal_Red,GLOW,ファントム,ファントム_spy1general03,Normal,Attack,Red,5000,3,25,0.25,300,0,0.26,1,250,1.00,0.50,50,,,,-,,dageki_1,,残党赤属性の代替品
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,chara_dan_00001,_1d1c,c_dan_00001_1d1c_Normal_Colorless,ダンダダン,オカルン,オカルン_1d1c,Normal,Defense,Colorless,30000,1,20,0.15,100,0,0.16,1,1000,1.43,0.53,80,4.00,1.66,20秒間、自身が受けるダメージ10%カット,4,,dageki_1,,
+,chara_dan_00001,_bbaget,c_dan_00001_bbaget_Boss_Colorless,ダンダダン,オカルン,オカルン_bbaget,Boss,Defense,Colorless,20000,2,30,0.2,100,0,0.21,1,250,1.43,0.53,90,4.00,1.66,20秒間、自身が受けるダメージ10%カット,4,,dageki_1,,
+,chara_dan_00001,_airaget,c_dan_00001_airaget_Normal_Red,ダンダダン,オカルン,オカルン_airaget,Normal,Defense,Red,20000,2,30,0.2,100,0,0.21,1,250,1.43,0.53,100,4.00,1.66,20秒間、自身が受けるダメージ10%カット,4,,dageki_1,,
+,chara_dan_00001,_bbaget,c_dan_00001_bbaget_Normal_Blue,ダンダダン,オカルン,オカルン_bbaget,Normal,Defense,Blue,20000,2,30,0.2,100,0,0.21,1,250,1.43,0.53,90,4.00,1.66,20秒間、自身が受けるダメージ10%カット,4,,dageki_1,,
+,chara_dan_00001,_bbaget,c_dan_00001_bbaget_Boss_Blue,ダンダダン,オカルン,オカルン_bbaget,Boss,Defense,Blue,20000,2,30,0.2,100,0,0.21,1,250,1.43,0.53,90,4.00,1.66,20秒間、自身が受けるダメージ10%カット,4,,dageki_1,,
+,chara_dan_00001,_savage,c_dan_00001_savage_Normal_Yellow,ダンダダン,オカルン,オカルン_savage,Normal,Defense,Yellow,20000,2,40,0.2,100,0,0.21,1,250,1.43,0.53,90,4.00,1.66,20秒間、自身が受けるダメージ10%カット,4,,dageki_1,,
+,chara_dan_00002,_bbaget,c_dan_00002_bbaget_Boss_Blue,ダンダダン,ターボババアの霊力 オカルン,ターボババアの霊力 オカルン_bbaget,Boss,Attack,Blue,50000,3,55,0.22,300,0,0.23,1,250,1.84,"stop有:1回目 0.66
+stop有:2回目 1.27",80,5.21,"stop有:1回目：1.78
+stop有:2回目：3.34
+stop無:3回目 3.76
+stop無:4回目 3.92
+stop無:5回目 4.09
+stop無:6回目 4.26
+stop無:7回目 4.42",複数体に合計300%の連続攻撃,7,,dageki_1,,
+,chara_dan_00002,_dan1challenge,c_dan_00002_dan1challenge_Boss_Yellow,ダンダダン,ターボババアの霊力 オカルン,ターボババアの霊力 オカルン_dan1challenge,Boss,Attack,Yellow,50000,3,55,0.22,300,0,0.25,100,250,1.84,"stop有:1回目 0.66
+stop有:2回目 1.27",80,5.21,"stop有:1回目：1.78
+stop有:2回目：3.34
+stop無:3回目 3.76
+stop無:4回目 3.92
+stop無:5回目 4.09
+stop無:6回目 4.26
+stop無:7回目 4.42",複数体に合計300%の連続攻撃,7,,dageki_1,,
+,chara_dan_00101,_airaget,c_dan_00101_airaget_Normal_Red,ダンダダン,モモ,モモ_airaget,Normal,Attack,Red,20000,2,34,0.3,200,0,0.35,100,250,1.00,0.50,100,2.00,1.00,複数体に200%の攻撃,5,,dageki_1,,
+,chara_dan_00101,_airaget,c_dan_00101_airaget_Boss_Red,ダンダダン,モモ,モモ_airaget,Boss,Attack,Red,20000,2,34,0.3,200,0,0.35,100,250,1.00,0.50,100,2.00,1.00,複数体に200%の攻撃,5,,dageki_1,,
+,chara_dan_00101,_bbaget,c_dan_00101_bbaget_Normal_Blue,ダンダダン,モモ,モモ_bbaget,Normal,Attack,Blue,20000,2,34,0.3,200,0,0.35,100,250,1.00,0.50,100,2.00,1.00,複数体に200%の攻撃,5,,dageki_1,,
+,chara_dan_00101,_bbaget,c_dan_00101_bbaget_Boss_Blue,ダンダダン,モモ,モモ_bbaget,Boss,Attack,Blue,20000,2,34,0.3,200,0,0.35,100,250,1.00,0.50,100,2.00,1.00,複数体に200%の攻撃,5,,dageki_1,,
+,chara_dan_00101,_dan1challenge,c_dan_00101_dan1challenge_Boss_Green,ダンダダン,モモ,モモ_dan1challenge,Boss,Attack,Green,20000,2,34,0.3,200,0,0.35,100,250,1.00,0.50,100,2.00,1.00,複数体に200%の攻撃,5,,dageki_1,,
+,chara_dan_00201,_airaget,c_dan_00201_airaget_Boss_Colorless,ダンダダン,アイラ,アイラ_airaget,Boss,Attack,Colorless,20000,3,25,0.27,200,0,0.28,1,250,1.5,stop有:1回目 0.43,75,2.50,stop無:1回目：1.33,次回(1回)自身の攻撃力100%Up,4,,dageki_2,,
+,chara_dan_00201,_savage,c_dan_00201_savage_Normal_Red,ダンダダン,アイラ,アイラ_savage,Normal,Attack,Red,20000,3,25,0.27,200,0,0.28,1,250,1.5,stop有:1回目 0.43,75,2.50,stop無:1回目：1.33,次回(1回)自身の攻撃力100%Up,4,,dageki_2,,
+,chara_dan_00201,_airaget,c_dan_00201_airaget_Boss_Red,ダンダダン,アイラ,アイラ_airaget,Boss,Attack,Red,20000,3,25,0.27,200,0,0.28,1,250,1.5,stop有:1回目 0.43,75,2.50,stop無:1回目：1.33,次回(1回)自身の攻撃力100%Up,4,,dageki_2,,
+,chara_dan_00202,_dan1challenge,c_dan_00202_dan1challenge_Boss_Red,ダンダダン,アクさらの愛 アイラ,アクさらの愛 アイラ_dan1challenge,Boss,Attack,Red,50000,2,33,0.25,500,0,0.26,1,300,1.37,0.45,75,2.44,"stop無:1回目:0.30
+stop無:2回目:0.65
+stop有:3回目:1.05",単体に200%の攻撃,4,,dageki_1,,
+,chara_dan_00301,_bbaget_atk,c_dan_00301_bbaget_atk_Boss_Blue,ダンダダン,招き猫 ターボババア,招き猫 ターボババア_bbaget_atk,Boss,Attack,Blue,50000,3,30,0.25,300,0,0.26,1,200,1.60,"stop無:1回目 0.38
+stop無:2回目 0.83
+stop無:3回目 1.16",75,1.83,stop無:1回目：0.30,単体に200%の攻撃,4,,dageki_1,,
+,chara_dan_00301,_bbaget_tec,c_dan_00301_bbaget_tec_Boss_Blue,ダンダダン,招き猫 ターボババア,招き猫 ターボババア_bbaget_tec,Boss,Technical,Blue,50000,3,30,0.25,300,0,0.26,1,200,1.60,"stop無:1回目 0.38
+stop無:2回目 0.83
+stop無:3回目 1.16",90,1.83,stop無:1回目：0.30,単体に200%の攻撃+40%の確率で単体に5秒間の氷結,4,,dageki_1,,
+,chara_dan_00301,_dan1challenge,c_dan_00301_dan1challenge_Normal_Yellow,ダンダダン,招き猫 ターボババア,招き猫 ターボババア_dan1challenge,Normal,Defense,Yellow,50000,3,30,0.21,300,0,0.22,1,200,1.60,"stop無:1回目 0.38
+stop無:2回目 0.83
+stop無:3回目 1.16",80,1.83,stop無:1回目：0.30,単体に200%の攻撃+20秒間、自身が受けるダメージ10%カット,5,,dageki_1,,
+,enemy_dan_00001,_dan1challenge,e_dan_00001_dan1challenge_Normal_Blue,ダンダダン,セルポ星人,セルポ星人_dan1challenge,Normal,Attack,Blue,10000,3,28,0.23,100,0,0.24,1,100,1.16,0.50,65,-,-,,-,,dageki_1,,
+,enemy_dan_00001,_dan1challenge,e_dan_00001_dan1challenge_Normal_Green,ダンダダン,セルポ星人,セルポ星人_dan1challenge,Normal,Attack,Green,10000,3,40,0.23,100,0,0.24,1,100,1.16,0.50,65,-,-,,-,,dageki_1,,
+,enemy_dan_00201,_dan1challenge,e_dan_00201_dan1challenge_Boss_Blue,ダンダダン,ターボババア,ターボババア_dan1challenge,Boss,Attack,Blue,10000,2,55,0.25,100,0,0.26,1,200,1.50,0.40,40,-,-,,-,,dageki_1,,
+,enemy_dan_00301,_airaget,e_dan_00301_airaget_Boss_Colorless,ダンダダン,アクロバティックさらさら,アクロバティックさらさら_airaget,Boss,Attack,Colorless,40000,2,35,0.24,300,0,0.3,100,200,1.20,0.27,50,-,-,,-,,dageki_1,,
+,enemy_dan_00301,_airaget_atk,e_dan_00301_airaget_atk_Boss_Blue,ダンダダン,アクロバティックさらさら,アクロバティックさらさら_airaget_atk,Boss,Attack,Blue,40000,2,35,0.24,300,0,0.3,100,200,1.20,0.27,50,-,-,,-,,dageki_1,,
+,enemy_dan_00301,_airaget_tec,e_dan_00301_airaget_tec_Boss_Blue,ダンダダン,アクロバティックさらさら,アクロバティックさらさら_airaget_tec,Boss,Technical,Blue,40000,2,35,0.24,300,0,0.3,100,200,1.20,0.27,75,-,-,,-,,dageki_1,小ノックバック,
+,enemy_glo_00001,_savage,e_glo_00001_savage_Normal_Red,GLOW,ファントム,ファントム_savage,Normal,Attack,Red,10000,2,45,0.22,500,0,0.23,1,50,1.00,0.50,50,,,,-,,dageki_1,,
+,enemy_glo_00001,_savage,e_glo_00001_savage_Normal_Yellow,GLOW,ファントム,ファントム_savage,Normal,Attack,Yellow,10000,2,30,0.22,500,0,0.23,1,50,1.00,0.50,50,,,,-,,dageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,chara_mag_00001,_challange,c_mag_00001_challange_Boss_Yellow,株式会社マジルミエ,新人魔法少女 桜木 カナ,新人魔法少女 桜木 カナ_challange,Boss,Attack,Yellow,100000,2,35,0.24,500,0,0.3,1,300,1.77,stop有:1回目 0.92,80,2.33,"stop無:1回目 0.75
+stop無:2回目 0.92
+stop無:3回目 1.08
+stop無:4回目 1.25
+stop無:5回目 1.42
+stop無:6回目 1.58",敵複数に合計400%の攻撃(6回連続攻撃),4,,shageki_1,,
+,chara_mag_00201,_challange,c_mag_00201_challange_Boss_Green,株式会社マジルミエ,絶対効率の体現者 土刃 メイ,土刃 メイ_challange,Boss,Attack,Green,100000,3,40,0.25,500,0,0.3,1,100,1.17,stop有:1回目 0.42,50,2.71,"stop有:1回目 0.38
+stop無:2回目 1.55
+stop無:3回目 1.8
+stop無:4回目 2.1",敵複数体に合計250%攻撃(4回攻撃)+10秒間、自身の攻撃30%up,5,,shageki_1,,
+,chara_mag_00301,_challange,c_mag_00301_challange_Boss_Red,株式会社マジルミエ,葵 リリー,葵 リリー_challange,Boss,Defense,Red,50000,2,35,0.22,400,0,0.23,1,300,1.6,stop有:0.6,50,2.5,stop無 1,20秒間、自身が受けるダメージ30%カット,6,,dageki_1,,
+,chara_mag_00301,_siget,c_mag_00301_siget_Boss_Yellow,株式会社マジルミエ,葵 リリー,葵 リリー_siget,Boss,Defense,Yellow,50000,2,40,0.3,400,0,0.31,1,300,1.6,stop有:0.6,60,2.5,stop無 1,20秒間、自身が受けるダメージ20%カット,6,,dageki_1,,
+,chara_mag_00401,_aknget,c_mag_00401_aknget_Boss_Green,株式会社マジルミエ,槇野 あかね,槇野 あかね_aknget,Boss,Technical,Green,50000,2,45,0.24,400,0,0.25,1,300,1.31,stop有 :1回目 0.6,50,1.87,stop有 :1回目 0.62,単体に200%の攻撃+小ノックバック攻撃,5,,zangeki_1,,
+,chara_mag_00401,_challange,c_mag_00401_challange_Boss_Blue,株式会社マジルミエ,槇野 あかね,槇野 あかね_challange,Boss,Attack,Blue,100000,3,37,0.25,500,0,0.26,1,200,1.31,stop有 :1回目 0.6,100,1.87,stop有 :1回目 0.62,単体に300%の攻撃+小ノックバック攻撃,5,,zangeki_1,,
+,enemy_mag_00001,_challange,e_mag_00001_challange_Normal_Yellow,株式会社マジルミエ,冷却系怪異,冷却系の怪異_challange,Normal,Technical,Yellow,100000,2,25,0.2,300,0,0.25,1,200,1.50,0.80,200,-,-,,-,,shageki_1,80%の確率で、3秒間氷結状態を付与,
+,enemy_mag_00101,_challange,e_mag_00101_challange_Normal_Blue,株式会社マジルミエ,つらら,つらら_challange,Normal,Technical,Blue,1000,1,80,0.11,400,0,0.25,1,0,0.37,stop有:1回目 0.20,50,-,-,,-,,zangeki_1,100%の確率で、2秒間氷結状態を付与+自身に即死ダメージ,
+,enemy_mag_00201,_siget,e_mag_00201_siget_Boss_Colorless,株式会社マジルミエ,建造物寄生型の怪異 (大),建造物寄生型の怪異（大）_siget,Boss,Defense,Colorless,30000,2,25,0.18,100,0,0.3,100,300,1.50,0.74,90,-,-,,-,,dageki_1,,
+,enemy_mag_00201,_challange,e_mag_00201_challange_Normal_Green,株式会社マジルミエ,建造物寄生型の怪異 (大),建造物寄生型の怪異（大）_challange,Normal,Defense,Green,100000,2,30,0.17,500,0,0.27,100,100,1.50,0.74,100,-,-,,-,ノックバック無効,dageki_1,,
+,enemy_mag_00201,_aknget,e_mag_00201_aknget_Boss_Green,株式会社マジルミエ,建造物寄生型の怪異 (大),建造物寄生型の怪異（大）_aknget,Boss,Defense,Green,30000,2,25,0.18,100,0,0.3,100,300,1.50,0.74,100,-,-,,-,,dageki_1,40%の確率で2秒間スタン,
+,enemy_mag_00201,_savage,e_mag_00201_savage_Boss_Yellow,株式会社マジルミエ,建造物寄生型の怪異 (大),建造物寄生型の怪異（大）_savage,Boss,Defense,Yellow,300000,3,25,0.17,500,0,0.22,100,100,1.50,0.74,80,-,-,,-,ノックバック無効,dageki_1,,
+,enemy_mag_00301,_1d1c,e_mag_00301_1d1c_Normal_Colorless,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_1d1c,Normal,Attack,Colorless,10000,3,30,0.2,300,0,0.21,1,1000,1.50,0.74,100,-,-,,-,,dageki_2,,
+,enemy_mag_00301,_siget,e_mag_00301_siget_Normal_Colorless,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_siget,Normal,Attack,Colorless,10000,3,30,0.2,300,0,0.21,1,100,1.50,0.74,75,-,-,,-,,dageki_2,,
+,enemy_mag_00301,_challange,e_mag_00301_challange_Normal_Red,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_challange,Normal,Attack,Red,10000,3,30,0.2,300,0,0.21,1,100,1.50,0.74,75,-,-,,-,,dageki_2,,
+,enemy_mag_00301,_aknget,e_mag_00301_aknget_Normal_Green,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_aknget,Normal,Attack,Green,10000,3,30,0.2,300,0,0.21,1,100,1.50,0.74,50,-,-,,-,,dageki_2,,
+,enemy_mag_00301,_siget,e_mag_00301_siget_Normal_Yellow,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_siget,Normal,Attack,Yellow,10000,3,30,0.2,300,0,0.21,1,100,1.50,0.74,50,-,-,,-,,dageki_2,,
+,enemy_mag_00401,_siget,e_mag_00401_siget_Boss_Yellow,株式会社マジルミエ,工事現場の怪異,工事現場の怪異_siget,Boss,Defense,Yellow,60000,3,30,0.17,400,0,0.19,1,400,1.67,stop有:0.84,25,-,-,,-,,,,
+,enemy_mag_00401,_savage,e_mag_00401_savage_Boss_Green,株式会社マジルミエ,工事現場の怪異,工事現場の怪異_savage,Boss,Defense,Green,100000,2,38,0.17,1000,0,0.2,1,100,1.67,stop有:0.84,20,-,-,,-,,,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,chara_yuw_00001,_1d1c,c_yuw_00001_1d1c_Normal_Colorless,2.5次元の誘惑,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサ_1d1c,Normal,Attack,Colorless,10000,3,30,0.24,300,0,0.34,1,1000,1.54,0.50,75,3.67,2.44,複数体に200%の攻撃,4,,dageki_2,,
+,chara_yuw_00001,_challenge,c_yuw_00001_challenge_Normal_Red,2.5次元の誘惑,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサ_challenge,Normal,Attack,Red,50000,3,34,0.24,500,0,0.34,1,100,1.54,0.50,75,3.67,2.44,複数体に200%の攻撃,5,,dageki_2,,
+,chara_yuw_00001,_okumuraget,c_yuw_00001_okumuraget_Normal_Blue,2.5次元の誘惑,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサ_okumuraget,Normal,Attack,Blue,50000,3,34,0.24,500,0,0.34,1,100,1.54,0.50,75,3.67,2.44,複数体に200%の攻撃,5,,dageki_2,,
+,chara_yuw_00001,_okumuraget,c_yuw_00001_okumuraget_Boss_Blue,2.5次元の誘惑,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサ_okumuraget,Boss,Attack,Blue,50000,3,34,0.24,500,0,0.34,1,100,1.54,0.50,75,3.67,2.44,複数体に200%の攻撃,5,,dageki_2,,
+,chara_yuw_00001,_753get,c_yuw_00001_753get_Normal_Green,2.5次元の誘惑,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサ_753get,Normal,Attack,Green,50000,3,34,0.24,500,0,0.34,1,100,1.54,0.50,75,3.67,2.44,複数体に200%の攻撃,5,,dageki_2,,
+,chara_yuw_00001,_753get,c_yuw_00001_753get_Boss_Green,2.5次元の誘惑,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサ_753get,Boss,Attack,Green,50000,3,34,0.24,500,0,0.34,1,100,1.54,0.50,75,3.67,2.44,複数体に200%の攻撃,5,,dageki_2,,
+,chara_yuw_00001,_challenge,c_yuw_00001_challenge_Normal_Green,2.5次元の誘惑,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサ_challenge,Normal,Attack,Green,50000,3,34,0.24,500,0,0.34,1,100,1.54,0.50,75,3.67,2.44,複数体に200%の攻撃,5,,dageki_2,,
+,chara_yuw_00001,_challenge,c_yuw_00001_challenge_Boss_Green,2.5次元の誘惑,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサ_challenge,Boss,Technical,Green,50000,3,34,0.24,500,0,0.34,1,100,1.54,0.50,75,3.67,2.44,複数体に200%の攻撃,3,,dageki_2,,
+,chara_yuw_00101,_challenge,c_yuw_00101_challenge_Normal_Red,2.5次元の誘惑,コスプレに託す乙女心 橘 美花莉,コスプレに託す乙女心 橘 美花莉_challenge,Normal,Attack,Red,50000,2,29,0.25,300,0,0.35,1,100,1.50,"stop無:1回目 0.45
+stop無:2回目 0.55
+stop無:3回目 0.67
+stop無:4回目 0.77
+stop無:5回目 0.90
+stop無:6回目 0.95",80,3.50,stop無: 1回目 3.20,敵複数体に200%攻撃,5,,dageki_1,,
+,chara_yuw_00101,_challengekb,c_yuw_00101_challengekb_Boss_Red,2.5次元の誘惑,コスプレに託す乙女心 橘 美花莉,コスプレに託す乙女心 橘 美花莉_challengekb,Boss,Technical,Red,50000,2,29,0.25,300,0,0.35,1,100,1.50,"stop無:1回目 0.45
+stop無:2回目 0.55
+stop無:3回目 0.67
+stop無:4回目 0.77
+stop無:5回目 0.90
+stop無:6回目 0.95",80,3.50,stop無: 1回目 3.20,"敵複数体に200%攻撃+
+中ノックバック",3,,dageki_1,,
+,chara_yuw_00101,_okumuraget,c_yuw_00101_okumuraget_Boss_Blue,2.5次元の誘惑,コスプレに託す乙女心 橘 美花莉,コスプレに託す乙女心 橘 美花莉_okumuraget,Boss,Technical,Blue,50000,2,29,0.25,300,0,0.35,1,100,1.50,"stop無:1回目 0.45
+stop無:2回目 0.55
+stop無:3回目 0.67
+stop無:4回目 0.77
+stop無:5回目 0.90
+stop無:6回目 0.95",80,3.50,stop無: 1回目 3.20,"敵複数体に250%攻撃+
+10秒間、20%攻撃DOWN",5,,dageki_1,,
+,chara_yuw_00101,_753get,c_yuw_00101_753get_Normal_Green,2.5次元の誘惑,コスプレに託す乙女心 橘 美花莉,コスプレに託す乙女心 橘 美花莉_753get,Normal,Technical,Green,50000,2,29,0.25,300,0,0.35,1,100,1.50,"stop無:1回目 0.45
+stop無:2回目 0.55
+stop無:3回目 0.67
+stop無:4回目 0.77
+stop無:5回目 0.90
+stop無:6回目 0.95",80,3.50,stop無: 1回目 3.20,"敵複数体に250%攻撃+
+10秒間、20%攻撃DOWN",5,,dageki_1,,
+,chara_yuw_00101,_challenge,c_yuw_00101_challenge_Normal_Green,2.5次元の誘惑,コスプレに託す乙女心 橘 美花莉,コスプレに託す乙女心 橘 美花莉_challenge,Normal,Attack,Green,50000,2,29,0.25,300,0,0.35,1,100,1.50,"stop無:1回目 0.45
+stop無:2回目 0.55
+stop無:3回目 0.67
+stop無:4回目 0.77
+stop無:5回目 0.90
+stop無:6回目 0.95",80,3.50,stop無: 1回目 3.20,敵複数体に200%攻撃,5,,dageki_1,,
+,chara_yuw_00201,_753get,c_yuw_00201_753get_Normal_Green,2.5次元の誘惑,羽生 まゆり,羽生 まゆり_753get,Normal,Technical,Green,50000,3,27,0.26,300,0,0.27,1,100,1.06,0.34,75,4.67,3.50,範囲に200%攻撃+単体に小ノックバック,3,,dageki_2,,
+,chara_yuw_00201,_savage,c_yuw_00201_savage_Boss_Green,2.5次元の誘惑,羽生 まゆり,羽生 まゆり_savage,Boss,Technical,Green,100000,3,27,0.26,300,0,0.35,1,100,1.06,0.34,75,4.67,3.50,範囲に400%攻撃+単体に中ノックバック,4,,dageki_2,,
+,chara_yuw_00301,_challengeburn,c_yuw_00301_challengeburn_Boss_Red,2.5次元の誘惑,勇気を纏うコスプレ 乃愛,勇気を纏うコスプレ 乃愛_challengeburn,Boss,Technical,Red,50000,3,29,0.26,300,0,0.27,1,500,1.57,"stop無:1回目 0.50
+stop無:2回目 1.00",50,3.50,stop無: 1回目 3.20,20秒間、自身を30%攻撃UP,4,,dageki_2,1回目の攻撃がヒットした場合、敵を6秒間最大3000ダメージの火傷状態にする,
+,chara_yuw_00301,_okumuraget,c_yuw_00301_okumuraget_Normal_Colorless,2.5次元の誘惑,勇気を纏うコスプレ 乃愛,勇気を纏うコスプレ 乃愛_okumuraget,Normal,Technical,Colorless,50000,3,29,0.23,300,0,0.24,1,500,1.57,"stop無:1回目 0.50
+stop無:2回目 1.00",90,3.50,stop無: 1回目 3.20,20秒間、30%攻撃UP,4,,dageki_2,,
+,chara_yuw_00301,_okumuraget,c_yuw_00301_okumuraget_Boss_Blue,2.5次元の誘惑,勇気を纏うコスプレ 乃愛,勇気を纏うコスプレ 乃愛_okumuraget,Boss,Technical,Blue,50000,3,29,0.23,300,0,0.24,1,500,1.57,"stop無:1回目 0.50
+stop無:2回目 1.00",90,3.50,stop無: 1回目 3.20,20秒間、30%攻撃UP,4,,dageki_2,,
+,chara_yuw_00301,_challenge,c_yuw_00301_challenge_Normal_Green,2.5次元の誘惑,勇気を纏うコスプレ 乃愛,勇気を纏うコスプレ 乃愛_challenge,Normal,Technical,Green,50000,3,29,0.26,300,0,0.24,1,500,1.57,"stop無:1回目 0.50
+stop無:2回目 1.00",50,3.50,stop無: 1回目 3.20,20秒間、敵全体を30%攻撃UP,4,,dageki_2,,
+,chara_yuw_00401,_okumuraget,c_yuw_00401_okumuraget_Normal_Blue,2.5次元の誘惑,伝えたいウチの想い 喜咲 アリア,伝えたいウチの想い　喜咲 アリア_okumuraget,Normal,Defense,Blue,50000,2,30,0.17,300,0,0.18,1,100,1.17,0.34,30,2.67,1.64,単体に300%ダメージ,6,,dageki_2,,
+,chara_yuw_00401,_okumuraget,c_yuw_00401_okumuraget_Boss_Blue,2.5次元の誘惑,伝えたいウチの想い 喜咲 アリア,伝えたいウチの想い　喜咲 アリア_okumuraget,Boss,Defense,Blue,50000,2,30,0.17,300,0,0.18,1,100,1.17,0.34,30,2.67,1.64,単体に300%ダメージ,6,,dageki_2,,
+,chara_yuw_00401,_challenge,c_yuw_00401_challenge_Normal_Green,2.5次元の誘惑,伝えたいウチの想い 喜咲 アリア,伝えたいウチの想い　喜咲 アリア_challenge,Normal,Defense,Green,50000,2,30,0.17,300,0,0.18,1,100,1.17,0.34,30,2.67,1.64,単体に200%ダメージ,6,,dageki_2,,
+,chara_yuw_00401,_challenge,c_yuw_00401_challenge_Boss_Green,2.5次元の誘惑,伝えたいウチの想い 喜咲 アリア,伝えたいウチの想い　喜咲 アリア_challenge,Boss,Defense,Green,50000,2,30,0.17,300,0,0.18,1,100,1.17,0.34,30,2.67,1.64,単体に300%ダメージ,6,,dageki_2,,
+,chara_yuw_00501,_savage,c_yuw_00501_savage_Boss_Red,2.5次元の誘惑,753♡,753♡_savage,Boss,Attack,Red,100000,2,28,0.3,500,0,0.31,1,50,1.24,stop有:1回目 0.43,50,2.17,stop無: 1回目 1.50,次回(1回)自身の攻撃力500%Up,4,,dageki_2,,
+,chara_yuw_00501,_753get,c_yuw_00501_753get_Boss_Green,2.5次元の誘惑,753♡,753♡_753get,Boss,Attack,Green,50000,3,26,0.3,300,0,0.31,1,100,1.24,stop有:1回目 0.43,60,2.17,stop無: 1回目 1.50,次回(1回)自身の攻撃力500%Up,4,,dageki_2,,
+,chara_yuw_00601,_1d1c,c_yuw_00601_1d1c_Normal_Colorless,2.5次元の誘惑,奥村 正宗,奥村 正宗_1d1c,Normal,Defense,Colorless,10000,3,25,0.19,300,0,0.25,1,1000,1.20,0.67,60,1.84,stop無: 1回目 0.68,20秒間、自身が受けるダメージ30%カット,4,,dageki_1,,
+,chara_yuw_00601,_753get,c_yuw_00601_753get_Boss_Colorless,2.5次元の誘惑,奥村 正宗,奥村 正宗_753get,Boss,Defense,Colorless,50000,2,25,0.19,300,0,0.25,1,500,1.20,0.67,60,1.84,stop無: 1回目 0.68,20秒間、自身が受けるダメージ30%カット,4,,dageki_1,,
+,chara_yuw_00601,_okumuraget,c_yuw_00601_okumuraget_Normal_Blue,2.5次元の誘惑,奥村 正宗,奥村 正宗_okumuraget,Normal,Defense,Blue,50000,2,25,0.19,300,0,0.25,1,500,1.20,0.67,60,1.84,stop無: 1回目 0.68,20秒間、自身が受けるダメージ30%カット,4,,dageki_1,,
+,chara_yuw_00601,_okumuraget,c_yuw_00601_okumuraget_Boss_Blue,2.5次元の誘惑,奥村 正宗,奥村 正宗_okumuraget,Boss,Defense,Blue,50000,2,25,0.19,300,0,0.25,1,500,1.20,0.67,60,1.84,stop無: 1回目 0.68,20秒間、自身が受けるダメージ30%カット,4,,dageki_1,,
+,enemy_glo_00001,_savagetank,e_glo_00001_savagetank_Normal_Colorless,GLOW,ファントム,ファントム_savagetank,Normal,Defense,Colorless,100000,2,30,0.15,200,0,0.16,1,30,1.00,0.50,60,,,,-,,dageki_1,,
+,enemy_glo_00001,_savage,e_glo_00001_savage_Normal_Green,GLOW,ファントム,ファントム_savage,Normal,Defense,Green,100000,2,32,0.17,200,0,0.18,1,30,1.00,0.50,30,,,,-,,dageki_1,,
+,enemy_glo_00001,_savageyuwburn,e_glo_00001_savageyuwburn_Normal_Red,GLOW,ファントム,ファントム_savageyuwburn,Normal,Technical,Red,80000,3,35,0.2,500,0,0.21,1,25,1.00,0.50,75,,,,-,,dageki_1,攻撃がヒットした場合、敵を6秒間最大1500ダメージの火傷状態にする,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,enemy_sur_00101,_1d1c,e_sur_00101_1d1c_Normal_Colorless,魔都精兵のスレイブ,醜鬼,醜鬼_1d1c,Normal,Attack,Colorless,10000,3,25,0.19,300,0,0.25,1,1000,0.80,0.30,60,-,-,,-,,dageki_1,,
+,chara_sur_00001,_surget,c_sur_00001_surget_Normal_Blue,魔都精兵のスレイブ,和倉 優希,和倉 優希_surget,Normal,Support,Blue,50000,3,32,0.24,300,0,0.3,1,100,1.17,stop有:1回目 0.30,60,2.80,stop無:1回目 2.00,,-,,dageki_2,,
+,enemy_sur_00101,_surget,e_sur_00101_surget_Normal_Blue,魔都精兵のスレイブ,醜鬼,醜鬼_surget,Normal,Attack,Blue,10000,3,25,0.19,300,0,0.25,1,100,0.80,0.30,60,-,-,,-,,dageki_1,,
+,chara_sur_00101,_surget,c_sur_00101_surget_Boss_Blue,魔都精兵のスレイブ,誇り高き魔都の剣姫 羽前 京香,誇り高き魔都の剣姫 羽前京香_surget,Boss,Attack,Blue,50000,3,45,0.25,500,0,0.27,1,500,1.40,stop無:1回目 0.33,60,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",,5,,zangeki_1,,
+,chara_sur_00101,_surget,c_sur_00101_surget_Normal_Blue,魔都精兵のスレイブ,誇り高き魔都の剣姫 羽前 京香,誇り高き魔都の剣姫 羽前京香_surget,Normal,Attack,Blue,50000,3,45,0.25,500,0,0.27,1,100,1.40,stop無:1回目 0.33,60,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",,5,,zangeki_1,,
+,chara_sur_00801,_surget,c_sur_00801_surget_Boss_Blue,魔都精兵のスレイブ,無窮の鎖 和倉 優希,和倉優希（変身）_surget,Boss,Defense,Blue,50000,3,40,0.23,300,0,0.24,1,500,1.24,stop有:1回目 0.66,60,2.01,stop有:1回目 1.06,,5,,dageki_1,,
+,chara_sur_00301,_surget,c_sur_00301_surget_Boss_Blue,魔都精兵のスレイブ,駿河 朱々,駿河 朱々_surget,Boss,Defense,Blue,50000,3,35,0.2,300,0,0.22,1,500,1.56,0.66,60,1.91,0.73,,5,,dageki_1,,
+,chara_sur_00301,_surget,c_sur_00301_surget_Normal_Blue,魔都精兵のスレイブ,駿河 朱々,駿河 朱々_surget,Normal,Defense,Blue,50000,3,32,0.18,300,0,0.22,1,100,1.56,0.66,60,1.91,0.73,,5,,dageki_1,,
+,chara_sur_00201,_surget,c_sur_00201_surget_Boss_Blue,魔都精兵のスレイブ,東 日万凛,東 日万凛_surget,Boss,Attack,Blue,50000,3,35,0.11,300,0,0.25,1,500,1.47,stop無:1回目 0.37,60,2.67,"stop無:1回目 0.74
+stop無:2回目 0.92
+stop無:3回目 1.1
+stop無:4回目 1.28
+stop無:5回目 1.45
+stop無:6回目 1.65
+stop有:7回目 1.84",,5,,shageki_1,,
+,chara_sur_00201,_surget,c_sur_00201_surget_Normal_Blue,魔都精兵のスレイブ,東 日万凛,東 日万凛_surget,Normal,Attack,Blue,50000,3,32,0.11,300,0,0.25,1,100,1.47,stop無:1回目 0.37,60,2.67,"stop無:1回目 0.74
+stop無:2回目 0.92
+stop無:3回目 1.1
+stop無:4回目 1.28
+stop無:5回目 1.45
+stop無:6回目 1.65
+stop有:7回目 1.84",,5,,shageki_1,,
+,chara_sur_00501,_surget,c_sur_00501_surget_Boss_Blue,魔都精兵のスレイブ,空間を操る六番組組長 出雲 天花,出雲 天花_surget,Boss,Technical,Blue,50000,3,35,0.45,300,0,0.47,1,500,1.71,stop有:1回目 0.93,60,2.67,stop有:1回目 1.53,,5,,dageki_1,,
+,chara_sur_00501,_surget,c_sur_00501_surget_Normal_Blue,魔都精兵のスレイブ,空間を操る六番組組長 出雲 天花,出雲 天花_surget,Normal,Technical,Blue,50000,3,32,0.45,300,0,0.47,1,100,1.71,stop有:1回目 0.93,60,2.67,stop有:1回目 1.53,,5,,dageki_1,,
+,chara_sur_00101,_savege,c_sur_00101_savege_Boss_Yellow,魔都精兵のスレイブ,誇り高き魔都の剣姫 羽前 京香,誇り高き魔都の剣姫 羽前京香_savege,Boss,Attack,Yellow,100000,2,45,0.25,500,0,0.27,1,50,1.40,stop無:1回目 0.33,70,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",複数体に合計300%の連続攻撃+6回目の攻撃がヒットした相手に小ノックバック,5,,zangeki_1,,
+,chara_sur_00801,_savege,c_sur_00801_savege_Normal_Yellow,魔都精兵のスレイブ,無窮の鎖 和倉 優希,和倉優希（変身）_savege,Normal,Defense,Yellow,100000,1,45,0.23,300,0,0.24,1,100,1.24,stop有:1回目 0.66,80,2.01,stop有:1回目 1.06,単体に300%の攻撃+小ノックバック,6,,dageki_1,,
+,chara_sur_00801,_savege,c_sur_00801_savege_Normal_Blue,魔都精兵のスレイブ,無窮の鎖 和倉 優希,和倉優希（変身）_savege,Normal,Defense,Blue,100000,1,45,0.23,300,0,0.24,1,100,1.24,stop有:1回目 0.66,150,2.01,stop有:1回目 1.06,単体に300%の攻撃+小ノックバック,2,,dageki_1,,
+,enemy_sur_00101,_savege,e_sur_00101_savege_Normal_Colorless,魔都精兵のスレイブ,醜鬼,醜鬼_savege,Normal,Defense,Colorless,10000,3,30,0.2,300,0,0.22,1,100,0.80,0.30,30,-,-,,-,,dageki_1,,
+,enemy_sur_00101,_savege,e_sur_00101_savege_Normal_Yellow,魔都精兵のスレイブ,醜鬼,醜鬼_savege,Normal,Technical,Yellow,10000,3,32,0.22,300,0,0.24,1,100,0.80,0.30,100,-,-,,-,,dageki_1,単体に10%の毒にする(10秒間),
+,enemy_sur_00101,_savege,e_sur_00101_savege_Normal_Blue,魔都精兵のスレイブ,醜鬼,醜鬼_savege,Normal,Technical,Blue,10000,3,32,0.22,300,0,0.24,1,100,0.80,0.30,100,-,-,,-,,dageki_1,単体に10%の毒にする(10秒間),
+,chara_sur_00501,_savege,c_sur_00501_savege_Boss_Blue,魔都精兵のスレイブ,空間を操る六番組組長 出雲 天花,出雲 天花_savege,Boss,Attack,Blue,100000,3,35,0.45,500,0,0.47,1,100,1.71,stop有:1回目 0.93,90,2.67,stop有:1回目 1.53,自身のコマと前2コマまで250%の範囲ダメージ,4,,dageki_1,,
+,chara_sur_00501,_savege_Btrans,c_sur_00501_savege_Btrans_Boss_Blue,魔都精兵のスレイブ,空間を操る六番組組長 出雲 天花,出雲 天花_savege_Btrans,Boss,Attack,Blue,100000,3,35,0.45,500,0,0.47,1,100,1.71,stop有:1回目 0.93,90,2.67,stop有:1回目 1.53,自身のコマと前2コマまで250%の範囲ダメージ,4,,dageki_1,,c_sur_00501_savege_Atrans_Boss_Blueに変身（ゲージ戦のようなイメージ）
+,chara_sur_00501,_savege_Atrans,c_sur_00501_savege_Atrans_Boss_Blue,魔都精兵のスレイブ,空間を操る六番組組長 出雲 天花,出雲 天花_savege_Atrans,Boss,Technical,Blue,100000,3,35,0.45,500,0,0.47,1,100,1.71,stop有:1回目 0.93,90,2.67,stop有:1回目 1.53,自身のコマと前2コマまで100%の範囲ダメージ+10%の毒にする(10秒間),6,,dageki_1,,
+,enemy_sur_00101,_aobaget,e_sur_00101_aobaget_Normal_Blue,魔都精兵のスレイブ,醜鬼,醜鬼_aobaget,Normal,Technical,Blue,1000,2,42,0.2,100,0,0.25,1,100,0.80,0.30,,-,-,,-,,dageki_1,攻撃時25%の確率で3%の毒(10秒間),
+,enemy_sur_00101,_aobaget,e_sur_00101_aobaget_Normal_Red,魔都精兵のスレイブ,醜鬼,醜鬼_aobaget,Normal,Technical,Red,1000,2,42,0.2,100,0,0.25,1,100,0.80,0.30,,-,-,,-,,dageki_1,攻撃時25%の確率で5%の毒(10秒間),
+,enemy_sur_00101,_aobaget,e_sur_00101_aobaget_Normal_Colorless,魔都精兵のスレイブ,醜鬼,醜鬼_aobaget,Normal,Technical,Colorless,1000,1,42,0.2,100,0,0.25,1,100,0.80,0.30,,-,-,,-,,dageki_1,攻撃時100%の確率で8%の毒(10秒間),
+,chara_sur_00701,_aobaget,c_sur_00701_aobaget_Normal_Colorless,魔都精兵のスレイブ,和倉 青羽,和倉 青羽_aobaget,Normal,Attack,Colorless,1000,3,45,0.24,100,0,0.27,1,100,1.07,0.28,,2.01,"stop無:1回目 0.67
+stop無:2回目 0.84
+stop無:3回目 1
+stop有:4回目 1.25",,4,,dageki_1,,図鑑は「enemy_sur_00001」に紐付け
+,chara_sur_00701,_aobaget,c_sur_00701_aobaget_Normal_Blue,魔都精兵のスレイブ,和倉 青羽,和倉 青羽_aobaget,Normal,Attack,Blue,1000,3,45,0.24,100,0,0.27,1,100,1.07,0.28,,2.01,"stop無:1回目 0.67
+stop無:2回目 0.84
+stop無:3回目 1
+stop有:4回目 1.25",,4,,dageki_1,,図鑑は「enemy_sur_00001」に紐付け
+,chara_sur_00701,_aobaget,c_sur_00701_aobaget_Boss_Colorless,魔都精兵のスレイブ,和倉 青羽,和倉 青羽_aobaget,Boss,Attack,Colorless,10000,3,45,0.24,100,0,0.27,1,500,1.07,0.28,,2.01,"stop無:1回目 0.67
+stop無:2回目 0.84
+stop無:3回目 1
+stop有:4回目 1.25",,5,,dageki_1,,図鑑は「enemy_sur_00001」に紐付け
+,chara_sur_00101,_aobaget,c_sur_00101_aobaget_Normal_Red,魔都精兵のスレイブ,誇り高き魔都の剣姫 羽前 京香,誇り高き魔都の剣姫 羽前京香_aobaget,Normal,Attack,Red,1000,1,45,0.2,100,0,0.27,1,100,1.40,stop無:1回目 0.33,,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",,4,,zangeki_1,,
+,chara_sur_00101,_aobaget,c_sur_00101_aobaget_Boss_Red,魔都精兵のスレイブ,誇り高き魔都の剣姫 羽前 京香,誇り高き魔都の剣姫 羽前京香_aobaget,Boss,Attack,Red,10000,2,45,0.2,100,0,0.27,1,500,1.40,stop無:1回目 0.33,,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",,4,,zangeki_1,,
+,chara_sur_00201,_aobaget,c_sur_00201_aobaget_Normal_Red,魔都精兵のスレイブ,東 日万凛,東 日万凛_aobaget,Normal,Attack,Red,1000,2,35,0.11,100,0,0.25,1,100,1.47,stop無:1回目 0.37,,2.67,"stop無:1回目 0.74
+stop無:2回目 0.92
+stop無:3回目 1.1
+stop無:4回目 1.28
+stop無:5回目 1.45
+stop無:6回目 1.65
+stop有:7回目 1.84",,4,,shageki_1,,
+,chara_sur_00201,_aobaget,c_sur_00201_aobaget_Boss_Red,魔都精兵のスレイブ,東 日万凛,東 日万凛_aobaget,Boss,Technical,Red,10000,2,25,0.11,100,0,0.25,1,500,1.47,stop無:1回目 0.37,,2.67,"stop無:1回目 0.74
+stop無:2回目 0.92
+stop無:3回目 1.1
+stop無:4回目 1.28
+stop無:5回目 1.45
+stop無:6回目 1.65
+stop有:7回目 1.84",7回目で小ノックバック,6,,shageki_1,,
+,chara_sur_00601,_aobaget,c_sur_00601_aobaget_Normal_Red,魔都精兵のスレイブ,東 八千穂,東 八千穂_aobaget,Normal,Technical,Red,1000,4,35,0.2,100,0,0.42,1,100,1.64,stop有:1回目 0.75,,3.34,stop有:1回目 1.2,スタン,3,,shageki_1,,
+,chara_sur_00601,_aobaget,c_sur_00601_aobaget_Boss_Red,魔都精兵のスレイブ,東 八千穂,東 八千穂_aobaget,Boss,Technical,Red,10000,4,35,0.2,100,0,0.42,1,500,1.64,stop有:1回目 0.75,,3.34,stop有:1回目 1.2,スタン,3,,shageki_1,,
+,chara_sur_00301,_aobaget,c_sur_00301_aobaget_Boss_Blue,魔都精兵のスレイブ,駿河 朱々,駿河 朱々_aobaget,Boss,Defense,Blue,10000,1,31,0.2,100,0,0.22,1,500,1.56,0.66,,1.91,0.73,100%中ノックバック,4,,dageki_1,,
+,chara_sur_00501,_aobaget,c_sur_00501_aobaget_Normal_Blue,魔都精兵のスレイブ,空間を操る六番組組長 出雲 天花,出雲 天花_aobaget,Normal,Attack,Blue,1000,3,35,0.45,100,0,0.47,1,100,1.71,stop有:1回目 0.93,,2.67,stop有:1回目 1.53,自身のコマと前2コマまで100%の範囲ダメージ,3,,dageki_1,,
+,chara_sur_00501,_aobaget,c_sur_00501_aobaget_Boss_Blue,魔都精兵のスレイブ,空間を操る六番組組長 出雲 天花,出雲 天花_aobaget,Boss,Attack,Blue,10000,4,25,0.45,100,0,0.47,1,100,1.71,stop有:1回目 0.93,,2.67,stop有:1回目 1.53,自身のコマと前2コマまで300%の範囲ダメージ,10,,dageki_1,,
+,enemy_sur_00101,_challenge,e_sur_00101_challenge_Normal_Red,魔都精兵のスレイブ,醜鬼,醜鬼_challenge,Normal,Attack,Red,50000,3,30,0.17,300,0,0.25,1,100,0.80,0.30,,-,-,,10,,dageki_1,,
+,chara_sur_00001,_challenge,c_sur_00001_challenge_Normal_Red,魔都精兵のスレイブ,和倉 優希,和倉 優希_challenge,Normal,Support,Red,50000,3,32,0.24,300,0,0.3,1,100,1.17,stop有:1回目 0.30,,2.80,stop無:1回目 2.00,,10,,dageki_2,,
+,chara_sur_00301,_challenge,c_sur_00301_challenge_Boss_Blue,魔都精兵のスレイブ,駿河 朱々,駿河 朱々_challenge,Boss,Defense,Blue,50000,4,35,0.2,300,0,0.22,1,500,1.56,0.66,,1.91,0.73,100%中ノックバック,10,,dageki_1,,
+,chara_sur_00801,_challenge,c_sur_00801_challenge_Normal_Red,魔都精兵のスレイブ,無窮の鎖 和倉 優希,和倉優希（変身）_challenge,Normal,Defense,Red,50000,3,32,0.24,300,0,0.24,1,100,1.24,stop有:1回目 0.66,,2.01,stop有:1回目 1.06,,10,,dageki_1,,
+,chara_sur_00201,_challenge,c_sur_00201_challenge_Boss_Blue,魔都精兵のスレイブ,東 日万凛,東 日万凛_challenge,Boss,Attack,Blue,50000,2,30,0.11,300,0,0.25,1,500,1.47,stop無:1回目 0.37,,2.67,"stop無:1回目 0.74
+stop無:2回目 0.92
+stop無:3回目 1.1
+stop無:4回目 1.28
+stop無:5回目 1.45
+stop無:6回目 1.65
+stop有:7回目 1.84",7回目で小ノックバック,10,,shageki_1,,
+,chara_sur_00601,_challenge,c_sur_00601_challenge_Boss_Red,魔都精兵のスレイブ,東 八千穂,東 八千穂_challenge,Boss,Technical,Red,50000,3,35,0.2,300,0,0.42,1,500,1.64,stop有:1回目 0.75,,3.34,stop有:1回目 1.2,スタン,10,,shageki_1,,
+,chara_sur_00101,_challenge,c_sur_00101_challenge_Boss_Green,魔都精兵のスレイブ,誇り高き魔都の剣姫 羽前 京香,誇り高き魔都の剣姫 羽前京香_challenge,Boss,Attack,Green,50000,3,45,0.25,300,0,0.27,1,500,1.40,stop無:1回目 0.33,,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",,10,,zangeki_1,,
+,chara_sur_00501,_challenge,c_sur_00501_challenge_Boss_Yellow,魔都精兵のスレイブ,空間を操る六番組組長 出雲 天花,出雲 天花_challenge,Boss,Technical,Yellow,50000,3,25,0.45,300,0,0.47,1,500,1.71,stop有:1回目 0.93,,2.67,stop有:1回目 1.53,自身のコマと前2コマまで300%の範囲ダメージ,10,,dageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,enemy_glo_00002,_osh1_1d1c,e_glo_00002_osh1_1d1c_Normal_Colorless,GLOW,推し活ファントム,サイリウム持ちファントム_osh1_1d1c,Normal,Attack,Colorless,10000,2,30,0.2,300,0,0.21,1,300,1.17,stop有:1回目 0.6,100,,,,-,,dageki_1,,
+,chara_osh_00601,_osh1_boot_tan,c_osh_00601_osh1_boot_tan_Normal_Colorless,【推しの子】,ぴえヨン,ぴえヨン_osh1_boot_tan,Normal,Attack,Colorless,10000,2,25,0.22,300,0,0.3,1,500,1.10,"stop無:1回目 0.28
+stop無:2回目 0.70",80,1.90,"stop無:1回目 0.50
+stop無:2回目 0.83
+stop無:3回目 1.16
+stop無:4回目 1.50",使用しない,-,,dageki_1,,
+,chara_osh_00601,_osh1_boot_huku,c_osh_00601_osh1_boot_huku_Boss_Colorless,【推しの子】,ぴえヨン,ぴえヨン_osh1_boot_huku,Boss,Attack,Colorless,10000,2,45,0.22,300,0,0.3,1,500,1.10,"stop無:1回目 0.28
+stop無:2回目 0.70",60,1.90,"stop無:1回目 0.50
+stop無:2回目 0.83
+stop無:3回目 1.16
+stop無:4回目 1.50",特殊効果なし,2,,dageki_1,,
+,enemy_glo_00001,_osh1_boot,e_glo_00001_osh1_boot_Normal_Colorless,GLOW,ファントム,ファントム_osh1_boot,Normal,Defense,Colorless,10000,1,30,0.15,300,0,0.18,1,100,1.00,0.50,100,,,,-,,dageki_1,,
+,chara_yuw_00601,_savege02_yuw,c_yuw_00601_savege02_yuw_Boss_Yellow,2.5次元の誘惑,奥村 正宗,奥村 正宗_savege02_yuw,Boss,Defense,Yellow,10000,2,30,0.2,500,0,0.21,1,100,1.20,0.67,50,1.84,stop無: 1回目 0.68,20秒間、自身が受けるダメージ30%カット,4,根性*3,dageki_1,,
+,enemy_glo_00001,_savage02_yuw_tank,e_glo_00001_savage02_yuw_tank_Normal_Yellow,GLOW,ファントム,ファントム_savage02_yuw_tank,Normal,Attack,Yellow,10000,2,37,0.2,500,0,0.21,1,100,1.00,0.50,50,,,,-,,dageki_1,,
+,chara_osh_00001,_charaget_repeat,c_osh_00001_charaget_repeat_Boss_Colorless,【推しの子】,B小町不動のセンター アイ,星野 アイ_charaget_repeat,Boss,Technical,Colorless,10000,3,32,0.27,300,0,0.3,1,100,1.60,stop有:1回目 0.43,60,3.24,stop無:1回目 1.83,,-,,shageki_1,,
+,enemy_glo_00002,_charaget_repeat,e_glo_00002_charaget_repeat_Normal_Colorless,GLOW,推し活ファントム,サイリウム持ちファントム_charaget_repeat,Normal,Attack,Colorless,10000,3,25,0.19,300,0,0.25,1,100,1.17,stop有:1回目 0.6,60,,,,-,,dageki_1,,
+,chara_osh_00201,_charaget_repeat,c_osh_00201_charaget_repeat_Boss_Colorless,【推しの子】,星野 ルビー,星野 ルビー_charaget_repeat,Boss,Attack,Colorless,10000,3,30,0.22,300,0,0.23,1,500,1.37,"stop有:1回目 0.30
+stop有:2回目 0.60",60,3.00,stop無:1回目 1.66,,-,,dageki_2,,
+,chara_osh_00401,_charaget_repeat,c_osh_00401_charaget_repeat_Boss_Colorless,【推しの子】,有馬 かな,有馬 かな_charaget_repeat,Boss,Technical,Colorless,10000,3,32,0.24,300,0,0.25,1,500,1.17,0.5,60,2.47,stop無:1回目 1.00,,-,,dageki_2,,
+,chara_osh_00501,_charaget_repeat,c_osh_00501_charaget_repeat_Boss_Yellow,【推しの子】,黒川 あかね,黒川 あかね_charaget_repeat,Boss,Technical,Yellow,10000,3,30,0.26,300,0,0.27,1,500,1.06,0.3,60,2.67,1.78,,-,,dageki_1,,
+,chara_osh_00301,_charaget_repeat,c_osh_00301_charaget_repeat_Boss_Yellow,【推しの子】,MEMちょ,MEMちょ_charaget_repeat,Boss,Support,Yellow,10000,3,30,0.27,300,0,0.28,1,500,1.13,"stop無:1回目 0.18
+stop無:1回目 0.35
+stop無:1回目 0.52",60,3.33,stop無:1回目 1.78,味方の攻撃10%Up,-,,dageki_1,,
+,chara_yuw_00201,_savage02_yuw_support,c_yuw_00201_savage02_yuw_support_Boss_Yellow,2.5次元の誘惑,羽生 まゆり,羽生 まゆり_savage02_yuw_support,Boss,Support,Yellow,10000,3,27,0.26,300,0,0.35,1,100,1.06,0.34,75,4.67,3.50,自身とその一つ前にいるコマの敵複数体の体力を30%回復+自身とその一つ前にいるコマの敵複数体の攻撃を20秒間30%UP,4,根性*1,dageki_2,,
+,enemy_glo_00001,_newyear_2026_1d1c,e_glo_00001_newyear_2026_1d1c_Normal_Colorless,GLOW,ファントム,ファントム_newyear_2026_1d1c,Normal,Attack,Colorless,10000,1,30,0.15,300,0,0.18,1,500,1.00,0.50,100,,,,-,,dageki_1,,
+,enemy_glo_00002,_osh1savage02,e_glo_00002_osh1savage02_Normal_Blue,GLOW,推し活ファントム,サイリウム持ちファントム_osh1savage02,Normal,Attack,Blue,10000,2,35,0.17,500,0,0.18,1,100,1.17,stop有:1回目 0.6,65,,,,-,,dageki_1,,
+,enemy_glo_00002,_osh1savage01,e_glo_00002_osh1savage01_Normal_Yellow,GLOW,推し活ファントム,サイリウム持ちファントム_osh1savage01,Normal,Attack,Yellow,10000,2,35,0.17,500,0,0.18,1,100,1.17,stop有:1回目 0.6,65,,,,-,,dageki_1,,
+,enemy_glo_00002,_osh1savage03b,e_glo_00002_osh1savage03b_Normal_Green,GLOW,推し活ファントム,サイリウム持ちファントム_osh1savage03b,Normal,Attack,Green,10000,2,35,0.17,500,0,0.18,1,100,1.17,stop有:1回目 0.6,65,,,,-,,dageki_1,,
+,enemy_glo_00002,_osh1savage01,e_glo_00002_osh1savage01_Normal_Colorless,GLOW,推し活ファントム,サイリウム持ちファントム_osh1savage01,Normal,Defense,Colorless,50000,1,32,0.12,100,0,0.13,1,100,1.17,stop有:1回目 0.6,80,,,,-,,dageki_1,,
+,enemy_glo_00002,_osh1savage03a,e_glo_00002_osh1savage03a_Normal_Green,GLOW,推し活ファントム,サイリウム持ちファントム_osh1savage03a,Normal,Defense,Green,50000,1,32,0.12,100,0,0.13,1,100,1.17,stop有:1回目 0.6,50,,,,-,,dageki_1,,
+,chara_osh_00201,_osh1savage02,c_osh_00201_osh1savage02_Normal_Blue,【推しの子】,星野 ルビー,星野 ルビー_osh1savage02,Normal,Attack,Blue,50000,3,35,0.22,300,0,0.23,1,200,1.37,"stop有:1回目 0.30
+stop有:2回目 0.60",75,3.00,stop無:1回目 1.66,自身の攻撃を10秒間、50%Up,6,,dageki_2,,
+,chara_osh_00201,_osh1savage03,c_osh_00201_osh1savage03_Normal_Green,【推しの子】,星野 ルビー,星野 ルビー_osh1savage03,Normal,Attack,Green,50000,3,35,0.22,300,0,0.23,1,200,1.37,"stop有:1回目 0.30
+stop有:2回目 0.60",75,3.00,stop無:1回目 1.66,自身の攻撃を10秒間、50%Up,6,,dageki_2,,
+,chara_osh_00301,_osh1savage02,c_osh_00301_osh1savage02_Normal_Blue,【推しの子】,MEMちょ,MEMちょ_osh1savage02,Normal,Support,Blue,50000,2,30,0.27,300,0,0.28,1,200,1.13,"stop無:1回目 0.18
+stop無:1回目 0.35
+stop無:1回目 0.52",80,3.33,stop無:1回目 1.78,青属性の攻撃20秒間20%Up,5,,dageki_1,,
+,chara_osh_00301,_osh1savage01,c_osh_00301_osh1savage01_Normal_Yellow,【推しの子】,MEMちょ,MEMちょ_osh1savage01,Normal,Support,Yellow,50000,2,30,0.27,300,0,0.28,1,200,1.13,"stop無:1回目 0.18
+stop無:1回目 0.35
+stop無:1回目 0.52",80,3.33,stop無:1回目 1.78,黄属性の攻撃20秒間20%Up,5,,dageki_1,,
+,chara_osh_00301,_osh1savage03,c_osh_00301_osh1savage03_Normal_Green,【推しの子】,MEMちょ,MEMちょ_osh1savage03,Normal,Support,Green,50000,2,30,0.27,300,0,0.28,1,200,1.13,"stop無:1回目 0.18
+stop無:1回目 0.35
+stop無:1回目 0.52",80,3.33,stop無:1回目 1.78,緑属性の攻撃20秒間20%Up,5,,dageki_1,,
+,chara_osh_00401,_osh1savage02,c_osh_00401_osh1savage02_Normal_Blue,【推しの子】,有馬 かな,有馬 かな_osh1savage02,Normal,Technical,Blue,50000,2,36,0.24,300,0,0.25,1,200,1.17,0.5,60,2.47,stop無:1回目 1.00,中範囲に100%ダメージ + 5秒間のスタン効果付与,6,,dageki_2,,
+,chara_osh_00401,_osh1savage01,c_osh_00401_osh1savage01_Normal_Yellow,【推しの子】,有馬 かな,有馬 かな_osh1savage01,Normal,Technical,Yellow,50000,2,36,0.24,300,0,0.25,1,200,1.17,0.5,60,2.47,stop無:1回目 1.00,中範囲に100%ダメージ + 5秒間のスタン効果付与,6,,dageki_2,,
+,chara_osh_00401,_osh1savage03,c_osh_00401_osh1savage03_Normal_Green,【推しの子】,有馬 かな,有馬 かな_osh1savage03,Normal,Technical,Green,50000,2,36,0.24,300,0,0.25,1,200,1.17,0.5,60,2.47,stop無:1回目 1.00,中範囲に100%ダメージ + 5秒間のスタン効果付与,6,,dageki_2,,
+,chara_osh_00501,_osh1savage01,c_osh_00501_osh1savage01_Boss_Yellow,【推しの子】,黒川 あかね,黒川 あかね_osh1savage01,Boss,Technical,Yellow,100000,1,30,0.26,300,0,0.27,1,200,1.06,0.3,50,2.67,1.78,中範囲に100%ダメージ + 7秒間のスタン効果付与,8,,dageki_1,,
+,chara_osh_00001,_osh1savage02,c_osh_00001_osh1savage02_Boss_Blue,【推しの子】,B小町不動のセンター アイ,星野 アイ_osh1savage02,Boss,Support,Blue,100000,2,25,0.35,300,0,0.36,1,200,1.60,stop有:1回目 0.43,30,3.24,stop無:1回目 1.83,青属性の味方の体力10%回復,5,,shageki_1,,
+,chara_osh_00001,_osh1savage03,c_osh_00001_osh1savage03_Boss_Green,【推しの子】,B小町不動のセンター アイ,星野 アイ_osh1savage03,Boss,Support,Green,100000,2,25,0.35,300,0,0.36,1,200,1.60,stop有:1回目 0.43,30,3.24,stop無:1回目 1.83,緑属性の味方の体力10%回復,5,,shageki_1,,
+,chara_osh_00301,_challenge,c_osh_00301_challenge_Boss_Yellow,【推しの子】,MEMちょ,MEMちょ_challenge,Boss,Support,Yellow,50000,3,30,0.27,300,0,0.28,1,500,1.13,"stop無:1回目 0.18
+stop無:1回目 0.35
+stop無:1回目 0.52",60,3.33,stop無:1回目 1.78,味方の攻撃10%Up,-,,dageki_1,,
+,chara_osh_00201,_challenge,c_osh_00201_challenge_Boss_Red,【推しの子】,星野 ルビー,星野 ルビー_challenge,Boss,Attack,Red,50000,3,30,0.22,300,0,0.23,1,500,1.37,"stop有:1回目 0.30
+stop有:2回目 0.60",60,3.00,stop無:1回目 1.66,自身の攻撃50%Up,-,,dageki_2,,
+,chara_osh_00401,_challenge,c_osh_00401_challenge_Boss_Green,【推しの子】,有馬 かな,有馬 かな_challenge,Boss,Technical,Green,50000,3,32,0.24,300,0,0.25,1,500,1.17,0.5,60,2.47,stop無:1回目 1.00,スタン,-,,dageki_2,,
+,chara_osh_00001,_challenge,c_osh_00001_challenge_Boss_Red,【推しの子】,B小町不動のセンター アイ,星野 アイ_challenge,Boss,Technical,Red,50000,3,32,0.27,300,0,0.3,1,500,1.60,stop有:1回目 0.43,60,3.24,stop無:1回目 1.83,スタン,-,,shageki_1,,
+,enemy_glo_00002,_challenge,e_glo_00002_challenge_Normal_Colorless,GLOW,推し活ファントム,サイリウム持ちファントム_challenge,Normal,Attack,Colorless,10000,3,25,0.19,300,0,0.25,1,100,1.17,stop有:1回目 0.6,60,,,,-,,dageki_1,,
+,chara_jig_00001,_jig1_1d1c,c_jig_00001_jig1_1d1c_Normal_Colorless,地獄楽,がらんの画眉丸,がらんの画眉丸_jig1_1d1c,Normal,Technical,Colorless,10000,2,41,0.24,100,0,0.25,1,300,1.17,stop有:1回目0.20,60,2.30,"stop有:1回目 0.08
+stop有:2回目 0.90
+stop有:3回目 1.50",複数体に200%の攻撃,5,,dageki_1,,
+,chara_jig_00601,_jig1_charaget02,c_jig_00601_jig1_charaget02_Boss_Red,地獄楽,民谷 巌鉄斎,民谷 巌鉄斎_jig1_charaget02,Boss,Defense,Red,10000,1,35,0.31,100,0,0.22,1,500,1.67,stop有:1回目0.6,60,2.67,stop有:1.5,単体に200%の攻撃+小ノックバック攻撃,4,,zangeki_1,,
+,enemy_jig_00402,_jig1_charaget02,e_jig_00402_jig1_charaget02_Normal_Colorless,地獄楽,極楽蝶,極楽蝶_jig1_charaget02,Normal,Attack,Colorless,1000,2,37,0.27,100,0,0.37,100,200,2.10,0.60,100,-,-,,-,,dageki_2,,
+,enemy_jig_00301,_jig1_charaget02,e_jig_00301_jig1_charaget02_Normal_Red,地獄楽,竈神 魚,竈神 魚_jig1_charaget02,Normal,Attack,Red,1000,2,50,0.22,100,0,0.23,1,200,1.50,0.66,85,-,-,,-,,dageki_1,,
+,chara_jig_00401,_jig1_charaget02,c_jig_00401_jig1_charaget02_Boss_Red,地獄楽,賊王 亜左 弔兵衛,賊王 亜左 弔兵衛_jig1_charaget02,Boss,Technical,Red,10000,2,30,0.31,100,0,0.32,1,500,1.67,stop有:1回目0.50,60,2.67,stop有:1回目1.57,100%中ノックバック,4,,zangeki_1,,
+,chara_jig_00501,_jig1_charaget02,c_jig_00501_jig1_charaget02_Normal_Red,地獄楽,山田浅ェ門 桐馬,山田浅ェ門 桐馬_jig1_charaget02,Normal,Support,Red,10000,2,35,0.21,100,0,0.33,1,300,1.6,stop有:1回目0.4,60,3.33,stop無:1.67,,-,,zangeki_1,,
+,chara_jig_00001,_jig1_charaget02,c_jig_00001_jig1_charaget02_Boss_Red,地獄楽,がらんの画眉丸,がらんの画眉丸_jig1_charaget02,Boss,Technical,Red,10000,2,41,0.24,100,0,0.25,1,300,1.17,stop有:1回目0.20,60,2.30,"stop有:1回目 0.08
+stop有:2回目 0.90
+stop有:3回目 1.50",範囲に300%攻撃+単体に中ノックバック,4,,dageki_1,,
+,enemy_jig_00401,_jig1_charaget01,e_jig_00401_jig1_charaget01_Normal_Green,地獄楽,極楽蝶,極楽蝶_jig1_charaget01,Normal,Technical,Green,1000,2,33,0.24,100,0,0.25,1,50,1.30,0.66,125,-,-,,-,,dageki_2,100%の確率で6秒間1%の毒にする,
+,enemy_jig_00402,_jig1_charaget01,e_jig_00402_jig1_charaget01_Normal_Colorless,地獄楽,極楽蝶,極楽蝶_jig1_charaget01,Normal,Defense,Colorless,1000,2,25,0.22,100,0,0.23,100,50,2.10,0.60,200,-,-,,-,,dageki_2,,
+,enemy_jig_00001,_jig1_charaget01,e_jig_00001_jig1_charaget01_Normal_Colorless,地獄楽,門神,門神_jig1_charaget01,Normal,Defense,Colorless,1000,1,27,0.22,100,0,0.27,100,50,1.83,0.83,100,-,-,,-,,dageki_1,,
+,enemy_jig_00301,_jig1_charaget01,e_jig_00301_jig1_charaget01_Normal_Green,地獄楽,竈神 魚,竈神 魚_jig1_charaget01,Normal,Attack,Green,1000,4,37,0.22,100,0,0.23,1,50,1.50,0.66,10,-,-,,-,,dageki_1,,
+,chara_jig_00201,_jig1_charaget01,c_jig_00201_jig1_charaget01_Boss_Green,地獄楽,杠,杠_jig1_charaget01,Boss,Technical,Green,10000,3,34,,100,,,,100,1.67,stop有:1回目 1,,2.56,stop有:1回目1.66,,-,,shageki_1,100%の確率で3秒間1%の毒にする,
+,chara_jig_00101,_jig1_charaget01,c_jig_00101_jig1_charaget01_Boss_Yellow,地獄楽,山田浅ェ門 佐切,山田浅ェ門 佐切_jig1_charaget01,Boss,Attack,Yellow,10000,2,34,0.22,100,0,0.23,1,100,1.5,0.50,75,2.50,1.20,中範囲攻撃,6,,zangeki_1,,
+,enemy_jig_00501,_jig1_charaget01,e_jig_00501_jig1_charaget01_Boss_Colorless,地獄楽,山田浅ェ門 源嗣,山田浅ェ門 源嗣_jig1_charaget01,Boss,Defense,Colorless,10000,1,34,,100,,,,100,1.43,0.66,,-,-,,-,,zangeki_1,,
+,chara_jig_00001,_jig1_charaget01,c_jig_00001_jig1_charaget01_Boss_Yellow,地獄楽,がらんの画眉丸,がらんの画眉丸_jig1_charaget01,Boss,Technical,Yellow,10000,3,41,0.24,100,0,0.25,1,100,1.17,stop有:1回目0.20,80,2.30,"stop有:1回目 0.08
+stop有:2回目 0.90
+stop有:3回目 1.50",100%の確率で3秒間500ダメージの火傷にする,5,,dageki_1,,
+,chara_jig_00301,_jig1_charaget01,c_jig_00301_jig1_charaget01_Boss_Colorless,地獄楽,山田浅ェ門 仙汰,山田浅ェ門 仙汰_jig1_charaget01,Boss,Defense,Colorless,10000,1,21,0.18,100,0,0.19,1,100,1.80,stop有0.50,100,2.34,"stop無:1回目：0.35
+stop無:2回目：0.50
+stop無:3回目 0.62
+stop無:4回目 0.78
+stop有:5回目 1.00",中範囲攻撃,5,,zangeki_1,,
+,enemy_jig_00601,_jig1_charaget01,e_jig_00601_jig1_charaget01_Boss_Colorless,地獄楽,朱槿,朱槿_jig1_charaget01,Boss,Attack,Colorless,10000,3,37,,100,,,,,1.5,0.75,,-,-,,-,,,,
+,chara_jig_00601,_jig1_challenge,c_jig_00601_jig1_challenge_Boss_Colorless,地獄楽,民谷 巌鉄斎,民谷 巌鉄斎_jig1_challenge,Boss,Defense,Colorless,50000,3,32,0.31,100,0,0.22,1,300,1.67,stop有:1回目0.6,,2.67,stop有:1.5,,-,,zangeki_1,,
+,enemy_jig_00501,_jig1_challenge,e_jig_00501_jig1_challenge_Boss_Colorless,地獄楽,山田浅ェ門 源嗣,山田浅ェ門 源嗣_jig1_challenge,Boss,Defense,Colorless,50000,3,32,0.22,300,0,0.23,1,300,1.43,0.66,,-,-,,-,,zangeki_1,,
+,chara_jig_00201,_jig1_challenge,c_jig_00201_jig1_challenge_Boss_Green,地獄楽,杠,杠_jig1_challenge,Boss,Technical,Green,50000,3,34,0.24,100,,0.23,,300,1.67,stop有:1回目 1,,2.56,stop有:1回目1.66,,-,,shageki_1,,
+,chara_jig_00301,_jig1_challenge,c_jig_00301_jig1_challenge_Boss_Green,地獄楽,山田浅ェ門 仙汰,山田浅ェ門 仙汰_jig1_challenge,Boss,Defense,Green,50000,3,21,0.18,100,0,0.19,1,300,1.80,stop有0.50,100,2.34,"stop無:1回目：0.35
+stop無:2回目：0.50
+stop無:3回目 0.62
+stop無:4回目 0.78
+stop有:5回目 1.00",,5,,zangeki_1,,
+,chara_jig_00401,_jig1_challenge,c_jig_00401_jig1_challenge_Boss_Colorless,地獄楽,賊王 亜左 弔兵衛,賊王 亜左 弔兵衛_jig1_challenge,Boss,Technical,Colorless,50000,3,30,0.31,100,0,0.32,1,300,1.67,stop有:1回目0.50,60,2.67,stop有:1回目1.57,,4,,zangeki_1,,
+,chara_jig_00501,_jig1_challenge,c_jig_00501_jig1_challenge_Boss_Green,地獄楽,山田浅ェ門 桐馬,山田浅ェ門 桐馬_jig1_challenge,Boss,Support,Green,50000,2,35,0.21,100,0,0.33,1,300,1.6,stop有:1回目0.4,60,3.33,stop無:1.67,,-,,zangeki_1,,
+,chara_jig_00001,_jig1_challenge,c_jig_00001_jig1_challenge_Boss_Red,地獄楽,がらんの画眉丸,がらんの画眉丸_jig1_challenge,Boss,Technical,Red,50000,2,41,0.24,100,0,0.25,1,300,1.17,stop有:1回目0.20,60,2.30,"stop有:1回目 0.08
+stop有:2回目 0.90
+stop有:3回目 1.50",,4,,dageki_1,,
+,chara_jig_00101,_jig1_challenge,c_jig_00101_jig1_challenge_Boss_Red,地獄楽,山田浅ェ門 佐切,山田浅ェ門 佐切_jig1_challenge,Boss,Attack,Red,50000,2,34,0.22,100,0,0.23,1,300,1.5,0.50,75,2.50,1.20,,6,,zangeki_1,,
+,enemy_jig_00301,_jig1_challenge,e_jig_00301_jig1_challenge_Normal_Red,地獄楽,竈神 魚,竈神 魚_jig1_challenge,Normal,Attack,Red,10000,3,37,0.22,100,0,0.23,1,100,1.50,0.66,10,-,-,,-,,dageki_1,,
+,enemy_jig_00301,_jig1_challenge,e_jig_00301_jig1_challenge_Normal_Yellow,地獄楽,竈神 魚,竈神 魚_jig1_challenge,Normal,Attack,Yellow,10000,3,37,0.22,100,0,0.23,1,100,1.50,0.66,10,-,-,,-,,dageki_1,,
+,enemy_jig_00401,_jig1_challenge01,e_jig_00401_jig1_challenge01_Normal_Red,地獄楽,極楽蝶,極楽蝶_jig1_challenge01,Normal,Attack,Red,10000,1,33,0.24,100,0,0.25,1,50,1.30,0.66,125,-,-,,-,,dageki_2,,
+,enemy_jig_00401,_jig1_challenge02,e_jig_00401_jig1_challenge02_Normal_Red,地獄楽,極楽蝶,極楽蝶_jig1_challenge02,Normal,Attack,Red,10000,1,33,0.24,100,0,0.25,1,50,1.30,0.66,125,-,-,,-,,dageki_2,,
+,enemy_jig_00401,_jig1_challenge,e_jig_00401_jig1_challenge_Normal_Yellow,地獄楽,極楽蝶,極楽蝶_jig1_challenge,Normal,Attack,Yellow,10000,1,33,0.24,100,0,0.25,1,50,1.30,0.66,125,-,-,,-,,dageki_2,,
+,enemy_jig_00401,_jig1_challenge,e_jig_00401_jig1_challenge_Normal_Colorless,地獄楽,極楽蝶,極楽蝶_jig1_challenge,Normal,Attack,Colorless,10000,1,33,0.24,100,0,0.25,100,50,1.30,0.66,125,-,-,,-,,dageki_2,,
+,enemy_jig_00001,_jig1_challenge,e_jig_00001_jig1_challenge_Normal_Red,地獄楽,門神,門神_jig1_challenge,Normal,Defense,Red,10000,3,27,0.22,100,0,0.27,100,100,1.83,0.83,100,-,-,,-,,dageki_1,,
+,enemy_jig_00001,_jig1_challenge,e_jig_00001_jig1_challenge_Normal_Colorless,地獄楽,門神,門神_jig1_challenge,Normal,Defense,Colorless,10000,3,27,0.22,100,0,0.27,100,100,1.83,0.83,100,-,-,,-,,dageki_1,,
+,chara_jig_00501,_jig1_savage,c_jig_00501_jig1_savage_Boss_Yellow,地獄楽,山田浅ェ門 桐馬,山田浅ェ門 桐馬_jig1_savage,Boss,Support,Yellow,10000,2,35,0.21,100,0,0.33,1,300,1.6,stop有:1回目0.4,75,3.33,stop無:1.67,コマ内の味方のHPを10%回復+アタック20%UP(20秒間)+ダメージカット10%(20秒間),4,,zangeki_1,,
+,chara_jig_00101,_jig1_savage,c_jig_00101_jig1_savage_Boss_Colorless,地獄楽,山田浅ェ門 佐切,山田浅ェ門 佐切_jig1_savage,Boss,Attack,Colorless,10000,2,34,0.22,100,0,0.23,1,300,1.5,0.50,125,2.50,1.20,範囲攻撃(500%),7,,zangeki_1,,
+,chara_jig_00001,_jig1_savage,c_jig_00001_jig1_savage_Boss_Colorless,地獄楽,がらんの画眉丸,がらんの画眉丸_jig1_savage,Boss,Technical,Colorless,10000,2,41,0.24,100,0,0.25,1,300,1.17,stop有:1回目0.20,80,2.30,"stop有:1回目 0.08
+stop有:2回目 0.90
+stop有:3回目 1.50",6秒間2000の火傷にする,5,,dageki_1,,
+,chara_jig_00401,_jig1_savage,c_jig_00401_jig1_savage_Normal_Colorless,地獄楽,賊王 亜左 弔兵衛,賊王 亜左 弔兵衛_jig1_savage,Normal,Technical,Colorless,1000,0,30,0.31,100,0,0.32,1,100,1.67,stop有:1回目0.50,50,2.67,stop有:1回目1.57,範囲内10秒間20%の弱体化,3,ノックバック無効,zangeki_1,,
+,chara_jig_00001,_jig1_savage,c_jig_00001_jig1_savage_Normal_Yellow,地獄楽,がらんの画眉丸,がらんの画眉丸_jig1_savage,Normal,Technical,Yellow,1000,2,41,0.24,100,0,0.25,1,100,1.17,stop有:1回目0.20,50,2.30,"stop有:1回目 0.08
+stop有:2回目 0.90
+stop有:3回目 1.50",3秒間1000の火傷にする,5,,dageki_1,,
+,enemy_jig_00601,_jig1_savage,e_jig_00601_jig1_savage_Normal_Yellow,地獄楽,朱槿,朱槿_jig1_savage,Normal,Attack,Yellow,1000,1,37,0.31,100,,,,100,1.5,0.75,60,-,-,,-,,,,
+,enemy_jig_00001,_jig1_savage,e_jig_00001_jig1_savage_Normal_Colorless,地獄楽,門神,門神_jig1_savage,Normal,Attack,Colorless,1000,1,27,0.21,100,0,0.27,100,50,1.83,0.83,100,-,-,,-,,dageki_1,,
+,enemy_jig_00001,_jig1_savage,e_jig_00001_jig1_savage_Normal_Yellow,地獄楽,門神,門神_jig1_savage,Normal,Defense,Yellow,1000,3,27,0.21,100,0,0.27,100,50,1.83,0.83,100,-,-,,-,,dageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,chara_you_00001,_you1_1d1c,c_you_00001_you1_1d1c_Normal_Colorless,幼稚園WARS,元殺し屋の新人教諭 リタ,リタ_you1_1d1c,Normal,Attack,Colorless,10000,2,45,0.34,100,0,0.35,1,300,1.34,stop有:1回目 0.45,50,1.77,"stop無:1回目 0.72
+stop無:2回目 0.88
+stop有:3回目 1.12",複数体に300%の攻撃,5,,dageki_1,,
+,chara_you_00001,_you1_charaget01,c_you_00001_you1_charaget01_Boss_Colorless,幼稚園WARS,元殺し屋の新人教諭 リタ,リタ_you1_charaget01,Boss,Attack,Colorless,10000,2,45,0.34,100,0,0.35,1,300,1.34,stop有:1回目 0.45,50,1.77,"stop無:1回目 0.72
+stop無:2回目 0.88
+stop有:3回目 1.12",複数体に300%の攻撃,5,,dageki_1,,
+,chara_you_00201,_you1_charaget01,c_you_00201_you1_charaget01_Boss_Yellow,幼稚園WARS,ダグ,ダグ_you1_charaget01,Boss,Technical,Yellow,10000,1,35,0.36,100,0,0.37,1,500,1.67,stop有:1回目 0.63,50,3.17,"stop無:1回目 1.00
+stop無:2回目 1.26
+stop無:3回目 1.50
+stop有:4回目 1.70",スタン,4,,shageki_1,,
+,enemy_you_00001,_you1_charaget01,e_you_00001_you1_charaget01_Normal_Colorless,幼稚園WARS,不良系金髪イケメン,暗殺者（近）_you1_charaget01,Normal,Attack,Colorless,1000,2,37,0.2,100,0,0.22,1,100,1.27,stop有0.5,70,-,-,,-,,zangeki_1,,
+,enemy_you_00101,_you1_charaget01,e_you_00101_you1_charaget01_Normal_Yellow,幼稚園WARS,イケメンじゃない殺し屋,暗殺者（遠）_you1_charaget01,Normal,Attack,Yellow,1000,2,30,0.6,100,0,0.62,1,100,1.27,0.56,70,-,-,,-,,shageki_1,,
+,chara_you_00001,_you1_charaget02,c_you_00001_you1_charaget02_Boss_Red,幼稚園WARS,元殺し屋の新人教諭 リタ,リタ_you1_charaget02,Boss,Attack,Red,10000,0,45,0.2,500,0,0.22,1,300,1.34,stop有:1回目 0.45,10,1.77,"stop無:1回目 0.72
+stop無:2回目 0.88
+stop有:3回目 1.12",特殊効果なし,5,,dageki_1,,
+,chara_you_00201,_you1_charaget02,c_you_00201_you1_charaget02_Boss_Red,幼稚園WARS,ダグ,ダグ_you1_charaget02,Boss,Attack,Red,10000,2,32,0.6,500,0,0.62,1,300,1.67,stop有:1回目 0.63,20,3.17,"stop無:1回目 1.00
+stop無:2回目 1.26
+stop無:3回目 1.50
+stop有:4回目 1.70",特殊効果なし,6,,shageki_1,,
+,chara_you_00301,_you1_charaget02,c_you_00301_you1_charaget02_Boss_Red,幼稚園WARS,ハナ,ハナ_you1_charaget02,Boss,Technical,Red,10000,2,35,0.3,500,0,0.35,1,300,1.77,stop有:1回目 0.7,20,3.67,stop有 :1回目 2.2,範囲攻撃,8,,dageki_1,スタン,
+,chara_you_00301,_you1_charaget02,c_you_00301_you1_charaget02_Normal_Red,幼稚園WARS,ハナ,ハナ_you1_charaget02,Normal,Technical,Red,1000,2,35,0.3,100,0,0.35,1,100,1.77,stop有:1回目 0.7,20,3.67,stop有 :1回目 2.2,,-,,dageki_1,スタン,
+,enemy_you_00001,_you1_charaget02,e_you_00001_you1_charaget02_Normal_Red,幼稚園WARS,不良系金髪イケメン,暗殺者（近）_you1_charaget02,Normal,Defense,Red,1000,1,37,0.2,100,0,0.22,1,100,1.27,stop有0.5,20,-,-,,-,,zangeki_1,,
+,enemy_you_00101,_you1_charaget02,e_you_00101_you1_charaget02_Normal_Red,幼稚園WARS,イケメンじゃない殺し屋,暗殺者（遠）_you1_charaget02,Normal,Attack,Red,1000,2,30,0.6,100,0,0.62,1,100,1.27,0.56,20,-,-,,-,,shageki_1,,
+,chara_you_00201,_you1_savage01,c_you_00201_you1_savage01_Boss_Green,幼稚園WARS,ダグ,ダグ_you1_savage01,Boss,Attack,Green,50000,2,32,0.6,500,0,0.62,1,300,1.67,stop有:1回目 0.63,20,3.17,"stop無:1回目 1.00
+stop無:2回目 1.26
+stop無:3回目 1.50
+stop有:4回目 1.70",特殊効果なし,6,,shageki_1,,
+,chara_you_00301,_you1_savage01,c_you_00301_you1_savage01_Boss_Blue,幼稚園WARS,ハナ,ハナ_you1_savage01,Boss,Technical,Blue,50000,2,35,0.3,500,0,0.35,1,300,1.77,stop有:1回目 0.7,20,3.67,stop有 :1回目 2.2,範囲攻撃,8,,dageki_1,スタン,
+,chara_you_00301,_you1_savage01,c_you_00301_you1_savage01_Boss_Green,幼稚園WARS,ハナ,ハナ_you1_savage01,Boss,Technical,Green,50000,2,35,0.3,500,0,0.35,1,300,1.77,stop有:1回目 0.7,20,3.67,stop有 :1回目 2.2,範囲攻撃,8,,dageki_1,スタン,
+,chara_you_00001,_you1_savage01,c_you_00001_you1_savage01_Boss_Red,幼稚園WARS,元殺し屋の新人教諭 リタ,リタ_you1_savage01,Boss,Attack,Red,50000,2,45,0.2,500,0,0.22,1,300,1.34,stop有:1回目 0.45,10,1.77,"stop無:1回目 0.72
+stop無:2回目 0.88
+stop有:3回目 1.12",特殊効果なし,5,,dageki_1,,
+,chara_you_00101,_you1_savage01,c_you_00101_you1_savage01_Boss_Blue,幼稚園WARS,ルーク,ルーク_you1_savage01,Boss,Technical,Blue,50000,3,40,0.26,500,0,0.27,1,300,1.64,stop有:1回目 0.65,30,3.57,"stop無:1回目 0.97
+stop無:2回目 1.08
+stop無:3回目 1.2
+stop無:4回目 1.32
+stop有:5回目 1.48",特殊効果なし,5,,dageki_1,,
+,chara_you_00101,_you1_savage01,c_you_00101_you1_savage01_Boss_Green,幼稚園WARS,ルーク,ルーク_you1_savage01,Boss,Technical,Green,50000,3,40,0.26,500,0,0.27,1,300,1.64,stop有:1回目 0.65,30,3.57,"stop無:1回目 0.97
+stop無:2回目 1.08
+stop無:3回目 1.2
+stop無:4回目 1.32
+stop有:5回目 1.48",特殊効果なし,5,,dageki_1,,
+,enemy_you_00001,_you1_savage01,e_you_00001_you1_savage01_Normal_Colorless,幼稚園WARS,不良系金髪イケメン,暗殺者（近）_you1_savage01,Normal,Attack,Colorless,10000,2,37,0.2,100,0,0.22,1,100,1.27,stop有0.5,70,-,-,,-,,zangeki_1,,
+,enemy_you_00001,_you1_savage01_02,e_you_00001_you1_savage01_02_Normal_Colorless,幼稚園WARS,不良系金髪イケメン,暗殺者（近）_you1_savage01_02,Normal,Attack,Colorless,10000,2,37,0.2,80,0,0.22,1,100,1.27,stop有0.5,70,-,-,,-,,zangeki_1,毒,
+,enemy_you_00101,_you1_savage01,e_you_00101_you1_savage01_Normal_Colorless,幼稚園WARS,イケメンじゃない殺し屋,暗殺者（遠）_you1_savage01,Normal,Attack,Colorless,10000,2,30,0.6,100,0,0.62,1,100,1.27,0.56,70,-,-,,-,,shageki_1,,
+,enemy_you_00001,_you1_savage01,e_you_00001_you1_savage01_Normal_Green,幼稚園WARS,不良系金髪イケメン,暗殺者（近）_you1_savage01,Normal,Attack,Green,10000,2,37,0.2,100,0,0.22,1,100,1.27,stop有0.5,70,-,-,,-,,zangeki_1,,
+,enemy_you_00101,_you1_savage01,e_you_00101_you1_savage01_Normal_Green,幼稚園WARS,イケメンじゃない殺し屋,暗殺者（遠）_you1_savage01,Normal,Attack,Green,10000,2,30,0.6,100,0,0.62,1,100,1.27,0.56,70,-,-,,-,,shageki_1,,
+,chara_you_00201,_you1_challenge,c_you_00201_you1_challenge_Boss_Green,幼稚園WARS,ダグ,ダグ_you1_challenge,Boss,Technical,Green,10000,2,32,0.45,500,0,0.5,1,300,1.67,stop有:1回目 0.63,40,3.17,"stop無:1回目 1.00
+stop無:2回目 1.26
+stop無:3回目 1.50
+stop有:4回目 1.70",,6,,shageki_1,,
+,chara_you_00301,_you1_challenge,c_you_00301_you1_challenge_Boss_Green,幼稚園WARS,ハナ,ハナ_you1_challenge,Boss,Attack,Green,10000,2,35,0.25,500,0,0.3,1,300,1.77,stop有:1回目 0.7,40,3.67,stop有 :1回目 2.2,,8,,dageki_1,,
+,chara_you_00101,_you1_challenge,c_you_00101_you1_challenge_Boss_Blue,幼稚園WARS,ルーク,ルーク_you1_challenge,Boss,Technical,Blue,10000,3,40,0.26,500,0,0.27,1,300,1.64,stop有:1回目 0.65,30,3.57,"stop無:1回目 0.97
+stop無:2回目 1.08
+stop無:3回目 1.2
+stop無:4回目 1.32
+stop有:5回目 1.48",特殊効果なし,5,,dageki_1,,
+,chara_you_00301,_you1_challenge,c_you_00301_you1_challenge_Normal_Red,幼稚園WARS,ハナ,ハナ_you1_challenge,Normal,Defense,Red,10000,2,35,0.16,500,0,0.28,1,300,1.77,stop有:1回目 0.7,140,3.67,stop有 :1回目 2.2,使用しない,-,,dageki_1,範囲スタン攻撃,攻撃間隔長い・高確率＆長時間スタン・短射程
+,chara_you_00201,_you1_challenge,c_you_00201_you1_challenge_Normal_Green,幼稚園WARS,ダグ,ダグ_you1_challenge,Normal,Technical,Green,10000,2,32,0.45,500,0,0.5,1,300,1.67,stop有:1回目 0.63,70,3.17,"stop無:1回目 1.00
+stop無:2回目 1.26
+stop無:3回目 1.50
+stop有:4回目 1.70",使用しない,-,,shageki_1,毒＆ノックバック攻撃,
+,chara_you_00001,_you1_challenge,c_you_00001_you1_challenge_Boss_Green,幼稚園WARS,元殺し屋の新人教諭 リタ,リタ_you1_challenge,Boss,Attack,Green,10000,0,45,0.2,500,0,0.25,1,300,1.34,stop有:1回目 0.45,20,1.77,"stop無:1回目 0.72
+stop無:2回目 0.88
+stop有:3回目 1.12",範囲攻撃,5,,dageki_1,範囲攻撃,
+,enemy_glo_00001,_you1_challenge,e_glo_00001_you1_challenge_Normal_Green,GLOW,ファントム,ファントム_you1_challenge,Normal,Defense,Green,1000,2,30,0.17,100,0,0.19,1,30,1.00,0.50,50,,,特殊効果なし,-,,dageki_1,,
+,enemy_glo_00001,_you1_challenge,e_glo_00001_you1_challenge_Normal_Blue,GLOW,ファントム,ファントム_you1_challenge,Normal,Defense,Blue,1000,2,30,0.17,100,0,0.19,1,30,1.00,0.50,50,,,特殊効果なし,-,,dageki_1,,
+,enemy_glo_00001,_you1_challenge,e_glo_00001_you1_challenge_Normal_Red,GLOW,ファントム,ファントム_you1_challenge,Normal,Attack,Red,1000,2,30,0.17,100,0,0.19,1,30,1.00,0.50,50,,,特殊効果なし,-,,dageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,enemy_glo_00001,_kim1_savage,e_glo_00001_kim1_savage_Normal_Blue,GLOW,ファントム,ファントム_kim1_savage,Normal,Defense,Blue,100000,2,32,0.17,200,0,0.18,1,30,1.00,0.50,30,,,,-,,dageki_1,,
+,chara_kim_00101,_kim1_savage01,c_kim_00101_kim1_savage01_Boss_Blue,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里_kim1_savage01,Boss,Attack,Blue,100000,2,30,0.27,500,0,0.28,1,200,1.23,stop有:1回目 0.25,40,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",範囲に300%のダメージ+自身の攻撃を10秒間、10%Up,7,,dageki_1,,
+,chara_kim_00201,_kim1_savage01,c_kim_00201_kim1_savage01_Boss_Blue,君のことが大大大大大好きな100人の彼女,院田 唐音,院田唐音_kim1_savage01,Boss,Technical,Blue,100000,2,35,0.3,500,0,0.31,1,200,1.37,stop有:1回目 0.2,80,2.4,stop無 :1回目 1.2,範囲に100%ダメージ+攻撃20%Down,5,,dageki_1,,ノックバックなし
+,enemy_glo_00001,_kim1_savage,e_glo_00001_kim1_savage_Normal_Yellow,GLOW,ファントム,ファントム_kim1_savage,Normal,Attack,Yellow,100000,2,40,0.2,200,0,0.21,1,30,1.00,0.50,30,,,,-,,dageki_1,,
+,chara_kim_00101,_kim1_savage02,c_kim_00101_kim1_savage02_Boss_Yellow,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里_kim1_savage02,Boss,Defense,Yellow,100000,2,30,0.17,500,0,0.18,1,200,1.23,stop有:1回目 0.25,60,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",範囲に150%のダメージ+20秒間、自身が受けるダメージ30%カット,5,,dageki_1,,
+,chara_kim_00201,_kim1_savage02,c_kim_00201_kim1_savage02_Boss_Yellow,君のことが大大大大大好きな100人の彼女,院田 唐音,院田唐音_kim1_savage02,Boss,Technical,Yellow,100000,2,35,0.25,500,0,0.26,1,200,1.37,stop有:1回目 0.2,80,2.4,stop無 :1回目 1.2,範囲に100%ダメージ+攻撃20%Down,5,,dageki_1,,ノックバックなし
+,chara_kim_00301,_kim1_savage02,c_kim_00301_kim1_savage02_Boss_Yellow,君のことが大大大大大好きな100人の彼女,好本 静,好本 静_kim1_savage02,Boss,Support,Yellow,100000,3,32,0.3,300,0,0.31,1,200,1.75,stop有:1回目 0.78,75,3.6,stop無 :1回目 1.2,敵全体の体力を20%回復,4,,dageki_1,,ノックバックなし
+,enemy_glo_00001,_kim1_savage,e_glo_00001_kim1_savage_Normal_Red,GLOW,ファントム,ファントム_kim1_savage,Normal,Attack,Red,100000,2,40,0.2,200,0,0.21,1,30,1.00,0.50,30,,,,-,,dageki_1,,
+,chara_kim_00101,_kim1_savage03,c_kim_00101_kim1_savage03_Boss_Red,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里_kim1_savage03,Boss,Attack,Red,100000,2,30,0.23,500,0,0.24,1,200,1.23,stop有:1回目 0.25,60,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",範囲に300%のダメージ,5,,dageki_1,,ノックバックなし
+,chara_kim_00201,_kim1_savage03,c_kim_00201_kim1_savage03_Boss_Red,君のことが大大大大大好きな100人の彼女,院田 唐音,院田唐音_kim1_savage03,Boss,Technical,Red,100000,2,35,0.25,500,0,0.26,1,200,1.37,stop有:1回目 0.2,80,2.4,stop無 :1回目 1.2,範囲に100%ダメージ+攻撃20%Down,5,,dageki_1,,ノックバックなし
+,chara_kim_00301,_kim1_savage03,c_kim_00301_kim1_savage03_Boss_Red,君のことが大大大大大好きな100人の彼女,好本 静,好本 静_kim1_savage03,Boss,Support,Red,100000,3,32,0.3,300,0,0.31,1,200,1.75,stop有:1回目 0.78,75,3.6,stop無 :1回目 1.2,敵全体の体力を20%回復,4,,dageki_1,,ノックバックなし
+,chara_kim_00001,_kim1_savage03,c_kim_00001_kim1_savage03_Boss_Red,君のことが大大大大大好きな100人の彼女,溢れる母性 花園 羽々里,花園羽々里_kim1_savage03,Boss,Defense,Red,50000,2,40,0.18,300,0,0.19,1,200,1.3,stop有:1回目 0.67,50,2.5,"stop無:1回目 0.63
+stop無:2回目 0.8
+stop無:3回目 0.99
+stop無:4回目 1.2
+stop有:5回目 1.60",範囲に100%ダメージ+20秒間、自身が受けるダメージ30%カット,3,,dageki_1,,
+,chara_kim_00101,_kim1_1d1c,c_kim_00101_kim1_1d1c_Normal_Colorless,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里_kim1_1d1c,Normal,Attack,Colorless,10000,2,30,0.23,100,0,0.24,1,200,1.23,stop有:1回目 0.25,60,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",範囲に300%のダメージ,5,,dageki_1,,
+,chara_kim_00201,_kim1_1d1c,c_kim_00201_kim1_1d1c_Normal_Colorless,君のことが大大大大大好きな100人の彼女,院田 唐音,院田唐音_kim1_1d1c,Normal,Technical,Colorless,10000,2,35,0.25,100,0,0.26,1,200,1.37,stop有:1回目 0.2,70,2.4,stop無 :1回目 1.2,範囲に100%ダメージ,5,,dageki_1,,
+,chara_kim_00101,_kim1_charaget01,c_kim_00101_kim1_charaget01_Boss_Colorless,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里,Boss,Attack,Colorless,10000,2,30,0.23,100,0,0.24,1,200,1.23,stop有:1回目 0.25,60,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",範囲に300%のダメージ,5,,dageki_1,,ノックバックなし
+,chara_kim_00201,_kim1_charaget01,c_kim_00201_kim1_charaget01_Boss_Colorless,君のことが大大大大大好きな100人の彼女,院田 唐音,院田唐音_kim1_charaget01,Boss,Technical,Colorless,10000,2,35,0.25,100,0,0.26,1,200,1.37,stop有:1回目 0.2,70,2.4,stop無 :1回目 1.2,範囲に100%ダメージ,4,,dageki_1,,ノックバックなし
+,chara_kim_00101,_kim1_charaget01,c_kim_00101_kim1_charaget01_Normal_Colorless,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里,Normal,Attack,Colorless,10000,2,30,0.23,100,0,0.24,1,200,1.23,stop有:1回目 0.25,60,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",範囲に300%のダメージ,5,,dageki_1,,ノックバックなし
+,chara_kim_00201,_kim1_charaget01,c_kim_00201_kim1_charaget01_Normal_Colorless,君のことが大大大大大好きな100人の彼女,院田 唐音,院田唐音_kim1_charaget01,Normal,Technical,Colorless,10000,2,35,0.25,100,0,0.26,1,200,1.37,stop有:1回目 0.2,70,2.4,stop無 :1回目 1.2,範囲に100%ダメージ,4,,dageki_1,,ノックバックなし
+,chara_kim_00301,_kim1_charaget01,c_kim_00301_kim1_charaget01_Boss_Colorless,君のことが大大大大大好きな100人の彼女,好本 静,好本 静_kim1_charaget01,Boss,Support,Colorless,10000,3,32,0.3,100,0,0.31,1,200,1.75,stop有:1回目 0.78,75,3.6,stop無 :1回目 1.2,味方の攻撃20%Up,5,,dageki_1,,ノックバックなし
+,enemy_glo_00001,_kim1_charaget01,e_glo_00001_kim1_charaget01_Normal_Colorless,GLOW,ファントム,ファントム_kim1_charaget01,Normal,Attack,Colorless,10000,2,40,0.2,100,0,0.21,1,50,1.00,0.50,40,,,,-,,dageki_1,,
+,chara_kim_00101,_kim1_charaget02,c_kim_00101_kim1_charaget02_Boss_Red,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里,Boss,Attack,Red,10000,2,30,0.23,100,0,0.24,1,200,1.23,stop有:1回目 0.25,60,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",範囲に300%のダメージ,5,,dageki_1,,ノックバックなし
+,chara_kim_00201,_kim1_charaget02,c_kim_00201_kim1_charaget02_Boss_Red,君のことが大大大大大好きな100人の彼女,院田 唐音,院田唐音_kim1_charaget02,Boss,Technical,Red,10000,2,35,0.25,100,0,0.26,1,200,1.37,stop有:1回目 0.2,70,2.4,stop無 :1回目 1.2,範囲に100%ダメージ+攻撃10%Down,4,,dageki_1,,ノックバックなし
+,chara_kim_00301,_kim1_charaget02,c_kim_00301_kim1_charaget02_Boss_Red,君のことが大大大大大好きな100人の彼女,好本 静,好本 静_kim1_charaget02,Boss,Support,Red,10000,3,32,0.3,100,0,0.31,1,200,1.75,stop有:1回目 0.78,75,3.6,stop無 :1回目 1.2,味方の攻撃20%Up,5,,dageki_1,,ノックバックなし
+,enemy_glo_00001,_kim1_charaget02,e_glo_00001_kim1_charaget02_Normal_Colorless,GLOW,ファントム,ファントム_kim1_charaget02,Normal,Attack,Colorless,1000,2,40,0.2,100,0,0.21,1,50,1.00,0.50,40,,,,-,,dageki_1,,ノックバックなし
+,chara_kim_00001,_kim1_charaget02,c_kim_00001_kim1_charaget02_Boss_Red,君のことが大大大大大好きな100人の彼女,溢れる母性 花園 羽々里,花園羽々里_kim1_charaget02,Boss,Defense,Red,10000,1,40,0.18,100,0,0.19,1,200,1.3,stop有:1回目 0.67,50,2.5,"stop無:1回目 0.63
+stop無:2回目 0.8
+stop無:3回目 0.99
+stop無:4回目 1.2
+stop有:5回目 1.60",範囲に100%ダメージ+20秒間、自身が受けるダメージ30%カット,5,,dageki_1,,ノックバックなし
+,chara_kim_00001,_kim1_challenge,c_kim_00001_kim1_challenge_Boss_Red,君のことが大大大大大好きな100人の彼女,溢れる母性 花園 羽々里,花園羽々里_kim1_challenge,Boss,Defense,Red,50000,1,40,0.18,300,0,0.19,1,200,1.3,stop有:1回目 0.67,50,2.5,"stop無:1回目 0.63
+stop無:2回目 0.8
+stop無:3回目 0.99
+stop無:4回目 1.2
+stop有:5回目 1.60",,5,,dageki_1,,
+,chara_kim_00101,_kim1_challenge,c_kim_00101_kim1_challenge_Boss_Green,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里_kim1_challenge,Boss,Attack,Green,50000,2,30,0.23,300,0,0.24,1,200,1.23,stop有:1回目 0.25,60,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",,5,,dageki_1,,
+,chara_kim_00201,_kim1_challenge,c_kim_00201_kim1_challenge_Boss_Red,君のことが大大大大大好きな100人の彼女,院田 唐音,院田唐音_kim1_challenge,Boss,Technical,Red,50000,2,35,0.25,300,0,0.26,1,200,1.37,stop有:1回目 0.2,70,2.4,stop無 :1回目 1.2,,4,,dageki_1,,
+,chara_kim_00301,_kim1_challenge,c_kim_00301_kim1_challenge_Boss_Yellow,君のことが大大大大大好きな100人の彼女,好本 静,好本 静_kim1_challenge,Boss,Support,Yellow,50000,2,32,0.3,300,0,0.31,1,200,1.75,stop有:1回目 0.78,75,3.6,stop無 :1回目 1.2,,5,,dageki_1,,
+,chara_kim_00101,_kim1_challenge,c_kim_00101_kim1_challenge_Normal_Green,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里_kim1_challenge,Normal,Attack,Green,10000,2,30,0.23,300,0,0.24,1,200,1.23,stop有:1回目 0.25,60,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",,5,,dageki_1,,
+,chara_kim_00201,_kim1_challenge,c_kim_00201_kim1_challenge_Normal_Red,君のことが大大大大大好きな100人の彼女,院田 唐音,院田唐音_kim1_challenge,Normal,Technical,Red,10000,2,35,0.25,300,0,0.26,1,200,1.37,stop有:1回目 0.2,70,2.4,stop無 :1回目 1.2,,4,,dageki_1,,
+,enemy_glo_00001,_kim1_challenge,e_glo_00001_kim1_challenge_Normal_Red,GLOW,ファントム,ファントム_kim1_challenge,Normal,Attack,Red,10000,2,40,0.2,100,0,0.21,1,30,1.00,0.50,30,,,,-,,dageki_1,,
+,enemy_glo_00001,_kim1_challenge,e_glo_00001_kim1_challenge_Normal_Colorless,GLOW,ファントム,ファントム_kim1_challenge,Normal,Attack,Colorless,10000,2,40,0.2,100,0,0.21,1,30,1.00,0.50,30,,,,-,,dageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,chara_hut_00001,_hut1_1d1c,c_hut_00001_hut1_1d1c_Normal_Colorless,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_1d1c,Normal,Defense,Colorless,10000,1,35,0.21,100,0,0.32,1,200,1.47,stop有 :1回目 0.15,60,2.8,stop有:1回目 0.87,単体に200%の攻撃+中ノックバック攻撃,5,,dageki_1,,
+,enemy_hut_00001,_hut1_1d1c,e_hut_00001_hut1_1d1c_Normal_Colorless,ふつうの軽音部,鷹見 項希,鷹見 項希_hut1_1d1c,Normal,Attack,Colorless,10000,2,34,0.3,100,0,0.32,1,200,1.37,stop有:0.51,70,-,-,,-,,,,
+,chara_hut_00001,_hut1_charaget01,c_hut_00001_hut1_charaget01_Normal_Colorless,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_charaget01,Normal,Defense,Colorless,10000,1,35,0.21,100,0,0.32,1,200,1.47,stop有 :1回目 0.15,60,2.8,stop有:1回目 0.87,単体に200%の攻撃+中ノックバック攻撃,5,,dageki_1,,
+,enemy_glo_00001,_hut1_charaget01,e_glo_00001_hut1_charaget01_Normal_Blue,GLOW,ファントム,ファントム_hut1_charaget01,Normal,Attack,Blue,1000,3,40,0.2,100,0,0.21,1,50,1.00,0.50,30,,,,-,,dageki_1,,
+,chara_hut_00101,_hut1_charaget01,c_hut_00101_hut1_charaget01_Boss_Colorless,ふつうの軽音部,幸山 厘,幸山 厘_hut1_charaget01,Boss,Support,Colorless,10000,2,35,0.42,100,0,0.43,1,200,1.58,stop有 :1回目 0.75,60,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",範囲に200％攻撃＋味方の攻撃20%Up,6,,dageki_1,,
+,chara_hut_00201,_hut1_charaget01,c_hut_00201_hut1_charaget01_Boss_Colorless,ふつうの軽音部,内田 桃,内田 桃_hut1_charaget01,Boss,Technical,Colorless,10000,2,35,0.5,100,0,0.52,1,200,1.2,stop有 :1回目 0.34,60,2.84,"stop無:1回目 1.1
+stop無:2回目 1.44
+stop有:3回目 1.97",単体に攻撃+50%の確率で3秒のスタン攻撃,5,,dageki_1,,
+,chara_hut_00301,_hut1_charaget01,c_hut_00301_hut1_charaget01_Boss_Colorless,ふつうの軽音部,藤井 彩目,藤井 彩目_hut1_charaget01,Boss,Attack,Colorless,10000,2,35,0.42,100,0,0.43,1,200,1.33,stop有 :1回目 0.33,60,2.42,"stop無:1回目 0.3
+stop無:2回目 0.61
+stop無:3回目 0.93
+stop無:4回目 1.25
+stop有:5回目 1.6",範囲に300%のダメージ,6,,dageki_1,,
+,chara_hut_00101,_hut1_charaget02,c_hut_00101_hut1_charaget02_Normal_Yellow,ふつうの軽音部,幸山 厘,幸山 厘_hut1_charaget02,Normal,Support,Yellow,1000,2,35,0.42,100,0,0.43,1,200,1.58,stop有 :1回目 0.75,60,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",範囲に200％攻撃＋味方の攻撃20%Up,6,,dageki_1,,
+,enemy_glo_00001,_hut1_charaget02,e_glo_00001_hut1_charaget02_Normal_Colorless,GLOW,ファントム,ファントム_hut1_charaget02,Normal,Attack,Colorless,1000,3,40,0.2,100,0,0.21,1,50,1.00,0.50,30,,,,-,,dageki_1,,
+,chara_hut_00001,_hut1_charaget02,c_hut_00001_hut1_charaget02_Boss_Yellow,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_charaget02,Boss,Defense,Yellow,10000,1,35,0.21,100,0,0.32,1,200,1.47,stop有 :1回目 0.15,60,2.8,stop有:1回目 0.87,単体に200%の攻撃+100％スタン攻撃,5,,dageki_1,,
+,chara_hut_00201,_hut1_charaget02,c_hut_00201_hut1_charaget02_Normal_Yellow,ふつうの軽音部,内田 桃,内田 桃_hut1_charaget02,Normal,Technical,Yellow,1000,2,35,0.5,100,0,0.52,1,200,1.2,stop有 :1回目 0.34,60,2.84,"stop無:1回目 1.1
+stop無:2回目 1.44
+stop有:3回目 1.97",単体に攻撃+50%の確率で3秒のスタン攻撃,5,,dageki_1,,
+,chara_hut_00301,_hut1_charaget02,c_hut_00301_hut1_charaget02_Normal_Yellow,ふつうの軽音部,藤井 彩目,藤井 彩目_hut1_charaget02,Normal,Attack,Yellow,1000,2,35,0.42,100,0,0.43,1,200,1.33,stop有 :1回目 0.33,60,2.42,"stop無:1回目 0.3
+stop無:2回目 0.61
+stop無:3回目 0.93
+stop無:4回目 1.25
+stop有:5回目 1.6",範囲に300%のダメージ+50%の確率で3秒のスタン攻撃,6,,dageki_1,,
+,chara_hut_00001,_hut1_challenge1,c_hut_00001_hut1_challenge1_Boss_Green,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_challenge1,Boss,Defense,Green,10000,1,35,0.21,100,0,0.43,1,300,1.47,stop有 :1回目 0.15,60,2.8,stop有:1回目 0.87,単体に200%の攻撃+中ノックバック攻撃,5,,dageki_1,,
+,chara_hut_00001,_hut1_challenge2,c_hut_00001_hut1_challenge2_Boss_Blue,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_challenge2,Boss,Defense,Blue,10000,1,35,0.21,100,0,0.32,1,300,1.47,stop有 :1回目 0.15,60,2.8,stop有:1回目 0.87,単体に200%の攻撃+中ノックバック攻撃,5,,dageki_1,,
+,chara_hut_00101,_hut1_challenge2,c_hut_00101_hut1_challenge2_Normal_Blue,ふつうの軽音部,幸山 厘,幸山 厘_hut1_challenge2,Normal,Support,Blue,10000,2,35,0.42,100,0,0.43,1,300,1.58,stop有 :1回目 0.75,60,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",範囲に200％攻撃＋味方の攻撃20%Up,6,,dageki_1,,
+,chara_hut_00001,_hut1_challeng3,c_hut_00001_hut1_challeng3_Boss_Red,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_challeng3,Boss,Defense,Red,10000,1,35,0.21,100,0,0.32,1,150,1.47,stop有 :1回目 0.15,60,2.8,stop有:1回目 0.87,単体に200%の攻撃+中ノックバック攻撃,5,,dageki_1,,
+,chara_hut_00101,_hut1_challeng3,c_hut_00101_hut1_challeng3_Normal_Red,ふつうの軽音部,幸山 厘,幸山 厘_hut1_challeng3,Normal,Support,Red,10000,2,35,0.42,100,0,0.43,1,150,1.58,stop有 :1回目 0.75,60,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",範囲に200％攻撃＋味方の攻撃20%Up,6,,dageki_1,,
+,chara_hut_00201,_hut1_challeng3,c_hut_00201_hut1_challeng3_Normal_Red,ふつうの軽音部,内田 桃,内田 桃_hut1_challeng3,Normal,Technical,Red,10000,2,35,0.5,100,0,0.52,1,300,1.2,stop有 :1回目 0.34,60,2.84,"stop無:1回目 1.1
+stop無:2回目 1.44
+stop有:3回目 1.97",単体に攻撃+50%の確率で1秒のスタン攻撃,5,,dageki_1,,
+,chara_hut_00001,_hut1_challenge4,c_hut_00001_hut1_challenge4_Boss_Yellow,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_challenge4,Boss,Defense,Yellow,10000,1,35,0.21,100,0,0.32,1,300,1.47,stop有 :1回目 0.15,60,2.8,stop有:1回目 0.87,単体に200%の攻撃+中ノックバック攻撃,5,,dageki_1,,
+,chara_hut_00101,_hut1_challenge4,c_hut_00101_hut1_challenge4_Normal_Yellow,ふつうの軽音部,幸山 厘,幸山 厘_hut1_challenge4,Normal,Support,Yellow,10000,2,35,0.42,100,0,0.43,1,300,1.58,stop有 :1回目 0.75,60,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",範囲に200％攻撃＋味方の攻撃20%Up,6,,dageki_1,,
+,chara_hut_00201,_hut1_challenge4,c_hut_00201_hut1_challenge4_Normal_Yellow,ふつうの軽音部,内田 桃,内田 桃_hut1_challenge4,Normal,Technical,Yellow,10000,2,35,0.5,100,0,0.52,1,300,1.2,stop有 :1回目 0.34,60,2.84,"stop無:1回目 1.1
+stop無:2回目 1.44
+stop有:3回目 1.97",単体に攻撃+50%の確率で1秒のスタン攻撃,5,,dageki_1,,
+,chara_hut_00301,_hut1_challenge4,c_hut_00301_hut1_challenge4_Normal_Yellow,ふつうの軽音部,藤井 彩目,藤井 彩目_hut1_challenge4,Normal,Technical,Yellow,10000,2,35,0.5,100,0,0.52,1,300,1.33,stop有 :1回目 0.33,60,2.42,"stop無:1回目 0.3
+stop無:2回目 0.61
+stop無:3回目 0.93
+stop無:4回目 1.25
+stop有:5回目 1.6",範囲に300%のダメージ+50%の確率で1秒のスタン攻撃,6,,dageki_1,,
+,enemy_hut_00001,_hut1_challenge,e_hut_00001_hut1_challenge_Normal_Colorless,ふつうの軽音部,鷹見 項希,鷹見 項希_hut1_challenge,Normal,Attack,Colorless,1000,2,34,0.3,100,0,0.32,1,500,1.37,stop有:0.51,70,-,-,,-,,,,
+,enemy_glo_00001,_hut1_challenge,e_glo_00001_hut1_challenge_Normal_Colorless,GLOW,ファントム,ファントム_hut1_challenge,Normal,Attack,Colorless,1000,2,40,0.2,100,0,0.21,1,100,1.00,0.50,30,,,,-,,dageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,enemy_glo_00001,_hut1_savage01,e_glo_00001_hut1_savage01_Normal_Colorless,GLOW,ファントム,ファントム_hut1_savage01,Normal,Attack,Colorless,10000,2,40,0.18,100,0,0.19,1,50,1.00,0.50,40,,,,-,,dageki_1,,
+,chara_hut_00001,_hut1_savage01,c_hut_00001_hut1_savage01_Boss_Colorless,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_savage01,Boss,Defense,Colorless,100000,1,35,0.15,500,0,0.16,1,50,1.47,stop有 :1回目 0.15,50,2.8,stop有:1回目 0.87,範囲に100%ダメージ+15秒間、自身が受けるダメージ30%カット,7,,dageki_1,,
+,chara_hut_00101,_hut1_savage01,c_hut_00101_hut1_savage01_Boss_Colorless,ふつうの軽音部,幸山 厘,幸山 厘_hut1_savage01,Boss,Attack,Colorless,100000,3,28,0.3,500,0,0.31,1,50,1.58,stop有 :1回目 0.75,70,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",範囲に200%ダメージ+場面全体の敵キャラの攻撃10秒間、10%UP,5,,dageki_1,,
+,enemy_glo_00001,_hut1_savage02_poison,e_glo_00001_hut1_savage02_poison_Normal_Red,GLOW,ファントム,ファントム_hut1_savage02_poison,Normal,Technical,Red,10000,2,40,0.2,100,0,0.21,1,50,1.00,0.50,80,,,,-,,dageki_1,単体に2%の毒にする(12秒間),
+,chara_hut_00001,_hut1_savage02,c_hut_00001_hut1_savage02_Boss_Red,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_savage02,Boss,Defense,Red,100000,1,35,0.15,500,0,0.16,1,50,1.47,stop有 :1回目 0.15,50,2.8,stop有:1回目 0.87,範囲に100%ダメージ+15秒間、自身が受けるダメージ30%カット,7,,dageki_1,,
+,chara_hut_00101,_hut1_savage02,c_hut_00101_hut1_savage02_Boss_Red,ふつうの軽音部,幸山 厘,幸山 厘_hut1_savage02,Boss,Support,Red,100000,3,28,0.35,500,0,0.36,1,50,1.58,stop有 :1回目 0.75,70,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",連続5回の範囲に200%ダメージ+場面全体の敵キャラの攻撃10秒間、10%UP,5,,dageki_1,,
+,chara_hut_00201,_hut1_savage02,c_hut_00201_hut1_savage02_Boss_Red,ふつうの軽音部,内田 桃,内田 桃_hut1_savage02,Boss,Technical,Red,100000,2,24,0.5,500,0,0.51,1,50,1.2,stop有 :1回目 0.34,75,2.84,"stop無:1回目 1.1
+stop無:2回目 1.44
+stop有:3回目 1.97",連続3回の範囲に120%ダメージ+最後の攻撃がヒットした場合、5%の毒にする(12秒間),6,,dageki_1,,
+,enemy_glo_00001,_hut1_savage03,e_glo_00001_hut1_savage03_Normal_Yellow,GLOW,ファントム,ファントム_hut1_savage03,Normal,Attack,Yellow,10000,2,40,0.18,100,0,0.19,1,50,1.00,0.50,40,,,,-,,dageki_1,,
+,enemy_glo_00001,_hut1_savage03_tank,e_glo_00001_hut1_savage03_tank_Normal_Yellow,GLOW,ファントム,ファントム_hut1_savage03_tank,Normal,Defense,Yellow,100000,2,40,0.13,100,0,0.14,1,50,1.00,0.50,80,,,,-,,dageki_1,,
+,chara_hut_00001,_hut1_savage03,c_hut_00001_hut1_savage03_Boss_Yellow,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_savage03,Boss,Defense,Yellow,100000,1,35,0.15,500,0,0.16,1,50,1.47,stop有 :1回目 0.15,50,2.8,stop有:1回目 0.87,範囲に100%ダメージ+15秒間、自身が受けるダメージ30%カット,7,ノックバック無効,dageki_1,,
+,chara_hut_00101,_hut1_savage03,c_hut_00101_hut1_savage03_Boss_Yellow,ふつうの軽音部,幸山 厘,幸山 厘_hut1_savage03,Boss,Support,Yellow,50000,3,28,0.35,500,0,0.36,1,50,1.58,stop有 :1回目 0.75,70,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",連続5回の範囲範囲に200%ダメージ+場面全体の敵キャラの攻撃10秒間、10%UP,5,,dageki_1,,
+,chara_hut_00201,_hut1_savage03,c_hut_00201_hut1_savage03_Boss_Yellow,ふつうの軽音部,内田 桃,内田 桃_hut1_savage03,Boss,Technical,Yellow,50000,2,24,0.5,500,0,0.51,1,50,1.2,stop有 :1回目 0.34,75,2.84,"stop無:1回目 1.1
+stop無:2回目 1.44
+stop有:3回目 1.97",連続3回の範囲に120%ダメージ+最後の攻撃がヒットした場合、5秒間スタン状態にする,6,,dageki_1,,
+,chara_hut_00301,_hut1_savage03,c_hut_00301_hut1_savage03_Boss_Yellow,ふつうの軽音部,藤井 彩目,藤井 彩目_hut1_savage03,Boss,Attack,Yellow,50000,3,30,0.38,500,0,0.39,1,50,1.33,stop有 :1回目 0.33,65,2.42,"stop無:1回目 0.3
+stop無:2回目 0.61
+stop無:3回目 0.93
+stop無:4回目 1.25
+stop有:5回目 1.6",連続5回の範囲範囲に300%ダメージ,7,,dageki_1,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,chara_ara_00001,_glo2_charaget01,c_ara_00001_glo2_charaget01_Normal_Yellow,アラガネの子,灰,灰（アラガネの子）_glo2_charaget01,Normal,Attack,Yellow,10000,2,34,0.41,100,0,0.42,1,200,1.37,stop有 :1回目 0.3,50,2.67,stop有 : 0.7,範囲に100%ダメージ+10秒間、自身が受けるダメージ10%カット,5,,zangeki_1,,
+,chara_ara_00001,_glo2_charaget01,c_ara_00001_glo2_charaget01_Boss_Yellow,アラガネの子,灰,灰（アラガネの子）_glo2_charaget01,Boss,Attack,Yellow,10000,2,34,0.41,100,0,0.42,1,200,1.37,stop有 :1回目 0.3,50,2.67,stop有 : 0.7,範囲に100%ダメージ+10秒間、自身が受けるダメージ10%カット,5,,zangeki_1,,
+,enemy_glo_00001,_glo2_charaget01,e_glo_00001_glo2_charaget01_Normal_Yellow,GLOW,ファントム,ファントム_glo2_charaget01,Normal,Attack,Yellow,1000,3,40,0.2,100,0,0.21,1,50,1.00,0.50,30,,,,-,,dageki_1,,
+,chara_sur_00901,_glo2_1d1c,c_sur_00901_glo2_1d1c_Normal_Colorless,魔都精兵のスレイブ,万物を統べる総組長 山城 恋,山城 恋_glo2_1d1c,Normal,Attack,Colorless,10000,1,30,0.39,300,0,0.18,1,500,1.17,stop有 : 0.43,100,2.92,stop有 : 1.31,,-,,,,
+,chara_kai_00102,_glo2_1d1c,c_kai_00102_glo2_1d1c_Normal_Colorless,怪獣８号,識別怪獣兵器6 市川 レノ,識別怪獣兵器6 市川 レノ_glo2_1d1c,Normal,Technical,Colorless,10000,1,30,0.61,300,0,0.18,1,500,1.77,"stop無:1回目 0.5
+stop無:2回目 0.58
+stop有:3回目 0.63",100,,,,,,,,
+,chara_gam_00001,_glo2_1d1c,c_gam_00001_glo2_1d1c_Normal_Colorless,ゲーミングお嬢様,祥龍院 隆子,祥龍院隆子_glo2_1d1c,Normal,Attack,Colorless,10000,1,30,0.27,300,0,0.18,1,500,1.08,stop有 : 0.55,100,,,,,,,,
+,chara_hyp_00001,_glo2_1d1c,c_hyp_00001_glo2_1d1c_Normal_Colorless,ハイパーインフレーション,ルーク,ルーク_glo2_1d1c,Normal,Support,Colorless,10000,1,30,0.21,300,0,0.18,1,500,1.57,stop有 :1回目 0.45,100,,,,,,,,
+,chara_ara_00001,_glo2_1d1c,c_ara_00001_glo2_1d1c_Normal_Colorless,アラガネの子,灰,灰（アラガネの子）_glo2_1d1c,Normal,Attack,Colorless,10000,1,30,0.41,300,0,0.18,1,500,1.37,stop有 :1回目 0.3,100,,,,,,,,
+,chara_hyp_00001,_glo2_charaget02,c_hyp_00001_glo2_charaget02_Boss_Blue,ハイパーインフレーション,ルーク,ルーク_glo2_charaget02,Boss,Support,Blue,10000,2,35,0.21,100,0,0.33,1,200,1.57,stop有 :1回目 0.45,100,2.45,stop無:1回目 0.85,味方の攻撃20%Up,4,,dageki_1,,
+,chara_hyp_00001,_glo2_charaget02,c_hyp_00001_glo2_charaget02_Boss_Red,ハイパーインフレーション,ルーク,ルーク_glo2_charaget02,Boss,Support,Red,10000,2,35,0.21,100,0,0.33,1,200,1.57,stop有 :1回目 0.45,100,2.45,stop無:1回目 0.85,味方の攻撃20%Up,4,,dageki_1,,
+,enemy_glo_00001,_glo2_charaget02,e_glo_00001_glo2_charaget02_Normal_Colorless,GLOW,ファントム,ファントム_glo2_charaget02,Normal,Attack,Colorless,1000,2,34,0.21,100,0,0.22,1,100,1.00,0.50,,,,,-,,dageki_1,,
+,chara_gam_00001,_glo2_challenge,c_gam_00001_glo2_challenge_Boss_Blue,ゲーミングお嬢様,祥龍院 隆子,祥龍院隆子_glo2_challenge,Boss,Attack,Blue,10000,2,25,0.27,100,0,0.28,1,300,1.08,stop有 : 0.55,40,3.45,stop有 : 0.73,自身の攻撃50%Up,7,,dageki_1,,
+,enemy_glo_00001,_glo2_challenge,e_glo_00001_glo2_challenge_Normal_Blue,GLOW,ファントム,ファントム_glo2_challenge,Normal,Attack,Blue,1000,3,40,0.2,100,0,0.21,1,50,1.00,0.50,30,,,,-,,dageki_1,,
+,enemy_glo_00101,_glo2_challenge,e_glo_00101_glo2_challenge_Boss_Blue,GLOW,ボスファントム,中ボスエネミー_glo2_challenge,Boss,Attack,Blue,10000,2,55,0.28,100,0,0.3,100,10,1.17,stop有:1回目 0.56,200,-,-,,-,,,,
+,chara_gam_00001,_glo2_challenge,c_gam_00001_glo2_challenge_Boss_Yellow,ゲーミングお嬢様,祥龍院 隆子,祥龍院隆子_glo2_challenge,Boss,Attack,Yellow,10000,2,25,0.27,100,0,0.28,1,300,1.08,stop有 : 0.55,40,3.45,stop有 : 0.73,自身の攻撃50%Up,7,,dageki_1,,
+,enemy_glo_00001,_glo2_challenge,e_glo_00001_glo2_challenge_Normal_Yellow,GLOW,ファントム,ファントム_glo2_challenge,Normal,Attack,Yellow,1000,3,40,0.2,100,0,0.21,1,50,1.00,0.50,30,,,,-,,dageki_1,,
+,chara_gam_00001,_glo2_challenge,c_gam_00001_glo2_challenge_Boss_Red,ゲーミングお嬢様,祥龍院 隆子,祥龍院隆子_glo2_challenge,Boss,Attack,Red,10000,2,25,0.27,100,0,0.28,1,300,1.08,stop有 : 0.55,40,3.45,stop有 : 0.73,自身の攻撃50%Up,7,,dageki_1,,
+,enemy_glo_00001,_glo2_challenge,e_glo_00001_glo2_challenge_Normal_Red,GLOW,ファントム,ファントム_glo2_challenge,Normal,Attack,Red,1000,3,40,0.2,100,0,0.21,1,50,1.00,0.50,30,,,,-,,dageki_1,,
+,enemy_glo_00101,_glo2_challenge,e_glo_00101_glo2_challenge_Boss_Red,GLOW,ボスファントム,中ボスエネミー_glo2_challenge,Boss,Attack,Red,10000,2,55,0.28,100,0,0.3,100,10,1.17,stop有:1回目 0.56,200,-,-,,-,,,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,,
