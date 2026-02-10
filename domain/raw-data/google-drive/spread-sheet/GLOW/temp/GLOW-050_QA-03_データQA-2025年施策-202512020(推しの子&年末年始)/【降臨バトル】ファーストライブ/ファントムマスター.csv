@@ -1,0 +1,263 @@
+,※同IDが存在してないように使用用途を識別に入力する。　「general」や「normal_01only」など,,,,,,,※手打ち可能,,,,,,,,,,,,,,,,,,,,
+,master_id,識別,enemy_ID,作品,キャラ名(監修名),識別キャラ名,unit_kind,role_type,color,HP,knock_back,move_speed,well_distance,attack_power,start_range,end_range,攻撃範囲,撃破リーダーP,通常攻撃モーション秒,通常攻撃発生秒,通常攻撃CDF,必殺攻撃モーション秒,必殺攻撃発生秒,必殺ワザ内容,必殺発動回数,特性,オノマトペ,通常攻撃備考
+,enemy_kai_00301,_kai1_advent,e_kai_00301_kai1_advent_Normal_Colorless,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_kai1_advent,Normal,Defense,Colorless,10000,2,31,0.17,300,0,0.18,1,200,1.00,0.40,50,-,-,,-,,dageki_1,
+,enemy_kai_00301,_kai1_advent,e_kai_00301_kai1_advent_Boss_Red,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_kai1_advent,Boss,Attack,Red,10000,3,37,0.19,300,0,0.2,1,100,1.00,0.40,75,-,-,,-,,dageki_1,
+,enemy_kai_00301,_kai1_advent,e_kai_00301_kai1_advent_Boss_Blue,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_kai1_advent,Boss,Attack,Blue,10000,3,40,0.18,300,0,0.19,1,100,1.00,0.40,100,-,-,,-,,dageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,enemy_kai_00101,_kai1_advent,e_kai_00101_kai1_advent_Normal_Colorless,怪獣８号,怪獣 余獣,怪獣 余獣_kai1_advent,Normal,Defense,Colorless,10000,3,21,0.22,500,0,0.23,1,200,1.23,stop有:1回目 0.56,50,-,-,,-,,dageki_1,
+,enemy_kai_00101,_kai1_advent,e_kai_00101_kai1_advent_Boss_Red,怪獣８号,怪獣 余獣,怪獣 余獣_kai1_advent,Boss,Attack,Red,10000,2,25,0.19,500,0,0.2,1,100,1.23,stop有:1回目 0.56,75,-,-,,-,,dageki_1,
+,enemy_kai_00101,_kai1_advent,e_kai_00101_kai1_advent_Boss_Blue,怪獣８号,怪獣 余獣,怪獣 余獣_kai1_advent,Boss,Attack,Blue,10000,2,28,0.17,500,0,0.18,1,100,1.23,stop有:1回目 0.56,100,-,-,,-,,dageki_1,
+,,,,,none,,,,,,,,,,,,,,,,,,,,,,,
+,enemy_kai_00001,_kai1_advent,e_kai_00001_kai1_advent_Normal_Colorless,怪獣８号,怪獣 本獣,怪獣 本獣_kai1_advent,Normal,Attack,Colorless,10000,3,25,0.3,500,0,0.4,100,100,2.34,stop有:1回目 1.00,100,-,-,,-,,dageki_1,
+,enemy_kai_00001,_kai1_advent,e_kai_00001_kai1_advent_Boss_Red,怪獣８号,怪獣 本獣,怪獣 本獣_kai1_advent,Boss,Attack,Red,10000,3,21,0.35,500,0,0.45,100,300,2.34,stop有:1回目 1.00,150,-,-,,-,,dageki_1,
+,enemy_kai_00001,_kai1_advent,e_kai_00001_kai1_advent_Boss_Blue,怪獣８号,怪獣 本獣,怪獣 本獣_kai1_advent,Boss,Attack,Blue,10000,3,23,0.31,500,0,0.41,100,300,2.34,stop有:1回目 1.00,125,-,-,,-,,dageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,enemy_kai_00401,_kai1_advent,e_kai_00401_kai1_advent_Boss_Red,怪獣８号,怪獣１０号,怪獣１０号_kai1_advent,Boss,Attack,Red,100000,2,65,0.22,2000,0,0.23,1,500,1.30,stop有:1回目 0.55,25,-,-,,-,,dageki_1,
+,enemy_kai_00401,_kai1_advent,e_kai_00401_kai1_advent_Boss_Blue,怪獣８号,怪獣１０号,怪獣１０号_kai1_advent,Boss,Attack,Blue,100000,2,70,0.2,2000,0,0.21,1,500,1.30,stop有:1回目 0.55,100,-,-,,-,,dageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,enemy_spy_00001,_frankyget,e_spy_00001_frankyget_Normal_Colorless,SPY×FAMILY,密輸組織の残党,密輸組織の残党_frankyget,Normal,Attack,Colorless,5000,3,25,0.32,300,0,0.33,1,250,1.00,0.17,50,-,-,,-,,shageki_1,
+,enemy_spy_00001,_spy1savage,e_spy_00001_spy1savage_Normal_Colorless,SPY×FAMILY,密輸組織の残党,密輸組織の残党_spy1savage,Normal,Attack,Colorless,5000,3,70,0.32,300,0,0.33,1,250,1.00,0.17,50,-,-,,-,,shageki_1,
+,chara_spy_00401,_frankyget,c_spy_00401_frankyget_Boss_Colorless,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_frankyget,Boss,Defense,Colorless,40000,3,30,0.17,100,0,0.18,1,500,1.20,0.50,60,2.75,1.34,単体に150%ダメージ,7,,dageki_2,
+,chara_spy_00401,_frankyget,c_spy_00401_frankyget_Boss_Red,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_frankyget,Boss,Technical,Red,40000,3,28,0.18,100,0,0.19,1,500,1.20,0.50,30,2.75,1.34,単体に100%ダメージ+6秒間、小ノックバック攻撃,3,,dageki_2,
+,enemy_spy_00101,_spy1challenge,e_spy_00101_spy1challenge_Normal_Red,SPY×FAMILY,グエン,グエン_spy1challenge,Normal,Attack,Red,5000,2,30,0.18,200,0,0.19,1,250,1.20,0.50,75,-,-,,-,,dageki_1,
+,enemy_spy_00001,_damianget,e_spy_00001_damianget_Normal_Red,SPY×FAMILY,密輸組織の残党,密輸組織の残党_damianget,Normal,Attack,Red,5000,3,25,0.32,300,0,0.33,1,250,1.00,0.17,50,-,-,,-,,shageki_1,
+,chara_spy_00201,_damianget,c_spy_00201_damianget_Boss_Red,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_damianget,Boss,Attack,Red,40000,2,40,0.22,500,0,0.28,1,500,1.42,stop無:1回目 0.61,85,2.50,stop有:1回目 0.73,敵複数体に200%ダメージ,5,,zangeki_1,
+,chara_spy_00501,_spy1_advent,c_spy_00501_spy1_advent_Boss_Red,SPY×FAMILY,姉を想う盲愛 ユーリ・ブライア,ユーリ・ブライア_spy1_advent,Boss,Defense,Red,100000,2,25,0.17,100,0,0.18,1,500,1.13,stop有:1回目 0.33,50,2.33,stop無:1回目 1.17,20秒間、自身が受けるダメージ20%カット,6,,dageki_1,
+,chara_spy_00101,_damianget,c_spy_00101_damianget_Boss_Red,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_damianget,Boss,Attack,Red,25000,1,30,0.35,400,0,0.36,1,500,1.64,0.83,80,2.50,1.33,単体に200%ダメージ,5,,shageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,enemy_glo_00001,_dan1_advent,e_glo_00001_dan1_advent_Normal_Colorless,GLOW,ファントム,ファントム_dan1_advent,Normal,Attack,Colorless,10000,2,40,0.22,500,0,0.23,1,50,1.00,0.50,50,,,,-,,dageki_1,
+,enemy_glo_00001,_dan1_advent,e_glo_00001_dan1_advent_Normal_Yellow,GLOW,ファントム,ファントム_dan1_advent,Normal,Attack,Yellow,10000,2,35,0.23,500,0,0.24,1,50,1.00,0.50,50,,,,-,,dageki_1,
+,enemy_dan_00001,_dan1_advent,e_dan_00001_dan1_advent_Normal_Colorless,ダンダダン,セルポ星人,セルポ星人_dan1_advent,Normal,Attack,Colorless,30000,3,25,0.25,200,0,0.26,1,100,1.16,0.50,50,-,-,,-,,dageki_1,
+,enemy_dan_00001,_dan1_advent,e_dan_00001_dan1_advent_Boss_Colorless,ダンダダン,セルポ星人,セルポ星人_dan1_advent,Boss,Attack,Colorless,10000,3,28,0.23,100,0,0.24,1,100,1.16,0.50,40,-,-,,-,,dageki_1,
+,enemy_dan_00001,_dan1_advent_trans1,e_dan_00001_dan1_advent_trans1_Boss_Colorless,ダンダダン,セルポ星人,セルポ星人_dan1_advent_trans1,Boss,Attack,Colorless,10000,3,28,0.23,100,0,0.24,1,100,1.16,0.50,40,-,-,,-,,dageki_1,
+,enemy_dan_00001,_dan1_advent,e_dan_00001_dan1_advent_Normal_Yellow,ダンダダン,セルポ星人,セルポ星人_dan1_advent,Normal,Technical,Yellow,30000,3,30,0.25,200,0,0.26,1,100,1.16,0.50,30,-,-,,-,,dageki_1,
+,enemy_dan_00101,_dan1_advent_trans1,e_dan_00101_dan1_advent_trans1_Normal_Colorless,ダンダダン,セルポ星人(変身),セルポ星人（変身）_dan1_advent_trans1,Normal,Attack,Colorless,10000,2,35,0.24,200,0,0.25,1,100,1.40,0.70,70,-,-,,-,,dageki_1,小ノックバック
+,enemy_dan_00101,_dan1_advent,e_dan_00101_dan1_advent_Boss_Colorless,ダンダダン,セルポ星人(変身),セルポ星人（変身）_dan1_advent,Boss,Attack,Colorless,50000,3,32,0.25,300,0,0.32,100,100,1.40,0.70,100,-,-,,-,,dageki_1,
+,enemy_dan_00101,_dan1_advent,e_dan_00101_dan1_advent_Normal_Yellow,ダンダダン,セルポ星人(変身),セルポ星人（変身）_dan1_advent,Normal,Attack,Yellow,50000,4,28,0.25,300,0,0.33,100,100,1.40,0.70,100,-,-,,-,,dageki_1,
+,enemy_dan_00101,_dan1_advent,e_dan_00101_dan1_advent_Boss_Yellow,ダンダダン,セルポ星人(変身),セルポ星人（変身）_dan1_advent,Boss,Attack,Yellow,50000,4,28,0.25,300,0,0.33,100,100,1.40,0.70,100,-,-,,-,,dageki_1,
+,enemy_dan_00201,_dan1_advent,e_dan_00201_dan1_advent_Boss_Yellow,ダンダダン,ターボババア,ターボババア_dan1_advent,Boss,Technical,Yellow,100000,2,50,0.24,500,0,0.25,1,100,1.50,0.40,25,-,-,,-,,dageki_1,中ノックバック
+,enemy_dan_00301,_dan1_advent,e_dan_00301_dan1_advent_Boss_Yellow,ダンダダン,アクロバティックさらさら,アクロバティックさらさら_dan1_advent,Boss,Technical,Yellow,100000,3,45,0.24,300,0,0.3,100,200,1.20,0.27,80,-,-,,-,,dageki_1,100%の確率で1秒間、スタン攻撃
+,enemy_dan_00301,_airaget,e_dan_00301_airaget_Boss_Colorless,ダンダダン,アクロバティックさらさら,アクロバティックさらさら_airaget,Boss,Attack,Colorless,40000,2,35,0.24,300,0,0.3,100,200,1.20,0.27,50,-,-,,-,,dageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,enemy_mag_00101,_mag1_advent,e_mag_00101_mag1_advent_Normal_Colorless,株式会社マジルミエ,つらら,つらら_mag1_advent,Normal,Technical,Colorless,1000,1,80,0.11,400,0,0.25,1,0,0.37,stop有:1回目 0.20,50,-,-,,-,,zangeki_1,小ノックバック+自身に即死ダメージ
+,enemy_mag_00101,_mag1_advent,e_mag_00101_mag1_advent_Normal_Red,株式会社マジルミエ,つらら,つらら_mag1_advent,Normal,Technical,Red,1000,1,80,0.11,400,0,0.25,1,0,0.37,stop有:1回目 0.20,50,-,-,,-,,zangeki_1,100%の確率で、2秒間氷結状態を付与+自身に即死ダメージ
+,enemy_mag_00101,_mag1_advent,e_mag_00101_mag1_advent_Normal_Blue,株式会社マジルミエ,つらら,つらら_mag1_advent,Normal,Technical,Blue,1000,1,80,0.11,400,0,0.25,1,0,0.37,stop有:1回目 0.20,50,-,-,,-,,zangeki_1,小ノックバック+自身に即死ダメージ
+,enemy_mag_00101,_mag1_advent,e_mag_00101_mag1_advent_Normal_Yellow,株式会社マジルミエ,つらら,つらら_mag1_advent,Normal,Technical,Yellow,1000,1,80,0.11,400,0,0.25,1,0,0.37,stop有:1回目 0.20,50,-,-,,-,,zangeki_1,100%の確率で、2秒間氷結状態を付与+自身に即死ダメージ
+,enemy_mag_00101,_mag1_advent,e_mag_00101_mag1_advent_Normal_Green,株式会社マジルミエ,つらら,つらら_mag1_advent,Normal,Technical,Green,1000,1,80,0.11,400,0,0.25,1,0,0.37,stop有:1回目 0.20,50,-,-,,-,,zangeki_1,100%の確率で、2秒間氷結状態を付与+自身に即死ダメージ
+,enemy_mag_00301,_mag1_advent,e_mag_00301_mag1_advent_Normal_Blue,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_mag1_advent,Normal,Attack,Blue,10000,3,30,0.2,300,0,0.21,1,100,1.50,0.74,75,-,-,,-,,dageki_2,
+,enemy_mag_00201,_mag1_advent,e_mag_00201_mag1_advent_Boss_Blue,株式会社マジルミエ,建造物寄生型の怪異 (大),建造物寄生型の怪異（大）_mag1_advent,Boss,Defense,Blue,300000,3,25,0.17,500,0,0.22,100,100,1.50,0.74,80,-,-,,-,,dageki_1,
+,enemy_mag_00201,_mag1_advent,e_mag_00201_mag1_advent_Boss_Yellow,株式会社マジルミエ,建造物寄生型の怪異 (大),建造物寄生型の怪異（大）_mag1_advent,Boss,Defense,Yellow,300000,3,25,0.18,500,0,0.23,100,100,1.50,0.74,80,-,-,,-,,dageki_1,
+,enemy_mag_00201,_mag1_advent,e_mag_00201_mag1_advent_Boss_Red,株式会社マジルミエ,建造物寄生型の怪異 (大),建造物寄生型の怪異（大）_mag1_advent,Boss,Defense,Red,300000,3,25,0.19,500,0,0.3,100,100,1.50,0.74,60,-,-,,-,,dageki_1,
+,enemy_mag_00401,_mag1_advent,e_mag_00401_mag1_advent_Boss_Colorless,株式会社マジルミエ,工事現場の怪異,工事現場の怪異_mag1_advent,Boss,Defense,Colorless,30000,3,30,0.17,400,0,0.19,1,400,1.67,stop有:0.84,50,-,-,,-,,,
+,enemy_mag_00401,_mag1_advent,e_mag_00401_mag1_advent_Boss_Green,株式会社マジルミエ,工事現場の怪異,工事現場の怪異_mag1_advent,Boss,Defense,Green,30000,3,30,0.17,400,0,0.19,1,400,1.67,stop有:0.84,50,-,-,,-,,,
+,enemy_mag_00001,_mag1_advent,e_mag_00001_mag1_advent_Boss_Green,株式会社マジルミエ,冷却系怪異,冷却系の怪異_mag1_advent,Boss,Technical,Green,100000,2,25,0.2,300,0,0.25,1,200,1.50,0.80,200,-,-,,-,,shageki_1,
+,enemy_mag_00301,_siget,e_mag_00301_siget_Normal_Colorless,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_siget,Normal,Attack,Colorless,10000,3,30,0.2,300,0,0.21,1,100,1.50,0.74,75,-,-,,-,,dageki_2,
+,enemy_mag_00301,_siget,e_mag_00301_siget_Normal_Yellow,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_siget,Normal,Attack,Yellow,10000,3,30,0.2,300,0,0.21,1,100,1.50,0.74,50,-,-,,-,,dageki_2,
+,enemy_mag_00301,_aknget,e_mag_00301_aknget_Normal_Green,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_aknget,Normal,Attack,Green,10000,3,30,0.2,300,0,0.21,1,100,1.50,0.74,50,-,-,,-,,dageki_2,
+,enemy_mag_00301,_challange,e_mag_00301_challange_Normal_Red,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_challange,Normal,Attack,Red,10000,3,30,0.2,300,0,0.21,1,100,1.50,0.74,75,-,-,,-,,dageki_2,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,chara_yuw_00001,raid_00001,c_yuw_00001raid_00001_Boss_Green,2.5次元の誘惑,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサraid_00001,Boss,Attack,Green,10000,3,34,0.24,100,,,,100,1.54,0.50,,3.67,2.44,,5,,dageki_2,
+,chara_yuw_00101,raid_00001,c_yuw_00101raid_00001_Boss_Green,2.5次元の誘惑,コスプレに託す乙女心 橘 美花莉,コスプレに託す乙女心 橘 美花莉raid_00001,Boss,Technical,Green,10000,2,29,0.25,100,,,,100,1.50,"stop無:1回目 0.45
+stop無:2回目 0.55
+stop無:3回目 0.67
+stop無:4回目 0.77
+stop無:5回目 0.90
+stop無:6回目 0.95",,3.50,stop無: 1回目 3.20,,3,,dageki_1,
+,chara_yuw_00201,raid_00001,c_yuw_00201raid_00001_Normal_Green,2.5次元の誘惑,羽生 まゆり,羽生 まゆりraid_00001,Normal,Technical,Green,1000,3,27,0.26,100,,,,100,1.06,0.34,,4.67,3.50,,3,,dageki_2,
+,chara_yuw_00301,raid_00001,c_yuw_00301raid_00001_Boss_Red,2.5次元の誘惑,勇気を纏うコスプレ 乃愛,勇気を纏うコスプレ 乃愛raid_00001,Boss,Technical,Red,10000,3,29,0.26,100,,,,100,1.57,"stop無:1回目 0.50
+stop無:2回目 1.00",,3.50,stop無: 1回目 3.20,20秒間自身の攻撃100%UP,4,,dageki_2,通常攻撃50%の確率で6秒間3000の火傷
+,chara_yuw_00401,raid_00001,c_yuw_00401raid_00001_Boss_Red,2.5次元の誘惑,伝えたいウチの想い　喜咲 アリア,伝えたいウチの想い　喜咲 アリアraid_00001,Boss,Defense,Red,10000,2,30,0.17,100,,,,100,1.17,0.34,,2.67,1.64,,6,,dageki_2,
+,chara_yuw_00501,raid_00001,c_yuw_00501raid_00001_Boss_Green,2.5次元の誘惑,753♡,753♡raid_00001,Boss,Attack,Green,10000,2,28,0.3,100,,,,100,1.24,stop有:1回目 0.43,,2.17,stop無: 1回目 1.50,10秒間自身の攻撃50%UP,4,,dageki_2,
+,chara_yuw_00601,raid_00001,c_yuw_00601raid_00001_Normal_Colorless,2.5次元の誘惑,奥村 正宗,奥村 正宗raid_00001,Normal,Defense,Colorless,10000,3,25,0.19,100,,,1,100,1.20,0.67,,1.84,stop無: 1回目 0.68,自身に10秒間ダメージカット10%,4,,dageki_1,
+,chara_yuw_00601,raid_00001,c_yuw_00601raid_00001_Boss_Colorless,2.5次元の誘惑,奥村 正宗,奥村 正宗raid_00001,Boss,Defense,Colorless,10000,2,25,0.19,100,,,1,100,1.20,0.67,,1.84,stop無: 1回目 0.68,自身に10秒間ダメージカット20%,4,ノックバック無効,dageki_1,
+,enemy_glo_00001,raid_00001,e_glo_00001raid_00001_Normal_Red,GLOW,ファントム,ファントムraid_00001,Normal,Attack,Red,1000,1,40,0.22,100,,,,20,1.00,0.50,,,,,-,,dageki_1,通常攻撃100%の確率で6秒間3000の火傷
+,enemy_glo_00001,raid_00001,e_glo_00001raid_00001_Normal_Colorless,GLOW,ファントム,ファントムraid_00001,Normal,Attack,Colorless,1000,1,40,0.22,100,,,,20,1.00,0.50,,,,,-,,dageki_1,通常攻撃20%の確率で6秒間300の火傷
+,chara_yuw_00101,raid_00001,c_yuw_00101raid_00001_Normal_Green,2.5次元の誘惑,コスプレに託す乙女心 橘 美花莉,コスプレに託す乙女心 橘 美花莉raid_00001,Normal,Technical,Green,10000,2,29,0.25,100,,,,100,1.50,"stop無:1回目 0.45
+stop無:2回目 0.55
+stop無:3回目 0.67
+stop無:4回目 0.77
+stop無:5回目 0.90
+stop無:6回目 0.95",,3.50,stop無: 1回目 3.20,,3,,dageki_1,
+,chara_yuw_00001,raid_00001,c_yuw_00001raid_00001_Normal_Green,2.5次元の誘惑,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサraid_00001,Normal,Attack,Green,10000,3,34,0.24,100,,,,100,1.54,0.50,,3.67,2.44,,5,,dageki_2,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,chara_sur_00701,_sur1_advent,c_sur_00701_sur1_advent_Boss_Blue,魔都精兵のスレイブ,和倉 青羽,和倉 青羽_sur1_advent,Boss,Attack,Blue,10000,2,60,0.24,100,,,,100,1.07,0.28,,2.01,"stop無:1回目 0.67
+stop無:2回目 0.84
+stop無:3回目 1
+stop有:4回目 1.25",,3,,dageki_1,
+,enemy_sur_00101,_sur1_advent,e_sur_00101_sur1_advent_Normal_Red,魔都精兵のスレイブ,醜鬼,醜鬼_sur1_advent,Normal,Defense,Red,1000,1,40,0.17,100,,,,100,0.80,0.30,,-,-,,-,,dageki_1,
+,enemy_glo_00001,_sur1_advent,e_glo_00001_sur1_advent_Normal_Green,GLOW,ファントム,ファントム_sur1_advent,Normal,Attack,Green,10000,1,30,0.25,100,,,,100,1.00,0.50,,,,,-,,dageki_1,
+,enemy_glo_00001,_sur1_advent,e_glo_00001_sur1_advent_Normal_Blue,GLOW,ファントム,ファントム_sur1_advent,Normal,Attack,Blue,1000,0,30,0.18,100,,,,100,1.00,0.50,,,,,-,,dageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,chara_osh_00201,_osh1_advent,c_osh_00201_osh1_advent_Normal_Red,【推しの子】,星野 ルビー,星野 ルビー_osh1_advent,Normal,Attack,Red,1000,1,37,0.22,100,0,0.23,1,50,1.37,"stop有:1回目 0.30
+stop有:2回目 0.60",,3.00,stop無:1回目 1.66,20秒自身の攻撃UP(100%),5,,dageki_2,
+,chara_osh_00201,_osh1_advent,c_osh_00201_osh1_advent_Boss_Red,【推しの子】,星野 ルビー,星野 ルビー_osh1_advent,Boss,Attack,Red,10000,1,31,0.22,100,0,0.23,1,100,1.37,"stop有:1回目 0.30
+stop有:2回目 0.60",,3.00,stop無:1回目 1.66,20秒自身の攻撃UP(200%),5,,dageki_2,
+,chara_osh_00301,_osh1_advent,c_osh_00301_osh1_advent_Normal_Yellow,【推しの子】,MEMちょ,MEMちょ_osh1_advent,Normal,Technical,Yellow,1000,1,37,0.27,100,0,0.28,1,50,1.13,"stop無:1回目 0.18
+stop無:1回目 0.35
+stop無:1回目 0.52",,3.33,stop無:1回目 1.78,ノックバック中+攻撃ダウン,5,,dageki_1,3回目小ノックバック
+,chara_osh_00301,_osh1_advent,c_osh_00301_osh1_advent_Boss_Yellow,【推しの子】,MEMちょ,MEMちょ_osh1_advent,Boss,Technical,Yellow,10000,1,31,0.27,100,0,0.28,1,100,1.13,"stop無:1回目 0.18
+stop無:1回目 0.35
+stop無:1回目 0.52",,3.33,stop無:1回目 1.78,ノックバック大+攻撃ダウン,5,,dageki_1,3回目小ノックバック
+,chara_osh_00401,_osh1_advent,c_osh_00401_osh1_advent_Normal_Colorless,【推しの子】,有馬 かな,有馬 かな_osh1_advent,Normal,Technical,Colorless,1000,1,37,0.24,100,0,0.25,1,50,1.17,0.5,,2.47,stop無:1回目 1.00,火傷,5,,dageki_2,
+,chara_osh_00401,_osh1_advent,c_osh_00401_osh1_advent_Boss_Colorless,【推しの子】,有馬 かな,有馬 かな_osh1_advent,Boss,Technical,Colorless,10000,1,31,0.24,100,0,0.25,1,100,1.17,0.5,,2.47,stop無:1回目 1.00,火傷,5,,dageki_2,
+,enemy_glo_00002,_osh1_advent,e_glo_00002_osh1_advent_Normal_Colorless,GLOW,推し活ファントム,サイリウム持ちファントム_osh1_advent,Normal,Defense,Colorless,1000,0,20,0.22,100,0,0.23,1,5,1.17,stop有:1回目 0.6,,,,,-,,dageki_1,100%ノックバック小
+,enemy_glo_00002,_osh1_advent,e_glo_00002_osh1_advent_Normal_Green,GLOW,推し活ファントム,サイリウム持ちファントム_osh1_advent,Normal,Attack,Green,1000,1,47,0.22,100,0,0.23,1,50,1.17,stop有:1回目 0.6,,,,,-,,dageki_1,
+,enemy_glo_00002,_osh1_advent,e_glo_00002_osh1_advent_Boss_Green,GLOW,推し活ファントム,サイリウム持ちファントム_osh1_advent,Boss,Attack,Green,10000,1,45,0.22,100,0,0.23,1,100,1.17,stop有:1回目 0.6,,,,,-,,dageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,enemy_jig_00601,_jig1_advent,e_jig_00601_jig1_advent_Boss_Yellow,地獄楽,朱槿,朱槿_jig1_advent,Boss,Technical,Yellow,100000,0,40,0.3,300,0,0.7,100,200,1.5,0.75,60,-,-,,-,,,
+,enemy_jig_00401,_jig1_advent,e_jig_00401_jig1_advent_Normal_Colorless,地獄楽,極楽蝶,極楽蝶_jig1_advent,Normal,Technical,Colorless,1000,0,120,0.15,400,0,0.25,1,0,1.30,0.66,20,-,-,,-,,dageki_2,中ノックバック
+,enemy_jig_00401,_jig1_advent,e_jig_00401_jig1_advent_Normal_Red,地獄楽,極楽蝶,極楽蝶_jig1_advent,Normal,Technical,Red,1000,0,120,0.15,400,0,0.25,1,0,1.30,0.66,20,-,-,,-,,dageki_2,中ノックバック
+,enemy_jig_00401,_jig1_advent,e_jig_00401_jig1_advent_Normal_Yellow,地獄楽,極楽蝶,極楽蝶_jig1_advent,Normal,Technical,Yellow,1000,0,120,0.15,400,0,0.25,1,0,1.30,0.66,20,-,-,,-,,dageki_2,中ノックバック
+,enemy_jig_00401,_jig1_advent,e_jig_00401_jig1_advent_Normal_Green,地獄楽,極楽蝶,極楽蝶_jig1_advent,Normal,Technical,Green,1000,0,120,0.15,400,0,0.25,1,0,1.30,0.66,20,-,-,,-,,dageki_2,中ノックバック
+,enemy_jig_00001,_jig1_advent,e_jig_00201_jig1_advent_Boss_Red,地獄楽,門神,門神_jig1_advent,Boss,Defense,Red,300000,0,31,0.19,500,0,0.3,100,100,1.83,0.83,60,-,-,,-,,dageki_1,
+,enemy_jig_00001,_jig1_advent,e_jig_00201_jig1_advent_Boss_Yellow,地獄楽,門神,門神_jig1_advent,Boss,Defense,Yellow,300000,0,31,0.19,500,0,0.3,100,100,1.83,0.83,60,-,-,,-,,dageki_1,
+,enemy_jig_00301,_jig1_advent,e_jig_00301_jig1_advent_Boss_Colorless,地獄楽,竈神 魚,竈神 魚_jig1_advent,Boss,Defense,Colorless,30000,0,35,0.2,400,0,0.4,3,400,1.50,0.66,50,-,-,,-,,dageki_1,
+,enemy_jig_00301,_jig1_advent,e_jig_00301_jig1_advent_Boss_Green,地獄楽,竈神 魚,竈神 魚_jig1_advent,Boss,Defense,Green,30000,0,35,0.2,400,0,0.4,3,400,1.50,0.66,50,-,-,,-,,dageki_1,
+,enemy_jig_00001,_jig1_advent,e_jig_00001_jig1_advent_Normal_Colorless,地獄楽,門神,門神_jig1_advent,Normal,Attack,Colorless,10000,0,30,0.17,300,0,0.26,1,100,1.83,0.83,40,-,-,,-,,dageki_1,
+,enemy_jig_00001,_jig1_advent,e_jig_00001_jig1_advent_Normal_Red,地獄楽,門神,門神_jig1_advent,Normal,Attack,Red,10000,0,30,0.17,300,0,0.26,1,100,1.83,0.83,40,-,-,,-,,dageki_1,
+,enemy_jig_00001,_jig1_advent,e_jig_00001_jig1_advent_Normal_Yellow,地獄楽,門神,門神_jig1_advent,Normal,Attack,Yellow,10000,0,30,0.17,300,0,0.26,1,100,1.83,0.83,40,-,-,,-,,dageki_1,
+,enemy_jig_00001,_jig1_advent,e_jig_00001_jig1_advent_Normal_Green,地獄楽,門神,門神_jig1_advent,Normal,Attack,Green,10000,0,30,0.17,300,0,0.26,1,100,1.83,0.83,40,-,-,,-,,dageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,enemy_you_00001,_you1_advent,e_you_00001_you1_advent_Normal_Green,幼稚園WARS,不良系金髪イケメン,暗殺者（近）_you1_advent,Normal,Defense,Green,1000,2,37,0.2,100,,,,50,1.27,stop有0.5,,-,-,,-,,zangeki_1,
+,enemy_you_00101,_you1_advent,e_you_00101_you1_advent_Normal_Green,幼稚園WARS,イケメンじゃない殺し屋,暗殺者（遠）_you1_advent,Normal,Attack,Green,1000,3,30,0.6,100,,,,50,1.27,0.56,,-,-,,-,,shageki_1,
+,chara_you_00001,_you1_advent,c_you_00001_you1_advent_Normal_Colorless,幼稚園WARS,元殺し屋の新人教諭 リタ,リタ_you1_advent,Normal,Attack,Colorless,1000,1,45,0.2,100,,,,50,1.34,stop有:1回目 0.45,,1.77,"stop無:1回目 0.72
+stop無:2回目 0.88
+stop有:3回目 1.12",1回目の攻撃に合わせて攻撃UP100%(5秒間),4,,dageki_1,
+,chara_you_00201,_you1_advent,c_you_00201_you1_advent_Normal_Green,幼稚園WARS,ダグ,ダグ_you1_advent,Normal,Technical,Green,1000,1,32,0.6,100,,,,50,1.67,stop有:1回目 0.63,,3.17,"stop無:1回目 1.00
+stop無:2回目 1.26
+stop無:3回目 1.50
+stop有:4回目 1.70",1回目の攻撃に合わせて攻撃DOWN10%(6秒間),4,,shageki_1,
+,chara_you_00301,_you1_advent,c_you_00301_you1_advent_Normal_Colorless,幼稚園WARS,ハナ,ハナ_you1_advent,Normal,Attack,Colorless,1000,1,35,0.3,100,,,,50,1.77,stop有:1回目 0.7,,3.67,stop有 :1回目 2.2,200%の範囲攻撃,3,,dageki_1,
+,enemy_you_00001,_you1_advent,e_you_00001_you1_advent_Boss_Colorless,幼稚園WARS,不良系金髪イケメン,暗殺者（近）_you1_advent,Boss,Defense,Colorless,10000,2,37,0.2,100,,,,100,1.27,stop有0.5,,-,-,,-,,zangeki_1,100%で小ノックバック
+,enemy_you_00101,_you1_advent,e_you_00101_you1_advent_Boss_Colorless,幼稚園WARS,イケメンじゃない殺し屋,暗殺者（遠）_you1_advent,Boss,Attack,Colorless,10000,5,30,0.6,100,,,,100,1.27,0.56,,-,-,,-,,shageki_1,25%で中ノックバック
+,chara_you_00001,_you1_advent,c_you_00001_you1_advent_Boss_Green,幼稚園WARS,元殺し屋の新人教諭 リタ,リタ_you1_advent,Boss,Attack,Green,10000,1,45,0.2,100,,,,100,1.34,stop有:1回目 0.45,,1.77,"stop無:1回目 0.72
+stop無:2回目 0.88
+stop有:3回目 1.12",1回目の攻撃に合わせて攻撃UP100%(5秒間),4,,dageki_1,
+,chara_you_00201,_you1_advent,c_you_00201_you1_advent_Boss_Green,幼稚園WARS,ダグ,ダグ_you1_advent,Boss,Technical,Green,10000,1,32,0.6,100,,,,100,1.67,stop有:1回目 0.63,,3.17,"stop無:1回目 1.00
+stop無:2回目 1.26
+stop無:3回目 1.50
+stop有:4回目 1.70",1回目の攻撃に合わせて攻撃DOWN10%(6秒間),4,,shageki_1,
+,chara_you_00301,_you1_advent,c_you_00301_you1_advent_Boss_Green,幼稚園WARS,ハナ,ハナ_you1_advent,Boss,Attack,Green,10000,1,35,0.3,100,,,,100,1.77,stop有:1回目 0.7,,3.67,stop有 :1回目 2.2,300%の範囲攻撃,3,,dageki_1,
+,chara_you_00101,_you1_advent,c_you_00101_you1_advent_Boss_Green,幼稚園WARS,ルーク,ルーク_you1_advent,Boss,Technical,Green,10000,1,40,0.26,100,,,,100,1.64,stop有:1回目 0.65,,3.57,"stop無:1回目 0.97
+stop無:2回目 1.08
+stop無:3回目 1.2
+stop無:4回目 1.32
+stop有:5回目 1.48",1回目の攻撃に合わせて5%の毒状態(18秒間),5,,dageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,enemy_glo_00001,_kim1_advent,e_glo_00001_kim1_advent_Normal_Yellow,GLOW,ファントム,ファントム_kim1_advent,Normal,Defense,Yellow,1000,0,40,0.22,100,0,0.23,単体,50,1.00,0.50,,,,,-,,dageki_1,20%の確率で小ノックバック
+,chara_kim_00101,_kim1_advent,c_kim_00101_kim1_advent_Normal_Red,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里_kim1_advent,Normal,Attack,Red,1000,1,,,100,0,0.35,範囲,50,1.23,stop有:1回目 0.25,,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",10秒間自身の攻撃UP( 50%),4,,dageki_1,
+,chara_kim_00301,_kim1_advent,c_kim_00301_kim1_advent_Normal_Yellow,君のことが大大大大大好きな100人の彼女,好本 静,好本 静_kim1_advent,Normal,Support,Yellow,1000,1,,,100,0,,,50,1.75,stop有:1回目 0.78,,3.6,stop無 :1回目 1.2,3秒間自身と一つ前のコマまでの味方の攻撃50%UP+5%回復,3,,dageki_1,
+,enemy_glo_00001,_kim1_advent,e_glo_00001_kim1_advent_Boss_Red,GLOW,ファントム,ファントム_kim1_advent,Boss,Attack,Red,10000,1,35,0.22,100,0,0.23,範囲,100,1.00,0.50,,,,,-,,dageki_1,
+,chara_kim_00001,_kim1_advent,c_kim_00001_kim1_advent_Boss_Red,君のことが大大大大大好きな100人の彼女,溢れる母性 花園 羽々里,花園羽々里_kim1_advent,Boss,Technical,Red,10000,1,,,100,0,,,100,1.3,stop有:1回目 0.67,,2.5,"stop無:1回目 0.63
+stop無:2回目 0.8
+stop無:3回目 0.99
+stop無:4回目 1.2
+stop有:5回目 1.60",20秒間攻撃DOWN20%,5,,dageki_1,
+,chara_kim_00101,_kim1_advent,c_kim_00101_kim1_advent_Boss_Red,君のことが大大大大大好きな100人の彼女,花園 羽香里,花園羽香里_kim1_advent,Boss,Attack,Red,10000,1,,,100,0,,,100,1.23,stop有:1回目 0.25,,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",5秒間自身の攻撃UP( 200%),4,,dageki_1,
+,chara_kim_00201,_kim1_advent,c_kim_00201_kim1_advent_Boss_Red,君のことが大大大大大好きな100人の彼女,院田 唐音,院田唐音_kim1_advent,Boss,Technical,Red,10000,1,,,100,0,,,100,1.37,stop有:1回目 0.2,,2.4,stop無 :1回目 1.2,100%の確率で1秒間スタン+中ノックバック,6,,dageki_1,
+,chara_kim_00301,_kim1_advent,c_kim_00301_kim1_advent_Boss_Yellow,君のことが大大大大大好きな100人の彼女,好本 静,好本 静_kim1_advent,Boss,Support,Yellow,10000,1,,,100,0,,,100,1.75,stop有:1回目 0.78,,3.6,stop無 :1回目 1.2,6秒間自身と一つ前のコマまでの味方の攻撃100%UP+10%回復+25%ダメージカット,3,,dageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,enemy_glo_00001,_hut1_advent,e_glo_00001_hut1_advent_Normal_Yellow,GLOW,ファントム,ファントム_hut1_advent,Normal,Attack,Yellow,1000,1,37,,100,0,,,50,1.00,0.50,,,,,-,,dageki_1,
+,enemy_glo_00001,_hut1_advent,e_glo_00001_hut1_advent_Normal_Colorless,GLOW,ファントム,ファントム_hut1_advent,Normal,Defense,Colorless,1000,1,40,,100,0,,,50,1.00,0.50,,,,,-,ノックバック無効,dageki_1,
+,enemy_hut_00001,_hut1_advent,e_hut_00001_hut1_advent_Normal_Yellow,ふつうの軽音部,鷹見 項希,鷹見 項希_hut1_advent,Normal,Attack,Yellow,1000,1,35,,100,0,,,50,1.37,stop有:0.51,,-,-,,-,,,
+,chara_hut_00001,_hut1_advent,c_hut_00001_hut1_advent_Normal_Colorless,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_advent,Normal,Defense,Colorless,1000,0,30,,100,0,,,50,1.47,stop有 :1回目 0.15,,2.8,stop有:1回目 0.87,,5,,dageki_1,
+,chara_hut_00101,_hut1_advent,c_hut_00101_hut1_advent_Normal_Colorless,ふつうの軽音部,幸山 厘,幸山 厘_hut1_advent,Normal,Support,Colorless,1000,1,35,,100,0,,,50,1.58,stop有 :1回目 0.75,,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",,3,,dageki_1,
+,chara_hut_00201,_hut1_advent,c_hut_00201_hut1_advent_Normal_Colorless,ふつうの軽音部,内田 桃,内田 桃_hut1_advent,Normal,Technical,Colorless,1000,3,35,,100,0,,,50,1.2,stop有 :1回目 0.34,,2.84,"stop無:1回目 1.1
+stop無:2回目 1.44
+stop有:3回目 1.97",,6,,dageki_1,
+,chara_hut_00301,_hut1_advent,c_hut_00301_hut1_advent_Normal_Yellow,ふつうの軽音部,藤井 彩目,藤井 彩目_hut1_advent,Normal,Attack,Yellow,1000,1,35,,100,0,,,50,1.33,stop有 :1回目 0.33,,2.42,"stop無:1回目 0.3
+stop無:2回目 0.61
+stop無:3回目 0.93
+stop無:4回目 1.25
+stop有:5回目 1.6",,4,,dageki_1,
+,enemy_glo_00001,_hut1_advent,e_glo_00001_hut1_advent_Boss_Yellow,GLOW,ファントム,ファントム_hut1_advent,Boss,Attack,Yellow,10000,1,37,,100,0,,,100,1.00,0.50,,,,,-,,dageki_1,
+,enemy_glo_00001,_hut1_advent,e_glo_00001_hut1_advent_Boss_Colorless,GLOW,ファントム,ファントム_hut1_advent,Boss,Defense,Colorless,10000,1,40,,100,0,,,100,1.00,0.50,,,,,-,ノックバック無効,dageki_1,
+,enemy_hut_00001,_hut1_advent,e_hut_00001_hut1_advent_Boss_Yellow,ふつうの軽音部,鷹見 項希,鷹見 項希_hut1_advent,Boss,Attack,Yellow,10000,1,35,,100,0,,,100,1.37,stop有:0.51,,-,-,,-,,,
+,chara_hut_00001,_hut1_advent,c_hut_00001_hut1_advent_Boss_Colorless,ふつうの軽音部,ひたむきギタリスト 鳩野 ちひろ,鳩野 ちひろ_hut1_advent,Boss,Defense,Colorless,10000,0,30,,100,0,,,100,1.47,stop有 :1回目 0.15,,2.8,stop有:1回目 0.87,,5,ノックバック無効,dageki_1,
+,chara_hut_00101,_hut1_advent,c_hut_00101_hut1_advent_Boss_Yellow,ふつうの軽音部,幸山 厘,幸山 厘_hut1_advent,Boss,Attack,Yellow,10000,1,35,,100,0,,,100,1.58,stop有 :1回目 0.75,,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",,5,,dageki_1,
+,chara_hut_00201,_hut1_advent,c_hut_00201_hut1_advent_Boss_Colorless,ふつうの軽音部,内田 桃,内田 桃_hut1_advent,Boss,Technical,Colorless,10000,1,35,,100,0,,,100,1.2,stop有 :1回目 0.34,,2.84,"stop無:1回目 1.1
+stop無:2回目 1.44
+stop有:3回目 1.97",,5,,dageki_1,
+,chara_hut_00301,_hut1_advent,c_hut_00301_hut1_advent_Boss_Yellow,ふつうの軽音部,藤井 彩目,藤井 彩目_hut1_advent,Boss,Attack,Yellow,10000,1,35,,100,0,,,100,1.33,stop有 :1回目 0.33,,2.42,"stop無:1回目 0.3
+stop無:2回目 0.61
+stop無:3回目 0.93
+stop無:4回目 1.25
+stop有:5回目 1.6",,4,,dageki_1,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none,

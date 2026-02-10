@@ -1,0 +1,766 @@
+,※同IDが存在してないように使用用途を識別に入力する。　「general」や「normal_01only」など,,,,,,,※手打ち可能,,,,,,,,,,,,,,,,,,,
+,master_id,識別,enemy_ID,作品,キャラ名(監修名),識別キャラ名,unit_kind,role_type,color,HP,knock_back,move_speed,well_distance,attack_power,start_range,end_range,攻撃範囲,撃破リーダーP,通常攻撃モーション秒,通常攻撃発生秒,通常攻撃CDF,必殺攻撃モーション秒,必殺攻撃発生秒,必殺ワザ内容,必殺発動回数,特性,オノマトペ
+ex,enemy_glo_00001,_general_test,e_glo_00001_general_test_Normal_Red,GLOW,ファントム,ファントム_general_test,Normal,Attack,Red,1000,3,30,0.24,100,0,0.35,100,50,1.00,0.50,100,,,,-,,dageki_1
+,enemy_glo_00001,_tutorial,e_glo_00001_tutorial_Normal_Yellow,GLOW,ファントム,ファントム_tutorial,Normal,Attack,Yellow,1000,3,34,0.2,100,0,0.21,1,50,1.00,0.50,100,,,,-,,dageki_1
+,enemy_glo_00001,_tutorial,e_glo_00001_tutorial_Boss_Yellow,GLOW,ファントム,ファントム_tutorial,Boss,Attack,Yellow,10000,3,34,0.22,100,0,0.23,1,50,1.00,0.50,100,,,,-,,dageki_1
+,enemy_glo_00001,_tutorial,e_glo_00001_tutorial_Normal_Blue,GLOW,ファントム,ファントム_tutorial,Normal,Attack,Blue,5000,3,34,0.2,100,0,0.21,1,50,1.00,0.50,100,,,,-,,dageki_1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,enemy_glo_00001,_general,e_glo_00001_general_Normal_Colorless,GLOW,ファントム,ファントム_general,Normal,Attack,Colorless,5000,3,34,0.22,100,0,0.23,1,150,1.00,0.50,50,,,,-,,dageki_1
+,enemy_glo_00001,_general,e_glo_00001_general_Normal_Blue,GLOW,ファントム,ファントム_general,Normal,Attack,Blue,5000,3,34,0.22,100,0,0.23,1,150,1.00,0.50,50,,,,-,,dageki_1
+,enemy_glo_00001,_general,e_glo_00001_general_Normal_Yellow,GLOW,ファントム,ファントム_general,Normal,Attack,Yellow,5000,3,34,0.22,100,0,0.23,1,150,1.00,0.50,50,,,,-,,dageki_1
+,enemy_glo_00001,_general,e_glo_00001_general_Normal_Green,GLOW,ファントム,ファントム_general,Normal,Attack,Green,5000,3,34,0.22,100,0,0.23,1,150,1.00,0.50,50,,,,-,,dageki_1
+,enemy_glo_00001,_mainquest_glo2,e_glo_00001_mainquest_glo2_Normal_Green,GLOW,ファントム,ファントム_mainquest_glo2,Normal,Defense,Green,3000,3,34,0.22,100,0,0.23,1,100,1.00,0.50,50,,,,-,,dageki_1
+,enemy_glo_00001,_mainquest_glo2_nostunresist,e_glo_00001_mainquest_glo2_nostunresist_Boss_Green,GLOW,ボスファントム,ファントム_mainquest_glo2_nostunresist,Boss,Attack,Green,100000,3,5,0.3,2000,0,0.35,100,2000,1.00,0.50,750,,,,-,ノックバック耐性,dageki_1
+,enemy_glo_00001,_mainquest_glo2_stunresist,e_glo_00001_mainquest_glo2_stunresist_Boss_Green,GLOW,ファントム,ファントム_mainquest_glo2_stunresist,Boss,Attack,Green,100000,3,5,0.3,2000,0,0.35,100,2000,1.00,0.50,750,,,,-,ノックバック耐性,dageki_1
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,enemy_chi_00001,_general,e_chi_00001_general_Boss_Yellow,チェンソーマン,ゾンビの悪魔,ゾンビの悪魔_general,Boss,Attack,Yellow,300000,1,40,0.3,500,0,0.4,100,50,1.13,0.20,100,-,-,,7,,dageki_2
+,enemy_chi_00101,_general,e_chi_00101_general_Normal_Colorless,チェンソーマン,ゾンビ,ゾンビ_general,Normal,Defense,Colorless,5000,1,35,0.11,400,0,0.2,1,50,1.90,0.66,45,-,-,,-,,dageki_1
+,enemy_chi_00101,_general,e_chi_00101_general_Normal_Yellow,チェンソーマン,ゾンビ,ゾンビ_general,Normal,Technical,Yellow,13000,1,35,0.11,900,0,0.2,1,50,1.90,0.66,45,-,-,,-,,dageki_1
+,enemy_chi_00201,_general,e_chi_00201_general_Normal_Yellow,チェンソーマン,コウモリの悪魔,コウモリの悪魔_general,Normal,Attack,Yellow,200000,6,50,0.2,400,0,0.3,1,50,1.34,0.33,45,-,-,,-,,dageki_1
+,enemy_chi_00201,_general,e_chi_00201_general_Boss_Yellow,チェンソーマン,コウモリの悪魔,コウモリの悪魔_general,Boss,Attack,Yellow,500000,3,50,0.2,400,0,0.3,1,50,1.34,0.33,75,-,-,,7,,dageki_1
+,chara_chi_00201,_general,c_chi_00201_general_Boss_Yellow,チェンソーマン,早川 アキ,早川 アキ_general,Boss,Attack,Yellow,400000,1,45,0.11,700,0,0.2,1,50,1.60,0.84,50,2.44,1.64,範囲攻撃+199秒間攻撃30%UP+100秒間被ダメージ10%カット,7,,dageki_1
+,chara_chi_00201,_general,c_chi_00201_general_Normal_Colorless,チェンソーマン,早川 アキ,早川 アキ_general,Normal,Attack,Yellow,100000,3,45,0.11,300,0,0.4,1,50,1.60,0.84,50,2.44,1.64,範囲攻撃,7,,dageki_1
+,chara_chi_00201,_general,c_chi_00201_general_Normal_Yellow,チェンソーマン,早川 アキ,早川 アキ_general,Normal,Attack,Yellow,100000,2,45,0.11,300,0,0.4,1,50,1.60,0.84,30,2.44,1.64,範囲攻撃,7,,dageki_1
+,chara_chi_00301,_general,c_chi_00301_general_Normal_Yellow,チェンソーマン,パワー,パワー_general,Normal,Attack,Yellow,250000,2,45,0.2,500,0,0.3,1,50,1.50,0.58,45,2.67,1.00,中ノックバック+25%の確率で2秒スタン+20秒間、自身の攻撃50%UP,7,,dageki_1
+,chara_chi_00002,_general,c_chi_00002_general_Boss_Yellow,チェンソーマン,悪魔が恐れる悪魔 チェンソーマン,悪魔が恐れる悪魔 チェンソーマン_general,Boss,Technical,Yellow,500000,2,50,0.15,1000,0,0.2,1,50,1.07,stop無:1回目 0.66,35,3.74,"stop無:1回目 0.53
+stop無:2回目 0.70
+stop無:3回目 0.90
+stop無:4回目 1.03
+stop無:5回目 1.23
+stop有:6回目 2.62",連続攻撃＋最後の1発（範囲攻撃）に小ノックバック+最後の1発（範囲攻撃）で与えたダメージの100%分回復,5,,zangeki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,enemy_glo_00001,_general_chi_vh,e_glo_00001_general_chi_vh_Normal_Blue,GLOW,ファントム,ファントム_general_chi_vh,Normal,Defense,Blue,30000,2,45,0.11,1000,0,,,0,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_chi_vh,e_glo_00001_general_chi_vh_Normal_Red,GLOW,ファントム,ファントム_general_chi_vh,Normal,Defense,Red,30000,2,45,0.11,1000,0,,,0,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_chi_vh,e_glo_00001_general_chi_vh_Normal_Yellow,GLOW,ファントム,ファントム_general_chi_vh,Normal,Defense,Yellow,30000,2,45,0.11,1000,0,,,0,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_chi_vh,e_glo_00001_general_chi_vh_Normal_Green,GLOW,ファントム,ファントム_general_chi_vh,Normal,Defense,Green,30000,2,45,0.11,1000,0,,,0,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_chi_vh,e_glo_00001_general_chi_vh_Normal_Colorless,GLOW,ファントム,ファントム_general_chi_vh,Normal,Defense,Colorless,30000,2,45,0.11,1000,0,,,0,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_chi_vh_big,e_glo_00001_general_chi_vh_big_Normal_Red,GLOW,ファントム,ファントム_general_chi_vh_big,Normal,Defense,Red,70000,2,50,0.2,3000,0,,,0,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_chi_vh_big,e_glo_00001_general_chi_vh_big_Normal_Yellow,GLOW,ファントム,ファントム_general_chi_vh_big,Normal,Defense,Yellow,70000,2,50,0.2,3000,0,,,0,1.00,0.50,,,,,-,,
+,enemy_chi_00001,_general_chi_vh,e_chi_00001_general_chi_vh_Normal_Red,チェンソーマン,ゾンビの悪魔,ゾンビの悪魔_general_chi_vh,Normal,Technical,Red,500000,1,40,0.3,500,0,,,0,1.13,0.20,,-,-,,5,,dageki_2
+,enemy_chi_00001,_general_chi_vh2,e_chi_00001_general_chi_vh2_Boss_Yellow,チェンソーマン,ゾンビの悪魔,ゾンビの悪魔_general_chi_vh2,Boss,Technical,Yellow,800000,1,40,0.3,500,0,,,0,1.13,0.20,,-,-,,5,,dageki_2
+,enemy_chi_00001,_general_chi_vh,e_chi_00001_general_chi_vh_Normal_Yellow,チェンソーマン,ゾンビの悪魔,ゾンビの悪魔_general_chi_vh,Normal,Technical,Yellow,800000,1,40,0.3,500,0,,,0,1.13,0.20,,-,-,,5,,dageki_2
+,enemy_chi_00001,_general_chi_vh,e_chi_00001_general_chi_vh_Boss_Yellow,チェンソーマン,ゾンビの悪魔,ゾンビの悪魔_general_chi_vh,Boss,Technical,Yellow,800000,1,40,0.3,500,0,,,0,1.13,0.20,,-,-,,5,根性3回,dageki_2
+,enemy_chi_00101,_general_chi_vh,e_chi_00101_general_chi_vh_Normal_Green,チェンソーマン,ゾンビ,ゾンビ_general_chi_vh,Normal,Attack,Green,30000,2,35,0.11,1000,0,,,0,1.90,0.66,,-,-,,-,根性1回,dageki_1
+,enemy_chi_00101,_general_chi_vh,e_chi_00101_general_chi_vh_Normal_Blue,チェンソーマン,ゾンビ,ゾンビ_general_chi_vh,Normal,Attack,Blue,30000,2,35,0.11,1000,0,,,0,1.90,0.66,,-,-,,-,根性1回,dageki_1
+,enemy_chi_00101,_general_chi_vh,e_chi_00101_general_chi_vh_Normal_Red,チェンソーマン,ゾンビ,ゾンビ_general_chi_vh,Normal,Attack,Red,30000,2,35,0.11,1000,0,,,0,1.90,0.66,,-,-,,-,根性1回,dageki_1
+,enemy_chi_00101,_general_chi_vh_big,e_chi_00101_general_chi_vh_big_Normal_Yellow,チェンソーマン,ゾンビ,ゾンビ_general_chi_vh_big,Normal,Attack,Yellow,30000,2,35,0.11,1000,0,,,0,1.90,0.66,,-,-,,-,根性3回,dageki_1
+,enemy_chi_00101,_general_chi_vh_big,e_chi_00101_general_chi_vh_big_Normal_Red,チェンソーマン,ゾンビ,ゾンビ_general_chi_vh_big,Normal,Attack,Red,30000,2,35,0.11,1000,0,,,0,1.90,0.66,,-,-,,-,根性3回,dageki_1
+,enemy_chi_00101,_general_chi_vh_big,e_chi_00101_general_chi_vh_big_Normal_Blue,チェンソーマン,ゾンビ,ゾンビ_general_chi_vh_big,Normal,Attack,Blue,30000,2,35,0.11,1000,0,,,0,1.90,0.66,,-,-,,-,根性3回,dageki_1
+,enemy_chi_00201,_general_chi_vh,e_chi_00201_general_chi_vh_Normal_Blue,チェンソーマン,コウモリの悪魔,コウモリの悪魔_general_chi_vh,Normal,Attack,Blue,500000,3,50,0.2,2000,0,,,0,1.34,0.33,,-,-,,-,,dageki_1
+,enemy_chi_00201,_general_chi_vh,e_chi_00201_general_chi_vh_Boss_Blue,チェンソーマン,コウモリの悪魔,コウモリの悪魔_general_chi_vh,Boss,Attack,Blue,1000000,3,50,0.2,3000,0,,,0,1.34,0.33,,-,-,,-,,dageki_1
+,enemy_chi_00201,_general_chi_vh,e_chi_00201_general_chi_vh_Normal_Yellow,チェンソーマン,コウモリの悪魔,コウモリの悪魔_general_chi_vh,Normal,Attack,Yellow,500000,3,50,0.2,2000,0,,,0,1.34,0.33,,-,-,,-,,dageki_1
+,enemy_chi_00201,_general_chi_vh2,e_chi_00201_general_chi_vh2_Normal_Yellow,チェンソーマン,コウモリの悪魔,コウモリの悪魔_general_chi_vh2,Normal,Attack,Yellow,500000,3,50,0.2,2000,0,,,0,1.34,0.33,,-,-,,-,,dageki_1
+,enemy_chi_00201,_general_chi_vh,e_chi_00201_general_chi_vh_Boss_Yellow,チェンソーマン,コウモリの悪魔,コウモリの悪魔_general_chi_vh,Boss,Attack,Yellow,1000000,3,50,0.2,3000,0,,,0,1.34,0.33,,-,-,,-,,dageki_1
+,chara_chi_00201,_general_chi_vh,c_chi_00201_general_chi_vh_Normal_Green,チェンソーマン,早川 アキ,早川 アキ_general_chi_vh,Normal,Attack,Green,400000,1,45,0.11,700,0,,,0,1.60,0.84,,2.44,1.64,,7,,dageki_1
+,chara_chi_00201,_general_chi_vh,c_chi_00201_general_chi_vh_Boss_Red,チェンソーマン,早川 アキ,早川 アキ_general_chi_vh,Boss,Attack,Red,100000,3,45,0.11,300,0,,,0,1.60,0.84,,2.44,1.64,単体に100000%ダメージ,7,,dageki_1
+,chara_chi_00201,_general_chi_vh,c_chi_00201_general_chi_vh_Normal_Yellow,チェンソーマン,早川 アキ,早川 アキ_general_chi_vh,Normal,Attack,Yellow,100000,2,45,0.11,300,0,,,0,1.60,0.84,,2.44,1.64,,7,,dageki_1
+,chara_chi_00301,_general_chi_vh,c_chi_00301_general_chi_vh_Normal_Green,チェンソーマン,パワー,パワー_general_chi_vh,Normal,Attack,Green,250000,2,45,0.2,500,0,,,0,1.50,0.58,,2.67,1.00,100%の確率で3秒間スタン,7,,dageki_1
+,chara_chi_00002,_general_chi_vh,c_chi_00002_general_chi_vh_Boss_Blue,チェンソーマン,悪魔が恐れる悪魔 チェンソーマン,悪魔が恐れる悪魔 チェンソーマン_general_chi_vh,Boss,Technical,Blue,500000,2,50,0.15,1000,0,,,0,1.07,stop無:1回目 0.66,,3.74,"stop無:1回目 0.53
+stop無:2回目 0.70
+stop無:3回目 0.90
+stop無:4回目 1.03
+stop無:5回目 1.23
+stop有:6回目 2.62",,5,,zangeki_1
+,chara_chi_00001,_general_chi_vh2,c_chi_00001_general_chi_vh2_Normal_Blue,チェンソーマン,デンジ,デンジ_general_chi_vh2,Normal,Attack,Yellow,500000,2,50,0.15,1000,0,,,0,1.40,0.53,,3.37,1.57,大ノックバック,5,,zangeki_1
+,chara_chi_00001,_general_chi_vh,c_chi_00001_general_chi_vh_Boss_Blue,チェンソーマン,デンジ,デンジ_general_chi_vh,Boss,Attack,Blue,500000,2,50,0.15,1000,0,,,0,1.40,0.53,,3.37,1.57,大ノックバック,5,,zangeki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,enemy_sur_00101,_general,e_sur_00101_general_Normal_Colorless,魔都精兵のスレイブ,醜鬼,醜鬼_general,Normal,Defense,Colorless,3000,1,35,0.2,100,0,0.3,1,10,0.80,0.30,35,-,-,,-,,dageki_1
+,enemy_sur_00101,_general,e_sur_00101_general_Normal_Blue,魔都精兵のスレイブ,醜鬼,醜鬼_general,Normal,Attack,Blue,15000,1,40,0.2,300,0,0.3,1,10,0.80,0.30,35,-,-,,-,,dageki_1
+,enemy_sur_00101,_general,e_sur_00101_general_Normal_Green,魔都精兵のスレイブ,醜鬼,醜鬼_general,Normal,Attack,Green,25000,1,50,0.2,500,0,0.3,1,10,0.80,0.30,35,-,-,,-,,dageki_1
+,enemy_sur_00101,_general,e_sur_00101_general_Boss_Green,魔都精兵のスレイブ,醜鬼,醜鬼_general,Boss,Attack,Green,400000,3,45,0.2,1000,0,0.3,1,10,0.80,0.30,200,-,-,,-,,dageki_1
+,enemy_sur_00001,_general,e_sur_00001_general_Boss_Green,魔都精兵のスレイブ,和倉 青羽,和倉 青羽_general,Boss,Attack,Green,300000,2,45,0.3,600,0,0.4,1,10,1.24,stop有:1回目 0.50,45,-,-,範囲攻撃,7,,dageki_1
+,enemy_sur_00001,_general,e_sur_00001_general_Normal_Green,魔都精兵のスレイブ,和倉 青羽,和倉 青羽_general,Normal,Attack,Green,150000,2,45,0.3,600,0,0.4,1,10,1.24,stop有:1回目 0.50,45,-,-,,-,,dageki_1
+,chara_sur_00101,_general,c_sur_00101_general_Boss_Blue,魔都精兵のスレイブ,誇り高き魔都の剣姫 羽前 京香,誇り高き魔都の剣姫 羽前京香_general,Boss,Attack,Blue,400000,2,45,0.2,800,0,0.3,1,10,1.40,stop無:1回目 0.33,45,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",単体攻撃+小ノックバック攻撃,7,,zangeki_1
+,chara_sur_00201,_general,c_sur_00201_general_Normal_Blue,魔都精兵のスレイブ,東 日万凛,東 日万凛_general,Normal,Attack,Blue,150000,2,35,0.2,500,0,0.3,1,10,1.47,stop無:1回目 0.37,45,2.67,"stop無:1回目 0.74
+stop無:2回目 0.92
+stop無:3回目 1.1
+stop無:4回目 1.28
+stop無:5回目 1.45
+stop無:6回目 1.65
+stop有:7回目 1.84",範囲攻撃,5,,shageki_1
+,chara_sur_00301,_general,c_sur_00301_general_Normal_Blue,魔都精兵のスレイブ,駿河 朱々,駿河 朱々_general,Normal,Defense,Blue,300000,1,40,0.11,300,0,0.3,1,10,1.56,0.66,60,1.91,0.73,単体攻撃,7,,dageki_1
+,chara_sur_00001,_general,c_sur_00001_general_Normal_Blue,魔都精兵のスレイブ,和倉 優希,和倉 優希_general,Normal,Support,Blue,50000,2,45,0.2,500,0,0.3,1,10,1.17,stop有:1回目 0.30,25,2.80,stop無:1回目 2.00,敵全体に10秒間、20%攻撃UP,7,,dageki_2
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,enemy_glo_00001,_general_sur_vh,e_glo_00001_general_sur_vh_Normal_Colorless,GLOW,ファントム,ファントム_general_sur_vh,Normal,Technical,Colorless,30000,2,45,0.11,1000,0,,,1,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_sur_vh,e_glo_00001_general_sur_vh_Normal_Red,GLOW,ファントム,ファントム_general_sur_vh,Normal,Technical,Red,30000,2,45,0.11,1000,0,,,1,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_sur_vh,e_glo_00001_general_sur_vh_Normal_Blue,GLOW,ファントム,ファントム_general_sur_vh,Normal,Technical,Blue,30000,2,45,0.11,1000,0,,,1,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_sur_vh,e_glo_00001_general_sur_vh_Normal_Green,GLOW,ファントム,ファントム_general_sur_vh,Normal,Defense,Green,30000,2,45,0.11,1000,0,,,1,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_sur_vh_big,e_glo_00001_general_sur_vh_big_Normal_Red,GLOW,ボスファントム,ファントム_general_sur_vh_big,Normal,Defense,Red,70000,2,50,0.2,3000,0,,,1,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_sur_vh_big,e_glo_00001_general_sur_vh_big_Normal_Blue,GLOW,ファントム,ファントム_general_sur_vh_big,Normal,Defense,Blue,70000,2,50,0.2,3000,0,,,1,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_sur_vh_big,e_glo_00001_general_sur_vh_big_Normal_Green,GLOW,ファントム,ファントム_general_sur_vh_big,Normal,Defense,Green,70000,2,50,0.2,3000,0,,,1,1.00,0.50,,,,,-,,
+,enemy_sur_00101,_general_sur_vh,e_sur_00101_general_sur_vh_Normal_Red,魔都精兵のスレイブ,醜鬼,醜鬼_general_sur_vh,Normal,Attack,Red,15000,1,40,0.2,300,0,,,1,0.80,0.30,,-,-,,-,,
+,enemy_sur_00101,_general_sur_vh,e_sur_00101_general_sur_vh_Normal_Blue,魔都精兵のスレイブ,醜鬼,醜鬼_general_sur_vh,Normal,Defense,Blue,25000,1,50,0.2,500,0,,,1,0.80,0.30,,-,-,,-,,
+,enemy_sur_00101,_general_sur_vh,e_sur_00101_general_sur_vh_Normal_Green,魔都精兵のスレイブ,醜鬼,醜鬼_general_sur_vh,Normal,Attack,Green,400000,3,45,0.2,1000,0,,,1,0.80,0.30,,-,-,,-,,
+,enemy_sur_00001,_general_sur_vh,e_sur_00001_general_sur_vh_Normal_Red,魔都精兵のスレイブ,和倉 青羽,和倉 青羽_general_sur_vh,Normal,Attack,Red,300000,2,45,0.3,600,0,,,1,1.24,stop有:1回目 0.50,,-,-,,-,,
+,enemy_sur_00001,_general_sur_vh,e_sur_00001_general_sur_vh_Boss_Red,魔都精兵のスレイブ,和倉 青羽,和倉 青羽_general_sur_vh,Boss,Attack,Red,150000,2,45,0.3,600,0,,,1,1.24,stop有:1回目 0.50,,-,-,ダメージ＋味方全体5％回復,5,,
+,enemy_sur_00001,_general_sur_vh2,e_sur_00001_general_sur_vh2_Normal_Red,魔都精兵のスレイブ,和倉 青羽,和倉 青羽_general_sur_vh2,Normal,Attack,Red,150000,2,45,0.3,600,0,,,1,1.24,stop有:1回目 0.50,,-,-,ダメージ＋味方全体5％回復,5,,
+,chara_sur_00101,_general_sur_vh,c_sur_00101_general_sur_vh_Boss_Green,魔都精兵のスレイブ,誇り高き魔都の剣姫 羽前 京香,誇り高き魔都の剣姫 羽前京香_general_sur_vh,Boss,Attack,Green,400000,2,45,0.2,800,0,,,1,1.40,stop無:1回目 0.33,,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",199秒間、自身の攻撃を5%UP,7,,
+,chara_sur_00201,_general_sur_vh,c_sur_00201_general_sur_vh_Normal_Red,魔都精兵のスレイブ,東 日万凛,東 日万凛_general_sur_vh,Normal,Attack,Red,150000,2,35,0.2,500,0,,,1,1.47,stop無:1回目 0.37,,2.67,"stop無:1回目 0.74
+stop無:2回目 0.92
+stop無:3回目 1.1
+stop無:4回目 1.28
+stop無:5回目 1.45
+stop無:6回目 1.65
+stop有:7回目 1.84",範囲攻撃+小ノックバック+20秒間味方の45%攻撃DOWN,5,,
+,chara_sur_00301,_general_sur_vh,c_sur_00301_general_sur_vh_Normal_Red,魔都精兵のスレイブ,駿河 朱々,駿河 朱々_general_sur_vh,Normal,Defense,Red,300000,1,40,0.11,300,0,,,1,1.56,0.66,,1.91,0.73,単体攻撃,7,,
+,chara_sur_00001,_general_sur_vh,c_sur_00001_general_sur_vh_Normal_Green,魔都精兵のスレイブ,和倉 優希,和倉 優希_general_sur_vh,Normal,Support,Green,50000,2,45,0.2,500,0,,,1,1.17,stop有:1回目 0.30,,2.80,stop無:1回目 2.00,自身のコマと1個前のコマにいる敵を6秒間、80%被ダメージカット,7,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,chara_rik_00001,_general,c_rik_00001_general_Normal_Colorless,トマトイプーのリコピン,リコピン,リコピン_general,Normal,Attack,Colorless,12000,1,50,0.2,500,0,0.3,1,10,1.64,0.93,35,4.01,"1回目：0.83
+2回目：1.84
+3回目：2.67",,-,,dageki_2
+,chara_rik_00001,_general,c_rik_00001_general_Normal_Red,トマトイプーのリコピン,リコピン,リコピン_general,Normal,Attack,Red,80000,1,50,0.2,400,0,0.3,1,10,1.64,0.93,35,4.01,"1回目：0.83
+2回目：1.84
+3回目：2.67",,-,,dageki_2
+,chara_rik_00001,_general,c_rik_00001_general_Boss_Red,トマトイプーのリコピン,リコピン,リコピン_general,Boss,Attack,Red,300000,2,45,0.2,700,0,0.3,1,10,1.64,0.93,35,4.01,"1回目：0.83
+2回目：1.84
+3回目：2.67",連続3回攻撃,5,,dageki_2
+,chara_rik_00101,_general,c_rik_00101_general_Boss_Red,トマトイプーのリコピン,甘戸 めめ,甘戸 めめ_general,Boss,Support,Red,200000,2,35,0.5,400,0,0.6,100,10,1.57,0.87,100,2.67,stop無:1.00,敵全体の攻撃力を10秒間100%UP,5,,dageki_2
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,enemy_glo_00001,_general_rik_vh,e_glo_00001_general_rik_vh_Normal_Red,GLOW,ファントム,ファントム_general_rik_vh,Normal,Attack,Red,30000,2,45,0.11,1000,0,0.2,1,0,1.00,0.50,75,,,,-,,
+,enemy_glo_00001,_general_rik_vh,e_glo_00001_general_rik_vh_Normal_Green,GLOW,ファントム,ファントム_general_rik_vh,Normal,Attack,Green,30000,2,45,0.11,1000,0,0.2,1,0,1.00,0.50,75,,,,-,,
+,enemy_glo_00001,_general_rik_vh,e_glo_00001_general_rik_vh_Normal_Yellow,GLOW,ファントム,ファントム_general_rik_vh,Normal,Attack,Yellow,30000,2,45,0.11,1000,0,0.2,1,0,1.00,0.50,75,,,,-,,
+,enemy_glo_00001,_general_rik_vh_big,e_glo_00001_general_rik_vh_big_Normal_Yellow,GLOW,ファントム,ファントム_general_rik_vh_big,Normal,Defense,Yellow,70000,2,50,0.2,3000,0,0.2,1,0,1.00,0.50,75,,,,-,,
+,chara_rik_00001,_general_vh,c_rik_00001_general_vh_Normal_Green,トマトイプーのリコピン,リコピン,リコピン_general_vh,Normal,Attack,Green,8000,1,50,0.2,350,0,0.3,1,0,1.64,0.93,35,4.01,"1回目：0.83
+2回目：1.84
+3回目：2.67",,-,,
+,chara_rik_00001,_general_vh,c_rik_00001_general_vh_Normal_Red,トマトイプーのリコピン,リコピン,リコピン_general_vh,Normal,Attack,Red,70000,1,50,0.2,400,0,0.3,1,0,1.64,0.93,35,4.01,"1回目：0.83
+2回目：1.84
+3回目：2.67",,-,,
+,chara_rik_00001,_general_vh,c_rik_00001_general_vh_Boss_Yellow,トマトイプーのリコピン,リコピン,リコピン_general_vh,Boss,Attack,Yellow,300000,1,45,0.2,500,0,0.3,1,0,1.64,0.93,35,4.01,"1回目：0.83
+2回目：1.84
+3回目：2.67",範囲ダメージ+小ノックバック+20秒間45%攻撃Down,5,,
+,chara_rik_00101,_general_vh,c_rik_00101_general_vh_Normal_Red,トマトイプーのリコピン,甘戸 めめ,甘戸 めめ_general_vh,Normal,Support,Red,200000,2,35,0.5,400,0,0.6,100,0,1.57,0.87,100,2.67,stop無:1.00,20秒間20%攻撃up+敵全体を18%回復,5,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,chara_rik_00001,_general_as,c_rik_00001_general_as_Normal_Blue,トマトイプーのリコピン,リコピン,リコピン_general_as,Normal,Attack,Blue,60000,3,50,0.11,300,0,0.3,1,10,1.64,0.93,35,4.01,"1回目：0.83
+2回目：1.84
+3回目：2.67",範囲連続攻撃+100%の確率で3秒スタン,5,,dageki_2
+,chara_sur_00101,_general_as,c_sur_00101_general_as_Boss_Blue,魔都精兵のスレイブ,誇り高き魔都の剣姫 羽前 京香,誇り高き魔都の剣姫 羽前京香_general_as,Boss,Attack,Blue,600000,2,45,0.2,800,0,0.3,1,10,1.40,stop無:1回目 0.33,45,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",単体連続攻撃,5,,zangeki_1
+,chara_chi_00201,_general_as,c_chi_00201_general_as_Normal_Blue,チェンソーマン,早川 アキ,早川 アキ_general_as,Normal,Attack,Blue,180000,3,45,0.2,400,0,0.3,1,10,1.60,0.84,30,2.44,1.64,単体攻撃,5,,dageki_1
+,chara_chi_00301,_general_as,c_chi_00301_general_as_Normal_Blue,チェンソーマン,パワー,パワー_general_as,Normal,Attack,Blue,200000,3,45,0.2,500,0,0.3,1,10,1.50,0.58,45,2.67,1.00,範囲攻撃+100%の確率で3秒スタン+20秒間、自身の攻撃50%UP,7,,dageki_1
+,chara_chi_00001,_general_as,c_chi_00001_general_as_Normal_Blue,チェンソーマン,デンジ,デンジ_general_as,Normal,Attack,Blue,150000,3,45,0.11,300,0,0.2,100,10,1.40,0.53,45,3.37,1.57,範囲攻撃,-,,zangeki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,chara_sur_00201,_general_as,c_sur_00201_general_as_Normal_Yellow,魔都精兵のスレイブ,東 日万凛,東 日万凛_general_as,Normal,Attack,Yellow,200000,2,35,0.3,800,0,0.35,1,10,1.47,stop無:1回目 0.37,45,2.67,"stop無:1回目 0.74
+stop無:2回目 0.92
+stop無:3回目 1.1
+stop無:4回目 1.28
+stop無:5回目 1.45
+stop無:6回目 1.65
+stop有:7回目 1.84",連続範囲攻撃,5,,shageki_1
+,chara_sur_00301,_general_as,c_sur_00301_general_as_Normal_Yellow,魔都精兵のスレイブ,駿河 朱々,駿河 朱々_general_as,Normal,Defense,Yellow,170000,1,40,0.11,100,0,0.3,1,10,1.56,0.66,60,1.91,0.73,範囲攻撃,7,,dageki_1
+,chara_chi_00002,_general_as,c_chi_00002_general_as_Normal_Yellow,チェンソーマン,悪魔が恐れる悪魔 チェンソーマン,悪魔が恐れる悪魔 チェンソーマン_general_as,Normal,Technical,Yellow,100000,5,35,0.11,300,0,0.2,1,10,1.07,stop無:1回目 0.66,35,3.74,"stop無:1回目 0.53
+stop無:2回目 0.70
+stop無:3回目 0.90
+stop無:4回目 1.03
+stop無:5回目 1.23
+stop有:6回目 2.62",小ノックバック攻撃+100%の確率で与えたダメージの100%HP回復,7,,zangeki_1
+,chara_rik_00101,_general_as,c_rik_00101_general_as_Boss_Yellow,トマトイプーのリコピン,甘戸 めめ,甘戸 めめ_general_as,Boss,Support,Yellow,250000,2,35,0.5,500,0,0.6,100,10,1.57,0.87,75,2.67,stop無:1.00,200秒間、敵全体の攻撃5%UP+敵全体のHP5%回復,5,,dageki_2
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,enemy_glo_00001,_general_as,e_glo_00001_general_as_Normal_Red,GLOW,ファントム,ファントム_general_as,Normal,Attack,Red,30000,2,40,0.28,500,0,0.3,1,10,1.00,0.50,75,,,,-,,dageki_1
+,enemy_glo_00001,_general_as_h,e_glo_00001_general_as_h_Normal_Red,GLOW,ファントム,ファントム_general_as_h,Normal,Attack,Red,65000,2,40,0.28,1000,0,0.3,1,10,1.00,0.50,75,,,,-,,dageki_1
+,enemy_glo_00101,_general_as,e_glo_00101_general_as_Boss_Red,GLOW,ボスファントム,中ボスエネミー_general_as,Boss,Attack,Red,500000,2,55,0.2,800,0,0.3,100,10,1.17,stop有:1回目 0.56,150,-,-,,-,,-
+,enemy_glo_00101,_general_as_h,e_glo_00101_general_as_h_Boss_Red,GLOW,ボスファントム,中ボスエネミー_general_as_h,Boss,Attack,Red,1000000,2,55,0.2,1500,0,0.3,100,10,1.17,stop有:1回目 0.56,150,-,-,,-,,-
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,enemy_glo_00001,_general_ori3_vh,e_glo_00001_general_ori3_vh_Normal_Colorless,GLOW,ファントム,ファントム_general_ori3_vh,Normal,Attack,Colorless,50000,2,65,0.11,900,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,enemy_glo_00001,_general_ori3_vh_big,e_glo_00001_general_ori3_vh_big_Normal_Colorless,GLOW,ファントム,ファントム_general_ori3_vh_big,Normal,Attack,Colorless,200000,2,55,0.2,1200,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,enemy_glo_00001,_general_ori3_vh,e_glo_00001_general_ori3_vh_Normal_Yellow,GLOW,ファントム,ファントム_general_ori3_vh,Normal,Attack,Yellow,100000,2,65,0.11,1500,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,enemy_glo_00001,_general_ori3_vh_big,e_glo_00001_general_ori3_vh_big_Normal_Yellow,GLOW,ファントム,ファントム_general_ori3_vh_big,Normal,Attack,Yellow,200000,2,55,0.2,1500,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,chara_rik_00001,_general_ori3_vh,c_rik_00001_general_ori3_vh_Normal_Colorless,トマトイプーのリコピン,リコピン,リコピン_general_ori3_vh,Normal,Defense,Colorless,500000,2,65,0.11,500,0,0.37,1,1,1.64,0.93,35,4.01,"1回目：0.83
+2回目：1.84
+3回目：2.67",連続攻撃,,,dageki_2
+,chara_rik_00001,_general_ori3_vh,c_rik_00001_general_ori3_vh_Normal_Yellow,トマトイプーのリコピン,リコピン,リコピン_general_ori3_vh,Normal,Defense,Yellow,500000,2,65,0.11,500,0,0.37,1,1,1.64,0.93,35,4.01,"1回目：0.83
+2回目：1.84
+3回目：2.67",連続攻撃,,,dageki_2
+,chara_sur_00101,_general_ori3_vh,c_sur_00101_general_ori3_vh_Normal_Yellow,魔都精兵のスレイブ,誇り高き魔都の剣姫 羽前 京香,誇り高き魔都の剣姫 羽前京香_general_ori3_vh,Normal,Attack,Yellow,700000,2,45,0.2,300,0,0.3,1,1,1.40,stop無:1回目 0.33,45,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",連続攻撃,,,zangeki_1
+,chara_chi_00201,_general_ori3_vh,c_chi_00201_general_ori3_vh_Normal_Yellow,チェンソーマン,早川 アキ,早川 アキ_general_ori3_vh,Normal,Attack,Yellow,650000,2,45,0.11,500,0,0.3,1,1,1.60,0.84,30,2.44,1.64,単体攻撃,,,dageki_1
+,chara_chi_00301,_general_ori3_vh,c_chi_00301_general_ori3_vh_Normal_Yellow,チェンソーマン,パワー,パワー_general_ori3_vh,Normal,Attack,Yellow,500000,2,45,0.11,1000,0,0.3,100,1,1.50,0.58,45,2.67,1.00,範囲攻撃+100%の確率で3秒間スタン,,,dageki_1
+,chara_chi_00001,_general_ori3_vh,c_chi_00001_general_ori3_vh_Boss_Yellow,チェンソーマン,デンジ,デンジ_general_ori3_vh,Boss,Attack,Yellow,500000,2,45,0.12,800,0,0.2,100,1,1.40,0.53,45,3.37,1.57,範囲攻撃+大ノックバック,,,zangeki_1
+,chara_chi_00002,_general_ori3_vh,c_chi_00002_general_ori3_vh_Boss_Yellow,チェンソーマン,悪魔が恐れる悪魔 チェンソーマン,悪魔が恐れる悪魔 チェンソーマン_general_ori3_vh,Boss,Technical,Yellow,1500000,2,55,0.11,1500,0,0.2,100,1,1.07,stop無:1回目 0.66,35,3.74,"stop無:1回目 0.53
+stop無:2回目 0.70
+stop無:3回目 0.90
+stop無:4回目 1.03
+stop無:5回目 1.23
+stop有:6回目 2.62",範囲連続攻撃+100%の確率で与えたダメージの100%回復+単体に大ノックバック,,,zangeki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,enemy_glo_00001,_general_ori3_vh2,e_glo_00001_general_ori3_vh2_Normal_Colorless,GLOW,ファントム,ファントム_general_ori3_vh2,Normal,Attack,Colorless,50000,2,65,0.11,900,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,enemy_glo_00001,_general_ori3_vh2_big,e_glo_00001_general_ori3_vh2_big_Normal_Colorless,GLOW,ファントム,ファントム_general_ori3_vh2_big,Normal,Defense,Colorless,500000,2,55,0.2,1200,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,enemy_glo_00001,_general_ori3_vh2,e_glo_00001_general_ori3_vh2_Normal_Blue,GLOW,ファントム,ファントム_general_ori3_vh2,Normal,Attack,Blue,100000,2,65,0.11,1500,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,enemy_glo_00001,_general_ori3_vh2_big,e_glo_00001_general_ori3_vh2_big_Normal_Blue,GLOW,ファントム,ファントム_general_ori3_vh2_big,Normal,Technical,Blue,350000,2,55,0.2,1000,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,chara_sur_00201,_general_ori3_vh2,c_sur_00201_general_ori3_vh2_Normal_Blue,魔都精兵のスレイブ,東 日万凛,東 日万凛_general_ori3_vh2,Normal,Attack,Blue,400000,2,55,0.11,600,0,0.3,1,1,1.47,stop無:1回目 0.37,45,2.67,"stop無:1回目 0.74
+stop無:2回目 0.92
+stop無:3回目 1.1
+stop無:4回目 1.28
+stop無:5回目 1.45
+stop無:6回目 1.65
+stop有:7回目 1.84",連続攻撃,,,shageki_1
+,chara_sur_00301,_general_ori3_vh2,c_sur_00301_general_ori3_vh2_Normal_Blue,魔都精兵のスレイブ,駿河 朱々,駿河 朱々_general_ori3_vh2,Normal,Defense,Blue,500000,2,55,0.2,1200,0,0.3,1,1,1.56,0.66,45,1.91,0.73,単体攻撃+100%の確率で範囲に3秒間スタン攻撃,,,dageki_1
+,chara_chi_00002,_general_ori3_vh2,c_chi_00002_general_ori3_vh2_Normal_Blue,チェンソーマン,悪魔が恐れる悪魔 チェンソーマン,悪魔が恐れる悪魔 チェンソーマン_general_ori3_vh2,Normal,Technical,Blue,1000000,2,65,0.15,1000,0,0.2,100,1,1.07,stop無:1回目 0.66,35,3.74,"stop無:1回目 0.53
+stop無:2回目 0.70
+stop無:3回目 0.90
+stop無:4回目 1.03
+stop無:5回目 1.23
+stop有:6回目 2.62",範囲連続攻撃+各攻撃に与えたダメージの100%回復+小ノックバック,,,zangeki_1
+,chara_rik_00101,_general_ori3_vh2,c_rik_00101_general_ori3_vh2_Boss_Blue,トマトイプーのリコピン,甘戸 めめ,甘戸 めめ_general_ori3_vh2,Boss,Support,Blue,650000,2,35,0.4,2500,0,0.6,1,1,1.57,0.87,175,2.67,stop無:1.00,199秒間、自身の攻撃35%up+敵ディフェンスタイプのHP5%回復+敵テクニカルタイプの敵のHP10%回復,,,dageki_2
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,enemy_glo_00001,_general_ori3_vh3,e_glo_00001_general_ori3_vh3_Normal_Colorless,GLOW,ファントム,ファントム_general_ori3_vh3,Normal,Attack,Colorless,45000,2,65,0.11,800,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,enemy_glo_00001,_general_ori3_vh3_big,e_glo_00001_general_ori3_vh3_big_Normal_Colorless,GLOW,ファントム,ファントム_general_ori3_vh3_big,Normal,Attack,Colorless,150000,2,55,0.2,800,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,enemy_glo_00101,_general_ori3_vh3,e_glo_00101_general_ori3_vh3_Boss_Colorless,GLOW,ボスファントム,中ボスエネミー_general_ori3_vh3,Boss,Attack,Colorless,300000,2,45,0.3,1000,0,0.3,1,1,1.17,stop有:1回目 0.56,75,-,-,,,,-
+,enemy_glo_00001,_general_ori3_vh3,e_glo_00001_general_ori3_vh3_Normal_Red,GLOW,ファントム,ファントム_general_ori3_vh3,Normal,Attack,Red,100000,2,65,0.11,1200,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,enemy_glo_00001,_general_ori3_vh3_big,e_glo_00001_general_ori3_vh3_big_Normal_Red,GLOW,ファントム,ファントム_general_ori3_vh3_big,Normal,Attack,Red,300000,2,55,0.2,1500,0,0.3,1,1,1.00,0.50,75,,,,,,dageki_1
+,enemy_glo_00101,_general_ori3_vh3,e_glo_00101_general_ori3_vh3_Boss_Red,GLOW,ボスファントム,中ボスエネミー_general_ori3_vh3,Boss,Attack,Red,800000,2,45,0.3,1800,0,0.31,1,1,1.17,stop有:1回目 0.56,125,-,-,,,,-
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,enemy_mag_00001,_general,e_mag_00001_general_Normal_Colorless,株式会社マジルミエ,冷却系怪異,冷却系の怪異_general,Normal,Attack,Colorless,70000,1,20,0.3,1200,0,0.4,1,10,1.50,0.80,150,-,-,,-,,shageki_1
+,enemy_mag_00001,_general2,e_mag_00001_general2_Boss_Blue,株式会社マジルミエ,冷却系怪異,冷却系の怪異_general2,Boss,Attack,Blue,150000,1,20,0.3,2500,0,0.4,1,10,1.50,0.80,125,-,-,,-,,shageki_1
+,enemy_mag_00001,_general,e_mag_00001_general_Boss_Blue,株式会社マジルミエ,冷却系怪異,冷却系の怪異_general,Boss,Attack,Blue,250000,1,35,0.3,3000,0,0.4,1,10,1.50,0.80,150,-,-,,-,,shageki_1
+,enemy_mag_00101,_general,e_mag_00101_general_Normal_Blue,株式会社マジルミエ,つらら,つらら_general,Normal,Attack,Blue,10000,1,100,0.11,1500,0,0.3,1,10,0.37,stop有:1回目 0.20,0,-,-,,-,,zangeki_1
+,enemy_mag_00101,_general,e_mag_00101_general_Normal_Colorless,株式会社マジルミエ,つらら,つらら_general,Normal,Attack,Colorless,20000,1,100,0.11,800,0,0.3,1,10,0.37,stop有:1回目 0.20,0,-,-,,-,,zangeki_1
+,enemy_mag_00101,_general2,e_mag_00101_general2_Normal_Blue,株式会社マジルミエ,つらら,つらら_general2,Normal,Attack,Blue,30000,1,100,0.11,500,0,0.3,1,10,0.37,stop有:1回目 0.20,0,-,-,,-,,zangeki_1
+,enemy_mag_00101,_general2,e_mag_00101_general2_Normal_Colorless,株式会社マジルミエ,つらら,つらら_general2,Normal,Attack,Colorless,80000,1,100,0.11,800,0,0.3,1,10,0.37,stop有:1回目 0.20,0,-,-,,-,,zangeki_1
+,enemy_mag_00201,_general,e_mag_00201_general_Boss_Red,株式会社マジルミエ,建造物寄生型の怪異 (大),建造物寄生型の怪異（大）_general,Boss,Attack,Red,500000,2,35,0.2,1000,0,0.3,1,10,1.50,0.74,100,-,-,,7,,dageki_1
+,enemy_mag_00301,_general,e_mag_00301_general_Normal_Colorless,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_general,Normal,Defense,Colorless,32000,1,45,0.11,300,0,0.1,1,10,1.50,0.74,65,-,-,,-,,dageki_2
+,enemy_mag_00301,_general,e_mag_00301_general_Normal_Red,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_general,Normal,Defense,Red,280000,1,45,0.11,700,0,0.1,1,10,1.50,0.74,65,-,-,,-,,dageki_2
+,enemy_mag_00301,_general,e_mag_00301_general_Normal_Blue,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_general,Normal,Defense,Blue,80000,1,45,0.11,500,0,0.1,1,10,1.50,0.74,65,-,-,,-,,dageki_2
+,chara_mag_00001,_general,c_mag_00001_general_Boss_Blue,株式会社マジルミエ,新人魔法少女 桜木 カナ,新人魔法少女 桜木 カナ_general,Boss,Attack,Blue,500000,2,45,0.4,1200,0,0.5,1,10,1.77,stop有:1回目 0.92,50,2.33,"stop無:1回目 0.75
+stop無:2回目 0.92
+stop無:3回目 1.08
+stop無:4回目 1.25
+stop無:5回目 1.42
+stop無:6回目 1.58",連続範囲攻撃+20秒間自身の攻撃50%UP+100%の確率で範囲小ノックバック,5,,shageki_1
+,chara_mag_00101,_general,c_mag_00101_general_Normal_Blue,株式会社マジルミエ,越谷 仁美,越谷 仁美_general,Normal,Attack,Blue,80000,2,55,0.3,1000,0,0.32,1,10,1.90,0.84,50,2.67,1.50,範囲攻撃+20秒間自身の攻撃50%UP,5,,shageki_1
+,enemy_mag_00101,_general_h,e_mag_00101_general_h_Normal_Blue,株式会社マジルミエ,つらら,つらら_general_h,Normal,Attack,Blue,8000,1,100,0.3,500,0,0.3,1,10,0.37,stop有:1回目 0.20,0,-,-,,-,,zangeki_1
+,enemy_mag_00101,_general2_h,e_mag_00101_general2_h_Normal_Blue,株式会社マジルミエ,つらら,つらら_general2_h,Normal,Attack,Blue,8000,1,100,0.3,500,0,0.3,1,10,0.37,stop有:1回目 0.20,0,-,-,,-,,zangeki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,enemy_glo_00001,_general_mag_vh,e_glo_00001_general_mag_vh_Normal_Red,GLOW,ファントム,ファントム_general_mag_vh,Normal,Attack,Red,30000,2,45,0.11,1000,0,0.2,1,1,1.00,0.50,75,,,,-,,
+,enemy_glo_00001,_general_mag_vh,e_glo_00001_general_mag_vh_Normal_Blue,GLOW,ファントム,ファントム_general_mag_vh,Normal,Attack,Blue,30000,2,45,0.11,1000,0,0.2,1,1,1.00,0.50,75,,,,-,,
+,enemy_glo_00001,_general_mag_vh,e_glo_00001_general_mag_vh_Normal_Green,GLOW,ファントム,ファントム_general_mag_vh,Normal,Support,Green,30000,2,45,0.11,1000,0,0.2,1,1,1.00,0.50,75,,,,-,,
+,enemy_glo_00001,_general_mag_vh,e_glo_00001_general_mag_vh_Normal_Yellow,GLOW,ファントム,ファントム_general_mag_vh,Normal,Defense,Yellow,30000,2,45,0.11,1000,0,0.2,1,1,1.00,0.50,75,,,,-,,
+,enemy_glo_00001,_general_mag_vh_big,e_glo_00001_general_mag_vh_big_Normal_Green,GLOW,ファントム,ファントム_general_mag_vh_big,Normal,Defense,Green,70000,2,50,0.2,3000,0,0.2,1,1,1.00,0.50,75,,,,-,,
+,enemy_glo_00001,_general_mag_vh_big,e_glo_00001_general_mag_vh_big_Normal_Blue,GLOW,ファントム,ファントム_general_mag_vh_big,Normal,Attack,Blue,70000,2,50,0.2,3000,0,0.2,1,1,1.00,0.50,75,,,,-,,
+,enemy_glo_00001,_general_mag_vh_big,e_glo_00001_general_mag_vh_big_Normal_Yellow,GLOW,ファントム,ファントム_general_mag_vh_big,Normal,Attack,Yellow,70000,2,50,0.2,3000,0,0.2,1,1,1.00,0.50,75,,,,-,,
+,enemy_mag_00001,_general_vh,e_mag_00001_general_vh_Normal_Blue,株式会社マジルミエ,冷却系怪異,冷却系の怪異_general_vh,Normal,Attack,Blue,150000,1,20,0.3,2500,0,0.4,1,1,1.50,0.80,50,-,-,,-,,
+,enemy_mag_00001,_general_vh,e_mag_00001_general_vh_Boss_Blue,株式会社マジルミエ,冷却系怪異,冷却系の怪異_general_vh,Boss,Attack,Blue,250000,1,35,0.3,3000,0,0.4,1,1,1.50,0.80,50,-,-,,-,,
+,enemy_mag_00101,_general_f_vh,e_mag_00101_general_f_vh_Normal_Blue,株式会社マジルミエ,つらら,つらら_general_f_vh,Normal,Attack,Blue,30000,1,100,0.11,500,0,0.3,1,1,0.37,stop有:1回目 0.20,0,-,-,,-,,
+,enemy_mag_00101,_general_vh,e_mag_00101_general_vh_Normal_Blue,株式会社マジルミエ,つらら,つらら_general_vh,Normal,Attack,Blue,80000,1,100,0.11,800,0,0.3,1,1,0.37,stop有:1回目 0.20,0,-,-,,-,,
+,enemy_mag_00201,_general_vh,e_mag_00201_general_vh_Boss_Green,株式会社マジルミエ,建造物寄生型の怪異 (大),建造物寄生型の怪異（大）_general_vh,Boss,Attack,Green,500000,2,35,0.2,1000,0,0.3,1,1,1.50,0.74,100,-,-,,-,,
+,enemy_mag_00201,_general_vh,e_mag_00201_general_vh_Normal_Green,株式会社マジルミエ,建造物寄生型の怪異 (大),建造物寄生型の怪異（大）_general_vh,Normal,Attack,Green,500000,2,35,0.2,1000,0,0.3,1,1,1.50,0.74,100,-,-,,-,,
+,enemy_mag_00301,_general_vh,e_mag_00301_general_vh_Normal_Green,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_general_vh,Normal,Attack,Green,70000,1,45,0.11,700,0,0.2,1,1,1.50,0.74,65,-,-,,-,,
+,enemy_mag_00301,_general_vh,e_mag_00301_general_vh_Normal_Yellow,株式会社マジルミエ,建造物寄生型の怪異,建造物寄生型の怪異（小）_general_vh,Normal,Attack,Yellow,20000,1,45,0.11,500,0,0.2,1,1,1.50,0.74,65,-,-,,-,,
+,chara_mag_00001,_general_vh,c_mag_00001_general_vh_Boss_Yellow,株式会社マジルミエ,新人魔法少女 桜木 カナ,新人魔法少女 桜木 カナ_general_vh,Boss,Attack,Yellow,500000,2,45,0.4,1200,0,0.5,1,1,1.77,stop有:1回目 0.92,50,2.33,"stop無:1回目 0.75
+stop無:2回目 0.92
+stop無:3回目 1.08
+stop無:4回目 1.25
+stop無:5回目 1.42
+stop無:6回目 1.58",合計1200%の範囲攻撃+中ノックバック+最後の攻撃がHitしたキャラの攻撃を20秒間20%DOWN,5,,
+,chara_mag_00101,_general_vh,c_mag_00101_general_vh_Normal_Blue,株式会社マジルミエ,越谷 仁美,越谷 仁美_general_vh,Normal,Attack,Blue,80000,2,55,0.3,1000,0,0.32,1,1,1.90,0.84,50,2.67,1.50,範囲攻撃+自信の攻撃を10秒間50%Up,5,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,chara_sum_00201,_general,c_sum_00201_general_Normal_Colorless,サマータイムレンダ,小舟 澪,小舟 澪_general,Normal,Attack,Colorless,70000,4,50,0.11,490,0,0.3,1,10,2.37,stop有 :1回目 0.67,100,3.67,stop有 :1回目 1.70,範囲攻撃+小ノックバック,4,,dageki_1
+,chara_sum_00201,_general,c_sum_00201_general_Normal_Yellow,サマータイムレンダ,小舟 澪,小舟 澪_general,Normal,Attack,Yellow,270000,2,50,0.11,1050,0,0.3,1,10,2.37,stop有 :1回目 0.67,100,3.67,stop有 :1回目 1.70,範囲攻撃+中ノックバック,4,,dageki_1
+,chara_sum_00201,_general,c_sum_00201_general_Boss_Blue,サマータイムレンダ,小舟 澪,小舟 澪_general,Boss,Attack,Blue,400000,2,60,0.11,1400,0,0.3,1,10,2.37,stop有 :1回目 0.67,100,3.67,stop有 :1回目 1.70,範囲攻撃+大ノックバック,4,,dageki_1
+,enemy_sum_00101,_general,e_sum_00101_general_Boss_Yellow,サマータイムレンダ,小舟 澪の影 (拳銃),小舟 澪(影)_拳銃_general,Boss,Attack,Yellow,200000,2,45,0.45,500,0,0.55,100,10,1.40,0.60,150,-,-,,-,,shageki_1
+,enemy_sum_00201,_general,e_sum_00201_general_Boss_Blue,サマータイムレンダ,小舟 澪の影 (包丁),小舟 澪(影)_包丁_general,Boss,Attack,Blue,300000,2,45,0.11,800,0,0.3,1,10,1.40,0.66,100,-,-,,-,,zangeki_1
+,enemy_sum_00001,_general,e_sum_00001_general_Normal_Colorless,サマータイムレンダ,影,影_general,Normal,Defense,Colorless,15000,1,40,0.2,200,0,0.3,1,10,1.50,0.66,100,-,-,,-,,dageki_1
+,enemy_sum_00001,_general,e_sum_00001_general_Normal_Yellow,サマータイムレンダ,影,影_general,Normal,Defense,Yellow,26000,1,40,0.2,300,0,0.3,1,10,1.50,0.66,100,-,-,,-,,dageki_1
+,enemy_sum_00001,_general,e_sum_00001_general_Normal_Blue,サマータイムレンダ,影,影_general,Normal,Defense,Blue,18000,1,40,0.2,400,0,0.3,1,10,1.50,0.66,100,-,-,,-,,dageki_1
+,enemy_sum_00001,_general,e_sum_00001_general_Normal_Red,サマータイムレンダ,影,影_general,Normal,Defense,Red,80000,1,40,0.3,500,0,0.3,1,10,1.50,0.66,100,-,-,,-,,dageki_1
+,enemy_sum_00001,_general,e_sum_00001_general_Boss_Red,サマータイムレンダ,影,影_general,Boss,Defense,Red,350000,1,40,0.2,600,0,0.3,1,10,1.50,0.66,50,-,-,,-,,dageki_1
+,chara_sum_00001,_general,c_sum_00001_general_Normal_Red,サマータイムレンダ,網代 慎平,網代 慎平_general,Normal,Technical,Red,245000,2,45,0.11,500,0,0.3,1,10,1.40,stop無:1回目 0.65,100,2.33,"stop無:1回目 0.75
+stop無:2回目 0.93
+stop無:3回目 1.15",連続単体攻撃+20秒間20%攻撃DOWN,5,,shageki_1
+,chara_sum_00101,_general,c_sum_00101_general_Boss_Red,サマータイムレンダ,影のウシオ 小舟 潮,影のウシオ 小舟 潮_general,Boss,Support,Red,190000,2,40,0.3,600,0,0.4,1,10,1.13,0.50,100,2.20,1.00,場面全体の敵のHPを20%回復+10秒間150%攻撃UP,7,,zangeki_1
+,chara_sum_00201,_general2,c_sum_00201_general2_Normal_Colorless,サマータイムレンダ,小舟 澪,小舟 澪_general2,Normal,Attack,Colorless,70000,3,50,0.11,500,0,0.3,1,10,2.37,stop有 :1回目 0.67,100,3.67,stop有 :1回目 1.70,範囲攻撃+小ノックバック,7,,dageki_1
+,chara_sum_00201,_general2,c_sum_00201_general2_Normal_Red,サマータイムレンダ,小舟 澪,小舟 澪_general2,Normal,Attack,Red,140000,3,50,0.11,700,0,0.3,1,10,2.37,stop有 :1回目 0.67,100,3.67,stop有 :1回目 1.70,範囲攻撃+中ノックバック,5,,dageki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,enemy_glo_00001,_general_sum_vh,e_glo_00001_general_sum_vh_Normal_Red,GLOW,ファントム,ファントム_general_sum_vh,Normal,Attack,Red,16000,2,65,0.11,1500,0,0.2,1,1,1.00,0.50,,,,,,,dageki_1
+,enemy_glo_00001,_general_sum_vh,e_glo_00001_general_sum_vh_Normal_Blue,GLOW,ファントム,ファントム_general_sum_vh,Normal,Attack,Blue,13000,2,65,0.11,1600,0,0.2,1,1,1.00,0.50,,,,,,,dageki_1
+,enemy_glo_00001,_general_sum_vh,e_glo_00001_general_sum_vh_Normal_Green,GLOW,ファントム,ファントム_general_sum_vh,Normal,Attack,Green,5000,1,35,0.11,800,0,0.2,1,1,1.00,0.50,,,,,,,dageki_1
+,enemy_glo_00001,_general_sum_vh,e_glo_00001_general_sum_vh_Normal_Yellow,GLOW,ファントム,ファントム_general_sum_vh,Normal,Attack,Yellow,20000,2,65,0.11,1300,0,0.2,1,1,1.00,0.50,,,,,,,dageki_1
+,enemy_glo_00001,_general_sum_vh_big,e_glo_00001_general_sum_vh_big_Normal_Red,GLOW,ファントム,ファントム_general_sum_vh_big,Normal,Attack,Red,120000,2,40,0.19,1500,0,0.2,1,1,1.00,0.50,,,,,,,dageki_1
+,enemy_glo_00001,_general_sum_vh_big,e_glo_00001_general_sum_vh_big_Normal_Blue,GLOW,ファントム,ファントム_general_sum_vh_big,Normal,Attack,Blue,200000,2,45,0.19,2500,0,0.2,1,1,1.00,0.50,,,,,,,dageki_1
+,enemy_glo_00001,_general_sum_vh_big,e_glo_00001_general_sum_vh_big_Normal_Green,GLOW,ファントム,ファントム_general_sum_vh_big,Normal,Attack,Green,120000,2,40,0.19,1500,0,0.2,1,1,1.00,0.50,,,,,,,dageki_1
+,enemy_glo_00001,_general_sum_vh_big,e_glo_00001_general_sum_vh_big_Normal_Yellow,GLOW,ファントム,ファントム_general_sum_vh_big,Normal,Attack,Yellow,120000,2,40,0.19,1500,0,0.2,1,1,1.00,0.50,,,,,,,dageki_1
+,chara_sum_00201,_general_sum_vh,c_sum_00201_general_sum_vh_Normal_Blue,サマータイムレンダ,小舟 澪,小舟 澪_general_sum_vh,Normal,Defense,Blue,200000,2,65,0.11,2000,0,0.2,1,1,2.37,stop有 :1回目 0.67,,3.67,stop有 :1回目 1.70,範囲攻撃+小ノックバック,4,,dageki_1
+,chara_sum_00201,_general_sum_vh,c_sum_00201_general_sum_vh_Boss_Blue,サマータイムレンダ,小舟 澪,小舟 澪_general_sum_vh,Boss,Defense,Blue,1000000,2,65,0.11,2500,0,0.27,1,1,2.37,stop有 :1回目 0.67,,3.67,stop有 :1回目 1.70,範囲攻撃+小ノックバック,4,,dageki_1
+,enemy_sum_00001,_general_sum_vh,e_sum_00001_general_sum_vh_Normal_Red,サマータイムレンダ,影,影_general_sum_vh,Normal,Attack,Red,30000,1,45,0.11,600,0,0.4,100,1,1.50,0.66,,-,-,,,,dageki_1
+,enemy_sum_00001,_general_sum_vh,e_sum_00001_general_sum_vh_Normal_Blue,サマータイムレンダ,影,影_general_sum_vh,Normal,Attack,Blue,38000,1,45,0.11,500,0,0.4,100,1,1.50,0.66,,-,-,,,,dageki_1
+,enemy_sum_00001,_general_sum_vh,e_sum_00001_general_sum_vh_Normal_Green,サマータイムレンダ,影,影_general_sum_vh,Normal,Attack,Green,21000,1,45,0.11,800,0,0.4,100,1,1.50,0.66,,-,-,,,,dageki_1
+,enemy_sum_00001,_general_sum_vh,e_sum_00001_general_sum_vh_Normal_Yellow,サマータイムレンダ,影,影_general_sum_vh,Normal,Attack,Yellow,45000,1,45,0.11,400,0,0.4,100,1,1.50,0.66,,-,-,,,,dageki_1
+,enemy_sum_00001,_general_sum_vh_big,e_sum_00001_general_sum_vh_big_Normal_Blue,サマータイムレンダ,影,影_general_sum_vh_big,Normal,Attack,Blue,150000,1,50,0.2,700,0,0.4,100,1,1.50,0.66,,-,-,,,,dageki_1
+,enemy_sum_00001,_general_sum_vh_big,e_sum_00001_general_sum_vh_big_Normal_Yellow,サマータイムレンダ,影,影_general_sum_vh_big,Normal,Attack,Yellow,150000,1,50,0.2,700,0,0.4,100,1,1.50,0.66,,-,-,,,,dageki_1
+,enemy_sum_00101,_general_sum_vh,e_sum_00101_general_sum_vh_Boss_Blue,サマータイムレンダ,小舟 澪の影 (拳銃),小舟 澪(影)_拳銃_general_sum_vh,Boss,Attack,Blue,800000,2,55,0.45,1000,0,0.55,100,1,1.40,0.60,,-,-,,,,shageki_1
+,enemy_sum_00201,_general_sum_vh,e_sum_00201_general_sum_vh_Boss_Yellow,サマータイムレンダ,小舟 澪の影 (包丁),小舟 澪(影)_包丁_general_sum_vh,Boss,Attack,Yellow,500000,2,55,0.11,1200,0,0.3,1,1,1.40,0.66,,-,-,,,,zangeki_1
+,enemy_sum_00101,_general_sum_vh,e_sum_00101_general_sum_vh_Normal_Green,サマータイムレンダ,小舟 澪の影 (拳銃),小舟 澪(影)_拳銃_general_sum_vh,Normal,Attack,Green,200000,2,55,0.45,700,0,0.55,100,1,1.40,0.60,,-,-,,,,shageki_1
+,enemy_sum_00201,_general_sum_vh,e_sum_00201_general_sum_vh_Normal_Yellow,サマータイムレンダ,小舟 澪の影 (包丁),小舟 澪(影)_包丁_general_sum_vh,Normal,Attack,Yellow,500000,2,55,0.11,1200,0,0.3,1,1,1.40,0.66,,-,-,,,,zangeki_1
+,chara_sum_00001,_general_sum_vh,c_sum_00001_general_sum_vh_Normal_Green,サマータイムレンダ,網代 慎平,網代 慎平_general_sum_vh,Normal,Attack,Green,400000,2,50,0.3,1300,0,0.4,100,1,1.40,stop無:1回目 0.65,,2.33,"stop無:1回目 0.75
+stop無:2回目 0.93
+stop無:3回目 1.15",連続攻撃,,,shageki_1
+,chara_sum_00001,_general_sum_vh2,c_sum_00001_general_sum_vh2_Normal_Blue,サマータイムレンダ,網代 慎平,網代 慎平_general_sum_vh2,Normal,Attack,Blue,400000,2,50,0.11,900,0,0.4,100,1,1.40,stop無:1回目 0.65,,2.33,"stop無:1回目 0.75
+stop無:2回目 0.93
+stop無:3回目 1.15",連続攻撃,,,shageki_1
+,chara_sum_00101,_general_sum_vh,c_sum_00101_general_sum_vh_Boss_Blue,サマータイムレンダ,影のウシオ 小舟 潮,影のウシオ 小舟 潮_general_sum_vh,Boss,Support,Blue,500000,4,55,0.3,400,0,0.4,100,1,1.13,0.50,,2.20,1.00,10秒間、場面全体の敵攻撃を20%UP+アタックロールの敵の体力を30%回復,,,zangeki_1
+,chara_sum_00101,_general_sum_vh,c_sum_00101_general_sum_vh_Boss_Yellow,サマータイムレンダ,影のウシオ 小舟 潮,影のウシオ 小舟 潮_general_sum_vh,Boss,Support,Yellow,500000,4,55,0.3,400,0,0.4,100,1,1.13,0.50,,2.20,1.00,10秒間、場面全体の敵攻撃を20%UP+アタックロールの敵の体力を30%回復,,,zangeki_1
+,chara_sum_00201,_general_sum_vh2,c_sum_00201_general_sum_vh2_Boss_Green,サマータイムレンダ,小舟 澪,小舟 澪_general_sum_vh2,Boss,Defense,Green,750000,2,65,0.11,1100,0,0.27,1,1,2.37,stop有 :1回目 0.67,,3.67,stop有 :1回目 1.70,小ノックバック,,,dageki_1
+,chara_sum_00201,_general_sum_vh3,c_sum_00201_general_sum_vh3_Normal_Green,サマータイムレンダ,小舟 澪,小舟 澪_general_sum_vh3,Normal,Defense,Green,200000,2,65,0.11,1100,0,0.27,1,1,2.37,stop有 :1回目 0.67,,3.67,stop有 :1回目 1.70,小ノックバック,,,dageki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,enemy_kai_00301,_general_1,e_kai_00301_general_1_Normal_Colorless,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_general_1,Normal,Defense,Colorless,150000,2,45,0.2,600,0,0.2,1,10,1.00,0.40,75,-,-,,-,,dageki_1
+,enemy_kai_00301,_general_1,e_kai_00301_general_1_Boss_Green,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_general_1,Boss,Attack,Green,400000,3,45,0.2,1200,0,0.2,1,10,1.00,0.40,100,-,-,,-,,dageki_1
+,enemy_kai_00301,_general,e_kai_00301_general_Normal_Colorless,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_general,Normal,Defense,Colorless,20000,2,45,0.2,500,0,0.3,1,10,1.00,0.40,50,-,-,,-,,dageki_1
+,enemy_kai_00301,_general,e_kai_00301_general_Normal_Green,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_general,Normal,Attack,Green,45000,3,45,0.2,750,0,0.3,1,10,1.00,0.40,50,-,-,,-,,dageki_1
+,enemy_kai_00001,_general,e_kai_00001_general_Normal_Yellow,怪獣８号,怪獣 本獣,怪獣 本獣_general,Normal,Attack,Yellow,170000,3,40,0.11,1000,0,0.2,100,10,2.34,stop有:1回目 1.00,100,-,-,,-,,dageki_1
+,enemy_kai_00001,_general,e_kai_00001_general_Boss_Yellow,怪獣８号,怪獣 本獣,怪獣 本獣_general,Boss,Attack,Yellow,550000,2,40,0.11,700,0,0.3,100,10,2.34,stop有:1回目 1.00,100,-,-,,-,,dageki_1
+,enemy_kai_00101,_general,e_kai_00101_general_Normal_Colorless,怪獣８号,怪獣 余獣,怪獣 余獣_general,Normal,Defense,Colorless,30000,1,45,0.11,300,0,0.2,1,10,1.23,stop有:1回目 0.56,75,-,-,,-,,dageki_1
+,enemy_kai_00101,_general,e_kai_00101_general_Normal_Yellow,怪獣８号,怪獣 余獣,怪獣 余獣_general,Normal,Attack,Yellow,200000,1,45,0.2,800,0,0.3,1,10,1.23,stop有:1回目 0.56,50,-,-,,-,,dageki_1
+,enemy_kai_00101,_general,e_kai_00101_general_Normal_Green,怪獣８号,怪獣 余獣,怪獣 余獣_general,Normal,Attack,Green,80000,1,45,0.11,800,0,0.2,1,10,1.23,stop有:1回目 0.56,75,-,-,,-,,dageki_1
+,enemy_kai_00201,_general,e_kai_00201_general_Boss_Yellow,怪獣８号,怪獣９号,怪獣９号_general,Boss,Technical,Yellow,450000,1,55,0.11,1200,0,0.3,100,10,2.47,stop有:1回目 1.26,100,-,-,,-,,shageki_1
+,chara_kai_00001,_general,c_kai_00001_general_Normal_Yellow,怪獣８号,日比野 カフカ,日比野 カフカ_general,Normal,Technical,Yellow,150000,2,35,0.11,700,0,0.3,1,10,1.83,1.00,75,2.33,1.33,自身を4秒間、攻撃200%UP,5,,dageki_1
+,chara_kai_00002,_general,c_kai_00002_general_Boss_Yellow,怪獣８号,隠された英雄の姿 怪獣８号,隠された英雄の姿 怪獣８号_general,Boss,Support,Yellow,700000,1,45,0.2,1500,0,0.3,1,10,1.50,stop無:1回目 0.54,100,2.40,"stop有:1回目 1.00
+stop無:2回目 1.37
+stop無:3回目 1.54
+stop無:4回目 1.70
+stop無:5回目 1.87
+stop無:6回目 2.04",連続攻撃,5,,dageki_1
+,chara_kai_00301,_general,c_kai_00301_general_Normal_Yellow,怪獣８号,四ノ宮 キコル,四ノ宮 キコル_general,Normal,Attack,Yellow,300000,2,55,0.11,800,0,0.3,1,10,2.04,0.70,75,3.34,1.07,範囲スタン攻撃+199秒間、攻撃30%UP,8,,zangeki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,enemy_glo_00001,_general_kai_vh,e_glo_00001_general_kai_vh_Normal_Red,GLOW,ファントム,ファントム_general_kai_vh,Normal,Attack,Red,19000,2,65,0.15,400,0,0.2,,1,1.00,0.50,35,,,,,,dageki_1
+,enemy_glo_00001,_general_kai_vh,e_glo_00001_general_kai_vh_Normal_Blue,GLOW,ファントム,ファントム_general_kai_vh,Normal,Attack,Blue,17000,2,65,0.15,600,0,0.2,,1,1.00,0.50,35,,,,,,dageki_1
+,enemy_glo_00001,_general_kai_vh,e_glo_00001_general_kai_vh_Normal_Green,GLOW,ファントム,ファントム_general_kai_vh,Normal,Attack,Green,25000,2,65,0.15,800,0,0.2,,1,1.00,0.50,35,,,,,,dageki_1
+,enemy_glo_00001,_general_kai_vh_big,e_glo_00001_general_kai_vh_big_Normal_Red,GLOW,ファントム,ファントム_general_kai_vh_big,Normal,Attack,Red,180000,2,65,0.15,200,0,0.2,,1,1.00,0.50,35,,,,,,dageki_1
+,enemy_glo_00001,_general_kai_vh_big,e_glo_00001_general_kai_vh_big_Normal_Green,GLOW,ファントム,ファントム_general_kai_vh_big,Normal,Attack,Green,200000,2,65,0.15,400,0,0.2,,1,1.00,0.50,35,,,,,,dageki_1
+,enemy_kai_00301,_general_kai_vh,e_kai_00301_general_kai_vh_Normal_Green,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_general_kai_vh,Normal,Defense,Green,120000,2,45,0.2,1000,0,0.3,,1,1.00,0.40,125,-,-,,,,dageki_1
+,enemy_kai_00301,_general_kai_vh,e_kai_00301_general_kai_vh_Normal_Yellow,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_general_kai_vh,Normal,Defense,Yellow,190000,2,45,0.2,1000,0,0.3,,1,1.00,0.40,125,-,-,,,,dageki_1
+,enemy_kai_00301,_general_kai_vh,e_kai_00301_general_kai_vh_Boss_Green,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_general_kai_vh,Boss,Defense,Green,500000,2,45,0.2,1500,0,0.3,,1,1.00,0.40,125,-,-,,,,dageki_1
+,enemy_kai_00301,_general_kai_vh,e_kai_00301_general_kai_vh_Normal_Blue,怪獣８号,蜘蛛の怪獣,蜘蛛の怪獣_general_kai_vh,Normal,Attack,Blue,250000,2,45,0.2,1200,0,0.3,,1,1.00,0.40,125,-,-,,,,dageki_1
+,enemy_kai_00001,_general_kai_vh,e_kai_00001_general_kai_vh_Normal_Green,怪獣８号,怪獣 本獣,怪獣 本獣_general_kai_vh,Normal,Attack,Green,250000,2,65,0.11,800,0,0.4,,1,2.34,stop有:1回目 1.00,75,-,-,,,,dageki_1
+,enemy_kai_00001,_general_kai_vh,e_kai_00001_general_kai_vh_Normal_Blue,怪獣８号,怪獣 本獣,怪獣 本獣_general_kai_vh,Normal,Attack,Blue,100000,2,35,0.2,600,0,0.4,,1,2.34,stop有:1回目 1.00,125,-,-,,,,dageki_1
+,enemy_kai_00001,_general_kai_vh,e_kai_00001_general_kai_vh_Normal_Red,怪獣８号,怪獣 本獣,怪獣 本獣_general_kai_vh,Normal,Attack,Red,120000,2,35,0.2,800,0,0.4,,1,2.34,stop有:1回目 1.00,125,-,-,,,,dageki_1
+,enemy_kai_00001,_general_kai_vh,e_kai_00001_general_kai_vh_Boss_Green,怪獣８号,怪獣 本獣,怪獣 本獣_general_kai_vh,Boss,Attack,Green,610000,2,35,0.2,1200,0,0.4,,1,2.34,stop有:1回目 1.00,125,-,-,,,,dageki_1
+,enemy_kai_00001,_general_kai_vh,e_kai_00001_general_kai_vh_Boss_Blue,怪獣８号,怪獣 本獣,怪獣 本獣_general_kai_vh,Boss,Attack,Blue,1500000,2,55,0.11,1000,0,0.4,,1,2.34,stop有:1回目 1.00,125,-,-,,,,dageki_1
+,enemy_kai_00101,_general_kai_vh,e_kai_00101_general_kai_vh_Normal_Green,怪獣８号,怪獣 余獣,怪獣 余獣_general_kai_vh,Normal,Attack,Green,80000,2,55,0.11,600,0,0.2,,1,1.23,stop有:1回目 0.56,75,-,-,,,,dageki_1
+,enemy_kai_00101,_general_kai_vh,e_kai_00101_general_kai_vh_Normal_Blue,怪獣８号,怪獣 余獣,怪獣 余獣_general_kai_vh,Normal,Attack,Blue,90000,2,55,0.11,700,0,0.2,,1,1.23,stop有:1回目 0.56,50,-,-,,,,dageki_1
+,enemy_kai_00101,_general_kai_vh,e_kai_00101_general_kai_vh_Normal_Red,怪獣８号,怪獣 余獣,怪獣 余獣_general_kai_vh,Normal,Attack,Red,30000,2,65,0.11,300,0,0.2,,1,1.23,stop有:1回目 0.56,50,-,-,,,,dageki_1
+,enemy_kai_00101,_general_kai_vh,e_kai_00101_general_kai_vh_Normal_Yellow,怪獣８号,怪獣 余獣,怪獣 余獣_general_kai_vh,Normal,Attack,Yellow,40000,2,65,0.11,400,0,0.2,,1,1.23,stop有:1回目 0.56,50,-,-,,,,dageki_1
+,enemy_kai_00201,_general_kai_vh2,e_kai_00201_general_kai_vh2_Normal_Red,怪獣８号,怪獣９号,怪獣９号_general_kai_vh2,Normal,Attack,Red,650000,2,65,0.4,500,0,0.42,,1,2.47,stop有:1回目 1.26,250,-,-,,,,shageki_1
+,enemy_kai_00201,_general_kai_vh2,e_kai_00201_general_kai_vh2_Boss_Red,怪獣８号,怪獣９号,怪獣９号_general_kai_vh2,Boss,Attack,Red,1500000,2,65,0.11,1000,0,0.42,,1,2.47,stop有:1回目 1.26,75,-,-,,,,shageki_1
+,enemy_kai_00201,_general_kai_vh,e_kai_00201_general_kai_vh_Boss_Yellow,怪獣８号,怪獣９号,怪獣９号_general_kai_vh,Boss,Attack,Yellow,1000000,2,55,0.11,800,0,0.42,,1,2.47,stop有:1回目 1.26,75,-,-,,5,,shageki_1
+,chara_kai_00001,_general_kai_vh,c_kai_00001_general_kai_vh_Boss_Yellow,怪獣８号,日比野 カフカ,日比野 カフカ_general_kai_vh,Boss,Attack,Yellow,300000,3,45,0.11,800,0,0.3,,1,1.83,1.00,100,2.33,1.33,自身を4秒間、300%攻撃UP,4,,dageki_1
+,chara_kai_00002,_general_kai_vh,c_kai_00002_general_kai_vh_Boss_Red,怪獣８号,隠された英雄の姿 怪獣８号,隠された英雄の姿 怪獣８号_general_kai_vh,Boss,Attack,Red,700000,3,55,0.11,1200,0,0.3,,1,1.50,stop無:1回目 0.54,100,2.40,"stop有:1回目 1.00
+stop無:2回目 1.37
+stop無:3回目 1.54
+stop無:4回目 1.70
+stop無:5回目 1.87
+stop無:6回目 2.04",,5,,dageki_1
+,chara_kai_00301,_general_kai_vh,c_kai_00301_general_kai_vh_Boss_Green,怪獣８号,四ノ宮 キコル,四ノ宮 キコル_general_kai_vh,Boss,Attack,Green,1000000,3,50,0.2,1000,0,0.35,,1,2.04,0.70,50,3.34,1.07,100%の確率で4.5秒間スタン＋自身を199秒間攻撃50%Up,5,,zangeki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,chara_kai_00002,_general_as4,c_kai_00002_general_as4_Normal_Green,怪獣８号,隠された英雄の姿 怪獣８号,隠された英雄の姿 怪獣８号_general_as4,Normal,Attack,Green,400000,1,40,0.11,1000,0,0.3,1,10,1.50,stop無:1回目 0.54,100,2.40,"stop有:1回目 1.00
+stop無:2回目 1.37
+stop無:3回目 1.54
+stop無:4回目 1.70
+stop無:5回目 1.87
+stop無:6回目 2.04",最大6回ヒットの連続攻撃,9,,dageki_1
+,chara_sum_00101,_general_as4,c_sum_00101_general_as4_Boss_Green,サマータイムレンダ,影のウシオ 小舟 潮,影のウシオ 小舟 潮_general_as4,Boss,Support,Green,500000,2,45,0.3,900,0,0.3,1,10,1.13,0.50,150,2.20,1.00,盤面全体の敵のHP20%回復+20秒間攻撃50%UP,7,,zangeki_1
+,chara_kai_00101,_general_as4,c_kai_00101_general_as4_Normal_Green,怪獣８号,市川 レノ,市川 レノ_general_as4,Normal,Technical,Green,250000,3,35,0.4,700,0,0.5,100,10,1.40,stop無:1回目 0.91,130,3.17,"stop無:1回目 1.05
+stop無:2回目 1.33
+stop無:3回目 1.76",最大3回ヒットの連続攻撃＋5秒間自身の攻撃300%UP,7,,shageki_1
+,chara_sum_00201,_general_as4,c_sum_00201_general_as4_Normal_Green,サマータイムレンダ,小舟 澪,小舟 澪_general_as4,Normal,Attack,Green,250000,2,45,0.3,500,0,0.3,1,10,2.37,stop有 :1回目 0.67,50,3.67,stop有 :1回目 1.70,範囲攻撃＋大ノックバック＋20秒間攻撃20%DOWN,5,,dageki_1
+,enemy_sum_00101,_general_as4,e_sum_00101_general_as4_Normal_Green,サマータイムレンダ,小舟 澪の影 (拳銃),小舟 澪(影)_拳銃_general_as4,Normal,Attack,Green,170000,3,45,0.3,500,0,0.5,100,10,1.40,0.60,150,-,-,,-,,shageki_1
+,enemy_sum_00201,_general_as4,e_sum_00201_general_as4_Normal_Green,サマータイムレンダ,小舟 澪の影 (包丁),小舟 澪(影)_包丁_general_as4,Normal,Attack,Green,170000,2,45,0.11,100,0,0.3,1,10,1.40,0.66,10,-,-,,-,,zangeki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,none
+,chara_mag_00001,_general_as4,c_mag_00001_general_as4_Boss_Blue,株式会社マジルミエ,新人魔法少女 桜木 カナ,新人魔法少女 桜木 カナ_general_as4,Boss,Attack,Blue,350000,3,45,0.3,800,0,0.6,1,10,1.77,stop有:1回目 0.92,75,2.33,"stop無:1回目 0.75
+stop無:2回目 0.92
+stop無:3回目 1.08
+stop無:4回目 1.25
+stop無:5回目 1.42
+stop無:6回目 1.58",連続範囲攻撃,7,,shageki_1
+,chara_kai_00301,_general_as4,c_kai_00301_general_as4_Normal_Blue,怪獣８号,四ノ宮 キコル,四ノ宮 キコル_general_as4,Normal,Defense,Blue,350000,1,35,0.11,900,0,0.2,100,10,2.04,0.70,50,3.34,1.07,100%の確率で4.5秒間のスタン攻撃+199秒間、自身の攻撃30%UP,5,,zangeki_1
+,chara_mag_00101,_general_as4,c_mag_00101_general_as4_Normal_Blue,株式会社マジルミエ,越谷 仁美,越谷 仁美_general_as4,Normal,Attack,Blue,500000,2,45,0.2,900,0,0.3,1,10,1.90,0.84,75,2.67,1.50,範囲攻撃+100%の確率で4.5秒間のスタン攻撃,6,,shageki_1
+,chara_sum_00001,_general_as4,c_sum_00001_general_as4_Normal_Blue,サマータイムレンダ,網代 慎平,網代 慎平_general_as4,Normal,Technical,Blue,150000,3,40,0.3,900,0,0.6,1,10,1.40,stop無:1回目 0.65,150,2.33,"stop無:1回目 0.75
+stop無:2回目 0.93
+stop無:3回目 1.15",連続3回攻撃+10秒間敵の攻撃15%down,7,,shageki_1
+,chara_kai_00001,_general_as4,c_kai_00001_general_as4_Normal_Blue,怪獣８号,日比野 カフカ,日比野 カフカ_general_as4,Normal,Technical,Blue,150000,2,40,0.11,900,0,0.3,1,10,1.83,1.00,75,2.33,1.33,4秒間、自身に攻撃300%UP,5,,dageki_1
+,enemy_mag_00101,_general_as4,e_mag_00101_general_as4_Normal_Blue,株式会社マジルミエ,つらら,つらら_general_as4,Normal,Technical,Blue,200000,1,75,0.11,1500,0,0.3,1,10,0.37,stop有:1回目 0.20,0,-,-,,-,,zangeki_1
+,enemy_mag_00101,_general_as4,e_mag_00101_general_as4_Normal_Colorless,株式会社マジルミエ,つらら,つらら_general_as4,Normal,Technical,Colorless,200000,1,75,0.11,1500,0,0.3,1,10,0.37,stop有:1回目 0.20,0,-,-,,-,,zangeki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,enemy_glo_00001,_general_as,e_glo_00001_general_as_Normal_Yellow,GLOW,ファントム,ファントム_general_as,Normal,Technical,Yellow,50000,2,40,0.2,500,0,0.25,1,10,1.00,0.50,50,,,,-,,
+,enemy_glo_00001,_general_as_h,e_glo_00001_general_as_h_Normal_Yellow,GLOW,ファントム,ファントム_general_as_h,Normal,Technical,Yellow,100000,2,40,0.2,1500,0,0.25,1,10,1.00,0.50,50,,,,-,,
+,enemy_glo_00101,_general_as,e_glo_00101_general_as_Boss_Yellow,GLOW,ボスファントム,中ボスエネミー_general_as,Boss,Support,Yellow,400000,2,55,0.28,2000,0,0.3,100,10,1.17,stop有:1回目 0.56,200,-,-,,-,,
+,enemy_glo_00101,_general_as_h,e_glo_00101_general_as_h_Boss_Yellow,GLOW,ボスファントム,中ボスエネミー_general_as_h,Boss,Support,Yellow,600000,2,55,0.28,3000,0,0.3,100,10,1.17,stop有:1回目 0.56,200,-,-,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,enemy_glo_00001,_general_ori4,e_glo_00001_general_ori4_Normal_Yellow,GLOW,ファントム,ファントム_general_ori4,Normal,Defense,Yellow,60000,2,45,0.2,1000,0,0.25,1,1,1.00,0.50,,,,,,,
+,enemy_glo_00001,_general_ori4_big,e_glo_00001_general_ori4_big_Normal_Yellow,GLOW,ファントム,ファントム_general_ori4_big,Normal,Support,Yellow,200000,2,45,0.2,700,0,0.25,1,1,1.00,0.50,,,,,,,
+,enemy_glo_00101,_general_ori4,e_glo_00101_general_ori4_Boss_Yellow,GLOW,ボスファントム,中ボスエネミー_general_ori4,Boss,Attack,Yellow,700000,2,45,0.2,1800,0,0.25,100,1,1.17,stop有:1回目 0.56,,-,-,,,,
+,enemy_glo_00001,_general_ori4,e_glo_00001_general_ori4_Normal_Colorless,GLOW,ファントム,ファントム_general_ori4,Normal,Defense,Colorless,32000,1,55,0.11,500,0,0.25,1,1,1.00,0.50,,,,,,,
+,enemy_glo_00001,_general_ori4_big_a_,e_glo_00001_general_ori4_big_a__Normal_Green,GLOW,ファントム,ファントム_general_ori4_big_a_,Normal,Support,Green,200000,1,55,0.11,400,0,0.25,1,1,1.00,0.50,,,,,,,
+,enemy_glo_00001,_general_ori4_big,e_glo_00001_general_ori4_big_Normal_Colorless,GLOW,ファントム,ファントム_general_ori4_big,Normal,Attack,Colorless,400000,1,55,0.11,1100,0,0.25,100,1,1.00,0.50,,,,,,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,enemy_glo_00001,_general_ori4,e_glo_00001_general_ori4_Normal_Green,GLOW,ファントム,ファントム_general_ori4,Normal,Attack,Green,75000,2,65,0.2,1000,0,0.25,1,1,1.00,0.50,,,,,,,
+,enemy_glo_00001,_general_ori4_big,e_glo_00001_general_ori4_big_Normal_Green,GLOW,ファントム,ファントム_general_ori4_big,Normal,Attack,Green,120000,2,45,0.2,100,0,0.25,1,1,1.00,0.50,,,,,,,
+,enemy_glo_00001,_general2_ori4,e_glo_00001_general2_ori4_Normal_Colorless,GLOW,ファントム,ファントム_general2_ori4,Normal,Attack,Colorless,50000,2,65,0.2,750,0,0.25,1,1,1.00,0.50,,,,,,,
+,enemy_glo_00001,_general2_ori4_big,e_glo_00001_general2_ori4_big_Normal_Colorless,GLOW,ファントム,ファントム_general2_ori4_big,Normal,Attack,Colorless,120000,2,55,0.2,100,0,0.25,1,1,1.00,0.50,,,,,,,
+,chara_kai_00002,_general_ori4,c_kai_00002_general_ori4_Boss_Green,怪獣８号,隠された英雄の姿 怪獣８号,隠された英雄の姿 怪獣８号_general_ori4,Boss,Attack,Green,1000000,2,55,0.11,1200,0,0.3,1,1,1.50,stop無:1回目 0.54,,2.40,"stop有:1回目 1.00
+stop無:2回目 1.37
+stop無:3回目 1.54
+stop無:4回目 1.70
+stop無:5回目 1.87
+stop無:6回目 2.04",大ノックバック+連続攻撃,,,
+,chara_sum_00101,_general_ori4,c_sum_00101_general_ori4_Normal_Green,サマータイムレンダ,影のウシオ 小舟 潮,影のウシオ 小舟 潮_general_ori4,Normal,Support,Green,700000,2,45,0.35,1000,0,0.36,1,1,1.13,0.50,,2.20,1.00,敵のアタッカータイプの体力30%回復,,,
+,chara_kai_00101,_general_ori4,c_kai_00101_general_ori4_Normal_Green,怪獣８号,市川 レノ,市川 レノ_general_ori4,Normal,Support,Green,800000,2,45,0.3,900,0,0.5,100,1,1.40,stop無:1回目 0.91,,3.17,"stop無:1回目 1.05
+stop無:2回目 1.33
+stop無:3回目 1.76",100%の確率で、4.5秒スタン攻撃,,,
+,chara_sum_00201,_general_ori4,c_sum_00201_general_ori4_Normal_Green,サマータイムレンダ,小舟 澪,小舟 澪_general_ori4,Normal,Attack,Green,900000,1,66,0.11,1000,0,0.2,1,1,2.37,stop有 :1回目 0.67,,3.67,stop有 :1回目 1.70,大ノックバック+100%の確率で4.5秒スタン攻撃+20秒間20%攻撃DOWN,,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,enemy_glo_00001,_general_ori4,e_glo_00001_general_ori4_Normal_Blue,GLOW,ファントム,ファントム_general_ori4,Normal,Attack,Blue,35000,2,45,0.2,700,0,0.25,1,1,1.00,0.50,,,,,,,
+,enemy_glo_00001,_general_ori4_big,e_glo_00001_general_ori4_big_Normal_Blue,GLOW,ファントム,ファントム_general_ori4_big,Normal,Attack,Blue,180000,2,45,0.2,500,0,0.25,1,1,1.00,0.50,,,,,,,
+,enemy_glo_00001,_general3_ori4,e_glo_00001_general3_ori4_Normal_Colorless,GLOW,ファントム,ファントム_general3_ori4,Normal,Attack,Colorless,40000,2,45,0.2,700,0,0.25,1,1,1.00,0.50,,,,,,,
+,enemy_glo_00001,_general3_ori4_big,e_glo_00001_general3_ori4_big_Normal_Colorless,GLOW,ファントム,ファントム_general3_ori4_big,Normal,Support,Colorless,180000,2,45,0.2,500,0,0.25,1,1,1.00,0.50,,,,,,,
+,chara_mag_00001,_general_ori4,c_mag_00001_general_ori4_Boss_Blue,株式会社マジルミエ,新人魔法少女 桜木 カナ,新人魔法少女 桜木 カナ_general_ori4,Boss,Attack,Blue,1300000,2,55,0.4,900,0,0.6,100,1,1.77,stop有:1回目 0.92,,2.33,"stop無:1回目 0.75
+stop無:2回目 0.92
+stop無:3回目 1.08
+stop無:4回目 1.25
+stop無:5回目 1.42
+stop無:6回目 1.58",連続攻撃＋8秒間、攻撃30%DOWN,,,
+,chara_kai_00301,_general_ori4,c_kai_00301_general_ori4_Normal_Blue,怪獣８号,四ノ宮 キコル,四ノ宮 キコル_general_ori4,Normal,Defense,Blue,600000,1,45,0.2,1000,0,0.4,100,1,2.04,0.70,,3.34,1.07,199秒間、自身の攻撃30%UP,,,
+,chara_mag_00101,_general_ori4,c_mag_00101_general_ori4_Boss_Blue,株式会社マジルミエ,越谷 仁美,越谷 仁美_general_ori4,Boss,Attack,Blue,1200000,2,55,0.11,1000,0,0.3,1,1,1.90,0.84,,2.67,1.50,連続攻撃＋小ノックバック＋4.5秒間スタン攻撃＋4秒間自身の被ダメージ45%カット,,,
+,chara_sum_00001,_general_ori4,c_sum_00001_general_ori4_Normal_Blue,サマータイムレンダ,網代 慎平,網代 慎平_general_ori4,Normal,Technical,Blue,700000,2,45,0.4,600,0,0.6,1,1,1.40,stop無:1回目 0.65,,2.33,"stop無:1回目 0.75
+stop無:2回目 0.93
+stop無:3回目 1.15",連続攻撃+10秒間、攻撃15%DOWN,,,
+,chara_kai_00001,_general_ori4,c_kai_00001_general_ori4_Normal_Blue,怪獣８号,日比野 カフカ,日比野 カフカ_general_ori4,Normal,Attack,Blue,600000,2,45,0.11,800,0,0.3,1,1,1.83,1.00,,2.33,1.33,5秒間、自身の攻撃300%UP,,,
+,enemy_mag_00101,_general_ori4,e_mag_00101_general_ori4_Normal_Blue,株式会社マジルミエ,つらら,つらら_general_ori4,Normal,Technical,Blue,700000,2,80,0.11,1000,0,0.3,1,1,0.37,stop有:1回目 0.20,,-,-,,,,
+,enemy_mag_00101,_general_ori4,e_mag_00101_general_ori4_Normal_Colorless,株式会社マジルミエ,つらら,つらら_general_ori4,Normal,Technical,Colorless,700000,2,80,0.11,1000,0,0.3,1,1,0.37,stop有:1回目 0.20,,-,-,,,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,,,
+,enemy_spy_00101,_general_n,e_spy_00101_general_n_Normal_Colorless,SPY×FAMILY,グエン,グエン_general_n,Normal,Attack,Colorless,1000,0,31,0.2,50,0,0.21,1,200,1.20,0.50,50,-,-,,-,,dageki_1
+,enemy_spy_00101,_general_vh,e_spy_00101_general_vh_Normal_Green,SPY×FAMILY,グエン,グエン_general_vh,Normal,Attack,Green,1000,0,31,0.2,100,0,0.21,1,200,1.20,0.50,50,-,-,,-,,dageki_1
+,enemy_spy_00101,_general_vh,e_spy_00101_general_vh_Normal_Blue,SPY×FAMILY,グエン,グエン_general_vh,Normal,Attack,Blue,1000,0,31,0.2,100,0,0.21,1,200,1.20,0.50,50,-,-,,-,,dageki_1
+,enemy_spy_00101,_general_n,e_spy_00101_general_n_Boss_Colorless,SPY×FAMILY,グエン,グエン_general_n,Boss,Attack,Colorless,10000,2,31,0.2,50,0,0.21,1,500,1.20,0.50,50,-,-,,-,,dageki_1
+,enemy_spy_00101,_general_n,e_spy_00101_general_n_Boss_Red,SPY×FAMILY,グエン,グエン_general_n,Boss,Attack,Red,10000,2,31,0.2,50,0,0.21,1,500,1.20,0.50,50,-,-,,-,,dageki_1
+,enemy_spy_00101,_general_n,e_spy_00101_general_n_Boss_Blue,SPY×FAMILY,グエン,グエン_general_n,Boss,Attack,Blue,10000,2,31,0.2,50,0,0.21,1,500,1.20,0.50,50,-,-,,-,,dageki_1
+,enemy_spy_00101,_general_vh,e_spy_00101_general_vh_Boss_Green,SPY×FAMILY,グエン,グエン_general_vh,Boss,Attack,Green,10000,2,31,0.2,100,0,0.21,1,500,1.20,0.50,50,-,-,,-,,dageki_1
+,enemy_spy_00101,_general_vh,e_spy_00101_general_vh_Boss_Blue,SPY×FAMILY,グエン,グエン_general_vh,Boss,Attack,Blue,10000,2,31,0.2,100,0,0.21,1,500,1.20,0.50,50,-,-,,-,,dageki_1
+,enemy_spy_00001,_general_n,e_spy_00001_general_n_Normal_Colorless,SPY×FAMILY,密輸組織の残党,密輸組織の残党_general_n,Normal,Attack,Colorless,1000,0,34,0.4,50,0,0.21,1,300,1.00,0.17,50,-,-,,-,,shageki_1
+,enemy_spy_00001,_general_n,e_spy_00001_general_n_Normal_Red,SPY×FAMILY,密輸組織の残党,密輸組織の残党_general_n,Normal,Defense,Red,1000,0,34,0.4,50,0,0.21,1,400,1.00,0.17,50,-,-,,-,,shageki_1
+,enemy_spy_00001,_general_vh,e_spy_00001_general_vh_Normal_Yellow,SPY×FAMILY,密輸組織の残党,密輸組織の残党_general_vh,Normal,Defense,Yellow,1000,0,34,0.4,50,0,0.21,1,400,1.00,0.17,50,-,-,,-,,shageki_1
+,enemy_spy_00001,_general_n,e_spy_00001_general_n_Normal_Blue,SPY×FAMILY,密輸組織の残党,密輸組織の残党_general_n,Normal,Defense,Blue,1000,0,34,0.4,50,0,0.21,1,400,1.00,0.17,50,-,-,,-,,shageki_1
+,enemy_spy_00001,_general_n,e_spy_00001_general_n_Boss_Blue,SPY×FAMILY,密輸組織の残党,密輸組織の残党_general_n,Boss,Attack,Blue,10000,2,34,0.4,50,0,0.21,1,300,1.00,0.17,40,-,-,,-,,shageki_1
+,chara_spy_00101,_general_n,c_spy_00101_general_n_Boss_Red,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_general_n,Boss,Attack,Red,10000,1,31,0.5,50,0,0.51,1,500,1.64,0.83,100,2.50,1.33,,7,,shageki_1
+,chara_spy_00101,_general_h,c_spy_00101_general_h_Boss_Red,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_general_h,Boss,Attack,Red,10000,1,31,0.5,100,0,0.51,1,500,1.64,0.83,100,2.50,1.33,,7,,shageki_1
+,chara_spy_00101,_general_n,c_spy_00101_general_n_Boss_Blue,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_general_n,Boss,Attack,Blue,10000,1,31,0.5,50,0,0.51,1,500,1.64,0.83,100,2.50,1.33,,7,,shageki_1
+,chara_spy_00101,_general_h,c_spy_00101_general_h_Boss_Blue,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_general_h,Boss,Attack,Blue,10000,1,31,0.5,50,0,0.51,1,120,1.64,0.83,100,2.50,1.33,,5,,shageki_1
+,chara_spy_00101,_general_vh,c_spy_00101_general_vh_Boss_Colorless,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_general_vh,Boss,Attack,Colorless,10000,1,31,0.5,100,0,0.51,1,120,1.64,0.83,100,2.50,1.33,,5,,shageki_1
+,chara_spy_00101,_general_vh,c_spy_00101_general_vh_Boss_Red,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_general_vh,Boss,Attack,Red,10000,1,31,0.5,100,0,0.51,1,120,1.64,0.83,100,2.50,1.33,,5,,shageki_1
+,chara_spy_00101,_general_vh,c_spy_00101_general_vh_Boss_Blue,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_general_vh,Boss,Attack,Blue,10000,1,31,0.5,100,0,0.51,1,120,1.64,0.83,100,2.50,1.33,,5,,shageki_1
+,chara_spy_00401,_general_n,c_spy_00401_general_n_Boss_Colorless,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_general_n,Boss,Defense,Colorless,10000,0,31,0.2,50,0,0.35,1,500,1.20,0.50,100,2.75,1.34,,-,,dageki_2
+,chara_spy_00401,_general_n,c_spy_00401_general_n_Boss_Blue,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_general_n,Boss,Defense,Blue,10000,0,31,0.2,50,0,0.35,1,500,1.20,0.50,100,2.75,1.34,,7,,dageki_2
+,chara_spy_00401,_general_h,c_spy_00401_general_h_Boss_Colorless,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_general_h,Boss,Defense,Colorless,10000,0,31,0.2,50,0,0.35,1,120,1.20,0.50,100,2.75,1.34,,5,,dageki_2
+,chara_spy_00401,_general_h,c_spy_00401_general_h_Boss_Blue,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_general_h,Boss,Defense,Blue,10000,0,31,0.2,50,0,0.35,1,120,1.20,0.50,100,2.75,1.34,,5,,dageki_2
+,chara_spy_00401,_general_vh,c_spy_00401_general_vh_Boss_Green,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_general_vh,Boss,Defense,Green,10000,0,31,0.2,100,0,0.35,1,120,1.20,0.50,100,2.75,1.34,,5,,dageki_2
+,chara_spy_00401,_general_vh,c_spy_00401_general_vh_Boss_Blue,SPY×FAMILY,フランキー・フランクリン,フランキー・フランクリン_general_vh,Boss,Defense,Blue,10000,0,31,0.2,100,0,0.35,1,120,1.20,0.50,100,2.75,1.34,,5,,dageki_2
+,chara_spy_00201,_generalv_vh,c_spy_00201_generalv_vh_Normal_Blue,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_generalv_vh,Normal,Attack,Blue,10000,1,65,0.25,100,0,0.35,1,500,1.42,stop無:1回目 0.61,100,2.50,stop有:1回目 0.73,,6,,zangeki_1
+,chara_spy_00201,_general_n,c_spy_00201_general_n_Boss_Colorless,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_general_n,Boss,Attack,Colorless,10000,1,45,0.25,50,0,0.35,1,500,1.42,stop無:1回目 0.61,100,2.50,stop有:1回目 0.73,,6,,zangeki_1
+,chara_spy_00201,_general_n,c_spy_00201_general_n_Boss_Red,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_general_n,Boss,Attack,Red,10000,1,45,0.25,50,0,0.35,1,500,1.42,stop無:1回目 0.61,100,2.50,stop有:1回目 0.73,,6,,zangeki_1
+,chara_spy_00201,_general_n,c_spy_00201_general_n_Boss_Blue,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_general_n,Boss,Attack,Blue,10000,1,45,0.25,50,0,0.35,1,500,1.42,stop無:1回目 0.61,100,2.50,stop有:1回目 0.73,,6,,zangeki_1
+,chara_spy_00201,_general_h,c_spy_00201_general_h_Boss_Colorless,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_general_h,Boss,Attack,Colorless,10000,1,45,0.25,100,0,0.35,1,120,1.42,stop無:1回目 0.61,100,2.50,stop有:1回目 0.73,,5,,zangeki_1
+,chara_spy_00201,_general_h,c_spy_00201_general_h_Boss_Blue,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_general_h,Boss,Attack,Blue,10000,1,45,0.25,50,0,0.35,1,120,1.42,stop無:1回目 0.61,100,2.50,stop有:1回目 0.73,,5,,zangeki_1
+,chara_spy_00201,_general_vh,c_spy_00201_general_vh_Boss_Blue,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_general_vh,Boss,Attack,Blue,10000,1,45,0.25,100,0,0.35,1,120,1.42,stop無:1回目 0.61,100,2.50,stop有:1回目 0.73,,5,,zangeki_1
+,chara_spy_00201,_general_vh,c_spy_00201_general_vh_Boss_Yellow,SPY×FAMILY,<いばら姫> ヨル,<いばら姫> ヨル_general_vh,Boss,Attack,Yellow,10000,1,45,0.25,100,0,0.35,1,120,1.42,stop無:1回目 0.61,100,2.50,stop有:1回目 0.73,,5,,zangeki_1
+,chara_spy_00101,_general,c_spy_00101_general_Boss_Colorless,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_general,Boss,Attack,Colorless,3000,2,31,0.5,100,0,0.51,1,500,1.64,0.83,100,2.50,1.33,,7,,shageki_1
+,enemy_glo_00001,_general_h,e_glo_00001_general_h_Normal_Blue,GLOW,ファントム,ファントム_general_h,Normal,Attack,Blue,10000,1,40,0.2,100,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,enemy_glo_00001,_general_vh,e_glo_00001_general_vh_Normal_Colorless,GLOW,ファントム,ファントム_general_vh,Normal,Defense,Colorless,10000,1,40,0.2,100,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,enemy_glo_00001,_general_vh,e_glo_00001_general_vh_Normal_Blue,GLOW,ファントム,ファントム_general_vh,Normal,Technical,Blue,10000,1,40,0.2,100,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,enemy_glo_00001,_general_vh,e_glo_00001_general_vh_Normal_Yellow,GLOW,ファントム,ファントム_general_vh,Normal,Technical,Yellow,10000,1,40,0.2,100,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,enemy_glo_00101,_general_vh,e_glo_00101_general_vh_Boss_Colorless,GLOW,ボスファントム,中ボスエネミー_general_vh,Boss,Attack,Colorless,10000,1,31,0.23,100,0,0.25,100,500,1.17,stop有:1回目 0.56,100,-,-,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,enemy_gom_00501,_general_n,e_gom_00501_general_n_Normal_Colorless,姫様“拷問”の時間です,バタートースト,バタートースト_general_n,Normal,Defense,Colorless,1000,0,34,0.14,50,0,0.15,1,200,1.00,0.833,100,-,-,,-,,dageki_1
+,enemy_gom_00501,_general_n,e_gom_00501_general_n_Normal_Yellow,姫様“拷問”の時間です,バタートースト,バタートースト_general_n,Normal,Defense,Yellow,1000,0,34,0.14,50,0,0.15,1,200,1.00,0.833,100,-,-,,-,,dageki_1
+,enemy_gom_00501,_general_vh,e_gom_00501_general_vh_Normal_Red,姫様“拷問”の時間です,バタートースト,バタートースト_general_vh,Normal,Defense,Red,1000,0,34,0.14,100,0,0.15,1,200,1.00,0.833,100,-,-,,-,,dageki_1
+,enemy_gom_00501,_general_vh,e_gom_00501_general_vh_Normal_Blue,姫様“拷問”の時間です,バタートースト,バタートースト_general_vh,Normal,Defense,Blue,1000,0,34,0.14,100,0,0.15,1,200,1.00,0.833,100,-,-,,-,,dageki_1
+,enemy_gom_00502,_general_n,e_gom_00502_general_n_Normal_Colorless,姫様“拷問”の時間です,割きトースト,割きトースト_general_n,Normal,Attack,Colorless,1000,0,34,0.19,50,0,0.2,1,200,1.00,0.833,150,-,-,,-,,dageki_1
+,enemy_gom_00502,_general_n,e_gom_00502_general_n_Normal_Yellow,姫様“拷問”の時間です,割きトースト,割きトースト_general_n,Normal,Attack,Yellow,1000,0,34,0.19,50,0,0.2,1,200,1.00,0.833,150,-,-,,-,,dageki_1
+,enemy_gom_00502,_general_vh,e_gom_00502_general_vh_Normal_Red,姫様“拷問”の時間です,割きトースト,割きトースト_general_vh,Normal,Attack,Red,1000,0,34,0.19,100,0,0.2,1,200,1.00,0.833,150,-,-,,-,,dageki_1
+,enemy_gom_00502,_general_vh,e_gom_00502_general_vh_Normal_Blue,姫様“拷問”の時間です,割きトースト,割きトースト_general_vh,Normal,Attack,Blue,1000,0,34,0.19,100,0,0.2,1,200,1.00,0.833,150,-,-,,-,,dageki_1
+,enemy_gom_00402,_general_n,e_gom_00402_general_n_Normal_Colorless,姫様“拷問”の時間です,たこ焼き,たこ焼き_general_n,Normal,Attack,Colorless,1000,0,34,0.11,50,0,0.12,1,100,1.00,0.833,50,-,-,,-,,dageki_1
+,enemy_gom_00402,_general_n,e_gom_00402_general_n_Normal_Yellow,姫様“拷問”の時間です,たこ焼き,たこ焼き_general_n,Normal,Attack,Yellow,1000,0,34,0.11,50,0,0.12,1,100,1.00,0.833,50,-,-,,-,,dageki_1
+,enemy_gom_00402,_general_vh,e_gom_00402_general_vh_Normal_Red,姫様“拷問”の時間です,たこ焼き,たこ焼き_general_vh,Normal,Attack,Red,1000,0,34,0.11,100,0,0.12,1,50,1.00,0.833,50,-,-,,-,,dageki_1
+,enemy_gom_00402,_general_vh,e_gom_00402_general_vh_Normal_Blue,姫様“拷問”の時間です,たこ焼き,たこ焼き_general_vh,Normal,Attack,Blue,1000,0,34,0.11,100,0,0.12,1,50,1.00,0.833,50,-,-,,-,,dageki_1
+,enemy_gom_00402,_general_vh,e_gom_00402_general_vh_Normal_Yellow,姫様“拷問”の時間です,たこ焼き,たこ焼き_general_vh,Normal,Attack,Yellow,1000,0,34,0.11,100,0,0.12,1,100,1.00,0.833,50,-,-,,-,,dageki_1
+,enemy_gom_00401,_general_n,e_gom_00401_general_n_Normal_Colorless,姫様“拷問”の時間です,たこ焼きくん,たこ焼きくん_general_n,Normal,Attack,Colorless,1000,1,20,0.26,50,0,0.27,100,100,1.00,0.833,25,-,-,,-,,dageki_1
+,enemy_gom_00401,_general_n,e_gom_00401_general_n_Boss_Colorless,姫様“拷問”の時間です,たこ焼きくん,たこ焼きくん_general_n,Boss,Attack,Colorless,10000,1,20,0.26,50,0,0.27,100,500,1.00,0.833,25,-,-,,-,,dageki_1
+,enemy_gom_00401,_general_n,e_gom_00401_general_n_Boss_Yellow,姫様“拷問”の時間です,たこ焼きくん,たこ焼きくん_general_n,Boss,Attack,Yellow,10000,1,20,0.26,50,0,0.27,100,500,1.00,0.833,25,-,-,,-,,dageki_1
+,enemy_gom_00401,_general_vh,e_gom_00401_general_vh_Boss_Blue,姫様“拷問”の時間です,たこ焼きくん,たこ焼きくん_general_vh,Boss,Technical,Blue,10000,1,20,0.26,100,0,0.27,100,500,1.00,0.833,25,-,-,,-,,dageki_1
+,enemy_gom_00401,_general_vh,e_gom_00401_general_vh_Boss_Yellow,姫様“拷問”の時間です,たこ焼きくん,たこ焼きくん_general_vh,Boss,Technical,Yellow,10000,1,20,0.26,100,0,0.27,100,500,1.00,0.833,25,-,-,,-,,dageki_1
+,enemy_gom_00301,_general_n,e_gom_00301_general_n_Boss_Yellow,姫様“拷問”の時間です,キュイ,キュイ_general_n,Boss,Defense,Yellow,10000,0,20,0.18,50,0,0.19,1,500,2.76,1.50,100,-,-,,-,,dageki_1
+,enemy_gom_01001,_general_n,e_gom_01001_general_n_Normal_Colorless,姫様“拷問”の時間です,あんぱん,あんぱん_general_n,Normal,Attack,Colorless,1000,0,25,0.2,50,0,0.21,100,200,,,50,-,-,,-,,
+,enemy_gom_01001,_general_n,e_gom_01001_general_n_Normal_Yellow,姫様“拷問”の時間です,あんぱん,あんぱん_general_n,Normal,Attack,Yellow,1000,0,25,0.2,50,0,0.21,100,200,,,50,-,-,,-,,
+,enemy_gom_01001,_general_h,e_gom_01001_general_h_Boss_Colorless,姫様“拷問”の時間です,あんぱん,あんぱん_general_h,Boss,Attack,Colorless,10000,0,25,0.2,100,0,0.21,100,200,,,50,-,-,,-,,
+,enemy_gom_01001,_general_vh,e_gom_01001_general_vh_Normal_Red,姫様“拷問”の時間です,あんぱん,あんぱん_general_vh,Normal,Attack,Red,1000,0,25,0.2,100,0,0.21,100,200,,,50,-,-,,-,,
+,enemy_gom_01001,_general_vh,e_gom_01001_general_vh_Normal_Blue,姫様“拷問”の時間です,あんぱん,あんぱん_general_vh,Normal,Attack,Blue,1000,0,25,0.2,100,0,0.21,100,200,,,50,-,-,,-,,
+,enemy_gom_01001,_general_vh,e_gom_01001_general_vh_Normal_Yellow,姫様“拷問”の時間です,あんぱん,あんぱん_general_vh,Normal,Attack,Yellow,1000,0,25,0.2,100,0,0.21,100,200,,,100,-,-,,-,,
+,enemy_gom_01001,_general_vh,e_gom_01001_general_vh_Boss_Yellow,姫様“拷問”の時間です,あんぱん,あんぱん_general_vh,Boss,Attack,Yellow,1000,0,25,0.2,100,0,0.21,100,200,,,100,-,-,,-,,
+,enemy_gom_01002,_general_n,e_gom_01002_general_n_Normal_Colorless,姫様“拷問”の時間です,トーストあんぱん,トーストあんぱん_general_n,Normal,Defense,Colorless,1000,0,25,0.15,50,0,0.16,1,200,,,100,-,-,,-,,
+,enemy_gom_01002,_general_n,e_gom_01002_general_n_Normal_Yellow,姫様“拷問”の時間です,トーストあんぱん,トーストあんぱん_general_n,Normal,Defense,Yellow,1000,0,25,0.15,50,0,0.16,1,200,,,100,-,-,,-,,
+,enemy_gom_01002,_general_vh,e_gom_01002_general_vh_Normal_Red,姫様“拷問”の時間です,トーストあんぱん,トーストあんぱん_general_vh,Normal,Defense,Red,1000,0,25,0.15,100,0,0.16,1,200,,,100,-,-,,-,,
+,enemy_gom_01002,_general_vh,e_gom_01002_general_vh_Normal_Blue,姫様“拷問”の時間です,トーストあんぱん,トーストあんぱん_general_vh,Normal,Defense,Blue,1000,0,25,0.15,100,0,0.16,1,200,,,100,-,-,,-,,
+,enemy_gom_01002,_general_vh,e_gom_01002_general_vh_Normal_Yellow,姫様“拷問”の時間です,トーストあんぱん,トーストあんぱん_general_vh,Normal,Defense,Yellow,1000,0,25,0.15,100,0,0.16,1,100,,,100,-,-,,-,,
+,enemy_gom_01002,_general_vh,e_gom_01002_general_vh_Boss_Yellow,姫様“拷問”の時間です,トーストあんぱん,トーストあんぱん_general_vh,Boss,Defense,Yellow,1000,0,25,0.15,100,0,0.16,1,100,,,100,-,-,,-,,
+,chara_gom_00201,_general_n,c_gom_00201_general_n_Boss_Yellow,姫様“拷問”の時間です,クロル,クロル_general_n,Boss,Attack,Yellow,10000,2,50,0.6,50,0,0.62,100,500,1.43,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80",100,5.00,"stop無:1回目 2.10
+stop無:2回目 2.30
+stop無:3回目 2.50
+stop無:4回目 2.70
+stop無:5回目 2.90
+stop無:6回目 3.20
+stop無:7回目 3.40
+stop無:8回目 3.60
+stop無:9回目 3.80",,6,,dageki_1
+,chara_gom_00201,_general_h,c_gom_00201_general_h_Boss_Yellow,姫様“拷問”の時間です,クロル,クロル_general_h,Boss,Attack,Yellow,10000,2,50,0.6,100,0,0.62,100,200,1.43,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80",100,5.00,"stop無:1回目 2.10
+stop無:2回目 2.30
+stop無:3回目 2.50
+stop無:4回目 2.70
+stop無:5回目 2.90
+stop無:6回目 3.20
+stop無:7回目 3.40
+stop無:8回目 3.60
+stop無:9回目 3.80",,5,,dageki_1
+,chara_gom_00201,_general_vh,c_gom_00201_general_vh_Boss_Yellow,姫様“拷問”の時間です,クロル,クロル_general_vh,Boss,Attack,Yellow,10000,5,50,0.6,100,0,0.62,100,200,1.43,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80",100,5.00,"stop無:1回目 2.10
+stop無:2回目 2.30
+stop無:3回目 2.50
+stop無:4回目 2.70
+stop無:5回目 2.90
+stop無:6回目 3.20
+stop無:7回目 3.40
+stop無:8回目 3.60
+stop無:9回目 3.80",,5,,dageki_1
+,chara_gom_00101,_general_n,c_gom_00101_general_n_Boss_Red,姫様“拷問”の時間です,トーチャー・トルチュール,トーチャー・トルチュール_general_n,Boss,Technical,Red,10000,0,25,0.39,50,0,0.4,100,500,1.34,stop無:1回目 0.43,100,4.84,stop無:1回目 3.00,小範囲に攻撃力ダウン(10%),6,,dageki_2
+,chara_gom_00101,_general_n,c_gom_00101_general_n_Boss_Yellow,姫様“拷問”の時間です,トーチャー・トルチュール,トーチャー・トルチュール_general_n,Boss,Technical,Yellow,10000,0,25,0.39,50,0,0.4,100,500,1.34,stop無:1回目 0.43,100,4.84,stop無:1回目 3.00,小範囲に攻撃力ダウン(10%),6,,dageki_2
+,chara_gom_00101,_general_h,c_gom_00101_general_h_Boss_Red,姫様“拷問”の時間です,トーチャー・トルチュール,トーチャー・トルチュール_general_h,Boss,Technical,Red,10000,0,25,0.39,100,0,0.4,100,500,1.34,stop無:1回目 0.43,100,4.84,stop無:1回目 3.00,小範囲に攻撃力ダウン(30%),4,,dageki_2
+,chara_gom_00101,_general_h,c_gom_00101_general_h_Boss_Yellow,姫様“拷問”の時間です,トーチャー・トルチュール,トーチャー・トルチュール_general_h,Boss,Technical,Yellow,10000,0,25,0.39,100,0,0.4,100,500,1.34,stop無:1回目 0.43,100,4.84,stop無:1回目 3.00,小範囲に攻撃力ダウン(30%),4,,dageki_2
+,chara_gom_00101,_general_vh,c_gom_00101_general_vh_Boss_Red,姫様“拷問”の時間です,トーチャー・トルチュール,トーチャー・トルチュール_general_vh,Boss,Technical,Red,10000,0,25,0.39,100,0,0.4,100,500,1.34,stop無:1回目 0.43,100,4.84,stop無:1回目 3.00,小範囲に攻撃力ダウン(60%),4,,dageki_2
+,chara_gom_00101,_general_vh,c_gom_00101_general_vh_Boss_Yellow,姫様“拷問”の時間です,トーチャー・トルチュール,トーチャー・トルチュール_general_vh,Boss,Technical,Yellow,10000,0,25,0.39,100,0,0.4,100,500,1.34,stop無:1回目 0.43,100,4.84,stop無:1回目 3.00,小範囲に攻撃力ダウン(60%),4,,dageki_2
+,enemy_gom_00701,_general_vh,e_gom_00701_general_vh_Normal_Blue,姫様“拷問”の時間です,ラーメン,ラーメン_general_vh,Normal,Attack,Blue,10000,0,25,0.11,100,0,0.27,1,200,1.00,0.833,100,-,-,,-,,
+,enemy_gom_00701,_general_n,e_gom_00701_general_n_Boss_Colorless,姫様“拷問”の時間です,ラーメン,ラーメン_general_n,Boss,Attack,Colorless,10000,0,25,0.11,50,0,0.27,1,200,1.00,0.833,100,-,-,,-,,
+,enemy_gom_00701,_general_n,e_gom_00701_general_n_Boss_Yellow,姫様“拷問”の時間です,ラーメン,ラーメン_general_n,Boss,Attack,Yellow,10000,0,25,0.11,50,0,0.27,1,200,1.00,0.833,100,-,-,,-,,
+,enemy_gom_00701,_general_vh,e_gom_00701_general_vh_Boss_Red,姫様“拷問”の時間です,ラーメン,ラーメン_general_vh,Boss,Technical,Red,10000,0,25,0.11,100,0,0.27,1,200,1.00,0.833,100,-,-,,-,,
+,enemy_gom_00701,_general_vh,e_gom_00701_general_vh_Boss_Blue,姫様“拷問”の時間です,ラーメン,ラーメン_general_vh,Boss,Technical,Blue,10000,0,25,0.11,100,0,0.27,1,200,1.00,0.833,100,-,-,,-,,
+,enemy_gom_00801,_general_n,e_gom_00801_general_n_Normal_Colorless,姫様“拷問”の時間です,ライス,ライス_general_n,Normal,Defense,Colorless,1000,0,31,0.11,50,0,0.12,1,100,1.00,0.833,100,-,-,,-,,
+,enemy_gom_00801,_general_n,e_gom_00801_general_n_Normal_Yellow,姫様“拷問”の時間です,ライス,ライス_general_n,Normal,Defense,Yellow,1000,0,31,0.11,50,0,0.12,1,100,1.00,0.833,100,-,-,,-,,
+,enemy_gom_00801,_general_vh,e_gom_00801_general_vh_Normal_Red,姫様“拷問”の時間です,ライス,ライス_general_vh,Normal,Defense,Red,1000,0,31,0.11,100,0,0.12,1,100,1.00,0.833,100,-,-,,-,,
+,enemy_gom_00801,_general_vh,e_gom_00801_general_vh_Normal_Green,姫様“拷問”の時間です,ライス,ライス_general_vh,Normal,Defense,Green,1000,0,31,0.11,100,0,0.12,1,100,1.00,0.833,100,-,-,,-,,
+,enemy_gom_00801,_general_vh,e_gom_00801_general_vh_Normal_Blue,姫様“拷問”の時間です,ライス,ライス_general_vh,Normal,Defense,Blue,1000,0,31,0.11,100,0,0.12,1,100,1.00,0.833,100,-,-,,-,,
+,enemy_gom_00901,_general_n,e_gom_00901_general_n_Normal_Colorless,姫様“拷問”の時間です,ライス (海苔),ライス(海苔)_general_n,Normal,Attack,Colorless,1000,0,40,0.11,50,0,0.12,1,100,1.00,0.833,50,-,-,,-,,
+,enemy_gom_00901,_general_n,e_gom_00901_general_n_Normal_Yellow,姫様“拷問”の時間です,ライス (海苔),ライス(海苔)_general_n,Normal,Attack,Yellow,1000,0,40,0.11,50,0,0.12,1,100,1.00,0.833,50,-,-,,-,,
+,enemy_gom_00901,_general_vh,e_gom_00901_general_vh_Normal_Red,姫様“拷問”の時間です,ライス (海苔),ライス(海苔)_general_vh,Normal,Attack,Red,1000,0,40,0.11,100,0,0.12,1,100,1.00,0.833,50,-,-,,-,,
+,enemy_gom_00901,_general_vh,e_gom_00901_general_vh_Normal_Green,姫様“拷問”の時間です,ライス (海苔),ライス(海苔)_general_vh,Normal,Technical,Green,1000,0,40,0.11,100,0,0.12,1,100,1.00,0.833,50,-,-,,-,,
+,enemy_gom_00901,_general_vh,e_gom_00901_general_vh_Normal_Blue,姫様“拷問”の時間です,ライス (海苔),ライス(海苔)_general_vh,Normal,Technical,Blue,1000,0,40,0.11,100,0,0.12,1,100,1.00,0.833,50,-,-,,-,,
+,chara_gom_00001,_general_n,c_gom_00001_general_n_Boss_Yellow,姫様“拷問”の時間です,囚われの王女 姫様,囚われの王女 姫様_general_n,Boss,Defense,Yellow,10000,1,25,0.16,50,0,0.17,1,500,1.30,stop有:1回目 0.50,100,4.00,stop無:1回目 2.3,10秒間5%ダメージカット,6,,
+,chara_gom_00001,_general_h,c_gom_00001_general_h_Boss_Yellow,姫様“拷問”の時間です,囚われの王女 姫様,囚われの王女 姫様_general_h,Boss,Defense,Yellow,10000,1,25,0.16,100,0,0.17,1,500,1.30,stop有:1回目 0.50,100,4.00,stop無:1回目 2.3,40秒間10%ダメージカット,5,,
+,enemy_glo_00001,_general_h,e_glo_00001_general_h_Normal_Yellow,GLOW,ファントム,ファントム_general_h,Normal,Attack,Yellow,1000,1,40,0.2,100,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,chara_aka_00101,_general_h,c_aka_00101_general_h_Normal_Colorless,ラーメン赤猫,文蔵,文蔵_general_h,Normal,Attack,Colorless,10000,1,31,0.2,100,0,0.21,1,150,1.50,stop無:1回目 0.54,150,4.50,"stop無:1回目 1.37
+stop無:2回目 1.63
+stop有:3回目 2.67",,-,,
+,chara_aka_00101,_general_vh,c_aka_00101_general_vh_Normal_Red,ラーメン赤猫,文蔵,文蔵_general_vh,Normal,Attack,Red,10000,1,31,0.2,100,0,0.21,1,150,1.50,stop無:1回目 0.54,150,4.50,"stop無:1回目 1.37
+stop無:2回目 1.63
+stop有:3回目 2.67",,-,,
+,chara_aka_00101,_general_n,c_aka_00101_general_n_Boss_Colorless,ラーメン赤猫,文蔵,文蔵_general_n,Boss,Attack,Colorless,10000,1,31,0.2,50,0,0.21,1,500,1.50,stop無:1回目 0.54,150,4.50,"stop無:1回目 1.37
+stop無:2回目 1.63
+stop有:3回目 2.67",,6,,
+,chara_aka_00101,_general_n,c_aka_00101_general_n_Boss_Red,ラーメン赤猫,文蔵,文蔵_general_n,Boss,Attack,Red,10000,1,31,0.2,50,0,0.21,1,500,1.50,stop無:1回目 0.54,100,4.50,"stop無:1回目 1.37
+stop無:2回目 1.63
+stop有:3回目 2.67",,6,,
+,chara_aka_00101,_general_h,c_aka_00101_general_h_Boss_Colorless,ラーメン赤猫,文蔵,文蔵_general_h,Boss,Technical,Colorless,10000,1,31,0.2,100,0,0.21,1,200,1.50,stop無:1回目 0.54,100,4.50,"stop無:1回目 1.37
+stop無:2回目 1.63
+stop有:3回目 2.67",500ダメージの火傷(3秒間),5,,
+,chara_aka_00101,_general_h,c_aka_00101_general_h_Boss_Red,ラーメン赤猫,文蔵,文蔵_general_h,Boss,Technical,Red,10000,1,31,0.2,100,0,0.21,1,200,1.50,stop無:1回目 0.54,100,4.50,"stop無:1回目 1.37
+stop無:2回目 1.63
+stop有:3回目 2.67",500ダメージの火傷(3秒間),5,,
+,chara_aka_00101,_general_vh,c_aka_00101_general_vh_Boss_Colorless,ラーメン赤猫,文蔵,文蔵_general_vh,Boss,Technical,Colorless,10000,1,31,0.2,100,0,0.21,1,200,1.50,stop無:1回目 0.54,100,4.50,"stop無:1回目 1.37
+stop無:2回目 1.63
+stop有:3回目 2.67",500ダメージの火傷(5秒間),5,,
+,chara_aka_00101,_general_vh,c_aka_00101_general_vh_Boss_Red,ラーメン赤猫,文蔵,文蔵_general_vh,Boss,Technical,Red,10000,1,31,0.2,100,0,0.21,1,200,1.50,stop無:1回目 0.54,100,4.50,"stop無:1回目 1.37
+stop無:2回目 1.63
+stop有:3回目 2.67",500ダメージの火傷(5秒間),5,,
+,chara_aka_00001,_general_vh,c_aka_00001_general_vh_Normal_Colorless,ラーメン赤猫,佐々木,佐々木_general_vh,Normal,Defense,Colorless,10000,0,25,0.14,100,0,0.15,1,500,1.70,0.66,100,,1.33,,-,,
+,chara_aka_00001,_general_h,c_aka_00001_general_h_Normal_Red,ラーメン赤猫,佐々木,佐々木_general_h,Normal,Defense,Red,10000,0,25,0.14,100,0,0.15,1,500,1.70,0.66,100,,1.33,,6,,
+,chara_aka_00001,_general_n,c_aka_00001_general_n_Boss_Colorless,ラーメン赤猫,佐々木,佐々木_general_n,Boss,Defense,Colorless,10000,0,25,0.14,50,0,0.15,1,500,1.70,0.66,100,,1.33,,6,,
+,chara_aka_00001,_general_n,c_aka_00001_general_n_Boss_Red,ラーメン赤猫,佐々木,佐々木_general_n,Boss,Defense,Red,10000,0,25,0.14,50,0,0.15,1,500,1.70,0.66,100,,1.33,,6,,
+,chara_aka_00001,_general_h,c_aka_00001_general_h_Boss_Colorless,ラーメン赤猫,佐々木,佐々木_general_h,Boss,Defense,Colorless,10000,0,20,0.14,100,0,0.15,1,500,1.70,0.66,100,,1.33,,3,ノックバック無効,
+,chara_aka_00001,_general_h,c_aka_00001_general_h_Boss_Red,ラーメン赤猫,佐々木,佐々木_general_h,Boss,Defense,Red,10000,0,20,0.14,100,0,0.15,1,500,1.70,0.66,100,,1.33,,3,ノックバック無効,
+,chara_aka_00001,_general_vh,c_aka_00001_general_vh_Boss_Colorless,ラーメン赤猫,佐々木,佐々木_general_vh,Boss,Defense,Colorless,10000,0,20,0.14,100,0,0.15,1,500,1.70,0.66,100,,1.33,,3,,
+,chara_aka_00001,_general_vh,c_aka_00001_general_vh_Boss_Red,ラーメン赤猫,佐々木,佐々木_general_vh,Boss,Defense,Red,10000,0,20,0.14,100,0,0.15,1,500,1.70,0.66,100,,1.33,,3,ノックバック無効,
+,chara_aka_00001,_general_vh,c_aka_00001_general_vh_Boss_Yellow,ラーメン赤猫,佐々木,佐々木_general_vh,Boss,Defense,Yellow,10000,0,20,0.14,100,0,0.15,1,500,1.70,0.66,100,,1.33,,3,,
+,enemy_glo_00001,_general_n,e_glo_00001_general_n_Normal_Colorless,GLOW,ファントム,ファントム_general_n,Normal,Attack,Colorless,1000,1,40,0.2,50,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,enemy_glo_00001,_general_n,e_glo_00001_general_n_Normal_Red,GLOW,ファントム,ファントム_general_n,Normal,Attack,Red,1000,1,40,0.2,50,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,enemy_glo_00001,_general_vh,e_glo_00001_general_vh_Normal_Red,GLOW,ファントム,ファントム_general_vh,Normal,Technical,Red,1000,1,40,0.2,50,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,enemy_glo_00001,_glo1_vh,e_glo_00001_glo1_vh_Normal_Blue,GLOW,ファントム,ファントム_glo1_vh,Normal,Technical,Blue,10000,1,40,0.2,100,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,enemy_glo_00001,_glo1_vh,e_glo_00001_glo1_vh_Normal_Green,GLOW,ファントム,ファントム_glo1_vh,Normal,Defense,Green,10000,1,40,0.2,100,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,enemy_glo_00101,_general_n,e_glo_00101_general_n_Boss_Colorless,GLOW,ボスファントム,中ボスエネミー_general_n,Boss,Attack,Colorless,10000,1,31,0.23,50,0,0.25,100,500,1.17,stop有:1回目 0.56,100,-,-,,-,,
+,enemy_glo_00101,_general_n,e_glo_00101_general_n_Boss_Blue,GLOW,ボスファントム,中ボスエネミー_general_n,Boss,Attack,Blue,10000,1,25,0.23,50,0,0.25,100,500,1.17,stop有:1回目 0.56,200,-,-,,-,,
+,enemy_glo_00101,_general_vh,e_glo_00101_general_vh_Boss_Blue,GLOW,ボスファントム,中ボスエネミー_general_vh,Boss,Attack,Blue,10000,1,25,0.23,100,0,0.25,100,500,1.17,stop有:1回目 0.56,450,-,-,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,enemy_dan_00001,_general_n_trans,e_dan_00001_general_n_trans_Normal_Colorless,ダンダダン,セルポ星人,セルポ星人_general_n_trans,Normal,Attack,Colorless,1000,1,34,0.24,50,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_n_trans,e_dan_00001_general_n_trans_Normal_Red,ダンダダン,セルポ星人,セルポ星人_general_n_trans,Normal,Attack,Red,1000,1,34,0.24,50,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_n,e_dan_00001_general_n_Normal_Red,ダンダダン,セルポ星人,セルポ星人_general_n,Normal,Defense,Red,10000,0,34,0.24,50,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_h_trans,e_dan_00001_general_h_trans_Normal_Colorless,ダンダダン,セルポ星人,セルポ星人_general_h_trans,Normal,Attack,Colorless,10000,1,34,0.24,100,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_h_trans,e_dan_00001_general_h_trans_Normal_Red,ダンダダン,セルポ星人,セルポ星人_general_h_trans,Normal,Attack,Red,10000,1,34,0.24,100,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_h,e_dan_00001_general_h_Normal_Colorless,ダンダダン,セルポ星人,セルポ星人_general_h,Normal,Defense,Colorless,10000,0,34,0.24,100,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_h,e_dan_00001_general_h_Normal_Red,ダンダダン,セルポ星人,セルポ星人_general_h,Normal,Defense,Red,10000,0,34,0.24,100,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_vh_trans,e_dan_00001_general_vh_trans_Normal_Blue,ダンダダン,セルポ星人,セルポ星人_general_vh_trans,Normal,Technical,Blue,10000,0,34,0.24,100,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_vh_trans,e_dan_00001_general_vh_trans_Normal_Green,ダンダダン,セルポ星人,セルポ星人_general_vh_trans,Normal,Technical,Green,10000,0,34,0.24,100,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_vh,e_dan_00001_general_vh_Normal_Colorless,ダンダダン,セルポ星人,セルポ星人_general_vh,Normal,Attack,Colorless,10000,0,34,0.24,100,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_vh,e_dan_00001_general_vh_Normal_Green,ダンダダン,セルポ星人,セルポ星人_general_vh,Normal,Attack,Green,10000,0,34,0.24,100,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_vh_trans,e_dan_00001_general_vh_trans_Boss_Blue,ダンダダン,セルポ星人,セルポ星人_general_vh_trans,Boss,Technical,Blue,10000,10,25,0.24,100,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_vh,e_dan_00001_general_vh_Boss_Red,ダンダダン,セルポ星人,セルポ星人_general_vh,Boss,Defense,Red,10000,0,34,0.24,100,0,0.25,1,100,1.16,0.50,100,-,-,,-,,
+,enemy_dan_00001,_general_vh,e_dan_00001_general_vh_Boss_Colorless,ダンダダン,セルポ星人,セルポ星人_general_vh,Boss,Attack,Colorless,10000,1,34,0.24,100,0,0.25,1,100,1.16,0.50,75,-,-,,-,,
+,enemy_dan_00101,_general_n,e_dan_00101_general_n_Normal_Colorless,ダンダダン,セルポ星人(変身),セルポ星人（変身）_general_n,Normal,Attack,Colorless,10000,0,47,0.24,50,0,0.25,1,120,1.40,0.70,50,-,-,,-,,
+,enemy_dan_00101,_general_n,e_dan_00101_general_n_Normal_Red,ダンダダン,セルポ星人(変身),セルポ星人（変身）_general_n,Normal,Attack,Red,10000,0,47,0.24,50,0,0.25,1,120,1.40,0.70,50,-,-,,-,,
+,enemy_dan_00101,_general_h,e_dan_00101_general_h_Normal_Colorless,ダンダダン,セルポ星人(変身),セルポ星人（変身）_general_h,Normal,Attack,Colorless,10000,0,47,0.24,100,0,0.25,1,120,1.40,0.70,50,-,-,,-,,
+,enemy_dan_00101,_general_h,e_dan_00101_general_h_Normal_Red,ダンダダン,セルポ星人(変身),セルポ星人（変身）_general_h,Normal,Attack,Red,10000,0,47,0.24,100,0,0.25,1,120,1.40,0.70,50,-,-,,-,,
+,enemy_dan_00101,_general_vh,e_dan_00101_general_vh_Normal_Blue,ダンダダン,セルポ星人(変身),セルポ星人（変身）_general_vh,Normal,Attack,Blue,10000,1,47,0.24,100,0,0.25,1,120,1.40,0.70,50,-,-,,-,,
+,enemy_dan_00101,_general_vh,e_dan_00101_general_vh_Normal_Green,ダンダダン,セルポ星人(変身),セルポ星人（変身）_general_vh,Normal,Attack,Green,10000,1,47,0.24,100,0,0.25,1,120,1.40,0.70,50,-,-,,-,,
+,enemy_dan_00101,_general_vh,e_dan_00101_general_vh_Boss_Blue,ダンダダン,セルポ星人(変身),セルポ星人（変身）_general_vh,Boss,Attack,Blue,10000,1,47,0.24,100,0,0.25,1,120,1.40,0.70,50,-,-,,-,,
+,enemy_dan_00201,_general_vn,e_dan_00201_general_vn_Normal_Colorless,ダンダダン,ターボババア,ターボババア_general_vn,Normal,Attack,Colorless,10000,0,75,0.24,100,0,0.25,1,500,1.50,0.40,50,-,-,,-,,
+,enemy_dan_00201,_general_n,e_dan_00201_general_n_Boss_Colorless,ダンダダン,ターボババア,ターボババア_general_n,Boss,Attack,Colorless,100000,0,75,0.24,1000,0,0.25,1,500,1.50,0.40,50,-,-,,-,,
+,enemy_dan_00201,_main5_n,e_dan_00201_main5_n_Boss_Colorless,ダンダダン,ターボババア,ターボババア_main5_n,Boss,Attack,Colorless,100000,0,75,0.24,1000,0,0.25,1,500,1.50,0.40,50,-,-,,-,,
+,enemy_dan_00201,_general_n,e_dan_00201_general_n_Boss_Red,ダンダダン,ターボババア,ターボババア_general_n,Boss,Attack,Red,10000,1,65,0.24,50,0,0.25,1,500,1.50,0.40,100,-,-,,-,,
+,chara_dan_00001,_general_n,c_dan_00001_general_n_Normal_Red,ダンダダン,オカルン,オカルン_general_n,Normal,Defense,Red,10000,0,31,0.2,50,0,0.21,1,100,1.43,0.53,100,4.00,1.66,,-,,
+,chara_dan_00001,_general_h,c_dan_00001_general_h_Normal_Red,ダンダダン,オカルン,オカルン_general_h,Normal,Defense,Red,10000,0,31,0.2,100,0,0.21,1,100,1.43,0.53,100,4.00,1.66,,-,,
+,chara_dan_00001,_general_h,c_dan_00001_general_h_Boss_Colorless,ダンダダン,オカルン,オカルン_general_h,Boss,Defense,Colorless,10000,0,31,0.2,100,0,0.21,1,200,1.43,0.53,100,4.00,1.66,自己バフ(ダメージ軽減)10%軽減/30秒,5,,
+,chara_dan_00001,_general_vh,c_dan_00001_general_vh_Normal_Green,ダンダダン,オカルン,オカルン_general_vh,Normal,Defense,Green,10000,0,31,0.2,100,0,0.21,1,100,1.43,0.53,100,4.00,1.66,,-,,
+,chara_dan_00001,_general_vh,c_dan_00001_general_vh_Boss_Red,ダンダダン,オカルン,オカルン_general_vh,Boss,Defense,Red,10000,0,31,0.2,100,0,0.21,1,200,1.43,0.53,100,4.00,1.66,自己バフ(ダメージ軽減)50%軽減/15秒,5,,
+,chara_dan_00001,_general_vh,c_dan_00001_general_vh_Boss_Green,ダンダダン,オカルン,オカルン_general_vh,Boss,Defense,Green,10000,0,31,0.2,100,0,0.21,1,200,1.43,0.53,100,4.00,1.66,自己バフ(ダメージ軽減)50%軽減/15秒,5,,
+,chara_dan_00002,_general_n,c_dan_00002_general_n_Boss_Red,ダンダダン,ターボババアの霊力 オカルン,ターボババアの霊力 オカルン_general_n,Boss,Attack,Red,10000,1,65,0.32,50,0,0.33,100,500,1.84,"stop有:1回目 0.66
+stop有:2回目 1.27",150,5.21,"stop有:1回目：1.78
+stop有:2回目：3.34
+stop無:3回目 3.76
+stop無:4回目 3.92
+stop無:5回目 4.09
+stop無:6回目 4.26
+stop無:7回目 4.42",,6,,
+,chara_dan_00002,_general_h,c_dan_00002_general_h_Boss_Red,ダンダダン,ターボババアの霊力 オカルン,ターボババアの霊力 オカルン_general_h,Boss,Attack,Red,10000,1,65,0.32,100,0,0.33,100,200,1.84,"stop有:1回目 0.66
+stop有:2回目 1.27",150,5.21,"stop有:1回目：1.78
+stop有:2回目：3.34
+stop無:3回目 3.76
+stop無:4回目 3.92
+stop無:5回目 4.09
+stop無:6回目 4.26
+stop無:7回目 4.42",,5,,
+,chara_dan_00101,_general_n,c_dan_00101_general_n_Boss_Red,ダンダダン,モモ,モモ_general_n,Boss,Attack,Red,10000,2,40,0.39,50,0,0.42,1,500,1.00,0.50,100,2.00,1.00,,6,,
+,chara_dan_00101,_general_h,c_dan_00101_general_h_Boss_Red,ダンダダン,モモ,モモ_general_h,Boss,Attack,Red,10000,2,40,0.39,100,0,0.42,1,200,1.00,0.50,100,2.00,1.00,中範囲攻撃+小ノックバック,5,,
+,enemy_glo_00001,_general_vh,e_glo_00001_general_vh_Boss_Red,GLOW,ファントム,ファントム_general_vh,Boss,Technical,Red,10000,1,40,0.2,100,0,0.21,1,100,1.00,0.50,100,,,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,chara_jig_00001,_mainquest,c_jig_00001_mainquest_Boss_Red,地獄楽,がらんの画眉丸,がらんの画眉丸_mainquest,Boss,Technical,Red,5000,2,41,0.24,100,0,0.25,1,400,1.17,stop有:1回目0.20,80,2.30,"stop有:1回目 0.08
+stop有:2回目 0.90
+stop有:3回目 1.50",小範囲に火傷,5,,dageki_1
+,chara_jig_00101,_mainquest,c_jig_00101_mainquest_Boss_Green,地獄楽,山田浅ェ門 佐切,山田浅ェ門 佐切_mainquest,Boss,Attack,Green,5000,3,34,0.22,200,0,0.23,1,300,1.5,0.50,75,2.50,1.20,中範囲攻撃,6,,zangeki_1
+,chara_jig_00101,_mainquest,c_jig_00101_mainquest_Normal_Green,地獄楽,山田浅ェ門 佐切,山田浅ェ門 佐切_mainquest,Normal,Attack,Green,5000,3,34,0.22,200,0,0.23,1,500,1.5,0.50,75,2.50,1.20,中範囲攻撃,6,,zangeki_1
+,chara_jig_00301,_mainquest,c_jig_00301_mainquest_Normal_Green,地獄楽,山田浅ェ門 仙汰,山田浅ェ門 仙汰_mainquest,Normal,Defense,Green,5000,1,21,0.18,200,0,0.19,1,100,1.80,stop有0.50,100,2.34,"stop無:1回目：0.35
+stop無:2回目：0.50
+stop無:3回目 0.62
+stop無:4回目 0.78
+stop有:5回目 1.00",中範囲攻撃+小ノックバック,5,,zangeki_1
+,enemy_jig_00001,_mainquest,e_jig_00001_mainquest_Normal_Colorless,地獄楽,門神,門神_mainquest,Normal,Defense,Colorless,3500,2,31,0.21,50,0,0.26,100,150,1.83,0.83,100,-,-,,-,,dageki_1
+,enemy_jig_00001,_mainquest,e_jig_00001_mainquest_Normal_Green,地獄楽,門神,門神_mainquest,Normal,Defense,Green,10000,2,27,0.22,50,0,0.27,100,150,1.83,0.83,100,-,-,,-,,dageki_1
+,enemy_jig_00201,_mainquest,e_jig_00201_mainquest_Boss_Green,地獄楽,門神 (大),門神 （大）_mainquest,Boss,Defense,Green,10000,1,20,0.3,50,0,0.4,100,300,1.83,0.83,250,-,-,,-,,dageki_1
+,enemy_jig_00201,_mainquest2,e_jig_00201_mainquest2_Boss_Green,地獄楽,門神 (大),門神 （大）_mainquest2,Boss,Defense,Green,10000,1,20,0.3,50,0,0.4,100,300,1.83,0.83,250,-,-,,-,,dageki_1
+,enemy_jig_00201,_mainquest,e_jig_00201_mainquest_Normal_Green,地獄楽,門神 (大),門神 （大）_mainquest,Normal,Defense,Green,10000,1,20,0.3,50,0,0.4,100,300,1.83,0.83,250,-,-,,-,,dageki_1
+,enemy_jig_00401,_mainquest,e_jig_00401_mainquest_Normal_Colorless,地獄楽,極楽蝶,極楽蝶_mainquest,Normal,Attack,Colorless,3000,4,32,0.24,100,0,0.25,1,100,1.30,0.66,125,-,-,,-,,dageki_2
+,enemy_jig_00401,_mainquest,e_jig_00401_mainquest_Normal_Green,地獄楽,極楽蝶,極楽蝶_mainquest,Normal,Technical,Green,3000,4,25,0.22,100,0,0.23,100,150,1.30,0.66,200,-,-,,-,,dageki_2
+,enemy_jig_00402,_mainquest,e_jig_00402_mainquest_Normal_Colorless,地獄楽,極楽蝶,極楽蝶_mainquest,Normal,Attack,Colorless,3000,3,33,0.34,100,0,0.39,100,150,2.10,0.60,100,-,-,,-,,dageki_2
+,enemy_jig_00301,_mainquest,e_jig_00301_mainquest_Normal_Colorless,地獄楽,竈神 魚,竈神 魚_mainquest,Normal,Attack,Colorless,5000,3,30,0.18,100,0,0.19,1,400,1.50,0.66,100,-,-,,-,,dageki_1
+,enemy_jig_00301,_mainquest,e_jig_00301_mainquest_Boss_Colorless,地獄楽,竈神 魚,竈神 魚_mainquest,Boss,Attack,Colorless,5000,3,30,0.2,100,0,0.21,1,400,1.50,0.66,180,-,-,,-,,dageki_1
+,enemy_jig_00301,_mainquest,e_jig_00301_mainquest_Normal_Green,地獄楽,竈神 魚,竈神 魚_mainquest,Normal,Attack,Green,5000,3,35,0.2,100,0,0.23,1,200,1.50,0.66,10,-,-,,-,,dageki_1
+,enemy_jig_00301,_mainquest,e_jig_00301_mainquest_Boss_Green,地獄楽,竈神 魚,竈神 魚_mainquest,Boss,Attack,Green,5000,3,37,0.22,100,0,0.23,1,500,1.50,0.66,10,-,-,,-,,dageki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,none
+,chara_tak_00001,_mainquest,c_tak_00001_mainquest_Boss_Yellow,タコピーの原罪,ハッピー星からの使者 タコピー,ハッピー星からの使者 タコピー_mainquest,Boss,Defense,Yellow,10000,2,25,0.17,300,0,0.18,1,400,1.00,0.44,50,3.34,0.75,ダメージ軽減,5,,dageki_1
+,chara_tak_00001,_mainquest,c_tak_00001_mainquest_Boss_Blue,タコピーの原罪,ハッピー星からの使者 タコピー,ハッピー星からの使者 タコピー_mainquest,Boss,Defense,Blue,10000,2,25,0.17,300,0,0.18,1,400,1.00,0.44,50,3.34,0.75,ダメージ軽減,5,,dageki_1
+,chara_tak_00001,_mainquest,c_tak_00001_mainquest_Boss_Green,タコピーの原罪,ハッピー星からの使者 タコピー,ハッピー星からの使者 タコピー_mainquest,Boss,Defense,Green,10000,2,25,0.17,300,0,0.18,1,400,1.00,0.44,50,3.34,0.75,ダメージ軽減,5,,dageki_1
+,chara_tak_00001,_mainquest_spytrans_loid,c_tak_00001_mainquest_spytrans_loid_Boss_Colorless,タコピーの原罪,ハッピー星からの使者 タコピー,ハッピー星からの使者 タコピー_mainquest_spytrans_loid,Boss,Defense,Colorless,10000,2,25,0.17,300,0,0.18,1,200,1.00,0.44,50,3.34,0.75,,-,,dageki_1
+,chara_spy_00101,_mainquest_tak_transA2,c_spy_00101_mainquest_tak_transA2_Normal_Blue,SPY×FAMILY,<黄昏> ロイド,<黄昏> ロイド_mainquest_tak_transA2,Normal,Attack,Blue,50000,2,34,0.4,500,0,0.41,1,200,1.64,0.83,100,2.50,1.33,単体に300%ダメージ,4,,shageki_1
+,chara_tak_00001,_mainquest_spytrans_zanto,c_tak_00001_mainquest_spytrans_zanto_Normal_Colorless,タコピーの原罪,ハッピー星からの使者 タコピー,ハッピー星からの使者 タコピー_mainquest_spytrans_zanto,Normal,Defense,Colorless,10000,2,25,0.17,300,0,0.18,1,200,1.00,0.44,50,3.34,0.75,,-,,dageki_1
+,enemy_spy_00001,_mainquest_tak_transA1,e_spy_00001_mainquest_tak_transA1_Normal_Blue,SPY×FAMILY,密輸組織の残党,密輸組織の残党_mainquest_tak_transA1,Normal,Defense,Blue,25000,2,27,0.2,375,0,0.21,1,200,1.00,0.17,40,-,-,,-,,shageki_1
+,chara_tak_00001,_mainquest_jigtrans_monshin,c_tak_00001_mainquest_jigtrans_monshin_Normal_Colorless,タコピーの原罪,ハッピー星からの使者 タコピー,ハッピー星からの使者 タコピー_mainquest_jigtrans_monshin,Normal,Defense,Colorless,10000,2,25,0.17,300,0,0.18,1,200,1.00,0.44,50,3.34,0.75,,-,,dageki_1
+,chara_tak_00001,_mainquest_jigtrans_kyushin,c_tak_00001_mainquest_jigtrans_kyushin_Normal_Colorless,タコピーの原罪,ハッピー星からの使者 タコピー,ハッピー星からの使者 タコピー_mainquest_jigtrans_kyushin,Normal,Defense,Colorless,10000,2,25,0.17,300,0,0.18,1,200,1.00,0.44,50,3.34,0.75,,-,,dageki_1
+,chara_tak_00001,_mainquest_jigtrans_sagiri,c_tak_00001_mainquest_jigtrans_sagiri_Boss_Colorless,タコピーの原罪,ハッピー星からの使者 タコピー,ハッピー星からの使者 タコピー_mainquest_jigtrans_sagiri,Boss,Defense,Colorless,10000,2,25,0.17,300,0,0.18,1,200,1.00,0.44,50,3.34,0.75,,-,,dageki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,enemy_dan_00001,_mainquest_glo2,e_dan_00001_mainquest_glo2_Normal_Blue,ダンダダン,セルポ星人,セルポ星人_mainquest_glo2,Normal,Attack,Blue,5000,3,25,0.2,200,0,0.21,1,200,1.16,0.50,110,-,-,,-,,dageki_1
+,enemy_dan_00101,_mainquest_glo2,e_dan_00101_mainquest_glo2_Normal_Blue,ダンダダン,セルポ星人（変身）,セルポ星人（変身）_mainquest_glo2,Normal,Attack,Blue,5000,2,34,0.23,200,0,0.24,1,200,1.40,0.70,75,-,-,,-,,dageki_1
+,enemy_dan_00201,_mainquest_glo2,e_dan_00201_mainquest_glo2_Boss_Blue,ダンダダン,ターボババア,ターボババア_mainquest_glo2,Boss,Attack,Blue,30000,2,55,0.24,400,0,0.25,1,400,1.50,0.40,200,-,-,,-,,dageki_1
+,enemy_jig_00301,_mainquest_glo2,e_jig_00301_mainquest_glo2_Normal_Blue,地獄楽,竈神 魚,竈神 魚_mainquest_glo2,Normal,Attack,Blue,5000,2,50,0.22,200,0,0.23,1,200,1.50,0.66,85,-,-,,-,,dageki_1
+,enemy_jig_00402,_mainquest_glo2,e_jig_00402_mainquest_glo2_Normal_Blue,地獄楽,極楽蝶,極楽蝶_mainquest_glo2,Normal,Attack,Blue,5000,3,37,0.27,300,0,0.37,100,250,2.10,0.60,100,-,-,,-,,dageki_2
+,chara_dan_00001,_mainquest_glo2,c_dan_00001_mainquest_glo2_Normal_Red,ダンダダン,オカルン,オカルン_mainquest_glo2,Normal,Defense,Red,10000,4,30,0.16,100,0,0.17,1,300,1.43,0.53,225,4.00,1.66,ダメージ軽減,5,,dageki_1
+,chara_dan_00002,_mainquest_glo2,c_dan_00002_mainquest_glo2_Boss_Red,ダンダダン,ターボババアの霊力 オカルン,ターボババアの霊力 オカルン_mainquest_glo2,Boss,Attack,Red,30000,1,65,0.32,300,,0.33,1,400,1.84,"stop有:1回目 0.66
+stop有:2回目 1.27",65,5.21,"stop有:1回目：1.78
+stop有:2回目：3.34
+stop無:3回目 3.76
+stop無:4回目 3.92
+stop無:5回目 4.09
+stop無:6回目 4.26
+stop無:7回目 4.42",中範囲攻撃,4,,dageki_1
+,chara_dan_00101,_mainquest_glo2,c_dan_00101_mainquest_glo2_Normal_Red,ダンダダン,モモ,モモ_mainquest_glo2,Normal,Attack,Red,5000,3,35,0.39,150,0,0.42,100,200,1.00,0.50,90,2.00,1.00,中範囲攻撃,6,,dageki_1
+,chara_jig_00001,_mainquest_glo2,c_jig_00001_mainquest_glo2_Normal_Red,地獄楽,がらんの画眉丸,がらんの画眉丸_mainquest_glo2,Normal,Technical,Red,5000,2,41,0.24,300,0,0.25,1,200,1.17,stop有:1回目0.20,80,2.30,"stop有:1回目 0.08
+stop有:2回目 0.90
+stop有:3回目 1.50",小範囲に火傷,6,,dageki_1
+,chara_jig_00101,_mainquest_glo2,c_jig_00101_mainquest_glo2_Normal_Red,地獄楽,山田浅ェ門 佐切,山田浅ェ門 佐切_mainquest_glo2,Normal,Attack,Red,5000,3,45,0.22,300,0,0.23,1,200,1.5,0.50,100,2.50,1.20,中範囲攻撃,5,,zangeki_1
+,chara_tak_00001,_mainquest_glo2,c_tak_00001_mainquest_glo2_Normal_Red,タコピーの原罪,ハッピー星からの使者 タコピー,ハッピー星からの使者 タコピー_mainquest_glo2,Normal,Defense,Red,10000,2,32,0.18,100,0,0.19,1,300,1.00,0.44,100,3.34,0.75,,-,,dageki_1
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,enemy_glo_00001,_general_osh_n,e_glo_00001_general_osh_n_Normal_Yellow,GLOW,ファントム,ファントム_general_osh_n,Normal,Attack,Yellow,1000,3,34,0.22,100,,,,50,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_osh_n,e_glo_00001_general_osh_n_Normal_Green,GLOW,ファントム,ファントム_general_osh_n,Normal,Attack,Green,1000,3,34,0.22,100,,,,50,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_osh_n,e_glo_00001_general_osh_n_Boss_Yellow,GLOW,ファントム,ファントム_general_osh_n,Boss,Attack,Yellow,1000,2,34,0.22,100,,,,100,1.00,0.50,,,,,-,,
+,enemy_glo_00002,_general_osh_n,e_glo_00002_general_osh_n_Normal_Green,GLOW,推し活ファントム,サイリウム持ちファントム_general_osh_n,Normal,Defense,Green,1000,1,47,0.22,100,,,,50,1.17,stop有:1回目 0.6,,,,,-,,
+,enemy_glo_00002,_general_osh_n,e_glo_00002_general_osh_n_Normal_Colorless,GLOW,推し活ファントム,サイリウム持ちファントム_general_osh_n,Normal,Attack,Colorless,1000,1,47,0.22,100,,,,50,1.17,stop有:1回目 0.6,,,,,-,,
+,chara_osh_00001,_general_osh_n,c_osh_00001_general_osh_n_Normal_Colorless,【推しの子】,B小町不動のセンター アイ,星野 アイ_general_osh_n,Normal,Attack,Colorless,1000,3,31,,100,,,,50,1.60,stop有:1回目 0.43,,3.24,stop無:1回目 1.83,20秒間自身の攻撃力100%UP,-,,
+,chara_osh_00001,_general_osh_n,c_osh_00001_general_osh_n_Boss_Colorless,【推しの子】,B小町不動のセンター アイ,星野 アイ_general_osh_n,Boss,Technical,Colorless,1000,2,25,,100,,,,100,1.60,stop有:1回目 0.43,,3.24,stop無:1回目 1.83,自身とその前のコマ1つに攻撃/100%の確率で3秒間スタン,-,,
+,chara_osh_00001,_general_osh_n,c_osh_00001_general_osh_n_Boss_Green,【推しの子】,B小町不動のセンター アイ,星野 アイ_general_osh_n,Boss,Technical,Green,1000,2,31,,100,,,,100,1.60,stop有:1回目 0.43,,3.24,stop無:1回目 1.83,自身とその前のコマ1つに攻撃/100%の確率で3秒間スタン,-,,
+,enemy_glo_00002,_general_osh_h,e_glo_00002_general_osh_h_Normal_Colorless,GLOW,推し活ファントム,サイリウム持ちファントム_general_osh_h,Normal,Attack,Colorless,1000,1,47,0.22,100,,,,50,1.17,stop有:1回目 0.6,,,,,-,,
+,enemy_glo_00002,_general_osh_h,e_glo_00002_general_osh_h_Normal_Red,GLOW,推し活ファントム,サイリウム持ちファントム_general_osh_h,Normal,Technical,Red,1000,1,47,0.22,100,,,,50,1.17,stop有:1回目 0.6,,,,,-,,
+,chara_osh_00001,_general_osh_h,c_osh_00001_general_osh_h_Normal_Blue,【推しの子】,B小町不動のセンター アイ,星野 アイ_general_osh_h,Normal,Attack,Blue,1000,3,31,,100,,,,50,1.60,stop有:1回目 0.43,,3.24,stop無:1回目 1.83,自身とその前のコマ1つに攻撃,-,,
+,enemy_glo_00001,_general_osh_h,e_glo_00001_general_osh_h_Normal_Colorless,GLOW,ファントム,ファントム_general_osh_h,Normal,Defense,Colorless,1000,3,34,0.22,100,,,,50,1.00,0.50,,,,,-,,
+,chara_osh_00001,_general_osh_h,c_osh_00001_general_osh_h_Boss_Red,【推しの子】,B小町不動のセンター アイ,星野 アイ_general_osh_h,Boss,Technical,Red,1000,2,31,,100,,,,100,1.60,stop有:1回目 0.43,,3.24,stop無:1回目 1.83,自身とその前のコマ1つに攻撃/100%の確率で3秒間スタン+ステージ全体の敵に10秒間攻撃力UP100%,-,,
+,enemy_glo_00001,_general_osh_h,e_glo_00001_general_osh_h_Boss_Blue,GLOW,ファントム,ファントム_general_osh_h,Boss,Technical,Blue,1000,2,34,0.22,100,,,,100,1.00,0.50,,,,,-,,
+,enemy_glo_00001,_general_osh_h,e_glo_00001_general_osh_h_Normal_Blue,GLOW,ファントム,ファントム_general_osh_h,Normal,Attack,Blue,1000,3,34,0.22,100,,,,50,1.00,0.50,,,,,-,,
+,chara_osh_00001,_general_osh_vh,c_osh_00001_general_osh_vh_Normal_Green,【推しの子】,B小町不動のセンター アイ,星野 アイ_general_osh_vh,Normal,Attack,Green,1000,3,31,,100,,,,50,1.60,stop有:1回目 0.43,,3.24,stop無:1回目 1.83,自身とその前のコマ1つに攻撃+100%で10秒間自身の攻撃200%UP,-,,
+,chara_osh_00001,_general_osh_vh,c_osh_00001_general_osh_vh_Boss_Colorless,【推しの子】,B小町不動のセンター アイ,星野 アイ_general_osh_vh,Boss,Support,Colorless,1000,2,25,,100,,,,100,1.60,stop有:1回目 0.43,,3.24,stop無:1回目 1.83,自身とその前のコマ1つに攻撃/100%の確率で3秒間スタン+ステージ全体の敵に10秒間攻撃力UP100%,-,,
+,chara_osh_00001,_general_osh_vh,c_osh_00001_general_osh_vh_Boss_Red,【推しの子】,B小町不動のセンター アイ,星野 アイ_general_osh_vh,Boss,Technical,Red,1000,2,25,,100,,,,100,1.60,stop有:1回目 0.43,,3.24,stop無:1回目 1.83,自身とその前のコマ1つに攻撃/100%の確率で3秒間スタン+ステージ全体の敵に20秒間攻撃力UP35%+100%の確率で最大体力の20%回復,-,,
+,enemy_glo_00001,_general_osh_vh,e_glo_00001_general_osh_vh_Boss_Blue,GLOW,ファントム,ファントム_general_osh_vh,Boss,Technical,Blue,1000,2,34,0.22,100,,,,100,1.00,0.50,,,,,-,,
+,enemy_glo_00002,_general_osh_vh,e_glo_00002_general_osh_vh_Normal_Red,GLOW,推し活ファントム,サイリウム持ちファントム_general_osh_vh,Normal,Technical,Red,1000,1,47,0.22,100,,,,50,1.17,stop有:1回目 0.6,,,,,-,,
+,enemy_glo_00002,_general_osh_vh,e_glo_00002_general_osh_vh_Normal_Colorless,GLOW,推し活ファントム,サイリウム持ちファントム_general_osh_vh,Normal,Support,Colorless,1000,1,47,0.22,100,,,,50,1.17,stop有:1回目 0.6,,,,,-,,
+,enemy_glo_00002,_general_osh_vh,e_glo_00002_general_osh_vh_Normal_Blue,GLOW,推し活ファントム,サイリウム持ちファントム_general_osh_vh,Normal,Technical,Blue,1000,1,47,0.22,100,,,,50,1.17,stop有:1回目 0.6,,,,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,
+,,,___,none,none,none,,none,,,,,,,,,,,none,none,,none,none,,-,,

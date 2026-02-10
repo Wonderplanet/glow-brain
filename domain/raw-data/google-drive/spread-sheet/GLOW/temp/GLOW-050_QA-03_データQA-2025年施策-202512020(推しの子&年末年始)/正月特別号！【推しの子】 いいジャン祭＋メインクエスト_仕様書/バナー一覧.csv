@@ -1,0 +1,150 @@
+施策区分,必要/不要,カテゴリ１,カテゴリ２,用途,項目, 画像,規格,"アップ先
+S3/AB",制作頻度,昇格タグ,"命名規則
+※[ ]内はマスターデータ・運用単位で命名が変化します",画像名サンプル,担当班
+通常,不要,パック,バナー,,"shop_pack_banner
+スタートダッシュキャラパック",,668×220,AB,単発,,shop_pack_banner_[:asset_key],shop_pack_banner_pack_00001,
+,不要,,,,"shop_pass_icon
+プレミアムパス",,224×194,AB,単発,,shop_pass_icon_[:png_name],shop_pass_icon_premium,
+,不要,,,,,,,,,,,,
+通常,不要,お知らせ,バナー,,【ホームバナー】◆【お一人様11回まで購入可】スタートダッシュキャラパック,,,S3,単発,,hometop_[:png_name],hometop_shop_pack_00001,
+通常,不要,お知らせ,バナー,,【お知らせ】◆【お一人様11回まで購入可】スタートダッシュキャラパック,,668×220,S3,単発,,notice_[:png_name],notice_shop_pack_00001,
+通常,不要,パック,バナー,,【パック】◆【お一人様1回まで購入可】スタートダッシュアイテムパック,,668×220,AB,単発,,shop_pack_banner_[:asset_key],shop_pack_banner_pack_00002,
+通常,不要,お知らせ,バナー,,【ホームバナー】◆【お一人様1回まで購入可】スタートダッシュアイテムパック,,668×220,S3,単発,,hometop_[:png_name],hometop_shop_pack_00002,
+通常,不要,お知らせ,バナー,,【お知らせ】◆【お一人様1回まで購入可】スタートダッシュアイテムパック,,668×220,S3,単発,,notice_[:png_name],notice_shop_pack_00002,
+通常,不要,パック,バナー,,【パック】◆【お一人様1回まで購入可】ジャンブルパック,,,,単発,,,,
+いいジャン祭,必要,パック,バナー,,【パック】◆【お一人様1回まで購入可】いいジャン祭パック,,,AB,都度,,,,
+記念,不要,パス,バナー,,【パス】◆リリース記念プレミアムパス,,,,単発,,,,
+記念,不要,お知らせ,バナー,,【お知らせ】◆リリース記念プレミアムパス,,668×220,S3,都度,,notice_[:png_name],notice_shop_pass_00002,
+記念,不要,お知らせ,バナー,,【ホームバナー】◆リリース記念プレミアムパス,,244×80,S3,都度,,hometop_[:png_name],hometop_shop_pass_00002,
+,不要,,,,【パス】◆プレミアムパス(prefab),,"668×539(最大)
+表示する効果や報酬によって可変",prefab組み込み,,,PassShopProduct[:shop_pass_cell_color]ListCell,PassShopProductGoldListCell.prefab,
+,不要,,,,【パス】◆マンスリーパス(prefab),,"668×539(最大)
+表示する効果や報酬によって可変",prefab組み込み,,,PassShopProduct[:shop_pass_cell_color]ListCell,PassShopProductPurpleListCell.prefab,
+通常,不要,パス,バナー,,【パス】◆マンスリーパス,,224×194,AB,,,shop_pass_icon_[:png_name],shop_pass_icon_monthly,
+通常,不要,パス,バナー,,【お知らせ】◆マンスリーパス,,668×220,S3,都度,,notice_[:png_name],notice_shop_pass_00001,
+通常,不要,パス,バナー,,【ホームバナー】◆マンスリーパス,,244×80,S3,都度,,hometop_[:png_name],hometop_shop_pass_00001,
+,不要,,,,【パス】銀色のウィークリーパス(prefab),,"668×539(最大)
+表示する効果や報酬によって可変",prefab組み込み,,,PassShopProduct[:shop_pass_cell_color]ListCell,PassShopProductSilverListCell.prefab,
+通常,不要,パス,バナー,,【パス】銀色のウィークリーパス(アイコン),,224×194,AB,単発,,shop_pass_icon_[:asset_key],shop_pass_icon_weekly,
+通常,不要,,,,【お知らせ】◆ウィークリーパス,,,,,,,,
+通常,不要,,,,【ホームバナー】◆ウィークリーパス,,,,,,,,
+いいジャン祭,必要,お知らせ,バナー,,"【お知らせ】いいジャン祭開催お知らせ_Mバナー
+・冷淡な精密機械　土刃 メイ
+・葵 リリー
+・新人魔法少女 桜木 カナ
+notice_event_mag_00001",,668×220,S3,都度,event_mag_00001_01,notice_[:png_name],notice_event_mag_00001,
+いいジャン祭,必要,お知らせ,バナー,,"【お知らせ】ログインボーナス_Mバナー
+・新人魔法少女 桜木 カナ
+・越谷 仁美
+event_mag_00001_loginbonus",,668×220,AB,都度,event_mag_00001_01,[:asset_key]_loginbonus,event_kai_00001_loginbonus,
+いいジャン祭,必要,お知らせ,バナー,,"【お知らせ】ミッション_Mバナー
+・冷淡な精密機械　土刃 メイ
+・新人魔法少女 桜木 カナ
+event_mag_00001_mission",,668×220,AB,都度,event_mag_00001_01,[:asset_key]_mission,event_kai_00001_mission,
+いいジャン祭,必要,お知らせ,バナー,,"【ホームバナー】お知らせ
+・新人魔法少女 桜木 カナ
+hometop_event_mag_00001",,244×80,S3,都度,event_mag_00001_01,hometop_[:png_name],hometop_event_kai_00001,
+いいジャン祭,必要,お知らせ,バナー,,"【ホームバナー】ピックアップガシャ
+・冷淡な精密機械　土刃 メイ",,244×80,S3,都度,event_mag_00001_01,hometop_[:png_name],hometop_gacha_kai_00001,
+いいジャン祭,必要,コンテンツTOP,バナー,,"【コンテンツTOP】 バナー
+・新人魔法少女 桜木 カナ
+event_mag_00001_content_top",,698×200,AB,都度,event_mag_00001_01,[:asset_key]_content_top,event_kai_00001_content_top,
+いいジャン祭,必要,コンテンツTOP,プレハブ,,"【コンテンツTOP】 プレハブ
+・新人魔法少女 桜木 カナ
+・冷淡な精密機械　土刃 メイ
+・葵 リリー
+・槇野 あかね
+・越谷 仁美",,"プレハブ
+（画像は682 × 994）",AB,都度,event_mag_00001_01,[:asset_key]_quest_select ※プレハブ名,"event_kai_00001_quest_select 
+※プレハブ名
+→画像素材の名は自由でOK
+
+asset_keyはこちらを参照してください
+https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=285278055#gid=285278055&range=H:H",https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=285278055#gid=285278055&range=G:G
+いいジャン祭,必要,コンテンツTOP,バナー,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=1690316824#gid=1690316824&range=A20:D30,"【コンテンツTOP】 Sバナー_デイリー
+mag1_1day_quest_select_cell",,"246×76
+→244×80へ変更中",AB,都度,event_mag_00001_01,[:mst_quest.asset_key]_quest_select_cell,kai1_1day_quest_select_cell,
+いいジャン祭,必要,コンテンツTOP,バナー,,"【コンテンツTOP】 Sバナーストリー1
+【ストーリー】重本 浩司編
+mag1_charaget01_quest_select_cell",,"246×76
+→244×80へ変更中",AB,都度,event_mag_00001_01,[:mst_quest.asset_key]_quest_select_cell,kai1_charaget01_quest_select_cell,
+いいジャン祭,必要,コンテンツTOP,バナー,,"【コンテンツTOP】 Sバナーストリー2
+【ストーリー】槙野 あかね 編
+mag1_charaget02_quest_select_cell",,"246×76
+→244×80へ変更中",AB,都度,event_mag_00001_01,[:mst_quest.asset_key]_quest_select_cell,kai1_charaget02_quest_select_cell,
+いいジャン祭,必要,コンテンツTOP,バナー,,"【コンテンツTOP】 Sバナーチャレンジ
+・冷淡な精密機械　土刃 メイのかけら
+・葵 リリーのかけら
+・ピックアップガシャチケット
+mag1_challenge01_quest_select_cell",,"246×76
+→244×80へ変更中",AB,都度,event_mag_00001_01,[:mst_quest.asset_key]_quest_select_cell,kai1_challenge01_quest_select_cell,
+いいジャン祭,必要,コンテンツTOP,バナー,,"【コンテンツTOP】 Sバナー高難度
+・変身アイテムエンブレム＊２
+・プリズム
+mag1_savage_quest_select_cell",,"246×76
+→244×80へ変更中",AB,都度,event_mag_00001_01,[:mst_quest.asset_key]_quest_select_cell,kai1_savage_quest_select_cell,
+いいジャン祭,必要,イベント,アセット,,"クエストTOPステージサムネール
+
+キャラ_重本 浩司        stage_icon_event_mag1_00001
+重本 浩司のかけら        stage_icon_event_mag1_00002
+カラーメモリー・重本 浩司        stage_icon_event_mag1_00003
+キャラ_槙野 あかね        stage_icon_event_mag1_00004
+槙野 あかねのかけら        stage_icon_event_mag1_00005
+カラーメモリー・槙野 あかね        stage_icon_event_mag1_00006
+冷淡な精密機械　土刃 メイ        stage_icon_event_mag1_00007
+葵 リリーかけら　　　　　　　stage_icon_event_mag1_00008
+桜木 カナの変身アイテムのエンブレム        stage_icon_event_mag1_00009
+葵 リリーの変身アイテムのエンブレム        stage_icon_event_mag1_00010",,126×102,AB,都度,event_mag_00001_01,stage_icon_[:asset_key],stage_icon_event_kai1_00007,
+通常,不要,イベント,アセット,,シリーズバナー（クエスト選択）,,300×300,AB,都度,,series_banner_[:asset_key],series_banner_kai,
+いいジャン祭,必要,イベント,アセット,,"原画のかけらa（イベントクエスト用）
+artwork_event_mag_0001",,524×524,AB,都度,event_mag_00001_01,artwork_[:asset_key]a,artwork_event_kai_0001a,
+いいジャン祭,必要,イベント,アセット,,"原画のかけらb（イベントクエスト用）
+artwork_event_mag_0002",,154×154,AB,都度,event_mag_00001_01,artwork_[:asset_key]b,artwork_event_kai_0001b,
+いいジャン祭,必要,イベント,アセット,,"降臨バトルエンブレム
+魔法少女
+emblem_icon_adventbattle_mag_season01_00001
+emblem_icon_adventbattle_mag_season01_00002
+emblem_icon_adventbattle_mag_season01_00003
+emblem_icon_adventbattle_mag_season01_00004
+emblem_icon_adventbattle_mag_season01_00005
+emblem_icon_adventbattle_mag_season01_00006",,120×120,AB,都度,event_mag_00001_01,emblem_icon_[:asset_key],emblem_icon_adventbattle_kai_season01_00001,
+いいジャン祭,必要,イベント,アセット,,"イベントエンブレム
+株式会社マジルミエのマーク
+emblem_icon_event_mag_00001",,120×120,AB,都度,event_mag_00001_01,emblem_icon_[:asset_key],emblem_icon_event_kai_00001,
+いいジャン祭,必要,イベント,アセット,,"イベントエンブレム
+桜木カナの変身アイテム
+ケースに入っている状態。
+ストラップなしでOK
+emblem_icon_event_mag_00002
+",,120×120,AB,都度,event_mag_00001_01,emblem_icon_[:asset_key],emblem_icon_event_kai_00001,
+いいジャン祭,必要,イベント,アセット,,"イベントエンブレム
+ 葵リリーの変身アイテム
+emblem_icon_event_mag_00003",,120×120,AB,都度,event_mag_00001_01,emblem_icon_[:asset_key],emblem_icon_event_kai_00001,
+いいジャン祭,必要,ガシャ,バナー,,"株式会社マジルミエ いいジャン祭ピックアップガシャ
+・冷淡な精密機械　土刃 メイ
+・葵 リリー
+",,668×370,S3,都度,event_mag_00001_01,gacha_banner_[:banner_url],gacha_banner_kai_00001,
+いいジャン祭,必要,,,,"ダンダダン いいジャン祭ピックアップガシャ
+冷淡な精密機械　土刃 メイ
+notice_gacha_mag_00001",,668×220,S3,都度,event_mag_00001_01,,notice_gacha_mag_00001,
+通常,不要,ガシャ,バナー,,チュートリアルガシャ,,668×370,S3,単発,,gacha_banner_[:banner_url],gacha_banner_special_00001,
+通常,不要,ガシャ,バナー,,有償限定スタートダッシュガシャ,,668×370,S3,単発,,gacha_banner_[:banner_url],gacha_banner_startdash_00001,
+通常,不要,ガシャ,バナー,,プレミアムメダルガシャ,,668×370,S3,単発,,gacha_banner_[:banner_url],gacha_banner_medal_00001,
+通常,不要,ガシャ,バナー,,スペシャルガシャ,,668×370,S3,単発,,gacha_banner_[:banner_url],gacha_banner_special_00001,
+通常,不要,ガシャ,バナー,,ノーマルガシャ_キャラ,,668×370,S3,単発,,gacha_banner_[:banner_url],gacha_banner_normal_00001,
+通常,不要,,,,図鑑用バナー(series_banner),,300×300,AB,都度,,,series_banner_kai.png,
+通常,不要,,,,ロゴ(series_logo),,350×245,AB,都度,,,series_logo_kai.png,
+通常,不要,,,,通常ログインボーナス,,602 × 98,,,,,general_glo_00001_loginbonus,
+,不要,,,,"tutorial_tip_images
+チュートリアル用ダイアログ",,606× 850,,,,tutorial_tip_image_advent_battle_1,,
+,,,,,以下対応なし,,,,,,,,
+いいジャン祭,,お知らせ,バナー,,先行情報の形で汎用Mバナー,未定,,,,,,,
+いいジャン祭,,お知らせ,バナー,,メンテナンスお知らせ,未定,,,,,,,
+通常,,パック,バナー,,"プリズム
+・バナー不要",,,AB,単発,,,,
+通常,,パック,バナー,,ジャンブルパック,,,AB,単発,,,,
+通常,,パック,バナー,,強化パック：A（販売するかどうかは要検討）,,,AB,単発,,,,
+通常,,パック,バナー,,強化パック：A（販売するかどうかは要検討）,,,AB,単発,,,,
+通常,,,,,バックバナー,,,,,,,https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1744702621983249?thread_ts=1744702246.829559&cid=C069N3UL80H,
+,,,,,オールスタークエスト,,,,単発（今は）,,,追加,
+降臨バトル,,,,,降臨バトル関連,,,,単発（変わる可能性ある）,,,,

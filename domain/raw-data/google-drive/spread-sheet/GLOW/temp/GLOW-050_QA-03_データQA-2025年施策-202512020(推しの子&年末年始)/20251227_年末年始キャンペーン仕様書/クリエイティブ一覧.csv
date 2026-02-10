@@ -1,0 +1,104 @@
+施策区分,カテゴリ１,カテゴリ２,用途,バナー作成依頼用No.,項目,要件, 画像,仕様,"デザイナー
+担当者","プランナー
+担当者",規格,"アップ先
+S3/AB",制作頻度,数量,"命名規則
+※[ ]内はマスターデータ・運用単位で命名が変化します",画像名サンプル,"アップ確認
+",制作期日,,ID一覧,担当班,格納ドライブ
+通常,パック,バナー,,1,【パック】無料パック,,,"商品販売を再検討中。やらなくなるかも。
+ショップ画面で使用できるパック用のバナーの確認は引き続きお願いしたい",不要,,,,単発,,,,未対応,,,,,
+通常,,,,2,【ホームバナー】無料パック,,,,不要,,,,,,,,未対応,,,,,
+通常,,,,3,【お知らせ】無料パック,,,,不要,,,,,,,,未対応,,,,,
+通常,パック,バナー,,4,【パック】◆【お一人様11回まで購入可】スタートダッシュキャラパック,,,https://docs.google.com/presentation/d/1BKau_Pbd_pNog7d5YIrieh7QucKBfy6gt6dV0qY80ns/edit#slide=id.g34f002aa3ea_0_92,江村,,668×220,AB,単発,1,shop_pack_banner_[:asset_key],shop_pack_banner_pack_00001,アップ済み,,,,,
+通常,お知らせ,バナー,,5,【ホームバナー】◆【お一人様11回まで購入可】スタートダッシュキャラパック,,,https://docs.google.com/presentation/d/1BKau_Pbd_pNog7d5YIrieh7QucKBfy6gt6dV0qY80ns/edit#slide=id.g34f002aa3ea_0_92,江村,,244×80,S3,単発,1,hometop_[:png_name],hometop_shop_pack_00001,アップ済み,,,,,
+通常,お知らせ,バナー,,6,【お知らせ】◆【お一人様11回まで購入可】スタートダッシュキャラパック,,,https://docs.google.com/presentation/d/1BKau_Pbd_pNog7d5YIrieh7QucKBfy6gt6dV0qY80ns/edit#slide=id.g34f002aa3ea_0_92,江村,,668×220,S3,単発,1,notice_[:png_name],notice_shop_pack_00001,アップ済み,,,,,
+通常,パック,バナー,,7,【パック】◆【お一人様1回まで購入可】スタートダッシュアイテムパック,,,https://docs.google.com/presentation/d/1BKau_Pbd_pNog7d5YIrieh7QucKBfy6gt6dV0qY80ns/edit#slide=id.g34f002aa3ea_0_12,江村,,668×220,AB,単発,1,shop_pack_banner_[:asset_key],shop_pack_banner_pack_00002,再調整,,←一応アップ済み,,,
+通常,お知らせ,バナー,,8,【ホームバナー】◆【お一人様1回まで購入可】スタートダッシュアイテムパック,,,https://docs.google.com/presentation/d/1BKau_Pbd_pNog7d5YIrieh7QucKBfy6gt6dV0qY80ns/edit#slide=id.g34f002aa3ea_0_12,江村,,244×80,S3,単発,1,hometop_[:png_name],hometop_shop_pack_00002,アップ済み,,,,,
+通常,お知らせ,バナー,,9,【お知らせ】◆【お一人様1回まで購入可】スタートダッシュアイテムパック,,,https://docs.google.com/presentation/d/1BKau_Pbd_pNog7d5YIrieh7QucKBfy6gt6dV0qY80ns/edit#slide=id.g34f002aa3ea_0_12,江村,,668×220,S3,単発,1,notice_[:png_name],notice_shop_pack_00002,アップ済み,,,,,
+通常,パック,バナー,,10,【パック】◆【お一人様1回まで購入可】ジャンブルパック,,,https://docs.google.com/spreadsheets/d/1iz7a09EcpM3FOA9zJIazJvAeekxGhihTOIPKejk2J3s/edit?gid=771075141#gid=771075141&range=B83,不要,,,,単発,,,,,,,,,
+いいジャン祭,パック,バナー,,11,【パック】◆【お一人様1回まで購入可】いいジャン祭パック,,,"未定
+IPは使わずに単発でやる想定
+キャラを専用でパックで販売する可能性はあるが、
+
+周年とかで発生する可能性はある
+https://docs.google.com/spreadsheets/d/1iz7a09EcpM3FOA9zJIazJvAeekxGhihTOIPKejk2J3s/edit?gid=771075141#gid=771075141&range=B102",不要,,,AB,都度,,,,,,,,,
+記念,パス,バナー,,12,【パス】◆リリース記念プレミアムパス,,,すでにあるプレミアムパスを使う,不要,,,,単発,,,,,,,,,
+記念,お知らせ,バナー,,13,【お知らせ】◆リリース記念プレミアムパス,M,,https://docs.google.com/presentation/d/1BKau_Pbd_pNog7d5YIrieh7QucKBfy6gt6dV0qY80ns/edit?slide=id.g34f002aa3ea_0_34#slide=id.g34f002aa3ea_0_34,望月,,668×220,S3,都度,1,notice_[:png_name],notice_shop_pass_00002,アップ済み,,,,,
+記念,お知らせ,バナー,,14,【ホームバナー】◆リリース記念プレミアムパス,S,,https://docs.google.com/presentation/d/1BKau_Pbd_pNog7d5YIrieh7QucKBfy6gt6dV0qY80ns/edit?slide=id.g34f002aa3ea_0_34#slide=id.g34f002aa3ea_0_34,望月,,244×80,S3,都度,1,hometop_[:png_name],hometop_shop_pass_00002,アップ済み,,,,,
+,,,,15,【パス】◆プレミアムパス(prefab),prefab/素材,,,山本,,"668×539(最大)
+表示する効果や報酬によって可変",prefab組み込み,,1,PassShopProduct[:shop_pass_cell_color]ListCell,PassShopProductGoldListCell.prefab,アップ済み,,,,,
+,,,,16,【パス】◆プレミアムパス,,,制作済み,山本,,224×194,AB,,1,shop_pass_icon_[:png_name],shop_pass_icon_premium,アップ済み,,,,,
+,,,,17,【パス】◆マンスリーパス(prefab),prefab/素材,,,山本,,"668×539(最大)
+表示する効果や報酬によって可変",prefab組み込み,,1,PassShopProduct[:shop_pass_cell_color]ListCell,PassShopProductPurpleListCell.prefab,アップ済み,,,,,
+通常,パス,バナー,,18,【パス】◆マンスリーパス,,,制作済み,山本,,224×194,AB,,1,shop_pass_icon_[:png_name],shop_pass_icon_monthly,アップ済み,,,,,
+通常,パス,バナー,,19,【お知らせ】◆マンスリーパス,M,,https://docs.google.com/presentation/d/1BKau_Pbd_pNog7d5YIrieh7QucKBfy6gt6dV0qY80ns/edit#slide=id.g34f002aa3ea_0_72,望月,,668×220,S3,都度,1,notice_[:png_name],notice_shop_pass_00001,アップ済み,,,,,
+通常,パス,バナー,,20,【ホームバナー】◆マンスリーパス,S,,https://docs.google.com/presentation/d/1BKau_Pbd_pNog7d5YIrieh7QucKBfy6gt6dV0qY80ns/edit#slide=id.g34f002aa3ea_0_72,望月,,244×80,S3,都度,1,hometop_[:png_name],hometop_shop_pass_00001,アップ済み,,,,,
+,,,,21,【パス】銀色のウィークリーパス(prefab),,,,山本,,"668×539(最大)
+表示する効果や報酬によって可変",prefab組み込み,,1,PassShopProduct[:shop_pass_cell_color]ListCell,PassShopProductSilverListCell.prefab,アップ済み,,,,,
+通常,パス,バナー,,22,【パス】銀色のウィークリーパス(アイコン),,,https://docs.google.com/spreadsheets/d/1iz7a09EcpM3FOA9zJIazJvAeekxGhihTOIPKejk2J3s/edit?gid=771075141#gid=771075141&range=206:206,山本,,224×194,AB,単発,1,shop_pass_icon_[:asset_key],shop_pass_icon_weekly,アップ済み,,,,,
+通常,,,,23,【お知らせ】◆ウィークリーパス,不要,,不要,不要,,,,,,,,,,,,,
+通常,,,,24,【ホームバナー】◆ウィークリーパス,不要,,不要,不要,,,,,,,,,,,,,
+いいジャン祭,お知らせ,バナー,,25,【お知らせ】いいジャン祭開催お知らせ_Mバナー,M,,,江村,,668×220,S3,都度,1,notice_[:png_name],notice_event_kai_00001,アップ済み,,,,,
+いいジャン祭,お知らせ,バナー,,26,【お知らせ】ログインボーナス_Mバナー,M,,,江村,,668×220,AB,都度,1,[:asset_key]_loginbonus,event_kai_00001_loginbonus,アップ済み,,,GLOW_ID 管理,,
+いいジャン祭,お知らせ,バナー,,27,【お知らせ】ミッション_Mバナー,M,,,江村,,668×220,AB,都度,1,[:asset_key]_mission,event_kai_00001_mission,アップ済み,,,,,
+いいジャン祭,お知らせ,バナー,,28,【ホームバナー】お知らせ,S,,,山本,,244×80,S3,都度,1,hometop_[:png_name],hometop_event_kai_00001,アップ済み,,,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=285278055#gid=285278055&range=A1,,
+いいジャン祭,お知らせ,バナー,,29,【ホームバナー】ピックアップガシャ,S,,,江村,,244×80,S3,都度,1,hometop_[:png_name],hometop_gacha_kai_00001,アップ済み,,,,,
+いいジャン祭,コンテンツTOP,バナー,,30,【コンテンツTOP】 バナー,,,,山本,,698×200,AB,都度,1,[:asset_key]_content_top,event_kai_00001_content_top,アップ済み,,,,,
+いいジャン祭,コンテンツTOP,プレハブ,,31,【コンテンツTOP】 プレハブ,,,,山本,,"プレハブ
+（画像は682 × 994）",AB,都度,1,[:asset_key]_quest_select ※プレハブ名,"event_kai_00001_quest_select 
+※プレハブ名
+→画像素材の名は自由でOK
+
+asset_keyはこちらを参照してください
+https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=285278055#gid=285278055&range=H:H",アップ済み,,,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=1690316824#gid=1690316824&range=A20,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=285278055#gid=285278055&range=G:G,
+いいジャン祭,コンテンツTOP,バナー,,32,【コンテンツTOP】 Sバナー_デイリー,SE,,,山本,,"246×76
+→244×80へ変更中",AB,都度,1,[:mst_quest.asset_key]_quest_select_cell,kai1_1day_quest_select_cell,アップ済み,,,,,
+いいジャン祭,コンテンツTOP,バナー,,33,【コンテンツTOP】 Sバナーストリー1,SE,,,山本,,"246×76
+→244×80へ変更中",AB,都度,1,[:mst_quest.asset_key]_quest_select_cell,kai1_charaget01_quest_select_cell,アップ済み,,,,,
+いいジャン祭,コンテンツTOP,バナー,,34,【コンテンツTOP】 Sバナーストリー2,SE,,,山本,,"246×76
+→244×80へ変更中",AB,都度,1,[:mst_quest.asset_key]_quest_select_cell,kai1_charaget02_quest_select_cell,アップ済み,,,,,
+いいジャン祭,コンテンツTOP,バナー,,35,【コンテンツTOP】 Sバナーチャレンジ,SE,,,山本,,"246×76
+→244×80へ変更中",AB,都度,1,[:mst_quest.asset_key]_quest_select_cell,kai1_challenge01_quest_select_cell,アップ済み,,,,,
+いいジャン祭,コンテンツTOP,バナー,,36,【コンテンツTOP】 Sバナー高難度,SE,,,山本,,"246×76
+→244×80へ変更中",AB,都度,1,[:mst_quest.asset_key]_quest_select_cell,kai1_savage_quest_select_cell,アップ済み,,,,,
+いいジャン祭,イベント,アセット,,37,"クエストTOPステージサムネール
+・古橋伊春、古橋伊春のキャラのかけら
+・四ノ宮功、四ノ宮功のキャラのかけら
+・怪獣9、10号のエンブレム
+・各種カラーメモリー
+・各種メモリーフラグメント
+・コイン
+・プリズム
+・ノーマルガシャチケット
+・スペシャルガシャチケット
+・ピックアップガシャチケット
+・各種選べるキャラのかけらBOX
+・各種ランダムキャラのかけらBOX
+
+",原画素材,,,望月,,126×102,AB,都度,12,stage_icon_[:asset_key],stage_icon_event_kai1_00007,アップ済み,,,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=1197680199#gid=1197680199,,
+通常,イベント,アセット,,38,シリーズバナー（クエスト選択）,原画素材,,,望月,,300×300,AB,都度,1,series_banner_[:asset_key],series_banner_kai,アップ済み,,,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=301989532#gid=301989532,,
+いいジャン祭,イベント,アセット,,39,原画のかけらa（イベントクエスト用）,原画素材,,,どん,,524×524,AB,都度,1,artwork_[:asset_key]a,artwork_event_kai_0001a,アップ済み,,,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=1933316692#gid=1933316692,,
+いいジャン祭,イベント,アセット,,40,原画のかけらb（イベントクエスト用）,原画素材,,,どん,,154×154,AB,都度,1,artwork_[:asset_key]b,artwork_event_kai_0001b,アップ済み,,,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=1933316692#gid=1933316692,,
+いいジャン祭,イベント,アセット,,41,降臨バトルエンブレム,エンブレム,,,どん,,120×120,AB,都度,6,emblem_icon_[:asset_key],emblem_icon_adventbattle_kai_season01_00001,アップ済み,,,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=1135844646#gid=1135844646,,
+いいジャン祭,イベント,アセット,,42,イベントエンブレム,エンブレム,,,どん,,120×120,AB,都度,2~4,emblem_icon_[:asset_key],emblem_icon_event_kai_00001,アップ済み,,,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=1135844646#gid=1135844646,,
+いいジャン祭,ガシャ,バナー,,43,怪獣8号 いいジャン祭ピックアップガシャ,L,,,江村,,668×370,S3,都度,1,gacha_banner_[:banner_url],gacha_banner_kai_00001,アップ済み,,,https://docs.google.com/spreadsheets/d/1oJmkDK37Qizzdaxn4KCwh1BMwdNWuHCx3AGH8BC9yu0/edit?gid=1064670817#gid=1064670817,,
+いいジャン祭,,,,44,怪獣8号 いいジャン祭ピックアップガシャ,M,,,江村,,668×220,S3,都度,1,,notice_gacha_kai_00001,アップ済み,,,,,
+通常,ガシャ,バナー,,45,チュートリアルガシャ,L,,"なしでOKみたい
+https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1744702073341949?thread_ts=1744620391.885969&cid=C069N3UL80H",江村,,668×370,S3,単発,1,gacha_banner_[:banner_url],gacha_banner_special_00001,未対応,,,,,
+通常,ガシャ,バナー,,46,有償限定スタートダッシュガシャ,L,,,江村,,668×370,S3,単発,1,gacha_banner_[:banner_url],gacha_banner_startdash_00001,アップ済み,,,,,
+通常,ガシャ,バナー,,47,プレミアムメダルガシャ,L,,,江村,,668×370,S3,単発,1,gacha_banner_[:banner_url],gacha_banner_medal_00001,アップ済み,,,,,
+通常,ガシャ,バナー,,48,スペシャルガシャ,L,,,江村,,668×370,S3,単発,1,gacha_banner_[:banner_url],gacha_banner_special_00001,アップ済み,,,,,
+通常,ガシャ,バナー,,49,ノーマルガシャ_キャラ,L,,,江村,,668×370,S3,単発,1,gacha_banner_[:banner_url],gacha_banner_normal_00001,アップ済み,,,,,
+通常,,,,50,図鑑用バナー(series_banner),,,IP追加時に必要,望月,,300×300,AB,都度,,,series_banner_kai.png,アップ済み,,,,,
+通常,,,,51,ロゴ(series_logo),,,IP追加時に必要,望月,,350×245,AB,都度,,,series_logo_kai.png,アップ済み,,,,,
+通常,,,,52,通常ログインボーナス,,,,山本,,602 × 98,,,1,,general_glo_00001_loginbonus,,,,,,
+,,,,,以下対応なし,,,,,,,,,,,,,,,,,
+いいジャン祭,お知らせ,バナー,,,先行情報の形で汎用Mバナー,,未定,,未定,,,,,,,,,,,,,
+いいジャン祭,お知らせ,バナー,,,メンテナンスお知らせ,,未定,,未定,,,,,,,,,,,,,
+通常,パック,バナー,,,"プリズム
+・バナー不要",,,,,,,AB,単発,,,,,,,,,
+通常,パック,バナー,,,ジャンブルパック,,,,,,,AB,単発,,,,,,,,,
+通常,パック,バナー,,,強化パック：A（販売するかどうかは要検討）,,,,,,,AB,単発,,,,,,,,,
+通常,パック,バナー,,,強化パック：A（販売するかどうかは要検討）,,,,,,,AB,単発,,,,,,,,,
+通常,,,,,バックバナー,,,,,,,,,,,https://wonderplanet-glow.slack.com/archives/C069N3UL80H/p1744702621983249?thread_ts=1744702246.829559&cid=C069N3UL80H,,,,,,
+,,,,,オールスタークエスト,,,,,,,,単発（今は）,,,追加,,,,,,
+降臨バトル,,,,,降臨バトル関連,,,,,,,,単発（変わる可能性ある）,,,,,,,,,
