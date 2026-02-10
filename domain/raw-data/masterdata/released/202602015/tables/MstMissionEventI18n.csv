@@ -1,0 +1,46 @@
+ENABLE,release_key,id,mst_mission_event_id,language,description
+e,202602015,event_you_00001_1_ja,event_you_00001_1,ja,"ダグ をグレード2まで強化しよう"
+e,202602015,event_you_00001_2_ja,event_you_00001_2,ja,"ダグ をグレード3まで強化しよう"
+e,202602015,event_you_00001_3_ja,event_you_00001_3,ja,"ダグ をグレード4まで強化しよう"
+e,202602015,event_you_00001_4_ja,event_you_00001_4,ja,"ダグ をグレード5まで強化しよう"
+e,202602015,event_you_00001_5_ja,event_you_00001_5,ja,"ダグ をLv.20まで強化しよう"
+e,202602015,event_you_00001_6_ja,event_you_00001_6,ja,"ダグ をLv.30まで強化しよう"
+e,202602015,event_you_00001_7_ja,event_you_00001_7,ja,"ダグ をLv.40まで強化しよう"
+e,202602015,event_you_00001_8_ja,event_you_00001_8,ja,"ダグ をLv.50まで強化しよう"
+e,202602015,event_you_00001_9_ja,event_you_00001_9,ja,"ダグ をLv.60まで強化しよう"
+e,202602015,event_you_00001_10_ja,event_you_00001_10,ja,"ダグ をLv.70まで強化しよう"
+e,202602015,event_you_00001_11_ja,event_you_00001_11,ja,"ダグ をLv.80まで強化しよう"
+e,202602015,event_you_00001_12_ja,event_you_00001_12,ja,"ハナ をグレード2まで強化しよう"
+e,202602015,event_you_00001_13_ja,event_you_00001_13,ja,"ハナ をグレード3まで強化しよう"
+e,202602015,event_you_00001_14_ja,event_you_00001_14,ja,"ハナ をグレード4まで強化しよう"
+e,202602015,event_you_00001_15_ja,event_you_00001_15,ja,"ハナ をグレード5まで強化しよう"
+e,202602015,event_you_00001_16_ja,event_you_00001_16,ja,"ハナ をLv.20まで強化しよう"
+e,202602015,event_you_00001_17_ja,event_you_00001_17,ja,"ハナ をLv.30まで強化しよう"
+e,202602015,event_you_00001_18_ja,event_you_00001_18,ja,"ハナ をLv.40まで強化しよう"
+e,202602015,event_you_00001_19_ja,event_you_00001_19,ja,"ハナ をLv.50まで強化しよう"
+e,202602015,event_you_00001_20_ja,event_you_00001_20,ja,"ハナ をLv.60まで強化しよう"
+e,202602015,event_you_00001_21_ja,event_you_00001_21,ja,"ハナ をLv.70まで強化しよう"
+e,202602015,event_you_00001_22_ja,event_you_00001_22,ja,"ハナ をLv.80まで強化しよう"
+e,202602015,event_you_00001_23_ja,event_you_00001_23,ja,デイリークエスト「お遊戯の時間です」をクリアしよう
+e,202602015,event_you_00001_24_ja,event_you_00001_24,ja,ストーリークエスト「先輩は敬いたまえ」をクリアしよう
+e,202602015,event_you_00001_25_ja,event_you_00001_25,ja,ストーリークエスト「兄を助けてくれないか？」をクリアしよう
+e,202602015,event_you_00001_26_ja,event_you_00001_26,ja,チャレンジクエスト「世界一安全な幼稚園」をクリアしよう
+e,202602015,event_you_00001_27_ja,event_you_00001_27,ja,高難易度「正義だけじゃ何も守れない」をクリアしよう
+e,202602015,event_you_00001_28_ja,event_you_00001_28,ja,敵を10体撃破しよう
+e,202602015,event_you_00001_29_ja,event_you_00001_29,ja,敵を20体撃破しよう
+e,202602015,event_you_00001_30_ja,event_you_00001_30,ja,敵を30体撃破しよう
+e,202602015,event_you_00001_31_ja,event_you_00001_31,ja,敵を40体撃破しよう
+e,202602015,event_you_00001_32_ja,event_you_00001_32,ja,敵を50体撃破しよう
+e,202602015,event_you_00001_33_ja,event_you_00001_33,ja,敵を60体撃破しよう
+e,202602015,event_you_00001_34_ja,event_you_00001_34,ja,敵を70体撃破しよう
+e,202602015,event_you_00001_35_ja,event_you_00001_35,ja,敵を80体撃破しよう
+e,202602015,event_you_00001_36_ja,event_you_00001_36,ja,敵を90体撃破しよう
+e,202602015,event_you_00001_37_ja,event_you_00001_37,ja,敵を100体撃破しよう
+e,202602015,event_you_00001_38_ja,event_you_00001_38,ja,敵を150体撃破しよう
+e,202602015,event_you_00001_39_ja,event_you_00001_39,ja,敵を200体撃破しよう
+e,202602015,event_you_00001_40_ja,event_you_00001_40,ja,敵を300体撃破しよう
+e,202602015,event_you_00001_41_ja,event_you_00001_41,ja,【2/10から使えるチケット】ステージを10回クリアしよう
+e,202602015,event_you_00001_42_ja,event_you_00001_42,ja,【2/10から使えるチケット】ステージを15回クリアしよう
+e,202602015,event_you_00001_43_ja,event_you_00001_43,ja,【2/10から使えるチケット】ステージを20回クリアしよう
+e,202602015,event_you_00001_44_ja,event_you_00001_44,ja,【2/10から使えるチケット】ステージを30回クリアしよう
+e,202602015,event_you_00001_45_ja,event_you_00001_45,ja,【2/10から使えるチケット】ステージを50回クリアしよう

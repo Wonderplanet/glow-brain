@@ -1,0 +1,6 @@
+ENABLE,release_key,id,mst_quest_id,language,name,category_name,flavor_text
+e,202602015,quest_event_you1_charaget01_ja,quest_event_you1_charaget01,ja,先輩は敬いたまえ,ストーリー,
+e,202602015,quest_event_you1_challenge_ja,quest_event_you1_challenge,ja,世界一安全な幼稚園,チャレンジ,
+e,202602015,quest_event_you1_charaget02_ja,quest_event_you1_charaget02,ja,兄を助けてくれないか?,ストーリー,
+e,202602015,quest_event_you1_savage_ja,quest_event_you1_savage,ja,正義だけじゃ何も守れない,高難易度,
+e,202602015,quest_event_you1_1day_ja,quest_event_you1_1day,ja,お遊戯の時間です,デイリー,

@@ -1,0 +1,64 @@
+ENABLE,id,release_key,group_id,resource_type,resource_id,resource_amount,sort_order,備考
+e,mission_reward_587,202602015,event_you_00001_daily_bonus_01,Item,ticket_glo_00003,2,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_588,202602015,event_you_00001_daily_bonus_02,Coin,,10000,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_589,202602015,event_you_00001_daily_bonus_03,FreeDiamond,,50,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_590,202602015,event_you_00001_daily_bonus_04,Item,stamina_item_glo_00001,5,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_591,202602015,event_you_00001_daily_bonus_05,Item,memoryfragment_glo_00001,5,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_592,202602015,event_you_00001_daily_bonus_06,Item,memoryfragment_glo_00002,4,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_593,202602015,event_you_00001_daily_bonus_07,Item,ticket_glo_00002,2,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_594,202602015,event_you_00001_daily_bonus_08,Item,memory_glo_00004,600,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_595,202602015,event_you_00001_daily_bonus_09,FreeDiamond,,50,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_596,202602015,event_you_00001_daily_bonus_10,Item,memoryfragment_glo_00001,10,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_597,202602015,event_you_00001_daily_bonus_11,Item,memory_glo_00002,600,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_598,202602015,event_you_00001_daily_bonus_12,Coin,,5000,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_599,202602015,event_you_00001_daily_bonus_13,Item,ticket_glo_00003,1,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_600,202602015,event_you_00001_daily_bonus_14,Item,ticket_glo_00002,1,1,"幼稚園WARS いいジャン祭 特別ログインボーナス"
+e,mission_reward_601,202602015,you_00001_event_reward_01,Item,memory_chara_you_00201,200,1,youいいジャン祭_ミッション
+e,mission_reward_602,202602015,you_00001_event_reward_02,Item,memory_chara_you_00201,300,1,youいいジャン祭_ミッション
+e,mission_reward_603,202602015,you_00001_event_reward_03,Item,memory_chara_you_00201,350,1,youいいジャン祭_ミッション
+e,mission_reward_604,202602015,you_00001_event_reward_04,Item,ticket_glo_00003,1,1,youいいジャン祭_ミッション
+e,mission_reward_605,202602015,you_00001_event_reward_05,Item,piece_you_00201,10,1,youいいジャン祭_ミッション
+e,mission_reward_606,202602015,you_00001_event_reward_06,Item,piece_you_00201,20,1,youいいジャン祭_ミッション
+e,mission_reward_607,202602015,you_00001_event_reward_07,Item,piece_you_00201,20,1,youいいジャン祭_ミッション
+e,mission_reward_608,202602015,you_00001_event_reward_08,Item,piece_you_00201,20,1,youいいジャン祭_ミッション
+e,mission_reward_609,202602015,you_00001_event_reward_09,Item,piece_you_00201,30,1,youいいジャン祭_ミッション
+e,mission_reward_610,202602015,you_00001_event_reward_10,Item,memoryfragment_glo_00003,1,1,youいいジャン祭_ミッション
+e,mission_reward_611,202602015,you_00001_event_reward_11,FreeDiamond,,50,1,youいいジャン祭_ミッション
+e,mission_reward_612,202602015,you_00001_event_reward_12,Item,memory_chara_you_00301,200,1,youいいジャン祭_ミッション
+e,mission_reward_613,202602015,you_00001_event_reward_13,Item,memory_chara_you_00301,300,1,youいいジャン祭_ミッション
+e,mission_reward_614,202602015,you_00001_event_reward_14,Item,memory_chara_you_00301,350,1,youいいジャン祭_ミッション
+e,mission_reward_615,202602015,you_00001_event_reward_15,Item,ticket_glo_00003,1,1,youいいジャン祭_ミッション
+e,mission_reward_616,202602015,you_00001_event_reward_16,Item,piece_you_00301,10,1,youいいジャン祭_ミッション
+e,mission_reward_617,202602015,you_00001_event_reward_17,Item,piece_you_00301,20,1,youいいジャン祭_ミッション
+e,mission_reward_618,202602015,you_00001_event_reward_18,Item,piece_you_00301,20,1,youいいジャン祭_ミッション
+e,mission_reward_619,202602015,you_00001_event_reward_19,Item,piece_you_00301,20,1,youいいジャン祭_ミッション
+e,mission_reward_620,202602015,you_00001_event_reward_20,Item,piece_you_00301,30,1,youいいジャン祭_ミッション
+e,mission_reward_621,202602015,you_00001_event_reward_21,Item,memoryfragment_glo_00003,1,1,youいいジャン祭_ミッション
+e,mission_reward_622,202602015,you_00001_event_reward_22,FreeDiamond,,50,1,youいいジャン祭_ミッション
+e,mission_reward_623,202602015,you_00001_event_reward_23,Item,stamina_item_glo_00001,5,1,youいいジャン祭_ミッション
+e,mission_reward_624,202602015,you_00001_event_reward_24,Coin,,12500,1,youいいジャン祭_ミッション
+e,mission_reward_625,202602015,you_00001_event_reward_25,Coin,,12500,1,youいいジャン祭_ミッション
+e,mission_reward_626,202602015,you_00001_event_reward_26,Item,ticket_glo_00002,3,1,youいいジャン祭_ミッション
+e,mission_reward_627,202602015,you_00001_event_reward_27,Item,ticket_glo_00003,1,1,youいいジャン祭_ミッション
+e,mission_reward_628,202602015,you_00001_event_reward_28,Item,memoryfragment_glo_00001,5,1,youいいジャン祭_ミッション
+e,mission_reward_629,202602015,you_00001_event_reward_29,Item,memoryfragment_glo_00001,5,1,youいいジャン祭_ミッション
+e,mission_reward_630,202602015,you_00001_event_reward_30,Item,memoryfragment_glo_00001,5,1,youいいジャン祭_ミッション
+e,mission_reward_631,202602015,you_00001_event_reward_31,Item,memoryfragment_glo_00001,5,1,youいいジャン祭_ミッション
+e,mission_reward_632,202602015,you_00001_event_reward_32,Item,memoryfragment_glo_00001,10,1,youいいジャン祭_ミッション
+e,mission_reward_633,202602015,you_00001_event_reward_33,Item,memoryfragment_glo_00002,5,1,youいいジャン祭_ミッション
+e,mission_reward_634,202602015,you_00001_event_reward_34,Item,memoryfragment_glo_00002,5,1,youいいジャン祭_ミッション
+e,mission_reward_635,202602015,you_00001_event_reward_35,Item,memoryfragment_glo_00002,5,1,youいいジャン祭_ミッション
+e,mission_reward_636,202602015,you_00001_event_reward_36,Item,memoryfragment_glo_00002,5,1,youいいジャン祭_ミッション
+e,mission_reward_637,202602015,you_00001_event_reward_37,Item,memoryfragment_glo_00003,1,1,youいいジャン祭_ミッション
+e,mission_reward_638,202602015,you_00001_event_reward_38,Item,memoryfragment_glo_00003,1,1,youいいジャン祭_ミッション
+e,mission_reward_639,202602015,you_00001_event_reward_39,Item,memoryfragment_glo_00003,1,1,youいいジャン祭_ミッション
+e,mission_reward_640,202602015,you_00001_event_reward_40,Item,ticket_glo_00003,1,1,youいいジャン祭_ミッション
+e,mission_reward_641,202602015,you_00001_limited_term_1,Coin,,2000,1,降臨バトル「誰の依頼だ？」に5回挑戦しよう！
+e,mission_reward_642,202602015,you_00001_limited_term_2,FreeDiamond,,20,1,降臨バトル「誰の依頼だ？」に10回挑戦しよう！
+e,mission_reward_643,202602015,you_00001_limited_term_3,Coin,,3000,1,降臨バトル「誰の依頼だ？」に20回挑戦しよう！
+e,mission_reward_644,202602015,you_00001_limited_term_4,FreeDiamond,,30,1,降臨バトル「誰の依頼だ？」に30回挑戦しよう！
+e,mission_reward_757,202602015,you_00001_event_reward_41,Item,ticket_glo_10002,2,1,youいいジャン祭_ミッション
+e,mission_reward_758,202602015,you_00001_event_reward_42,Item,ticket_glo_10002,2,1,youいいジャン祭_ミッション
+e,mission_reward_759,202602015,you_00001_event_reward_43,Item,ticket_glo_10002,2,1,youいいジャン祭_ミッション
+e,mission_reward_760,202602015,you_00001_event_reward_44,Item,ticket_glo_10002,2,1,youいいジャン祭_ミッション
+e,mission_reward_761,202602015,you_00001_event_reward_45,Item,ticket_glo_10002,2,1,youいいジャン祭_ミッション

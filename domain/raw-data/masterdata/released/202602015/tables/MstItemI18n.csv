@@ -1,0 +1,7 @@
+ENABLE,release_key,id,mst_item_id,language,name,description
+e,202602015,memory_chara_you_00201_ja,memory_chara_you_00201,ja,ダグのメモリー,ダグのLv.上限開放に使用するアイテム
+e,202602015,memory_chara_you_00301_ja,memory_chara_you_00301,ja,ハナのメモリー,ハナのLv.上限開放に使用するアイテム
+e,202602015,piece_you_00001_ja,piece_you_00001,ja,"元殺し屋の新人教諭 リタのかけら","元殺し屋の新人教諭 リタのグレードアップに使用するアイテム"
+e,202602015,piece_you_00101_ja,piece_you_00101,ja,ルークのかけら,ルークのグレードアップに使用するアイテム
+e,202602015,piece_you_00201_ja,piece_you_00201,ja,ダグのかけら,ダグのグレードアップに使用するアイテム
+e,202602015,piece_you_00301_ja,piece_you_00301,ja,ハナのかけら,ハナのグレードアップに使用するアイテム

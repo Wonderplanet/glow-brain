@@ -1,0 +1,6 @@
+ENABLE,id,mst_ability_id,ability_parameter1,ability_parameter2,ability_parameter3,release_key
+e,ability_you_00001_01,ability_attack_power_up_by_hp_percentage_less,55,30,0,202602015
+e,ability_you_00001_02,ability_poison_damage_cut,40,0,0,202602015
+e,ability_you_00101_01,ability_attack_power_down_koma_block,0,0,0,202602015
+e,ability_you_00201_01,ability_attack_power_down_koma_block,0,0,0,202602015
+e,ability_you_00301_01,ability_StunBlock,25,All,All,202602015

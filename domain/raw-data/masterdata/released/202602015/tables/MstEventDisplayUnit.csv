@@ -1,0 +1,6 @@
+ENABLE,id,mst_quest_id,mst_unit_id,release_key
+e,quest_event_you1_1day01,quest_event_you1_1day,chara_you_00001,202602015
+e,quest_event_you1_charaget0201,quest_event_you1_charaget02,chara_you_00301,202602015
+e,quest_event_you1_charaget0101,quest_event_you1_charaget01,chara_you_00201,202602015
+e,quest_event_you1_savage01,quest_event_you1_savage,chara_you_00001,202602015
+e,quest_event_you1_challenge01,quest_event_you1_challenge,chara_you_00101,202602015

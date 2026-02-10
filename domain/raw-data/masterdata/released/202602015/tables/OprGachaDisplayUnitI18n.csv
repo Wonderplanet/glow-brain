@@ -1,0 +1,3 @@
+ENABLE,id,opr_gacha_id,mst_unit_id,language,sort_order,description,release_key
+e,81,Pickup_you_001,chara_you_00001,ja,1,"必殺ワザで\n連続攻撃する中距離\nアタックキャラ!\n緑属性に大ダメージ!",202602015
+e,82,Pickup_you_001,chara_you_00101,ja,2,"必殺ワザで複数体の\n相手にダメージを与え\n相手を毒状態にする\nテクニカルキャラ!",202602015
