@@ -741,3 +741,200 @@ function scanProgressSheetsForUrls(folderInput, sessionId) {
     };
   }
 }
+
+/**
+ * 日時をフォーマット（YYYY-MM-DD HH:mm:ss）
+ * @param {Date} date - Date オブジェクト
+ * @returns {string} - フォーマット済み文字列
+ */
+function formatDateTime(date) {
+  return Utilities.formatDate(date, 'Asia/Tokyo', 'yyyy-MM-dd HH:mm:ss');
+}
+
+/**
+ * CSVフィールドをエスケープ（RFC 4180準拠）
+ * @param {string} field - フィールド文字列
+ * @returns {string} - エスケープ済み文字列
+ */
+function escapeCsvField(field) {
+  // null/undefinedチェック
+  if (field == null) {
+    return '';
+  }
+
+  const str = String(field);
+
+  // カンマ、ダブルクォート、改行が含まれている場合はエスケープ
+  if (str.includes(',') || str.includes('"') || str.includes('\n') || str.includes('\r')) {
+    // ダブルクォートを2つに変換してから全体を囲む
+    return '"' + str.replace(/"/g, '""') + '"';
+  }
+
+  return str;
+}
+
+/**
+ * ファイルリストからCSVコンテンツを生成
+ * @param {Array} fileList - ファイル情報の配列 [{name, path, url, lastUpdated}]
+ * @returns {string} - CSV文字列（BOM付きUTF-8）
+ */
+function generateCsvContent(fileList) {
+  // BOM付きUTF-8（Excel互換）
+  const bom = '\uFEFF';
+
+  // ヘッダー行
+  const header = 'ファイル名,フォルダパス,ファイルURL,更新日時\n';
+
+  // データ行
+  const rows = fileList.map(file => {
+    return [
+      escapeCsvField(file.name),
+      escapeCsvField(file.path),
+      escapeCsvField(file.url),
+      escapeCsvField(file.lastUpdated)
+    ].join(',');
+  }).join('\n');
+
+  return bom + header + rows;
+}
+
+/**
+ * フォルダ内のファイルを再帰的に収集
+ * @param {Folder} folder - 対象フォルダ
+ * @param {string} currentPath - 現在のフォルダパス（例: /プロジェクト/データ）
+ * @param {Array} fileList - ファイル情報を格納する配列（参照渡し）
+ * @param {Function} addLog - ログ関数
+ * @param {string} sessionId - セッションID
+ * @param {number} startTime - 処理開始時刻（ミリ秒）
+ */
+function collectFilesRecursively(folder, currentPath, fileList, addLog, sessionId, startTime) {
+  // 中断フラグチェック
+  if (checkAbortFlag(sessionId)) {
+    addLog({ type: 'warn', message: '処理が中断されました' });
+    return;
+  }
+
+  // 6分実行制限対策（5分30秒で警告して中断）
+  const elapsedTime = (Date.now() - startTime) / 1000;
+  if (elapsedTime > 330) {  // 5分30秒
+    addLog({ type: 'warn', message: '処理時間が制限に近づいています。処理を中断します。' });
+    return;
+  }
+
+  try {
+    // フォルダ内のファイルを取得
+    const files = folder.getFiles();
+    let fileCount = 0;
+
+    while (files.hasNext()) {
+      const file = files.next();
+
+      try {
+        fileList.push({
+          name: file.getName(),
+          path: currentPath,
+          url: file.getUrl(),
+          lastUpdated: formatDateTime(file.getLastUpdated())
+        });
+        fileCount++;
+      } catch (e) {
+        // アクセス権限エラーなどをスキップ
+        addLog({ type: 'warn', message: `ファイル取得エラー（スキップ）: ${e.message}` });
+      }
+    }
+
+    if (fileCount > 0) {
+      addLog({ type: 'info', message: `${currentPath}: ${fileCount}件のファイルを検出` });
+    }
+
+    // サブフォルダを再帰的に処理
+    const subFolders = folder.getFolders();
+    while (subFolders.hasNext()) {
+      const subFolder = subFolders.next();
+
+      try {
+        const subFolderName = subFolder.getName();
+        const subPath = `${currentPath}/${subFolderName}`;
+
+        // 再帰呼び出し
+        collectFilesRecursively(subFolder, subPath, fileList, addLog, sessionId, startTime);
+
+        // レートリミット対策（フォルダ処理ごとに300msスリープ）
+        Utilities.sleep(300);
+
+      } catch (e) {
+        // アクセス権限エラーなどをスキップ
+        addLog({ type: 'warn', message: `フォルダアクセスエラー（スキップ）: ${e.message}` });
+      }
+    }
+
+  } catch (e) {
+    addLog({ type: 'error', message: `フォルダ処理エラー: ${currentPath} - ${e.message}` });
+  }
+}
+
+/**
+ * フォルダ内の全ファイル一覧をCSVで出力（再帰的）
+ * @param {string} folderInput - フォルダURL または ID
+ * @param {string} sessionId - セッションID
+ * @returns {object} - { data: base64文字列, fileName: CSV名, fileCount: 件数, message }
+ */
+function generateFileListCsv(folderInput, sessionId) {
+  const addLog = (log) => {
+    Logger.log(`[${log.type.toUpperCase()}] ${log.message}`);
+    saveLog(sessionId, log);
+  };
+
+  try {
+    addLog({ type: 'info', message: 'フォルダにアクセス中...' });
+
+    // フォルダID抽出（既存関数を再利用）
+    const folderId = extractFolderId(folderInput);
+    const rootFolder = DriveApp.getFolderById(folderId);
+    const rootFolderName = rootFolder.getName();
+
+    addLog({ type: 'success', message: `フォルダアクセス成功: ${rootFolderName}` });
+    addLog({ type: 'info', message: 'ファイル一覧を収集中（再帰的）...' });
+
+    // ファイル一覧を再帰的に収集
+    const fileList = [];
+    const startTime = Date.now();
+
+    collectFilesRecursively(rootFolder, `/${rootFolderName}`, fileList, addLog, sessionId, startTime);
+
+    addLog({ type: 'success', message: `${fileList.length}件のファイルを検出` });
+
+    if (fileList.length === 0) {
+      addLog({ type: 'warn', message: 'ファイルが見つかりませんでした' });
+      return {
+        data: null,
+        fileName: null,
+        fileCount: 0,
+        message: 'ファイルが見つかりませんでした'
+      };
+    }
+
+    // CSV生成
+    addLog({ type: 'info', message: 'CSV生成中...' });
+    const csvContent = generateCsvContent(fileList);
+    const csvBlob = Utilities.newBlob(csvContent, 'text/csv', 'file_list.csv');
+
+    addLog({ type: 'success', message: 'CSV生成完了！' });
+
+    return {
+      data: Utilities.base64Encode(csvBlob.getBytes()),
+      fileName: 'file_list.csv',
+      fileCount: fileList.length,
+      message: `${fileList.length}件のファイル情報をCSV出力しました`
+    };
+
+  } catch (e) {
+    addLog({ type: 'error', message: `エラー: ${e.message}` });
+    return {
+      data: null,
+      fileName: null,
+      fileCount: 0,
+      error: e.message
+    };
+  }
+}

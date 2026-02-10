@@ -251,6 +251,7 @@
       <button class="tab active" onclick="switchTab('single')">単一スプシ</button>
       <button class="tab" onclick="switchTab('bulk')">フォルダ一括</button>
       <button class="tab" onclick="switchTab('usecase')">ユースケース</button>
+      <button class="tab" onclick="switchTab('filelist')">ファイル一覧</button>
     </div>
 
     <!-- 単一スプシタブ -->
@@ -337,6 +338,25 @@
 
       <div class="note">
         <strong>💡 ヒント：</strong> ユースケースを追加したい場合は、コード.jsに新しい関数を追加し、このHTMLから呼び出すことができます。
+      </div>
+    </div>
+
+    <!-- ファイル一覧タブ -->
+    <div id="tab-filelist" class="tab-content">
+      <p>Google DriveフォルダのURLまたはIDを入力すると、フォルダ以下の全ファイル情報をCSVで出力します。</p>
+      <label for="filelist-folder-input">フォルダURL / ID：</label>
+      <input type="text" id="filelist-folder-input" placeholder="https://drive.google.com/drive/folders/... または フォルダID">
+      <button id="btn-filelist" onclick="generateFileListCsvHandler()">CSV生成</button>
+
+      <div class="note">
+        <strong>出力内容：</strong>
+        <ul>
+          <li>ファイル名</li>
+          <li>フォルダパス（親フォルダから辿った絶対パス形式）</li>
+          <li>ファイルURL</li>
+          <li>更新日時（YYYY-MM-DD HH:mm:ss形式）</li>
+        </ul>
+        <strong>注意：</strong> ファイル数が多い場合、処理に時間がかかることがあります。
       </div>
     </div>
 
@@ -688,6 +708,7 @@
       document.getElementById('btn-single').disabled = false;
       document.getElementById('btn-list').disabled = false;
       document.getElementById('btn-bulk-download').disabled = false;
+      document.getElementById('btn-filelist').disabled = false;
     }
 
     // 複数スプシダウンロード
@@ -934,6 +955,66 @@
           }, 500);
         })
         .downloadSingleSpreadsheet(url, sessionId);
+    }
+
+    // ファイル一覧CSV生成
+    function generateFileListCsvHandler() {
+      const folderInput = document.getElementById('filelist-folder-input').value;
+
+      if (!folderInput) {
+        alert('フォルダURL または IDを入力してください');
+        return;
+      }
+
+      const btn = document.getElementById('btn-filelist');
+      btn.disabled = true;
+
+      sessionId = 'session_' + Date.now();
+      showStatus('ファイル一覧を収集中...', 'info');
+      startLogPolling();
+
+      google.script.run
+        .withSuccessHandler(onFileListComplete)
+        .withFailureHandler(onError)
+        .generateFileListCsv(folderInput, sessionId);
+    }
+
+    // ファイル一覧CSV生成完了
+    function onFileListComplete(result) {
+      stopLogPolling();
+      document.getElementById('btn-filelist').disabled = false;
+
+      if (result.error) {
+        showStatus('エラー: ' + result.error, 'error');
+        return;
+      }
+
+      if (result.fileCount === 0) {
+        showStatus(result.message, 'warn');
+        return;
+      }
+
+      // CSVダウンロード
+      downloadCsv(result);
+      showStatus(result.message, 'success');
+    }
+
+    // CSVダウンロード
+    function downloadCsv(result) {
+      if (!result.data) return;
+
+      const byteCharacters = atob(result.data);
+      const byteNumbers = new Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+      }
+      const byteArray = new Uint8Array(byteNumbers);
+      const blob = new Blob([byteArray], {type: 'text/csv;charset=utf-8;'});
+
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = result.fileName;
+      link.click();
     }
   </script>
 </body>
