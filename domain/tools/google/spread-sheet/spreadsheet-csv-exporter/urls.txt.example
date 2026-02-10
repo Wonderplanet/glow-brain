@@ -1,0 +1,7 @@
+# スプレッドシートURLのサンプル
+# 1行に1つのURLを記載してください
+# コメント行（#で始まる行）は無視されます
+
+https://docs.google.com/spreadsheets/d/ABC123.../edit
+https://docs.google.com/spreadsheets/d/DEF456.../edit
+https://docs.google.com/spreadsheets/d/GHI789.../edit
