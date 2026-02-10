@@ -29,7 +29,7 @@ echo "=== specs.csv 生成中 ==="
 mkdir -p "$SPECS_DIR"
 
 # ヘッダー作成
-echo "description,path" > "$SPECS_CSV"
+echo "path" > "$SPECS_CSV"
 
 # 見つからないファイルのログ初期化
 echo "# 見つからなかった運営仕様書" > "$MISSING_LOG"
@@ -76,12 +76,12 @@ while IFS=',' read -r spreadsheet_name spreadsheet_url source_name; do
 
     if [ -n "$found_path" ]; then
         # 見つかった場合、相対パスとして記録
-        echo "local,\"$found_path\"" >> "$SPECS_CSV"
+        echo "\"$found_path\"" >> "$SPECS_CSV"
         found_count=$((found_count + 1))
         echo "  ✓ 見つかりました: $found_path" >&2
     else
         # 見つからない場合、GoogleドライブURLを記録
-        echo "\"Googleドライブ: ${spreadsheet_name}\",\"${spreadsheet_url}\"" >> "$SPECS_CSV"
+        echo "\"${spreadsheet_url}\"" >> "$SPECS_CSV"
         echo "$spreadsheet_name" >> "$MISSING_LOG"
         missing_count=$((missing_count + 1))
         echo "  ✗ 見つかりません" >&2

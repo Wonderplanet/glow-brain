@@ -443,9 +443,9 @@ https://duckdb.org/docs/installation/
 
 **specs.csv のフォーマット:**
 ```csv
-description,path
-local,"domain/raw-data/google-drive/spread-sheet/..."
-"Googleドライブ: スプレッドシート名","https://docs.google.com/spreadsheets/d/..."
+path
+"domain/raw-data/google-drive/spread-sheet/..."
+"https://docs.google.com/spreadsheets/d/..."
 ```
 
 ### query_release.sh
