@@ -1,0 +1,3 @@
+ENABLE,id,mst_stage_id,stage_end_type,condition_type,condition_value1,condition_value2,release_key
+e,pvp_you_01,pvp_you_01,Finish,TimeOver,180,,202602010
+e,pvp_you_02,pvp_you_02,Finish,TimeOver,180,,202602010

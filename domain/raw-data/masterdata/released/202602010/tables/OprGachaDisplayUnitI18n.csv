@@ -1,0 +1,5 @@
+ENABLE,id,opr_gacha_id,mst_unit_id,language,sort_order,description,release_key
+e,83,Pickup_Valentine_001,chara_sum_00101,ja,1,"前線の維持に特化した\nサポートキャラ!\n必殺ワザで味方の\n被ダメージを軽減! ",202602010
+e,84,Pickup_Valentine_001,chara_gom_00001,ja,2,"必殺ワザと特性で\n耐久性抜群の\nディフェンスキャラ!",202602010
+e,85,Pickup_Valentine_001,chara_chi_00301,ja,3,"必殺ワザで複数の相手\nにダメージを与える!\n赤属性の相手に\n大ダメージ!",202602010
+e,86,Pickup_Valentine_001,chara_dos_00001,ja,4,"前線を支える遠距離\nサポートキャラ!\n攻撃UPで戦況を有利\nに導くことができるぞ",202602010

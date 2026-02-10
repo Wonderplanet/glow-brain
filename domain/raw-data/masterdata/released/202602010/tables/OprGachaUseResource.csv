@@ -1,0 +1,4 @@
+ENABLE,id,opr_gacha_id,cost_type,cost_id,cost_num,draw_count,cost_priority,release_key
+e,74,Pickup_Valentine_001,Item,ticket_glo_10002,1,1,2,202602010
+e,75,Pickup_Valentine_001,Diamond,,150,1,3,202602010
+e,76,Pickup_Valentine_001,Diamond,,1500,10,3,202602010

@@ -1,0 +1,3 @@
+ENABLE,release_key,id,mst_item_id,language,name,description
+e,202602010,ticket_glo_10002_ja,ticket_glo_10002,ja,バレンタインピックアップガシャチケット,バレンタインピックアップガシャを引くことができるアイテム
+e,202602010,stamina_item_glo_00001_ja,stamina_item_glo_00001,ja,スタミナドリンク,使用することでスタミナを最大10回復できるアイテム

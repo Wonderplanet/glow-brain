@@ -1,0 +1,62 @@
+{
+  "release_key": "202602010",
+  "extraction_date": "2026-02-10T09:18:29Z",
+  "total_tables": 30,
+  "total_rows": 218,
+  "categories": {
+    "Mst": {
+      "tables": 16,
+      "rows": 108
+    },
+    "Opr": {
+      "tables": 8,
+      "rows": 77
+    },
+    "I18n": {
+      "tables": 6,
+      "rows": 33
+    }
+  },
+  "largest_tables": [
+    {
+      "name": "MstPackContent",
+      "rows": 57
+    },
+    {
+      "name": "OprGachaPrize",
+      "rows": 35
+    },
+    {
+      "name": "MstStoreProduct",
+      "rows": 16
+    },
+    {
+      "name": "MstStoreProductI18n",
+      "rows": 16
+    },
+    {
+      "name": "OprProduct",
+      "rows": 16
+    },
+    {
+      "name": "OprProductI18n",
+      "rows": 16
+    },
+    {
+      "name": "MstPack",
+      "rows": 10
+    },
+    {
+      "name": "MstPackI18n",
+      "rows": 10
+    },
+    {
+      "name": "MstKomaLine",
+      "rows": 6
+    },
+    {
+      "name": "OprGachaDisplayUnitI18n",
+      "rows": 4
+    }
+  ]
+}
