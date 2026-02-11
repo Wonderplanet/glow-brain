@@ -1,0 +1,4 @@
+ENABLE,id,mst_ability_id,locale,ability_name,ability_description,release_key
+e,ability_attack_power_up_by_hp_percentage_less_i18n_ja,ability_attack_power_up_by_hp_percentage_less,ja,低体力攻撃UP,体力{1}%以下時に攻撃を{0}%UP,202601010
+e,ability_damage_cut_by_hp_percentage_over_i18n_ja,ability_damage_cut_by_hp_percentage_over,ja,高体力ダメージカット,体力{1}%以上時に被ダメージを{0}%カット,202601010
+e,ability_heal_ally_by_percentage_i18n_ja,ability_heal_ally_by_percentage,ja,味方回復,味方の体力を{0}%回復,202601010

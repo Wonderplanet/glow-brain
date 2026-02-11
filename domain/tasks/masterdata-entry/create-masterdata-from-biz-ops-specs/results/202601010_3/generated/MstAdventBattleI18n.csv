@@ -1,0 +1,5 @@
+ENABLE,id,mst_advent_battle_id,language,name,boss_description,release_key
+e,quest_raid_jig1_00001_ja,quest_raid_jig1_00001,ja,まるで 悪夢を見ているようだ,敵を倒して高スコア獲得!!,202601010
+e,quest_raid_jig1_00001_en,quest_raid_jig1_00001,en,A Nightmare Come True,Defeat enemies and get a high score!!,202601010
+e,quest_raid_jig1_00001_zhHans,quest_raid_jig1_00001,zhHans,如同噩梦一般,击败敌人获得高分!!,202601010
+e,quest_raid_jig1_00001_zhHant,quest_raid_jig1_00001,zhHant,如同噩夢一般,擊敗敵人獲得高分!!,202601010

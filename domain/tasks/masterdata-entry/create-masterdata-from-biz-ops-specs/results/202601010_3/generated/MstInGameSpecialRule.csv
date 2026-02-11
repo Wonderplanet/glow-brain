@@ -1,0 +1,8 @@
+ENABLE,id,content_type,target_id,rule_type,rule_value,start_at,end_at,release_key
+e,event_jig1_challenge01_00001_1,Stage,event_jig1_challenge01_00001,SpeedAttack,1000,2026-01-16 15:00:00,2026-02-16 10:59:59,202601010
+e,event_jig1_challenge01_00002_1,Stage,event_jig1_challenge01_00002,SpeedAttack,1000,2026-01-16 15:00:00,2026-02-16 10:59:59,202601010
+e,event_jig1_challenge01_00003_1,Stage,event_jig1_challenge01_00003,SpeedAttack,1000,2026-01-16 15:00:00,2026-02-16 10:59:59,202601010
+e,event_jig1_challenge01_00004_1,Stage,event_jig1_challenge01_00004,SpeedAttack,1000,2026-01-16 15:00:00,2026-02-16 10:59:59,202601010
+e,event_jig1_savage_00001_1,Stage,event_jig1_savage_00001,SpeedAttack,1000,2026-01-16 15:00:00,2026-02-16 10:59:59,202601010
+e,event_jig1_savage_00002_1,Stage,event_jig1_savage_00002,SpeedAttack,1000,2026-01-16 15:00:00,2026-02-16 10:59:59,202601010
+e,event_jig1_savage_00003_1,Stage,event_jig1_savage_00003,SpeedAttack,1000,2026-01-16 15:00:00,2026-02-16 10:59:59,202601010

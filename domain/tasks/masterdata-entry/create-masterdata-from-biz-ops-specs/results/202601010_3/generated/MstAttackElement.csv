@@ -1,0 +1,9 @@
+ENABLE,id,mst_attack_id,element_order,attack_type,damage_type,power_parameter,effect_type,release_key
+e,attack_jig_00401_N_0_element_0,attack_jig_00401_N_0,0,Slash,Physical,100,Damage,202601010
+e,attack_jig_00401_S_0_element_0,attack_jig_00401_S_0,0,Slash,Physical,250,Damage,202601010
+e,attack_jig_00501_N_0_element_0,attack_jig_00501_N_0,0,Slash,Physical,80,Damage,202601010
+e,attack_jig_00501_S_0_element_0,attack_jig_00501_S_0,0,Slash,Physical,200,Damage,202601010
+e,attack_jig_00601_N_0_element_0,attack_jig_00601_N_0,0,Impact,Physical,60,Damage,202601010
+e,attack_jig_00601_S_0_element_0,attack_jig_00601_S_0,0,Impact,Physical,150,Damage,202601010
+e,attack_jig_00701_N_0_element_0,attack_jig_00701_N_0,0,Ranged,Magical,70,Damage,202601010
+e,attack_jig_00701_S_0_element_0,attack_jig_00701_S_0,0,Ranged,Magical,180,Damage,202601010
