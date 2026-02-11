@@ -1,0 +1,285 @@
+運営仕様書名,対応テーブル
+GLOW_ID管理,MstEvent
+GLOW_ID管理,MstUnit
+GLOW_ID管理,MstQuest
+GLOW_ID管理,OprGacha
+GLOW_ID管理,MstArtwork
+GLOW_ID管理,MstEmblem
+GLOW_ID管理,MstItem
+GLOW_ID管理,MstHomeBanner
+GLOW_キャラ名称＆キャラセリフ資料,MstUnitI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstSpecialAttackI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstSpeechBalloonI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstEventDisplayUnitI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstEnemyCharacterI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstQuestI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstStageI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstEventI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstAdventBattleI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstArtworkI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstArtworkFragmentI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstEmblemI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstInGameI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstAbilityI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstAttackI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstItemI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstPvpI18n
+GLOW_キャラ名称＆キャラセリフ資料,OprGachaI18n
+GLOW_キャラ名称＆キャラセリフ資料,OprGachaDisplayUnitI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstStoreProductI18n
+GLOW_キャラ名称＆キャラセリフ資料,OprProductI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstPackI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstMissionEventI18n
+GLOW_キャラ名称＆キャラセリフ資料,MstMissionLimitedTermI18n
+【1日1回】本能が告げている 危険だと,MstQuest
+【1日1回】本能が告げている 危険だと,MstQuestI18n
+【1日1回】本能が告げている 危険だと,MstStage
+【1日1回】本能が告げている 危険だと,MstStageI18n
+【1日1回】本能が告げている 危険だと,MstStageEventReward
+【1日1回】本能が告げている 危険だと,MstStageEventSetting
+【1日1回】本能が告げている 危険だと,MstStageClearTimeReward
+【1日1回】本能が告げている 危険だと,MstStageEndCondition
+【1日1回】本能が告げている 危険だと,MstInGame
+【1日1回】本能が告げている 危険だと,MstInGameI18n
+【1日1回】本能が告げている 危険だと,MstPage
+【1日1回】本能が告げている 危険だと,MstKomaLine
+【1日1回】本能が告げている 危険だと,MstEnemyCharacter
+【1日1回】本能が告げている 危険だと,MstEnemyCharacterI18n
+【1日1回】本能が告げている 危険だと,MstEnemyStageParameter
+【1日1回】本能が告げている 危険だと,MstEnemyOutpost
+【1日1回】本能が告げている 危険だと,MstAutoPlayerSequence
+【1日1回】本能が告げている 危険だと,MstMangaAnimation
+【1日1回】本能が告げている 危険だと,MstQuestBonusUnit
+【ストーリー】必ず生きて帰る（画眉丸編）,MstQuest
+【ストーリー】必ず生きて帰る（画眉丸編）,MstQuestI18n
+【ストーリー】必ず生きて帰る（画眉丸編）,MstStage
+【ストーリー】必ず生きて帰る（画眉丸編）,MstStageI18n
+【ストーリー】必ず生きて帰る（画眉丸編）,MstStageEventReward
+【ストーリー】必ず生きて帰る（画眉丸編）,MstStageEventSetting
+【ストーリー】必ず生きて帰る（画眉丸編）,MstStageClearTimeReward
+【ストーリー】必ず生きて帰る（画眉丸編）,MstStageEndCondition
+【ストーリー】必ず生きて帰る（画眉丸編）,MstInGame
+【ストーリー】必ず生きて帰る（画眉丸編）,MstInGameI18n
+【ストーリー】必ず生きて帰る（画眉丸編）,MstPage
+【ストーリー】必ず生きて帰る（画眉丸編）,MstKomaLine
+【ストーリー】必ず生きて帰る（画眉丸編）,MstEnemyCharacter
+【ストーリー】必ず生きて帰る（画眉丸編）,MstEnemyCharacterI18n
+【ストーリー】必ず生きて帰る（画眉丸編）,MstEnemyStageParameter
+【ストーリー】必ず生きて帰る（画眉丸編）,MstEnemyOutpost
+【ストーリー】必ず生きて帰る（画眉丸編）,MstAutoPlayerSequence
+【ストーリー】必ず生きて帰る（画眉丸編）,MstArtwork
+【ストーリー】必ず生きて帰る（画眉丸編）,MstArtworkI18n
+【ストーリー】必ず生きて帰る（画眉丸編）,MstArtworkFragment
+【ストーリー】必ず生きて帰る（画眉丸編）,MstArtworkFragmentI18n
+【ストーリー】必ず生きて帰る（画眉丸編）,MstArtworkFragmentPosition
+【ストーリー】必ず生きて帰る（画眉丸編）,MstMangaAnimation
+【ストーリー】必ず生きて帰る（画眉丸編）,MstItem
+【ストーリー】必ず生きて帰る（画眉丸編）,MstItemI18n
+【ストーリー】必ず生きて帰る（画眉丸編）,MstQuestBonusUnit
+【ストーリー】朱印の者たち（共闘関係編）,MstQuest
+【ストーリー】朱印の者たち（共闘関係編）,MstQuestI18n
+【ストーリー】朱印の者たち（共闘関係編）,MstStage
+【ストーリー】朱印の者たち（共闘関係編）,MstStageI18n
+【ストーリー】朱印の者たち（共闘関係編）,MstStageEventReward
+【ストーリー】朱印の者たち（共闘関係編）,MstStageEventSetting
+【ストーリー】朱印の者たち（共闘関係編）,MstStageClearTimeReward
+【ストーリー】朱印の者たち（共闘関係編）,MstStageEndCondition
+【ストーリー】朱印の者たち（共闘関係編）,MstInGame
+【ストーリー】朱印の者たち（共闘関係編）,MstInGameI18n
+【ストーリー】朱印の者たち（共闘関係編）,MstPage
+【ストーリー】朱印の者たち（共闘関係編）,MstKomaLine
+【ストーリー】朱印の者たち（共闘関係編）,MstEnemyCharacter
+【ストーリー】朱印の者たち（共闘関係編）,MstEnemyCharacterI18n
+【ストーリー】朱印の者たち（共闘関係編）,MstEnemyStageParameter
+【ストーリー】朱印の者たち（共闘関係編）,MstEnemyOutpost
+【ストーリー】朱印の者たち（共闘関係編）,MstAutoPlayerSequence
+【ストーリー】朱印の者たち（共闘関係編）,MstArtwork
+【ストーリー】朱印の者たち（共闘関係編）,MstArtworkI18n
+【ストーリー】朱印の者たち（共闘関係編）,MstArtworkFragment
+【ストーリー】朱印の者たち（共闘関係編）,MstArtworkFragmentI18n
+【ストーリー】朱印の者たち（共闘関係編）,MstArtworkFragmentPosition
+【ストーリー】朱印の者たち（共闘関係編）,MstMangaAnimation
+【ストーリー】朱印の者たち（共闘関係編）,MstItem
+【ストーリー】朱印の者たち（共闘関係編）,MstItemI18n
+【ストーリー】朱印の者たち（共闘関係編）,MstQuestBonusUnit
+【チャレンジ】死罪人と首切り役人,MstQuest
+【チャレンジ】死罪人と首切り役人,MstQuestI18n
+【チャレンジ】死罪人と首切り役人,MstStage
+【チャレンジ】死罪人と首切り役人,MstStageI18n
+【チャレンジ】死罪人と首切り役人,MstStageEventReward
+【チャレンジ】死罪人と首切り役人,MstStageEventSetting
+【チャレンジ】死罪人と首切り役人,MstStageClearTimeReward
+【チャレンジ】死罪人と首切り役人,MstStageEndCondition
+【チャレンジ】死罪人と首切り役人,MstInGame
+【チャレンジ】死罪人と首切り役人,MstInGameI18n
+【チャレンジ】死罪人と首切り役人,MstPage
+【チャレンジ】死罪人と首切り役人,MstKomaLine
+【チャレンジ】死罪人と首切り役人,MstEnemyCharacter
+【チャレンジ】死罪人と首切り役人,MstEnemyCharacterI18n
+【チャレンジ】死罪人と首切り役人,MstEnemyStageParameter
+【チャレンジ】死罪人と首切り役人,MstEnemyOutpost
+【チャレンジ】死罪人と首切り役人,MstAutoPlayerSequence
+【チャレンジ】死罪人と首切り役人,MstMangaAnimation
+【チャレンジ】死罪人と首切り役人,MstQuestBonusUnit
+【高難度】手負いの獣は恐ろしいぞ,MstQuest
+【高難度】手負いの獣は恐ろしいぞ,MstQuestI18n
+【高難度】手負いの獣は恐ろしいぞ,MstStage
+【高難度】手負いの獣は恐ろしいぞ,MstStageI18n
+【高難度】手負いの獣は恐ろしいぞ,MstStageEventReward
+【高難度】手負いの獣は恐ろしいぞ,MstStageEventSetting
+【高難度】手負いの獣は恐ろしいぞ,MstStageClearTimeReward
+【高難度】手負いの獣は恐ろしいぞ,MstStageEndCondition
+【高難度】手負いの獣は恐ろしいぞ,MstInGame
+【高難度】手負いの獣は恐ろしいぞ,MstInGameI18n
+【高難度】手負いの獣は恐ろしいぞ,MstPage
+【高難度】手負いの獣は恐ろしいぞ,MstKomaLine
+【高難度】手負いの獣は恐ろしいぞ,MstEnemyCharacter
+【高難度】手負いの獣は恐ろしいぞ,MstEnemyCharacterI18n
+【高難度】手負いの獣は恐ろしいぞ,MstEnemyStageParameter
+【高難度】手負いの獣は恐ろしいぞ,MstEnemyOutpost
+【高難度】手負いの獣は恐ろしいぞ,MstAutoPlayerSequence
+【高難度】手負いの獣は恐ろしいぞ,MstMangaAnimation
+【高難度】手負いの獣は恐ろしいぞ,MstQuestBonusUnit
+【高難度】手負いの獣は恐ろしいぞ,MstInGameSpecialRule
+【降臨バトル】まるで 悪夢を見ているようだ,MstAdventBattle
+【降臨バトル】まるで 悪夢を見ているようだ,MstAdventBattleI18n
+【降臨バトル】まるで 悪夢を見ているようだ,MstAdventBattleClearReward
+【降臨バトル】まるで 悪夢を見ているようだ,MstAdventBattleRank
+【降臨バトル】まるで 悪夢を見ているようだ,MstAdventBattleReward
+【降臨バトル】まるで 悪夢を見ているようだ,MstAdventBattleRewardGroup
+【降臨バトル】まるで 悪夢を見ているようだ,MstInGame
+【降臨バトル】まるで 悪夢を見ているようだ,MstInGameI18n
+【降臨バトル】まるで 悪夢を見ているようだ,MstStageEndCondition
+【降臨バトル】まるで 悪夢を見ているようだ,MstPage
+【降臨バトル】まるで 悪夢を見ているようだ,MstKomaLine
+【降臨バトル】まるで 悪夢を見ているようだ,MstEnemyCharacter
+【降臨バトル】まるで 悪夢を見ているようだ,MstEnemyCharacterI18n
+【降臨バトル】まるで 悪夢を見ているようだ,MstEnemyStageParameter
+【降臨バトル】まるで 悪夢を見ているようだ,MstEnemyOutpost
+【降臨バトル】まるで 悪夢を見ているようだ,MstAutoPlayerSequence
+【降臨バトル】まるで 悪夢を見ているようだ,MstEventBonusUnit
+【降臨バトル】まるで 悪夢を見ているようだ,MstQuestEventBonusSchedule
+【降臨バトル】まるで 悪夢を見ているようだ,MstMissionLimitedTerm
+【降臨バトル】まるで 悪夢を見ているようだ,MstMissionLimitedTermI18n
+【降臨バトル】まるで 悪夢を見ているようだ,MstMissionReward
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstUnit
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstUnitI18n
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstAbility
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstAbilityI18n
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstUnitAbility
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstAttack
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstAttackElement
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstAttackI18n
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstSpecialAttackI18n
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstSpeechBalloonI18n
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstEnemyCharacter
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstEnemyCharacterI18n
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstEnemyStageParameter
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstItem
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstItemI18n
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,OprGachaPrize
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstEventDisplayUnit
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,MstEventDisplayUnitI18n
+ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,OprGachaDisplayUnitI18n
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstUnit
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstUnitI18n
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstAbility
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstAbilityI18n
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstUnitAbility
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstAttack
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstAttackElement
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstAttackI18n
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstSpecialAttackI18n
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstSpeechBalloonI18n
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstEnemyCharacter
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstEnemyCharacterI18n
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstEnemyStageParameter
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstItem
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstItemI18n
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,OprGachaPrize
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstEventDisplayUnit
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,MstEventDisplayUnitI18n
+ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,OprGachaDisplayUnitI18n
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstUnit
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstUnitI18n
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstAbility
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstAbilityI18n
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstUnitAbility
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstAttack
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstAttackElement
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstAttackI18n
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstSpecialAttackI18n
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstUnitSpecificRankUp
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstSpeechBalloonI18n
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstEnemyCharacter
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstEnemyCharacterI18n
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstEnemyStageParameter
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstItem
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstItemI18n
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstEventDisplayUnit
+ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,MstEventDisplayUnitI18n
+ヒーロー基礎設計_chara_jig_00701_メイ,MstUnit
+ヒーロー基礎設計_chara_jig_00701_メイ,MstUnitI18n
+ヒーロー基礎設計_chara_jig_00701_メイ,MstAbility
+ヒーロー基礎設計_chara_jig_00701_メイ,MstAbilityI18n
+ヒーロー基礎設計_chara_jig_00701_メイ,MstUnitAbility
+ヒーロー基礎設計_chara_jig_00701_メイ,MstAttack
+ヒーロー基礎設計_chara_jig_00701_メイ,MstAttackElement
+ヒーロー基礎設計_chara_jig_00701_メイ,MstAttackI18n
+ヒーロー基礎設計_chara_jig_00701_メイ,MstSpecialAttackI18n
+ヒーロー基礎設計_chara_jig_00701_メイ,MstSpecialRoleLevelUpAttackElement
+ヒーロー基礎設計_chara_jig_00701_メイ,MstUnitSpecificRankUp
+ヒーロー基礎設計_chara_jig_00701_メイ,MstSpeechBalloonI18n
+ヒーロー基礎設計_chara_jig_00701_メイ,MstEnemyCharacter
+ヒーロー基礎設計_chara_jig_00701_メイ,MstEnemyCharacterI18n
+ヒーロー基礎設計_chara_jig_00701_メイ,MstEnemyStageParameter
+ヒーロー基礎設計_chara_jig_00701_メイ,MstItem
+ヒーロー基礎設計_chara_jig_00701_メイ,MstItemI18n
+ヒーロー基礎設計_chara_jig_00701_メイ,MstEventDisplayUnit
+ヒーロー基礎設計_chara_jig_00701_メイ,MstEventDisplayUnitI18n
+GLOW_ランクマッチ開催仕様書,MstPvp
+GLOW_ランクマッチ開催仕様書,MstPvpI18n
+GLOW_ランクマッチ開催仕様書,MstInGame
+GLOW_ランクマッチ開催仕様書,MstInGameI18n
+GLOW_ランクマッチ開催仕様書,MstInGameSpecialRule
+GLOW_ランクマッチ開催仕様書,MstInGameSpecialRuleUnitStatus
+GLOW_ランクマッチ開催仕様書,MstPage
+GLOW_ランクマッチ開催仕様書,MstKomaLine
+GLOW_ランクマッチ開催仕様書,MstAutoPlayerSequence
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstEvent
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstEventI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstHomeBanner
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,OprGacha
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,OprGachaI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,OprGachaPrize
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,OprGachaUpper
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,OprGachaUseResource
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,OprGachaDisplayUnitI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstMissionEvent
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstMissionEventI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstMissionEventDependency
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstMissionReward
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstMissionEventDailyBonus
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstMissionEventDailyBonusSchedule
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstStoreProduct
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstStoreProductI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,OprProduct
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,OprProductI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstPack
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstPackI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstPackContent
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstEmblem
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstEmblemI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstItem
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstItemI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstQuest
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstQuestI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstStageEventReward
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstStageClearTimeReward
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstAdventBattle
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstAdventBattleI18n
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstAdventBattleReward
+20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,MstAdventBattleRewardGroup
+（暗黙的インプット）既存マスタデータ・参照データ,MstItem
+（暗黙的インプット）既存マスタデータ・参照データ,MstItemI18n
+（暗黙的インプット）既存マスタデータ・参照データ,OprGachaPrize
