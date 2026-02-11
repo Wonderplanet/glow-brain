@@ -1,12 +1,12 @@
 対応テーブル,運営仕様書名,フォルダパス
-MstEvent,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstEvent,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstEvent,GLOW_ID管理,domain/raw-data/google-drive/spread-sheet/GLOW/010_企画・仕様/GLOW_ID 管理
-MstEventI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstEventI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstEventI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
 MstEventBonusUnit,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstEventDisplayUnit,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstEventDisplayUnit,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstEventDisplayUnit,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstEventDisplayUnit,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstEventDisplayUnit,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstEventDisplayUnit,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstEventDisplayUnit,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstEventDisplayUnit,ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛
@@ -14,8 +14,8 @@ MstEventDisplayUnit,ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐
 MstEventDisplayUnit,ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎
 MstEventDisplayUnit,ヒーロー基礎設計_chara_jig_00701_メイ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00701_メイ
 MstEventDisplayUnitI18n,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstEventDisplayUnitI18n,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstEventDisplayUnitI18n,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstEventDisplayUnitI18n,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstEventDisplayUnitI18n,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstEventDisplayUnitI18n,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstEventDisplayUnitI18n,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstEventDisplayUnitI18n,ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛
@@ -73,80 +73,80 @@ MstSpeechBalloonI18n,ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,d
 MstSpeechBalloonI18n,ヒーロー基礎設計_chara_jig_00701_メイ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00701_メイ
 MstSpeechBalloonI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
 MstQuest,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstQuest,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstQuest,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstQuest,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstQuest,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstQuest,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstQuest,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
-MstQuest,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstQuest,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstQuest,GLOW_ID管理,domain/raw-data/google-drive/spread-sheet/GLOW/010_企画・仕様/GLOW_ID 管理
 MstQuestI18n,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstQuestI18n,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstQuestI18n,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstQuestI18n,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstQuestI18n,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstQuestI18n,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstQuestI18n,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
-MstQuestI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstQuestI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstQuestI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
 MstQuestBonusUnit,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstQuestBonusUnit,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstQuestBonusUnit,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstQuestBonusUnit,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstQuestBonusUnit,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstQuestBonusUnit,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstQuestBonusUnit,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstQuestEventBonusSchedule,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstStage,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstStage,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstStage,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstStage,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstStage,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstStage,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstStage,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstStageI18n,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstStageI18n,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstStageI18n,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstStageI18n,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstStageI18n,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstStageI18n,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstStageI18n,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstStageI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
 MstStageEventReward,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstStageEventReward,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstStageEventReward,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstStageEventReward,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstStageEventReward,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstStageEventReward,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstStageEventReward,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
-MstStageEventReward,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstStageEventReward,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstStageEventSetting,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstStageEventSetting,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstStageEventSetting,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstStageEventSetting,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstStageEventSetting,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstStageEventSetting,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstStageEventSetting,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstStageClearTimeReward,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstStageClearTimeReward,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstStageClearTimeReward,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstStageClearTimeReward,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstStageClearTimeReward,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstStageClearTimeReward,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstStageClearTimeReward,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
-MstStageClearTimeReward,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstStageClearTimeReward,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstStageEndCondition,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstStageEndCondition,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstStageEndCondition,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstStageEndCondition,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstStageEndCondition,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstStageEndCondition,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstStageEndCondition,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstStageEndCondition,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstAdventBattle,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
-MstAdventBattle,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstAdventBattle,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstAdventBattleI18n,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
-MstAdventBattleI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstAdventBattleI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstAdventBattleI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
 MstAdventBattleClearReward,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstAdventBattleRank,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstAdventBattleReward,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
-MstAdventBattleReward,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstAdventBattleReward,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstAdventBattleRewardGroup,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
-MstAdventBattleRewardGroup,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstAdventBattleRewardGroup,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstInGame,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstInGame,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstInGame,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstInGame,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstInGame,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstInGame,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstInGame,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstInGame,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstInGame,GLOW_ランクマッチ開催仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/01_GLOW_定常コンテンツ仕様書/ランクマッチ開催設計/GLOW_ランクマッチ開催仕様書
 MstInGameI18n,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstInGameI18n,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstInGameI18n,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstInGameI18n,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstInGameI18n,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstInGameI18n,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstInGameI18n,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstInGameI18n,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
@@ -156,22 +156,22 @@ MstInGameSpecialRule,【高難度】手負いの獣は恐ろしいぞ,domain/raw
 MstInGameSpecialRule,GLOW_ランクマッチ開催仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/01_GLOW_定常コンテンツ仕様書/ランクマッチ開催設計/GLOW_ランクマッチ開催仕様書
 MstInGameSpecialRuleUnitStatus,GLOW_ランクマッチ開催仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/01_GLOW_定常コンテンツ仕様書/ランクマッチ開催設計/GLOW_ランクマッチ開催仕様書
 MstPage,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstPage,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstPage,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstPage,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstPage,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstPage,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstPage,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstPage,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstPage,GLOW_ランクマッチ開催仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/01_GLOW_定常コンテンツ仕様書/ランクマッチ開催設計/GLOW_ランクマッチ開催仕様書
 MstKomaLine,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstKomaLine,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstKomaLine,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstKomaLine,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstKomaLine,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstKomaLine,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstKomaLine,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstKomaLine,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstKomaLine,GLOW_ランクマッチ開催仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/01_GLOW_定常コンテンツ仕様書/ランクマッチ開催設計/GLOW_ランクマッチ開催仕様書
 MstEnemyCharacter,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstEnemyCharacter,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstEnemyCharacter,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstEnemyCharacter,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstEnemyCharacter,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstEnemyCharacter,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstEnemyCharacter,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstEnemyCharacter,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
@@ -180,8 +180,8 @@ MstEnemyCharacter,ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐�
 MstEnemyCharacter,ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎
 MstEnemyCharacter,ヒーロー基礎設計_chara_jig_00701_メイ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00701_メイ
 MstEnemyCharacterI18n,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstEnemyCharacterI18n,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstEnemyCharacterI18n,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstEnemyCharacterI18n,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstEnemyCharacterI18n,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstEnemyCharacterI18n,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstEnemyCharacterI18n,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstEnemyCharacterI18n,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
@@ -191,8 +191,8 @@ MstEnemyCharacterI18n,ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,
 MstEnemyCharacterI18n,ヒーロー基礎設計_chara_jig_00701_メイ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00701_メイ
 MstEnemyCharacterI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
 MstEnemyStageParameter,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstEnemyStageParameter,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstEnemyStageParameter,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstEnemyStageParameter,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstEnemyStageParameter,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstEnemyStageParameter,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstEnemyStageParameter,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstEnemyStageParameter,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
@@ -201,95 +201,95 @@ MstEnemyStageParameter,ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 
 MstEnemyStageParameter,ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎
 MstEnemyStageParameter,ヒーロー基礎設計_chara_jig_00701_メイ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00701_メイ
 MstEnemyOutpost,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstEnemyOutpost,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstEnemyOutpost,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstEnemyOutpost,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstEnemyOutpost,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstEnemyOutpost,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstEnemyOutpost,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstEnemyOutpost,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstAutoPlayerSequence,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstAutoPlayerSequence,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstAutoPlayerSequence,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstAutoPlayerSequence,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstAutoPlayerSequence,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstAutoPlayerSequence,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstAutoPlayerSequence,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
 MstAutoPlayerSequence,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstAutoPlayerSequence,GLOW_ランクマッチ開催仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/01_GLOW_定常コンテンツ仕様書/ランクマッチ開催設計/GLOW_ランクマッチ開催仕様書
-MstArtwork,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstArtwork,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstArtwork,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstArtwork,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstArtwork,GLOW_ID管理,domain/raw-data/google-drive/spread-sheet/GLOW/010_企画・仕様/GLOW_ID 管理
-MstArtworkI18n,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstArtworkI18n,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstArtworkI18n,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstArtworkI18n,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstArtworkI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
-MstArtworkFragment,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstArtworkFragment,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
-MstArtworkFragmentI18n,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstArtworkFragmentI18n,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstArtworkFragment,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstArtworkFragment,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstArtworkFragmentI18n,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstArtworkFragmentI18n,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstArtworkFragmentI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
-MstArtworkFragmentPosition,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstArtworkFragmentPosition,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstArtworkFragmentPosition,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstArtworkFragmentPosition,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstMangaAnimation,【1日1回】本能が告げている 危険だと,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【1日1回】本能が告げている 危険だと
-MstMangaAnimation,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstMangaAnimation,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstMangaAnimation,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstMangaAnimation,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstMangaAnimation,【チャレンジ】死罪人と首切り役人,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【チャレンジ】死罪人と首切り役人設計
 MstMangaAnimation,【高難度】手負いの獣は恐ろしいぞ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【高難度】手負いの獣は恐ろしいぞ
-MstMissionEvent,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
-MstMissionEventI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstMissionEvent,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstMissionEventI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstMissionEventI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
-MstMissionEventDependency,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
-MstMissionEventDailyBonus,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
-MstMissionEventDailyBonusSchedule,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstMissionEventDependency,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstMissionEventDailyBonus,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstMissionEventDailyBonusSchedule,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstMissionLimitedTerm,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstMissionLimitedTermI18n,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
 MstMissionLimitedTermI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
 MstMissionReward,【降臨バトル】まるで 悪夢を見ているようだ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【降臨バトル】まるで 悪夢を見ているようだ_地獄楽
-MstMissionReward,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
-MstItem,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstItem,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstMissionReward,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstItem,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstItem,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstItem,ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛
 MstItem,ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬
 MstItem,ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎
 MstItem,ヒーロー基礎設計_chara_jig_00701_メイ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00701_メイ
-MstItem,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstItem,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstItem,（暗黙的インプット）既存マスタデータ・参照データ,projects/glow-masterdata
 MstItem,GLOW_ID管理,domain/raw-data/google-drive/spread-sheet/GLOW/010_企画・仕様/GLOW_ID 管理
-MstItemI18n,【ストーリー】必ず生きて帰る（画眉丸編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
-MstItemI18n,【ストーリー】朱印の者たち（共闘関係編）,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
+MstItemI18n,【ストーリー】必ず生きて帰る,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】必ず生きて帰る
+MstItemI18n,【ストーリー】朱印の者たち,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/01_クエスト・ステージ/クエスト設計/イベントクエスト/【202601010】地獄楽 いいジャン祭/【ストーリー】朱印の者たち
 MstItemI18n,ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛
 MstItemI18n,ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬
 MstItemI18n,ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00601_民谷 巌鉄斎
 MstItemI18n,ヒーロー基礎設計_chara_jig_00701_メイ,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00701_メイ
-MstItemI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstItemI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstItemI18n,（暗黙的インプット）既存マスタデータ・参照データ,projects/glow-masterdata
 MstItemI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
-OprGacha,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+OprGacha,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 OprGacha,GLOW_ID管理,domain/raw-data/google-drive/spread-sheet/GLOW/010_企画・仕様/GLOW_ID 管理
-OprGachaI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+OprGachaI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 OprGachaI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
 OprGachaPrize,ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛
 OprGachaPrize,ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬
-OprGachaPrize,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+OprGachaPrize,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 OprGachaPrize,（暗黙的インプット）既存マスタデータ・参照データ,projects/glow-masterdata
-OprGachaUpper,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
-OprGachaUseResource,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+OprGachaUpper,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+OprGachaUseResource,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 OprGachaDisplayUnitI18n,ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00401_賊王 亜左 弔兵衛
 OprGachaDisplayUnitI18n,ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬,domain/raw-data/google-drive/spread-sheet/GLOW/031_レベルデザイン/基礎設計シート/03_ヒーロー/キャラ設計/ヒーロー基礎設計_chara_jig_00501_山田浅ェ門 桐馬
-OprGachaDisplayUnitI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+OprGachaDisplayUnitI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 OprGachaDisplayUnitI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
-MstStoreProduct,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
-MstStoreProductI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstStoreProduct,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstStoreProductI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstStoreProductI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
-OprProduct,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
-OprProductI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+OprProduct,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+OprProductI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 OprProductI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
-MstPack,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
-MstPackI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstPack,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstPackI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstPackI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
-MstPackContent,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstPackContent,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstPvp,GLOW_ランクマッチ開催仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/01_GLOW_定常コンテンツ仕様書/ランクマッチ開催設計/GLOW_ランクマッチ開催仕様書
 MstPvpI18n,GLOW_ランクマッチ開催仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/01_GLOW_定常コンテンツ仕様書/ランクマッチ開催設計/GLOW_ランクマッチ開催仕様書
 MstPvpI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
-MstHomeBanner,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstHomeBanner,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstHomeBanner,GLOW_ID管理,domain/raw-data/google-drive/spread-sheet/GLOW/010_企画・仕様/GLOW_ID 管理
-MstEmblem,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstEmblem,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstEmblem,GLOW_ID管理,domain/raw-data/google-drive/spread-sheet/GLOW/010_企画・仕様/GLOW_ID 管理
-MstEmblemI18n,20260116_地獄楽 いいジャン祭_仕様書（運営仕様書）,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
+MstEmblemI18n,20260116_地獄楽 いいジャン祭_仕様書,domain/raw-data/google-drive/spread-sheet/GLOW/080_運営/いいジャン祭（施策）/運営_仕様書/20260116_地獄楽 いいジャン祭_仕様書
 MstEmblemI18n,GLOW_キャラ名称＆キャラセリフ資料,domain/raw-data/google-drive/spread-sheet/GLOW/011_監修/00_監修/開発監修資料/監修資料/キャラセリフ&名称など/GLOW_キャラ名称＆キャラセリフ資料
