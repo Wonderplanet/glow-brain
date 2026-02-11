@@ -1,0 +1,158 @@
+{
+  "total_files": 25,
+  "files_with_correct_data": 25,
+  "files_without_correct_data": 0,
+  "file_pairs": [
+    {
+      "filename": "MstAdventBattle.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstAdventBattle.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstAdventBattle.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstAdventBattleClearReward.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstAdventBattleClearReward.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstAdventBattleClearReward.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstAdventBattleI18n.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstAdventBattleI18n.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstAdventBattleI18n.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstAdventBattleRank.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstAdventBattleRank.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstAdventBattleRank.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstAdventBattleReward.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstAdventBattleReward.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstAdventBattleReward.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstAdventBattleRewardGroup.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstAdventBattleRewardGroup.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstAdventBattleRewardGroup.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstEmblem.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstEmblem.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstEmblem.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstEmblemI18n.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstEmblemI18n.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstEmblemI18n.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstEvent.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstEvent.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstEvent.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstEventI18n.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstEventI18n.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstEventI18n.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstHomeBanner.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstHomeBanner.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstHomeBanner.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstItem.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstItem.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstItem.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstItemI18n.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstItemI18n.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstItemI18n.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstPack.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstPack.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstPack.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstPackContent.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstPackContent.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstPackContent.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstPackI18n.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstPackI18n.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstPackI18n.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstQuest.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstQuest.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstQuest.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstQuestI18n.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstQuestI18n.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstQuestI18n.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstStage.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstStage.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstStage.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstStageClearTimeReward.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstStageClearTimeReward.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstStageClearTimeReward.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstStageEventReward.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstStageEventReward.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstStageEventReward.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstStageEventSetting.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstStageEventSetting.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstStageEventSetting.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstStageI18n.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstStageI18n.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstStageI18n.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstStoreProduct.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstStoreProduct.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstStoreProduct.csv",
+      "correct_exists": true
+    },
+    {
+      "filename": "MstStoreProductI18n.csv",
+      "generated": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/MstStoreProductI18n.csv",
+      "correct": "/Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/tables/MstStoreProductI18n.csv",
+      "correct_exists": true
+    }
+  ],
+  "missing_correct_files": []
+}
