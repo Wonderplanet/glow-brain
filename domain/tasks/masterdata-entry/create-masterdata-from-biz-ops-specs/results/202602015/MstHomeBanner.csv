@@ -1,0 +1,2 @@
+ENABLE,id,destination,destination_path,asset_key,start_at,end_at,sort_order,release_key
+e,31,Event,event_jig_00001,hometop_event_jig_00001,2026-01-16 15:00:00,2026-02-16 10:59:59,7,202601010

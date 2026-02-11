@@ -1,0 +1,7 @@
+ENABLE,release_key,id,mst_unit_id,unit_grade,attack_kind,killer_colors,killer_percentage,action_frames,attack_delay,next_attack_interval,asset_key
+e,202601010,chara_jig_00701_Normal_00000,chara_jig_00701,0,Normal,"","",90,25,95,""
+e,202601010,chara_jig_00701_Special_00001,chara_jig_00701,1,Special,"","",117,0,0,""
+e,202601010,chara_jig_00701_Special_00002,chara_jig_00701,2,Special,"","",117,0,0,""
+e,202601010,chara_jig_00701_Special_00003,chara_jig_00701,3,Special,"","",117,0,0,""
+e,202601010,chara_jig_00701_Special_00004,chara_jig_00701,4,Special,"","",117,0,0,""
+e,202601010,chara_jig_00701_Special_00005,chara_jig_00701,5,Special,"","",117,0,0,""

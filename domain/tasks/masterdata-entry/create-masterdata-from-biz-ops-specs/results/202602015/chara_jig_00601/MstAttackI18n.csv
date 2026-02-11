@@ -1,0 +1,7 @@
+ENABLE,release_key,id,mst_attack_id,language,description,grade_description
+e,202601010,chara_jig_00601_Normal_00000_ja,chara_jig_00601_Normal_00000,ja,表示場所なし,""
+e,202601010,chara_jig_00601_Special_00001_ja,chara_jig_00601_Special_00001,ja,敵単体に最大5回の連続攻撃(自身の攻撃ステータスの最大140%ダメージ),""
+e,202601010,chara_jig_00601_Special_00002_ja,chara_jig_00601_Special_00002,ja,敵単体に最大5回の連続攻撃(自身の攻撃ステータスの最大156%ダメージ),ステータスUP + 必殺ワザ性能UP
+e,202601010,chara_jig_00601_Special_00003_ja,chara_jig_00601_Special_00003,ja,敵単体に最大5回の連続攻撃(自身の攻撃ステータスの最大167%ダメージ),ステータスUP + 必殺ワザ性能UP
+e,202601010,chara_jig_00601_Special_00004_ja,chara_jig_00601_Special_00004,ja,敵単体に最大5回の連続攻撃(自身の攻撃ステータスの最大175%ダメージ),ステータスUP + 必殺ワザ性能UP
+e,202601010,chara_jig_00601_Special_00005_ja,chara_jig_00601_Special_00005,ja,敵単体に最大5回の連続攻撃(自身の攻撃ステータスの最大180%ダメージ),ステータスUP + 必殺ワザ性能UP

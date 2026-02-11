@@ -1,0 +1,7 @@
+ENABLE,release_key,id,mst_attack_id,language,description,grade_description
+e,202601010,chara_jig_00501_Normal_00000_ja,chara_jig_00501_Normal_00000,ja,表示場所なし,""
+e,202601010,chara_jig_00501_Special_00001_ja,chara_jig_00501_Special_00001,ja,敵単体に自身の攻撃ステータスの100%のダメージ(敵が緑属性の場合は110%のダメージ),""
+e,202601010,chara_jig_00501_Special_00002_ja,chara_jig_00501_Special_00002,ja,敵単体に自身の攻撃ステータスの100%のダメージ(敵が緑属性の場合は125%のダメージ),ステータスUP + 必殺ワザ性能UP
+e,202601010,chara_jig_00501_Special_00003_ja,chara_jig_00501_Special_00003,ja,敵単体に自身の攻撃ステータスの100%のダメージ(敵が緑属性の場合は136%のダメージ),ステータスUP + 必殺ワザ性能UP
+e,202601010,chara_jig_00501_Special_00004_ja,chara_jig_00501_Special_00004,ja,敵単体に自身の攻撃ステータスの100%のダメージ(敵が緑属性の場合は144%のダメージ),ステータスUP + 必殺ワザ性能UP
+e,202601010,chara_jig_00501_Special_00005_ja,chara_jig_00501_Special_00005,ja,敵単体に自身の攻撃ステータスの100%のダメージ(敵が緑属性の場合は150%のダメージ),ステータスUP + 必殺ワザ性能UP
