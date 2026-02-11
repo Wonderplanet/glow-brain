@@ -1,0 +1,58 @@
+# CSV差分レポート: MstUnit.csv
+
+## サマリー
+
+| 項目 | 件数 |
+|------|------|
+| 追加された行 | 3 |
+| 削除された行 | 0 |
+| 変更された行 | 0 |
+| 変更なしの行 | 0 |
+| 追加されたカラム | 31 |
+| 削除されたカラム | 0 |
+
+## カラム差分
+
+### 追加されたカラム
+
+- ENABLE
+- id
+- fragment_mst_item_id
+- role_type
+- color
+- attack_range_type
+- unit_label
+- has_specific_rank_up
+- mst_series_id
+- asset_key
+- rarity
+- sort_order
+- summon_cost
+- summon_cool_time
+- special_attack_initial_cool_time
+- special_attack_cool_time
+- min_hp
+- max_hp
+- damage_knock_back_count
+- move_speed
+- well_distance
+- min_attack_power
+- max_attack_power
+- mst_unit_ability_id1
+- ability_unlock_rank1
+- mst_unit_ability_id2
+- ability_unlock_rank2
+- mst_unit_ability_id3
+- ability_unlock_rank3
+- is_encyclopedia_special_attack_position_right
+- release_key
+
+## 追加された行
+
+合計: 3行
+
+| ENABLE | id | fragment_mst_item_id | role_type | color | attack_range_type | unit_label | has_specific_rank_up | mst_series_id | asset_key | rarity | sort_order | summon_cost | summon_cool_time | special_attack_initial_cool_time | special_attack_cool_time | min_hp | max_hp | damage_knock_back_count | move_speed | well_distance | min_attack_power | max_attack_power | mst_unit_ability_id1 | ability_unlock_rank1 | mst_unit_ability_id2 | ability_unlock_rank2 | mst_unit_ability_id3 | ability_unlock_rank3 | is_encyclopedia_special_attack_position_right | release_key |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| e | chara_jig_00401 | piece_jig_00401 | Technical | Colorless | Short | PremiumUR | 0 | jig | chara_jig_00401 | UR | 1 | 1000 | 770 | 655 | 1140 | 2100 | 21000 | 3 | 30 | 0.31 | 2500 | 25000 | ability_jig_00401_01 | 0 | ability_jig_00401_02 | 4 |  | 0 | 0 | 202601010 |
+| e | chara_jig_00601 | piece_jig_00601 | Defense | Blue | Short | DropSR | 0 | jig | chara_jig_00601 | SR | 1 | 440 | 920 | 480 | 1195 | 2510 | 25100 | 1 | 35 | 0.21 | 880 | 8800 | ability_jig_00601_01 | 2 |  | 0 |  | 0 | 0 | 202601010 |
+| e | chara_jig_00701 | piece_jig_00701 | Special | Colorless | None | DropSR | 0 | jig | chara_jig_00701 | SR | 1 | 650 | 0 | 375 | 700 | 0 | 0 |  | 0 |  | 20 | 20 |  | 0 |  | 0 |  | 0 | 0 | 202601010 |

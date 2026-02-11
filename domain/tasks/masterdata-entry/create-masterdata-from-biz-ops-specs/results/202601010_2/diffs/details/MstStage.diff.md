@@ -1,0 +1,58 @@
+# CSV差分レポート: MstStage.csv
+
+## サマリー
+
+| 項目 | 件数 |
+|------|------|
+| 追加された行 | 14 |
+| 削除された行 | 0 |
+| 変更された行 | 0 |
+| 変更なしの行 | 0 |
+| 追加されたカラム | 20 |
+| 削除されたカラム | 0 |
+
+## カラム差分
+
+### 追加されたカラム
+
+- ENABLE
+- id
+- mst_quest_id
+- mst_in_game_id
+- stage_number
+- recommended_level
+- cost_stamina
+- exp
+- coin
+- prev_mst_stage_id
+- mst_stage_tips_group_id
+- auto_lap_type
+- max_auto_lap_count
+- sort_order
+- asset_key
+- mst_stage_limit_status_id
+- release_key
+- mst_artwork_fragment_drop_group_id
+- start_at
+- end_at
+
+## 追加された行
+
+合計: 14行
+
+| ENABLE | id | mst_quest_id | mst_in_game_id | stage_number | recommended_level | cost_stamina | exp | coin | prev_mst_stage_id | mst_stage_tips_group_id | auto_lap_type | max_auto_lap_count | sort_order | asset_key | mst_stage_limit_status_id | release_key | mst_artwork_fragment_drop_group_id | start_at | end_at |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| e | event_jig1_1day_00001 | quest_event_jig1_1day | event_jig1_1day_00001 | 1 | 10 | 5 | 50 | 100 |  | 1 |  | 1 | 397 | jig_event_1 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_charaget01_00001 | quest_event_jig1_charaget01 | event_jig1_charaget01_00001 | 1 | 10 | 5 | 50 | 100 |  | 1 |  | 1 | 398 | jig_event_1 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_charaget01_00002 | quest_event_jig1_charaget01 | event_jig1_charaget01_00002 | 2 | 10 | 5 | 50 | 100 | event_jig1_charaget01_00001 | 1 |  | 1 | 399 | jig_event_2 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_charaget01_00003 | quest_event_jig1_charaget01 | event_jig1_charaget01_00003 | 3 | 10 | 5 | 50 | 100 | event_jig1_charaget01_00002 | 1 |  | 1 | 400 | jig_event_3 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_charaget01_00004 | quest_event_jig1_charaget01 | event_jig1_charaget01_00004 | 4 | 10 | 5 | 50 | 100 | event_jig1_charaget01_00003 | 1 |  | 1 | 401 | jig_event_4 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_charaget01_00005 | quest_event_jig1_charaget01 | event_jig1_charaget01_00005 | 5 | 10 | 5 | 50 | 100 | event_jig1_charaget01_00004 | 1 |  | 1 | 402 | jig_event_5 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_charaget01_00006 | quest_event_jig1_charaget01 | event_jig1_charaget01_00006 | 6 | 10 | 5 | 50 | 100 | event_jig1_charaget01_00005 | 1 |  | 1 | 403 | jig_event_6 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_challenge01_00001 | quest_event_jig1_challenge01 | event_jig1_challenge01_00001 | 1 | 10 | 5 | 50 | 100 |  | 1 |  | 1 | 404 | jig_event_1 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_challenge01_00002 | quest_event_jig1_challenge01 | event_jig1_challenge01_00002 | 2 | 10 | 5 | 50 | 100 | event_jig1_challenge01_00001 | 1 |  | 1 | 405 | jig_event_2 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_challenge01_00003 | quest_event_jig1_challenge01 | event_jig1_challenge01_00003 | 3 | 10 | 5 | 50 | 100 | event_jig1_challenge01_00002 | 1 |  | 1 | 406 | jig_event_3 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_challenge01_00004 | quest_event_jig1_challenge01 | event_jig1_challenge01_00004 | 4 | 10 | 5 | 50 | 100 | event_jig1_challenge01_00003 | 1 |  | 1 | 407 | jig_event_4 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_savage_00001 | quest_event_jig1_savage | event_jig1_savage_00001 | 1 | 10 | 5 | 50 | 100 |  | 1 |  | 1 | 408 | jig_event_1 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_savage_00002 | quest_event_jig1_savage | event_jig1_savage_00002 | 2 | 10 | 5 | 50 | 100 | event_jig1_savage_00001 | 1 |  | 1 | 409 | jig_event_2 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |
+| e | event_jig1_savage_00003 | quest_event_jig1_savage | event_jig1_savage_00003 | 3 | 10 | 5 | 50 | 100 | event_jig1_savage_00002 | 1 |  | 1 | 410 | jig_event_3 |  | 202601010 |  | 2026-01-16 15:00:00 | 2026-02-16 10:59:59 |

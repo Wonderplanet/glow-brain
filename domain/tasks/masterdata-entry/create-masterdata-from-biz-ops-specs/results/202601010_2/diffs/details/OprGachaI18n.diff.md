@@ -1,0 +1,41 @@
+# CSV差分レポート: OprGachaI18n.csv
+
+## サマリー
+
+| 項目 | 件数 |
+|------|------|
+| 追加された行 | 2 |
+| 削除された行 | 0 |
+| 変更された行 | 0 |
+| 変更なしの行 | 0 |
+| 追加されたカラム | 15 |
+| 削除されたカラム | 0 |
+
+## カラム差分
+
+### 追加されたカラム
+
+- ENABLE
+- release_key
+- id
+- opr_gacha_id
+- language
+- name
+- description
+- max_rarity_upper_description
+- pickup_upper_description
+- fixed_prize_description
+- banner_url
+- logo_asset_key
+- logo_banner_url
+- gacha_background_color
+- gacha_banner_size
+
+## 追加された行
+
+合計: 2行
+
+| ENABLE | release_key | id | opr_gacha_id | language | name | description | max_rarity_upper_description | pickup_upper_description | fixed_prize_description | banner_url | logo_asset_key | logo_banner_url | gacha_background_color | gacha_banner_size |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| e | 202601010 | Pickup_jig_001_ja | Pickup_jig_001 | ja | 地獄楽 いいジャン祭ピックアップガシャ A | 地獄楽から新URキャラ1体と新SSRキャラ1体の出現率UP中! |  | ピックアップURキャラ1体確定! | SR以上1体確定 | jig_00001 | pickup_a_00001 |  | Yellow | SizeL |
+| e | 202601010 | Pickup_jig_002_ja | Pickup_jig_002 | ja | 地獄楽 いいジャン祭ピックアップガシャ B | 地獄楽から新URキャラ1体と新SSRキャラ1体の出現率UP中! |  | ピックアップURキャラ1体確定! | SR以上1体確定 | jig_00002 | pickup_b_00001 |  | Yellow | SizeL |
