@@ -1,0 +1,25 @@
+ENABLE,release_key,id,mst_tutorial_id,language,sort_order,title,asset_key
+e,202509010,1,TutorialStartIntroduction,ja,1,属性について,attribute_1
+e,202509010,2,TutorialStartIntroduction,ja,2,属性について,attribute_2
+e,202509010,3,TutorialStartIntroduction,ja,3,ロールについて,role_1
+e,202509010,4,TutorialStartIntroduction,ja,4,ロールについて,role_2
+e,202509010,5,InGame1,ja,1,特殊コマについて,koma_1
+e,202509010,6,InGame1,ja,2,特殊コマについて,koma_2
+e,202509010,11,Main2,ja,1,キャラ強化について,enhance_unit
+e,202509010,12,InGame2,ja,1,JUMBLE RUSHについて,rush_1
+e,202509010,13,InGame2,ja,2,JUMBLE RUSHについて,rush_2
+e,202509010,14,Main3,ja,1,イベントコンテンツについて,content
+e,202509010,15,OutpostEnhance,ja,1,ゲート強化について,outpost_enhance
+e,202509010,16,TransitAdventBattle,ja,1,降臨バトルについて,advent_battle_1
+e,202509010,17,TransitAdventBattle,ja,2,降臨バトルについて,advent_battle_2
+e,202509010,18,TransitRaidAdventBattle,ja,1,協力スコア報酬について,advent_battle_raid
+e,202509010,19,TransitEnhanceQuest,ja,1,コイン獲得クエストとは,enhance_quest
+e,202509010,20,ReleaseEnhanceQuest,ja,1,イベントコンテンツについて,content
+e,202509010,21,SpecialUnit,ja,1,ロールについて,role_2
+e,202509010,22,TransitOutpostEnhance,ja,1,ゲート強化について,outpost_enhance
+e,202509010,23,ArtworkFragment,ja,1,原画のかけらについて,kakera_1
+e,202509010,24,ArtworkFragment,ja,2,原画のかけらについて,kakera_2
+e,202509010,25,ArtworkFragment,ja,3,原画のかけらについて,kakera_3
+e,202509010,26,TransitPvp,ja,1,ランクマッチについて,pvp_1
+e,202509010,27,TransitPvp,ja,2,ランクマッチについて,pvp_2
+e,202509010,28,TransitPvp,ja,3,ランクマッチについて,pvp_3

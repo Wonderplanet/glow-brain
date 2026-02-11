@@ -1,0 +1,13 @@
+ENABLE,release_key,id,mst_ability_id,language,description,filter_title
+e,202509010,ability_attack_power_up_koma_boost_ja,ability_attack_power_up_koma_boost,ja,攻撃UPコマにいる間、攻撃{0}%UP,攻撃UPコマ効果UP
+e,202509010,ability_slip_damage_koma_block_ja,ability_slip_damage_koma_block,ja,ダメージコマ効果を無効化,ダメージコマ無効化
+e,202509010,ability_attack_power_down_koma_block_ja,ability_attack_power_down_koma_block,ja,攻撃DOWNコマ効果を無効化,攻撃DOWNコマ無効化
+e,202509010,ability_knockback_block_ja,ability_knockback_block,ja,ノックバック効果を無効化,ノックバック無効化
+e,202509010,ability_StunBlock_ja,ability_StunBlock,ja,{0}%の確率でスタンを無効化,スタン攻撃無効化
+e,202509010,ability_FreezeBlock_ja,ability_FreezeBlock,ja,{0}%の確率で氷結を無効化,氷結攻撃無効化
+e,202509010,ability_gust_koma_block_ja,ability_gust_koma_block,ja,突風コマ効果を無効化,突風コマ無効化
+e,202509010,ability_burn_damage_cut_ja,ability_burn_damage_cut,ja,火傷ダメージを{0}%軽減,火傷ダメージ軽減
+e,202509010,ability_poison_damage_cut_ja,ability_poison_damage_cut,ja,毒ダメージを{0}%軽減,毒ダメージ軽減
+e,202509010,ability_guts_ja,ability_guts,ja,撃破される時に{0}回だけ体力を1残して耐える,根性
+e,202511010,ability_attack_power_up_by_hp_percentage_over_ja,ability_attack_power_up_by_hp_percentage_over,ja,体力{1}%以上時に攻撃を{0}%UP,体力条件強化(以上/攻撃)
+e,202511020,ability_damage_cut_by_hp_percentage_less_ja,ability_damage_cut_by_hp_percentage_less,ja,体力{1}%以下時に被ダメージを{0}%カット,体力条件強化(以下/被ダメージ)
