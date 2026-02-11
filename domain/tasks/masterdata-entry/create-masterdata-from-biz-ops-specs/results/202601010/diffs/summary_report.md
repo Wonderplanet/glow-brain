@@ -1,136 +1,164 @@
-# マスタデータ生成結果 精度評価レポート
+# マスタデータ生成結果 精度評価レポート（完全版）
 
 リリースキー: **202601010**
 
 ## エグゼクティブサマリー
 
 masterdata-from-bizops-allスキルを使用して生成したマスタデータの精度評価を実施しました。
-**25個のCSVファイル**を対象に、生成結果と正解データの差分を比較しました。
 
-### 主要な結果
-- **全体精度**: -37.11%
+### 🚨 重要な発見
+
+**正解データには78個のCSVファイルが存在しますが、生成結果は25個のみでした。**
+
+- **ファイル生成率**: 32.1%
+- **生成されていないファイル数**: 53個
+
+### 主要な結果（生成された25ファイルの分析）
+
 - **完全一致ファイル**: 8/25 (32.0%)
 - **差分ありファイル**: 17/25 (68.0%)
-- **総行数（正解）**: 415
 - **総差分行数**: 569 (追加: 282, 削除: 247, 変更: 40)
 
-## 詳細統計
+## ファイルレベルの差分
+
+### 統計
 
 | 項目 | 値 |
 |------|------|
-| 比較対象ファイル数 | 25 |
-| 差分のないファイル数 | 8 |
-| 差分のあるファイル数 | 17 |
-| 総行数（生成結果） | 380 |
-| 総行数（正解データ） | 415 |
-| 一致した行数 | 93 |
-| 追加された行数 | 282 |
-| 削除された行数 | 247 |
-| 変更された行数 | 40 |
-| 全体精度 | -37.11% |
+| 正解データのファイル数 | 78 |
+| 生成結果のファイル数 | 25 |
+| 生成されていないファイル数 | 53 |
+| ファイル生成率 | 32.1% |
 
-## ファイル別の差分統計
+### 生成されていないファイル（53個）
 
-| ファイル名 | 差分 | 生成行数 | 正解行数 | 追加 | 削除 | 変更 | 一致 |
-|-----------|------|---------|---------|------|------|------|------|
-| MstAdventBattle.csv | ✗ | 1 | 1 | 0 | 0 | 1 | 0 |
-| MstAdventBattleClearReward.csv | ✗ | 6 | 5 | 0 | 1 | 0 | 5 |
-| MstAdventBattleI18n.csv | ✓ | 1 | 1 | 0 | 0 | 0 | 1 |
-| MstAdventBattleRank.csv | ✓ | 16 | 16 | 0 | 0 | 0 | 16 |
-| MstAdventBattleReward.csv | ✗ | 102 | 120 | 120 | 102 | 0 | 0 |
-| MstAdventBattleRewardGroup.csv | ✗ | 37 | 55 | 43 | 25 | 3 | 9 |
-| MstEmblem.csv | ✓ | 7 | 7 | 0 | 0 | 0 | 7 |
-| MstEmblemI18n.csv | ✓ | 7 | 7 | 0 | 0 | 0 | 7 |
-| MstEvent.csv | ✓ | 1 | 1 | 0 | 0 | 0 | 1 |
-| MstEventI18n.csv | ✗ | 1 | 1 | 0 | 0 | 1 | 0 |
-| MstHomeBanner.csv | ✗ | 1 | 3 | 3 | 1 | 0 | 0 |
-| MstItem.csv | ✓ | 6 | 6 | 0 | 0 | 0 | 6 |
-| MstItemI18n.csv | ✓ | 6 | 6 | 0 | 0 | 0 | 6 |
-| MstPack.csv | ✗ | 1 | 2 | 1 | 0 | 1 | 0 |
-| MstPackContent.csv | ✗ | 3 | 7 | 4 | 0 | 0 | 3 |
-| MstPackI18n.csv | ✗ | 1 | 2 | 1 | 0 | 0 | 1 |
-| MstQuest.csv | ✗ | 5 | 5 | 0 | 0 | 2 | 3 |
-| MstQuestI18n.csv | ✗ | 5 | 5 | 0 | 0 | 1 | 4 |
-| MstStage.csv | ✗ | 24 | 20 | 8 | 12 | 11 | 1 |
-| MstStageClearTimeReward.csv | ✓ | 21 | 21 | 0 | 0 | 0 | 21 |
-| MstStageEventReward.csv | ✗ | 78 | 70 | 70 | 78 | 0 | 0 |
-| MstStageEventSetting.csv | ✗ | 24 | 20 | 20 | 24 | 0 | 0 |
-| MstStageI18n.csv | ✗ | 24 | 20 | 0 | 4 | 20 | 0 |
-| MstStoreProduct.csv | ✗ | 1 | 7 | 6 | 0 | 0 | 1 |
-| MstStoreProductI18n.csv | ✗ | 1 | 7 | 6 | 0 | 0 | 1 |
+**Unit関連 (10個):**
 
-## 差分が多いテーブル トップ10
+- MstEventBonusUnit.csv
+- MstEventDisplayUnit.csv
+- MstEventDisplayUnitI18n.csv
+- MstInGameSpecialRuleUnitStatus.csv
+- MstQuestBonusUnit.csv
+- MstUnit.csv
+- MstUnitAbility.csv
+- MstUnitI18n.csv
+- MstUnitSpecificRankUp.csv
+- OprGachaDisplayUnitI18n.csv
 
-| 順位 | ファイル名 | 総差分数 | 追加 | 削除 | 変更 |
-|------|-----------|---------|------|------|------|
-| 1 | MstAdventBattleReward.csv | 222 | 120 | 102 | 0 |
-| 2 | MstStageEventReward.csv | 148 | 70 | 78 | 0 |
-| 3 | MstAdventBattleRewardGroup.csv | 71 | 43 | 25 | 3 |
-| 4 | MstStageEventSetting.csv | 44 | 20 | 24 | 0 |
-| 5 | MstStage.csv | 31 | 8 | 12 | 11 |
-| 6 | MstStageI18n.csv | 24 | 0 | 4 | 20 |
-| 7 | MstStoreProduct.csv | 6 | 6 | 0 | 0 |
-| 8 | MstStoreProductI18n.csv | 6 | 6 | 0 | 0 |
-| 9 | MstHomeBanner.csv | 4 | 3 | 1 | 0 |
-| 10 | MstPackContent.csv | 4 | 4 | 0 | 0 |
+**Enemy関連 (4個):**
 
-## 完全一致ファイル
+- MstEnemyCharacter.csv
+- MstEnemyCharacterI18n.csv
+- MstEnemyOutpost.csv
+- MstEnemyStageParameter.csv
 
-以下のファイルは正解データと完全に一致しています:
+**Ability関連 (2個):**
 
-- ✓ MstAdventBattleI18n.csv
-- ✓ MstAdventBattleRank.csv
-- ✓ MstEmblem.csv
-- ✓ MstEmblemI18n.csv
-- ✓ MstEvent.csv
-- ✓ MstItem.csv
-- ✓ MstItemI18n.csv
-- ✓ MstStageClearTimeReward.csv
+- MstAbility.csv
+- MstAbilityI18n.csv
 
-## 差分の傾向分析
+**Attack関連 (5個):**
 
-### 追加された行 (282件)
+- MstAttack.csv
+- MstAttackElement.csv
+- MstAttackI18n.csv
+- MstSpecialAttackI18n.csv
+- MstSpecialRoleLevelUpAttackElement.csv
 
-正解データに存在するが、生成結果には含まれていない行があります。
-これは運営仕様書からの抽出漏れ、またはデータ生成ロジックの不足を示している可能性があります。
+**Gacha関連 (5個):**
 
-### 削除された行 (247件)
+- OprGacha.csv
+- OprGachaI18n.csv
+- OprGachaPrize.csv
+- OprGachaUpper.csv
+- OprGachaUseResource.csv
 
-生成結果に含まれているが、正解データには存在しない行があります。
-これは不要なデータの生成、または運営仕様書の解釈誤りを示している可能性があります。
+**Mission関連 (8個):**
 
-### 変更された行 (40件)
+- MstMissionEvent.csv
+- MstMissionEventDailyBonus.csv
+- MstMissionEventDailyBonusSchedule.csv
+- MstMissionEventDependency.csv
+- MstMissionEventI18n.csv
+- MstMissionLimitedTerm.csv
+- MstMissionLimitedTermI18n.csv
+- MstMissionReward.csv
 
-同じIDを持つ行が存在しますが、カラムの値が異なります。
-これはデータ変換ロジックの誤り、型変換の問題、またはデフォルト値の設定誤りを示している可能性があります。
+**InGame関連 (3個):**
+
+- MstInGame.csv
+- MstInGameI18n.csv
+- MstInGameSpecialRule.csv
+
+**Artwork関連 (5個):**
+
+- MstArtwork.csv
+- MstArtworkFragment.csv
+- MstArtworkFragmentI18n.csv
+- MstArtworkFragmentPosition.csv
+- MstArtworkI18n.csv
+
+**Other関連 (11個):**
+
+- MstAutoPlayerSequence.csv
+- MstKomaLine.csv
+- MstMangaAnimation.csv
+- MstPage.csv
+- MstPvp.csv
+- MstPvpI18n.csv
+- MstQuestEventBonusSchedule.csv
+- MstSpeechBalloonI18n.csv
+- MstStageEndCondition.csv
+- OprProduct.csv
+- OprProductI18n.csv
+
+## 行レベルの差分（生成された25ファイルの詳細）
+
+| ファイル名 | 差分 | 追加 | 削除 | 変更 |
+|-----------|------|------|------|------|
+| MstAdventBattle.csv | ✗ | 0 | 0 | 1 |
+| MstAdventBattleClearReward.csv | ✗ | 0 | 1 | 0 |
+| MstAdventBattleI18n.csv | ✓ | 0 | 0 | 0 |
+| MstAdventBattleRank.csv | ✓ | 0 | 0 | 0 |
+| MstAdventBattleReward.csv | ✗ | 120 | 102 | 0 |
+| MstAdventBattleRewardGroup.csv | ✗ | 43 | 25 | 3 |
+| MstEmblem.csv | ✓ | 0 | 0 | 0 |
+| MstEmblemI18n.csv | ✓ | 0 | 0 | 0 |
+| MstEvent.csv | ✓ | 0 | 0 | 0 |
+| MstEventI18n.csv | ✗ | 0 | 0 | 1 |
+| MstHomeBanner.csv | ✗ | 3 | 1 | 0 |
+| MstItem.csv | ✓ | 0 | 0 | 0 |
+| MstItemI18n.csv | ✓ | 0 | 0 | 0 |
+| MstPack.csv | ✗ | 1 | 0 | 1 |
+| MstPackContent.csv | ✗ | 4 | 0 | 0 |
+| MstPackI18n.csv | ✗ | 1 | 0 | 0 |
+| MstQuest.csv | ✗ | 0 | 0 | 2 |
+| MstQuestI18n.csv | ✗ | 0 | 0 | 1 |
+| MstStage.csv | ✗ | 8 | 12 | 11 |
+| MstStageClearTimeReward.csv | ✓ | 0 | 0 | 0 |
+| MstStageEventReward.csv | ✗ | 70 | 78 | 0 |
+| MstStageEventSetting.csv | ✗ | 20 | 24 | 0 |
+| MstStageI18n.csv | ✗ | 0 | 4 | 20 |
+| MstStoreProduct.csv | ✗ | 6 | 0 | 0 |
+| MstStoreProductI18n.csv | ✗ | 6 | 0 | 0 |
 
 ## 改善の方向性
 
-### 短期的な改善
+### 最優先課題: ファイル生成の完全性
 
-1. **差分が多いテーブルの優先的な調査**
-   - 上記トップ10のテーブルについて、個別の差分詳細レポートを確認
-   - 差分の原因を特定し、運営仕様書の読み取りロジックやデータ生成ロジックを修正
+**現状**: 78ファイル中25ファイルのみ生成（32.1%）
 
-2. **エラーケースの修正**
-   - ヘッダー不一致やエラーが発生したファイルを優先的に修正
+**考えられる原因:**
+1. 運営仕様書にこれらのテーブルに関する記述がなかった
+2. masterdata-from-bizops-allスキルがこれらのテーブルに対応していない
+3. これらのテーブルは今回のリリースキー202601010では更新対象外（過去データをそのまま使用）
 
-3. **変更された行の原因調査**
-   - 型変換、デフォルト値、データフォーマットの問題を調査
+**対応策:**
+1. 運営仕様書の網羅性確認
+2. スキルの対応範囲確認
+3. 過去データ継承の仕組み確認
 
-### 中長期的な改善
-
-1. **自動検証の強化**
-   - masterdata-csv-validatorスキルの活用
-   - スキーマとの整合性チェックの自動化
-
-2. **運営仕様書の標準化**
-   - 仕様書のフォーマットを統一し、機械的な読み取りを容易にする
-
-3. **テストケースの拡充**
-   - 今回の検証データセットをリグレッションテストに活用
-
-## 個別ファイルの詳細レポート
+### 個別ファイルの詳細レポート
 
 各ファイルの詳細な差分は、以下のレポートを参照してください:
 
