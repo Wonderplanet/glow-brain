@@ -9,7 +9,8 @@
             "Read(//Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/stats/**)",
             "Read(//Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/raw-data/masterdata/released/202601010/release_202601010_report.md)",
             "Read(//Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/projects/glow-masterdata/**)",
-            "Read(//Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/**)"
+            "Read(//Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010/**)",
+            "Read(//Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/create-masterdata-from-biz-ops-specs/results/202601010_2/**)"
         ]
     }
 }
