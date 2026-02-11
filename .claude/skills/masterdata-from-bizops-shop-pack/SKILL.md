@@ -19,12 +19,18 @@ description: ショップ・パック商品の運営仕様書からマスタデ�
 
 **期間限定商品情報**:
 - **OprProduct** - 実際に販売する商品の期間・優先度設定
+  - **重要**: パック作成時は必ず作成(MstStoreProductと1:1対応)
+  - **商品IDとパックIDの関連**: OprProduct.id = MstPack.product_sub_id
 - **OprProductI18n** - 商品のアセットキー(多言語対応)
+  - **重要**: パック作成時は必ず作成(多言語対応)
 
 **パック情報**:
 - **MstPack** - パックの基本設定(割引率、コスト等)
+  - **条件**: OprProduct.product_type=Packの場合のみ作成
 - **MstPackI18n** - パック名(多言語対応)
+  - **条件**: MstPackが存在する場合のみ作成
 - **MstPackContent** - パックの内容物
+  - **条件**: MstPackが存在する場合のみ作成
 
 ## 基本的な使い方
 
@@ -96,32 +102,100 @@ description: ショップ・パック商品の運営仕様書からマスタデ�
 
 1. **MstStoreProduct** - プラットフォームプロダクトID設定
 2. **MstStoreProductI18n** - 価格情報(多言語対応)
-3. **OprProduct** - 販売期間・優先度設定
-4. **OprProductI18n** - アセットキー設定(多言語対応)
+3. **OprProduct** - 販売期間・優先度設定(**必須**: 必ず作成)
+   - **重要**: MstStoreProduct.idと同じIDを使用
+   - **product_type**: Pack、Diamond、Passのいずれかを設定
+4. **OprProductI18n** - アセットキー設定(**必須**: 必ず作成、多言語対応)
+   - **重要**: 全商品タイプで作成が必要
 5. **MstPack** - パック基本設定(product_type=Packの場合のみ)
+   - **product_sub_id**: OprProduct.idと同じ値を設定
 6. **MstPackI18n** - パック名(product_type=Packの場合のみ)
 7. **MstPackContent** - パック内容物(product_type=Packの場合のみ)
 
+#### データ依存関係の自動管理
+
+**重要**: 親テーブルを作成した際は、依存する子テーブルも自動的に生成してください。
+
+**依存関係定義** (`config/table_dependencies.json` 参照):
+```json
+{
+  "MstPack": ["MstPackContent", "MstPackI18n"],
+  "MstStoreProduct": ["MstStoreProductI18n"]
+}
+```
+
+**自動生成ロジック**:
+1. **MstStoreProduct**を作成 → **MstStoreProductI18n**を自動生成
+   - id: `{parent_id}_{language}` (例: `50_ja`)
+   - mst_store_product_id: `{parent_id}`
+   - 価格情報をMstStoreProductから継承
+
+2. **MstPack**を作成 → **MstPackI18n**と**MstPackContent**を自動生成
+   - **MstPackI18n**:
+     - id: `{parent_id}_{language}` (例: `event_item_pack_12_ja`)
+     - mst_pack_id: `{parent_id}`
+     - name: 運営仕様書から抽出（パック名）
+   - **MstPackContent**:
+     - 運営仕様書から内容物を抽出
+     - resource_type、resource_id、resource_amountを設定
+
+**実装の流れ**:
+```
+1. MstStoreProduct作成
+   ↓ (自動)
+2. MstStoreProductI18n生成
+
+3. OprProduct作成
+   ↓ (自動)
+4. OprProductI18n生成
+
+5. MstPack作成 (product_type=Packの場合)
+   ↓ (自動)
+6. MstPackI18n生成
+   ↓ (自動)
+7. MstPackContent生成
+```
+
+この自動生成により、親テーブル未生成による子テーブル欠落を防止できます。
+
 #### ID採番ルール
+
+**重要**: 新規IDを採番する前に、必ず既存データの最大IDを確認してください。
+
+**既存データからの最大ID取得**:
+```
+1. マスタデータ/過去データ/{release_key}/{TableName}.csv を確認
+2. ID列から数値部分を抽出
+3. 最大値を取得
+4. 最大値 + 1 から採番開始
+```
 
 ショップ・パックのIDは以下の形式で採番します:
 
 ```
-MstStoreProduct.id: 連番採番(例: 50, 52, 64)
+MstStoreProduct.id: {連番}
 OprProduct.id: MstStoreProduct.idと同じ値
 MstPack.id: event_item_pack_{連番} または monthly_item_pack_{連番}
-MstPackContent.id: 連番採番(例: 113, 114, 115)
+MstPackContent.id: {連番}
 I18n系テーブルのid: {親テーブルid}_{language}
 ```
 
+**ID採番ルール**:
+- **MstStoreProduct.id**: 既存データの最大ID + 1から開始
+- **OprProduct.id**: MstStoreProduct.idと同じ値を使用
+- **MstPack.id**: イベント限定パックは`event_item_pack_{連番}`、月次パックは`monthly_item_pack_{連番}`
+- **MstPackContent.id**: 既存データの最大ID + 1から開始
+
 **例**:
 ```
-50 (ストア商品ID)
-50 (運営商品ID)
-event_item_pack_12 (パックID)
-113 (パック内容物1)
+50 (ストア商品ID - 既存最大49の次)
+50 (運営商品ID - ストア商品IDと同じ)
+event_item_pack_12 (パックID - 既存最大11の次)
+113 (パック内容物1 - 既存最大112の次)
 50_ja (日本語I18n)
 ```
+
+詳細は [references/id_naming_rules.md](references/id_naming_rules.md) を参照してください。
 
 ### Step 3: データ整合性チェック
 
@@ -252,6 +326,27 @@ event_item_pack_12 (パックID)
 
 ## 注意事項
 
+### OprProductとOprProductI18nの必須性
+
+**重要**: ショップ・パック作成時は、**必ずOprProductとOprProductI18nを作成してください**。
+
+**作成ルール**:
+1. **MstStoreProduct**を作成したら、**必ずOprProduct**も作成する
+2. **OprProduct**を作成したら、**必ずOprProductI18n**も作成する
+3. **ID対応**: OprProduct.id = MstStoreProduct.id(同じ値を使用)
+4. **パックとの連携**: MstPack.product_sub_id = OprProduct.id
+
+**作成手順**:
+```
+MstStoreProduct (id: 50)
+  ↓
+OprProduct (id: 50, mst_store_product_id: 50, product_type: Pack)
+  ↓
+OprProductI18n (id: 50_ja, opr_product_id: 50)
+  ↓ (product_type=Packの場合のみ)
+MstPack (id: event_item_pack_12, product_sub_id: 50)
+```
+
 ### プラットフォームプロダクトIDについて
 
 MstStoreProductのプロダクトID(product_id_ios、product_id_android)は、**一度定義したら変更できません**(リストア機能のため)。
@@ -337,6 +432,21 @@ Invalid product_type: pack (expected: Pack)
 - display_orderは数字が大きいほど上に表示
 - 重要なアイテムほど大きい数字を設定
 - 例: ダイヤ(10) → チケット(9) → メモリー(8)
+
+### Q4: OprProductとOprProductI18nを作成し忘れる
+
+**原因**: ショップ・パックはMstStoreProductとMstPackだけで完結すると誤認している
+
+**対処法**:
+1. **必ず7テーブル全てを作成する**
+2. **作成順序**:
+   - MstStoreProduct → MstStoreProductI18n
+   - OprProduct → OprProductI18n
+   - MstPack → MstPackI18n → MstPackContent
+3. **ID対応を確認**:
+   - OprProduct.id = MstStoreProduct.id
+   - MstPack.product_sub_id = OprProduct.id
+4. **推測値レポートで確認**: 全7テーブルが作成されているか必ず確認
 
 ## 検証
 

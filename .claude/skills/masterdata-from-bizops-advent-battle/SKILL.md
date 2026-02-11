@@ -83,7 +83,11 @@ description: 降臨バトル(レイドイベント)の運営仕様書からマ�
 - 挑戦回数設定(通常挑戦、広告挑戦)
 - ランク評価基準(Bronze～Master、各レベルのスコア閾値)
 - 報酬設定(最高スコア報酬、累計スコア報酬、ランク報酬、ランキング報酬、初回クリア報酬)
-- 特効キャラとボーナス率
+- **特効キャラとボーナス率**
+  - 運営仕様書の「コイン獲得ボーナスキャラ」「特効キャラ」セクションから抽出
+  - 各キャラのユニットIDとボーナス率(bonus_percentage)を設定
+  - **event_bonus_group_id**: 降臨バトルIDから生成(`quest_raid_jig1_00001` → `raid_jig1_00001`)
+  - 例: chara_jig_00401(20%ボーナス) → bonus_percentage=20
 - ボス敵キャラID
 - インゲーム設定(MstInGame.id)
 
@@ -102,8 +106,54 @@ description: 降臨バトル(レイドイベント)の運営仕様書からマ�
 5. **MstAdventBattleRewardGroup** - 報酬カテゴリ定義
 6. **MstAdventBattleReward** - 報酬詳細
 7. **MstEventBonusUnit** - 特効キャラ設定
+   - **重要**: MstAdventBattle.event_bonus_group_idと連動
+   - **ID生成**: `quest_raid_jig1_00001` → `raid_jig1_00001`(quest_を削除)
+   - **運営仕様書から抽出**: 「コイン獲得ボーナスキャラ」「特効キャラ」セクション
+   - **設定項目**: id, mst_unit_id, bonus_percentage, event_bonus_group_id, is_pick_up, release_key
+
+#### データ依存関係の自動管理
+
+**重要**: 親テーブルを作成した際は、依存する子テーブルも自動的に生成してください。
+
+**依存関係定義** (`config/table_dependencies.json` 参照):
+```json
+{
+  "MstAdventBattle": ["MstAdventBattleI18n"]
+}
+```
+
+**自動生成ロジック**:
+1. **MstAdventBattle**を作成 → **MstAdventBattleI18n**を自動生成
+   - id: `{parent_id}_{language}` (例: `quest_raid_jig1_00001_ja`)
+   - mst_advent_battle_id: `{parent_id}`
+   - name、boss_descriptionを運営仕様書から抽出
+
+**実装の流れ**:
+```
+1. MstAdventBattle作成
+   ↓ (自動)
+2. MstAdventBattleI18n生成
+
+3. MstAdventBattleRank作成
+4. MstAdventBattleClearReward作成
+5. MstAdventBattleRewardGroup作成
+6. MstAdventBattleReward作成
+7. MstEventBonusUnit作成
+```
+
+この自動生成により、親テーブル未生成による子テーブル欠落を防止できます。
 
 #### ID採番ルール
+
+**重要**: 新規IDを採番する前に、必ず既存データの最大IDを確認してください。
+
+**既存データからの最大ID取得**:
+```
+1. マスタデータ/過去データ/{release_key}/{TableName}.csv を確認
+2. ID列から数値部分を抽出
+3. 最大値を取得
+4. 最大値 + 1 から採番開始
+```
 
 降臨バトルのIDは以下の形式で採番します:
 
@@ -113,6 +163,19 @@ event_bonus_group_id: raid_{series_id}{連番1桁}_{連番5桁}
 MstAdventBattleI18n.id: {mst_advent_battle_id}_{language}
 MstAdventBattleRank.id: {mst_advent_battle_id}_rank_{連番2桁}
 MstAdventBattleRewardGroup.id: {mst_advent_battle_id変換}_reward_group_{連番5桁}_{連番2桁}
+MstAdventBattleReward.id: {連番}
+```
+
+**MstAdventBattleReward ID採番**:
+- 形式: `quest_raid_{series_id}{連番}_reward_group_{連番5桁}_{連番2桁}_{末尾連番}`
+- **末尾連番: ゼロ埋めなし** (`_1`, `_2`, `_3`, ...)
+- 同一報酬グループ内で連番
+
+**ID変換ルール**:
+```
+mst_advent_battle_id: quest_raid_jig1_00001
+↓ (末尾の_00001を削除)
+reward_group_id: quest_raid_jig1_reward_group_00001_01
 ```
 
 **例**:
@@ -122,7 +185,11 @@ raid_jig1_00001 (特効グループID)
 quest_raid_jig1_00001_ja (日本語I18n)
 quest_raid_jig1_00001_rank_01 (Bronze レベル1)
 quest_raid_jig1_reward_group_00001_01 (報酬グループ1)
+quest_raid_jig1_reward_group_00001_01_1 (報酬グループ1の報酬1 - 末尾ゼロ埋めなし)
+quest_raid_jig1_reward_group_00001_01_2 (報酬グループ1の報酬2 - 末尾ゼロ埋めなし)
 ```
+
+詳細は [references/id_naming_rules.md](references/id_naming_rules.md) を参照してください。
 
 ### Step 3: データ整合性チェック
 
@@ -137,16 +204,148 @@ quest_raid_jig1_reward_group_00001_01 (報酬グループ1)
 - [ ] ランク設定が完全か(全16段階)
 - [ ] クリア報酬のpercentage合計が100か
 
-### Step 4: 推測値レポート
+### Step 4: パラメータ推測ロジック
+
+設計書に記載がないパラメータは、過去データから学習したパターンに基づいて推測します。
+
+#### 過去データからパターン学習
+
+```typescript
+/**
+ * 過去データから類似パターンを学習
+ * マスタデータ/過去データ/{release_key}/ 配下のCSVから統計的に推測値を算出
+ */
+interface RaidParameterPattern {
+  initialBattlePoint: {
+    baseValue: number      // 基準値（例: 500）
+    range: [number, number]  // 有効範囲（例: [300, 1000]）
+  }
+  scoreAdditionalCoef: {
+    baseValue: number      // 基準値（例: 0.07）
+    range: [number, number]  // 有効範囲（例: [0.05, 0.15]）
+  }
+  rankScoreThresholds: {
+    Bronze: { level1: number, level4: number }
+    Silver: { level1: number, level4: number }
+    Gold: { level1: number, level4: number }
+    Master: { level1: number, level4: number }
+  }
+  bonusPercentage: {
+    high: number    // 高ボーナス（例: 20）
+    medium: number  // 中ボーナス（例: 15）
+    low: number     // 低ボーナス（例: 10）
+  }
+}
+
+function learnRaidParameterPatterns(pastData: any[]): RaidParameterPattern {
+  // 過去データから基準値・有効範囲を統計的に算出
+  return {
+    initialBattlePoint: { baseValue: 500, range: [300, 1000] },
+    scoreAdditionalCoef: { baseValue: 0.07, range: [0.05, 0.15] },
+    rankScoreThresholds: {
+      Bronze: { level1: 1000, level4: 15000 },
+      Silver: { level1: 30000, level4: 100000 },
+      Gold: { level1: 150000, level4: 300000 },
+      Master: { level1: 500000, level4: 2000000 }
+    },
+    bonusPercentage: { high: 20, medium: 15, low: 10 }
+  }
+}
+
+/**
+ * 学習したパターンから推測値を生成
+ */
+function estimateRaidParameter(
+  parameterName: string,
+  context: any,
+  pattern: RaidParameterPattern
+): number {
+  // パラメータ種別に応じて推測値を算出
+  switch (parameterName) {
+    case 'initial_battle_point':
+      return pattern.initialBattlePoint.baseValue
+    case 'score_additional_coef':
+      return pattern.scoreAdditionalCoef.baseValue
+    case 'rank_score_threshold':
+      return estimateRankScore(context.rankType, context.rankLevel, pattern)
+    case 'bonus_percentage':
+      return estimateBonusPercentage(context.unitRarity, pattern)
+  }
+}
+
+function estimateRankScore(
+  rankType: 'Bronze' | 'Silver' | 'Gold' | 'Master',
+  rankLevel: number,
+  pattern: RaidParameterPattern
+): number {
+  const thresholds = pattern.rankScoreThresholds[rankType]
+  // レベル1～4の間を線形補間
+  const ratio = (rankLevel - 1) / 3
+  return Math.round(thresholds.level1 + (thresholds.level4 - thresholds.level1) * ratio)
+}
+
+function estimateBonusPercentage(
+  unitRarity: 'UR' | 'SSR' | 'SR',
+  pattern: RaidParameterPattern
+): number {
+  return {
+    'UR': pattern.bonusPercentage.high,
+    'SSR': pattern.bonusPercentage.medium,
+    'SR': pattern.bonusPercentage.low
+  }[unitRarity] || pattern.bonusPercentage.low
+}
+```
+
+### Step 5: 推測値レポート(詳細化)
 
 設計書に記載がなく、推測で決定した値を必ずレポートします。
 
 **推測値の例**:
 - `MstAdventBattle.asset_key`: アセットキー(推測値)
+- `MstAdventBattle.initial_battle_point`: 初期BP(推測値)
+- `MstAdventBattle.score_additional_coef`: スコア加算係数(推測値)
 - `MstAdventBattleRank.required_lower_score`: ランクスコア閾値(標準値使用)
 - `MstAdventBattleClearReward.percentage`: クリア報酬確率(均等分配)
 - `MstAdventBattleRewardGroup.condition_value`: 報酬獲得スコア閾値(推測値)
 - `MstEventBonusUnit.bonus_percentage`: 特効ボーナス率(推測値)
+
+#### 推測値レポート形式（拡張版）
+
+```typescript
+interface InferenceReport {
+  field: string                 // フィールド名
+  value: any                    // 推測値
+  confidence: "High" | "Medium" | "Low"  // 信頼度スコア
+  reasoning: string             // 推測根拠
+  source: "past_data_pattern" | "specification" | "default_value" | "manual_input_required"  // データソース
+}
+```
+
+**レポート例**:
+```markdown
+## 推測値レポート
+
+### MstAdventBattle.initial_battle_point
+- **値**: 500
+- **信頼度**: High
+- **推測根拠**: 過去データ(release_key=202512010～202601010)の平均値500を使用
+- **データソース**: past_data_pattern
+- **確認事項**: イベント難易度に応じて調整が必要か確認してください
+
+### MstAdventBattleRank.required_lower_score
+- **値**: Bronze(1000～15000), Silver(30000～100000), Gold(150000～300000), Master(500000～2000000)
+- **信頼度**: Medium
+- **推測根拠**: 標準ガイドラインに基づき、各ランクの閾値を設定
+- **データソース**: default_value
+- **確認事項**: イベント難易度に応じてスコア閾値を調整してください
+
+### MstEventBonusUnit.bonus_percentage
+- **値**: 20%(UR新規), 15%(SSR主役), 10%(SR関連)
+- **信頼度**: Medium
+- **推測根拠**: キャラレアリティと役割から推測（UR=高ボーナス、SSR=中ボーナス、SR=低ボーナス）
+- **データソース**: past_data_pattern
+- **確認事項**: 実際のボーナス率を確認し、必要に応じて差し替えてください
+```
 
 ### Step 5: 出力
 
@@ -258,15 +457,34 @@ MstAdventBattleRewardGroupとMstAdventBattleRewardは、以下の構造で作成
 **複数報酬の設定**:
 1つの報酬グループに複数の報酬を設定する場合、同じmst_advent_battle_reward_group_idで複数レコードを作成します。
 
-### 特効設定について
+### 特効設定について(MstEventBonusUnit)
 
-MstEventBonusUnitは、以下の方針で作成してください:
+**必須作成**: 降臨バトルでは必ずMstEventBonusUnitを作成します。
+
+**event_bonus_group_idの生成ルール**:
+```
+MstAdventBattle.id: quest_raid_jig1_00001
+↓ (quest_を削除)
+event_bonus_group_id: raid_jig1_00001
+```
+
+**運営仕様書から抽出**:
+- 「コイン獲得ボーナスキャラ」セクション
+- 「特効キャラ」セクション
+- 各キャラのユニットIDとボーナス率を取得
 
 **ボーナス率のガイドライン**:
 - **20%**: 最高ボーナス(新規実装URキャラ等)
 - **15%**: 高ボーナス(イベント主役キャラ)
 - **10%**: 中ボーナス(イベント関連キャラ)
 - **5%**: 低ボーナス(シリーズキャラ)
+
+**設定例**:
+```csv
+ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
+e,1,chara_jig_00401,20,raid_jig1_00001,,202601010
+e,2,chara_jig_00001,15,raid_jig1_00001,,202601010
+```
 
 ### 外部キー整合性について
 

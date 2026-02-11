@@ -74,6 +74,32 @@ description: アイテムの運営仕様書からマスタデータCSVを作成�
 1. **MstItem** - アイテムの基本設定
 2. **MstItemI18n** - アイテム名・説明文(多言語対応)
 
+#### データ依存関係の自動管理
+
+**重要**: 親テーブルを作成した際は、依存する子テーブルも自動的に生成してください。
+
+**依存関係定義** (`config/table_dependencies.json` 参照):
+```json
+{
+  "MstItem": ["MstItemI18n"]
+}
+```
+
+**自動生成ロジック**:
+1. **MstItem**を作成 → **MstItemI18n**を自動生成
+   - id: `{parent_id}_{language}` (例: `piece_jig_00401_ja`)
+   - mst_item_id: `{parent_id}`
+   - name、descriptionを運営仕様書から抽出
+
+**実装の流れ**:
+```
+1. MstItem作成
+   ↓ (自動)
+2. MstItemI18n生成
+```
+
+この自動生成により、親テーブル未生成による子テーブル欠落を防止できます。
+
 #### ID採番ルール
 
 アイテムのIDは以下の形式で採番します:

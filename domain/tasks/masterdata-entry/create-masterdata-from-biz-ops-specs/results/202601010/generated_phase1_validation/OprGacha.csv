@@ -1,0 +1,2 @@
+ENABLE,id,opr_gacha_category,asset_key,display_size,sort_order,strapi_uuid,start_date,end_date,release_key
+e,opr_gacha_jig_2026_jan_pickupA,PickUp,opr_gacha_jig_2026_jan_pickupA,Medium,1,00000000-0000-0000-0000-000000000001,2026-01-16 15:00:00,2026-02-16 10:59:00,202601010

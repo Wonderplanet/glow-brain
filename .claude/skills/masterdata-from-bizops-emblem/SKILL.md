@@ -81,6 +81,32 @@ description: エンブレムの運営仕様書からマスタデータCSVを作�
 1. **MstEmblem** - エンブレムの基本設定
 2. **MstEmblemI18n** - エンブレム名・説明文(多言語対応)
 
+#### データ依存関係の自動管理
+
+**重要**: 親テーブルを作成した際は、依存する子テーブルも自動的に生成してください。
+
+**依存関係定義** (`config/table_dependencies.json` 参照):
+```json
+{
+  "MstEmblem": ["MstEmblemI18n"]
+}
+```
+
+**自動生成ロジック**:
+1. **MstEmblem**を作成 → **MstEmblemI18n**を自動生成
+   - id: `{parent_id}_{language}` (例: `emblem_event_jig_00001_ja`)
+   - mst_emblem_id: `{parent_id}`
+   - name、descriptionを運営仕様書から抽出
+
+**実装の流れ**:
+```
+1. MstEmblem作成
+   ↓ (自動)
+2. MstEmblemI18n生成
+```
+
+この自動生成により、親テーブル未生成による子テーブル欠落を防止できます。
+
 #### ID採番ルール
 
 エンブレムのIDは以下の形式で採番します:

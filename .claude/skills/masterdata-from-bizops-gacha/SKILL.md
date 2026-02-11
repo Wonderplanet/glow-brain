@@ -103,6 +103,37 @@ description: ガチャの運営仕様書からマスタデータCSVを作成す�
 5. **OprGachaUseResource** - ガチャ実行コスト(チケット、ダイヤ単発、ダイヤ10連の3種類)
 6. **OprGachaDisplayUnitI18n** - ガチャ画面表示キャラの説明文
 
+#### データ依存関係の自動管理
+
+**重要**: 親テーブルを作成した際は、依存する子テーブルも自動的に生成してください。
+
+**依存関係定義** (`config/table_dependencies.json` 参照):
+```json
+{
+  "OprGacha": ["OprGachaI18n"]
+}
+```
+
+**自動生成ロジック**:
+1. **OprGacha**を作成 → **OprGachaI18n**を自動生成
+   - id: `{parent_id}_{language}` (例: `Pickup_jig_001_ja`)
+   - opr_gacha_id: `{parent_id}`
+   - name、descriptionを運営仕様書から抽出
+
+**実装の流れ**:
+```
+1. OprGacha作成
+   ↓ (自動)
+2. OprGachaI18n生成
+
+3. OprGachaPrize作成
+4. OprGachaUpper作成
+5. OprGachaUseResource作成
+6. OprGachaDisplayUnitI18n作成
+```
+
+この自動生成により、親テーブル未生成による子テーブル欠落を防止できます。
+
 #### ID採番ルール
 
 ガチャのIDは以下の形式で採番します:

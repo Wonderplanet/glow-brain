@@ -1,0 +1,12 @@
+{
+  "MstPack": ["MstPackContent", "MstPackI18n"],
+  "MstStoreProduct": ["MstStoreProductI18n"],
+  "MstUnit": ["MstUnitI18n", "MstUnitAbility"],
+  "MstItem": ["MstItemI18n"],
+  "MstEmblem": ["MstEmblemI18n"],
+  "MstEvent": ["MstEventI18n"],
+  "OprGacha": ["OprGachaI18n"],
+  "MstQuest": ["MstQuestI18n"],
+  "MstStage": ["MstStageI18n"],
+  "MstAdventBattle": ["MstAdventBattleI18n"]
+}

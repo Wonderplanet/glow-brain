@@ -80,9 +80,15 @@ description: クエスト・ステージの運営仕様書からマスタデー�
 - 報酬設定(初回クリア報酬、ランダム報酬、タイムアタック報酬)
 
 **任意情報**:
-- 特効キャラ設定(ボーナス率)(記載がない場合は作成しない)
+- 特効キャラ設定(ボーナス率)
+  - 運営仕様書の「ボーナスキャラ設定」「コイン獲得ボーナス」セクションから抽出
+  - セクションが存在する場合のみMstQuestBonusUnitを作成
+  - 各キャラのユニットIDとボーナス率(coin_bonus_rate)を設定
+  - 例: chara_jig_00401(20%ボーナス) → coin_bonus_rate=0.2
 - 背景・BGM設定(記載がない場合は推測)
 - リセット設定(記載がない場合は推測)
+- クリア条件(降臨バトルやPVP等の特殊クエストで明記されている場合のみMstStageEndConditionを作成)
+- ボーナス期間(降臨バトル等で明記されている場合のみMstQuestEventBonusScheduleを作成)
 
 ### Step 2: マスタデータ生成
 
@@ -90,25 +96,92 @@ description: クエスト・ステージの運営仕様書からマスタデー�
 
 1. **MstQuest** - クエストの基本設定
 2. **MstQuestI18n** - クエスト名・説明文(多言語対応)
-3. **MstQuestBonusUnit** - クエスト特効キャラ設定(特効キャラがある場合のみ)
+3. **MstQuestBonusUnit** - クエスト特効キャラ設定(運営仕様書に「ボーナスキャラ設定」「コイン獲得ボーナス」セクションがある場合に作成)
 4. **MstStage** - ステージの基本設定
 5. **MstStageI18n** - ステージ名(多言語対応)
 6. **MstStageEventReward** - ステージ報酬(初回クリア・ランダム報酬)
 7. **MstStageEventSetting** - ステージイベント設定(リセット、開催期間、背景等)
 8. **MstStageClearTimeReward** - タイムアタック報酬(チャレンジや高難度クエストの場合のみ)
-9. **MstStageEndCondition** - ステージ終了条件(降臨バトルやPVP等の特殊クエストの場合のみ)
-10. **MstQuestEventBonusSchedule** - 特効スケジュール(降臨バトル等の場合のみ)
+9. **MstStageEndCondition** - ステージ終了条件(降臨バトルやPVP等の特殊クエストで「クリア条件」が明記されている場合のみ)
+10. **MstQuestEventBonusSchedule** - 特効スケジュール(降臨バトル等で「ボーナス期間」が明記されている場合のみ)
+
+#### データ依存関係の自動管理
+
+**重要**: 親テーブルを作成した際は、依存する子テーブルも自動的に生成してください。
+
+**依存関係定義** (`config/table_dependencies.json` 参照):
+```json
+{
+  "MstQuest": ["MstQuestI18n"],
+  "MstStage": ["MstStageI18n"]
+}
+```
+
+**自動生成ロジック**:
+1. **MstQuest**を作成 → **MstQuestI18n**を自動生成
+   - id: `{parent_id}_{language}` (例: `quest_event_jig1_charaget01_ja`)
+   - mst_quest_id: `{parent_id}`
+   - name、category_name、flavor_textを運営仕様書から抽出
+
+2. **MstStage**を作成 → **MstStageI18n**を自動生成
+   - id: `{parent_id}_{language}` (例: `event_jig1_charaget01_00001_ja`)
+   - mst_stage_id: `{parent_id}`
+   - nameを運営仕様書から抽出
+
+**実装の流れ**:
+```
+1. MstQuest作成
+   ↓ (自動)
+2. MstQuestI18n生成
+
+3. MstStage作成
+   ↓ (自動)
+4. MstStageI18n生成
+
+5. MstStageEventReward作成
+6. MstStageEventSetting作成
+```
+
+この自動生成により、親テーブル未生成による子テーブル欠落を防止できます。
 
 #### ID採番ルール
+
+**重要**: 新規IDを採番する前に、必ず既存データの最大IDを確認してください。
+
+**既存データからの最大ID取得**:
+```
+1. マスタデータ/過去データ/{release_key}/{TableName}.csv を確認
+2. ID列から数値部分を抽出
+3. 最大値を取得
+4. 最大値 + 1 から採番開始
+```
 
 クエスト・ステージのIDは以下の形式で採番します:
 
 ```
 MstQuest.id: quest_event_{series_id}{連番}_{クエストタイプ略称}
 MstQuestI18n.id: {mst_quest_id}_{language}
-MstStage.id: {クエストタイプ略称}_{連番5桁}
+MstStage.id: event_{series_id}{連番1桁}_{クエストタイプ略称}{連番2桁}_{連番5桁}
 MstStageI18n.id: {mst_stage_id}_{language}
+MstStageEventReward.id: {連番}
 ```
+
+**ステージID命名規則**:
+- クエストタイプ略称: `charaget`, `1day`, `challenge`
+- ステージ番号: ゼロ埋め5桁
+- 同一クエスト内で連番
+
+**MstStageEventReward ID採番**:
+- 既存データの最大ID + 1から開始
+- リリースキーごとにID範囲を管理
+- 例: 202601010のデータは569～
+
+**アセットキーの命名規則**:
+- イベントアセットキー: `{series_id}_{連番5桁}` (例: `jig_00001`)
+- 背景アセットキー(クエストタイプ別):
+  - キャラ入手(`charaget01`): `jig_00003`
+  - デイリー(`1day`): `jig_00002`
+  - チャレンジ(`challenge01`): `jig_00001`
 
 **例**:
 ```
@@ -116,7 +189,10 @@ quest_event_jig1_charaget01 (地獄楽イベント1 キャラ入手クエスト1
 quest_event_jig1_charaget01_ja (日本語I18n)
 event_jig1_charaget01_00001 (キャラ入手クエスト1のステージ1)
 event_jig1_charaget01_00001_ja (ステージ1の日本語I18n)
+569 (MstStageEventReward - 既存最大568の次)
 ```
+
+詳細は [references/id_naming_rules.md](references/id_naming_rules.md) を参照してください。
 
 ### Step 3: データ整合性チェック
 
@@ -131,15 +207,119 @@ event_jig1_charaget01_00001_ja (ステージ1の日本語I18n)
 - [ ] ステージ解放順序が正しいか(prev_mst_stage_idが適切に設定されている)
 - [ ] 報酬設定が妥当か(FirstClear報酬のpercentageが100、Random報酬の確率設定が適切)
 
-### Step 4: 推測値レポート
+### Step 4: パラメータ推測ロジック
+
+設計書に記載がないパラメータは、過去データから学習したパターンに基づいて推測します。
+
+#### 過去データからパターン学習
+
+```typescript
+/**
+ * 過去データから類似パターンを学習
+ * マスタデータ/過去データ/{release_key}/ 配下のCSVから統計的に推測値を算出
+ */
+interface ParameterPattern {
+  costStamina: {
+    baseValue: number      // 基準値（例: 5）
+    increaseRate: number   // ステージごとの増加率（例: 0.5）
+    max: number            // 最大値（例: 20）
+  }
+  coin: {
+    baseValue: number      // 基準値（例: 100）
+    increaseRate: number   // ステージごとの増加率（例: 50）
+    max: number            // 最大値（例: 1000）
+  }
+  recommendedLevel: {
+    baseValue: number      // 基準値（例: 10）
+    increaseRate: number   // ステージごとの増加率（例: 5）
+    max: number            // 最大値（例: 100）
+  }
+  exp: {
+    baseValue: number      // 基準値（例: 50）
+    increaseRate: number   // ステージごとの増加率（例: 25）
+    max: number            // 最大値（例: 500）
+  }
+}
+
+function learnParameterPatterns(pastData: any[]): ParameterPattern {
+  // 過去データから基準値・増加率・最大値を統計的に算出
+  return {
+    costStamina: { baseValue: 5, increaseRate: 0.5, max: 20 },
+    coin: { baseValue: 100, increaseRate: 50, max: 1000 },
+    recommendedLevel: { baseValue: 10, increaseRate: 5, max: 100 },
+    exp: { baseValue: 50, increaseRate: 25, max: 500 }
+  }
+}
+
+/**
+ * 学習したパターンから推測値を生成
+ */
+function estimateParameter(
+  parameterName: string,
+  stageNumber: number,
+  pattern: ParameterPattern
+): number {
+  const config = pattern[parameterName]
+  const estimated = config.baseValue + (stageNumber - 1) * config.increaseRate
+  return Math.min(estimated, config.max)
+}
+```
+
+#### アセットキー推測ルール
+
+詳細は [references/asset_key_rules.md](references/asset_key_rules.md) を参照してください。
+
+**基本ルール**:
+1. **イベントIDからプレフィックス抽出**: `event_jig_00001` → `jig_`
+2. **クエストタイプ別アセットキー**:
+   - `charaget01` → `jig_00003`
+   - `1day` → `jig_00001`
+   - `challenge` → `jig_00002`
+
+### Step 5: 推測値レポート(詳細化)
 
 設計書に記載がなく、推測で決定した値を必ずレポートします。
 
 **推測値の例**:
+- `MstStage.cost_stamina`: スタミナコスト(推測値)
+- `MstStage.coin`: コイン獲得量(推測値)
+- `MstStage.exp`: 経験値(推測値)
+- `MstStage.recommended_level`: 推奨レベル(推測値)
 - `MstStage.mst_artwork_fragment_drop_group_id`: 原画欠片ドロップグループID(推測値)
 - `MstStageEventSetting.background_asset_key`: 背景アセットキー(推測値)
 - `MstQuestBonusUnit.coin_bonus_rate`: 特効ボーナス率(推測値)
 - `MstStageEventReward.percentage`: ランダム報酬の獲得確率(推測値)
+
+#### 推測値レポート形式（拡張版）
+
+```typescript
+interface InferenceReport {
+  field: string                 // フィールド名
+  value: any                    // 推測値
+  confidence: "High" | "Medium" | "Low"  // 信頼度スコア
+  reasoning: string             // 推測根拠
+  source: "past_data_pattern" | "specification" | "default_value" | "manual_input_required"  // データソース
+}
+```
+
+**レポート例**:
+```markdown
+## 推測値レポート
+
+### MstStage.cost_stamina
+- **値**: 5 → 8 → 10 → 12 → 15
+- **信頼度**: High
+- **推測根拠**: 過去データ(release_key=202512010)のパターン学習結果に基づき、ステージ1から5まで段階的に増加
+- **データソース**: past_data_pattern
+- **確認事項**: イベント難易度に応じて調整が必要か確認してください
+
+### MstStageEventSetting.background_asset_key
+- **値**: jig_00003
+- **信頼度**: Medium
+- **推測根拠**: アセットキー生成ルールに基づき、クエストタイプ「charaget01」から推測
+- **データソース**: asset_key_rules
+- **確認事項**: 実際の背景アセットキーを確認し、必要に応じて差し替えてください
+```
 
 ### Step 5: 出力
 
@@ -219,6 +399,23 @@ event_jig1_charaget01_00001_ja (ステージ1の日本語I18n)
 - **確認事項**: 正しい背景アセットキーを確認し、必要に応じて差し替えてください
 
 ## 注意事項
+
+### 特効キャラ設定について(MstQuestBonusUnit)
+
+**作成条件**:
+- 運営仕様書に「ボーナスキャラ設定」「コイン獲得ボーナス」セクションが存在する場合のみ作成
+- セクションが存在しない場合はMstQuestBonusUnitシートを作成しない
+
+**設定項目**:
+- **mst_unit_id**: 特効キャラのユニットID(例: chara_jig_00401)
+- **coin_bonus_rate**: コインボーナス率(例: 0.15=15%UP、0.2=20%UP)
+- **start_at / end_at**: 特効期間(通常はクエスト開催期間と同じ)
+
+**ボーナス率のガイドライン**:
+- **20%**: 最高ボーナス(新規実装URキャラ等)
+- **15%**: 高ボーナス(イベント主役キャラ)
+- **10%**: 中ボーナス(イベント関連キャラ)
+- **5%**: 低ボーナス(シリーズキャラ)
 
 ### クエストタイプについて
 
@@ -309,6 +506,25 @@ Invalid quest_type: Event (expected: event)
 **対処法**:
 - reset_type=Daily: clearable_countを必ず設定(通常は1)
 - reset_type=__NULL__: clearable_countは空欄
+
+### Q4: MstStageEndConditionの作成判断がわからない
+
+**原因**: 通常のイベントクエストでは不要なテーブルを作成してしまう
+
+**対処法**:
+- **作成対象**: 降臨バトル、PVP、特殊なクリア条件があるクエストのみ
+- **作成しない**: ストーリークエスト、デイリークエスト、チャレンジクエスト等の通常クエスト
+- **判断基準**: 運営仕様書に「クリア条件」「ステージ終了条件」が明記されている場合のみ作成
+
+### Q5: MstQuestEventBonusScheduleの作成判断がわからない
+
+**原因**: 通常のイベントクエストでは不要なテーブルを作成してしまう
+
+**対処法**:
+- **作成対象**: 降臨バトル等で特効期間が複数段階ある場合のみ
+- **作成しない**: 通常のクエスト(特効期間がクエスト開催期間と同じ場合)
+- **判断基準**: 運営仕様書に「ボーナス期間」「特効スケジュール」が明記されている場合のみ作成
+- **設定項目**: mst_quest_id、start_at、end_at、event_bonus_group_id
 
 ## 検証
 

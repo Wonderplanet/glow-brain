@@ -94,17 +94,46 @@ description: 報酬設定の運営仕様書からマスタデータCSVを作成�
 
 #### ID採番ルール
 
+**重要**: 新規IDを採番する前に、必ず既存データの最大IDを確認してください。
+
+**既存データからの最大ID取得**:
+```
+1. マスタデータ/過去データ/{release_key}/{TableName}.csv を確認
+2. ID列から数値部分を抽出
+3. 最大値を取得
+4. 最大値 + 1 から採番開始
+```
+
 報酬のIDは以下の形式で採番します:
 
 **MstMissionReward**:
 ```
 mission_reward_{連番}
 ```
+- 連番: ゼロ埋めなし
+- 既存データの最大ID + 1から開始
 
 **MstQuestFirstTimeClearReward**:
 ```
 quest_first_time_clear_reward_{連番}
 ```
+- 連番: ゼロ埋めなし
+- 既存データの最大ID + 1から開始
+
+**MstAdventBattleReward**:
+```
+quest_raid_{series_id}{連番}_reward_group_{連番5桁}_{連番2桁}_{末尾連番}
+```
+- **末尾連番: ゼロ埋めなし** (`_1`, `_2`, `_3`, ...)
+- 例: `quest_raid_jig1_reward_group_00001_01_1`
+
+**MstStageEventReward**:
+```
+{連番}
+```
+- 既存データの最大ID + 1から開始
+- リリースキーごとにID範囲を管理
+- 例: 202601010のデータは569～
 
 **その他の報酬テーブル**:
 ```
@@ -113,10 +142,13 @@ quest_first_time_clear_reward_{連番}
 
 **例**:
 ```
-mission_reward_463 (MstMissionReward)
+mission_reward_463 (MstMissionReward - 既存最大462の次)
 quest_first_time_clear_reward_1 (MstQuestFirstTimeClearReward)
-advent_battle_reward_1 (MstAdventBattleReward)
+quest_raid_jig1_reward_group_00001_01_1 (MstAdventBattleReward - 末尾はゼロ埋めなし)
+569 (MstStageEventReward - 既存最大568の次)
 ```
+
+詳細は [references/id_naming_rules.md](references/id_naming_rules.md) を参照してください。
 
 #### 報酬グループID命名規則
 

@@ -87,6 +87,34 @@ description: イベント基本設定の運営仕様書からマスタデータC
 2. **MstEventI18n** - イベント名・吹き出しテキスト(多言語対応)
 3. **MstHomeBanner** - ホーム画面のバナー設定
 
+#### データ依存関係の自動管理
+
+**重要**: 親テーブルを作成した際は、依存する子テーブルも自動的に生成してください。
+
+**依存関係定義** (`config/table_dependencies.json` 参照):
+```json
+{
+  "MstEvent": ["MstEventI18n"]
+}
+```
+
+**自動生成ロジック**:
+1. **MstEvent**を作成 → **MstEventI18n**を自動生成
+   - id: `{parent_id}_{language}` (例: `event_jig_00001_ja`)
+   - mst_event_id: `{parent_id}`
+   - name、balloonを運営仕様書から抽出
+
+**実装の流れ**:
+```
+1. MstEvent作成
+   ↓ (自動)
+2. MstEventI18n生成
+
+3. MstHomeBanner作成
+```
+
+この自動生成により、親テーブル未生成による子テーブル欠落を防止できます。
+
 #### ID採番ルール
 
 イベント基本設定のIDは以下の形式で採番します:
