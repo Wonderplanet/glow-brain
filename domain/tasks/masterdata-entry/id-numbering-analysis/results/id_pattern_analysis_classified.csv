@@ -1,0 +1,54 @@
+テーブル,列,パターン,説明,分類
+MstDummyOutpost,id,[連番],"数字のみの通算連番（範囲: 1～90, 件数: 90）",数字のみの通算連番
+MstDummyUserI18n,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstDummyUserUnit,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstEventBonusUnit,id,[連番],"数字のみの通算連番（範囲: 1～72, 件数: 71）",数字のみの通算連番
+MstExchangeI18n,id,[連番],"数字のみの通算連番（範囲: 1～4, 件数: 4）",数字のみの通算連番
+MstIdleIncentiveItem,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstInGameSpecialRuleUnitStatus,id,[連番],"数字のみの通算連番（範囲: 1～25, 件数: 25）",数字のみの通算連番
+MstItemTransition,id,[連番],"数字のみの通算連番（範囲: 1～10041, 件数: 85）",数字のみの通算連番
+MstMissionAchievementDependency,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstMissionEventDependency,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstPackContent,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstQuestBonusUnit,id,[連番],"数字のみの通算連番（範囲: 1～77, 件数: 77）",数字のみの通算連番
+MstQuestEventBonusSchedule,id,[連番],"数字のみの通算連番（範囲: 1～12, 件数: 12）",数字のみの通算連番
+MstResultTipI18n,id,[連番],"数字のみの通算連番（範囲: 1～18, 件数: 18）",数字のみの通算連番
+MstSpecialAttackI18n,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstSpeechBalloonI18n,id,[連番],"数字のみの通算連番（範囲: 1～154, 件数: 100）",数字のみの通算連番
+MstStageEnhanceRewardParam,id,[連番],"数字のみの通算連番（範囲: 1～14, 件数: 14）",数字のみの通算連番
+MstStageEventReward,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstStageEventSetting,id,[連番],"数字のみの通算連番（範囲: 1～101, 件数: 100）",数字のみの通算連番
+MstStageReward,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstStoreProduct,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstTutorialTipI18n,id,[連番],"数字のみの通算連番（範囲: 1～28, 件数: 24）",数字のみの通算連番
+MstUnitFragmentConvert,id,[連番],"数字のみの通算連番（範囲: 1～8, 件数: 8）",数字のみの通算連番
+MstUnitGradeCoefficient,id,[連番],"数字のみの通算連番（範囲: 1～75, 件数: 40）",数字のみの通算連番
+MstUnitGradeUp,id,[連番],"数字のみの通算連番（範囲: 1～67, 件数: 32）",数字のみの通算連番
+MstUnitLevelUp,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstUnitRankCoefficient,id,[連番],"数字のみの通算連番（範囲: 1～6, 件数: 6）",数字のみの通算連番
+MstUnitRankUp,id,[連番],"数字のみの通算連番（範囲: 1～69, 件数: 48）",数字のみの通算連番
+MstUnitRoleBonus,id,[連番],"数字のみの通算連番（範囲: 1～6, 件数: 6）",数字のみの通算連番
+MstUserLevel,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstUserLevelBonus,id,[連番],"数字のみの通算連番（範囲: 1～21, 件数: 21）",数字のみの通算連番
+MstUserLevelBonusGroup,id,[連番],"数字のみの通算連番（範囲: 1～31, 件数: 31）",数字のみの通算連番
+OprGachaDisplayUnitI18n,id,[連番],"数字のみの通算連番（範囲: 1～107, 件数: 84）",数字のみの通算連番
+OprGachaUpper,id,[連番],"数字のみの通算連番（範囲: 1～26, 件数: 23）",数字のみの通算連番
+OprGachaUseResource,id,[連番],"数字のみの通算連番（範囲: 1～93, 件数: 81）",数字のみの通算連番
+OprProduct,id,[連番],"数字のみの通算連番（範囲: 1～100, 件数: 100）",数字のみの通算連番
+MstFragmentBox,id,fragment_box_[連番],"プレフィックス_fragment_box + 通算連番（範囲: 1～8, 件数: 8）",純粋な通算連番（プレフィックス）
+MstIdleIncentiveReward,id,mst_idle_incentive_reward_[連番],"プレフィックス_mst_idle_incentive_reward + 通算連番（範囲: 1～81, 件数: 81）",純粋な通算連番（プレフィックス）
+MstItemRarityTrade,id,rarity_trade_[連番],"プレフィックス_rarity_trade + 通算連番（範囲: 1～4, 件数: 4）",純粋な通算連番（プレフィックス）
+MstMissionDailyBonus,id,daily_bonus_[連番],"プレフィックス_daily_bonus + 通算連番（範囲: 1～7, 件数: 7）",純粋な通算連番（プレフィックス）
+MstMissionLimitedTerm,id,limited_term_[連番],"プレフィックス_limited_term + 通算連番（範囲: 1～48, 件数: 48）",純粋な通算連番（プレフィックス）
+MstMissionReward,id,mission_reward_[連番],"プレフィックス_mission_reward + 通算連番（範囲: 1～100, 件数: 100）",純粋な通算連番（プレフィックス）
+MstNgWord,id,ng_[連番],"プレフィックス_ng + 通算連番（範囲: 1～100, 件数: 100）",純粋な通算連番（プレフィックス）
+MstPvpDummy,id,pvp_dummy_[連番],"プレフィックス_pvp_dummy + 通算連番（範囲: 13～112, 件数: 100）",純粋な通算連番（プレフィックス）
+MstShopPass,id,premium_pass_[連番],"プレフィックス_premium_pass + 通算連番（範囲: 1～3, 件数: 3）",純粋な通算連番（プレフィックス）
+MstShopPassEffect,id,premium_pass_01_effect_[連番],"プレフィックス_premium_pass_01_effect + 通算連番（範囲: 1～2, 件数: 2）",純粋な通算連番（プレフィックス）
+MstUnitEncyclopediaEffect,id,unit_encyclopedia_effect_[連番],"プレフィックス_unit_encyclopedia_effect + 通算連番（範囲: 5～1300, 件数: 44）",純粋な通算連番（プレフィックス）
+MstUnitEncyclopediaReward,id,unit_encyclopedia_reward_rank_[連番],"プレフィックス_unit_encyclopedia_reward_rank + 通算連番（範囲: 5～1300, 件数: 44）",純粋な通算連番（プレフィックス）
+MstWhiteWord,id,wh_[連番],"プレフィックス_wh + 通算連番（範囲: 1～100, 件数: 100）",純粋な通算連番（プレフィックス）
+MstComebackBonus,id,comeback_1_[連番],"プレフィックス_comeback_1 + 通算連番（範囲: 1～7, 件数: 7）",バージョン付き通算連番
+MstDailyBonusReward,id,comeback_reward_1_[連番],"プレフィックス_comeback_reward_1 + 通算連番（範囲: 1～7, 件数: 7）",バージョン付き通算連番
+MstMissionAchievement,id,achievement_2_[連番],"プレフィックス_achievement_2 + 通算連番（範囲: 1～100, 件数: 100）",バージョン付き通算連番
+MstOutpostEnhancement,id,enhance_1_[連番],"プレフィックス_enhance_1 + 通算連番（範囲: 3～8, 件数: 6）",バージョン付き通算連番
