@@ -14,7 +14,7 @@ GLOWマスタデータ（glow-masterdata直下の全CSVファイル）のID採�
 ### 解決策
 1. ID採番ルールを変更する
 2. 各テーブルごとの特性を分析し、適切なID採番ルールを提案する
-3. 提案内容でGTRさんに確認を取る
+3. 提案内容でプランナーさんに確認を取る
 
 ### 期待される成果
 - マスタデータ作成手順書に、作成単位でのルールを適用できるので、手順書作成のルールを定められる
@@ -31,7 +31,7 @@ id-numbering-analysis/
 │   ├── id_pattern_analysis_filtered.csv        # カテゴリ別連番を除外した結果（53件）
 │   ├── id_pattern_analysis_classified.csv      # 分類済み結果（53件）
 │   ├── id_pattern_proposal.csv                 # 全テーブルの提案（165件）
-│   └── id_pattern_proposal_summary.csv         # 通算連番テーブルの提案（53件） ★GTRさん確認用
+│   └── id_pattern_proposal_summary.csv         # 通算連番テーブルの提案（53件） ★プランナーさん確認用
 └── scripts/                                    # 分析スクリプト
     ├── analyze_id_patterns.py                  # ID採番パターン分析スクリプト
     ├── classify_id_patterns.py                 # パターン分類スクリプト
@@ -82,7 +82,7 @@ id-numbering-analysis/
 
 ## 提案資料
 
-### GTRさん確認用ファイル
+### プランナーさん確認用ファイル
 
 **`results/id_pattern_proposal_summary.csv`** - 通算連番を使用している53テーブルに対する具体的な提案
 
@@ -150,7 +150,7 @@ id-numbering-analysis/
 3. **既存ID採番ルールとの整合性**: `domain/raw-data/google-drive/spread-sheet/GLOW/010_企画・仕様/GLOW_ID 管理/ID割り振りルール.csv` に沿った形で提案
 4. **自動生成の容易性**: マスタデータ自動作成時に過去の最大値を考慮する必要がないパターン
 
-## GTRさんへの確認事項
+## プランナーさんへの確認事項
 
 この提案資料（`results/id_pattern_proposal_summary.csv`）をもとに、以下を確認：
 
