@@ -33,9 +33,7 @@ MstStageEnhanceRewardParam,id,[連番],stage_enhance_reward_param_[min_threshold
 MstStageEventReward,id,[連番],stage_event_reward_[mst_stage_id]_[連番],イベントIDとステージIDごとに連番を振る。イベントとステージの組み合わせ単位で報酬が追加されるため、過去の最大値を確認する必要がない。,stage_event_reward_event_kai_1_stage_01_999 → 48文字
 MstStageEventSetting,id,[連番],stage_event_setting_[mst_stage_id],イベントIDごとに連番を振る。イベント単位で設定が追加されるため、イベント別の連番が適切。同じイベント内では連番が1から始まるため、過去の最大値を確認する必要がない。,stage_event_setting_event_kai_1_999 → 38文字
 MstStageReward,id,[連番],stage_reward_[mst_stage_id]_[連番],ステージIDごとに連番を振る。ステージ単位で報酬が追加されるため、ステージ別の連番が適切。同じステージ内では連番が1から始まるため、過去の最大値を確認する必要がない。,stage_reward_quest_main_normal_dan_00001_999 → 46文字
-MstStoreProduct,id,[連番],"store_product_mobile_[release_key]_[連番]：AppleStore,GooglePlay
-store_product_webstore_[release_key]_[連番]：Webstore
-store_product_[release_key]_[連番]：全て",現在は数字のみだが、接頭辞を追加してテーブル種別を明示。商品はrelease_key単位で追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。,store_product_202603011_999 → 28文字
+MstStoreProduct,id,[連番],"store_product_mobile_[release_key]_[連番]：AppleStore,GooglePlay,store_product_webstore_[release_key]_[連番]：Webstore,store_product_[release_key]_[連番]：全て",現在は数字のみだが、接頭辞を追加してテーブル種別を明示。商品はrelease_key単位で追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。,store_product_202603011_999 → 28文字
 MstTutorialTipI18n,id,[連番],tutorial_tip_[mst_tutorial_id]_[連番]_[language],現在は数字のみだが、接頭辞を追加してテーブル種別を明示。release_key単位でデータが追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。,tutorial_tip_202603011_999 → 27文字
 MstUnitEncyclopediaEffect,id,unit_encyclopedia_effect_[連番],[mst_unit_encyclopedia_reward_id]_effect_[連番],図鑑ランクをIDとする。ランクごとに1つの効果が対応するため、ランクそのものをIDとして使用。連番は不要。,unit_encyclopedia_effect_999 → 29文字
 MstUnitEncyclopediaReward,id,unit_encyclopedia_reward_rank_[連番],unit_encyclopedia_reward_[rank],図鑑ランクをIDとする。ランクごとに1つの報酬が対応するため、ランクそのものをIDとして使用。連番は不要。,unit_encyclopedia_reward_999 → 29文字
