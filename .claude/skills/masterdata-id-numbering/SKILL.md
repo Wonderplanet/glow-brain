@@ -1,7 +1,6 @@
 ---
 name: masterdata-id-numbering
 description: GLOWマスタデータのID採番ルール検索・生成・検証スキル。ID割り振りルール.csvを参照し、マスタデータ作成時の正確なID生成をサポートします。以下の場合に使用:(1) マスタデータのID採番ルールを確認、(2) 新しいIDを生成、(3) IDが採番ルールに準拠しているか検証、(4) カテゴリー別の採番パターンを調査。「ID採番」「採番ルール」「ID生成」「マスタデータID」「numbering」「ID割り振り」「ID検証」などのキーワードで使用します。
-allowed-tools: Read, Grep, Glob, Bash
 ---
 
 # GLOWマスタデータ ID採番ルール支援スキル
