@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """
-ID採番ルール提案を修正するスクリプト
-- カテゴリ別連番の問題を修正
-- 想定文字数列を追加
+ID採番ルール提案v3を生成するスクリプト
+- 接頭辞維持の原則を適用
+- release_keyをそのまま使用（月に複数回デプロイ対応）
+- カテゴリ別連番の問題を完全に解消
+- 想定最大文字数列を追加
 """
 
 import csv
@@ -12,39 +14,83 @@ from typing import Dict
 
 # テーブルごとの修正提案
 REVISED_PROPOSALS = {
-    # カテゴリ別連番の問題があるテーブルを修正
+    # ======== 新規追加（v3で追加） ========
+    "MstMissionReward": {
+        "pattern": "mission_reward_[group_id]_[連番]",
+        "reason": "group_idごとにグループ内連番を振る。同じgroup_idに複数の報酬レコードが存在するため、group_id + 連番の組み合わせが必要。接頭辞「mission_reward」は現状を維持。",
+        "max_length": "mission_reward_kai_00001_event_reward_99_999 → 42文字"
+    },
+    "MstMissionAchievement": {
+        "pattern": "achievement_2_[release_key]_[連番]",
+        "reason": "バージョン番号（_2）を維持しつつ、release_keyを追加してデプロイ単位を分離。criterion_type別連番の問題を解消。同一release_key内では連番が1から始まるため、過去の最大値確認が不要。月に複数回デプロイがある場合も対応可能。",
+        "max_length": "achievement_2_202603011_999 → 27文字"
+    },
+    "MstDailyBonusReward": {
+        "pattern": "comeback_reward_1_[release_key]_[連番]",
+        "reason": "現在の接頭辞（comeback_reward_1）を維持しつつ、release_keyを追加してデプロイ単位を分離。テーブル名は「DailyBonus」だが、実際の用途（カムバックボーナス）に合わせた接頭辞を尊重。月に複数回デプロイがある場合も対応可能。",
+        "max_length": "comeback_reward_1_202603011_999 → 32文字"
+    },
+    "MstNgWord": {
+        "pattern": "ng_[連番]",
+        "reason": "現状維持。継続的に蓄積される固定マスタデータであり、8,263件のデータが既に存在。特殊文字を含む単語も多数あり、単語そのものをIDにするのは不適切。通算連番だが、追加頻度が低く運用可能な範囲。",
+        "max_length": "ng_9999 → 7文字"
+    },
+    "MstWhiteWord": {
+        "pattern": "wh_[連番]",
+        "reason": "現状維持。MstNgWordと同様の理由。継続的に蓄積される固定マスタデータ。",
+        "max_length": "wh_9999 → 7文字"
+    },
+
+    # ======== 既存の提案を修正（v3で修正） ========
+    # release_keyをそのまま使用し、接頭辞を維持
     "MstResultTipI18n": {
-        "pattern": "result_tip_i18n_[release_key]_[連番]",
-        "reason": "リリースキーごとに連番を振る。リリースキー単位でデータが追加されるため、リリースキー別の連番が適切。同じリリース内では連番が1から始まるため、過去の最大値を確認する必要がない。",
-        "max_length": "result_tip_i18n_202509010_999 → 30文字"
+        "pattern": "result_tip_[release_key]_[連番]",
+        "reason": "現在は数字のみだが、接頭辞を追加してテーブル種別を明示。release_key単位でデータが追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。",
+        "max_length": "result_tip_202603011_999 → 25文字"
     },
     "MstStoreProduct": {
         "pattern": "store_product_[release_key]_[連番]",
-        "reason": "リリースキーごとに連番を振る。商品はリリースキー単位で追加されるため、リリースキー別の連番が適切。同じリリース内では連番が1から始まるため、過去の最大値を確認する必要がない。",
-        "max_length": "store_product_202509010_999 → 28文字"
+        "reason": "現在は数字のみだが、接頭辞を追加してテーブル種別を明示。商品はrelease_key単位で追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。",
+        "max_length": "store_product_202603011_999 → 28文字"
     },
     "MstTutorialTipI18n": {
-        "pattern": "tutorial_tip_i18n_[release_key]_[連番]",
-        "reason": "リリースキーごとに連番を振る。リリースキー単位でデータが追加されるため、リリースキー別の連番が適切。同じリリース内では連番が1から始まるため、過去の最大値を確認する必要がない。",
-        "max_length": "tutorial_tip_i18n_202509010_999 → 33文字"
+        "pattern": "tutorial_tip_[release_key]_[連番]",
+        "reason": "現在は数字のみだが、接頭辞を追加してテーブル種別を明示。release_key単位でデータが追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。",
+        "max_length": "tutorial_tip_202603011_999 → 27文字"
     },
     "OprProduct": {
         "pattern": "opr_product_[release_key]_[連番]",
-        "reason": "リリースキーごとに連番を振る。運営商品はリリースキー単位で追加されるため、リリースキー別の連番が適切。同じリリース内では連番が1から始まるため、過去の最大値を確認する必要がない。",
-        "max_length": "opr_product_202509010_999 → 26文字"
+        "reason": "現在は数字のみだが、接頭辞を追加してテーブル種別を明示。運営商品はrelease_key単位で追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。",
+        "max_length": "opr_product_202603011_999 → 26文字"
     },
-
-    # その他、カテゴリ別連番の問題があるテーブル
     "MstIdleIncentiveItem": {
         "pattern": "idle_incentive_item_[release_key]_[連番]",
-        "reason": "リリースキーごとに連番を振る。報酬アイテムはリリースキー単位で追加されるため、リリースキー別の連番が適切。同じリリース内では連番が1から始まるため、過去の最大値を確認する必要がない。",
-        "max_length": "idle_incentive_item_202509010_999 → 35文字"
+        "reason": "現在は数字のみだが、接頭辞を追加してテーブル種別を明示。release_key単位でデータが追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。",
+        "max_length": "idle_incentive_item_202603011_999 → 35文字"
     },
     "MstIdleIncentiveReward": {
         "pattern": "idle_incentive_reward_[release_key]_[連番]",
-        "reason": "リリースキーごとに連番を振る。報酬はリリースキー単位で追加されるため、リリースキー別の連番が適切。同じリリース内では連番が1から始まるため、過去の最大値を確認する必要がない。",
-        "max_length": "idle_incentive_reward_202509010_999 → 37文字"
+        "reason": "現在の接頭辞から「mst_」を除去して短縮し、release_keyを追加。release_key単位でデータが追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。",
+        "max_length": "idle_incentive_reward_202603011_999 → 37文字"
     },
+    "MstShopPass": {
+        "pattern": "premium_pass_[release_key]_[連番]",
+        "reason": "現在の接頭辞（premium_pass）を維持しつつ、release_keyを追加してデプロイ単位を分離。release_key単位でパスが追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。",
+        "max_length": "premium_pass_202603011_999 → 27文字"
+    },
+    "MstShopPassEffect": {
+        "pattern": "premium_pass_effect_[pass_id]_[連番]",
+        "reason": "現在の接頭辞（premium_pass）を維持し、pass_idごとに連番を振る。各パス単位で効果が追加されるため、パス別の連番が適切。同じパス内では連番が1から始まるため、過去の最大値を確認する必要がない。",
+        "max_length": "premium_pass_effect_premium_pass_202603011_999_999 → 54文字"
+    },
+    "MstPvpDummy": {
+        "pattern": "pvp_dummy_[release_key]_[連番]",
+        "reason": "現在の接頭辞（pvp_dummy）を維持しつつ、release_keyを追加してデプロイ単位を分離。release_key単位でダミーデータが追加されるため、release_key別の連番が適切。同一release_key内では連番が1から始まるため、過去の最大値を確認する必要がない。月に複数回デプロイがある場合も対応可能。",
+        "max_length": "pvp_dummy_202603011_999 → 24文字"
+    },
+
+    # ======== v2から変更なし（参考として維持） ========
+    # イベント関連
     "MstEventBonusUnit": {
         "pattern": "event_bonus_unit_[event_id]_[unit_id]",
         "reason": "イベントIDとユニットIDの組み合わせでIDを構成。イベントとユニットの組み合わせで一意に決まるため、連番は不要。既存のevent_idとunit_idを使うことで、過去の最大値を確認する必要がない。",
@@ -79,21 +125,6 @@ REVISED_PROPOSALS = {
         "pattern": "stage_enhance_reward_param_[enhance_level]",
         "reason": "強化レベルをIDとする。レベルごとに1つのパラメータが対応するため、レベルそのものをIDとして使用。連番は不要。",
         "max_length": "stage_enhance_reward_param_999 → 32文字"
-    },
-    "MstShopPass": {
-        "pattern": "shop_pass_[release_key]_[連番]",
-        "reason": "リリースキーごとに連番を振る。パスはリリースキー単位で追加されるため、リリースキー別の連番が適切。同じリリース内では連番が1から始まるため、過去の最大値を確認する必要がない。",
-        "max_length": "shop_pass_202509010_999 → 24文字"
-    },
-    "MstShopPassEffect": {
-        "pattern": "shop_pass_effect_[pass_id]_[連番]",
-        "reason": "パスIDごとに連番を振る。各パス単位で効果が追加されるため、パス別の連番が適切。同じパス内では連番が1から始まるため、過去の最大値を確認する必要がない。",
-        "max_length": "shop_pass_effect_shop_pass_202509010_999_999 → 48文字"
-    },
-    "MstPvpDummy": {
-        "pattern": "pvp_dummy_[release_key]_[連番]",
-        "reason": "リリースキーごとに連番を振る。ダミーデータはリリースキー単位で追加されるため、リリースキー別の連番が適切。同じリリース内では連番が1から始まるため、過去の最大値を確認する必要がない。",
-        "max_length": "pvp_dummy_202509010_999 → 24文字"
     },
     "MstUnitEncyclopediaEffect": {
         "pattern": "unit_encyclopedia_effect_[rank]",
@@ -137,7 +168,12 @@ def calculate_max_length(pattern: str) -> str:
 
     # よく使われる変数の想定最大値
     replacements = {
-        r'\[release_key\]': '202509010',  # 9文字
+        # v3で追加された変数
+        r'\[group_id\]': 'kai_00001_event_reward_99',  # 23文字（最大想定）
+        r'\[pass_id\]': 'premium_pass_202603011_999',  # 27文字（最大想定）
+
+        # 既存の変数
+        r'\[release_key\]': '202603011',  # 9文字（YYYYMMDDN形式）
         r'\[event_id\]': 'event_kai_1',  # 13文字（最大想定）
         r'\[quest_id\]': 'quest_main_normal_dan_00001',  # 28文字
         r'\[stage_id\]': 'stage_01',  # 8文字
@@ -145,8 +181,6 @@ def calculate_max_length(pattern: str) -> str:
         r'\[unit_id\]': 'chara_kai_00701',  # 16文字
         r'\[user_id\]': '999',  # 3文字
         r'\[pack_id\]': 'start_chara_pack_1',  # 19文字
-        r'\[pass_id\]': 'shop_pass_202509010_999',  # 24文字
-        r'\[group_id\]': 'daily_bonus_reward_1_1',  # 23文字
         r'\[mst_item_id\]': 'box_glo_00001',  # 13文字
         r'\[schedule_id\]': 'comeback_daily_bonus_1',  # 23文字
         r'\[login_day_count\]': '7',  # 2文字
@@ -195,6 +229,7 @@ def revise_proposals(input_csv: Path, output_csv: Path):
         rows = list(reader)
 
     # 提案を修正
+    revised_tables = []
     for row in rows:
         table = row['テーブル']
 
@@ -204,6 +239,7 @@ def revise_proposals(input_csv: Path, output_csv: Path):
             row['提案パターン'] = revision['pattern']
             row['提案理由'] = revision['reason']
             row['想定最大文字数'] = revision['max_length']
+            revised_tables.append(table)
         else:
             # 修正提案がない場合は、想定文字数のみ計算
             row['想定最大文字数'] = calculate_max_length(row['提案パターン'])
@@ -216,14 +252,15 @@ def revise_proposals(input_csv: Path, output_csv: Path):
         writer.writerows(rows)
 
     print(f"修正完了: {len(rows)}件")
-    print(f"修正適用: {len([r for r in rows if r['テーブル'] in REVISED_PROPOSALS])}件")
+    print(f"修正適用: {len(revised_tables)}件")
+    print(f"修正されたテーブル: {', '.join(sorted(revised_tables))}")
     print(f"出力先: {output_csv}")
 
 
 def main():
     base_dir = Path('domain/tasks/masterdata-entry/id-numbering-analysis/results')
-    input_csv = base_dir / 'id_pattern_proposal_summary.csv'
-    output_csv = base_dir / 'id_pattern_proposal_summary_v2.csv'
+    input_csv = base_dir / 'id_pattern_proposal_summary_v2.csv'
+    output_csv = base_dir / 'id_pattern_proposal_summary_v3.csv'
 
     revise_proposals(input_csv, output_csv)
 
