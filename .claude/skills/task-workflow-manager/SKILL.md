@@ -1,6 +1,7 @@
 ---
 name: task-workflow-manager
 description: ユーザーのやりたいことを段階的に質問し、domain/tasks配下に作業フォルダを作成して成果を確実に積み上げるスキル。「タスク管理」「プロジェクト開始」「アイデア実現」「やりたいこと」「成果を残す」「新しいタスク」などで使用します。AIを使った作業で成果が曖昧になる問題を解決し、確実に成果を積み上げられるワークフローを提供します。
+disable-model-invocation: false
 ---
 
 # Task Workflow Manager
