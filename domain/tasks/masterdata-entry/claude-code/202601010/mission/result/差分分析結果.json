@@ -1,0 +1,987 @@
+[
+  {
+    "filename": "MstMissionEventDailyBonus.csv",
+    "claude_file": "domain/tasks/masterdata-entry/claude-code/202601010/mission/generated/MstMissionEventDailyBonus.csv",
+    "correct_file": "domain/raw-data/masterdata/released/202601010/tables/MstMissionEventDailyBonus.csv",
+    "exists_in_both": true,
+    "structure_diff": {
+      "claude_has_table_row": true,
+      "correct_has_table_row": false,
+      "table_row_match": false,
+      "claude_columns": [
+        "ENABLE",
+        "id",
+        "release_key",
+        "mst_mission_event_daily_bonus_schedule_id",
+        "login_day_count",
+        "mst_mission_reward_group_id",
+        "sort_order",
+        "備考"
+      ],
+      "correct_columns": [
+        "ENABLE",
+        "id",
+        "release_key",
+        "mst_mission_event_daily_bonus_schedule_id",
+        "login_day_count",
+        "mst_mission_reward_group_id",
+        "sort_order",
+        "備考"
+      ],
+      "columns_match": true,
+      "claude_record_count": 17,
+      "correct_record_count": 17
+    },
+    "data_diff": {
+      "field_differences": {
+        "備考": [
+          {
+            "row": 1,
+            "claude": "",
+            "correct": "ピックアップガシャチケット",
+            "is_critical": false
+          },
+          {
+            "row": 2,
+            "claude": "",
+            "correct": "コイン",
+            "is_critical": false
+          },
+          {
+            "row": 3,
+            "claude": "",
+            "correct": "プリズム",
+            "is_critical": false
+          },
+          {
+            "row": 4,
+            "claude": "",
+            "correct": "メモリーフラグメント・初級",
+            "is_critical": false
+          },
+          {
+            "row": 5,
+            "claude": "",
+            "correct": "メモリーフラグメント・中級",
+            "is_critical": false
+          },
+          {
+            "row": 6,
+            "claude": "",
+            "correct": "カラーメモリー・グリーン",
+            "is_critical": false
+          },
+          {
+            "row": 7,
+            "claude": "",
+            "correct": "スペシャルガシャチケット",
+            "is_critical": false
+          },
+          {
+            "row": 8,
+            "claude": "",
+            "correct": "コイン",
+            "is_critical": false
+          },
+          {
+            "row": 9,
+            "claude": "",
+            "correct": "プリズム",
+            "is_critical": false
+          },
+          {
+            "row": 10,
+            "claude": "",
+            "correct": "メモリーフラグメント・初級",
+            "is_critical": false
+          },
+          {
+            "row": 11,
+            "claude": "",
+            "correct": "カラーメモリー・レッド",
+            "is_critical": false
+          },
+          {
+            "row": 12,
+            "claude": "",
+            "correct": "プリズム",
+            "is_critical": false
+          },
+          {
+            "row": 13,
+            "claude": "",
+            "correct": "カラーメモリー・グリーン",
+            "is_critical": false
+          },
+          {
+            "row": 14,
+            "claude": "",
+            "correct": "コイン",
+            "is_critical": false
+          },
+          {
+            "row": 15,
+            "claude": "",
+            "correct": "カラーメモリー・レッド",
+            "is_critical": false
+          },
+          {
+            "row": 16,
+            "claude": "",
+            "correct": "スペシャルガシャチケット",
+            "is_critical": false
+          },
+          {
+            "row": 17,
+            "claude": "",
+            "correct": "ピックアップガシャチケット",
+            "is_critical": false
+          }
+        ]
+      },
+      "row_by_row_diff": [
+        {
+          "row_number": 1,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "ピックアップガシャチケット",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 2,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "コイン",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 3,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "プリズム",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 4,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "メモリーフラグメント・初級",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 5,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "メモリーフラグメント・中級",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 6,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "カラーメモリー・グリーン",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 7,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "スペシャルガシャチケット",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 8,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "コイン",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 9,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "プリズム",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 10,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "メモリーフラグメント・初級",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 11,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "カラーメモリー・レッド",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 12,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "プリズム",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 13,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "カラーメモリー・グリーン",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 14,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "コイン",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 15,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "カラーメモリー・レッド",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 16,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "スペシャルガシャチケット",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 17,
+          "differences": {
+            "備考": {
+              "claude": "",
+              "correct": "ピックアップガシャチケット",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        }
+      ],
+      "critical_columns": [
+        "id",
+        "release_key",
+        "mst_mission_event_daily_bonus_schedule_id",
+        "login_day_count",
+        "mst_mission_reward_group_id",
+        "sort_order"
+      ],
+      "non_critical_columns": [
+        "備考"
+      ]
+    },
+    "accuracy": {
+      "record_count_match": true,
+      "record_count_accuracy": "17/17",
+      "critical_fields": {
+        "correct_cells": 102,
+        "total_cells": 102,
+        "accuracy_rate": "100.00%",
+        "error_count": 0
+      },
+      "non_critical_fields": {
+        "correct_cells": 0,
+        "total_cells": 17,
+        "accuracy_rate": "0.00%",
+        "error_count": 17
+      },
+      "overall": {
+        "correct_cells": 102,
+        "total_cells": 119,
+        "accuracy_rate": "85.71%"
+      }
+    }
+  },
+  {
+    "filename": "MstMissionEventDailyBonusSchedule.csv",
+    "claude_file": "domain/tasks/masterdata-entry/claude-code/202601010/mission/generated/MstMissionEventDailyBonusSchedule.csv",
+    "correct_file": "domain/raw-data/masterdata/released/202601010/tables/MstMissionEventDailyBonusSchedule.csv",
+    "exists_in_both": true,
+    "structure_diff": {
+      "claude_has_table_row": true,
+      "correct_has_table_row": false,
+      "table_row_match": false,
+      "claude_columns": [
+        "ENABLE",
+        "id",
+        "release_key",
+        "mst_event_id",
+        "start_at",
+        "end_at"
+      ],
+      "correct_columns": [
+        "ENABLE",
+        "id",
+        "release_key",
+        "mst_event_id",
+        "start_at",
+        "end_at"
+      ],
+      "columns_match": true,
+      "claude_record_count": 1,
+      "correct_record_count": 1
+    },
+    "data_diff": {
+      "field_differences": {},
+      "row_by_row_diff": [],
+      "critical_columns": [
+        "id",
+        "release_key",
+        "mst_event_id",
+        "start_at",
+        "end_at"
+      ],
+      "non_critical_columns": [
+        "備考"
+      ]
+    },
+    "accuracy": {
+      "record_count_match": true,
+      "record_count_accuracy": "1/1",
+      "critical_fields": {
+        "correct_cells": 5,
+        "total_cells": 5,
+        "accuracy_rate": "100.00%",
+        "error_count": 0
+      },
+      "non_critical_fields": {
+        "correct_cells": 1,
+        "total_cells": 1,
+        "accuracy_rate": "100.00%",
+        "error_count": 0
+      },
+      "overall": {
+        "correct_cells": 6,
+        "total_cells": 6,
+        "accuracy_rate": "100.00%"
+      }
+    }
+  },
+  {
+    "filename": "MstMissionReward.csv",
+    "claude_file": "domain/tasks/masterdata-entry/claude-code/202601010/mission/generated/MstMissionReward.csv",
+    "correct_file": "domain/raw-data/masterdata/released/202601010/tables/MstMissionReward.csv",
+    "exists_in_both": true,
+    "structure_diff": {
+      "claude_has_table_row": true,
+      "correct_has_table_row": false,
+      "table_row_match": false,
+      "claude_columns": [
+        "ENABLE",
+        "id",
+        "release_key",
+        "group_id",
+        "resource_type",
+        "resource_id",
+        "resource_amount",
+        "sort_order",
+        "備考"
+      ],
+      "correct_columns": [
+        "ENABLE",
+        "id",
+        "release_key",
+        "group_id",
+        "resource_type",
+        "resource_id",
+        "resource_amount",
+        "sort_order",
+        "備考"
+      ],
+      "columns_match": true,
+      "claude_record_count": 17,
+      "correct_record_count": 17
+    },
+    "data_diff": {
+      "field_differences": {
+        "id": [
+          {
+            "row": 1,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_01_1",
+            "correct": "mission_reward_463",
+            "is_critical": true
+          },
+          {
+            "row": 2,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_02_1",
+            "correct": "mission_reward_464",
+            "is_critical": true
+          },
+          {
+            "row": 3,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_03_1",
+            "correct": "mission_reward_465",
+            "is_critical": true
+          },
+          {
+            "row": 4,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_04_1",
+            "correct": "mission_reward_466",
+            "is_critical": true
+          },
+          {
+            "row": 5,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_05_1",
+            "correct": "mission_reward_467",
+            "is_critical": true
+          },
+          {
+            "row": 6,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_06_1",
+            "correct": "mission_reward_468",
+            "is_critical": true
+          },
+          {
+            "row": 7,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_07_1",
+            "correct": "mission_reward_469",
+            "is_critical": true
+          },
+          {
+            "row": 8,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_08_1",
+            "correct": "mission_reward_470",
+            "is_critical": true
+          },
+          {
+            "row": 9,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_09_1",
+            "correct": "mission_reward_471",
+            "is_critical": true
+          },
+          {
+            "row": 10,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_10_1",
+            "correct": "mission_reward_472",
+            "is_critical": true
+          },
+          {
+            "row": 11,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_11_1",
+            "correct": "mission_reward_473",
+            "is_critical": true
+          },
+          {
+            "row": 12,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_12_1",
+            "correct": "mission_reward_474",
+            "is_critical": true
+          },
+          {
+            "row": 13,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_13_1",
+            "correct": "mission_reward_475",
+            "is_critical": true
+          },
+          {
+            "row": 14,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_14_1",
+            "correct": "mission_reward_476",
+            "is_critical": true
+          },
+          {
+            "row": 15,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_15_1",
+            "correct": "mission_reward_477",
+            "is_critical": true
+          },
+          {
+            "row": 16,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_16_1",
+            "correct": "mission_reward_478",
+            "is_critical": true
+          },
+          {
+            "row": 17,
+            "claude": "mission_reward_event_jig_00001_daily_bonus_17_1",
+            "correct": "mission_reward_479",
+            "is_critical": true
+          }
+        ],
+        "備考": [
+          {
+            "row": 1,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 2,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 3,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 4,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 5,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 6,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 7,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 8,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 9,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 10,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 11,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 12,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 13,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 14,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 15,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 16,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          },
+          {
+            "row": 17,
+            "claude": "",
+            "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+            "is_critical": false
+          }
+        ]
+      },
+      "row_by_row_diff": [
+        {
+          "row_number": 1,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_01_1",
+              "correct": "mission_reward_463",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 2,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_02_1",
+              "correct": "mission_reward_464",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 3,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_03_1",
+              "correct": "mission_reward_465",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 4,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_04_1",
+              "correct": "mission_reward_466",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 5,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_05_1",
+              "correct": "mission_reward_467",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 6,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_06_1",
+              "correct": "mission_reward_468",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 7,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_07_1",
+              "correct": "mission_reward_469",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 8,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_08_1",
+              "correct": "mission_reward_470",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 9,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_09_1",
+              "correct": "mission_reward_471",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 10,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_10_1",
+              "correct": "mission_reward_472",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 11,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_11_1",
+              "correct": "mission_reward_473",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 12,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_12_1",
+              "correct": "mission_reward_474",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 13,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_13_1",
+              "correct": "mission_reward_475",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 14,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_14_1",
+              "correct": "mission_reward_476",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 15,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_15_1",
+              "correct": "mission_reward_477",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 16,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_16_1",
+              "correct": "mission_reward_478",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        },
+        {
+          "row_number": 17,
+          "differences": {
+            "id": {
+              "claude": "mission_reward_event_jig_00001_daily_bonus_17_1",
+              "correct": "mission_reward_479",
+              "is_critical": true
+            },
+            "備考": {
+              "claude": "",
+              "correct": "地獄楽 いいジャン祭 特別ログインボーナス",
+              "is_critical": false
+            }
+          },
+          "status": "exists_in_both"
+        }
+      ],
+      "critical_columns": [
+        "id",
+        "release_key",
+        "group_id",
+        "resource_type",
+        "resource_id",
+        "resource_amount",
+        "sort_order"
+      ],
+      "non_critical_columns": [
+        "備考"
+      ]
+    },
+    "accuracy": {
+      "record_count_match": true,
+      "record_count_accuracy": "17/17",
+      "critical_fields": {
+        "correct_cells": 102,
+        "total_cells": 119,
+        "accuracy_rate": "85.71%",
+        "error_count": 17
+      },
+      "non_critical_fields": {
+        "correct_cells": 0,
+        "total_cells": 17,
+        "accuracy_rate": "0.00%",
+        "error_count": 17
+      },
+      "overall": {
+        "correct_cells": 102,
+        "total_cells": 136,
+        "accuracy_rate": "75.00%"
+      }
+    },
+    "correct_total_records": 64,
+    "correct_filtered_records": 17
+  }
+]
