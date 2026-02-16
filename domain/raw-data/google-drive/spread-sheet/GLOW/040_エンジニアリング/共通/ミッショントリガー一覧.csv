@@ -76,7 +76,7 @@ mission1,2,3,4,5のgroup_keyにgroupKey1と設定する",全て対象,mission_fu
 全ユニットの内でいずれかがLv. Y に到達,ユニット,達成条件,UnitLevel,NULL(未指定),到達して欲しいユニットレベル,全て対象,unit_level,
 指定ユニットがLv. Y に到達,ユニット,達成条件,SpecificUnitLevel,ユニットID（mst_units.id）,到達して欲しいユニットレベル,全て対象,specific_unit_level,
 指定したユニットのランクアップ回数がY回以上,ユニット,達成条件,SpecificUnitRankUpCount,ユニットID（mst_units.id）,指定ユニットのランクアップをしてほしい回数,全て対象,unit_break_count,
-指定したユニットのグレードアップ回数がY回以上,ユニット,達成条件,SpecificUnitGradeUpCount,ユニットID（mst_units.id）,指定ユニットのグレードアップをしてほしい回数,全て対象,unit_evolution_count,
+キャラXをグレードYまで強化しよう,ユニット,達成条件,SpecificUnitGradeUpCount,ユニットID（mst_units.id）,指定キャラに到達してほしいグレード,全て対象,unit_evolution_count,
 ストアレビューを記載,システム,達成条件,ReviewCompleted,NULL(未指定),1,"アチーブメント
 初心者",review_completed,"挑戦を押したら無条件でクリアとするミッション。厳密なチェックは行わない。
 mission/clear_on_call APIで達成できる。"
