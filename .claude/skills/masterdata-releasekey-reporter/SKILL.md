@@ -104,7 +104,7 @@ domain/raw-data/masterdata/released/{RELEASE_KEY}/
 2. テーブル別CSVファイルを生成（`tables/` - 対象リリースキーと一致するレコード）
 3. 統計JSON（summary.json / tables.json）を生成
 
-#### 過去データの抽出（オプション）
+#### 過去データの抽出
 
 対象リリースキーより小さいリリースキーのデータを抽出します:
 
