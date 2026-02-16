@@ -1,3 +1,0 @@
-TABLE,MstMissionEventDailyBonusSchedule,MstMissionEventDailyBonusSchedule,MstMissionEventDailyBonusSchedule,MstMissionEventDailyBonusSchedule,MstMissionEventDailyBonusSchedule
-ENABLE,id,release_key,mst_event_id,start_at,end_at
-e,event_jig_00001_daily_bonus,202601010,event_jig_00001,2026-01-16 15:00:00,2026-02-02 03:59:59
