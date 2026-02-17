@@ -156,17 +156,17 @@ flowchart LR
 
 バトル開始と同時に7体を各位置に配置し、追加で雑魚10体を流す。**2体倒すとw1へ切り替わる**。
 
-| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | 移動開始条件 | score | override_bp |
-|----|------|------|-----------|--------|---------|------|------|------|------|------------|-------|------------|
-| `_1` | 1 | InitialSummon | `c_osh_00301_...Normal_Yellow` | 1 | **2.3** | None | Default | 3 | 0.5 | ElapsedTime(250) | 50 | 250 |
-| `_2` | 2 | InitialSummon | `c_osh_00401_...Normal_Colorless` | 1 | **2.5** | None | Default | 5 | 1 | ElapsedTime(250) | 50 | 500 |
-| `_3` | 3 | InitialSummon | `c_osh_00201_...Normal_Red` | 1 | **2.7** | None | Default | 3 | 1.5 | ElapsedTime(250) | 50 | 250 |
-| `_4` | 4 | InitialSummon | `e_glo_00002_...Normal_Colorless` | 1 | **2.1** | None | Default | 2 | 0.5 | ElapsedTime(200) | 20 | 10 |
-| `_5` | 5 | InitialSummon | `e_glo_00002_...Normal_Colorless` | 1 | **2.9** | None | Default | 2 | 0.5 | ElapsedTime(250) | 20 | 10 |
-| `_6` | 6 | InitialSummon | `e_glo_00002_...Normal_Colorless` | 1 | **0.9** | None | Default | 2 | 0.5 | EnterTargetKoma(1) | 20 | 10 |
-| `_7` | 7 | InitialSummon | `e_glo_00002_...Normal_Colorless` | 1 | **1.3** | None | Default | 2 | 0.5 | ElapsedTime(500) | 20 | 10 |
-| `_8` | 8 | ElapsedTime(0) | `e_glo_00002_...Normal_Green` | **10** | （空） | None | Default | 1 | 1 | None | 10 | 50 |
-| `_9` | groupchange_1 | **FriendUnitDead(2)** | SwitchSequenceGroup(w1) | — | — | — | — | — | — | — | — | — |
+| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | 移動開始条件 | score | override_bp | 説明 |
+|----|------|------|-----------|--------|---------|------|------|------|------|------------|-------|------------|------|
+| `_1` | 1 | InitialSummon | `c_osh_00301_...Normal_Yellow` | 1 | **2.3** | None | Default | 3 | 0.5 | ElapsedTime(250) | 50 | 250 | バトル開始時にYellow通常敵(osh_00301)を位置2.3に1体出現。HP×3/ATK×0.5、2500ms後に移動開始 |
+| `_2` | 2 | InitialSummon | `c_osh_00401_...Normal_Colorless` | 1 | **2.5** | None | Default | 5 | 1 | ElapsedTime(250) | 50 | 500 | バトル開始時にColorless通常敵(osh_00401)を位置2.5に1体出現。HP×5/ATK×1、2500ms後に移動開始 |
+| `_3` | 3 | InitialSummon | `c_osh_00201_...Normal_Red` | 1 | **2.7** | None | Default | 3 | 1.5 | ElapsedTime(250) | 50 | 250 | バトル開始時にRed通常敵(osh_00201)を位置2.7に1体出現。HP×3/ATK×1.5、2500ms後に移動開始 |
+| `_4` | 4 | InitialSummon | `e_glo_00002_...Normal_Colorless` | 1 | **2.1** | None | Default | 2 | 0.5 | ElapsedTime(200) | 20 | 10 | バトル開始時に無属性雑魚を位置2.1に1体出現。HP×2/ATK×0.5、2000ms後に移動開始 |
+| `_5` | 5 | InitialSummon | `e_glo_00002_...Normal_Colorless` | 1 | **2.9** | None | Default | 2 | 0.5 | ElapsedTime(250) | 20 | 10 | バトル開始時に無属性雑魚を位置2.9に1体出現。HP×2/ATK×0.5、2500ms後に移動開始 |
+| `_6` | 6 | InitialSummon | `e_glo_00002_...Normal_Colorless` | 1 | **0.9** | None | Default | 2 | 0.5 | EnterTargetKoma(1) | 20 | 10 | バトル開始時に無属性雑魚を位置0.9（最前列付近）に1体出現。コマ1到達後に移動開始（特殊設定） |
+| `_7` | 7 | InitialSummon | `e_glo_00002_...Normal_Colorless` | 1 | **1.3** | None | Default | 2 | 0.5 | ElapsedTime(500) | 20 | 10 | バトル開始時に無属性雑魚を位置1.3に1体出現。HP×2/ATK×0.5、5000ms後に移動開始 |
+| `_8` | 8 | ElapsedTime(0) | `e_glo_00002_...Normal_Green` | **10** | （空） | None | Default | 1 | 1 | None | 10 | 50 | バトル開始直後（0ms）に緑通常雑魚を10体一斉召喚。HP×1/ATK×1の最弱雑魚、即移動開始 |
+| `_9` | groupchange_1 | **FriendUnitDead(2)** | SwitchSequenceGroup(w1) | — | — | — | — | — | — | — | — | — | 累計2体撃破でw1グループへ切り替え |
 
 **ポイント:**
 - elem1〜3: oshシリーズの3キャラ（Normal種別）を位置2.3/2.5/2.7に分散配置。ElapsedTime(250)=2500ms後に移動開始
@@ -180,18 +180,18 @@ flowchart LR
 
 切り替え直後に AdventBoss1 のボスを投入。累計9体で w2 へ。
 
-| id | elem | 条件（グループ切替後の経過時間 or 累計撃破数） | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp |
-|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|
-| `_10` | 9 | GroupActivated(0) | `e_glo_00002_...Boss_Green` | 1 | **1.8** | **Fall0** | **AdventBoss1** | 5 | 3 | 50 | 300 |
-| `_11` | 10 | GroupActivated(250) | `e_glo_00002_...Normal_Green` | **10** | （空） | None | Default | 8 | 2.5 | 10 | 50 |
-| `_12` | 11 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | **3** | **2.5** | **Fall0** | Default | 8 | 2.5 | 10 | 50 |
-| `_13` | 12 | GroupActivated(0) | `e_glo_00002_...Normal_Colorless` | 1 | **2.2** | **Fall0** | Default | 10 | 0.5 | 20 | 10 |
-| `_14` | 12 | GroupActivated(0) | `e_glo_00002_...Normal_Colorless` | 1 | **2.4** | **Fall0** | Default | 10 | 0.5 | 20 | 10 |
-| `_15` | 12 | GroupActivated(0) | `e_glo_00002_...Normal_Colorless` | 1 | **2.6** | **Fall0** | Default | 10 | 0.5 | 20 | 10 |
-| `_16` | 12 | GroupActivated(0) | `e_glo_00002_...Normal_Colorless` | 1 | **2.8** | **Fall0** | Default | 10 | 0.5 | 20 | 10 |
-| `_17` | 13 | **FriendUnitDead(12)** | `e_glo_00002_...Normal_Green` | 2 | （空） | None | Default | 8 | 2.5 | 30 | 50 |
-| `_18` | 14 | **FriendUnitDead(12)** | `e_glo_00002_...Normal_Green` | **5** | **2.5** | **Fall0** | Default | 8 | 2.5 | 30 | 50 |
-| `_19` | groupchange_2 | **FriendUnitDead(9)** | SwitchSequenceGroup(w2) | — | — | — | — | — | — | — | — |
+| id | elem | 条件（グループ切替後の経過時間 or 累計撃破数） | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp | 説明 |
+|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|------|
+| `_10` | 9 | GroupActivated(0) | `e_glo_00002_...Boss_Green` | 1 | **1.8** | **Fall0** | **AdventBoss1** | 5 | 3 | 50 | 300 | グループ開始直後にAdventBoss1オーラの緑ボスを位置1.8へ落下召喚。HP×5/ATK×3 |
+| `_11` | 10 | GroupActivated(250) | `e_glo_00002_...Normal_Green` | **10** | （空） | None | Default | 8 | 2.5 | 10 | 50 | グループ開始2500ms後に緑通常雑魚を10体一斉召喚。HP×8/ATK×2.5 |
+| `_12` | 11 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | **3** | **2.5** | **Fall0** | Default | 8 | 2.5 | 10 | 50 | グループ開始直後に緑通常雑魚を3体まとめて位置2.5へ落下召喚。HP×8/ATK×2.5 |
+| `_13` | 12 | GroupActivated(0) | `e_glo_00002_...Normal_Colorless` | 1 | **2.2** | **Fall0** | Default | 10 | 0.5 | 20 | 10 | グループ開始直後に無属性雑魚を位置2.2へ1体落下召喚。HP×10/ATK×0.5（elem12の1行目） |
+| `_14` | 12 | GroupActivated(0) | `e_glo_00002_...Normal_Colorless` | 1 | **2.4** | **Fall0** | Default | 10 | 0.5 | 20 | 10 | グループ開始直後に無属性雑魚を位置2.4へ1体落下召喚。HP×10/ATK×0.5（elem12の2行目） |
+| `_15` | 12 | GroupActivated(0) | `e_glo_00002_...Normal_Colorless` | 1 | **2.6** | **Fall0** | Default | 10 | 0.5 | 20 | 10 | グループ開始直後に無属性雑魚を位置2.6へ1体落下召喚。HP×10/ATK×0.5（elem12の3行目） |
+| `_16` | 12 | GroupActivated(0) | `e_glo_00002_...Normal_Colorless` | 1 | **2.8** | **Fall0** | Default | 10 | 0.5 | 20 | 10 | グループ開始直後に無属性雑魚を位置2.8へ1体落下召喚。HP×10/ATK×0.5（elem12の4行目） |
+| `_17` | 13 | **FriendUnitDead(12)** | `e_glo_00002_...Normal_Green` | 2 | （空） | None | Default | 8 | 2.5 | 30 | 50 | 累計12体撃破後に緑通常雑魚を2体追加召喚。HP×8/ATK×2.5 |
+| `_18` | 14 | **FriendUnitDead(12)** | `e_glo_00002_...Normal_Green` | **5** | **2.5** | **Fall0** | Default | 8 | 2.5 | 30 | 50 | 累計12体撃破後に緑通常雑魚を5体まとめて位置2.5へ落下召喚。HP×8/ATK×2.5 |
+| `_19` | groupchange_2 | **FriendUnitDead(9)** | SwitchSequenceGroup(w2) | — | — | — | — | — | — | — | — | 累計9体撃破でw2グループへ切り替え |
 
 **ポイント:**
 - elem9: AdventBoss1 オーラのボス（hp倍5, atk倍3）。Fall0アニメで落下演出つき
@@ -206,15 +206,15 @@ flowchart LR
 
 w1より強いAdventBoss1ボスを投入。累計15体でw3へ。
 
-| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp |
-|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|
-| `_20` | 15 | GroupActivated(0) | `c_osh_00301_...Boss_Yellow` | 1 | **2.5** | **Fall0** | **AdventBoss1** | **10** | **4** | 100 | 300 |
-| `_21` | 16 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 3 | （空） | None | Default | **20** | **3** | 10 | 50 |
-| `_22` | 17 | GroupActivated(500) | `e_glo_00002_...Normal_Green` | 5 | （空） | None | Default | 20 | 3 | 10 | 50 |
-| `_23` | 18 | FriendUnitDead(19) | `e_glo_00002_...Normal_Green` | 5 | （空） | None | Default | 20 | 3 | 30 | 50 |
-| `_24` | 19 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 2 | **2.2** | **Fall0** | Default | 20 | 3 | 10 | 50 |
-| `_25` | 20 | GroupActivated(750) | `e_glo_00002_...Normal_Green` | 2 | **1.7** | **Fall0** | Default | 20 | 3 | 10 | 50 |
-| `_26` | groupchange_3 | **FriendUnitDead(15)** | SwitchSequenceGroup(w3) | — | — | — | — | — | — | — | — |
+| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp | 説明 |
+|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|------|
+| `_20` | 15 | GroupActivated(0) | `c_osh_00301_...Boss_Yellow` | 1 | **2.5** | **Fall0** | **AdventBoss1** | **10** | **4** | 100 | 300 | グループ開始直後にAdventBoss1オーラのYellowボス(osh_00301)を位置2.5へ落下召喚。HP×10/ATK×4 |
+| `_21` | 16 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 3 | （空） | None | Default | **20** | **3** | 10 | 50 | グループ開始直後に緑通常雑魚を3体一斉召喚。HP×20/ATK×3（w1から大幅強化） |
+| `_22` | 17 | GroupActivated(500) | `e_glo_00002_...Normal_Green` | 5 | （空） | None | Default | 20 | 3 | 10 | 50 | グループ開始5000ms後に緑通常雑魚を5体一斉召喚。HP×20/ATK×3 |
+| `_23` | 18 | FriendUnitDead(19) | `e_glo_00002_...Normal_Green` | 5 | （空） | None | Default | 20 | 3 | 30 | 50 | 累計19体撃破後に緑通常雑魚を5体追加召喚。HP×20/ATK×3 |
+| `_24` | 19 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 2 | **2.2** | **Fall0** | Default | 20 | 3 | 10 | 50 | グループ開始直後に緑通常雑魚を2体まとめて位置2.2へ落下召喚。HP×20/ATK×3 |
+| `_25` | 20 | GroupActivated(750) | `e_glo_00002_...Normal_Green` | 2 | **1.7** | **Fall0** | Default | 20 | 3 | 10 | 50 | グループ開始7500ms後に緑通常雑魚を2体まとめて位置1.7へ落下召喚。HP×20/ATK×3 |
+| `_26` | groupchange_3 | **FriendUnitDead(15)** | SwitchSequenceGroup(w3) | — | — | — | — | — | — | — | — | 累計15体撃破でw3グループへ切り替え |
 
 **ポイント:**
 - w1から敵のHP倍率が大幅強化（hp倍8→20、atk倍2.5→3）
@@ -227,17 +227,17 @@ w1より強いAdventBoss1ボスを投入。累計15体でw3へ。
 
 **AdventBoss2** に格上げ。ボスの撃破スコアが大幅増加。累計21体でw4へ。
 
-| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp |
-|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|
-| `_27` | 21 | GroupActivated(0) | `c_osh_00201_...Boss_Red` | 1 | **2.5** | **Fall0** | **AdventBoss2** | **15** | **8** | 100 | 300 |
-| `_28` | 22 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 2 | **2.2** | **Fall0** | Default | **30** | **6** | 10 | 50 |
-| `_29` | 23 | GroupActivated(500) | `e_glo_00002_...Normal_Green` | 5 | **2.8** | **Fall0** | Default | 30 | 6 | 10 | 50 |
-| `_30` | 24 | GroupActivated(1000) | `e_glo_00002_...Normal_Green` | 4 | （空） | None | Default | 30 | 6 | 10 | 50 |
-| `_31` | 25 | FriendUnitDead(23) | `e_glo_00002_...Normal_Green` | 2 | **3.2** | **Fall0** | Default | 30 | 6 | 10 | 50 |
-| `_32` | 26 | FriendUnitDead(24) | `e_glo_00002_...Normal_Green` | 3 | （空） | None | Default | 30 | 6 | 10 | 50 |
-| `_33` | 27 | FriendUnitDead(22) | `e_glo_00002_...Normal_Colorless` | 1 | **2.5** | **Fall0** | Default | **20** | **1** | 20 | 10 |
-| `_34` | 28 | FriendUnitDead(27) | `e_glo_00002_...Normal_Colorless` | **10** | （空） | None | Default | 20 | 1 | 30 | 10 |
-| `_35` | groupchange_4 | **FriendUnitDead(21)** | SwitchSequenceGroup(w4) | — | — | — | — | — | — | — | — |
+| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp | 説明 |
+|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|------|
+| `_27` | 21 | GroupActivated(0) | `c_osh_00201_...Boss_Red` | 1 | **2.5** | **Fall0** | **AdventBoss2** | **15** | **8** | 100 | 300 | グループ開始直後にAdventBoss2オーラのRedボス(osh_00201)を位置2.5へ落下召喚。HP×15/ATK×8 |
+| `_28` | 22 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 2 | **2.2** | **Fall0** | Default | **30** | **6** | 10 | 50 | グループ開始直後に緑通常雑魚を2体まとめて位置2.2へ落下召喚。HP×30/ATK×6（さらに強化） |
+| `_29` | 23 | GroupActivated(500) | `e_glo_00002_...Normal_Green` | 5 | **2.8** | **Fall0** | Default | 30 | 6 | 10 | 50 | グループ開始5000ms後に緑通常雑魚を5体まとめて位置2.8へ落下召喚。HP×30/ATK×6 |
+| `_30` | 24 | GroupActivated(1000) | `e_glo_00002_...Normal_Green` | 4 | （空） | None | Default | 30 | 6 | 10 | 50 | グループ開始10000ms後に緑通常雑魚を4体一斉召喚。HP×30/ATK×6 |
+| `_31` | 25 | FriendUnitDead(23) | `e_glo_00002_...Normal_Green` | 2 | **3.2** | **Fall0** | Default | 30 | 6 | 10 | 50 | 累計23体撃破後に緑通常雑魚を2体まとめて位置3.2（後方）へ落下召喚。HP×30/ATK×6 |
+| `_32` | 26 | FriendUnitDead(24) | `e_glo_00002_...Normal_Green` | 3 | （空） | None | Default | 30 | 6 | 10 | 50 | 累計24体撃破後に緑通常雑魚を3体一斉召喚。HP×30/ATK×6 |
+| `_33` | 27 | FriendUnitDead(22) | `e_glo_00002_...Normal_Colorless` | 1 | **2.5** | **Fall0** | Default | **20** | **1** | 20 | 10 | 累計22体撃破後に無属性タンク雑魚を位置2.5へ1体落下召喚。HP×20/ATK×1（攻撃弱い囮役） |
+| `_34` | 28 | FriendUnitDead(27) | `e_glo_00002_...Normal_Colorless` | **10** | （空） | None | Default | 20 | 1 | 30 | 10 | 累計27体撃破後に無属性タンク雑魚を10体一斉召喚。HP×20/ATK×1（大量の囮） |
+| `_35` | groupchange_4 | **FriendUnitDead(21)** | SwitchSequenceGroup(w4) | — | — | — | — | — | — | — | — | 累計21体撃破でw4グループへ切り替え |
 
 **ポイント:**
 - ボスが `c_osh_00201`（Red・Attack）。hp倍15, atk倍8と一段と強化
@@ -251,16 +251,16 @@ w1より強いAdventBoss1ボスを投入。累計15体でw3へ。
 
 AdventBoss2が緑ボスに変わる。累計29体でw5へ。
 
-| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp |
-|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|
-| `_36` | 29 | GroupActivated(0) | `e_glo_00002_...Boss_Green` | 1 | **2.5** | **Fall0** | **AdventBoss2** | **20** | **9** | 50 | 300 |
-| `_37` | 30 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 2 | **1.8** | **Fall0** | Default | **50** | **7** | 10 | 50 |
-| `_38` | 31 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 3 | **2.9** | **Fall0** | Default | 50 | 7 | 10 | 50 |
-| `_39` | 32 | GroupActivated(250) | `e_glo_00002_...Normal_Green` | **10** | （空） | None | Default | 50 | 7 | 10 | 50 |
-| `_40` | 33 | GroupActivated(1000) | `e_glo_00002_...Normal_Green` | 3 | （空） | None | Default | 50 | 7 | 10 | 50 |
-| `_41` | 34 | FriendUnitDead(31) | `e_glo_00002_...Normal_Colorless` | 1 | （空） | None | Default | 20 | 2 | 20 | 10 |
-| `_42` | 35 | FriendUnitDead(34) | `e_glo_00002_...Normal_Colorless` | **10** | （空） | None | Default | 20 | 2 | 30 | 10 |
-| `_43` | groupchange_5 | **FriendUnitDead(29)** | SwitchSequenceGroup(w5) | — | — | — | — | — | — | — | — |
+| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp | 説明 |
+|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|------|
+| `_36` | 29 | GroupActivated(0) | `e_glo_00002_...Boss_Green` | 1 | **2.5** | **Fall0** | **AdventBoss2** | **20** | **9** | 50 | 300 | グループ開始直後にAdventBoss2オーラの緑ボスを位置2.5へ落下召喚。HP×20/ATK×9 |
+| `_37` | 30 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 2 | **1.8** | **Fall0** | Default | **50** | **7** | 10 | 50 | グループ開始直後に緑通常雑魚を2体まとめて位置1.8へ落下召喚。HP×50/ATK×7（hp倍が一気に50へ） |
+| `_38` | 31 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 3 | **2.9** | **Fall0** | Default | 50 | 7 | 10 | 50 | グループ開始直後に緑通常雑魚を3体まとめて位置2.9へ落下召喚。HP×50/ATK×7 |
+| `_39` | 32 | GroupActivated(250) | `e_glo_00002_...Normal_Green` | **10** | （空） | None | Default | 50 | 7 | 10 | 50 | グループ開始2500ms後に緑通常雑魚を10体一斉召喚。HP×50/ATK×7（大ラッシュ） |
+| `_40` | 33 | GroupActivated(1000) | `e_glo_00002_...Normal_Green` | 3 | （空） | None | Default | 50 | 7 | 10 | 50 | グループ開始10000ms後に緑通常雑魚を3体一斉召喚。HP×50/ATK×7（遅延追加） |
+| `_41` | 34 | FriendUnitDead(31) | `e_glo_00002_...Normal_Colorless` | 1 | （空） | None | Default | 20 | 2 | 20 | 10 | 累計31体撃破後に無属性タンク雑魚を1体召喚。HP×20/ATK×2 |
+| `_42` | 35 | FriendUnitDead(34) | `e_glo_00002_...Normal_Colorless` | **10** | （空） | None | Default | 20 | 2 | 30 | 10 | 累計34体撃破後に無属性タンク雑魚を10体一斉召喚。HP×20/ATK×2（大量の囮） |
+| `_43` | groupchange_5 | **FriendUnitDead(29)** | SwitchSequenceGroup(w5) | — | — | — | — | — | — | — | — | 累計29体撃破でw5グループへ切り替え |
 
 **ポイント:**
 - 雑魚のhp倍が30→**50**に急上昇（base_hp=1000 × 50 = 実HP50,000）
@@ -273,19 +273,19 @@ AdventBoss2が緑ボスに変わる。累計29体でw5へ。
 
 **3体の強化キャラを同時投入**（oshシリーズの全員集合）。最高難度フェーズ。
 
-| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp |
-|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|
-| `_44` | 36 | GroupActivated(250) | `c_osh_00301_...Normal_Yellow` | 1 | **2.3** | **Fall0** | Default | **300** | **10** | 50 | 250 |
-| `_45` | 37 | GroupActivated(0) | `c_osh_00401_...Boss_Colorless` | 1 | **2.5** | **Fall0** | **AdventBoss3** | **50** | **12** | **300** | 300 |
-| `_46` | 38 | GroupActivated(250) | `c_osh_00201_...Normal_Red` | 1 | **2.7** | **Fall0** | Default | **350** | **15** | 50 | 150 |
-| `_47` | 39 | GroupActivated(500) | `e_glo_00002_...Normal_Colorless` | 1 | **2.1** | **Fall0** | Default | 20 | 3 | 20 | 10 |
-| `_48` | 40 | GroupActivated(500) | `e_glo_00002_...Normal_Colorless` | 1 | **2.9** | **Fall0** | Default | 20 | 3 | 20 | 10 |
-| `_49` | 41 | GroupActivated(750) | `e_glo_00002_...Normal_Colorless` | 1 | **3.4** | None | Default | 20 | 3 | 20 | 10 |
-| `_50` | 42 | FriendUnitDead(41) | `e_glo_00002_...Normal_Colorless` | **10** | （空） | None | Default | 20 | 3 | 20 | 10 |
-| `_51` | 43 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 3 | （空） | None | Default | **60** | **10** | 10 | 50 |
-| `_52` | 44 | GroupActivated(1000) | `e_glo_00002_...Normal_Green` | 4 | （空） | None | Default | 60 | 10 | 10 | 50 |
-| `_53` | 45 | GroupActivated(250) | `e_glo_00002_...Normal_Green` | 2 | **1.8** | **Fall0** | Default | 60 | 10 | 10 | 50 |
-| `_54` | groupchange_6 | **FriendUnitDead(37)** | SwitchSequenceGroup(w6) | — | — | — | — | — | — | — | — |
+| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp | 説明 |
+|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|------|
+| `_44` | 36 | GroupActivated(250) | `c_osh_00301_...Normal_Yellow` | 1 | **2.3** | **Fall0** | Default | **300** | **10** | 50 | 250 | グループ開始2500ms後にYellow通常敵(osh_00301)を位置2.3へ落下召喚。HP×300/ATK×10（超強敵、Normal種別） |
+| `_45` | 37 | GroupActivated(0) | `c_osh_00401_...Boss_Colorless` | 1 | **2.5** | **Fall0** | **AdventBoss3** | **50** | **12** | **300** | 300 | グループ開始直後にAdventBoss3オーラのColorlessボス(osh_00401)を位置2.5へ落下召喚。HP×50/ATK×12、最高スコア300 |
+| `_46` | 38 | GroupActivated(250) | `c_osh_00201_...Normal_Red` | 1 | **2.7** | **Fall0** | Default | **350** | **15** | 50 | 150 | グループ開始2500ms後にRed通常敵(osh_00201)を位置2.7へ落下召喚。HP×350/ATK×15（全データ中最大hp倍率） |
+| `_47` | 39 | GroupActivated(500) | `e_glo_00002_...Normal_Colorless` | 1 | **2.1** | **Fall0** | Default | 20 | 3 | 20 | 10 | グループ開始5000ms後に無属性雑魚を位置2.1へ1体落下召喚。HP×20/ATK×3 |
+| `_48` | 40 | GroupActivated(500) | `e_glo_00002_...Normal_Colorless` | 1 | **2.9** | **Fall0** | Default | 20 | 3 | 20 | 10 | グループ開始5000ms後に無属性雑魚を位置2.9へ1体落下召喚。HP×20/ATK×3（elem39と同時・左右対称） |
+| `_49` | 41 | GroupActivated(750) | `e_glo_00002_...Normal_Colorless` | 1 | **3.4** | None | Default | 20 | 3 | 20 | 10 | グループ開始7500ms後に無属性雑魚を位置3.4（後方）へ1体出現（Fallなし）。HP×20/ATK×3 |
+| `_50` | 42 | FriendUnitDead(41) | `e_glo_00002_...Normal_Colorless` | **10** | （空） | None | Default | 20 | 3 | 20 | 10 | 累計41体撃破後に無属性雑魚を10体一斉召喚。HP×20/ATK×3（遅延追加） |
+| `_51` | 43 | GroupActivated(0) | `e_glo_00002_...Normal_Green` | 3 | （空） | None | Default | **60** | **10** | 10 | 50 | グループ開始直後に緑通常雑魚を3体一斉召喚。HP×60/ATK×10（前グループの50→60に強化） |
+| `_52` | 44 | GroupActivated(1000) | `e_glo_00002_...Normal_Green` | 4 | （空） | None | Default | 60 | 10 | 10 | 50 | グループ開始10000ms後に緑通常雑魚を4体一斉召喚。HP×60/ATK×10 |
+| `_53` | 45 | GroupActivated(250) | `e_glo_00002_...Normal_Green` | 2 | **1.8** | **Fall0** | Default | 60 | 10 | 10 | 50 | グループ開始2500ms後に緑通常雑魚を2体まとめて位置1.8へ落下召喚。HP×60/ATK×10 |
+| `_54` | groupchange_6 | **FriendUnitDead(37)** | SwitchSequenceGroup(w6) | — | — | — | — | — | — | — | — | 累計37体撃破でw6グループへ切り替え |
 
 **ポイント:**
 - elem36,46: Normal種別だが **hp倍300/350**（実HP: 300,000〜350,000）。Normal扱いなので「ボス」演出はないが事実上の超強敵
@@ -300,14 +300,14 @@ AdventBoss2が緑ボスに変わる。累計29体でw5へ。
 
 AdventBoss3が2体登場。累計47体でw1へ戻りループ。
 
-| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp |
-|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|
-| `_55` | 46 | GroupActivated(0) | `c_osh_00401_...Boss_Colorless` | 1 | **2.5** | **Fall0** | **AdventBoss3** | **60** | **15** | **300** | 250 |
-| `_56` | 47 | GroupActivated(250) | `e_glo_00002_...Boss_Green` | 1 | （空） | None | Default | **70** | **20** | 50 | 250 |
-| `_57` | 48 | GroupActivated(500) | `e_glo_00002_...Normal_Green` | 3 | **2.2** | **Fall0** | Default | **70** | **12** | 10 | 50 |
-| `_58` | 49 | FriendUnitDead(48) | `e_glo_00002_...Normal_Green` | **10** | （空） | None | Default | 70 | 12 | 10 | 50 |
-| `_59` | 50 | FriendUnitDead(46) | `e_glo_00002_...Normal_Green` | （空） | （空） | None | Default | 70 | 12 | 10 | 50 |
-| `_60` | groupchange_7 | **FriendUnitDead(47)** | SwitchSequenceGroup(**w1**) | — | — | — | — | — | — | — | — |
+| id | elem | 条件 | アクション | 召喚数 | 召喚位置 | anim | aura | hp倍 | atk倍 | score | override_bp | 説明 |
+|----|------|------|-----------|--------|---------|------|------|------|------|-------|------------|------|
+| `_55` | 46 | GroupActivated(0) | `c_osh_00401_...Boss_Colorless` | 1 | **2.5** | **Fall0** | **AdventBoss3** | **60** | **15** | **300** | 250 | グループ開始直後にAdventBoss3オーラのColorlessボス(osh_00401)を位置2.5へ落下召喚。HP×60/ATK×15 |
+| `_56` | 47 | GroupActivated(250) | `e_glo_00002_...Boss_Green` | 1 | （空） | None | Default | **70** | **20** | 50 | 250 | グループ開始2500ms後に緑ボスを1体一斉召喚。HP×70/ATK×20（ゲーム内最大atk倍率） |
+| `_57` | 48 | GroupActivated(500) | `e_glo_00002_...Normal_Green` | 3 | **2.2** | **Fall0** | Default | **70** | **12** | 10 | 50 | グループ開始5000ms後に緑通常雑魚を3体まとめて位置2.2へ落下召喚。HP×70/ATK×12 |
+| `_58` | 49 | FriendUnitDead(48) | `e_glo_00002_...Normal_Green` | **10** | （空） | None | Default | 70 | 12 | 10 | 50 | 累計48体撃破後に緑通常雑魚を10体一斉召喚。HP×70/ATK×12（ループ後半の大ラッシュ） |
+| `_59` | 50 | FriendUnitDead(46) | `e_glo_00002_...Normal_Green` | （空） | （空） | None | Default | 70 | 12 | 10 | 50 | 累計46体撃破後に緑通常雑魚を召喚。HP×70/ATK×12 |
+| `_60` | groupchange_7 | **FriendUnitDead(47)** | SwitchSequenceGroup(**w1**) | — | — | — | — | — | — | — | — | 累計47体撃破でw1グループへ戻る（ループ開始） |
 
 **ポイント:**
 - elem46: AdventBoss3 osha（Colorless）。hp倍60（実HP600,000）・atk倍15
