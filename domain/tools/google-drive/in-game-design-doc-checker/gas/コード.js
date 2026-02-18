@@ -65,6 +65,8 @@ function onOpen() {
     .addItem('🚀 ダイレクトチェック（高速）', 'menuDirectCheck')
     .addSeparator()
     .addItem('🩺 事前診断（書き出ししない）', 'menuPreflightDiagnose')
+    .addSeparator()
+    .addItem('📋 VDシート一括作成', 'createSheetsFromVdList')
     .addToUi();
 }
 
