@@ -91,22 +91,81 @@ row=4  height=0.55  layout=10  (3コマ: 0.25 / 0.25 / 0.5)  ← コマ効果あ
 ## 使用する敵パラメータ（MstEnemyStageParameter）一覧
 
 9種類の敵パラメータを使用。`c_` プレフィックスはキャラ個別ID、`e_` は汎用敵。
+IDの命名規則: `{c_/e_}{キャラID}_osh1_advent_{kind}_{color}`
 
-| id（action_value） | キャラID | 日本語名 | kind | role | color | base_hp | base_atk | base_spd | knockback | drop_bp |
-|-------------------|---------|---------|------|------|-------|---------|---------|---------|-----------|---------|
-| 星野 ルビー（Normal） | chara_osh_00201 | 星野 ルビー | Normal | Attack | Red | 1,000 | 100 | 37 | 1 | 50 |
-| 星野 ルビー（Boss） | chara_osh_00201 | 星野 ルビー | Boss | Attack | Red | 10,000 | 100 | 31 | 1 | 100 |
-| MEMちょ（Normal） | chara_osh_00301 | MEMちょ | Normal | Technical | Yellow | 1,000 | 100 | 37 | 1 | 50 |
-| MEMちょ（Boss） | chara_osh_00301 | MEMちょ | Boss | Technical | Yellow | 10,000 | 100 | 31 | 1 | 100 |
-| 有馬 かな（Normal） | chara_osh_00401 | 有馬 かな | Normal | Technical | Colorless | 1,000 | 100 | 37 | 1 | 50 |
-| 有馬 かな（Boss） | chara_osh_00401 | 有馬 かな | Boss | Technical | Colorless | 10,000 | 100 | 31 | 1 | 100 |
-| 推し活ファントム（緑/Normal） | enemy_glo_00002 | 推し活ファントム | Normal | Attack | Green | 1,000 | 100 | 47 | 1 | 50 |
-| 推し活ファントム（無属性/Normal） | enemy_glo_00002 | 推し活ファントム | Normal | Defense | Colorless | 1,000 | 100 | 20 | 0 | 5 |
-| 推し活ファントム（緑/Boss） | enemy_glo_00002 | 推し活ファントム | Boss | Attack | Green | 10,000 | 100 | 45 | 1 | 100 |
+### カラム解説
+
+| カラム名（略称） | DBカラム名 | 説明 |
+|---------------|-----------|------|
+| id | id | MstEnemyStageParameterの主キー |
+| キャラID | mst_enemy_character_id | 紐付くキャラモデル・スキルの参照元 |
+| kind | character_unit_kind | `Normal`（通常敵）/ `Boss`（ボス）。UIオーラ表示に影響 |
+| role | role_type | 属性相性の役職（Attack/Technical/Defense/Support） |
+| color | color | 属性色（Red/Yellow/Green/Blue/Colorless） |
+| sort_order | sort_order | ゲーム内表示順（CSV整列用） |
+| base_hp | hp | ベースHP（`enemy_hp_coef` 乗算前の素値） |
+| base_atk | attack_power | ベース攻撃力（`enemy_attack_coef` 乗算前の素値） |
+| base_spd | move_speed | 移動速度（数値が大きいほど速い） |
+| well_dist | well_distance | 攻撃射程（コマ単位。大きいほど遠くから攻撃） |
+| combo | attack_combo_cycle | 攻撃コンボ数（1=単発、5=5コンボ） |
+| knockback | damage_knock_back_count | 被攻撃時ノックバック回数（0=ノックバックなし） |
+| ability | mst_unit_ability_id1 | 特殊アビリティID（このバトルでは全員空=なし） |
+| drop_bp | drop_battle_point | 基本ドロップバトルポイント（`override_drop_battle_point` で上書き可） |
+
+### 全9種類の詳細パラメータ
+
+| MstEnemyStageParameter ID | 日本語名 | キャラID | kind | role | color | sort | base_hp | base_atk | base_spd | well_dist | combo | knockback | drop_bp |
+|--------------------------|---------|---------|------|------|-------|------|---------|---------|---------|-----------|-------|-----------|---------|
+| `c_osh_00201_osh1_advent_Normal_Red` | 星野 ルビー | chara_osh_00201 | Normal | Attack | Red | 21 | 1,000 | 100 | 37 | 0.22 | 5 | 1 | 50 |
+| `c_osh_00201_osh1_advent_Boss_Red` | 星野 ルビー | chara_osh_00201 | Boss | Attack | Red | 22 | 10,000 | 100 | 31 | 0.22 | 5 | 1 | 100 |
+| `c_osh_00301_osh1_advent_Normal_Yellow` | MEMちょ | chara_osh_00301 | Normal | Technical | Yellow | 23 | 1,000 | 100 | 37 | 0.27 | 5 | 1 | 50 |
+| `c_osh_00301_osh1_advent_Boss_Yellow` | MEMちょ | chara_osh_00301 | Boss | Technical | Yellow | 24 | 10,000 | 100 | 31 | 0.27 | 5 | 1 | 100 |
+| `c_osh_00401_osh1_advent_Normal_Colorless` | 有馬 かな | chara_osh_00401 | Normal | Technical | Colorless | 25 | 1,000 | 100 | 37 | 0.24 | 5 | 1 | 50 |
+| `c_osh_00401_osh1_advent_Boss_Colorless` | 有馬 かな | chara_osh_00401 | Boss | Technical | Colorless | 26 | 10,000 | 100 | 31 | 0.24 | 5 | 1 | 100 |
+| `e_glo_00002_osh1_advent_Normal_Green` | 推し活ファントム（緑） | enemy_glo_00002 | Normal | Attack | Green | 19 | 1,000 | 100 | 47 | 0.22 | 1 | 1 | 50 |
+| `e_glo_00002_osh1_advent_Normal_Colorless` | 推し活ファントム（無属性） | enemy_glo_00002 | Normal | **Defense** | Colorless | 18 | 1,000 | 100 | **20** | 0.22 | 1 | **0** | **5** |
+| `e_glo_00002_osh1_advent_Boss_Green` | 推し活ファントム（緑/Boss） | enemy_glo_00002 | Boss | Attack | Green | 20 | 10,000 | 100 | 45 | 0.22 | 1 | 1 | 100 |
 
 > **実際のHP・ATKは `base × MstAutoPlayerSequence.enemy_hp_coef` で決まる。**
 > 例: MEMちょ（Normal）（base_hp=1000）を elem=36 で出すと
 >     `enemy_hp_coef=300` なので **実際HP = 300,000**
+
+### 敵パラメータの特性解説
+
+#### Normal vs Boss 比較
+
+| 項目 | Normal | Boss |
+|------|--------|------|
+| base_hp | 1,000 | 10,000（10倍） |
+| base_spd（キャラ3種） | 37 | 31（やや遅い） |
+| base_spd（ファントム緑） | 47 | 45（ほぼ変わらず） |
+| drop_bp（基本値） | 50（無属性は5） | 100 |
+| UIオーラ（aura） | 通常表示 | AdventBoss1/2/3 で演出あり |
+
+> Boss種はNormalより速度が落ちる代わりにHPが10倍。`kind=Normal` でもMstAutoPlayerSequenceの `enemy_hp_coef` を大きくすれば実質的にボス相当の強さにできる（w5のHP×300/350がその例）。
+
+#### 推し活ファントム（無属性/Normal）の特殊性
+
+| 項目 | 推し活ファントム（緑/Normal） | 推し活ファントム（無属性/Normal） |
+|------|---------------------|---------------------|
+| role_type | Attack | **Defense** |
+| move_speed | 47（全敵中最速） | **20**（全敵中最低速） |
+| damage_knock_back_count | 1 | **0**（ノックバックなし） |
+| drop_bp | 50 | **5**（全敵中最低） |
+
+> 無属性ファントムは「タンク役」として設計されている。速度が非常に遅く（spd=20）、ノックバックもしないため砦への到達が遅い上に倒しても drop_bp=5 とほぼポイントにならない。プレイヤーが優先すべき敵は緑ファントムやボスキャラ。デフォルトグループ・w1〜w4の各グループで「囮」として活用されている。
+
+#### OSHキャラ3種の攻撃特性比較
+
+| キャラ | role | color | well_dist（射程） | combo | 特徴 |
+|--------|------|-------|-----------------|-------|------|
+| MEMちょ | Technical | Yellow | **0.27**（最大） | 5 | 最も射程が長い。遠距離からコンボ攻撃 |
+| 有馬 かな | Technical | Colorless | 0.24 | 5 | 中程度の射程。バトル説明文でも「火傷攻撃」と明記 |
+| 星野 ルビー | Attack | Red | 0.22 | 5 | 3キャラ中最短射程だが attack=ATK型 |
+| 推し活ファントム（緑） | Attack | Green | 0.22 | **1**（単発） | キャラより射程は同じだが単発攻撃 |
+
+> OSHキャラ3種は全員 `attack_combo_cycle=5`（5コンボ）。ファントムの1コンボより手数が多く、プレイヤーキャラへの与ダメージ機会が多い。
+> `mst_unit_ability_id1` は全9種ともに空（アビリティなし）。特殊能力はキャラクターID（`mst_enemy_character_id`）側に定義されている可能性が高い。
 
 ---
 
