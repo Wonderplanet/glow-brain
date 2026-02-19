@@ -130,8 +130,8 @@ IDの命名規則: `{c_/e_}{キャラID}_jig1_savage_{kind}_{color}`
 |--------------------------|---------|---------|------|------|-------|------|---------|---------|---------|-----------|-------|-----------|---------|---------|
 | `c_jig_00501_jig1_savage_Boss_Yellow` | 山田浅ェ門 桐馬 | chara_jig_00501 | Boss | Support | Yellow | 15 | 10,000 | 100 | 35 | 0.21 | 4 | 2 | （空） | 300 |
 | `c_jig_00401_jig1_savage_Normal_Colorless` | 賊王 亜左 弔兵衛 | chara_jig_00401 | Normal | Technical | Colorless | 18 | 1,000 | 100 | 30 | 0.31 | 3 | **0** | `enemy_ability_knockback_block` | 100 |
-| `e_jig_00001_jig1_savage_Normal_Colorless` | jig雑魚（無属性） | enemy_jig_00001 | Normal | Attack | Colorless | 21 | 1,000 | 100 | 27 | 0.21 | 1 | 1 | （空） | 50 |
-| `e_jig_00001_jig1_savage_Normal_Yellow` | jig雑魚（黄属性） | enemy_jig_00001 | Normal | Defense | Yellow | 22 | 1,000 | 100 | 27 | 0.21 | 1 | 3 | （空） | 50 |
+| `e_jig_00001_jig1_savage_Normal_Colorless` | 門神（無属性） | enemy_jig_00001 | Normal | Attack | Colorless | 21 | 1,000 | 100 | 27 | 0.21 | 1 | 1 | （空） | 50 |
+| `e_jig_00001_jig1_savage_Normal_Yellow` | 門神（黄属性） | enemy_jig_00001 | Normal | Defense | Yellow | 22 | 1,000 | 100 | 27 | 0.21 | 1 | 3 | （空） | 50 |
 
 > **実際のHP・ATKは `base × MstAutoPlayerSequence.enemy_hp_coef` で決まる。**
 > 例: 亜左 弔兵衛（base_hp=1,000）を hp倍100 で出すと実HP = **100,000**（砦と同等）
