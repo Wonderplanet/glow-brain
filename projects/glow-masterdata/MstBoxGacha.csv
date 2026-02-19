@@ -1,0 +1,3 @@
+ENABLE,id,release_key,mst_event_id,cost_id,cost_num,loop_type,asset_key,display_mst_unit_id1,display_mst_unit_id2
+e,box_gacha_test,202602010,dummy_data,dummy_item,5,Last,glo_00001,,
+e,box_gacha_kim_01,202602020,event_kim_00001,box_item_glo_00001,10,Last,glo_00040,chara_kim_00001,chara_kim_00101

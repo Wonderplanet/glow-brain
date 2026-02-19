@@ -1,0 +1,3 @@
+memo
+TABLE,OprCampaign,OprCampaign,OprCampaign,OprCampaign,OprCampaign,OprCampaign,OprCampaign,OprCampaign,OprCampaign,OprCampaign,OprCampaign,OprCampaignI18n
+ENABLE,id,release_key,campaign_type,target_type,difficulty,target_id_type,target_id,effect_value,asset_key,start_at,end_at,description.ja

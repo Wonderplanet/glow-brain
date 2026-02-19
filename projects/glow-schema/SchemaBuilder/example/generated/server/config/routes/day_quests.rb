@@ -1,0 +1,5 @@
+  post "day_quests/:id/session", to: "day_quests#create_session"
+  get "day_quests/current_session", to: "day_quests#get_current_session"
+  post "day_quests/session/puzzle_result", to: "day_quests#puzzle_result"
+  get "day_quests/session/puzzle_result", to: "day_quests#get_puzzle_result"
+  delete "day_quests/session", to: "day_quests#delete_session"

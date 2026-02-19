@@ -1,0 +1,7 @@
+ENABLE,release_key,id,opr_gacha_id,step_number,loop_count_target,resource_type,resource_id,resource_amount
+e,1,1,step_1,1,0,FreeDiamond,,1
+e,1,2,step_2,1,0,FreeDiamond,,1
+e,1,3,step_2,2,0,FreeDiamond,,100
+e,1,4,step_2,3,0,FreeDiamond,,20
+e,1,5,step_2,4,0,FreeDiamond,,10
+e,1,6,step_2,5,0,FreeDiamond,,500

@@ -1,0 +1,3 @@
+memo
+TABLE,MstPvpRewardGroup,MstPvpRewardGroup,MstPvpRewardGroup,MstPvpRewardGroup,MstPvpRewardGroup
+ENABLE,id,release_key,mst_pvp_id,reward_category,condition_value

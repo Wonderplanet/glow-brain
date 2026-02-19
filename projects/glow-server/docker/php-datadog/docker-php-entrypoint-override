@@ -1,0 +1,24 @@
+#!/bin/sh
+set -e
+
+# for docker compose Volumes
+# Workaround for Github Actions
+if [ ! -O /var/www ] ; then
+	sudo chown -R nginx:nginx /var/www
+fi
+
+if [ ! -O /var/local/wonderplanet/lib ] ; then
+	sudo chown -R nginx:nginx /var/local/wonderplanet/lib
+fi
+
+# fix ownership for old docker images
+if [ ! -O /var/www/storage ] ; then
+	sudo chown -R nginx:nginx /var/www/storage
+fi
+
+# first arg is `-f` or `--some-option`
+if [ "${1#-}" != "$1" ]; then
+	set -- php-fpm "$@"
+fi
+
+exec "$@"

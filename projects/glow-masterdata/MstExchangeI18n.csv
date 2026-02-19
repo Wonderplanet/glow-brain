@@ -1,0 +1,7 @@
+ENABLE,id,mst_exchange_id,language,asset_key,name,release_key
+e,1,normal_01,ja,glo_exchange_00001,コイン交換所,202512015
+e,2,chara_piece,ja,glo_exchange_00002,キャラのかけらBOX交換所,202512015
+e,3,event_osh_00001_01,ja,osh_exchange_00001,いいジャン祭交換所,202512020
+e,4,event_hut_00001_01,ja,hut_exchange_00001,いいジャン祭交換所,202603010
+e,5,hav_01,ja,f05anniv_exchange_00002,お得なコイン交換所,202603020
+e,6,event_f05anniv_exchange_00001,ja,f05anniv_exchange_00001,"ハーフアニバーサリー 感謝祭！交換所",202603020

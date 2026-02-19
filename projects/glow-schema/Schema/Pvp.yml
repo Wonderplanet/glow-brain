@@ -1,0 +1,486 @@
+enum:
+  - name: PvpRankClassType
+    obscure: true
+    params:
+      - name: Bronze
+      - name: Silver
+      - name: Gold
+      - name: Platinum
+
+  - name: PvpRewardCategory
+    obscure: true
+    params:
+      - name: Ranking
+      - name: RankClass
+      - name: TotalScore
+
+  - name: PvpBonusType
+    obscure: true
+    params:
+      - name: WinUpperBonus
+      - name: WinSameBonus
+      - name: WinLowerBonus
+      - name: ClearTime
+data:
+  - name: SysPvpSeason
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+      - name: closedAt
+        type: DateTimeOffset?
+# master data
+  - name: MstPvpBonusPoint
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: bonusType
+        type: PvpBonusType
+      - name: conditionValue
+        type: string?
+      - name: bonusPoint
+        type: int
+
+  - name: MstDummyUserUnit
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstDummyUserId
+        type: string
+      - name: mstUnitId
+        type: string
+      - name: level
+        type: int
+      - name: rank
+        type: int
+      - name: gradeLevel
+        type: int
+
+  - name: MstDummyUserI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: language
+        type: Language
+      - name: mstDummyUserId
+        type: string
+      - name: name
+        type: string
+
+  - name: MstDummyUser
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: gradeUnitLevelTotalCount
+        type: int
+      - name: mstEmblemId
+        type: string
+      - name: mstUnitId
+        type: string
+
+  - name: MstDummyOutpost
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstDummyUserId
+        type: string
+      - name: mstOutpostEnhancementId
+        type: string
+      - name: level
+        type: int
+
+  - name: MstPvpDummy
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstDummyUserId
+        type: string
+
+  - name: MstPvpRank
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: assetKey
+        type: string
+      - name: rankClassType
+        type: PvpRankClassType
+      - name: rankClassLevel
+        type: int
+      - name: requiredLowerScore
+        type: long
+      - name: winAddPoint
+        type: int
+      - name: loseSubPoint
+        type: int
+
+  - name: MstPvpReward
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstPvpRewardGroupId
+        type: string
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+
+  - name: MstPvpRewardGroup
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: rewardCategory
+        type: PvpRewardCategory
+      - name: conditionValue
+        type: string
+      - name: mstPvpId
+        type: string
+
+  - name: MstPvpI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: language
+        type: Language
+      - name: mstPvpId
+        type: string
+      - name: name
+        type: string
+      - name: description
+        type: string
+
+  - name: MstPvp
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: rankingMinPvpRankClass
+        type: PvpRankClassType?
+      - name: maxDailyChallengeCount
+        type: int
+      - name: maxDailyItemChallengeCount
+        type: int
+      - name: itemChallengeCostAmount
+        type: int
+      - name: initialBattlePoint
+        type: int
+      - name: mstInGameId
+        type: string
+
+# entity data
+
+  # バトル画面で必要な情報
+  - name: OpponentPvpStatus
+    obscure: true
+    impl_entity: true
+    params:
+      - name: pvpUnits
+        type: PvpUnitData[]
+      - name: usrOutpostEnhancements
+        type: UsrOutpostEnhancementData[]
+      - name: usrEncyclopediaEffects
+        type: PvpEncyclopediaEffectData[]
+      - name: mstArtworkIds
+        type: string[]
+
+  # Top画面で必要な対戦相手情報
+  - name: OpponentSelectStatus
+    obscure: true
+    impl_entity: true
+    params:
+      - name: myId
+        type: string
+      - name: name
+        type: string
+      - name: mstUnitId
+        type: string
+      - name: mstEmblemId
+        type: string
+      - name: score
+        type: int
+      - name: opponentPvpStatus
+        type: OpponentPvpStatusData
+      - name: winAddPoint
+        type: int
+
+  # Top画面で必要なプレイヤー情報
+  - name: UsrPvpStatus
+    obscure: true
+    params:
+      - name: score
+        type: int
+      - name: maxReceivedScoreReward
+        type: int
+      - name: pvpRankClassType
+        type: PvpRankClassType
+      - name: pvpRankClassLevel
+        type: int
+      - name: dailyRemainingChallengeCount
+        type: int
+      - name: dailyRemainingItemChallengeCount
+        type: int
+
+  # Top画面で必要な開催情報
+  - name: PvpHeldStatus
+    obscure: true
+    impl_entity: true
+    params:
+      - name: sysPvpSeasonId
+        type: string
+      - name: heldNumber
+        type: int
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+
+  - name: PvpPreviousSeasonResult
+    obscure: true
+    impl_entity: true
+    params:
+      - name: pvpRankClassType
+        type: PvpRankClassType
+      - name: rankClassLevel
+        type: int
+      - name: score
+        type: int
+      - name: ranking
+        type: int
+      - name: pvpRewards
+        type: PvpRewardData[]
+
+  - name: PvpReward
+    obscure: true
+    params:
+      - name: rewardCategory
+        type: PvpRewardCategory
+      - name: reward
+        type: RewardData
+
+  - name: PvpUnit
+    obscure: true
+    impl_entity: true
+    params:
+      - name: mstUnitId
+        type: string
+      - name: level
+        type: int
+      - name: rank
+        type: int
+      - name: gradeLevel
+        type: int
+
+  - name: PvpEncyclopediaEffect
+    obscure: true
+    impl_entity: true
+    params:
+      - name: mstEncyclopediaEffectId
+        type: string
+
+  - name: PvpLogin
+    obscure: true
+    impl_entity: true
+    params:
+      - name: sysPvpSeason
+        type: SysPvpSeasonData
+      - name: usrPvpStatus
+        type: UsrPvpStatusData
+
+# response data
+  - name: PvpTopResult
+    obscure: true
+    impl_entity: true
+    params:
+      - name: pvpHeldStatus
+        type: PvpHeldStatusData
+      - name: usrPvpStatus
+        type: UsrPvpStatusData
+      - name: opponentSelectStatuses
+        type: OpponentSelectStatusData[]
+      - name: pvpPreviousSeasonResult
+        type: PvpPreviousSeasonResultData?
+      - name: isViewableRanking
+        type: bool
+
+  - name: PvpStartResult
+    obscure: true
+    impl_entity: true
+    params:
+      - name: opponentPvpStatus
+        type: OpponentPvpStatusData
+
+  - name: PvpEndResult
+    obscure: true
+    impl_entity: true
+    params:
+      - name: pvpEndResultBonusPoint
+        type: PvpEndResultBonusPointData
+      - name: pvpTotalScoreRewards
+        type: PvpRewardData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrPvpStatus
+        type: UsrPvpStatusData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrEmblems
+        type: UsrEmblemData[]
+
+  - name: PvpEndResultBonusPoint
+    obscure: true
+    impl_entity: true
+    params:
+      - name: resultPoint
+        type: int
+      - name: opponentBonusPoint
+        type: int
+      - name: timeBonusPoint
+        type: int
+
+  - name: PvpResumeResult
+    obscure: true
+    impl_entity: true
+    params:
+      - name: opponentSelectStatus
+        type: OpponentSelectStatusData
+      - name: opponentPvpStatus
+        type: OpponentPvpStatusData
+
+  - name: PvpAbortResult
+    obscure: true
+    impl_entity: true
+    params:
+      - name: usrPvpStatus
+        type: UsrPvpStatusData
+      - name: usrItems
+        type: UsrItemData[]
+
+  - name: PvpChangeOpponentResult
+    obscure: true
+    impl_entity: true
+    params:
+      - name: opponentSelectStatuses
+        type: OpponentSelectStatusData[]
+
+  - name: PvpRankingItem
+    obscure: true
+    params:
+      - name: rank
+        type: int
+      - name: score
+        type: int
+      - name: name
+        type: string
+      - name: mstUnitId
+        type: string
+      - name: mstEmblemId
+        type: string
+
+  - name: PvpMyRanking
+    obscure: true
+    params:
+      - name: rank
+        type: int
+      - name: score
+        type: int
+      - name: isExcludeRanking
+        type: bool
+
+  - name: PvpRankingResult
+    obscure: true
+    params:
+      - name: ranking
+        type: PvpRankingItemData[]
+      - name: myRanking
+        type: PvpMyRankingData
+
+  - name: PvpInGameEndBattleLog
+    obscure: true
+    params:
+      - name: clearTimeMs
+        type: int
+      - name: maxDamage
+        type: int
+      - name: partyStatus # 自身のパーティ情報
+        type: PartyStatusData[]
+      - name: opponentPartyStatus # 対戦相手のパーティ情報
+        type: PartyStatusData[]
+
+api:
+  - name: Pvp
+    actions:
+      - name: Top
+        path: "/api/pvp/top"
+        params: []
+        method: POST
+        response: PvpTopResultData
+
+      - name: Start
+        path: "/api/pvp/start"
+        params:
+          - name: sysPvpSeasonId
+            type: string
+          - name: isUseItem
+            type: int # 通常の挑戦回数の場合は0, アイテムを使って挑戦する場合は1
+          - name: opponentMyId
+            type: string
+          - name: partyNo
+            type: int
+          - name: inGameBattleLog
+            type: InGameStartBattleLogData
+        method: POST
+        response: PvpStartResultData
+
+      - name: End
+        path: "/api/pvp/end"
+        params:
+          - name: sysPvpSeasonId
+            type: string
+          - name: inGameBattleLog
+            type: PvpInGameEndBattleLogData
+          - name: isWin
+            type: bool
+        method: POST
+        response: PvpEndResultData
+
+      - name: Resume
+        path: "/api/pvp/resume"
+        params: []
+        method: POST
+        response: PvpResumeResultData
+
+      - name: ChangeOpponent
+        path: "/api/pvp/change_opponent"
+        params: []
+        method: POST
+        response: PvpChangeOpponentResultData
+
+      - name: Abort
+        path: "/api/pvp/abort"
+        params: []
+        method: POST
+        response: PvpAbortResultData
+
+      - name: Ranking
+        path: "/api/pvp/ranking"
+        params:
+          - name: isPreviousSeason
+            type: bool
+        method: GET
+        response: PvpRankingResultData
+
