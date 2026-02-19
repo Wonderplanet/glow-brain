@@ -1,0 +1,3 @@
+memo
+TABLE,MstMangaAnimation,MstMangaAnimation,MstMangaAnimation,MstMangaAnimation,MstMangaAnimation,MstMangaAnimation,MstMangaAnimation,MstMangaAnimation,MstMangaAnimation,MstMangaAnimation
+ENABLE,id,mst_stage_id,condition_type,condition_value,animation_start_delay,animation_speed,is_pause,can_skip,asset_key,release_key

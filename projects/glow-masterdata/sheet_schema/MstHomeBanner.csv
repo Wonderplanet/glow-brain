@@ -1,0 +1,3 @@
+memo
+TABLE,MstHomeBanner,MstHomeBanner,MstHomeBanner,MstHomeBanner,MstHomeBanner,MstHomeBanner,MstHomeBanner,MstHomeBanner
+ENABLE,id,destination,destination_path,asset_key,start_at,end_at,sort_order,release_key

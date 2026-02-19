@@ -1,0 +1,5 @@
+ENABLE,id,rarity,cost_amount,reset_type,max_tradable_amount,release_key
+e,rarity_trade_1,R,15,None,__NULL__,202509010
+e,rarity_trade_2,SR,10,None,__NULL__,202509010
+e,rarity_trade_3,SSR,5,None,__NULL__,202509010
+e,rarity_trade_4,UR,3,None,__NULL__,202509010

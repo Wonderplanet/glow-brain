@@ -1,0 +1,3 @@
+memo
+TABLE,MstShopPassEffect,MstShopPassEffect,MstShopPassEffect,MstShopPassEffect,MstShopPassEffect
+ENABLE,id,mst_shop_pass_id,effect_type,effect_value,release_key

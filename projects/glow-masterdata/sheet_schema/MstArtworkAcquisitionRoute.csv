@@ -1,0 +1,3 @@
+memo
+TABLE,MstArtworkAcquisitionRoute,MstArtworkAcquisitionRoute,MstArtworkAcquisitionRoute,MstArtworkAcquisitionRoute,MstArtworkAcquisitionRoute
+ENABLE,id,mst_artwork_id,content_type,content_id,release_key

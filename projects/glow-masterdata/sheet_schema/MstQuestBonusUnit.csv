@@ -1,0 +1,3 @@
+memo
+TABLE,MstQuestBonusUnit,MstQuestBonusUnit,MstQuestBonusUnit,MstQuestBonusUnit,MstQuestBonusUnit,MstQuestBonusUnit,MstQuestBonusUnit
+ENABLE,id,mst_quest_id,mst_unit_id,coin_bonus_rate,start_at,end_at,release_key

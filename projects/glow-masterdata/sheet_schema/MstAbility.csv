@@ -1,0 +1,3 @@
+memo
+TABLE,MstAbility,MstAbility,MstAbility,MstAbility,MstAbilityI18n,MstAbilityI18n
+ENABLE,id,ability_type,release_key,asset_key,description.ja,filter_title.ja

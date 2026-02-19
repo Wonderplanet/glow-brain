@@ -1,0 +1,3 @@
+memo
+TABLE,MstUnitRoleBonus,MstUnitRoleBonus,MstUnitRoleBonus,MstUnitRoleBonus,MstUnitRoleBonus
+ENABLE,id,role_type,color_advantage_attack_bonus,color_advantage_defense_bonus,release_key

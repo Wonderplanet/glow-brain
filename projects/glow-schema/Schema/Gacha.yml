@@ -1,0 +1,438 @@
+enum:
+  - name: CostType
+    params:
+      - name: Diamond
+      - name: PaidDiamond
+      - name: Free
+      - name: Item
+      - name: Ad
+  - name: GachaType
+    params:
+      - name: Normal
+      - name: Premium
+      - name: Pickup
+      - name: Free
+      - name: Festival
+      - name: Ticket
+      - name: PaidOnly
+      - name: Medal
+      - name: Tutorial
+      - name: Stepup
+  - name: GachaBannerSize
+    params:
+      - name: SizeM
+      - name: SizeL
+  - name: GachaBackgroundColor
+    params:
+      - name: Purple
+      - name: Green
+      - name: Blue
+      - name: Yellow
+  - name: AppearanceCondition
+    params:
+      - name: Always
+      - name: HasTicket
+  - name: GachaUnlockConditionType
+    params:
+      - name: None
+      - name: MainPartTutorialComplete
+  - name: UpperType
+    params:
+      - name: MaxRarity
+      - name: Pickup
+
+data:
+  - name: OprGacha
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: gachaType
+        type: GachaType
+      - name: upperGroup
+        type: string
+      - name: enableAdPlay
+        type: bool
+      - name: adPlayIntervalTime
+        type: int?
+      - name: multiDrawCount
+        type: int
+      - name: multiFixedPrizeCount
+        type: int?
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+      - name: dailyPlayLimitCount
+        type: int?
+      - name: totalPlayLimitCount
+        type: int?
+      - name: dailyAdLimitCount
+        type: int?
+      - name: totalAdLimitCount
+        type: int?
+      - name: appearanceCondition
+        type: AppearanceCondition
+      - name: unlockConditionType
+        type: GachaUnlockConditionType
+      - name: unlockDurationHours
+        type: int?
+      - name: displayInformationId
+        type: string
+      - name: displayGachaCautionId
+        type: string
+      - name: gachaPriority
+        type: int
+  - name: OprGachaDisplayUnitI18n
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: oprGachaId
+        type: string
+      - name: mstUnitId
+        type: string
+      - name: language
+        type: Language
+      - name: sortOrder
+        type: int
+      - name: description
+        type: string
+  - name: OprGachaUseResource
+    obscure: true
+    impl_entity: true
+    params:
+      - name: oprGachaId
+        type: string
+      - name: costType
+        type: CostType
+      - name: costId
+        type: string
+      - name: costNum
+        type: int
+      - name: drawCount
+        type: int
+      - name: costPriority
+        type: int
+  - name: OprGachaUpper
+    obscure: true
+    impl_entity: true
+    params:
+      - name: upperGroup
+        type: string
+      - name: upperType
+        type: UpperType
+      - name: count
+        type: int
+  - name: OprStepupGacha
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: oprGachaId
+        type: string
+      - name: maxStepNumber
+        type: int
+      - name: maxLoopCount
+        type: int?
+  - name: OprStepupGachaStep
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: oprGachaId
+        type: string
+      - name: stepNumber
+        type: int
+      - name: costType
+        type: CostType
+      - name: costId
+        type: string?
+      - name: costNum
+        type: int
+      - name: drawCount
+        type: int
+      - name: fixedPrizeCount
+        type: int
+      - name: fixedPrizeRarityThresholdType
+        type: Rarity?
+      - name: prizeGroupId
+        type: string?
+      - name: fixedPrizeGroupId
+        type: string?
+      - name: isFirstFree
+        type: bool
+  - name: OprStepupGachaStepReward
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: oprGachaId
+        type: string
+      - name: stepNumber
+        type: int
+      - name: loopCountTarget
+        type: int?
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string?
+      - name: resourceAmount
+        type: int
+  - name: OprGachaI18n
+    obscure: true
+    impl_entity: true
+    params:
+      - name: oprGachaId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+      - name: description
+        type: string
+      - name: maxRarityUpperDescription
+        type: string
+      - name: pickupUpperDescription
+        type: string
+      - name: fixedPrizeDescription
+        type: string
+      - name: bannerUrl
+        type: string
+      - name: logoAssetKey
+        type: string
+      - name: logoBannerUrl
+        type: string
+      - name: gachaBackgroundColor
+        type: GachaBackgroundColor
+      - name: gachaBannerSize
+        type: GachaBannerSize
+
+  - name: OprStepupGachaStepI18n
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: oprStepupGachaStepId
+        type: string
+      - name: language
+        type: Language
+      - name: fixedPrizeDescription
+        type: string
+
+  - name: GachaResult
+    obscure: true
+    params:
+      - name: reward
+        type: RewardData
+  - name: GachaDrawResult
+    obscure: true
+    params:
+      - name: gachaResults
+        type: GachaResultData[]
+      - name: stepRewards
+        type: GachaResultData[]
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrGachaUppers
+        type: UsrGachaUpperData[]
+      - name: usrGacha
+        type: UsrGachaData
+  - name: RarityProbability
+    obscure: true
+    params:
+      - name: rarity
+        type: Rarity
+      - name: probability
+        type: float
+  - name: GachaPrize
+    obscure: true
+    params:
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+      - name: probability
+        type: float
+      - name: isPickup
+        type: bool
+  - name: ProbabilityGroup
+    obscure: true
+    params:
+      - name: rarity
+        type: Rarity
+      - name: prizes
+        type: GachaPrizeData[]
+  - name: FixedProbability
+    obscure: true
+    params:
+      - name: fixedCount
+        type: int
+      - name: rarityProbabilities
+        type: RarityProbabilityData[]
+      - name: probabilityGroups
+        type: ProbabilityGroupData[]
+  - name: UpperProbability
+    obscure: true
+    params:
+      - name: upperType
+        type: UpperType
+      - name: rarityProbabilities
+        type: RarityProbabilityData[]
+      - name: probabilityGroups
+        type: ProbabilityGroupData[]
+  - name: StepupGachaPrizeInfo
+    obscure: true
+    params:
+      - name: stepNumber
+        type: int
+      - name: drawCount
+        type: int
+      - name: fixedPrizeCount
+        type: int
+      - name: fixedPrizeRarityThresholdType
+        type: Rarity?
+      - name: rarityProbabilities
+        type: RarityProbabilityData[]
+      - name: probabilityGroups
+        type: ProbabilityGroupData[]
+  - name: GachaPrizeResult
+    obscure: true
+    params:
+      - name: rarityProbabilities
+        type: RarityProbabilityData[]
+      - name: probabilityGroups
+        type: ProbabilityGroupData[]
+      - name: fixedProbabilities
+        type: FixedProbabilityData
+      - name: upperProbabilities
+        type: UpperProbabilityData[]
+      - name: stepupGachaPrizes
+        type: StepupGachaPrizeInfoData[]?
+  - name: GachaHistoryReward
+    obscure: true
+    params:
+      - name: sortOrder
+        type: int
+      - name: reward
+        type: RewardData
+  - name: StepupInfo
+    obscure: true
+    params:
+      - name: stepNumber
+        type: int
+      - name: loopCount
+        type: int
+  - name: GachaHistory
+    obscure: true
+    params:
+      - name: oprGachaId
+        type: string
+      - name: costType
+        type: CostType
+      - name: costId
+        type: string
+      - name: costNum
+        type: int
+      - name: drawCount
+        type: int
+      - name: playedAt
+        type: DateTimeOffset
+      - name: results
+        type: GachaHistoryRewardData[]
+      - name: stepupInfo
+        type: StepupInfoData?
+      - name: stepRewards
+        type: RewardData[]?
+  - name: GachaHistoryResult
+    obscure: true
+    params:
+      - name: gachaHistories
+        type: GachaHistoryData[]
+
+api:
+  - name: Gacha
+    actions:
+      - name: Prize
+        path: "/api/gacha/prize"
+        params:
+          - name: oprGachaId
+            type: string
+        method: GET
+        response: GachaPrizeResultData
+      - name: Ad
+        path: "/api/gacha/draw/ad"
+        params:
+          - name: oprGachaId
+            type: string
+          - name: drewCount
+            type: int
+        method: POST
+        response: GachaDrawResultData
+      - name: Diamond
+        path: "/api/gacha/draw/diamond"
+        params:
+          - name: oprGachaId
+            type: string
+          - name: drewCount
+            type: int
+          - name: playNum
+            type: int
+          - name: costNum
+            type: int
+        method: POST
+        response: GachaDrawResultData
+      - name: PaidDiamond
+        path: "/api/gacha/draw/paid_diamond"
+        params:
+          - name: oprGachaId
+            type: string
+          - name: drewCount
+            type: int
+          - name: playNum
+            type: int
+          - name: costNum
+            type: int
+        method: POST
+        response: GachaDrawResultData
+      - name: Item
+        path: "/api/gacha/draw/item"
+        params:
+          - name: oprGachaId
+            type: string
+          - name: drewCount
+            type: int
+          - name: playNum
+            type: int
+          - name: costId
+            type: string
+          - name: costNum
+            type: int
+        method: POST
+        response: GachaDrawResultData
+      - name: Free
+        path: "/api/gacha/draw/free"
+        params:
+          - name: oprGachaId
+            type: string
+          - name: drewCount
+            type: int
+        method: POST
+        response: GachaDrawResultData
+      - name: History
+        path: "/api/gacha/history"
+        params:
+        method: GET
+        response: GachaHistoryResultData

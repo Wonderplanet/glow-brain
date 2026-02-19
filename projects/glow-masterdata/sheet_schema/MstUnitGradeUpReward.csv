@@ -1,0 +1,3 @@
+memo
+TABLE,MstUnitGradeUpReward,MstUnitGradeUpReward,MstUnitGradeUpReward,MstUnitGradeUpReward,MstUnitGradeUpReward,MstUnitGradeUpReward,MstUnitGradeUpReward
+ENABLE,id,mst_unit_id,grade_level,resource_type,resource_id,resource_amount,release_key

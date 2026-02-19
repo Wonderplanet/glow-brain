@@ -1,0 +1,23 @@
+ENABLE,release_key,id,opr_campaign_id,language,description
+e,999999999,Campaign1_1_ja,Campaign1_1,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,999999999,Campaign1_2_ja,Campaign1_2,ja,"獲得量   <color=#C81919><size=22>2</size><size=17>倍</size></color>"
+e,999999999,Campaign1_3_ja,Campaign1_3,ja,"ドロップ率 <color=#C81919><size=22>2</size><size=17>倍</size></color>"
+e,999999999,Campaign1_4_ja,Campaign1_4,ja,"ドロップ率 <color=#C81919><size=22>2</size><size=17>倍</size></color>"
+e,999999999,Campaign1_5_ja,Campaign1_5,ja,"ドロップ量 <color=#C81919><size=22>2</size><size=17>倍</size></color>"
+e,999999999,Campaign1_6_ja,Campaign1_6,ja,<color=#C81919><size=22>53</size><size=17>回</size></color>にUP中!!
+e,999999999,Campaign1_7_ja,Campaign1_7,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,999999999,Campaign1_8_ja,Campaign1_8,ja,"ドロップ率 <color=#C81919><size=22>3.3</size><size=17>倍</size></color>"
+e,999999999,Campaign1_9_ja,Campaign1_9,ja,"ドロップ量 <color=#C81919><size=22>2</size><size=17>倍</size></color>"
+e,999999999,Campaign1_10_ja,Campaign1_10,ja,<color=#C81919><size=22>6</size><size=17>回</size></color>にUP中!!
+e,999999999,Campaign1_11_ja,Campaign1_11,ja,"ドロップ量 <color=#C81919><size=22>2</size><size=17>倍</size></color>"
+e,999999999,Campaign1_12_ja,Campaign1_12,ja,"ドロップ量 <color=#C81919><size=22>2</size><size=17>倍</size></color>"
+e,202510020,Campaign1_13_ja,Campaign1_13,ja,"獲得量 <color=#C81919><size=22>2</size><size=17>倍</size></color>"
+e,202511020,BFCampaign1_1_ja,BFCampaign1_1,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,202511020,BFCampaign1_2_ja,BFCampaign1_2,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,202511020,BFCampaign1_3_ja,BFCampaign1_3,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,202511020,BFCampaign1_4_ja,BFCampaign1_4,ja,<color=#C81919><size=22>5</size><size=17>回</size></color>にUP中!!
+e,202512020,newyear_CP1_1_ja,newyear_CP1_1,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,202512020,newyear_CP1_2_ja,newyear_CP1_2,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,202512020,newyear_CP1_3_ja,newyear_CP1_3,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,202512020,newyear_CP1_4_ja,newyear_CP1_4,ja,<color=#C81919><size=22>5</size><size=17>回</size></color>にUP中!!
+e,202603020,halfanniv_CP1_1_ja,halfanniv_CP1_1,ja,<color=#C81919><size=22>5</size><size=17>回</size></color>にUP中!!

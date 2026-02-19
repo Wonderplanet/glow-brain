@@ -1,0 +1,3 @@
+memo
+TABLE,MstUnitLevelUp,MstUnitLevelUp,MstUnitLevelUp,MstUnitLevelUp,MstUnitLevelUp
+ENABLE,id,unit_label,level,required_coin,release_key
