@@ -92,17 +92,17 @@ row=4  height=0.55  layout=10  (3コマ: 0.25 / 0.25 / 0.5)  ← コマ効果あ
 
 9種類の敵パラメータを使用。`c_` プレフィックスはキャラ個別ID、`e_` は汎用敵。
 
-| id（action_value） | キャラID | kind | role | color | base_hp | base_atk | base_spd | knockback | drop_bp |
-|-------------------|---------|------|------|-------|---------|---------|---------|-----------|---------|
-| `c_osh_00201_osh1_advent_Normal_Red` | chara_osh_00201 | Normal | Attack | Red | 1,000 | 100 | 37 | 1 | 50 |
-| `c_osh_00201_osh1_advent_Boss_Red` | chara_osh_00201 | Boss | Attack | Red | 10,000 | 100 | 31 | 1 | 100 |
-| `c_osh_00301_osh1_advent_Normal_Yellow` | chara_osh_00301 | Normal | Technical | Yellow | 1,000 | 100 | 37 | 1 | 50 |
-| `c_osh_00301_osh1_advent_Boss_Yellow` | chara_osh_00301 | Boss | Technical | Yellow | 10,000 | 100 | 31 | 1 | 100 |
-| `c_osh_00401_osh1_advent_Normal_Colorless` | chara_osh_00401 | Normal | Technical | Colorless | 1,000 | 100 | 37 | 1 | 50 |
-| `c_osh_00401_osh1_advent_Boss_Colorless` | chara_osh_00401 | Boss | Technical | Colorless | 10,000 | 100 | 31 | 1 | 100 |
-| `e_glo_00002_osh1_advent_Normal_Green` | enemy_glo_00002 | Normal | Attack | Green | 1,000 | 100 | 47 | 1 | 50 |
-| `e_glo_00002_osh1_advent_Normal_Colorless` | enemy_glo_00002 | Normal | Defense | Colorless | 1,000 | 100 | 20 | 0 | 5 |
-| `e_glo_00002_osh1_advent_Boss_Green` | enemy_glo_00002 | Boss | Attack | Green | 10,000 | 100 | 45 | 1 | 100 |
+| id（action_value） | キャラID | 日本語名 | kind | role | color | base_hp | base_atk | base_spd | knockback | drop_bp |
+|-------------------|---------|---------|------|------|-------|---------|---------|---------|-----------|---------||
+| `c_osh_00201_osh1_advent_Normal_Red` | chara_osh_00201 | 星野 ルビー | Normal | Attack | Red | 1,000 | 100 | 37 | 1 | 50 |
+| `c_osh_00201_osh1_advent_Boss_Red` | chara_osh_00201 | 星野 ルビー | Boss | Attack | Red | 10,000 | 100 | 31 | 1 | 100 |
+| `c_osh_00301_osh1_advent_Normal_Yellow` | chara_osh_00301 | MEMちょ | Normal | Technical | Yellow | 1,000 | 100 | 37 | 1 | 50 |
+| `c_osh_00301_osh1_advent_Boss_Yellow` | chara_osh_00301 | MEMちょ | Boss | Technical | Yellow | 10,000 | 100 | 31 | 1 | 100 |
+| `c_osh_00401_osh1_advent_Normal_Colorless` | chara_osh_00401 | 有馬 かな | Normal | Technical | Colorless | 1,000 | 100 | 37 | 1 | 50 |
+| `c_osh_00401_osh1_advent_Boss_Colorless` | chara_osh_00401 | 有馬 かな | Boss | Technical | Colorless | 10,000 | 100 | 31 | 1 | 100 |
+| `e_glo_00002_osh1_advent_Normal_Green` | enemy_glo_00002 | 推し活ファントム | Normal | Attack | Green | 1,000 | 100 | 47 | 1 | 50 |
+| `e_glo_00002_osh1_advent_Normal_Colorless` | enemy_glo_00002 | 推し活ファントム | Normal | Defense | Colorless | 1,000 | 100 | 20 | 0 | 5 |
+| `e_glo_00002_osh1_advent_Boss_Green` | enemy_glo_00002 | 推し活ファントム | Boss | Attack | Green | 10,000 | 100 | 45 | 1 | 100 |
 
 > **実際のHP・ATKは `base × MstAutoPlayerSequence.enemy_hp_coef` で決まる。**
 > 例: `c_osh_00301_osh1_advent_Normal_Yellow`（base_hp=1000）を elem=36 で出すと
