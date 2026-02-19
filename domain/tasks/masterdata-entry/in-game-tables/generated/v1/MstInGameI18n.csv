@@ -8,7 +8,7 @@ e,999999999,event_aka1_challenge03_00001_ja,event_aka1_challenge03_00001,ja,強�
 e,999999999,event_rik1_challenge01_00001_ja,event_rik1_challenge01_00001,ja,RIK作品の敵が大量出現するぞ!\n\n素早く倒してクリアを目指せ!,【作品情報】\nRIK作品の雑魚敵が連続で出現するぞ!\n\n【コマ効果情報】\n攻撃UPコマを使えば有利に戦えるぞ!\n\n【ギミック情報】\n敵を素早く倒してコマを進めよう!
 e,999999999,event_rik1_challenge02_00001_ja,event_rik1_challenge02_00001,ja,最初に出現する敵を倒すと大量リーダーPが獲得できるぞ!\n\n強敵に備えて高コストキャラを編成しよう!,【作品情報】\nRIK作品の中難度ステージだ!\n\n【コマ効果情報】\n攻撃UPコマを活用しよう!\n\n【ギミック情報】\n敵を倒すとより強い敵が出現するぞ!
 e,999999999,event_rik1_challenge03_00001_ja,event_rik1_challenge03_00001,ja,強力なボスが登場するぞ!\n\nボスのHPを削り切れ!,【作品情報】\nRIK作品の強ボスステージだ!\n\n【コマ効果情報】\nボス戦に備えて強力なコマを選ぼう!\n\n【ギミック情報】\n強力なボスのHPを削り切れ!
-e,999999999,event_dan1_challenge01_00001_ja,event_dan1_challenge01_00001,ja,DAN作品の敵が大量出現するぞ!\n\n素早く倒してクリアを目指せ!,【作品情報】\nDAN作品の雑魚敵が連続で出現するぞ!\n\n【コマ効果情報】\n攻撃UPコマを使えば有利に戦えるぞ!\n\n【ギミック情報】\n敵を素早く倒してコマを進めよう!
+e,999999999,event_dan1_challenge01_00005_ja,event_dan1_challenge01_00005,ja,DAN作品の敵が大量出現するぞ!\n\n素早く倒してクリアを目指せ!,【作品情報】\nDAN作品の雑魚敵が連続で出現するぞ!\n\n【コマ効果情報】\n攻撃UPコマを使えば有利に戦えるぞ!\n\n【ギミック情報】\n敵を素早く倒してコマを進めよう!
 e,999999999,event_dan1_challenge02_00001_ja,event_dan1_challenge02_00001,ja,最初に出現する敵を倒すと大量リーダーPが獲得できるぞ!\n\n強敵に備えて高コストキャラを編成しよう!,【作品情報】\nDAN作品の中難度ステージだ!\n\n【コマ効果情報】\n攻撃UPコマを活用しよう!\n\n【ギミック情報】\n敵を倒すとより強い敵が出現するぞ!
 e,999999999,event_dan1_challenge03_00001_ja,event_dan1_challenge03_00001,ja,強力なボスが登場するぞ!\n\nボスのHPを削り切れ!,【作品情報】\nDAN作品の強ボスステージだ!\n\n【コマ効果情報】\nボス戦に備えて強力なコマを選ぼう!\n\n【ギミック情報】\n強力なボスのHPを削り切れ!
 e,999999999,event_gom1_challenge01_00001_ja,event_gom1_challenge01_00001,ja,GOM作品の敵が大量出現するぞ!\n\n素早く倒してクリアを目指せ!,【作品情報】\nGOM作品の雑魚敵が連続で出現するぞ!\n\n【コマ効果情報】\n攻撃UPコマを使えば有利に戦えるぞ!\n\n【ギミック情報】\n敵を素早く倒してコマを進めよう!
@@ -17,7 +17,7 @@ e,999999999,event_gom1_challenge03_00001_ja,event_gom1_challenge03_00001,ja,強�
 e,999999999,event_chi1_challenge01_00001_ja,event_chi1_challenge01_00001,ja,チェンソーを駆使して大量の敵を倒せ！,チェンソーマンの世界で繰り広げられる熾烈な戦い。大量の敵を倒して生き残れ。
 e,999999999,event_chi1_challenge02_00001_ja,event_chi1_challenge02_00001,ja,強敵の出現に備えながら戦え！,手強い中ボスが立ちはだかる中難度のステージ。戦略的に戦え。
 e,999999999,event_chi1_challenge03_00001_ja,event_chi1_challenge03_00001,ja,最強のボスに挑め！全力で戦え！,最強のボスが待ち受ける究極のステージ。全ての力を解き放て。
-e,999999999,event_mag1_challenge01_00001_ja,event_mag1_challenge01_00001,ja,魔法少女の力を合わせて敵を一掃しろ！,魔法少女たちが力を合わせて大量の敵に立ち向かう。
+e,999999999,event_mag1_challenge01_00005_ja,event_mag1_challenge01_00005,ja,魔法少女の力を合わせて敵を一掃しろ！,魔法少女たちが力を合わせて大量の敵に立ち向かう。
 e,999999999,event_mag1_challenge02_00001_ja,event_mag1_challenge02_00001,ja,中ボスの魔力に打ち勝て！,強力なボスが登場する中難度ステージ。魔法を駆使して戦え。
 e,999999999,event_mag1_challenge03_00001_ja,event_mag1_challenge03_00001,ja,最強の魔法使いに挑め！,最強の敵が待つ最終ステージ。魔法少女の真の力を見せろ。
 e,999999999,event_dos1_challenge01_00001_ja,event_dos1_challenge01_00001,ja,道産子パワーで敵を蹴散らせ！,北海道から来たギャルたちが大量の敵と戦う。

@@ -17,8 +17,8 @@ e,event_rik1_challenge02_00001_1,event_rik1_challenge02_00001,1,1,koma_line_layo
 e,event_rik1_challenge02_00001_2,event_rik1_challenge02_00001,2,1,koma_line_layout_01,rik_00001,1.0,1.0,AttackPowerDown,30,,Enemy,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,999999999
 e,event_rik1_challenge02_00001_3,event_rik1_challenge02_00001,3,1,koma_line_layout_03,rik_00001,0.4,-1.0,None,,,,,,rik_00001,0.6,-1.02,AttackPowerUp,30,,Player,,,,,,,,,,,,,,,,,,,,,999999999
 e,event_rik1_challenge03_00001_1,event_rik1_challenge03_00001,1,1,koma_line_layout_01,rik_00001,1.0,0,None,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,999999999
-e,event_dan1_challenge01_00001_1,event_dan1_challenge01_00001,1,1,koma_line_layout_03,dan_00001,0.4,0,AttackPowerUp,20,,Player,,,dan_00001,0.6,0.02,None,,,,,,,,,,,,,,,,,,,,,,,,999999999
-e,event_dan1_challenge01_00001_2,event_dan1_challenge01_00001,2,1,koma_line_layout_01,dan_00001,1.0,1.0,AttackPowerDown,20,,Enemy,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,999999999
+e,event_dan1_challenge01_00005_1,event_dan1_challenge01_00005,1,1,koma_line_layout_03,dan_00001,0.4,0,AttackPowerUp,20,,Player,,,dan_00001,0.6,0.02,None,,,,,,,,,,,,,,,,,,,,,,,,999999999
+e,event_dan1_challenge01_00005_2,event_dan1_challenge01_00005,2,1,koma_line_layout_01,dan_00001,1.0,1.0,AttackPowerDown,20,,Enemy,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,999999999
 e,event_dan1_challenge02_00001_1,event_dan1_challenge02_00001,1,1,koma_line_layout_03,dan_00001,0.4,0,AttackPowerUp,30,,Player,,,dan_00001,0.6,0.02,None,,,,,,,,,,,,,,,,,,,,,,,,999999999
 e,event_dan1_challenge02_00001_2,event_dan1_challenge02_00001,2,1,koma_line_layout_01,dan_00001,1.0,1.0,AttackPowerDown,30,,Enemy,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,999999999
 e,event_dan1_challenge02_00001_3,event_dan1_challenge02_00001,3,1,koma_line_layout_03,dan_00001,0.4,-1.0,None,,,,,,dan_00001,0.6,-1.02,AttackPowerUp,30,,Player,,,,,,,,,,,,,,,,,,,,,999999999
@@ -35,8 +35,8 @@ e,event_chi1_challenge02_00001_1,event_chi1_challenge02_00001,1,1,koma_line_layo
 e,event_chi1_challenge02_00001_2,event_chi1_challenge02_00001,2,1,koma_line_layout_01,chi_00001,1.0,1.0,AttackPowerDown,30,,Enemy,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,999999999
 e,event_chi1_challenge02_00001_3,event_chi1_challenge02_00001,3,1,koma_line_layout_03,chi_00001,0.4,-1.0,None,,,,,,chi_00001,0.6,-1.02,AttackPowerUp,30,,Player,,,,,,,,,,,,,,,,,,,,,999999999
 e,event_chi1_challenge03_00001_1,event_chi1_challenge03_00001,1,1,koma_line_layout_01,chi_00001,1.0,0,None,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,999999999
-e,event_mag1_challenge01_00001_1,event_mag1_challenge01_00001,1,1,koma_line_layout_03,mag_00001,0.4,0,AttackPowerUp,20,,Player,,,mag_00001,0.6,0.02,None,,,,,,,,,,,,,,,,,,,,,,,,999999999
-e,event_mag1_challenge01_00001_2,event_mag1_challenge01_00001,2,1,koma_line_layout_01,mag_00001,1.0,1.0,AttackPowerDown,20,,Enemy,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,999999999
+e,event_mag1_challenge01_00005_1,event_mag1_challenge01_00005,1,1,koma_line_layout_03,mag_00001,0.4,0,AttackPowerUp,20,,Player,,,mag_00001,0.6,0.02,None,,,,,,,,,,,,,,,,,,,,,,,,999999999
+e,event_mag1_challenge01_00005_2,event_mag1_challenge01_00005,2,1,koma_line_layout_01,mag_00001,1.0,1.0,AttackPowerDown,20,,Enemy,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,999999999
 e,event_mag1_challenge02_00001_1,event_mag1_challenge02_00001,1,1,koma_line_layout_03,mag_00001,0.4,0,AttackPowerUp,30,,Player,,,mag_00001,0.6,0.02,None,,,,,,,,,,,,,,,,,,,,,,,,999999999
 e,event_mag1_challenge02_00001_2,event_mag1_challenge02_00001,2,1,koma_line_layout_01,mag_00001,1.0,1.0,AttackPowerDown,30,,Enemy,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,999999999
 e,event_mag1_challenge02_00001_3,event_mag1_challenge02_00001,3,1,koma_line_layout_03,mag_00001,0.4,-1.0,None,,,,,,mag_00001,0.6,-1.02,AttackPowerUp,30,,Player,,,,,,,,,,,,,,,,,,,,,999999999

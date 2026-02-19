@@ -8,7 +8,7 @@ e,event_aka1_challenge03_00001,150000,,,event_aka_0001,999999999
 e,event_rik1_challenge01_00001,80000,,,event_rik_0001,999999999
 e,event_rik1_challenge02_00001,100000,,,event_rik_0001,999999999
 e,event_rik1_challenge03_00001,150000,,,event_rik_0001,999999999
-e,event_dan1_challenge01_00001,80000,,,event_dan_0001,999999999
+e,event_dan1_challenge01_00005,80000,,,event_dan_0001,999999999
 e,event_dan1_challenge02_00001,100000,,,event_dan_0001,999999999
 e,event_dan1_challenge03_00001,150000,,,event_dan_0001,999999999
 e,event_gom1_challenge01_00001,80000,,,event_gom_0001,999999999
@@ -17,7 +17,7 @@ e,event_gom1_challenge03_00001,150000,,,event_gom_0001,999999999
 e,event_chi1_challenge01_00001,80000,,outpost_event_chi_0001,event_chi_0001,999999999
 e,event_chi1_challenge02_00001,100000,,outpost_event_chi_0001,event_chi_0001,999999999
 e,event_chi1_challenge03_00001,150000,,outpost_event_chi_0001,event_chi_0001,999999999
-e,event_mag1_challenge01_00001,80000,,outpost_event_mag_0001,event_mag_0001,999999999
+e,event_mag1_challenge01_00005,80000,,outpost_event_mag_0001,event_mag_0001,999999999
 e,event_mag1_challenge02_00001,100000,,outpost_event_mag_0001,event_mag_0001,999999999
 e,event_mag1_challenge03_00001,150000,,outpost_event_mag_0001,event_mag_0001,999999999
 e,event_dos1_challenge01_00001,80000,,outpost_event_dos_0001,event_dos_0001,999999999
@@ -26,7 +26,6 @@ e,event_dos1_challenge03_00001,150000,,outpost_event_dos_0001,event_dos_0001,999
 e,event_bat1_challenge01_00001,80000,,outpost_event_bat_0001,event_bat_0001,999999999
 e,event_bat1_challenge02_00001,100000,,outpost_event_bat_0001,event_bat_0001,999999999
 e,event_bat1_challenge03_00001,150000,,outpost_event_bat_0001,event_bat_0001,999999999
-e,event_kai1_challenge01_00005,80000,,outpost_event_kai_0001,event_kai_0001,999999999
 e,event_kai1_challenge02_00001,100000,,outpost_event_kai_0001,event_kai_0001,999999999
 e,event_kai1_challenge03_00001,150000,,outpost_event_kai_0001,event_kai_0001,999999999
 e,event_yuw1_challenge01_00005,80000,false,enemy_outpost_yuw_00001,event_yuw_0001,999999999
