@@ -1,0 +1,11 @@
+{
+    "sandbox": {
+        "enabled": true,
+        "autoAllowBashIfSandboxed": true
+    },
+    "permissions": {
+        "deny": [
+            "Read(//Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/in-game-tables/generated/v1/**)"
+        ]
+    }
+}
