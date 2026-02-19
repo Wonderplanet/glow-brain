@@ -1,0 +1,4 @@
+ENABLE,release_key,id,mst_enemy_character_id,language,name
+e,999999999,enemy_dos_00001_ja,enemy_dos_00001,ja,道産子ガール
+e,999999999,enemy_ron_00001_ja,enemy_ron_00001,ja,ロンの謎の敵
+e,999999999,enemy_aha_00001_ja,enemy_aha_00001,ja,阿波連さんの敵

@@ -1,0 +1,16 @@
+ENABLE,id,hp,is_damage_invalidation,outpost_asset_key,artwork_asset_key,release_key
+e,event_spy1_challenge01_00005,80000,,,event_spy_0001,999999999
+e,event_spy1_challenge02_00001,100000,,,event_spy_0001,999999999
+e,event_spy1_challenge03_00001,150000,,,event_spy_0001,999999999
+e,event_aka1_challenge01_00001,80000,,,event_aka_0001,999999999
+e,event_aka1_challenge02_00001,100000,,,event_aka_0001,999999999
+e,event_aka1_challenge03_00001,150000,,,event_aka_0001,999999999
+e,event_rik1_challenge01_00001,80000,,,event_rik_0001,999999999
+e,event_rik1_challenge02_00001,100000,,,event_rik_0001,999999999
+e,event_rik1_challenge03_00001,150000,,,event_rik_0001,999999999
+e,event_dan1_challenge01_00001,80000,,,event_dan_0001,999999999
+e,event_dan1_challenge02_00001,100000,,,event_dan_0001,999999999
+e,event_dan1_challenge03_00001,150000,,,event_dan_0001,999999999
+e,event_gom1_challenge01_00001,80000,,,event_gom_0001,999999999
+e,event_gom1_challenge02_00001,100000,,,event_gom_0001,999999999
+e,event_gom1_challenge03_00001,150000,,,event_gom_0001,999999999
