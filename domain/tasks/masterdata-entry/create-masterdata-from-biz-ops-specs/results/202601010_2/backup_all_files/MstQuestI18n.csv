@@ -1,0 +1,95 @@
+ENABLE,release_key,id,mst_quest_id,language,name,category_name,flavor_text
+e,202509010,tutorial_ja,tutorial,ja,チュートリアル,,チュートリアル専用のステージ
+e,202509010,quest_main_spy_normal_1_ja,quest_main_spy_normal_1,ja,SPY×FAMILY,,『SPY×FAMILY』のクエスト。\n\nこのクエストでは、青属性の敵と攻撃UPコマが登場。\n黄属性のキャラとコマ効果を活用して対抗しよう。
+e,202509010,quest_main_spy_hard_1_ja,quest_main_spy_hard_1,ja,SPY×FAMILY,,『SPY×FAMILY』のクエスト。\n\nこのクエストでは、青属性の敵と攻撃UPコマが登場。\n黄属性のキャラとコマ効果を活用して対抗しよう。
+e,202509010,quest_main_spy_veryhard_1_ja,quest_main_spy_veryhard_1,ja,SPY×FAMILY,,『SPY×FAMILY』のクエスト。\n\nこのクエストでは、青属性の敵と攻撃UPコマが登場。\n黄属性のキャラとコマ効果を活用して対抗しよう。
+e,202509010,quest_main_gom_normal_2_ja,quest_main_gom_normal_2,ja,姫様“拷問”の時間です,,『姫様“拷問”の時間です』のクエスト。\n\nこのクエストでは、黄属性の敵とダメージコマが登場。\n緑属性のキャラで対抗しよう。\nダメージコマに入ったキャラはダメージを受けるから気をつけて戦おう。
+e,202509010,quest_main_gom_hard_2_ja,quest_main_gom_hard_2,ja,姫様“拷問”の時間です,,『姫様“拷問”の時間です』のクエスト。\n\nこのクエストでは、黄属性の敵とダメージコマが登場。\n緑属性のキャラで対抗しよう。\nダメージコマに入ったキャラはダメージを受けるから気をつけて戦おう。
+e,202509010,quest_main_gom_veryhard_2_ja,quest_main_gom_veryhard_2,ja,姫様“拷問”の時間です,,『姫様“拷問”の時間です』のクエスト。\n\nこのクエストでは、黄属性の敵とダメージコマが登場。\n緑属性のキャラで対抗しよう。\nダメージコマに入ったキャラはダメージを受けるから気をつけて戦おう。
+e,202509010,quest_main_aka_normal_3_ja,quest_main_aka_normal_3,ja,ラーメン赤猫,,『ラーメン赤猫』のクエスト。\n\nこのクエストでは、赤属性の敵が登場。\n青属性のキャラで対抗しよう。\n攻撃DOWNコマに入ったキャラは攻撃が下がってしまうから気をつけて戦おう。
+e,202509010,quest_main_aka_hard_3_ja,quest_main_aka_hard_3,ja,ラーメン赤猫,,『ラーメン赤猫』のクエスト。\n\nこのクエストでは、赤属性の敵が登場。\n青属性のキャラで対抗しよう。\n攻撃DOWNコマに入ったキャラは攻撃が下がってしまうから気をつけて戦おう。
+e,202509010,quest_main_aka_veryhard_3_ja,quest_main_aka_veryhard_3,ja,ラーメン赤猫,,『ラーメン赤猫』のクエスト。\n\nこのクエストでは、赤属性の敵が登場。\n青属性のキャラで対抗しよう。\n攻撃DOWNコマに入ったキャラは攻撃が下がってしまうから気をつけて戦おう。
+e,202509010,quest_main_glo1_normal_4_ja,quest_main_glo1_normal_4,ja,リミックスクエスト Vol.1,,"『SPY×FAMILY』『姫様""拷問""の時間です』『ラーメン赤猫』の\n3作品のリミックスクエスト。\n\n3作品クエストの様々な敵が登場するぞ!"
+e,202509010,quest_main_glo1_hard_4_ja,quest_main_glo1_hard_4,ja,リミックスクエスト Vol.1,,"『SPY×FAMILY』『姫様""拷問""の時間です』『ラーメン赤猫』の\n3作品のリミックスクエスト。\n\n3作品クエストの様々な敵が登場するぞ!"
+e,202509010,quest_main_glo1_veryhard_4_ja,quest_main_glo1_veryhard_4,ja,リミックスクエスト Vol.1,,"『SPY×FAMILY』『姫様""拷問""の時間です』『ラーメン赤猫』の\n3作品のリミックスクエスト。\n\n3作品クエストの様々な敵が登場するぞ!"
+e,202509010,quest_main_dan_normal_5_ja,quest_main_dan_normal_5,ja,ダンダダン,,『ダンダダン』のクエスト。\n\nこのクエストでは、赤属性の敵が登場。\n青属性のキャラで対抗しよう。\n暗闇コマは味方キャラが侵入すると中の様子が確認できるようになる。
+e,202509010,quest_main_dan_hard_5_ja,quest_main_dan_hard_5,ja,ダンダダン,,『ダンダダン』のクエスト。\n\nこのクエストでは、赤属性の敵が登場。\n青属性のキャラで対抗しよう。\n暗闇コマは味方キャラが侵入すると中の様子が確認できるようになる。
+e,202509010,quest_main_dan_veryhard_5_ja,quest_main_dan_veryhard_5,ja,ダンダダン,,『ダンダダン』のクエスト。\n\nこのクエストでは、赤属性の敵が登場。\n青属性のキャラで対抗しよう。\n暗闇コマは味方キャラが侵入すると中の様子が確認できるようになる。
+e,202509010,quest_main_jig_normal_6_ja,quest_main_jig_normal_6,ja,地獄楽,,『地獄楽』のクエスト。\n\nこのクエストでは、「毒」攻撃や「スタン」攻撃を主にしてくるぞ。\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_jig_hard_6_ja,quest_main_jig_hard_6,ja,地獄楽,,『地獄楽』のクエスト。\n\nこのクエストでは、「毒」攻撃や「スタン」攻撃を主にしてくるぞ。\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_jig_veryhard_6_ja,quest_main_jig_veryhard_6,ja,地獄楽,,『地獄楽』のクエスト。\n\nこのクエストでは、「毒」攻撃や「スタン」攻撃を主にしてくるぞ。\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_tak_normal_7_ja,quest_main_tak_normal_7,ja,タコピーの原罪,,『タコピーの原罪』のクエスト。\n\nこのクエストでは、様々なコマ効果が登場するぞ!\n特に暗闇コマの中には注意しよう!
+e,202509010,quest_main_tak_hard_7_ja,quest_main_tak_hard_7,ja,タコピーの原罪,,『タコピーの原罪』のクエスト。\n\nこのクエストでは、様々なコマ効果が登場するぞ!\n特に暗闇コマの中には注意しよう!
+e,202509010,quest_main_tak_veryhard_7_ja,quest_main_tak_veryhard_7,ja,タコピーの原罪,,『タコピーの原罪』のクエスト。\n\nこのクエストでは、様々なコマ効果が登場するぞ!\n特に暗闇コマの中には注意しよう!
+e,202509010,quest_main_glo2_normal_8_ja,quest_main_glo2_normal_8,ja,リミックスクエスト Vol.2,,『ダンダダン』『地獄楽』『タコピーの原罪』の\n3作品のリミックスクエスト。\n\n3作品クエストの様々な敵が登場するぞ!
+e,202509010,quest_main_glo2_hard_8_ja,quest_main_glo2_hard_8,ja,リミックスクエスト Vol.2,,『ダンダダン』『地獄楽』『タコピーの原罪』の\n3作品のリミックスクエスト。\n\n3作品クエストの様々な敵が登場するぞ!
+e,202509010,quest_main_glo2_veryhard_8_ja,quest_main_glo2_veryhard_8,ja,リミックスクエスト Vol.2,,『ダンダダン』『地獄楽』『タコピーの原罪』の\n3作品のリミックスクエスト。\n\n3作品クエストの様々な敵が登場するぞ!
+e,202509010,quest_main_chi_normal_9_ja,quest_main_chi_normal_9,ja,チェンソーマン,,『チェンソーマン』のクエスト。\n\nこのクエストでは、敵自身が体力を「回復」してくる攻撃を主にしてくるぞ!\n短期決戦に持ち込もう!
+e,202509010,quest_main_chi_hard_9_ja,quest_main_chi_hard_9,ja,チェンソーマン,,『チェンソーマン』のクエスト。\n\nこのクエストでは、敵自身が体力を「回復」してくる攻撃を主にしてくるぞ!\n短期決戦に持ち込もう!
+e,202509010,quest_main_chi_veryhard_9_ja,quest_main_chi_veryhard_9,ja,チェンソーマン,,『チェンソーマン』のクエスト。\n\nこのクエストでは、敵自身が体力を「回復」してくる攻撃を主にしてくるぞ!\n短期決戦に持ち込もう!
+e,202509010,quest_main_sur_normal_10_ja,quest_main_sur_normal_10,ja,魔都精兵のスレイブ,,『魔都精兵のスレイブ』のクエスト。\n\nこのクエストでは、「スタン」攻撃や「ノックバック」攻撃を主にしてくるぞ!\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_sur_hard_10_ja,quest_main_sur_hard_10,ja,魔都精兵のスレイブ,,『魔都精兵のスレイブ』のクエスト。\n\nこのクエストでは、「スタン」攻撃や「ノックバック」攻撃を主にしてくるぞ!\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_sur_veryhard_10_ja,quest_main_sur_veryhard_10,ja,魔都精兵のスレイブ,,『魔都精兵のスレイブ』のクエスト。\n\nこのクエストでは、「スタン」攻撃や「ノックバック」攻撃を主にしてくるぞ!\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_rik_normal_11_ja,quest_main_rik_normal_11,ja,トマトイプーのリコピン,,『トマトイプーのリコピン』のクエスト。\n\nこのクエストでは、様々な行動をしてくるリコピンが出現!\n「ノックバック」攻撃や、「攻撃DOWN」攻撃などの攻撃を主にしてくるぞ!\n遠距離攻撃が得意なキャラが活躍するぞ!
+e,202509010,quest_main_rik_hard_11_ja,quest_main_rik_hard_11,ja,トマトイプーのリコピン,,『トマトイプーのリコピン』のクエスト。\n\nこのクエストでは、様々な行動をしてくるリコピンが出現!\n「ノックバック」攻撃や、「攻撃DOWN」攻撃などの攻撃を主にしてくるぞ!\n遠距離攻撃が得意なキャラが活躍するぞ!
+e,202509010,quest_main_rik_veryhard_11_ja,quest_main_rik_veryhard_11,ja,トマトイプーのリコピン,,『トマトイプーのリコピン』のクエスト。\n\nこのクエストでは、様々な行動をしてくるリコピンが出現!\n「ノックバック」攻撃や、「攻撃DOWN」攻撃などの攻撃を主にしてくるぞ!\n遠距離攻撃が得意なキャラが活躍するぞ!
+e,202509010,quest_main_glo3_normal_12_ja,quest_main_glo3_normal_12,ja,リミックスクエスト Vol.3,,『チェンソーマン』『魔都精兵のスレイブ』『トマトイプーのリコピン』の\n3作品オールスタークエスト。\n\n3作品クエストの様々な敵が登場するぞ!
+e,202509010,quest_main_glo3_hard_12_ja,quest_main_glo3_hard_12,ja,リミックスクエスト Vol.3,,『チェンソーマン』『魔都精兵のスレイブ』『トマトイプーのリコピン』の\n3作品オールスタークエスト。\n\n3作品クエストの様々な敵が登場するぞ!
+e,202509010,quest_main_glo3_veryhard_12_ja,quest_main_glo3_veryhard_12,ja,リミックスクエスト Vol.3,,『チェンソーマン』『魔都精兵のスレイブ』『トマトイプーのリコピン』の\n3作品オールスタークエスト。\n\n3作品クエストの様々な敵が登場するぞ!
+e,202509010,quest_main_mag_normal_13_ja,quest_main_mag_normal_13,ja,株式会社マジルミエ,,『株式会社マジルミエ』のクエスト。\n\nこのクエストでは、大量の敵が「氷結」攻撃や「ノックバック」攻撃を主にしてくるぞ!\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_mag_hard_13_ja,quest_main_mag_hard_13,ja,株式会社マジルミエ,,『株式会社マジルミエ』のクエスト。\n\nこのクエストでは、大量の敵が「氷結」攻撃や「ノックバック」攻撃を主にしてくるぞ!\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_mag_veryhard_13_ja,quest_main_mag_veryhard_13,ja,株式会社マジルミエ,,『株式会社マジルミエ』のクエスト。\n\nこのクエストでは、大量の敵が「氷結」攻撃や「ノックバック」攻撃を主にしてくるぞ!\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_sum_normal_14_ja,quest_main_sum_normal_14,ja,サマータイムレンダ,,『サマータイムレンダ』のクエスト。\n\nこのクエストでは、「ノックバック」攻撃を主にしてくるぞ!\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_sum_hard_14_ja,quest_main_sum_hard_14,ja,サマータイムレンダ,,『サマータイムレンダ』のクエスト。\n\nこのクエストでは、「ノックバック」攻撃を主にしてくるぞ!\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_sum_veryhard_14_ja,quest_main_sum_veryhard_14,ja,サマータイムレンダ,,『サマータイムレンダ』のクエスト。\n\nこのクエストでは、「ノックバック」攻撃を主にしてくるぞ!\nキャラの特性で対策して挑もう!
+e,202509010,quest_main_kai_normal_15_ja,quest_main_kai_normal_15,ja,怪獣８号,,『怪獣８号』のクエスト。\n\nこのクエストでは「攻撃DOWN」をしてくる敵が多く登場するぞ!\n遠距離攻撃が得意なキャラが活躍するぞ!
+e,202509010,quest_main_kai_hard_15_ja,quest_main_kai_hard_15,ja,怪獣８号,,『怪獣８号』のクエスト。\n\nこのクエストでは「攻撃DOWN」をしてくる敵が多く登場するぞ!\n遠距離攻撃が得意なキャラが活躍するぞ!
+e,202509010,quest_main_kai_veryhard_15_ja,quest_main_kai_veryhard_15,ja,怪獣８号,,『怪獣８号』のクエスト。\n\nこのクエストでは「攻撃DOWN」をしてくる敵が多く登場するぞ!\n遠距離攻撃が得意なキャラが活躍するぞ!
+e,202509010,quest_main_glo4_normal_16_ja,quest_main_glo4_normal_16,ja,リミックスクエスト Vol.4,,『株式会社マジルミエ』『サマータイムレンダ』『怪獣８号』の\n3作品オールスタークエスト。\n\n3作品クエストの様々な敵が登場するぞ!
+e,202509010,quest_main_glo4_hard_16_ja,quest_main_glo4_hard_16,ja,リミックスクエスト Vol.4,,『株式会社マジルミエ』『サマータイムレンダ』『怪獣８号』の\n3作品オールスタークエスト。\n\n3作品クエストの様々な敵が登場するぞ!
+e,202509010,quest_main_glo4_veryhard_16_ja,quest_main_glo4_veryhard_16,ja,リミックスクエスト Vol.4,,『株式会社マジルミエ』『サマータイムレンダ』『怪獣８号』の\n3作品オールスタークエスト。\n\n3作品クエストの様々な敵が登場するぞ!
+e,202512020,quest_main_osh_normal_17_ja,quest_main_osh_normal_17,ja,【推しの子】,,『【推しの子】』のクエスト。\n\nこのクエストでは、火傷コマが登場。\nキャラの特性で対策して挑もう!
+e,202512020,quest_main_osh_hard_17_ja,quest_main_osh_hard_17,ja,【推しの子】,,『【推しの子】』のクエスト。\n\nこのクエストでは、火傷コマが登場。\nキャラの特性で対策して挑もう!
+e,202512020,quest_main_osh_veryhard_17_ja,quest_main_osh_veryhard_17,ja,【推しの子】,,『【推しの子】』のクエスト。\n\nこのクエストでは、火傷コマが登場。\nキャラの特性で対策して挑もう!
+e,202509010,quest_enhance_00001_ja,quest_enhance_00001,ja,強化クエスト,,毎日挑戦！ハイスコアを目指そう！
+e,202509010,quest_event_kai1_charaget01_ja,quest_event_kai1_charaget01,ja,気に入らねェ 気に入らねェ,ストーリー,
+e,202509010,quest_event_kai1_challenge01_ja,quest_event_kai1_challenge01,ja,戦場で 力を示してみせろ ヒヨコども,チャレンジ,
+e,202509010,quest_event_kai1_charaget02_ja,quest_event_kai1_charaget02,ja,怪獣８号の引き渡しを命ずる,ストーリー,
+e,202509010,quest_event_kai1_savage_ja,quest_event_kai1_savage,ja,クラス『大怪獣』,高難易度,
+e,202509010,quest_event_kai1_1day_ja,quest_event_kai1_1day,ja,候補生としての入隊,デイリー,
+e,202510010,quest_event_spy1_charaget01_ja,quest_event_spy1_charaget01,ja,ストーリークエスト1,ストーリー,
+e,202510010,quest_event_spy1_challenge01_ja,quest_event_spy1_challenge01,ja,チャレンジクエスト,チャレンジ,
+e,202510010,quest_event_spy1_charaget02_ja,quest_event_spy1_charaget02,ja,ストーリークエスト2,ストーリー,
+e,202510010,quest_event_spy1_savage_ja,quest_event_spy1_savage,ja,高難易度クエスト,高難易度,
+e,202510010,quest_event_spy1_1day_ja,quest_event_spy1_1day,ja,デイリークエスト,デイリー,
+e,202510020,quest_event_dan1_charaget01_ja,quest_event_dan1_charaget01,ja,ストーリークエスト1,ストーリー,
+e,202510020,quest_event_dan1_challenge01_ja,quest_event_dan1_challenge01,ja,チャレンジクエスト,チャレンジ,
+e,202510020,quest_event_dan1_charaget02_ja,quest_event_dan1_charaget02,ja,ストーリークエスト2,ストーリー,
+e,202510020,quest_event_dan1_savage_ja,quest_event_dan1_savage,ja,高難易度クエスト,高難易度,
+e,202510020,quest_event_dan1_1day_ja,quest_event_dan1_1day,ja,デイリークエスト,デイリー,
+e,202511010,quest_event_mag1_charaget01_ja,quest_event_mag1_charaget01,ja,うちの美学,ストーリー,
+e,202511010,quest_event_mag1_challenge01_ja,quest_event_mag1_challenge01,ja,色々な魔法少女,チャレンジ,
+e,202511010,quest_event_mag1_charaget02_ja,quest_event_mag1_charaget02,ja,よく見てる,ストーリー,
+e,202511010,quest_event_mag1_savage_ja,quest_event_mag1_savage,ja,「怪異」現象,高難易度,
+e,202511010,quest_event_mag1_1day_ja,quest_event_mag1_1day,ja,何とかやってます,デイリー,
+e,202511020,quest_event_yuw1_charaget01_ja,quest_event_yuw1_charaget01,ja,コスプレをしに来たんだよ,ストーリー,
+e,202511020,quest_event_yuw1_challenge01_ja,quest_event_yuw1_challenge01,ja,幸せです…,チャレンジ,
+e,202511020,quest_event_yuw1_charaget02_ja,quest_event_yuw1_charaget02,ja,俺はずっとオタクなだけです,ストーリー,
+e,202511020,quest_event_yuw1_savage_ja,quest_event_yuw1_savage,ja,これがこの世界の頂上,高難易度,
+e,202511020,quest_event_yuw1_1day_ja,quest_event_yuw1_1day,ja,はじめての撮影会,デイリー,
+e,202512015,quest_event_yuw1_savage02_ja,quest_event_yuw1_savage02,ja,クリスマスバトル!!,高難易度,
+e,202512010,quest_event_sur1_charaget01_ja,quest_event_sur1_charaget01,ja,スレイブの誕生,ストーリー,
+e,202512010,quest_event_sur1_challenge01_ja,quest_event_sur1_challenge01,ja,魔都防衛隊,チャレンジ,
+e,202512010,quest_event_sur1_charaget02_ja,quest_event_sur1_charaget02,ja,隠れ里の戦い,ストーリー,
+e,202512010,quest_event_sur1_savage_ja,quest_event_sur1_savage,ja,スレイブと組長,高難易度,
+e,202512010,quest_event_sur1_1day_ja,quest_event_sur1_1day,ja,精兵と管理人	,デイリー,
+e,202512020,quest_event_osh1_charaget01_ja,quest_event_osh1_charaget01,ja,芸能界へ!,収集,
+e,202512020,quest_event_osh1_challenge01_ja,quest_event_osh1_challenge01,ja,推しの子になってやる,チャレンジ,
+e,202512020,quest_event_osh1_charaget02_ja,quest_event_osh1_charaget02,ja,ぴえヨンのブートクエスト,強化,
+e,202512020,quest_event_osh1_savage_ja,quest_event_osh1_savage,ja,芸能界には才能が集まる,高難易度,
+e,202512020,quest_event_osh1_1day_ja,quest_event_osh1_1day,ja,ファンと推し合戦!,デイリー,
+e,202512020,quest_event_glo1_1day_ja,quest_event_glo1_1day,ja,開運!ジャンブル運試し,デイリー,
+e,202601010,quest_event_jig1_1day_ja,quest_event_jig1_1day,ja,本能が告げている 危険だと,,地獄楽イベントクエスト
+e,202601010,quest_event_jig1_charaget01_ja,quest_event_jig1_charaget01,ja,必ず生きて帰る,,地獄楽イベントクエスト
+e,202601010,quest_event_jig1_challenge01_ja,quest_event_jig1_challenge01,ja,死罪人と首切り役人,,地獄楽イベントクエスト
+e,202601010,quest_event_jig1_savage_ja,quest_event_jig1_savage,ja,手負いの獣は恐ろしいぞ,,地獄楽イベントクエスト

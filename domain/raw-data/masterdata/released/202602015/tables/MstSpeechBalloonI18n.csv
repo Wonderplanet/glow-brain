@@ -1,0 +1,9 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,222,chara_you_00001,ja,SpecialAttackCharge,Maru,Right,0.5,"私達はただ…\n\n子供を守る\n\nだけです",202602015
+e,223,chara_you_00001,ja,Summon,Maru,Left,1.5,"この中に\n\n\n\nイケメンは\n\n\nいますか？",202602015
+e,224,chara_you_00101,ja,SpecialAttackCharge,Maru,Right,0.5,"チームワークと\nいうものを\n\n見せてやる",202602015
+e,225,chara_you_00101,ja,Summon,Maru,Left,1.5,"やめておいた\n\nほうがいい…",202602015
+e,226,chara_you_00201,ja,SpecialAttackCharge,Maru,Right,0.5,詐欺師なめんな,202602015
+e,227,chara_you_00201,ja,Summon,Maru,Left,1.5,"少しは先輩を\nいたわれ !!!",202602015
+e,228,chara_you_00301,ja,SpecialAttackCharge,Maru,Right,0.5,まかせろ…,202602015
+e,229,chara_you_00301,ja,Summon,Maru,Left,1.5,"こんにちは\n\n新入社員です",202602015

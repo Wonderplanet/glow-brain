@@ -1,0 +1,4 @@
+ENABLE,id,mst_ability_id,ability_parameter1,ability_parameter2,ability_parameter3,release_key
+e,ability_jig_00401_01,ability_damage_cut_by_hp_percentage_over,70,40,0,202601010
+e,ability_jig_00401_02,ability_attack_power_up_by_hp_percentage_less,69,35,0,202601010
+e,ability_jig_00601_01,ability_knockback_block,0,0,0,202601010

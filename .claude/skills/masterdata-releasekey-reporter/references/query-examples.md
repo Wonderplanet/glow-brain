@@ -22,7 +22,7 @@
 ./scripts/query_release.sh 202512020 stats
 
 # 任意のSQLクエリ
-./scripts/query_release.sh 202512020 sql "SELECT COUNT(*) FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv', AUTO_DETECT=TRUE)"
+./scripts/query_release.sh 202512020 sql "SELECT COUNT(*) FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv', AUTO_DETECT=TRUE)"
 ```
 
 ### DuckDB直接起動
@@ -42,7 +42,7 @@ duckdb -init .claude/skills/masterdata-releasekey-reporter/.duckdbrc
 
 ```sql
 SELECT *
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 LIMIT 10;
 ```
@@ -51,7 +51,7 @@ LIMIT 10;
 
 ```sql
 SELECT *
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 WHERE id = 'event_osh_00001';
 ```
@@ -60,7 +60,7 @@ WHERE id = 'event_osh_00001';
 
 ```sql
 SELECT *
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstUnit.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstUnit.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 WHERE id LIKE '%osh%';
 ```
@@ -69,7 +69,7 @@ WHERE id LIKE '%osh%';
 
 ```sql
 SELECT COUNT(*) as total_rows
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattle.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattle.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__');
 ```
 
@@ -77,7 +77,7 @@ FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattle.
 
 ```sql
 SELECT id, start_at, end_at
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 WHERE start_at >= '2026-01-01'
   AND end_at <= '2026-02-28';
@@ -96,9 +96,9 @@ SELECT
   e.start_at,
   e.end_at,
   s.id as series_id
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') e
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstSeries.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstSeries.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') s
   ON e.mst_series_id = s.id;
 ```
@@ -111,9 +111,9 @@ SELECT
   e.mst_series_id,
   i.language,
   i.name
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') e
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstEventI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEventI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON e.id = i.mst_event_id
 WHERE i.language = 'ja';
@@ -127,12 +127,12 @@ SELECT
   r.resource_type,
   r.resource_id,
   r.resource_amount
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattle.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattle.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') ab
-JOIN read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattleRewardGroup.csv',
+JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattleRewardGroup.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') rg
   ON ab.id = rg.mst_advent_battle_id
-JOIN read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattleReward.csv',
+JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattleReward.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') r
   ON rg.id = r.mst_advent_battle_reward_group_id;
 ```
@@ -148,9 +148,9 @@ SELECT
   u.rarity,
   u.color,
   i.name as name_ja
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstUnit.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstUnit.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') u
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstUnitI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstUnitI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON u.id = i.mst_unit_id AND i.language = 'ja';
 ```
@@ -162,9 +162,9 @@ SELECT
   e.start_at,
   e.end_at,
   i.name as name_ja
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') e
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstEventI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEventI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON e.id = i.mst_event_id AND i.language = 'ja';
 ```
@@ -174,9 +174,9 @@ LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstEventI18
 SELECT
   q.id,
   i.name as name_ja
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstQuest.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstQuest.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') q
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstQuestI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstQuestI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON q.id = i.mst_quest_id AND i.language = 'ja';
 ```
@@ -186,9 +186,9 @@ LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstQuestI18
 SELECT
   s.id,
   i.name as name_ja
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstStage.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstStage.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') s
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstStageI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstStageI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON s.id = i.mst_stage_id AND i.language = 'ja';
 ```
@@ -199,9 +199,9 @@ SELECT
   ab.id,
   i.name as name_ja,
   i.boss_description as description_ja
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattle.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattle.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') ab
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattleI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattleI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON ab.id = i.mst_advent_battle_id AND i.language = 'ja';
 ```
@@ -212,9 +212,9 @@ SELECT
   g.id,
   i.name as name_ja,
   i.description as description_ja
-FROM read_csv('マスタデータ/リリース/202512020/tables/OprGacha.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/OprGacha.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') g
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/OprGachaI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/OprGachaI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON g.id = i.opr_gacha_id AND i.language = 'ja';
 ```
@@ -224,9 +224,9 @@ LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/OprGachaI18
 SELECT
   item.id,
   i.name as name_ja
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstItem.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstItem.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') item
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstItemI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstItemI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON item.id = i.mst_item_id AND i.language = 'ja';
 ```
@@ -237,9 +237,9 @@ SELECT
   e.id,
   i.name as name_ja,
   i.description as description_ja
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEmblem.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEmblem.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') e
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstEmblemI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEmblemI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON e.id = i.mst_emblem_id AND i.language = 'ja';
 ```
@@ -249,9 +249,9 @@ LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstEmblemI1
 SELECT
   m.id,
   i.description as description_ja
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstMissionEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstMissionEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') m
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstMissionEventI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstMissionEventI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON m.id = i.mst_mission_event_id AND i.language = 'ja';
 ```
@@ -267,7 +267,7 @@ SELECT
   resource_type,
   COUNT(*) as count,
   SUM(resource_amount) as total_amount
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattleReward.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattleReward.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 GROUP BY resource_type
 ORDER BY count DESC;
@@ -286,7 +286,7 @@ SELECT
   COUNT(*) as table_count
 FROM (
   SELECT REPLACE(file, '.csv', '') as table_name
-  FROM glob('マスタデータ/リリース/202512020/tables/*.csv')
+  FROM glob('domain/raw-data/masterdata/released/202512020/tables/*.csv')
 )
 GROUP BY category;
 ```
@@ -297,7 +297,7 @@ GROUP BY category;
 SELECT
   rarity,
   COUNT(*) as unit_count
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstUnit.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstUnit.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 GROUP BY rarity
 ORDER BY
@@ -317,7 +317,7 @@ SELECT
   color as attribute,
   rarity,
   COUNT(*) as count
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstUnit.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstUnit.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 GROUP BY color, rarity
 ORDER BY rarity, color;
@@ -334,7 +334,7 @@ SELECT *
 FROM (
   SELECT *,
     ROW_NUMBER() OVER (PARTITION BY id ORDER BY release_key DESC) as rn
-  FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+  FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
     AUTO_DETECT=TRUE, nullstr='__NULL__')
 )
 WHERE rn = 1;
@@ -344,15 +344,15 @@ WHERE rn = 1;
 
 ```sql
 SELECT 'MstEvent' as table_name, COUNT(*) as count
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 UNION ALL
 SELECT 'MstStage', COUNT(*)
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstStage.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstStage.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 UNION ALL
 SELECT 'MstUnit', COUNT(*)
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstUnit.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstUnit.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__');
 ```
 
@@ -366,7 +366,7 @@ FROM (
   SELECT
     mst_advent_battle_id as battle_id,
     SUM(resource_amount) as total_rewards
-  FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattleReward.csv',
+  FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattleReward.csv',
     AUTO_DETECT=TRUE, nullstr='__NULL__')
   WHERE resource_type = 'FreeDiamond'
   GROUP BY mst_advent_battle_id
@@ -386,7 +386,7 @@ SELECT
     WHEN id LIKE 'mission_%' THEN 'Mission'
     ELSE 'Other'
   END as category
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstStage.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstStage.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__');
 ```
 
@@ -398,15 +398,15 @@ FROM read_csv('マスタデータ/リリース/202512020/tables/MstStage.csv',
 
 ```sql
 -- 全テーブルのファイルパスを取得
-SELECT * FROM glob('マスタデータ/リリース/202512020/tables/*.csv');
+SELECT * FROM glob('domain/raw-data/masterdata/released/202512020/tables/*.csv');
 
 -- 全テーブルの行数を一括カウント
 SELECT
-  REPLACE(REPLACE(file, 'マスタデータ/リリース/202512020/tables/', ''), '.csv', '') as table_name,
+  REPLACE(REPLACE(file, 'domain/raw-data/masterdata/released/202512020/tables/', ''), '.csv', '') as table_name,
   COUNT(*) as row_count
 FROM (
   SELECT file, read_csv(file, AUTO_DETECT=TRUE, nullstr='__NULL__') as data
-  FROM glob('マスタデータ/リリース/202512020/tables/*.csv')
+  FROM glob('domain/raw-data/masterdata/released/202512020/tables/*.csv')
 )
 GROUP BY file;
 ```
@@ -415,11 +415,11 @@ GROUP BY file;
 
 ```sql
 -- カラム一覧の取得
-DESCRIBE SELECT * FROM read_csv('マスタデータ/リリース/202512020/tables/MstUnit.csv',
+DESCRIBE SELECT * FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstUnit.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__');
 
 -- 最初の5行でサンプル確認
-SELECT * FROM read_csv('マスタデータ/リリース/202512020/tables/MstUnit.csv',
+SELECT * FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstUnit.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 LIMIT 5;
 ```
@@ -431,7 +431,7 @@ SELECT
   COUNT(*) as total,
   COUNT(asset_key) as asset_key_count,
   COUNT(*) - COUNT(asset_key) as asset_key_nulls
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__');
 ```
 
@@ -452,7 +452,7 @@ FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
 SELECT
   id,
   TRY_CAST(start_at AS TIMESTAMP) as start_timestamp
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__');
 ```
 

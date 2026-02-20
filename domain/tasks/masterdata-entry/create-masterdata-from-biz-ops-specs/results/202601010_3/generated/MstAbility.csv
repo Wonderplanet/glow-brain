@@ -1,0 +1,4 @@
+ENABLE,id,ability_type,asset_key,release_key
+e,ability_attack_power_up_by_hp_percentage_less,ability_attack_power_up_by_hp_percentage_less,,202601010
+e,ability_damage_cut_by_hp_percentage_over,ability_damage_cut_by_hp_percentage_over,,202601010
+e,ability_heal_ally_by_percentage,ability_heal_ally_by_percentage,,202601010

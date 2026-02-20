@@ -1,0 +1,48 @@
+# CSV差分レポート: MstAdventBattleRank.csv
+
+## サマリー
+
+| 項目 | 件数 |
+|------|------|
+| 追加された行 | 16 |
+| 削除された行 | 0 |
+| 変更された行 | 0 |
+| 変更なしの行 | 0 |
+| 追加されたカラム | 8 |
+| 削除されたカラム | 0 |
+
+## カラム差分
+
+### 追加されたカラム
+
+- ENABLE
+- id
+- mst_advent_battle_id
+- rank_type
+- rank_level
+- required_lower_score
+- asset_key
+- release_key
+
+## 追加された行
+
+合計: 16行
+
+| ENABLE | id | mst_advent_battle_id | rank_type | rank_level | required_lower_score | asset_key | release_key |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| e | quest_raid_jig1_00001_rank_01 | quest_raid_jig1_00001 | Bronze | 1 | 1000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_02 | quest_raid_jig1_00001 | Bronze | 2 | 5000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_03 | quest_raid_jig1_00001 | Bronze | 3 | 10000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_04 | quest_raid_jig1_00001 | Bronze | 4 | 15000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_05 | quest_raid_jig1_00001 | Silver | 1 | 30000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_06 | quest_raid_jig1_00001 | Silver | 2 | 50000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_07 | quest_raid_jig1_00001 | Silver | 3 | 75000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_08 | quest_raid_jig1_00001 | Silver | 4 | 100000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_09 | quest_raid_jig1_00001 | Gold | 1 | 150000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_10 | quest_raid_jig1_00001 | Gold | 2 | 200000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_11 | quest_raid_jig1_00001 | Gold | 3 | 250000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_12 | quest_raid_jig1_00001 | Gold | 4 | 300000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_13 | quest_raid_jig1_00001 | Master | 1 | 500000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_14 | quest_raid_jig1_00001 | Master | 2 | 1000000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_15 | quest_raid_jig1_00001 | Master | 3 | 1500000 |  | 202601010 |
+| e | quest_raid_jig1_00001_rank_16 | quest_raid_jig1_00001 | Master | 4 | 2000000 |  | 202601010 |

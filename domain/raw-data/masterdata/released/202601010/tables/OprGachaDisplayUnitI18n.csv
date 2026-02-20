@@ -1,0 +1,5 @@
+ENABLE,id,opr_gacha_id,mst_unit_id,language,sort_order,description,release_key
+e,70,Pickup_jig_001,chara_jig_00401,ja,1,"必殺ワザで複数の相手\nを弱体化させつつ、\n体力も吸収する\nテクニカルキャラ! ",202601010
+e,71,Pickup_jig_001,chara_jig_00501,ja,2,"前線を支える\nサポートキャラ!\n攻撃UPとダメージ\nカットで戦況を有利に",202601010
+e,72,Pickup_jig_002,chara_jig_00001,ja,1,"火傷付与と\n状態異常軽減を\n兼ね揃えている\nテクニカルキャラ!",202601010
+e,73,Pickup_jig_002,chara_jig_00501,ja,2,"前線を支える\nサポートキャラ!\n攻撃UPとダメージ\nカットで戦況を有利に",202601010

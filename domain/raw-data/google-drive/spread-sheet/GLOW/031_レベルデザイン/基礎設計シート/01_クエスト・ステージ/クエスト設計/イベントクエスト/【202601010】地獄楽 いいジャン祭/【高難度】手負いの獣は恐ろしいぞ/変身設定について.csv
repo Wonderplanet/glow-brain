@@ -1,0 +1,17 @@
+,
+,事前準備
+,
+,変身先になるEnemyIDやステータスを以下に登録しておく
+,・MstEnemyCharacter
+,・MstEnemyCharacterI18n
+,・MstEnemyStageParameter
+,・MstAttack
+,・MstAttackI18n
+,・MstAttackElement
+,
+,設定方法
+,
+,・「MstEnemyStageParameter」のT列「mstTransformationEnemyStageParameterId」に変身先の「MstEnemyCharacter ID」を入力
+,・「MstEnemyStageParameter」のU列「transformationConditionType」に変身条件を入力
+,→HpPercentageなど
+,・「MstEnemyStageParameter」のV列「transformationConditionValue」に変身条件数値を入力

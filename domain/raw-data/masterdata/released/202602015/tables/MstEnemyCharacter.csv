@@ -1,0 +1,7 @@
+ENABLE,release_key,id,mst_series_id,asset_key,is_phantomized,is_displayed_encyclopedia,mst_attack_hit_onomatopeia_group_id
+e,202602015,chara_you_00001,you,chara_you_00001,1,1,
+e,202602015,chara_you_00101,you,chara_you_00101,1,1,
+e,202602015,chara_you_00201,you,chara_you_00201,1,1,
+e,202602015,chara_you_00301,you,chara_you_00301,1,1,
+e,202602015,enemy_you_00001,you,enemy_you_00001,0,1,
+e,202602015,enemy_you_00101,you,enemy_you_00101,0,1,

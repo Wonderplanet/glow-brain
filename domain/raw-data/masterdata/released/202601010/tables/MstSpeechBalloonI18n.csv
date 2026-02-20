@@ -1,0 +1,9 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,214,chara_jig_00701,ja,SpecialAttackCharge,Maru,Right,0.5,"タオ…\n\n\n\nツヨイヨワイ",202601010
+e,215,chara_jig_00701,ja,Summon,Maru,Left,1.5,"島…出テ\n\n\n\n普通ニ暮ラシタイ",202601010
+e,216,chara_jig_00401,ja,SpecialAttackCharge,Maru,Right,0.5,"オレはオレの\nやりたいように\nやる !!",202601010
+e,217,chara_jig_00401,ja,Summon,Maru,Left,1.5,"化物だ 、殺す",202601010
+e,218,chara_jig_00601,ja,SpecialAttackCharge,Maru,Right,0.5,"無罪など本当の\n目的じゃねえ",202601010
+e,219,chara_jig_00601,ja,Summon,Maru,Left,1.5,俺に退治させろ,202601010
+e,220,chara_jig_00501,ja,SpecialAttackCharge,Maru,Right,0.5,"ずっと変わらない\n関係など\n\n\n\n不要だ",202601010
+e,221,chara_jig_00501,ja,Summon,Maru,Left,1.5,"助けに\n\n\n\n来ましたよっ",202601010

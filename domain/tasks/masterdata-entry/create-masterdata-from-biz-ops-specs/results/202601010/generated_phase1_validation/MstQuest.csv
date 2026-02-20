@@ -1,0 +1,3 @@
+ENABLE,id,quest_category,asset_key,sort_order,start_date,end_date,release_key
+e,quest_event_jig_2026_jan_daily,EventQuest,quest_event_jig_2026_jan_daily,1,2026-01-16 15:00:00,2026-02-02 03:59:00,202601010
+e,quest_event_jig_2026_jan_story1,EventQuest,quest_event_jig_2026_jan_story1,2,2026-01-16 15:00:00,2026-02-16 10:59:00,202601010

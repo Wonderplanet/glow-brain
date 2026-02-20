@@ -1,6 +1,7 @@
 ---
 name: masterdata-releasekey-reporter
 description: GLOWマスタデータのリリースキー別抽出とレポート生成。テーブル別CSV・統計JSON・DuckDBクエリで柔軟な分析が可能。「リリースキー」「release key」「マスタデータ抽出」「データ投入」「リリース内容」などのキーワードで使用します。
+disable-model-invocation: false
 ---
 
 # Masterdata Release Key Reporter
@@ -22,12 +23,19 @@ GLOWプロジェクトのマスタデータから特定のリリースキーに�
 リリースキーごとに以下のディレクトリ構造で出力します:
 
 ```
-マスタデータ/リリース/{RELEASE_KEY}/
+domain/raw-data/masterdata/released/{RELEASE_KEY}/
 ├── stats/
-│   ├── summary.json          # 全体統計（テーブル数、行数、カテゴリ集計）
-│   └── tables.json           # テーブル別詳細統計
+│   ├── summary.json          # 全体統計（tables + past_tables）
+│   ├── tables.json           # 対象リリースキーのテーブル別統計
+│   └── past_tables.json      # 過去リリースキーのテーブル別統計
 ├── tables/
-│   └── {TableName}.csv       # テーブル別CSVファイル（ヘッダー付き）
+│   └── {TableName}.csv       # 対象リリースキーのデータ
+├── past_tables/
+│   └── {TableName}.csv       # 対象リリースキーより小さいリリースキーのデータ
+├── specs/
+│   ├── spreadsheet_list.csv  # 運営仕様書一覧（手動作成）
+│   ├── specs.csv             # ローカルパス一覧（自動生成）
+│   └── missing_spreadsheets.log  # 見つからなかった仕様書ログ
 └── release_{KEY}_report.md   # Markdownレポート
 ```
 
@@ -39,6 +47,10 @@ GLOWプロジェクトのマスタデータから特定のリリースキーに�
   "extraction_date": "2026-01-10T00:35:00Z",
   "total_tables": 93,
   "total_rows": 2901,
+  "past_tables": {
+    "total_tables": 85,
+    "total_rows": 48000
+  },
   "categories": {
     "Mst": { "tables": 75, "rows": 2500 },
     "Opr": { "tables": 10, "rows": 300 },
@@ -74,6 +86,8 @@ GLOWプロジェクトのマスタデータから特定のリリースキーに�
 
 ### Phase 1: データ抽出
 
+#### 対象リリースキーのデータ抽出
+
 スクリプトを実行してテーブル別CSV、統計JSONを一括生成します:
 
 ```bash
@@ -87,15 +101,67 @@ GLOWプロジェクトのマスタデータから特定のリリースキーに�
 
 **処理内容:**
 1. `projects/glow-masterdata/*.csv` から該当リリースキーを含むデータを検索
-2. テーブル別CSVファイルを `tables/` ディレクトリに生成
-3. 統計JSONを `stats/` ディレクトリに生成
+2. テーブル別CSVファイルを生成（`tables/` - 対象リリースキーと一致するレコード）
+3. 統計JSON（summary.json / tables.json）を生成
+
+#### 過去データの抽出
+
+対象リリースキーより小さいリリースキーのデータを抽出します:
+
+```bash
+.claude/skills/masterdata-releasekey-reporter/scripts/extract_past_tables.sh <RELEASE_KEY>
+```
+
+**例:**
+```bash
+.claude/skills/masterdata-releasekey-reporter/scripts/extract_past_tables.sh 202601010
+```
+
+**処理内容:**
+1. DuckDB を使用して効率的に過去データを抽出（単一パス処理）
+2. `WHERE release_key < {TARGET}` で過去データをフィルタリング
+3. テーブル別CSVファイルを生成（`past_tables/`）
+4. 統計JSON（past_tables.json）を生成
+5. summary.json の past_tables セクションを更新
+
+**DuckDB を使う利点:**
+- **単一パス処理**: 各CSVを1回だけ読み込む（awk より高速）
+- **SQL による柔軟性**: 複雑な条件も簡潔に記述
+- **自動型推論**: AUTO_DETECT で release_key の位置を自動検出
+
+#### 運営仕様書パスの自動収集（オプション）
+
+`specs/spreadsheet_list.csv` が存在する場合、ローカルパスを自動収集します:
+
+```bash
+.claude/skills/masterdata-releasekey-reporter/scripts/generate_specs.sh <RELEASE_KEY>
+```
+
+**例:**
+```bash
+.claude/skills/masterdata-releasekey-reporter/scripts/generate_specs.sh 202601010
+```
+
+**処理内容:**
+1. `specs/spreadsheet_list.csv` を入力として読み込み
+2. `domain/raw-data/google-drive/spread-sheet/` 以下を検索
+3. 完全一致→部分一致の順で検索
+4. ローカルで見つかった場合は相対パスを記録
+5. 見つからない場合は Google ドライブ URL を記録
+
+**出力:**
+- `specs/specs.csv` - ローカルパス一覧（自動生成）
+- `specs/missing_spreadsheets.log` - 見つからなかった仕様書ログ
+
+**前提条件:**
+- `specs/spreadsheet_list.csv` が存在すること
 
 ### Phase 2: 統計確認
 
 `stats/summary.json` を読み込んで全体像を把握します:
 
 ```bash
-cat マスタデータ/リリース/202512020/stats/summary.json | jq .
+cat domain/raw-data/masterdata/released/202512020/stats/summary.json | jq .
 ```
 
 **確認すべき情報:**
@@ -111,7 +177,7 @@ cat マスタデータ/リリース/202512020/stats/summary.json | jq .
 
 ```bash
 # Readツールで直接読み込み
-/Users/.../マスタデータ/リリース/202512020/tables/MstEvent.csv
+/Users/.../domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv
 ```
 
 #### 方法2: DuckDBクエリ
@@ -135,9 +201,9 @@ SELECT
   e.start_at,
   e.end_at,
   i.name
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstEvent.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEvent.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') e
-LEFT JOIN read_csv('マスタデータ/リリース/202512020/tables/MstEventI18n.csv',
+LEFT JOIN read_csv('domain/raw-data/masterdata/released/202512020/tables/MstEventI18n.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__') i
   ON e.id = i.mst_event_id
 WHERE i.language = 'ja';
@@ -150,7 +216,7 @@ SELECT
   resource_type,
   COUNT(*) as count,
   SUM(resource_amount) as total
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattleReward.csv',
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattleReward.csv',
   AUTO_DETECT=TRUE, nullstr='__NULL__')
 GROUP BY resource_type
 ORDER BY count DESC;
@@ -163,7 +229,7 @@ ORDER BY count DESC;
 統計JSONと分析結果をもとに、Markdownレポートを作成します。
 
 **レポート保存先:**
-`マスタデータ/リリース/{リリースキー}/release_{RELEASE_KEY}_report.md`
+`domain/raw-data/masterdata/released/{リリースキー}/release_{RELEASE_KEY}_report.md`
 
 **レポートに含める内容:**
 1. **概要セクション**: リリースキー、テーブル数、総行数、抽出日時
@@ -204,8 +270,8 @@ ORDER BY count DESC;
 ```bash
 # イベント + 日本語名
 .claude/skills/masterdata-releasekey-reporter/scripts/query_release.sh {KEY} sql \
-  "SELECT e.id, i.name FROM read_csv('マスタデータ/リリース/{KEY}/tables/MstEvent.csv', AUTO_DETECT=TRUE) e \
-   LEFT JOIN read_csv('マスタデータ/リリース/{KEY}/tables/MstEventI18n.csv', AUTO_DETECT=TRUE) i \
+  "SELECT e.id, i.name FROM read_csv('domain/raw-data/masterdata/released/{KEY}/tables/MstEvent.csv', AUTO_DETECT=TRUE) e \
+   LEFT JOIN read_csv('domain/raw-data/masterdata/released/{KEY}/tables/MstEventI18n.csv', AUTO_DETECT=TRUE) i \
    ON e.id = i.mst_event_id AND i.language = 'ja'"
 ```
 
@@ -327,9 +393,60 @@ https://duckdb.org/docs/installation/
 5. 統計JSON（summary.json / tables.json）を生成
 
 **出力:**
-- `マスタデータ/リリース/{リリースキー}/tables/{テーブル名}.csv`
-- `マスタデータ/リリース/{リリースキー}/stats/summary.json`
-- `マスタデータ/リリース/{リリースキー}/stats/tables.json`
+- `domain/raw-data/masterdata/released/{リリースキー}/tables/{テーブル名}.csv`
+- `domain/raw-data/masterdata/released/{リリースキー}/stats/summary.json`
+- `domain/raw-data/masterdata/released/{リリースキー}/stats/tables.json`
+
+### extract_past_tables.sh
+
+**入力:**
+- 第1引数: リリースキー（必須）
+
+**処理:**
+1. DuckDB コマンドの存在確認
+2. マスタデータディレクトリの存在確認
+3. DuckDB を使用して各CSVから `release_key < {TARGET}` のデータを抽出
+4. COPY TO で効率的にCSV出力（単一パス処理）
+5. テーブル別統計情報を集計
+6. past_tables.json を生成
+7. summary.json の past_tables セクションを更新
+
+**出力:**
+- `domain/raw-data/masterdata/released/{リリースキー}/past_tables/{テーブル名}.csv`
+- `domain/raw-data/masterdata/released/{リリースキー}/stats/past_tables.json`
+- `domain/raw-data/masterdata/released/{リリースキー}/stats/summary.json` (past_tablesセクション追加)
+
+**特徴:**
+- DuckDB の単一パス処理で高速に抽出
+- release_key カラムの位置を自動検出
+- 空のテーブルは出力しない
+
+### generate_specs.sh
+
+**入力:**
+- 第1引数: リリースキー（必須）
+
+**前提条件:**
+- `domain/raw-data/masterdata/released/{リリースキー}/specs/spreadsheet_list.csv` が存在すること
+
+**処理:**
+1. spreadsheet_list.csv の存在確認
+2. 各スプレッドシート名をローカルファイルシステムで検索
+3. 完全一致→部分一致の順で検索
+4. ローカルで見つかった場合は相対パスを記録
+5. 見つからない場合は Google ドライブ URL を記録
+6. 見つからないファイルのログを生成
+
+**出力:**
+- `domain/raw-data/masterdata/released/{リリースキー}/specs/specs.csv`
+- `domain/raw-data/masterdata/released/{リリースキー}/specs/missing_spreadsheets.log`
+
+**specs.csv のフォーマット:**
+```csv
+path
+"domain/raw-data/google-drive/spread-sheet/..."
+"https://docs.google.com/spreadsheets/d/..."
+```
 
 ### query_release.sh
 
@@ -371,7 +488,7 @@ SELECT
   ab.id as battle_id,
   r.resource_type,
   SUM(r.resource_amount) as total
-FROM read_csv('マスタデータ/リリース/202512020/tables/MstAdventBattle.csv', ...) ab
+FROM read_csv('domain/raw-data/masterdata/released/202512020/tables/MstAdventBattle.csv', ...) ab
 JOIN ...
 GROUP BY ab.id, r.resource_type;
 ```
@@ -386,6 +503,35 @@ GROUP BY ab.id, r.resource_type;
 1. `stats/summary.json` を読み込む
 2. 主要な統計情報（テーブル数、行数、カテゴリ別内訳）を提示
 3. 最大行数のテーブルTOP10を表示
+
+### 例4: 過去データとの比較
+
+**ユーザー:**
+> リリースキー202601010のデータと、それ以前のデータを比較したい
+
+**応答フロー:**
+1. `stats/summary.json` を読み込んで全体像を把握
+2. `tables/` と `past_tables/` のテーブル一覧を比較
+3. 新規追加されたテーブルや、大幅に行数が増えたテーブルを特定
+4. DuckDBでJOINして差分を分析（必要に応じて）
+
+**比較分析の例:**
+```bash
+# 新規追加テーブルの特定（tables/ にあるが past_tables/ にないもの）
+comm -23 <(ls domain/raw-data/masterdata/released/202601010/tables/ | sort) \
+         <(ls domain/raw-data/masterdata/released/202601010/past_tables/ | sort)
+
+# DuckDBで行数の増加を比較
+duckdb -c "
+SELECT 'MstEvent' as table_name,
+       COUNT(*) as current_rows
+FROM read_csv('domain/raw-data/masterdata/released/202601010/tables/MstEvent.csv', AUTO_DETECT=TRUE)
+UNION ALL
+SELECT 'MstEvent (past)' as table_name,
+       COUNT(*) as past_rows
+FROM read_csv('domain/raw-data/masterdata/released/202601010/past_tables/MstEvent.csv', AUTO_DETECT=TRUE);
+"
+```
 
 ## 注意事項
 

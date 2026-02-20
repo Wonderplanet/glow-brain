@@ -1,0 +1,7 @@
+ENABLE,release_key,id,mst_item_id,language,name,description
+e,202601010,piece_jig_00401_ja,piece_jig_00401,ja,賊王 亜左 弔兵衛のかけら,賊王 亜左 弔兵衛のグレードアップに使用するアイテム
+e,202601010,piece_jig_00501_ja,piece_jig_00501,ja,山田浅ェ門 桐馬のかけら,山田浅ェ門 桐馬のグレードアップに使用するアイテム
+e,202601010,piece_jig_00601_ja,piece_jig_00601,ja,民谷 巌鉄斎のかけら,民谷 巌鉄斎のグレードアップに使用するアイテム
+e,202601010,piece_jig_00701_ja,piece_jig_00701,ja,メイのかけら,メイのグレードアップに使用するアイテム
+e,202601010,memory_chara_jig_00601_ja,memory_chara_jig_00601,ja,民谷 巌鉄斎のメモリー,民谷 巌鉄斎のLv.上限開放に使用するアイテム
+e,202601010,memory_chara_jig_00701_ja,memory_chara_jig_00701,ja,メイのメモリー,メイのLv.上限開放に使用するアイテム

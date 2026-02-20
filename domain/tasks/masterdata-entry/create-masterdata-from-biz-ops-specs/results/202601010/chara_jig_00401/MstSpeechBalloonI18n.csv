@@ -1,0 +1,3 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,31,chara_jig_00401,ja,SpecialAttackCharge,Maru,Right,0.5,今は考えるな\nただ殺せ,202601010
+e,32,chara_jig_00401,ja,Summon,Maru,Left,1.5,殺しに来るなら\n殺すよ,202601010

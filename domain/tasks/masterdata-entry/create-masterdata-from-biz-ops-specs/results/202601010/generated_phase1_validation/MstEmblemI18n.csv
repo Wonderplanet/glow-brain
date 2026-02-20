@@ -1,0 +1,8 @@
+ENABLE,id,mst_emblem_id,locale,emblem_name,description,release_key
+e,emblem_event_jig_00001_ja,emblem_event_jig_00001,ja,神仙郷,地獄楽イベントで獲得できる記念エンブレム,202601010
+e,emblem_adventbattle_jig_season01_00001_ja,emblem_adventbattle_jig_season01_00001,ja,罪人(1位),降臨バトル1位獲得者の証,202601010
+e,emblem_adventbattle_jig_season01_00002_ja,emblem_adventbattle_jig_season01_00002,ja,罪人(2位),降臨バトル2位獲得者の証,202601010
+e,emblem_adventbattle_jig_season01_00003_ja,emblem_adventbattle_jig_season01_00003,ja,罪人(3位),降臨バトル3位獲得者の証,202601010
+e,emblem_adventbattle_jig_season01_00004_ja,emblem_adventbattle_jig_season01_00004,ja,罪人(4~50位),降臨バトル4~50位獲得者の証,202601010
+e,emblem_adventbattle_jig_season01_00005_ja,emblem_adventbattle_jig_season01_00005,ja,罪人(51~300位),降臨バトル51~300位獲得者の証,202601010
+e,emblem_adventbattle_jig_season01_00006_ja,emblem_adventbattle_jig_season01_00006,ja,"罪人(301～1,000位)",降臨バトル301～1000位獲得者の証,202601010

@@ -1,0 +1,956 @@
+{
+  "MstAbility": {
+    "rows": 14,
+    "columns": 5,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstAbilityI18n": {
+    "rows": 14,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstAdventBattle": {
+    "rows": 9,
+    "columns": 22,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstAdventBattleClearReward": {
+    "rows": 45,
+    "columns": 10,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstAdventBattleI18n": {
+    "rows": 9,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstAdventBattleRank": {
+    "rows": 144,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 12
+  },
+  "MstAdventBattleReward": {
+    "rows": 1063,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 120
+  },
+  "MstAdventBattleRewardGroup": {
+    "rows": 478,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 48
+  },
+  "MstArtwork": {
+    "rows": 56,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstArtworkFragment": {
+    "rows": 868,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 72
+  },
+  "MstArtworkFragmentI18n": {
+    "rows": 868,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 84
+  },
+  "MstArtworkFragmentPosition": {
+    "rows": 884,
+    "columns": 5,
+    "category": "Mst",
+    "file_size_kb": 64
+  },
+  "MstArtworkI18n": {
+    "rows": 56,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 12
+  },
+  "MstAttack": {
+    "rows": 1998,
+    "columns": 12,
+    "category": "Mst",
+    "file_size_kb": 228
+  },
+  "MstAttackElement": {
+    "rows": 3143,
+    "columns": 32,
+    "category": "Mst",
+    "file_size_kb": 700
+  },
+  "MstAttackHitEffect": {
+    "rows": 4,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstAttackHitOnomatopoeiaGroup": {
+    "rows": 4,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstAttackI18n": {
+    "rows": 1998,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 292
+  },
+  "MstAutoPlayerSequence": {
+    "rows": 3717,
+    "columns": 35,
+    "category": "Mst",
+    "file_size_kb": 804
+  },
+  "MstBoxGacha": {
+    "rows": 1,
+    "columns": 10,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstBoxGachaGroup": {
+    "rows": 1,
+    "columns": 5,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstBoxGachaI18n": {
+    "rows": 1,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstBoxGachaPrize": {
+    "rows": 1,
+    "columns": 9,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstCheatSetting": {
+    "rows": 7,
+    "columns": 9,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstComebackBonus": {
+    "rows": 7,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstComebackBonusSchedule": {
+    "rows": 1,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstConfig": {
+    "rows": 64,
+    "columns": 5,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstDailyBonusReward": {
+    "rows": 7,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstDefenseTarget": {
+    "rows": 3,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstDummyOutpost": {
+    "rows": 90,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstDummyUser": {
+    "rows": 102,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstDummyUserArtwork": {
+    "rows": 102,
+    "columns": 5,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstDummyUserI18n": {
+    "rows": 102,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 8
+  },
+  "MstDummyUserUnit": {
+    "rows": 828,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 44
+  },
+  "MstEmblem": {
+    "rows": 90,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstEmblemI18n": {
+    "rows": 90,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 20
+  },
+  "MstEnemyCharacter": {
+    "rows": 131,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstEnemyCharacterI18n": {
+    "rows": 131,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 44
+  },
+  "MstEnemyOutpost": {
+    "rows": 441,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 28
+  },
+  "MstEnemyStageParameter": {
+    "rows": 840,
+    "columns": 19,
+    "category": "Mst",
+    "file_size_kb": 108
+  },
+  "MstEvent": {
+    "rows": 9,
+    "columns": 9,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstEventBonusUnit": {
+    "rows": 59,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstEventDisplayUnit": {
+    "rows": 73,
+    "columns": 5,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstEventDisplayUnitI18n": {
+    "rows": 73,
+    "columns": 8,
+    "category": "I18n",
+    "file_size_kb": 12
+  },
+  "MstEventI18n": {
+    "rows": 9,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstExchange": {
+    "rows": 3,
+    "columns": 9,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstExchangeCost": {
+    "rows": 36,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstExchangeI18n": {
+    "rows": 3,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstExchangeLineup": {
+    "rows": 36,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstExchangeReward": {
+    "rows": 36,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstFragmentBox": {
+    "rows": 8,
+    "columns": 5,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstFragmentBoxGroup": {
+    "rows": 82,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 12
+  },
+  "MstHomeBanner": {
+    "rows": 34,
+    "columns": 9,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstIdleIncentive": {
+    "rows": 1,
+    "columns": 12,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstIdleIncentiveItem": {
+    "rows": 395,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 24
+  },
+  "MstIdleIncentiveReward": {
+    "rows": 81,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstInGame": {
+    "rows": 442,
+    "columns": 20,
+    "category": "Mst",
+    "file_size_kb": 76
+  },
+  "MstInGameGimmickObject": {
+    "rows": 4,
+    "columns": 4,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstInGameI18n": {
+    "rows": 442,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 192
+  },
+  "MstInGameSpecialRule": {
+    "rows": 901,
+    "columns": 9,
+    "category": "Mst",
+    "file_size_kb": 104
+  },
+  "MstInGameSpecialRuleUnitStatus": {
+    "rows": 5,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstItem": {
+    "rows": 131,
+    "columns": 13,
+    "category": "Mst",
+    "file_size_kb": 20
+  },
+  "MstItemI18n": {
+    "rows": 131,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 24
+  },
+  "MstItemRarityTrade": {
+    "rows": 4,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstItemTransition": {
+    "rows": 73,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstKomaLine": {
+    "rows": 1162,
+    "columns": 43,
+    "category": "Mst",
+    "file_size_kb": 232
+  },
+  "MstMangaAnimation": {
+    "rows": 366,
+    "columns": 11,
+    "category": "Mst",
+    "file_size_kb": 48
+  },
+  "MstMissionAchievement": {
+    "rows": 103,
+    "columns": 13,
+    "category": "Mst",
+    "file_size_kb": 12
+  },
+  "MstMissionAchievementDependency": {
+    "rows": 103,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstMissionAchievementI18n": {
+    "rows": 103,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 16
+  },
+  "MstMissionBeginner": {
+    "rows": 36,
+    "columns": 12,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstMissionBeginnerI18n": {
+    "rows": 36,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstMissionBeginnerPromptPhraseI18n": {
+    "rows": 1,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstMissionDaily": {
+    "rows": 11,
+    "columns": 11,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstMissionDailyBonus": {
+    "rows": 7,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstMissionDailyI18n": {
+    "rows": 11,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstMissionEvent": {
+    "rows": 273,
+    "columns": 14,
+    "category": "Mst",
+    "file_size_kb": 36
+  },
+  "MstMissionEventDailyBonus": {
+    "rows": 131,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 20
+  },
+  "MstMissionEventDailyBonusSchedule": {
+    "rows": 8,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstMissionEventDependency": {
+    "rows": 233,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 16
+  },
+  "MstMissionEventI18n": {
+    "rows": 273,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 32
+  },
+  "MstMissionLimitedTerm": {
+    "rows": 36,
+    "columns": 13,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstMissionLimitedTermI18n": {
+    "rows": 36,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 8
+  },
+  "MstMissionReward": {
+    "rows": 582,
+    "columns": 9,
+    "category": "Mst",
+    "file_size_kb": 72
+  },
+  "MstMissionWeekly": {
+    "rows": 11,
+    "columns": 11,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstMissionWeeklyI18n": {
+    "rows": 11,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstNgWord": {
+    "rows": 8263,
+    "columns": 4,
+    "category": "Mst",
+    "file_size_kb": 256
+  },
+  "MstOutpost": {
+    "rows": 1,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstOutpostEnhancement": {
+    "rows": 6,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstOutpostEnhancementI18n": {
+    "rows": 6,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstOutpostEnhancementLevel": {
+    "rows": 120,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstOutpostEnhancementLevelI18n": {
+    "rows": 120,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 16
+  },
+  "MstPack": {
+    "rows": 36,
+    "columns": 17,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstPackContent": {
+    "rows": 179,
+    "columns": 9,
+    "category": "Mst",
+    "file_size_kb": 12
+  },
+  "MstPackI18n": {
+    "rows": 36,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 8
+  },
+  "MstPage": {
+    "rows": 427,
+    "columns": 3,
+    "category": "Mst",
+    "file_size_kb": 16
+  },
+  "MstPartyUnitCount": {
+    "rows": 1,
+    "columns": 5,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstPvp": {
+    "rows": 21,
+    "columns": 9,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstPvpBonusPoint": {
+    "rows": 22,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstPvpDummy": {
+    "rows": 102,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstPvpI18n": {
+    "rows": 21,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 12
+  },
+  "MstPvpMatchingScoreRange": {
+    "rows": 17,
+    "columns": 11,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstPvpRank": {
+    "rows": 17,
+    "columns": 9,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstPvpReward": {
+    "rows": 47,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstPvpRewardGroup": {
+    "rows": 39,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstQuest": {
+    "rows": 95,
+    "columns": 11,
+    "category": "Mst",
+    "file_size_kb": 12
+  },
+  "MstQuestBonusUnit": {
+    "rows": 65,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstQuestEventBonusSchedule": {
+    "rows": 9,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstQuestI18n": {
+    "rows": 95,
+    "columns": 8,
+    "category": "I18n",
+    "file_size_kb": 20
+  },
+  "MstResultTipI18n": {
+    "rows": 18,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstSeries": {
+    "rows": 18,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstSeriesI18n": {
+    "rows": 18,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstShopItem": {
+    "rows": 14,
+    "columns": 13,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstShopPass": {
+    "rows": 2,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstShopPassEffect": {
+    "rows": 2,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstShopPassI18n": {
+    "rows": 2,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstShopPassReward": {
+    "rows": 3,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstSpecialAttackI18n": {
+    "rows": 81,
+    "columns": 6,
+    "category": "I18n",
+    "file_size_kb": 8
+  },
+  "MstSpecialRoleLevelUpAttackElement": {
+    "rows": 40,
+    "columns": 12,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstSpeechBalloonI18n": {
+    "rows": 160,
+    "columns": 10,
+    "category": "I18n",
+    "file_size_kb": 16
+  },
+  "MstStage": {
+    "rows": 416,
+    "columns": 20,
+    "category": "Mst",
+    "file_size_kb": 84
+  },
+  "MstStageClearTimeReward": {
+    "rows": 855,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 68
+  },
+  "MstStageEndCondition": {
+    "rows": 40,
+    "columns": 8,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstStageEnhanceRewardParam": {
+    "rows": 14,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstStageEventReward": {
+    "rows": 608,
+    "columns": 10,
+    "category": "Mst",
+    "file_size_kb": 52
+  },
+  "MstStageEventSetting": {
+    "rows": 178,
+    "columns": 11,
+    "category": "Mst",
+    "file_size_kb": 20
+  },
+  "MstStageI18n": {
+    "rows": 416,
+    "columns": 7,
+    "category": "I18n",
+    "file_size_kb": 40
+  },
+  "MstStageReward": {
+    "rows": 1390,
+    "columns": 11,
+    "category": "Mst",
+    "file_size_kb": 104
+  },
+  "MstStoreProduct": {
+    "rows": 73,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstStoreProductI18n": {
+    "rows": 73,
+    "columns": 11,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstTutorial": {
+    "rows": 26,
+    "columns": 10,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstTutorialTipI18n": {
+    "rows": 24,
+    "columns": 8,
+    "category": "I18n",
+    "file_size_kb": 4
+  },
+  "MstUnit": {
+    "rows": 81,
+    "columns": 31,
+    "category": "Mst",
+    "file_size_kb": 16
+  },
+  "MstUnitAbility": {
+    "rows": 92,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstUnitEncyclopediaEffect": {
+    "rows": 44,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstUnitEncyclopediaReward": {
+    "rows": 44,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstUnitFragmentConvert": {
+    "rows": 8,
+    "columns": 5,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstUnitGradeCoefficient": {
+    "rows": 40,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstUnitGradeUp": {
+    "rows": 32,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstUnitI18n": {
+    "rows": 81,
+    "columns": 8,
+    "category": "I18n",
+    "file_size_kb": 44
+  },
+  "MstUnitLevelUp": {
+    "rows": 1200,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 40
+  },
+  "MstUnitRankCoefficient": {
+    "rows": 6,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstUnitRankUp": {
+    "rows": 48,
+    "columns": 10,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstUnitRoleBonus": {
+    "rows": 6,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstUnitSpecificRankUp": {
+    "rows": 90,
+    "columns": 11,
+    "category": "Mst",
+    "file_size_kb": 8
+  },
+  "MstUserLevel": {
+    "rows": 129,
+    "columns": 6,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstUserLevelBonus": {
+    "rows": 21,
+    "columns": 5,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstUserLevelBonusGroup": {
+    "rows": 31,
+    "columns": 7,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "MstWhiteWord": {
+    "rows": 102,
+    "columns": 4,
+    "category": "Mst",
+    "file_size_kb": 4
+  },
+  "OprCampaign": {
+    "rows": 9,
+    "columns": 12,
+    "category": "Opr",
+    "file_size_kb": 4
+  },
+  "OprCampaignI18n": {
+    "rows": 9,
+    "columns": 6,
+    "category": "Opr",
+    "file_size_kb": 4
+  },
+  "OprGacha": {
+    "rows": 27,
+    "columns": 25,
+    "category": "Opr",
+    "file_size_kb": 8
+  },
+  "OprGachaDisplayUnitI18n": {
+    "rows": 69,
+    "columns": 8,
+    "category": "Opr",
+    "file_size_kb": 12
+  },
+  "OprGachaI18n": {
+    "rows": 27,
+    "columns": 15,
+    "category": "Opr",
+    "file_size_kb": 8
+  },
+  "OprGachaPrize": {
+    "rows": 1509,
+    "columns": 9,
+    "category": "Opr",
+    "file_size_kb": 116
+  },
+  "OprGachaUpper": {
+    "rows": 18,
+    "columns": 6,
+    "category": "Opr",
+    "file_size_kb": 4
+  },
+  "OprGachaUseResource": {
+    "rows": 64,
+    "columns": 9,
+    "category": "Opr",
+    "file_size_kb": 4
+  },
+  "OprProduct": {
+    "rows": 73,
+    "columns": 10,
+    "category": "Opr",
+    "file_size_kb": 8
+  },
+  "OprProductI18n": {
+    "rows": 73,
+    "columns": 6,
+    "category": "Opr",
+    "file_size_kb": 4
+  }
+}

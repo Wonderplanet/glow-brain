@@ -1,0 +1,6 @@
+アイコン,asset_key,パスアイコン画像ID,備考
+プレミアムパス（金色パス）,premium,shop_pass_icon_premium,データ設定時に流用可能。
+マンスリーパス（紫色パス）,monthly,shop_pass_icon_monthly,データ設定時に流用可能。
+ウィークリーパス（銀色パス）,weekly,shop_pass_icon_weekly,データ設定時に流用可能。
+謹賀新年パス(2026),newyear2026,shop_pass_icon_newyear2026,
+ハーフアニバーサリー限定 特別パス,halfanniv,shop_pass_icon_halfanniv,

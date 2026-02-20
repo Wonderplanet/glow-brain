@@ -73,9 +73,9 @@
   },
   "MstAttackElement": {
     "rows": 241,
-    "columns": 29,
+    "columns": 32,
     "category": "Mst",
-    "file_size_kb": 52
+    "file_size_kb": 56
   },
   "MstAttackI18n": {
     "rows": 165,
@@ -87,7 +87,7 @@
     "rows": 354,
     "columns": 35,
     "category": "Mst",
-    "file_size_kb": 72
+    "file_size_kb": 132
   },
   "MstEmblem": {
     "rows": 19,
@@ -463,13 +463,13 @@
   },
   "MstStoreProduct": {
     "rows": 13,
-    "columns": 5,
+    "columns": 6,
     "category": "Mst",
     "file_size_kb": 4
   },
   "MstStoreProductI18n": {
     "rows": 13,
-    "columns": 7,
+    "columns": 11,
     "category": "I18n",
     "file_size_kb": 4
   },

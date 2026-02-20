@@ -1,0 +1,4 @@
+ENABLE,id,mst_pack_id,resource_type,resource_id,resource_amount,is_bonus,display_order,release_key
+e,120,monthly_item_pack_3,Item,memoryfragment_glo_00001,50,"",3,202601010
+e,121,monthly_item_pack_3,Item,memoryfragment_glo_00002,30,"",2,202601010
+e,122,monthly_item_pack_3,Item,memoryfragment_glo_00003,3,"",1,202601010

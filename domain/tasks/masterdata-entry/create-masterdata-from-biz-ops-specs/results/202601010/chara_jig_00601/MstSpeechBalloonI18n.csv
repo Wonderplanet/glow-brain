@@ -1,0 +1,3 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,40,chara_jig_00601,ja,SpecialAttackCharge,Maru,Right,0.5,僕も…\n仕事なので,202601010
+e,41,chara_jig_00601,ja,Summon,Maru,Left,1.5,皆で情報\n整理しませんか？,202601010

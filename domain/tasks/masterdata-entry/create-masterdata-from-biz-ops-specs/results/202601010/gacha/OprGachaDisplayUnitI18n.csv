@@ -1,0 +1,5 @@
+ENABLE,id,opr_gacha_id,mst_unit_id,language,sort_order,description,release_key
+e,1,Pickup_jig_001,chara_jig_00401,ja,1,必殺ワザで相手を「弱体化付与」にできる新スキルを持ち、スペシャルキャラ以外で初登場となる「無属性」のテクニカルキャラ!!,202601010
+e,2,Pickup_jig_001,chara_jig_00501,ja,2,前線を支えるサポートキャラ!!攻撃UPとダメージカットで戦況を有利に導くことができるぞ!!,202601010
+e,3,Pickup_jig_002,chara_jig_00001,ja,1,必殺ワザで相手を火傷状態にすることができるテクニカルキャラ!!,202601010
+e,4,Pickup_jig_002,chara_jig_00501,ja,2,前線を支えるサポートキャラ!!攻撃UPとダメージカットで戦況を有利に導くことができるぞ!!,202601010

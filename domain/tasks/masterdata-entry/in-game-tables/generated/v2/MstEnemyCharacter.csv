@@ -1,0 +1,7 @@
+ENABLE,release_key,id,series_id,asset_key,is_collection_enemy,is_bonus_target,
+e,202509010,enemy_dos_00001,dos,enemy_dos_00001,1,0,
+e,202509010,enemy_dos_00101,dos,enemy_dos_00101,1,0,
+e,202509010,enemy_ron_00001,ron,enemy_ron_00001,1,0,
+e,202509010,enemy_ron_00101,ron,enemy_ron_00101,1,0,
+e,202509010,enemy_aha_00001,aha,enemy_aha_00001,1,0,
+e,202509010,enemy_aha_00101,aha,enemy_aha_00101,1,0,

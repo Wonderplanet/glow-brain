@@ -1,0 +1,423 @@
+作品ID,作品名,識別ID,キャラ_ID,キャラ名（仮）,キャラ名（監修FIX）,必殺ワザ名（監修FIX）,レアリティ,ラベル,属性,キャラ立ち位置,ロール,通常攻撃モーション,攻撃射程,必殺ワザモーション,必殺ワザ発動有無,通常攻撃モーション,通常攻撃発生,必殺攻撃モーション,必殺攻撃発生,valid_start_date,valid_end_date,catch_copy_image_filename,ノーマル敵専用アイコン_ID,BOSS専用アイコン_ID,通常攻撃Asset
+spy,SPY×FAMILY,00001,chara_spy_00001,わくわく アーニャ,わくわく アーニャ,せいふくのアーニャかわいい？,UR,PremiumUR,無,chara,スペシャル,-,ー,-,00001,-,-,3.44,0,45922.45833,390812.5,catchcopy_character_chara_spy_00001.png,enemy_icon_chara_spy_00001,boss_icon_chara_spy_00001,
+spy,SPY×FAMILY,00002,chara_spy_00002,アーニャ（ドレスアップ）,選定中,わくわくっ！,SSR,FestivalSSR,無,chara,スペシャル,-,ー,-,00002,-,-,2.4,stop無:1.03,実装未定,390812.5,catchcopy_character_chara_spy_00002.png,enemy_icon_chara_spy_00002,boss_icon_chara_spy_00002,
+spy,SPY×FAMILY,00101,chara_spy_00101,<黄昏> ロイド,<黄昏> ロイド,終わりにしよう,UR,PremiumUR,黄,chara,アタック,shageki_1,Long,shageki_1,00101,1.64,0.83,2.50,1.33,45922.45833,390812.5,catchcopy_character_chara_spy_00101.png,enemy_icon_chara_spy_00101,boss_icon_chara_spy_00101,chara_spy_00101_normal
+spy,SPY×FAMILY,00201,chara_spy_00201,<いばら姫> ヨル,<いばら姫> ヨル,この手が血で汚れても構わない,UR,PremiumUR,赤,chara,アタック,zangeki_1,Middle,dageki_1,00201,1.42,stop無:1回目 0.61,2.50,stop有:1回目 0.73,45922.45833,390812.5,catchcopy_character_chara_spy_00201.png,enemy_icon_chara_spy_00201,boss_icon_chara_spy_00201,chara_spy_00201_normal
+spy,SPY×FAMILY,00301,chara_spy_00301,ダミアン・デズモンド,ダミアン・デズモンド,いい気になるなよ,SR,DropSR,無,chara,スペシャル,-,ー,-,00301,-,-,2.10,0,45936.625,390812.5,catchcopy_character_chara_spy_00301.png,enemy_icon_chara_spy_00301,boss_icon_chara_spy_00301,
+spy,SPY×FAMILY,00401,chara_spy_00401,フランキー・フランクリン,フランキー・フランクリン,超人外骨格！！,SR,DropSR,緑,chara,ディフェンス,dageki_2,Short,dageki_2,00401,1.20,0.50,2.75,1.34,45936.625,390812.5,catchcopy_character_chara_spy_00401.png,enemy_icon_chara_spy_00401,boss_icon_chara_spy_00401,chara_spy_00401_normal
+spy,SPY×FAMILY,00501,chara_spy_00501,ユーリ・ブライア,姉を想う盲愛 ユーリ・ブライア,姉さぁーーーん♡,UR,PremiumUR,青,chara,ディフェンス,dageki_1,Short,-,00501,1.13,stop有:1回目 0.33,2.33,stop無:1回目 1.17,45936.625,390812.5,catchcopy_character_chara_spy_00501.png,enemy_icon_chara_spy_00501,boss_icon_chara_spy_00501,
+aka,ラーメン赤猫,00001,chara_aka_00001,佐々木,佐々木,ハチワレの猫の佐々木さん,R,PremiumR,赤,chara,ディフェンス,dageki_1,Short,zangeki_1,00001,1.70,0.66,,1.33,45922.45833,390812.5,catchcopy_character_chara_aka_00001.png,enemy_icon_chara_aka_00001,boss_icon_chara_aka_00001,
+aka,ラーメン赤猫,00101,chara_aka_00101,文蔵,文蔵,ラーメン赤猫の職人,R,PremiumR,赤,chara,テクニカル,dageki_1,Short,zangeki_1,00101,1.50,stop無:1回目 0.54,4.50,"stop無:1回目 1.37
+stop無:2回目 1.63
+stop有:3回目 2.67",45922.45833,390812.5,catchcopy_character_chara_aka_00101.png,enemy_icon_chara_aka_00101,boss_icon_chara_aka_00101,chara_aka_00101_normal
+aka,ラーメン赤猫,00201,chara_aka_00201,ハナ,ハナ,ハナのほっこり接客術,SR,DropSR,赤,chara,サポート,-,,-,,1.35,stop有:1回目 0.63,2.33,stop無:1回目 0.6,2026年5月中旬のアニマル祭りで実装予定,390812.5,catchcopy_character_chara_aka_00201.png,enemy_icon_chara_aka_00201,boss_icon_chara_aka_00201,chara_aka_00101_normal
+aka,ラーメン赤猫,00301,chara_aka_00301,サブ,サブ,プロゲーマーとか無理っすよ,SR,DropSR,緑,chara,アタック,dageki_1,,shageki_1,,1.33,stop有:1回目 0.55,2.53,"stop無:1回目 0.76
+stop無:2回目 0.91
+stop有:3回目 1.4",2026年5月中旬のアニマル祭りで実装予定,390812.5,catchcopy_character_chara_aka_00301.png,enemy_icon_chara_aka_00301,boss_icon_chara_aka_00301,chara_aka_00101_normal
+rik,トマトイプーのリコピン,00001,chara_rik_00001,リコピン,リコピン,トマト果汁は健康の証,R,PremiumR,赤,chara,アタック,dageki_2,Short,dageki_2,00001,1.64,0.93,4.01,"1回目：0.83
+2回目：1.84
+3回目：2.67",45922.45833,390812.5,catchcopy_character_chara_rik_00001.png,enemy_icon_chara_rik_00001,boss_icon_chara_rik_00001,chara_rik_00001_normal
+rik,トマトイプーのリコピン,00101,chara_rik_00101,甘戸 めめ,甘戸 めめ,モンブランケーキ,R,DropR,赤,chara,サポート,dageki_2,Middle,-,00101,1.57,0.87,2.67,stop無:1.00,45922.45833,390812.5,catchcopy_character_chara_rik_00101.png,enemy_icon_chara_rik_00101,boss_icon_chara_rik_00101,chara_rik_00101_normal
+dan,ダンダダン,00001,chara_dan_00001,オカルン,オカルン,友達ができたからだ！,R,PremiumR,赤,chara,ディフェンス,dageki_1,Short,-,00001,1.43,0.53,4.00,1.66,45922.45833,390812.5,catchcopy_character_chara_dan_00001.png,enemy_icon_chara_dan_00001,boss_icon_chara_dan_00001,chara_dan_00001_normal
+dan,ダンダダン,00002,chara_dan_00002,ターボババアの霊力 オカルン,ターボババアの霊力 オカルン,萎えるぜ,UR,PremiumUR,青,chara,アタック,dageki_1,Middle,dageki_1,00002,1.84,"stop有:1回目 0.66
+stop有:2回目 1.27",5.21,"stop有:1回目：1.78
+stop有:2回目：3.34
+stop無:3回目 3.76
+stop無:4回目 3.92
+stop無:5回目 4.09
+stop無:6回目 4.26
+stop無:7回目 4.42",45922.45833,390812.5,catchcopy_character_chara_dan_00002.png,enemy_icon_chara_dan_00002,boss_icon_chara_dan_00002,
+dan,ダンダダン,00101,chara_dan_00101,モモ,モモ,おっしゃあ いけえ!!,SSR,PremiumSSR,赤,chara,アタック,dageki_1,Middle,dageki_1,00101,1.00,0.50,2.00,1.00,45922.45833,390812.5,catchcopy_character_chara_dan_00101.png,enemy_icon_chara_dan_00101,boss_icon_chara_dan_00101,chara_dan_00101_normal
+dan,ダンダダン,00201,chara_dan_00201,アイラ,アイラ,私って美女すぎる,SR,DropSR,青,chara,サポート,dageki_2,Short,-,00201,1.5,stop有:1回目 0.43,2.50,stop無:1回目：1.33,45952.625,390812.5,catchcopy_character_chara_dan_00201.png,enemy_icon_chara_dan_00201,boss_icon_chara_dan_00201,chara_dan_00201_normal
+dan,ダンダダン,00202,chara_dan_00202,アクさらの愛 アイラ,アクさらの愛 アイラ,お放しなさい!!,UR,PremiumUR,緑,chara,アタック,dageki_1,Middle,dageki_1,00202,1.37,0.45,2.44,"stop無:1回目:0.30
+stop無:2回目:0.65
+stop有:3回目:1.05",45952.625,390812.5,catchcopy_character_chara_dan_00202.png,enemy_icon_chara_dan_00202,boss_icon_chara_dan_00202,chara_dan_00202_normal
+dan,ダンダダン,00301,chara_dan_00301,招き猫 ターボババア,招き猫 ターボババア,クソだらあ!!,SR,DropSR,黄,chara,ディフェンス,dageki_1,Short,-,00301,1.60,"stop無:1回目 0.38
+stop無:2回目 0.83
+stop無:3回目 1.16",1.83,stop無:1回目：0.30,45952.625,390812.5,catchcopy_character_chara_dan_00301.png,enemy_icon_chara_dan_00301,boss_icon_chara_dan_00301,chara_dan_00301_normal
+dan,ダンダダン,00501,chara_dan_00501,坂田 金太,選定中,,SSR,DropSSR,青,chara,ディフェンス,dageki_2,Short,dageki_1,,1.6,0.92,2.67,stop有:1.05,実装未定,390812.5,catchcopy_character_chara_dan_00501.png,enemy_icon_chara_dan_00501,boss_icon_chara_dan_00501,
+dan,ダンダダン,00601,chara_dan_00601,星子,選定中,,UR,PremiumUR,黄,chara,サポート,dageki_1,Short,-,,1.37,stop有:0.50,2.5,stop無:1.57,ハーフアニバ想定,390812.5,catchcopy_character_chara_dan_00601.png,enemy_icon_chara_dan_00601,boss_icon_chara_dan_00601,
+dan,ダンダダン,00701,chara_dan_00701,オカルン＆ターボババア,選定中,,UR,FestivalUR,黄,chara,テクニカル,,,,,,,,,,,,,,
+gom,姫様“拷問”の時間です,00001,chara_gom_00001,囚われの王女 姫様,囚われの王女 姫様,決して屈しない！,UR,PremiumUR,緑,chara,ディフェンス,dageki_1,Short,-,00001,1.30,stop有:1回目 0.50,4.00,stop無:1回目 2.3,45922.45833,390812.5,catchcopy_character_chara_gom_00001.png,enemy_icon_chara_gom_00001,boss_icon_chara_gom_00001,chara_gom_00001_normal
+gom,姫様“拷問”の時間です,00101,chara_gom_00101,トーチャー・トルチュール,トーチャー・トルチュール,“拷問”の時間です,SR,PremiumSR,黄,chara,テクニカル,dageki_2,Short,dageki_1,00101,1.34,stop無:1回目 0.43,4.84,stop無:1回目 3.00,45922.45833,390812.5,catchcopy_character_chara_gom_00101.png,enemy_icon_chara_gom_00101,boss_icon_chara_gom_00101,chara_gom_00101_normal
+gom,姫様“拷問”の時間です,00201,chara_gom_00201,クロル,クロル,ワンちゃん大量作戦だ☆,R,DropR,黄,chara,アタック,dageki_1,Long,dageki_1,00201,1.43,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80",5.00,"stop無:1回目 2.10
+stop無:2回目 2.30
+stop無:3回目 2.50
+stop無:4回目 2.70
+stop無:5回目 2.90
+stop無:6回目 3.20
+stop無:7回目 3.40
+stop無:8回目 3.60
+stop無:9回目 3.80",45922.45833,390812.5,catchcopy_character_chara_gom_00201.png,enemy_icon_chara_gom_00201,boss_icon_chara_gom_00201,chara_gom_00201_normal
+gom,姫様“拷問”の時間です,00301,chara_gom_00301,魔王 ゴッドサンダー,悪のカリスマ 魔王ゴッドサンダー,全欲望は我が物！,UR,PremiumUR,赤,chara,アタック,,,,,1.37,stop有: 0.55,2.67,stop有: 1.5,(仮)2026/03/01 15:00:00,390812.5,,enemy_icon_chara_gom_00301,boss_icon_chara_gom_00301,
+gom,姫様“拷問”の時間です,00401,chara_gom_00401,マオマオちゃん,マオマオちゃん,ごーもんの時間だよ！,SSR,PremiumSSR,無,chara,スペシャル,-,,,,-,-,2.5,stop無: 1,(仮)2026/03/01 15:00:00,390812.5,,enemy_icon_chara_gom_00401,boss_icon_chara_gom_00401,
+gom,姫様“拷問”の時間です,00501,chara_gom_00501,陽鬼,陽鬼,私からやらせてもらうよ,SR,DropSR,緑,chara,アタック,shageki_1,Long,shageki_1,Long,1.37,stop有: 0.51,2.67,"stop無:1回目 0.5
+stop無:2回目 1.3
+stop有:3回目 2.08",(仮)2026/03/01 15:00:00,390812.5,,enemy_icon_chara_gom_00501,boss_icon_chara_gom_00501,
+gom,姫様“拷問”の時間です,00601,chara_gom_00601,陰鬼,陰鬼,仕事は仕事だよ,SR,DropSR,赤,chara,テクニカル,dageki_2,Short,dageki_2,Short,1.37,stop有: 0.33,2.33,"stop無:1回目 0.46
+stop無:2回目 0.61
+stop無:3回目 0.81
+stop有:4回目 1.01",(仮)2026/03/01 15:00:00,390812.5,,enemy_icon_chara_gom_00601,boss_icon_chara_gom_00601,
+gom,姫様“拷問”の時間です,00701,chara_gom_00701,カナッジ,カナッジ,魔王様!!,SR,DropSR,赤,chara,テクニカル,,,,,1.57,stop有: 0.42,2.27,stop無: 0.92,実装未定,390812.5,,enemy_icon_chara_gom_00701,boss_icon_chara_gom_00701,
+chi,チェンソーマン,00001,chara_chi_00001,デンジ,デンジ,股間！しか！狙わねえ！,R,PremiumR,緑,chara,アタック,zangeki_1,Short,dageki_1,00001,1.40,0.53,3.37,1.57,45922.45833,390812.5,catchcopy_character_chara_chi_00001.png,enemy_icon_chara_chi_00001,boss_icon_chara_chi_00001,chara_chi_00001_normal
+chi,チェンソーマン,00002,chara_chi_00002,悪魔が恐れる悪魔 チェンソーマン,悪魔が恐れる悪魔 チェンソーマン,ぶっ殺さねえとなあ！,UR,PremiumUR,黄,chara,テクニカル,zangeki_1,Short,zangeki_1,00002,1.07,stop無:1回目 0.66,3.74,"stop無:1回目 0.53
+stop無:2回目 0.70
+stop無:3回目 0.90
+stop無:4回目 1.03
+stop無:5回目 1.23
+stop有:6回目 2.62",45922.45833,390812.5,catchcopy_character_chara_chi_00002.png,enemy_icon_chara_chi_00002,boss_icon_chara_chi_00002,chara_chi_00002_normal
+chi,チェンソーマン,00201,chara_chi_00201,早川 アキ,早川 アキ,狐の悪魔,SSR,PremiumSSR,緑,chara,アタック,dageki_1,Short,dageki_2,00201,1.60,0.84,2.44,1.64,45922.45833,390812.5,catchcopy_character_chara_chi_00201.png,enemy_icon_chara_chi_00201,boss_icon_chara_chi_00201,chara_chi_00201_normal
+chi,チェンソーマン,00301,chara_chi_00301,パワー,パワー,血の匂いじゃ！,SSR,PremiumSSR,青,chara,アタック,dageki_1,Middle,dageki_1,00201,1.50,0.58,2.67,1.00,45922.45833,390812.5,catchcopy_character_chara_chi_00201.png,enemy_icon_chara_chi_00301,boss_icon_chara_chi_00301,chara_chi_00301_normal
+chi,チェンソーマン,00401,chara_chi_00401,マキマ,選定中,,UR,PremiumUR,調整中,chara,調整中,,,,,-,-,2.5,0,実装未定,390812.5,,enemy_icon_chara_chi_00401,boss_icon_chara_chi_00401,
+chi,チェンソーマン,00501,chara_chi_00501,姫野,選定中,,SSR,PremiumSSR,調整中,chara,調整中,,,,,1.17,.5,1.87,stop有:1,実装未定,390812.5,,enemy_icon_chara_chi_00501,boss_icon_chara_chi_00501,
+chi,チェンソーマン,00601,chara_chi_00601,小紅,選定中,,SR,DropSR,調整中,chara,調整中,,,,,1.30,stop有:1回目 0.36,2.07,stop有:1回目 1.20,実装未定,390812.5,,enemy_icon_chara_chi_00601,boss_icon_chara_chi_00601,
+chi,チェンソーマン,00701,chara_chi_00701,沢渡 アカネ,選定中,,SR,DropSR,調整中,chara,調整中,,,,,1.2,0.27,2.27,stop有:0.86,実装未定,390812.5,,enemy_icon_chara_chi_00701,boss_icon_chara_chi_00701,
+chi,チェンソーマン,00801,chara_chi_00801,サムライソード,選定中,,SR,DropSR,調整中,chara,調整中,,,,,1.37,stop有:1回目0.58,2.07,stop有:1回目0.91,実装未定,390812.5,,enemy_icon_chara_chi_00801,boss_icon_chara_chi_00801,
+chi,チェンソーマン,00901,chara_chi_00901,レゼ,選定中,,UR,,,chara,,,,,,,,,,,,,,,
+bat,忘却バッテリー,00001,chara_bat_00001,清峰 葉流火,清峰 葉流火,負ける気なんて毛頭ない,SR,PremiumSR,赤,chara,アタック,dageki_1,Long,dageki_2,00001,1.97,0.70,2.07,0.96,45922.45833,390812.5,catchcopy_character_chara_bat_00001.png,enemy_icon_chara_bat_00001,boss_icon_chara_bat_00001,chara_bat_00001_normal
+bat,忘却バッテリー,00101,chara_bat_00101,要 圭,要 圭,天才捕手 要圭,SR,PremiumSR,赤,chara,ディフェンス,dageki_1,Middle,-,00101,,0.75,3.00,1.20,45922.45833,390812.5,catchcopy_character_chara_bat_00101.png,enemy_icon_chara_bat_00101,boss_icon_chara_bat_00101,chara_bat_00101_normal
+bat,忘却バッテリー,00102,chara_bat_00102,智将 要 圭,選定中,,UR,PremiumUR,無,chara,スペシャル,,,,,-,-,2.5,stop無:1回目 1,,,,,,
+bat,忘却バッテリー,00201,chara_bat_00201,千早 瞬平,選定中,,SR,DropSR,緑,chara,,,,,,1.55,stop有:1回目 0.46,2.65,stop有:1回目 1.08,,,,,,
+bat,忘却バッテリー,00301,chara_bat_00301,藤堂 葵,選定中,,SR,DropSR,青,chara,,,,,,1.77,stop有:1回目 0.7,2.67,stop有:1回目 1.15,,,,,,
+kai,怪獣８号,00001,chara_kai_00001,日比野 カフカ,日比野 カフカ,部分変身!!,R,PremiumR,黄,chara,アタック,dageki_1,Short,-,00001,1.83,1.00,2.33,1.33,45922.45833,390812.5,catchcopy_character_chara_kai_00001.png,enemy_icon_chara_kai_00001,boss_icon_chara_kai_00001,
+kai,怪獣８号,00002,chara_kai_00002,隠された英雄の姿 怪獣８号,隠された英雄の姿 怪獣８号,あとは俺に任せろ,UR,PremiumUR,緑,chara,アタック,dageki_1,Short,dageki_2,00002,1.50,stop無:1回目 0.54,2.40,"stop有:1回目 1.00
+stop無:2回目 1.37
+stop無:3回目 1.54
+stop無:4回目 1.70
+stop無:5回目 1.87
+stop無:6回目 2.04",45922.45833,390812.5,catchcopy_character_chara_kai_00002.png,enemy_icon_chara_kai_00002,boss_icon_chara_kai_00002,chara_kai_00002_normal
+kai,怪獣８号,00003,chara_kai_00003,ドレスアップ怪獣８号,選定中,,UR,PremiumUR,,chara,,,,,,,,,,,,,,,
+kai,怪獣８号,00101,chara_kai_00101,市川 レノ,市川 レノ,仲間のために体張れる男だ!!,SR,PremiumSR,青,chara,テクニカル,shageki_1,Long,shageki_1,00101,1.40,stop無:1回目 0.91,3.17,"stop無:1回目 1.05
+stop無:2回目 1.33
+stop無:3回目 1.76",45922.45833,390812.5,catchcopy_character_chara_kai_00101.png,enemy_icon_chara_kai_00101,boss_icon_chara_kai_00101,chara_kai_00101_normal
+kai,怪獣８号,00102,chara_kai_00102,識別怪獣兵器6 市川 レノ,識別怪獣兵器6 市川 レノ,俺が 切り開く,UR,PremiumUR,黄,chara,テクニカル,shageki_1,,,,1.77,"stop無:1回目 0.5
+stop無:2回目 0.58
+stop有:3回目 0.63",3.17,stop有:1回目 1.53,2026/07/上旬,390812.5,catchcopy_character_chara_kai_00102.png,enemy_icon_chara_kai_00102,boss_icon_chara_kai_00102,
+kai,怪獣８号,00201,chara_kai_00201,第三部隊隊長 亜白 ミナ,第三部隊隊長 亜白 ミナ,解放戦力 96%,UR,PremiumUR,青,chara,アタック,shageki_1,Long,shageki_1,00201,1.50,0.75,4.41,"stop無:1回目 1.42
+stop無:2回目 1.85
+stop無:3回目 2.29
+stop無:4回目 2.73
+stop有:5回目 3.17",45922.45833,390812.5,catchcopy_character_chara_kai_00201.png,enemy_icon_chara_kai_00201,boss_icon_chara_kai_00201,chara_kai_00201_normal
+kai,怪獣８号,00202,chara_kai_00202,超大型キラー 亜白 ミナ,選定中,,UR,FestivalUR,無,chara,スペシャル,,,,,,,,,,,,,,
+kai,怪獣８号,00301,chara_kai_00301,四ノ宮 キコル,四ノ宮 キコル,隊式斧術1式　落雷,SSR,PremiumSSR,黄,chara,ディフェンス,zangeki_1,Short,zangeki_1,00301,2.04,0.70,3.34,1.07,45922.45833,390812.5,catchcopy_character_chara_kai_00301.png,enemy_icon_chara_kai_00301,boss_icon_chara_kai_00301,chara_kai_00301_normal
+kai,怪獣８号,00302,chara_kai_00302,識別怪獣兵器4 四ノ宮 キコル,選定中,,UR,PremiumUR,赤,chara,アタック,,,,,,,,,,,,,,
+kai,怪獣８号,00401,chara_kai_00401,保科 宗四郎,保科 宗四郎,6式 八重討ち,SSR,PremiumSSR,青,chara,アタック,zangeki_1,Short,zangeki_1,,1.27,stop有:1回目 0.43,2.67,"stop無:1回目 0.25
+stop無:2回目 0.91
+stop無:3回目 1.05
+stop無:4回目 1.15
+stop有:5回目 1.66",45922.45833,390812.5,,enemy_icon_chara_kai_00401,boss_icon_chara_kai_00401,chara_kai_00401_normal
+kai,怪獣８号,00501,chara_kai_00501,四ノ宮 功,四ノ宮 功,隊式格闘術2式 発破,SR,DropSR,黄,chara,アタック,dageki_1,Short,dageki_1,,1.97,1.10,2.67,1.62,45922.45833,390812.5,,enemy_icon_chara_kai_00501,boss_icon_chara_kai_00501,chara_kai_00501_normal
+kai,怪獣８号,00601,chara_kai_00601,古橋 伊春,古橋 伊春,俺がお前を守るんだ バカヤロー,SR,DropSR,緑,chara,ディフェンス,shageki_1,Middle,-,,1.37,stop有:1回目 0.71,1.83,stop無:1回目 0.93,45922.45833,390812.5,,enemy_icon_chara_kai_00601,boss_icon_chara_kai_00601,chara_kai_00601_normal
+kai,怪獣８号,00701,chara_kai_00701,識別怪獣兵器1 鳴海 弦,識別怪獣兵器1 鳴海 弦,隊式銃剣術6式 七枝刀,UR,FestivalUR,黄,chara,ディフェンス,,,,,1.3,stop有:1回目 0.13,2.88,stop有:1回目 1.2,2026/07/上旬,390812.5,catchcopy_character_chara_kai_00701.png,enemy_icon_chara_kai_00701,boss_icon_chara_kai_00701,
+kai,怪獣８号,00801,chara_kai_00801,東雲 りん,選定中,,SR,DropSR,黄,chara,ディフェンス,,,,,1.6,"stop無:1回目 0.6
+stop無:2回目 0.58
+stop無:3回目 0.63",2.5,"stop無:1回目 0.77
+stop無:2回目 0.98
+stop無:3回目 1.18
+stop無:4回目 1.39
+stop有:5回目 1.6",2026/07/上旬,390812.5,catchcopy_character_chara_kai_00801.png,enemy_icon_chara_kai_00801,boss_icon_chara_kai_00801,
+kai,怪獣８号,00901,chara_kai_00901,四ノ宮ヒカリ,選定中,,SSR,PremiumSSR,無,chara,スペシャル,,,,,-,-,3.65,stop無:1回目 0.51,2026/07/上旬,390812.5,catchcopy_character_chara_kai_00901.png,enemy_icon_chara_kai_00901,boss_icon_chara_kai_00901,
+kai,怪獣８号,01001,chara_kai_01001,怪獣15号,選定中,,SR,DropSR,青,chara,,,,,,,,,,,,,,,
+yuw,2.5次元の誘惑,00001,chara_yuw_00001,リリエルに捧ぐ愛 天乃 リリサ,リリエルに捧ぐ愛 天乃 リリサ,リリエル爆破!!,UR,PremiumUR,黄,chara,アタック,dageki_2,Middle,-,00001,1.54,0.50,3.67,2.44,45922.45833,390812.5,catchcopy_character_chara_yuw_00001.png,enemy_icon_chara_yuw_00001,boss_icon_chara_yuw_00001,chara_yuw_00001_normal
+yuw,2.5次元の誘惑,00002,chara_yuw_00002,天乃 リリサ(クリスマス),選定中,,UR,PremiumUR,緑,chara,サポート,,,,,,,,,実装未定,390812.5,,enemy_icon_chara_yuw_00002,boss_icon_chara_yuw_00002,
+yuw,2.5次元の誘惑,00101,chara_yuw_00101,コスプレに託す乙女心 橘 美花莉,コスプレに託す乙女心 橘 美花莉,私を見てよ！,UR,PremiumUR,緑,chara,テクニカル,dageki_1,Short,-,00101,1.50,"stop無:1回目 0.45
+stop無:2回目 0.55
+stop無:3回目 0.67
+stop無:4回目 0.77
+stop無:5回目 0.90
+stop無:6回目 0.95",3.50,stop無: 1回目 3.20,45922.45833,390812.5,catchcopy_character_chara_yuw_00101.png,enemy_icon_chara_yuw_00101,boss_icon_chara_yuw_00101,chara_yuw_00101_normal
+yuw,2.5次元の誘惑,00102,chara_yuw_00102,クリスマス 橘 美花莉,愛届ける聖夜のサンタ 橘 美花莉,プレゼントは私だよ〜♡,UR,FestivalUR,緑,chara,サポート,dageki_1,Short,-,,1.67,stop有:1回目 0.50,3.5,stop無: 1回目 2.00,46013.5,390812.5,catchcopy_character_chara_yuw_00102.png,enemy_icon_chara_yuw_00102,boss_icon_chara_yuw_00102,chara_yuw_00101_normal
+yuw,2.5次元の誘惑,00201,chara_yuw_00201,羽生 まゆり,羽生 まゆり,先生がもう一肌脱ぐしかないわね,SSR,PremiumSSR,青,chara,テクニカル,dageki_2,Short,dageki_1,00201,1.06,0.34,4.67,3.50,45986.625,390812.5,catchcopy_character_chara_yuw_00201.png,enemy_icon_chara_yuw_00201,boss_icon_chara_yuw_00201,
+yuw,2.5次元の誘惑,00301,chara_yuw_00301,勇気を纏うコスプレ 乃愛,勇気を纏うコスプレ 乃愛,命に換えてもお守りします,UR,PremiumUR,青,chara,サポート,dageki_2,Short,-,00301,1.57,"stop無:1回目 0.50
+stop無:2回目 1.00",3.50,stop無: 1回目 3.20,45986.625,390812.5,catchcopy_character_chara_yuw_00301.png,enemy_icon_chara_yuw_00301,boss_icon_chara_yuw_00301,chara_yuw_00301_normal
+yuw,2.5次元の誘惑,00401,chara_yuw_00401,伝えたいウチの想い　喜咲 アリア,伝えたいウチの想い 喜咲 アリア,アタシに任せてよ!!,UR,PremiumUR,赤,chara,ディフェンス,dageki_2,Short,zangeki_1,00401,1.17,0.34,2.67,1.64,45986.625,390812.5,catchcopy_character_chara_yuw_00401.png,enemy_icon_chara_yuw_00401,boss_icon_chara_yuw_00401,
+yuw,2.5次元の誘惑,00501,chara_yuw_00501,753♡,753♡,どっちがコスプレを愛してる？,SR,DropSR,赤,chara,サポート,dageki_2,Short,-,00501,1.24,stop有:1回目 0.43,2.17,stop無: 1回目 1.50,45986.625,390812.5,catchcopy_character_chara_yuw_00501.png,enemy_icon_chara_yuw_00501,boss_icon_chara_yuw_00501,chara_yuw_00501_normal
+yuw,2.5次元の誘惑,00502,chara_yuw_00502,753♡(魔女コスプレ),選定中,,UR,PremiumUR,黄,chara,テクニカル,,,,,,,,,実装未定,390812.5,,enemy_icon_chara_yuw_00502,boss_icon_chara_yuw_00502,
+yuw,2.5次元の誘惑,00601,chara_yuw_00601,奥村 正宗,奥村 正宗,事実だけ言ってやる!!,SR,DropSR,黄,chara,ディフェンス,dageki_1,Short,-,00601,1.20,0.67,1.84,stop無: 1回目 0.68,45986.625,390812.5,catchcopy_character_chara_yuw_00601.png,enemy_icon_chara_yuw_00601,boss_icon_chara_yuw_00601,chara_yuw_00601_normal
+sur,魔都精兵のスレイブ,00001,chara_sur_00001,和倉 優希,和倉 優希,張り切っちゃうぜ！,R,PremiumR,緑,chara,サポート,dageki_2,Short,-,00001,1.17,stop有:1回目 0.30,2.80,stop無:1回目 2.00,45922.45833,390812.5,catchcopy_character_chara_sur_00001.png,enemy_icon_chara_sur_00001,boss_icon_chara_sur_00001,
+sur,魔都精兵のスレイブ,00101,chara_sur_00101,誇り高き魔都の剣姫 羽前京香,誇り高き魔都の剣姫 羽前 京香,乱れ山桜,UR,PremiumUR,緑,chara,アタック,zangeki_1,Middle,zangeki_1,00101,1.40,stop無:1回目 0.33,2.67,"stop無:1回目 0.40
+stop無:2回目 0.60
+stop無:3回目 0.80
+stop無:4回目 0.90
+stop無:5回目 1.03
+stop有:6回目 1.57",45922.45833,390812.5,catchcopy_character_chara_sur_00101.png,enemy_icon_chara_sur_00101,boss_icon_chara_sur_00101,chara_sur_00101_normal
+sur,魔都精兵のスレイブ,00201,chara_sur_00201,東 日万凛,東 日万凛,武装小町,SR,PremiumSR,青,chara,アタック,shageki_1,Short,shageki_1,00201,1.47,stop無:1回目 0.37,2.67,"stop無:1回目 0.74
+stop無:2回目 0.92
+stop無:3回目 1.1
+stop無:4回目 1.28
+stop無:5回目 1.45
+stop無:6回目 1.65
+stop有:7回目 1.84",45922.45833,390812.5,catchcopy_character_chara_sur_00201.png,enemy_icon_chara_sur_00201,boss_icon_chara_sur_00201,
+sur,魔都精兵のスレイブ,00301,chara_sur_00301,駿河 朱々,駿河 朱々,玉体革命,SR,PremiumSR,黄,chara,ディフェンス,dageki_1,Short,dageki_2,00301,1.56,0.66,1.91,0.73,45922.45833,390812.5,catchcopy_character_chara_sur_00301.png,enemy_icon_chara_sur_00301,boss_icon_chara_sur_00301,chara_sur_00301_normal
+sur,魔都精兵のスレイブ,00401,chara_sur_00401,大川村 寧,大川村 寧,きっと見つける,SR,DropSR,無,chara,スペシャル,-,ー,-,00401,-,-,2.50,0,45922.45833,390812.5,catchcopy_character_chara_sur_00401.png,enemy_icon_chara_sur_00401,boss_icon_chara_sur_00401,
+sur,魔都精兵のスレイブ,00501,chara_sur_00501,出雲 天花,空間を操る六番組組長 出雲 天花,天御鳥命,UR,PremiumUR,黄,chara,テクニカル,dageki_1,Long,dageki_1,00501,1.71,stop有:1回目 0.93,2.67,stop有:1回目 1.53,45999.5,390812.5,catchcopy_character_chara_sur_00501.png,enemy_icon_chara_sur_00501,boss_icon_chara_sur_00501,
+sur,魔都精兵のスレイブ,00601,chara_sur_00601,東 八千穂,東 八千穂,東の辰刻,SSR,PremiumSSR,赤,chara,テクニカル,shageki_1,Middle,dageki_1,00601,1.64,stop有:1回目 0.75,3.34,stop有:1回目 1.2,45999.5,390812.5,catchcopy_character_chara_sur_00601.png,enemy_icon_chara_sur_00601,boss_icon_chara_sur_00601,
+sur,魔都精兵のスレイブ,00701,chara_sur_00701,和倉 青羽,和倉 青羽,弟について喋ってるでしょ,SR,DropSR,青,chara,アタック,dageki_1,Short,dageki_1,00701,1.07,0.28,2.01,"stop無:1回目 0.67
+stop無:2回目 0.84
+stop無:3回目 1
+stop有:4回目 1.25",45999.625,390812.5,catchcopy_character_chara_sur_00701.png,enemy_icon_chara_sur_00701,boss_icon_chara_sur_00701,
+sur,魔都精兵のスレイブ,00801,chara_sur_00801,和倉優希（変身）,無窮の鎖 和倉 優希,隷架拳,SR,DropSR,黄,chara,ディフェンス,dageki_1,Short,dageki_1,00801,1.24,stop有:1回目 0.66,2.01,stop有:1回目 1.06,45999.625,390812.5,catchcopy_character_chara_sur_00801.png,enemy_icon_chara_sur_00801,boss_icon_chara_sur_00801,
+sur,魔都精兵のスレイブ,00901,chara_sur_00901,山城 恋,万物を統べる総組長 山城 恋,万物を総該した無限宇宙の全一,UR,FestivalUR,青,chara,アタック,,Middle,,,1.17,stop有 : 0.43,2.92,stop有 : 1.31,実装未定,390812.5,catchcopy_character_chara_sur_00901.png,enemy_icon_chara_sur_00901,boss_icon_chara_sur_00901,
+ron,鴨乃橋ロンの禁断推理,00001,chara_ron_00001,鴨乃橋 ロン,鴨乃橋 ロン,今からそれを証明してみせる,SSR,PremiumSSR,青,chara,テクニカル,dageki_2,Middle,dageki_1,00001,1.67,stop有:1回目 0.92,2.74,"stop有:1回目 1.17
+stop無:2回目 1.50
+stop無:3回目 1.67
+stop無:4回目 1.84
+stop無:5回目 1.97",45922.45833,390812.5,catchcopy_character_chara_ron_00001.png,enemy_icon_chara_ron_00001,boss_icon_chara_ron_00001,chara_ron_00001_normal
+ron,鴨乃橋ロンの禁断推理,00101,chara_ron_00101,一色 都々丸,一色 都々丸,ピュアでマヌケな名探偵,R,PremiumR,青,chara,ディフェンス,dageki_2,Middle,dageki_1,00101,1.67,0.70,2.67,1.44,45922.45833,390812.5,catchcopy_character_chara_ron_00101.png,enemy_icon_chara_ron_00101,boss_icon_chara_ron_00101,chara_ron_00101_normal
+aha,阿波連さんははかれない,00001,chara_aha_00001,ライドウ,ライドウ,公園は皆のものだから,SR,PremiumSR,黄,chara,ディフェンス,dageki_2,Short,dageki_1,00001,1.60,0.67,2.67,1.05,45922.45833,390812.5,catchcopy_character_chara_aha_00001.png,enemy_icon_chara_aha_00001,boss_icon_chara_aha_00001,
+aha,阿波連さんははかれない,00101,chara_aha_00101,阿波連 れいな,阿波連 れいな,さっきはありがとう,SSR,PremiumSSR,黄,chara,サポート,dageki_1,Short,-,00101,1.27,stop有:1回目 0.46,3.17,stop無:1回目 2.00,45922.45833,390812.5,catchcopy_character_chara_aha_00101.png,enemy_icon_chara_aha_00101,boss_icon_chara_aha_00101,chara_aha_00101_normal
+tak,タコピーの原罪,00001,chara_tak_00001,ハッピー星からの使者 タコピー,ハッピー星からの使者 タコピー,笑ってもらえるように,UR,PremiumUR,黄,chara,ディフェンス,dageki_1,Short,-,00001,1.00,0.44,3.34,0.75,45922.45833,390812.5,catchcopy_character_chara_tak_00001.png,enemy_icon_chara_tak_00001,boss_icon_chara_tak_00001,chara_tak_00001_normal
+tak,タコピーの原罪,00101,chara_tak_00101,久世 しずか＆タコピー,選定中,,UR,PremiumUR,無,chara,,,,,,,,,,,,,,,
+tak,タコピーの原罪,00201,chara_tak_00201,雲母坂 まりな,選定中,,SR,DropSR,緑,chara,,,,,,,,,,,,,,,
+jig,地獄楽,00001,chara_jig_00001,がらんの画眉丸,がらんの画眉丸,忍法 火法師,UR,PremiumUR,赤,chara,テクニカル,dageki_1,Short,dageki_1,00001,1.17,stop有:1回目0.20,2.30,"stop有:1回目 0.08
+stop有:2回目 0.90
+stop有:3回目 1.50",45922.45833,390812.5,catchcopy_character_chara_jig_00001.png,enemy_icon_chara_jig_00001,boss_icon_chara_jig_00001,chara_jig_00001_normal
+jig,地獄楽,00101,chara_jig_00101,山田浅ェ門 佐切,山田浅ェ門 佐切,試一刀流 具足割,SSR,PremiumSSR,赤,chara,アタック,zangeki_1,Short,zangeki_1,00101,1.5,0.50,2.50,1.20,45922.45833,390812.5,catchcopy_character_chara_jig_00101.png,enemy_icon_chara_jig_00101,boss_icon_chara_jig_00101,chara_jig_00101_normal
+jig,地獄楽,00201,chara_jig_00201,杠,杠,忍法 線斬行 ,SSR,DropSSR,緑,chara,テクニカル,shageki_1,Middle,shageki_1,00201,1.67,stop有:1回目 1,2.56,stop有:1回目1.66,45922.45833,390812.5,catchcopy_character_chara_jig_00201.png,enemy_icon_chara_jig_00201,boss_icon_chara_jig_00201,chara_jig_00201_normal
+jig,地獄楽,00301,chara_jig_00301,山田浅ェ門 仙汰,山田浅ェ門 仙汰,僕を通して貰わないと,SR,PremiumSR,緑,chara,ディフェンス,zangeki_1,Short,zangeki_1,00301,1.80,stop有0.50,2.34,"stop無:1回目：0.35
+stop無:2回目：0.50
+stop無:3回目 0.62
+stop無:4回目 0.78
+stop有:5回目 1.00",45922.45833,390812.5,catchcopy_character_chara_jig_00301.png,enemy_icon_chara_jig_00301,boss_icon_chara_jig_00301,
+jig,地獄楽,00401,chara_jig_00401,賊王 亜左 弔兵衛,賊王 亜左 弔兵衛,オレの神もオレだ!!,UR,PremiumUR,無,chara,テクニカル,zangeki_1,Short,zangeki_1,00401,1.67,stop有:1回目0.50,2.67,stop有:1回目1.57,46038.625,390812.5,catchcopy_character_chara_jig_00401.png,enemy_icon_chara_jig_00401,boss_icon_chara_jig_00401,
+jig,地獄楽,00501,chara_jig_00501,山田浅ェ門 桐馬,山田浅ェ門 桐馬,兄さんは強いんだ,SSR,PremiumSSR,緑,chara,サポート,zangeki_1,Short,-,00501,1.6,stop有:1回目0.4,3.33,stop無:1.67,46038.625,390812.5,catchcopy_character_chara_jig_00501.png,enemy_icon_chara_jig_00501,boss_icon_chara_jig_00501,
+jig,地獄楽,00601,chara_jig_00601,民谷 巌鉄斎,民谷 巌鉄斎,真の不老不死だ!!,SR,DropSR,青,chara,ディフェンス,zangeki_1,Short,zangeki_1,00601,1.67,stop有:1回目0.6,2.67,stop有:1.5,46038.625,390812.5,catchcopy_character_chara_jig_00601.png,enemy_icon_chara_jig_00601,boss_icon_chara_jig_00601,
+jig,地獄楽,00701,chara_jig_00701,メイ,メイ,強イモ弱イモ ゼンブダイジ,SR,DropSR,無,chara,スペシャル,-,ー,-,00701,-,-,2.4,0,46038.625,390812.5,catchcopy_character_chara_jig_00701.png,enemy_icon_chara_jig_00701,boss_icon_chara_jig_00701,
+mag,株式会社マジルミエ,00001,chara_mag_00001,新人魔法少女 桜木 カナ,新人魔法少女 桜木 カナ,私は役に立てる,UR,PremiumUR,青,chara,アタック,shageki_1,Long,shageki_1,00001,1.77,stop有:1回目 0.92,2.33,"stop無:1回目 0.75
+stop無:2回目 0.92
+stop無:3回目 1.08
+stop無:4回目 1.25
+stop無:5回目 1.42
+stop無:6回目 1.58",45922.45833,390812.5,catchcopy_character_chara_mag_00001.png,enemy_icon_chara_mag_00001,boss_icon_chara_mag_00001,chara_mag_00001_normal
+mag,株式会社マジルミエ,00101,chara_mag_00101,越谷 仁美,越谷 仁美,まずァ一発！,SR,PremiumSR,黄,chara,アタック,shageki_1,Middle,shageki_1,00101,1.90,0.84,2.67,1.50,45922.45833,390812.5,catchcopy_character_chara_mag_00101.png,enemy_icon_chara_mag_00101,boss_icon_chara_mag_00101,chara_mag_00101_normal
+mag,株式会社マジルミエ,00201,chara_mag_00201,土刃 メイ,絶対効率の体現者 土刃 メイ,これが仕事です,UR,PremiumUR,赤,chara,アタック,shageki_1,Long,dageki_1,,1.17,stop有:1回目 0.42,2.71,"stop有:1回目 0.38
+stop無:2回目 1.55
+stop無:3回目 1.8
+stop無:4回目 2.1",45967.625,390812.5,,enemy_icon_chara_mag_00201,boss_icon_chara_mag_00201,
+mag,株式会社マジルミエ,00301,chara_mag_00301,葵 リリー,葵 リリー,笑って,SSR,PremiumSSR,緑,chara,ディフェンス,dageki_1,Middle,-,,1.6,stop有:0.6,2.5,stop無 1,45967.625,390812.5,,enemy_icon_chara_mag_00301,boss_icon_chara_mag_00301,
+mag,株式会社マジルミエ,00401,chara_mag_00401,槇野 あかね,槇野 あかね,花散一閃,SR,DropSR,赤,chara,テクニカル,zangeki_1,Short,zangeki_1,,1.31,stop有 :1回目 0.6,1.87,stop有 :1回目 0.62,45967.625,390812.5,,enemy_icon_chara_mag_00401,boss_icon_chara_mag_00401,
+mag,株式会社マジルミエ,00501,chara_mag_00501,重本 浩司,重本 浩司,心配いらんぞ,SR,DropSR,無,chara,スペシャル,-,,-,,-,-,2.34,0,45967.625,390812.5,,enemy_icon_chara_mag_00501,boss_icon_chara_mag_00501,
+dos,道産子ギャルはなまらめんこい,00001,chara_dos_00001,冬木 美波,冬木 美波,明日家来る？,SSR,PremiumSSR,青,chara,サポート,dageki_1,Long,dageki_1,00001,1.17,0.60,2.60,1.40,45922.45833,390812.5,catchcopy_character_chara_dos_00001.png,enemy_icon_chara_dos_00001,boss_icon_chara_dos_00001,chara_dos_00001_normal
+dos,道産子ギャルはなまらめんこい,00101,chara_dos_00101,秋野 沙友理,秋野 沙友理,誰にも負けない,SSR,PremiumSSR,無,chara,スペシャル,-,ー,-,00101,-,-,4.84,0,45922.45833,390812.5,catchcopy_character_chara_dos_00101.png,enemy_icon_chara_dos_00101,boss_icon_chara_dos_00101,
+sum,サマータイムレンダ,00001,chara_sum_00001,網代 慎平,網代 慎平,フカンしろ!!,R,PremiumR,青,chara,テクニカル,shageki_1,Long,shageki_1,00001,1.40,stop無:1回目 0.65,2.33,"stop無:1回目 0.75
+stop無:2回目 0.93
+stop無:3回目 1.15",45922.45833,390812.5,catchcopy_character_chara_sum_00001.png,enemy_icon_chara_sum_00001,boss_icon_chara_sum_00001,chara_sum_00001_normal
+sum,サマータイムレンダ,00101,chara_sum_00101,影のウシオ 小舟 潮,影のウシオ 小舟 潮,守っちゃってね,UR,PremiumUR,青,chara,サポート,zangeki_1,Middle,-,00101,1.13,0.50,2.20,1.00,45922.45833,390812.5,catchcopy_character_chara_sum_00101.png,enemy_icon_chara_sum_00101,boss_icon_chara_sum_00101,chara_sum_00101_normal
+sum,サマータイムレンダ,00201,chara_sum_00201,小舟 澪,小舟 澪,おかえり慎ちゃん!!,SR,PremiumSR,青,chara,アタック,dageki_1,Short,shageki_1,00201,2.37,stop有 :1回目 0.67,3.67,stop有 :1回目 1.70,45922.45833,390812.5,catchcopy_character_chara_sum_00201.png,enemy_icon_chara_sum_00201,boss_icon_chara_sum_00201,chara_sum_00201_normal
+sum,サマータイムレンダ,00301,chara_sum_00301,南方 ひづる,選定中,,SSR,PremiumSSR,赤,chara,調整中,,,,00301,,,,,45658,390812.5,catchcopy_character_chara_sum_00301.png,enemy_icon_chara_sum_00301,boss_icon_chara_sum_00301,
+sum,サマータイムレンダ,00401,chara_sum_00401,小舟 澪の影,選定中,,SR,DropSSR,黄,chara,,,,,,,,,,,,,,,
+sum,サマータイムレンダ,00501,chara_sum_00501,ハイネ＆シデ,選定中,,UR,FestivalUR,緑,chara,,,,,,,,,,,,,,,
+sum,サマータイムレンダ,00502,chara_sum_00502,ハイネ＆シデ(シデのみ),,,,,,chara,,,,,,,,,,,,,,,
+osh,【推しの子】,00001,chara_osh_00001,星野 アイ,B小町不動のセンター アイ,究極のアイドル,UR,FestivalUR,赤,chara,テクニカル,shageki_1,Middle,-,,1.60,stop有:1回目 0.43,3.24,stop無:1回目 1.83,46023,390812.5,catchcopy_character_chara_osh_00001.png,enemy_icon_chara_osh_00001,boss_icon_chara_osh_00001,
+osh,【推しの子】,00101,chara_osh_00101,星野 アクア,復讐を誓う片星 星野 アクア,同じ轍を踏ませない,UR,PremiumUR,無,chara,スペシャル,-,ー,dageki_2,,-,-,2.34,0.67,46023,390812.5,catchcopy_character_chara_osh_00101.png,enemy_icon_chara_osh_00101,boss_icon_chara_osh_00101,
+osh,【推しの子】,00102,chara_osh_00102,星野 アクア (東京ブレイド編ver.),選定中,,SR,DropSR,青,chara,ディフェンス,,,,,,,,,,,,,,
+osh,【推しの子】,00201,chara_osh_00201,星野 ルビー,星野 ルビー,憧れのアイドルへ!!,SSR,PremiumSSR,赤,chara,アタック,dageki_2,Short,-,,1.37,"stop有:1回目 0.30
+stop有:2回目 0.60",3.00,stop無:1回目 1.66,46023,390812.5,catchcopy_character_chara_osh_00201.png,enemy_icon_chara_osh_00201,boss_icon_chara_osh_00201,
+osh,【推しの子】,00202,chara_osh_00202,星野 ルビー（闇堕ち演技ver）,選定中,,SR,DropSR,無,chara,スペシャル,,,,,,,,,,,,,,
+osh,【推しの子】,00301,chara_osh_00301,MEMちょ,MEMちょ,バズらせのプロ,SSR,PremiumSSR,黄,chara,サポート,dageki_1,Short,-,,1.13,"stop無:1回目 0.18
+stop無:1回目 0.35
+stop無:1回目 0.52",3.33,stop無:1回目 1.78,46023,390812.5,catchcopy_character_chara_osh_00301.png,enemy_icon_chara_osh_00301,boss_icon_chara_osh_00301,
+osh,【推しの子】,00401,chara_osh_00401,有馬 かな,有馬 かな,光はあるから,SSR,PremiumSSR,緑,chara,テクニカル,dageki_2,Short,dageki_2,,1.17,0.5,2.47,stop無:1回目 1.00,46023,390812.5,catchcopy_character_chara_osh_00401.png,enemy_icon_chara_osh_00401,boss_icon_chara_osh_00401,
+osh,【推しの子】,00402,chara_osh_00402,有馬 かな (東京ブレイド編ver.),選定中,,UR,PremiumUR,青,chara,アタック,,,,,,,,,,,,,,
+osh,【推しの子】,00501,chara_osh_00501,黒川 あかね,黒川 あかね,あっ　もうカメラ回ってる？,SSR,PremiumSSR,青,chara,テクニカル,dageki_1,Short,dageki_1,,1.06,0.3,2.67,1.78,46023,390812.5,catchcopy_character_chara_osh_00501.png,enemy_icon_chara_osh_00501,boss_icon_chara_osh_00501,
+osh,【推しの子】,00502,chara_osh_00502,黒川 あかね (東京ブレイド編ver.),選定中,,UR,PremiumUR,黄,chara,サポート,,,,,,,,,,,,,,
+osh,【推しの子】,00601,chara_osh_00601,ぴえヨン,ぴえヨン,ぴえヨンブートダンス,SR,DropSR,緑,chara,ディフェンス,dageki_1,Short,dageki_2,,1.10,"stop無:1回目 0.28
+stop無:2回目 0.70",1.90,"stop無:1回目 0.50
+stop無:2回目 0.83
+stop無:3回目 1.16
+stop無:4回目 1.50",46023,390812.5,catchcopy_character_chara_osh_00601.png,enemy_icon_chara_osh_00601,boss_icon_chara_osh_00601,
+osh,【推しの子】,00701,chara_osh_00701,雨宮 吾郎,雨宮 吾郎,君の奴隷(ファン)だ,SR,DropSR,無,chara,スペシャル,-,,,,-,-,2.14,stop無:0.6,46023,390812.5,catchcopy_character_chara_osh_00701.png,enemy_icon_chara_osh_00701,boss_icon_chara_osh_00701,
+osh,【推しの子】,00801,chara_osh_00801,斉藤 ミヤコ,斉藤 ミヤコ,推さない 駆けない 喋らない！,SSR,PremiumSSR,無,chara,スペシャル,-,,,,-,-,3,stop無 : 0.66,ハーフアニバ想定,390812.5,catchcopy_character_chara_osh_00801.png,enemy_icon_chara_osh_00801,boss_icon_chara_osh_00801,
+you,幼稚園WARS,00001,chara_you_00001,リタ,元殺し屋の新人教諭 リタ,お遊戯の時間です ,UR,PremiumUR,赤,chara,アタック,dageki_1,Middle,shageki_1,,1.34,stop有:1回目 0.45,1.77,"stop無:1回目 0.72
+stop無:2回目 0.88
+stop有:3回目 1.12",46055.625,390812.5,catchcopy_character_chara_you_00001.png,enemy_icon_chara_you_00001,boss_icon_chara_you_00001,
+you,幼稚園WARS,00002,chara_you_00002,リタ（ドレスアップ）,選定中,選定中,SR,DropSR,赤,chara,アタック,,,,,,,,,,,,,,
+you,幼稚園WARS,00101,chara_you_00101,ルーク,ルーク,さよならのお時間だ,SSR,PremiumSSR,黄,chara,テクニカル,dageki_1,Short,shageki_1,,1.64,stop有:1回目 0.65,3.57,"stop無:1回目 0.97
+stop無:2回目 1.08
+stop無:3回目 1.2
+stop無:4回目 1.32
+stop有:5回目 1.48",46055.625,390812.5,catchcopy_character_chara_you_00101.png,enemy_icon_chara_you_00101,boss_icon_chara_you_00101,
+you,幼稚園WARS,00201,chara_you_00201,ダグ,ダグ,これで貸しはチャラだ ,SR,DropSR,緑,chara,テクニカル,shageki_1,Middle,shageki_1,,1.67,stop有:1回目 0.63,3.17,"stop無:1回目 1.00
+stop無:2回目 1.26
+stop無:3回目 1.50
+stop有:4回目 1.70",46055.625,390812.5,catchcopy_character_chara_you_00201.png,enemy_icon_chara_you_00201,boss_icon_chara_you_00201,
+you,幼稚園WARS,00301,chara_you_00301,ハナ,ハナ,大丈夫だ,SR,DropSR,青,chara,アタック,dageki_1,Short,shageki_1,,1.77,stop有:1回目 0.7,3.67,stop有 :1回目 2.2,46055.625,390812.5,catchcopy_character_chara_you_00301.png,enemy_icon_chara_you_00301,boss_icon_chara_you_00301,
+kim,君のことが大大大大大好きな100人の彼女,00001,chara_kim_00001,花園羽々里,溢れる母性 花園 羽々里,私と付き合ってちょうだい!!,UR,PremiumUR,青,chara,ディフェンス,dageki_1,,dageki_1,,1.3,stop有:1回目 0.67,2.5,"stop無:1回目 0.63
+stop無:2回目 0.8
+stop無:3回目 0.99
+stop無:4回目 1.2
+stop有:5回目 1.60",2026/02中旬,390812.5,catchcopy_character_chara_kim_00001.png,enemy_icon_chara_kim_00001,boss_icon_chara_kim_00001,
+kim,君のことが大大大大大好きな100人の彼女,00101,chara_kim_00101,花園羽香里,花園 羽香里,付き合ってください……！,SSR,PremiumSSR,緑,chara,アタック,dageki_1,,dageki_1,,1.23,stop有:1回目 0.25,3.5,"stop無:1回目 1.11
+stop無:2回目 1.33
+stop無:3回目 1.53
+stop無:4回目 1.75
+stop有:5回目 1.93",2026/02中旬,390812.5,catchcopy_character_chara_kim_00101.png,enemy_icon_chara_kim_00101,boss_icon_chara_kim_00101,
+kim,君のことが大大大大大好きな100人の彼女,00201,chara_kim_00201,院田唐音,院田 唐音,付き合ってください……！,SSR,PremiumSSR,赤,chara,テクニカル,dageki_1,Short,dageki_1,,1.37,stop有:1回目 0.2,2.4,stop無 :1回目 1.2,2026/02中旬,390812.5,catchcopy_character_chara_kim_00201.png,enemy_icon_chara_kim_00201,boss_icon_chara_kim_00201,
+kim,君のことが大大大大大好きな100人の彼女,00301,chara_kim_00301,好本 静,好本 静,「好きです」,SSR,PremiumSSR,黄,chara,サポート,dageki_1,Middle,-,,1.75,stop有:1回目 0.78,3.6,stop無 :1回目 1.2,2026/02中旬,390812.5,catchcopy_character_chara_kim_00301.png,enemy_icon_chara_kim_00301,boss_icon_chara_kim_00301,
+hut,ふつうの軽音部,00001,chara_hut_00001,鳩野 ちひろ,ひたむきギタリスト 鳩野 ちひろ,いつか私たちの演奏で,UR,PremiumUR,緑,chara,ディフェンス,dageki_1,Short,dageki_1,,1.47,stop有 :1回目 0.15,2.8,stop有:1回目 0.87,2026/03上旬,390812.5,catchcopy_character_chara_hut_00001.png,enemy_icon_chara_hut_00001,boss_icon_chara_hut_00001,
+hut,ふつうの軽音部,00101,chara_hut_00101,幸山 厘,幸山 厘,はとちゃん あなたは神,SSR,PremiumSSR,青,chara,サポート,dageki_1,Middle,dageki_1,,1.58,stop有 :1回目 0.75,2.58,"stop有:1回目 0.33
+stop無:2回目 0.78
+stop無:3回目 1.0
+stop無:4回目 1.27
+stop無:5回目 1.58",2026/03上旬,390812.5,catchcopy_character_chara_hut_00101.png,enemy_icon_chara_hut_00101,boss_icon_chara_hut_00101,
+hut,ふつうの軽音部,00201,chara_hut_00201,内田 桃,内田 桃,どれだけ未熟でも,SR,DropSR,黄,chara,テクニカル,dageki_1,Long,dageki_1,,1.2,stop有 :1回目 0.34,2.84,"stop無:1回目 1.1
+stop無:2回目 1.44
+stop有:3回目 1.97",2026/03上旬,390812.5,catchcopy_character_chara_hut_00201.png,enemy_icon_chara_hut_00201,boss_icon_chara_hut_00201,
+hut,ふつうの軽音部,00301,chara_hut_00301,藤井 彩目,藤井 彩目,かましたらなあかんやろ！,SR,DropSR,赤,chara,アタック,dageki_1,Middle,dageki_1,,1.33,stop有 :1回目 0.33,2.42,"stop無:1回目 0.3
+stop無:2回目 0.61
+stop無:3回目 0.93
+stop無:4回目 1.25
+stop有:5回目 1.6",2026/03上旬,390812.5,catchcopy_character_chara_hut_00301.png,enemy_icon_chara_hut_00301,boss_icon_chara_hut_00301,
+rur,ルリドラゴン,00001,chara_rur_00001,青木 瑠璃,監修NG,,UR,PremiumUR,青,chara,テクニカル,,,,,,,,,ハーフアニバ想定,390812.5,catchcopy_character_chara_rur_00001.png,enemy_icon_chara_rur_00001,boss_icon_chara_rur_00001,
+hyp,ハイパーインフレーション,00001,chara_hyp_00001,ルーク,ルーク,カネが欲しいッ!!,SSR,DropSSR,緑,chara,サポート,dageki_1,Short,-,,1.57,stop有 :1回目 0.45,2.45,stop無:1回目 0.85,ハーフアニバ想定,390812.5,catchcopy_character_chara_hyp_00001.png,enemy_icon_chara_hyp_00001,boss_icon_chara_hyp_00001,
+gam,ゲーミングお嬢様,00001,chara_gam_00001,祥龍院隆子,祥龍院 隆子,お嬢様は”完璧”であるべき,SSR,PremiumSSR,黄,chara,アタック,dageki_1,Short,dageki_1,,1.08,stop有 : 0.55,3.45,stop有 : 0.73,ハーフアニバ想定,390812.5,catchcopy_character_chara_gam_00001.png,enemy_icon_chara_gam_00001,boss_icon_chara_gam_00001,
+ara,アラガネの子,00001,chara_ara_00001,灰（アラガネの子）,灰,金剛石 煌反閃転,SR,DropSR,緑,chara,アタック,zangeki_1,Middle,-,,1.37,stop有 :1回目 0.3,2.67,stop有 : 0.7,ハーフアニバ想定,390812.5,catchcopy_character_chara_ara_00001.png,enemy_icon_chara_ara_00001,boss_icon_chara_ara_00001,
+aya,あやかしトライアングル,00001,chara_aya_00001,風巻 祭里,一子相伝の風使い 風巻 祭里,風巻流・祓忍法 螺旋突,UR,PremiumUR,赤,chara,テクニカル,zangeki_1,,zangeki_1,,1.37,stop有 :1回目 0.55,2.75,"stop有:1回目 0.38
+stop無:2回目 1.5",2026/04/中旬,390812.5,catchcopy_character_chara_aya_00001.png,enemy_icon_chara_aya_00001,boss_icon_chara_aya_00001,
+aya,あやかしトライアングル,00101,chara_aya_00101,花奏 すず,花奏 すず,妖巫女の覚悟,SSR,PremiumSSR,赤,chara,ディフェンス,zangeki_1,,zangeki_1,,1.37,stop有 :1回目 0.6,2.57,stop有 : 1.13,2026/04/中旬,390812.5,catchcopy_character_chara_aya_00101.png,enemy_icon_chara_aya_00101,boss_icon_chara_aya_00101,
+aya,あやかしトライアングル,00201,chara_aya_00201,香炉木 恋緒,香炉木 恋緒,サポートする責任があるんです,SR,DropSR,黄,chara,サポート,dageki_1,,-,,1.33,stop有 :1回目 0.58,2.33,stopud無 : 1.33,2026/04/中旬,390812.5,catchcopy_character_chara_aya_00201.png,enemy_icon_chara_aya_00201,boss_icon_chara_aya_00201,
+aya,あやかしトライアングル,00301,chara_aya_00301,ニノ曲 宗牙,二ノ曲 宗牙,ニノ曲流・祓忍法 迅雷跳断,SR,DropSR,緑,chara,アタック,shageki_1,,shageki_1,,1.31,stop有 :1回目 0.5,1.37,"stop無:1回目 0.62
+stop無:2回目 0.78
+stop無:3回目 1
+stop無:4回目 1.19
+stop有:5回目 1.5",2026/04/中旬,390812.5,catchcopy_character_chara_aya_00301.png,enemy_icon_chara_aya_00301,boss_icon_chara_aya_00301,
+mar,マリッジトキシン,00001,chara_mar_00001,下呂 ヒカル,不器用な毒使い 下呂 ヒカル,毒薬二連【舛】×【戈】,UR,PremiumUR,緑,chara,テクニカル,dageki_1,,shageki_1,,1.34,stop有 :1回目 0.34,2.62,stop有 :1回目 1.2,2026/04/中旬,390812.5,catchcopy_character_chara_mar_00001.png,enemy_icon_chara_mar_00001,boss_icon_chara_mar_00001,
+mar,マリッジトキシン,00002,chara_mar_00002,下呂 ヒカル（ドレスアップ）,選定中,,SR,DropSR,青,chara,テクニカル,,,,,,,,,,,,,,
+mar,マリッジトキシン,00101,chara_mar_00101,城崎 メイ,城崎 メイ,そんな提案初めて,SSR,PremiumSSR,黄,chara,サポート,dageki_1,,-,,1.37,stop有 :1回目 0.65,2.67,stop有 :1回目 0.83,2026/04/中旬,390812.5,catchcopy_character_chara_mar_00101.png,enemy_icon_chara_mar_00101,boss_icon_chara_mar_00101,
+mar,マリッジトキシン,00201,chara_mar_00201,姫川 杏子,姫川 杏子,サメフレのサメ重,SR,DropSR,青,chara,ディフェンス,dageki_1,,dageki_1,,1.37,stop有 :1回目 0.6,2.51,stop有 :1回目 1.0,2026/04/中旬,390812.5,catchcopy_character_chara_mar_00201.png,enemy_icon_chara_mar_00201,boss_icon_chara_mar_00201,
+mar,マリッジトキシン,00301,chara_mar_00301,嬉野 シオリ,選定中,,SR,DropSR,青,chara,ディフェンス,,,,,,,,,2026/04/中旬,390812.5,catchcopy_character_chara_mar_00301.png,enemy_icon_chara_mar_00301,boss_icon_chara_mar_00301,
+mar,マリッジトキシン,00401,chara_mar_00401,鳴子,音使い 鳴子,変性血統＋＋【谺】,SR,DropSR,赤,chara,テクニカル,shageki_1,,zangeki_1,,2.23,stop有 :1回目 1,2.27,stop有 :1回目 1.5,2026/04/中旬,390812.5,catchcopy_character_chara_mar_00401.png,enemy_icon_chara_mar_00401,boss_icon_chara_mar_00401,
+sib,シバつき物件,00001,chara_sib_00001,百瀬 氷,監修中,,UR,PremiumUR,黄,chara,ディフェンス,,,,,1.37,stop有 :1回目 0.43,2.5,stop無 :1回目 0.96,2026/04/中旬,390812.5,catchcopy_character_chara_sib_00001.png,enemy_icon_chara_sib_00001,boss_icon_chara_sib_00001,
+nek,猫田びより,00001,chara_nek_00001,猫田さん,猫田さん,何も生み出せない事を教えてやるぜ,SSR,PremiumSSR,黄,chara,アタック,dageki_1,,dageki_1,,1.37,stop有 :1回目 0.5,1.9,stop有 :1回目 0.85,2026/04/中旬,390812.5,catchcopy_character_chara_nek_00001.png,enemy_icon_chara_nek_00001,boss_icon_chara_nek_00001,
+mad,MAD,00001,chara_mad_00001,ジョン（エイリアン形態）,選定中,,UR,PremiumUR,青,chara,アタック,,,,,1.17,stop有 :1回目 0.3,3.33,stop有 :1回目 0.75,2026/06/上旬,390812.5,catchcopy_character_chara_mad_00001.png,enemy_icon_chara_mad_00001,boss_icon_chara_mad_00001,
+mad,MAD,00101,chara_mad_00101,パノ,選定中,,UR,PremiumUR,赤,chara,アタック,,,,,1.23,0.4,3.17,stop有 :1回目 1,2026/06/上旬,390812.5,catchcopy_character_chara_mad_00101.png,enemy_icon_chara_mad_00101,boss_icon_chara_mad_00101,
+mad,MAD,00201,chara_mad_00201,アルダ,選定中,,SR,DropSR,赤,chara,ディフェンス,,,,,1.33,stop有 :1回目 0.43,2.4,"stop無:1回目 0.26
+stop無:2回目 0.4
+stop有:3回目 1.23",2026/06/上旬,390812.5,catchcopy_character_chara_mad_00201.png,enemy_icon_chara_mad_00201,boss_icon_chara_mad_00201,
+mad,MAD,00301,chara_mad_00301,ボブ,選定中,,SR,DropSR,緑,chara,サポート,,,,,1.72,stop有 :1回目 0.71,2.13,stop無:1回目 0.5,2026/06/上旬,390812.5,catchcopy_character_chara_mad_00301.png,enemy_icon_chara_mad_00301,boss_icon_chara_mad_00301,
+syu,終末のハーレム,00001,chara_syu_00001,周防 美来,選定中,,UR,PremiumUR,緑,chara,サポート,,,,,1.70,stop有 :1回目 0.66,3.1,stop無:1回目 1.18,2026/06/中旬,390812.5,catchcopy_character_chara_syu_00001.png,enemy_icon_chara_syu_00001,boss_icon_chara_syu_00001,
+aft,終末のハーレム After World,00001,chara_aft_00001,溝下 乃薔薇,選定中,,UR,PremiumUR,赤,chara,ディフェンス,,,,,1.75,stop有:1回目 1.08,3.63,stop無:1回目 1.08,2026/06/中旬,390812.5,catchcopy_character_chara_aft_00001.png,enemy_icon_chara_aft_00001,boss_icon_chara_aft_00001,
+kut,口が裂けても君には,00001,chara_kut_00001,みろく,選定中,,UR,PremiumUR,青,chara,テクニカル,,,,,1.67,stop有:1回目 0.5,3.43,stop無:1回目 0.61,2026/06/中旬,390812.5,catchcopy_character_chara_kut_00001.png,enemy_icon_chara_kut_00001,boss_icon_chara_kut_00001,
+san,サンキューピッチ,00001,chara_san_00001,桐山 不折,選定中,,UR,PremiumUR,黄,chara,アタック,,,,,1.63,stop有:1回目 0.58,2.85,stop有 :1回目 1.18,,,,,,
+san,サンキューピッチ,00101,chara_san_00101,三馬 正磨,選定中,,SR,DropSR,赤,chara,アタック,,,,,1.57,stop有:1回目 0.81,2.5,stop無 :1回目 1.6,,,,,,
+sei,正反対な君と僕,00001,chara_sei_00001,鈴木 みゆ,選定中,,UR,PremiumUR,赤,chara,ディフェンス,,,,,,,,,,,,,,
+kus,クソ女に幸あれ,00001,chara_kus_00001,"西川 檸檬",選定中,,UR,PremiumUR,青,chara,テクニカル,,,,,,,,,,,,,,
+han,半人前の恋人,00001,chara_han_00001,"杉崎 響子",選定中,,SSR,PremiumSSR,赤,chara,ディフェンス,,,,,,,,,,,,,,
+kub,久保さんは僕を許さない,00001,chara_kub_00001,"久保 渚咲",選定中,,SR,DropSR,緑,chara,アタック,,,,,,,,,,,,,,
+c8m,ちえりの恋は8メートル,00001,chara_c8m_00001,"大峰 ちえり",選定中,,SR,DropSR,無,chara,スペシャル,,,,,,,,,,,,,,
+fan,終末のハーレム ファンタジア,00001,chara_fan_00001,ラティ,選定中,,UR,PremiumUR,青,chara,テクニカル,,,,,,,,,,,,,,
+kaw,カワイスギクライシス,00001,chara_kaw_00001,リザ・ルーナ,選定中,,SR,DropSR,赤,chara,アタック,,,,,,,,,,,,,,
+vig,ヴィジランテ-僕のヒーローアカデミア ILLEGALS-,00001,chara_vig_00001,灰廻 航一,選定中,,UR,PremiumUR,黄,chara,アタック,,,,,,,,,,,,,,
+vig,ヴィジランテ-僕のヒーローアカデミア ILLEGALS-,00101,chara_vig_00101,オールマイト,選定中,,UR,FestivalUR,赤,chara,アタック,,,,,,,,,,,,,,
+vig,ヴィジランテ-僕のヒーローアカデミア ILLEGALS-,00201,chara_vig_00201,イレイザーヘッド,選定中,,UR,FestivalUR,青,chara,テクニカル,,,,,,,,,,,,,,
+chi2,チェンソーマン 第二部,00001,chara_chi2_00001,三鷹 アサ&ヨル,選定中,,UR,FestivalUR,緑,chara,アタック,,,,,,,,,,,,,,
+ssm,すすめ！ジャンプへっぽこ探検隊！,00001,chara_ssm_00001,サクライ タケシ 先生,選定中,,SSR,PremiumSR,無,chara,ディフェンス,,,,,,,,,,,,,,
+eiu,英雄機関,00001,chara_eiu_00001,レオニダス・タイラー,選定中,,SR,DropSR,緑,chara,アタック,,,,,,,,,,,,,,
+exo,エクソシストを堕とせない,00001,chara_exo_00001,少年神父,選定中,,SR,DropSR,黄,chara,アタック,,,,,,,,,,,,,,
+oto,大人大戦,00001,chara_oto_00001,浦島 優太郎,,,SR,DropSR,赤,chara,サポート,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+以下エネミーを記載,,,,,以下エネミーを記載,,,,,以下エネミーを記載,,,,,,以下エネミーを記載,,,,,以下エネミーを記載,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+spy,SPY×FAMILY,00001,enemy_spy_00001,密輸組織の残党,密輸組織の残党,,,,,enemy,,shageki_1,Short,,,1.00,0.17,-,-,45658,390812.5,catchcopy_character_enemy_spy_00001.png,enemy_icon_enemy_spy_00001,boss_icon_enemy_spy_00001,enemy_spy_00001_normal
+spy,SPY×FAMILY,00101,enemy_spy_00101,グエン,グエン,,,,,enemy,,dageki_1,Long,,,1.20,0.50,-,-,45658,390812.5,catchcopy_character_enemy_spy_00101.png,enemy_icon_enemy_spy_00101,boss_icon_enemy_spy_00101,enemy_spy_00101_normal
+spy,SPY×FAMILY,00201,enemy_spy_00201,鎖窯使いのバーナビー,,,,,,enemy,,,Long,,,,,-,-,45658,390812.5,catchcopy_character_enemy_spy_00201.png,enemy_icon_enemy_spy_00201,boss_icon_enemy_spy_00201,
+spy,SPY×FAMILY,00301,enemy_spy_00301,毒霧使い,,,,,,enemy,,,Middle,,,,,-,-,45658,390812.5,catchcopy_character_enemy_spy_00301.png,enemy_icon_enemy_spy_00301,boss_icon_enemy_spy_00301,
+dan,ダンダダン,00001,enemy_dan_00001,セルポ星人,セルポ星人,ー,,,,enemy,,dageki_1,,,,1.16,0.50,-,-,45658,390812.5,catchcopy_character_enemy_dan_00001.png,enemy_icon_enemy_dan_00001,boss_icon_enemy_dan_00001,
+dan,ダンダダン,00101,enemy_dan_00101,セルポ星人（変身）,セルポ星人(変身),ー,,,,enemy,,dageki_1,,,,1.40,0.70,-,-,45658,390812.5,catchcopy_character_enemy_dan_00101.png,enemy_icon_enemy_dan_00101,boss_icon_enemy_dan_00101,enemy_dan_00101_normal
+dan,ダンダダン,00201,enemy_dan_00201,ターボババア,ターボババア,ー,,,,enemy,,dageki_1,,,,1.50,0.40,-,-,45658,390812.5,catchcopy_character_enemy_dan_00201.png,enemy_icon_enemy_dan_00201,boss_icon_enemy_dan_00201,
+dan,ダンダダン,00301,enemy_dan_00301,アクロバティックさらさら,アクロバティックさらさら,ー,,,,enemy,,dageki_1,Middle,,,1.20,0.27,-,-,45658,390812.5,catchcopy_character_enemy_dan_00301.png,enemy_icon_enemy_dan_00301,boss_icon_enemy_dan_00301,enemy_dan_00301_normal
+gom,姫様“拷問”の時間です,00101,enemy_gom_00101,トーチャー・トルチュール,トーチャー・トルチュール,"""拷問""の時間です",,,,enemy,テクニカル,dageki_2,,,00101,2.90,1.00,-,-,45658,390812.5,catchcopy_character_enemy_gom_00101.png,enemy_icon_enemy_gom_00101,boss_icon_enemy_gom_00101,chara_gom_00101_normal
+gom,姫様“拷問”の時間です,00001,enemy_gom_00001,カナッジ,カナッジ,ー,,,無,enemy,,,,,,1.60,0.50,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00001,boss_icon_enemy_gom_00001,
+gom,姫様“拷問”の時間です,00201,enemy_gom_00201,クロル,クロル,ー,,,,enemy,,dageki_1,,,,1.30,0.30,-,-,45658,390812.5,catchcopy_character_enemy_gom_00201.png,enemy_icon_enemy_gom_00201,boss_icon_enemy_gom_00201,
+gom,姫様“拷問”の時間です,00301,enemy_gom_00301,キュイ,キュイ,ー,,,,enemy,ディフェンス,dageki_1,,,,2.76,1.50,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00301,boss_icon_enemy_gom_00301,
+gom,姫様“拷問”の時間です,00401,enemy_gom_00401,たこ焼きくん,たこ焼きくん,ー,,,,enemy,アタック,dageki_1,,,,1.00,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00002.png,enemy_icon_enemy_gom_00401,boss_icon_enemy_gom_00401,enemy_dan_00401_normal
+gom,姫様“拷問”の時間です,00402,enemy_gom_00402,たこ焼き,たこ焼き,ー,,,,enemy,アタック,dageki_1,,,,1.00,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00402,boss_icon_enemy_gom_00402,
+gom,姫様“拷問”の時間です,00501,enemy_gom_00501,バタートースト,バタートースト,ー,,,,enemy,ディフェンス,dageki_1,,,,1.00,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00501,boss_icon_enemy_gom_00501,
+gom,姫様“拷問”の時間です,00502,enemy_gom_00502,割きトースト,割きトースト,ー,,,,enemy,アタック,dageki_1,,,,1.00,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00502,boss_icon_enemy_gom_00502,
+gom,姫様“拷問”の時間です,00601,enemy_gom_00601,ゴリラのマーチA,ゴリラのマーチ,ー,,,,enemy,アタック,dageki_1,,,,1,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00601,boss_icon_enemy_gom_00601,
+gom,姫様“拷問”の時間です,00611,enemy_gom_00611,ゴリラのマーチB,ゴリラのマーチ,ー,,,,enemy,アタック,dageki_1,,,,1,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00611,boss_icon_enemy_gom_00611,
+gom,姫様“拷問”の時間です,00621,enemy_gom_00621,ゴリラのマーチC,ゴリラのマーチ,ー,,,,enemy,アタック,dageki_1,,,,1,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00621,boss_icon_enemy_gom_00621,
+gom,姫様“拷問”の時間です,00631,enemy_gom_00631,ゴリラのマーチD,ゴリラのマーチ,ー,,,,enemy,アタック,dageki_1,,,,1,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00631,boss_icon_enemy_gom_00631,
+gom,姫様“拷問”の時間です,00701,enemy_gom_00701,ラーメン,ラーメン,ー,,,,enemy,アタック,dageki_1,,,,1.00,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00701,boss_icon_enemy_gom_00701,
+gom,姫様“拷問”の時間です,00801,enemy_gom_00801,ライス,ライス,ー,,,,enemy,ディフェンス,dageki_1,,,,1.00,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00801,boss_icon_enemy_gom_00801,
+gom,姫様“拷問”の時間です,00901,enemy_gom_00901,ライス(海苔),ライス (海苔),ー,,,,enemy,アタック,dageki_1,,,,1.00,0.833,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_00901,boss_icon_enemy_gom_00901,
+gom,姫様“拷問”の時間です,01001,enemy_gom_01001,あんぱん,あんぱん,ー,,,,enemy,,,,,,,,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_01001,boss_icon_enemy_gom_01001,
+gom,姫様“拷問”の時間です,01002,enemy_gom_01002,トーストあんぱん,トーストあんぱん,ー,,,,enemy,,,,,,,,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_01002,boss_icon_enemy_gom_01002,
+gom,姫様“拷問”の時間です,01101,enemy_gom_01101,魔王ゴッドサンダー,魔王ゴッドサンダー,ー,,,,enemy,,,,,,,,-,-,45658,390812.5,catchcopy_character_enemy_gom_00001.png,enemy_icon_enemy_gom_01101,boss_icon_enemy_gom_01101,
+chi,チェンソーマン,00001,enemy_chi_00001,ゾンビの悪魔,ゾンビの悪魔,ー,,,,enemy,,dageki_2,,,,1.13,0.20,-,-,45658,390812.5,catchcopy_character_enemy_chi_00001.png,enemy_icon_enemy_chi_00001,boss_icon_enemy_chi_00001,enemy_chi_00001_normal
+chi,チェンソーマン,00101,enemy_chi_00101,ゾンビ,ゾンビ,ー,,,,enemy,,dageki_1,,,,1.90,0.66,-,-,45658,390812.5,catchcopy_character_enemy_chi_00101.png,enemy_icon_enemy_chi_00101,boss_icon_enemy_chi_00101,
+chi,チェンソーマン,00201,enemy_chi_00201,コウモリの悪魔,コウモリの悪魔,ー,,,,enemy,,dageki_1,,,,1.34,0.33,-,-,45658,390812.5,catchcopy_character_enemy_chi_00201.png,enemy_icon_enemy_chi_00201,boss_icon_enemy_chi_00201,enemy_chi_00201_normal
+kai,怪獣８号,00001,enemy_kai_00001,怪獣 本獣,怪獣 本獣,ー,,,,enemy,,dageki_1,,,,2.34,stop有:1回目 1.00,-,-,45658,390812.5,catchcopy_character_enemy_kai_00001.png,enemy_icon_enemy_kai_00001,boss_icon_enemy_kai_00001,
+kai,怪獣８号,00101,enemy_kai_00101,怪獣 余獣,怪獣 余獣,ー,,,,enemy,,dageki_1,,,,1.23,stop有:1回目 0.56,-,-,45658,390812.5,catchcopy_character_enemy_kai_00101.png,enemy_icon_enemy_kai_00101,boss_icon_enemy_kai_00101,
+kai,怪獣８号,00201,enemy_kai_00201,怪獣９号,怪獣９号,ー,,,,enemy,,shageki_1,,,,2.47,stop有:1回目 1.26,-,-,45658,390812.5,catchcopy_character_enemy_kai_00201.png,enemy_icon_enemy_kai_00201,boss_icon_enemy_kai_00201,
+kai,怪獣８号,00301,enemy_kai_00301,蜘蛛の怪獣,蜘蛛の怪獣,ー,,,,enemy,,dageki_1,,,,1.00,0.40,-,-,,,,,,
+kai,怪獣８号,00401,enemy_kai_00401,怪獣１０号,怪獣１０号,ー,,,,enemy,,dageki_1,,,,1.30,stop有:1回目 0.55,-,-,,,,,,
+sur,魔都精兵のスレイブ,00001,enemy_sur_00001,和倉 青羽,和倉 青羽,ー,,,,enemy,,dageki_1,,,,1.24,stop有:1回目 0.50,-,-,45658,390812.5,catchcopy_character_enemy_sur_00001.png,enemy_icon_enemy_sur_00001,boss_icon_enemy_sur_00001,
+sur,魔都精兵のスレイブ,00101,enemy_sur_00101,醜鬼,醜鬼,ー,,,,enemy,ディフェンス,dageki_1,,,,0.80,0.30,-,-,45658,390812.5,catchcopy_character_enemy_sur_00101.png,enemy_icon_enemy_sur_00101,boss_icon_enemy_sur_00101,
+jig,地獄楽,00001,enemy_jig_00001,門神,門神,ー,,,,enemy,ディフェンス,dageki_1,,,,1.83,0.83,-,-,45658,390812.5,catchcopy_character_enemy_jig_00001.png,enemy_icon_enemy_jig_00001,boss_icon_enemy_jig_00001,enemy_jig_00001_normal
+jig,地獄楽,00101,enemy_jig_00101,門神 （小）,門神 (小),ー,,,,enemy,ディフェンス,dageki_1,,,,1.83,0.83,-,-,45658,390812.5,catchcopy_character_enemy_jig_00101.png,enemy_icon_enemy_jig_00101,boss_icon_enemy_jig_00101,enemy_jig_00101_normal
+jig,地獄楽,00201,enemy_jig_00201,門神 （大）,門神 (大),ー,,,,enemy,ディフェンス,dageki_1,,,,1.83,0.83,-,-,45658,390812.5,catchcopy_character_enemy_jig_00201.png,enemy_icon_enemy_jig_00201,boss_icon_enemy_jig_00201,enemy_jig_00201_normal
+jig,地獄楽,00301,enemy_jig_00301,竈神 魚,竈神 魚,ー,,,,enemy,アタック,dageki_1,,,,1.50,0.66,-,-,45658,390812.5,catchcopy_character_enemy_jig_00301.png,enemy_icon_enemy_jig_00301,boss_icon_enemy_jig_00301,
+jig,地獄楽,00401,enemy_jig_00401,極楽蝶,極楽蝶,ー,,,,enemy,アタック,dageki_2,,,,1.30,0.66,-,-,45658,390812.5,catchcopy_character_enemy_jig_00401.png,enemy_icon_enemy_jig_00401,boss_icon_enemy_jig_00401,
+jig,地獄楽,00402,enemy_jig_00402,極楽蝶,極楽蝶,ー,,,,enemy,アタック,dageki_2,,,,2.10,0.60,-,-,45658,390812.5,catchcopy_character_enemy_jig_00402.png,enemy_icon_enemy_jig_00402,boss_icon_enemy_jig_00402,enemy_jig_00402_normal
+jig,地獄楽,00501,enemy_jig_00501,山田浅ェ門 源嗣,山田浅ェ門 源嗣,ー,,,,enemy,ディフェンス,zangeki_1,,,,1.43,0.66,-,-,45658,390812.5,catchcopy_character_enemy_jig_00501.png,enemy_icon_enemy_jig_00501,boss_icon_enemy_jig_00501,enemy_jig_00501_normal
+jig,地獄楽,00601,enemy_jig_00601,朱槿,朱槿,ー,,,,enemy,,,,,,1.5,0.75,-,-,46038.625,390812.5,catchcopy_character_enemy_jig_00601.png,enemy_icon_enemy_jig_00601,boss_icon_enemy_jig_00501,
+mag,株式会社マジルミエ,00001,enemy_mag_00001,冷却系の怪異,冷却系怪異,ー,,,,enemy,,shageki_1,,,00001,1.50,0.80,-,-,45658,390812.5,catchcopy_character_enemy_mag_00001.png,enemy_icon_enemy_mag_00001,boss_icon_enemy_mag_00001,enemy_mag_00001_normal
+mag,株式会社マジルミエ,00101,enemy_mag_00101,つらら,つらら,ー,,,,enemy,,zangeki_1,,,00101,0.37,stop有:1回目 0.20,-,-,45658,390812.5,catchcopy_character_enemy_mag_00101.png,enemy_icon_enemy_mag_00101,boss_icon_enemy_mag_00101,
+mag,株式会社マジルミエ,00201,enemy_mag_00201,建造物寄生型の怪異（大）,建造物寄生型の怪異 (大),ー,,,,enemy,,dageki_1,,,00201,1.50,0.74,-,-,45658,390812.5,catchcopy_character_enemy_mag_00201.png,enemy_icon_enemy_mag_00201,boss_icon_enemy_mag_00201,enemy_mag_00201_normal
+mag,株式会社マジルミエ,00301,enemy_mag_00301,建造物寄生型の怪異（小）,建造物寄生型の怪異,ー,,,,enemy,,dageki_2,,,00301,1.50,0.74,-,-,45658,390812.5,catchcopy_character_enemy_mag_00301.png,enemy_icon_enemy_mag_00301,boss_icon_enemy_mag_00301,
+mag,株式会社マジルミエ,00401,enemy_mag_00401,工事現場の怪異,工事現場の怪異,,,,,enemy,,,,,,1.67,stop有:0.84,-,-,,,,,,
+sum,サマータイムレンダ,00001,enemy_sum_00001,影,影,ー,,,,enemy,ディフェンス,dageki_1,,,00001,1.50,0.66,-,-,45658,390812.5,catchcopy_character_enemy_sum_00001.png,enemy_icon_enemy_sum_00001,boss_icon_enemy_sum_00001,enemy_sum_00001_normal
+sum,サマータイムレンダ,00101,enemy_sum_00101,小舟 澪(影)_拳銃,小舟 澪の影 (拳銃),ー,,,,enemy,アタック,shageki_1,,,00101,1.40,0.60,-,-,45658,390812.5,catchcopy_character_enemy_sum_00101.png,enemy_icon_enemy_sum_00101,boss_icon_enemy_sum_00101,enemy_sum_00101_normal
+sum,サマータイムレンダ,00201,enemy_sum_00201,小舟 澪(影)_包丁,小舟 澪の影 (包丁),ー,,,,enemy,アタック,zangeki_1,,,00201,1.40,0.66,-,-,45658,390812.5,catchcopy_character_enemy_sum_00201.png,enemy_icon_enemy_sum_00201,boss_icon_enemy_sum_00201,enemy_sum_00201_normal
+you,幼稚園WARS,00001,enemy_you_00001,暗殺者（近）,不良系金髪イケメン,ー,,,,enemy,アタック,zangeki_1,,,,1.27,stop有0.5,-,-,46055.625,390812.5,catchcopy_character_enemy_you_00001.png,enemy_icon_enemy_you_00001,boss_icon_enemy_you_00001,
+you,幼稚園WARS,00101,enemy_you_00101,暗殺者（遠）,イケメンじゃない殺し屋,ー,,,,enemy,アタック,shageki_1,,,,1.27,0.56,-,-,46055.625,390812.5,catchcopy_character_enemy_you_00101.png,enemy_icon_enemy_you_00101,boss_icon_enemy_you_00101,
+kim,君のことが大大大大大好きな100人の彼女,00001,enemy_kim_00001,愛城 恋太郎,愛城 恋太郎,ー,,,,enemy,アタック,,,,,1.27,stop有:0.2,-,-,45658,390812.5,catchcopy_character_enemy_kim_00001.png,enemy_icon_enemy_kim_00001,boss_icon_enemy_kim_00001,
+kim,君のことが大大大大大好きな100人の彼女,00101,enemy_kim_00101,学生A（男）,,ー,,,,enemy,アタック,,,,,,,-,-,45658,390812.5,catchcopy_character_enemy_kim_00101.png,enemy_icon_enemy_kim_00101,boss_icon_enemy_kim_00101,
+hut,ふつうの軽音部,00001,enemy_hut_00001,鷹見 項希,鷹見 項希,ー,,,,enemy,アタック,,,,,1.37,stop有:0.51,-,-,45658,390812.5,catchcopy_character_enemy_hut_00001.png,enemy_icon_enemy_hut_00001,boss_icon_enemy_hut_00001,
+hut,ふつうの軽音部,00101,enemy_hut_00101,学生B,学生A,ー,,,,enemy,アタック,,,,,1.28,stop有:0.25,-,-,45658,390812.5,catchcopy_character_enemy_hut_00101.png,enemy_icon_enemy_hut_00101,boss_icon_enemy_hut_00101,
+aya,あやかしトライアングル,00001,enemy_aya_00001,シロガネ,シロガネ,ー,,,,enemy,アタック,,,,,,stop有:0.63,-,-,2026/04/中旬,390812.5,catchcopy_character_enemy_aya_00001.png,enemy_icon_enemy_aya_00001,boss_icon_enemy_aya_00001,
+mar,マリッジトキシン,00001,enemy_mar_00001,水使い,水使い 潮,ー,,,,enemy,アタック,dageki_1,,,,1.22,"stop無:1回目 0.28
+stop無:2回目 0.46
+stop無:3回目 0.66
+stop有:4回目 0.76",-,-,2026/05/上旬マリッジトキシン,390812.5,catchcopy_character_enemy_mar_00001.png,enemy_icon_enemy_mar_00001,boss_icon_enemy_mar_00001,
+mad,MAD,00001,enemy_mad_00001,エイリアン,,,,,,enemy,アタック,,,,,1.63,stop有:0.7,-,-,26/06上旬MAD,390812.5,catchcopy_character_enemy_mad_00001.png,enemy_icon_enemy_mad_00001,boss_icon_enemy_mad_00001,
+syu,終末のハーレム,00001,enemy_syu_00001,水原 怜人,,,,,,enemy,アタック,,,,,1.57,stop有:0.58,,,26/06中旬ジュンブラ,390812.5,catchcopy_character_enemy_syu_00001.png,enemy_icon_enemy_syu_00001,boss_icon_enemy_syu_00001,
+aft,終末のハーレム After World,00001,enemy_aft_00001,金村 陸,,,,,,enemy,アタック,,,,,1.57,stop有:0.41,,,26/06中旬ジュンブラ,390812.5,catchcopy_character_enemy_aft_00001.png,enemy_icon_enemy_aft_00001,boss_icon_enemy_aft_00001,
+kut,口が裂けても君には,00001,enemy_kut_00001,茶乃 紅一,,,,,,enemy,ディフェンス,,,,,1.55,stop有:0.55,,,26/06中旬ジュンブラ,390812.5,catchcopy_character_enemy_kut_00001.png,enemy_icon_enemy_kut_00001,boss_icon_enemy_kut_00001,
+kai,怪獣８号,00002,enemy_kai_00002,本獣(8巻ver.),,,,,,enemy,アタック,,,,,,,,,26/07上旬怪獣8号,390812.5,catchcopy_character_enemy_kai_00002.png,enemy_icon_enemy_kai_00002,boss_icon_enemy_kai_00002,
+kai,怪獣８号,00501,enemy_kai_00501,怪獣9号(差分),,,,,,enemy,アタック,,,,,,,,,26/07上旬怪獣8号,390812.5,catchcopy_character_enemy_kai_00501.png,enemy_icon_enemy_kai_00501,boss_icon_enemy_kai_00501,
+osh,【推しの子】,00001,enemy_osh_00001,姫川 大輝 (東京ブレイド編ver.),,,,,,enemy,,,,,,,,,,,,,,,
+osh,【推しの子】,00101,enemy_osh_00101,鳴嶋 メルト (東京ブレイド編ver.),,,,,,enemy,,,,,,,,,,,,,,,
+osh,【推しの子】,00201,enemy_osh_00201,鴨志田 朔夜 (東京ブレイド編ver.),,,,,,enemy,,,,,,,,,,,,,,,
+eiu,英雄機関,00001,enemy_eiu_00001,星獣,選定中,,,,,enemy,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+,error,,__,,,,,,,,,,,,,,,,,,,,,,
+glo,GLOW,00001,enemy_glo_00001,ファントム,ファントム,ー,,,,enemy,アタック,dageki_1,,,00001,1.00,0.50,,,45658,390812.5,catchcopy_character_enemy_glo_00001.png,enemy_icon_enemy_glo_00001,boss_icon_enemy_glo_00001,enemy_glo_00001_normal
+glo,GLOW,00002,enemy_glo_00002,サイリウム持ちファントム,推し活ファントム,ー,,,,enemy,アタック,dageki_1,,,00002,1.17,stop有:1回目 0.6,,,45658,390812.5,catchcopy_character_enemy_glo_00002.png,enemy_icon_enemy_glo_00002,boss_icon_enemy_glo_00002,
+glo,GLOW,00003,enemy_glo_00003,バッターファントム,,,,,,enemy,,,,,,1.57,stop有:1回目 0.68,,,,,,,,
+glo,GLOW,00004,enemy_glo_00004,ピッチャーファントム,,,,,,enemy,,,,,,1.6,stop有:1回目 0.7,,,,,,,,
+glo,GLOW,00005,enemy_glo_00005,野球帽ファントム,,,,,,enemy,,,,,,1.57,stop有:1回目 0.6,-,-,,,,,,
+glo,GLOW,00006,enemy_glo_00006,ジューンブライドファントム,,,,,,enemy,,,,,,1.17,stop有:1回目 0.6,-,-,,,,,,
+glo,GLOW,00007,enemy_glo_00007,黒服ファントム,,,,,,enemy,,,,,,,,,,,,,,,
+glo,GLOW,00101,enemy_glo_00101,中ボスエネミー,ボスファントム,ー,,,,enemy,アタック,-,,,00101,1.17,stop有:1回目 0.56,-,-,45658,390812.5,catchcopy_character_enemy_glo_00101.png,enemy_icon_enemy_glo_00101,boss_icon_enemy_glo_00101,
+glo,GLOW,00901,enemy_glo_00901,宝箱,宝箱,ー,,,無,enemy,アタック,-,,,00901,,,,,45658,390812.5,catchcopy_character_enemy_glo_00901.png,enemy_icon_enemy_glo_00901,boss_icon_enemy_glo_00901,
+,,,,,,,,,無,,アタック,,,,,,,,,,,,,,

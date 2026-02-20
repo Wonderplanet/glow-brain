@@ -1,0 +1,3 @@
+ENABLE,id,destination,destination_path,asset_key,start_at,end_at,sort_order,release_key
+e,34,Gacha,Pickup_Valentine_001,hometop_gacha_glo_00006,"2026-02-10 15:00:00","2026-03-02 10:59:59",5,202602010
+e,35,Pack,,hometop_shop_pack_00021,"2026-02-10 15:00:00","2026-03-02 10:59:59",5,202602010

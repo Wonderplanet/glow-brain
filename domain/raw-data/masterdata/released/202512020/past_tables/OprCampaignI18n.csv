@@ -1,0 +1,6 @@
+ENABLE,release_key,id,opr_campaign_id,language,description
+e,202510020,Campaign1_13_ja,Campaign1_13,ja,"獲得量 <color=#C81919><size=22>2</size><size=17>倍</size></color>"
+e,202511020,BFCampaign1_1_ja,BFCampaign1_1,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,202511020,BFCampaign1_2_ja,BFCampaign1_2,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,202511020,BFCampaign1_3_ja,BFCampaign1_3,ja,"消費量  <color=#C81919><size=22>1/2</size></color>"
+e,202511020,BFCampaign1_4_ja,BFCampaign1_4,ja,"<color=#C81919><size=22>5</size><size=17>回</size></color>にUP中!!"

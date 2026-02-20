@@ -1,0 +1,12 @@
+param,出現トリガー説明,,param,登場内容,,param,歩き出し内容,,param,移動停止,,transformationConditionType,変身条件,,aura_type,内容,,death_type,
+未入力,,,None,ノーマル,,None,なにもなし,,None,なにもなし,,None,なにもなし,,Default,オーラなし,,Normal,通常死亡
+ElapsedTime,時間経過毎,,Fall0,高さ0登場,,ElapsedTime,時間経過歩き出し,,ElapsedTime,時間経過停止,,HpPercentage,HPパーセンテージ,,Boss,通常ボスオーラ（※kindがbossの場合使用なし）,,Escape,撤退
+OutpostDamage,ゲートHPがn値削れたら,,Fall,落下登場,,FoeEnterSameKoma,自分のコマ侵入時,,TargetPosition,特定ポジションまで,,StageTime,バトル開始時間,,AdventBoss1,降臨バトルオーラ1,,,
+OutpostHpPercentage,ゲートHPがn%削れたら,,Fall4,とても高いところから登場,,EnterTargetKoma,指定コマ侵入時,,PassedKomaCount,移動開始してからの移動したコマ数,,,,,AdventBoss2,降臨バトルオーラ2,,,
+InitialSummon,nコマ目に配置指定,,,,,Damage,自身がダメージを受けたら,,,,,,,,AdventBoss3,降臨バトルオーラ3,,,
+EnterTargetKomaIndex,nコマ目にキャラが侵入したら,,,,,DeadFriendUnitCount,ファントムがX体倒されたら,,,,,,,,,,,,
+DarknessKomaCleared,nコマ目の暗闇コマが晴れたら,,,,,,,,,,,,,,,,,,
+FriendUnitDead,sequence_element_id、「n」のエネミーが死んだら,,,,,,,,,,,,,,,,,,
+FriendUnitTransform,sequence_element_id、「n」のエネミーが変身したら,,,,,,,,,,,,,,,,,,
+ElapsedTimeSinceSequenceGroupActivated,sequence_group_id、「n」が活性化したら,,,,,,,,,,,,,,,,,,
+None,,,,,,,,,,,,,,,,,,,

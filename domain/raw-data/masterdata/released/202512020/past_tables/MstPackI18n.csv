@@ -1,0 +1,19 @@
+ENABLE,release_key,id,mst_pack_id,language,name
+e,202509010,start_chara_pack_1_ja,start_chara_pack_1,ja,【お一人様1回まで購入可】\nわくわく アーニャ パック
+e,202509010,start_item_pack_1_ja,start_item_pack_1,ja,【お一人様1回まで購入可】\nスタートダッシュパック
+e,202509010,start_item_pack_2_ja,start_item_pack_2,ja,【お一人様1回まで購入可】\nスタートダッシュジャンブルパック
+e,202509010,event_item_pack_1_ja,event_item_pack_1,ja,【お一人様1回まで購入可】\nいいジャン祭 開催記念パック
+e,202509010,daily_item_pack_1_ja,daily_item_pack_1,ja,【毎日更新】\n強化パック
+e,202510010,event_item_pack_2_ja,event_item_pack_2,ja,【お一人様1回まで購入可】\nいいジャン祭 開催記念パック
+e,202510020,event_item_pack_3_ja,event_item_pack_3,ja,【お一人様1回まで購入可】\nいいジャン祭 開催記念パック
+e,202511010,event_item_pack_4_ja,event_item_pack_4,ja,【お一人様1回まで購入可】\nいいジャン祭 開催記念パック
+e,202511020,event_item_pack_5_ja,event_item_pack_5,ja,【お一人様1回まで購入可】\nいいジャン祭 開催記念パック
+e,202511020,BF_item_pack_1_ja,BF_item_pack_1,ja,【お一人様1回まで購入可】\nBLACK FRIDAY お得パックA
+e,202511020,BF_item_pack_2_ja,BF_item_pack_2,ja,【お一人様1回まで購入可】\nBLACK FRIDAY お得パックB
+e,202511020,BF_item_pack_3_ja,BF_item_pack_3,ja,【お一人様1回まで購入可】\nBLACK FRIDAY お得パックC
+e,202512015,Xmas_item_pack_1_ja,Xmas_item_pack_1,ja,【お一人様1回まで購入可】\nクリスマス お得パックA
+e,202512015,Xmas_item_pack_2_ja,Xmas_item_pack_2,ja,【お一人様1回まで購入可】\nクリスマス お得パックB
+e,202512015,Xmas_item_pack_3_ja,Xmas_item_pack_3,ja,【お一人様1回まで購入可】\nクリスマス お得パックC
+e,202512010,event_item_pack_6_ja,event_item_pack_6,ja,【お一人様1回まで購入可】\nいいジャン祭 開催記念パック
+e,202512010,monthly_item_pack_1_ja,monthly_item_pack_1,ja,【お一人様1回まで購入可】\nお得強化パック
+e,202512015,offer_FreeDiamond150_202512015_ja,offer_FreeDiamond150_202512015,ja,App Store 年末年始プレゼント

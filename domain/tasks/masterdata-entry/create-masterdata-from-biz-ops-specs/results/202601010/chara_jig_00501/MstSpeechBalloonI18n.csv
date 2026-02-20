@@ -1,0 +1,3 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,34,chara_jig_00501,ja,SpecialAttackCharge,Maru,Right,0.5,ただ黙って\n受け入れる\nなんて真っ平,202601010
+e,35,chara_jig_00501,ja,Summon,Maru,Left,1.5,刀には\n人の本性が映る,202601010

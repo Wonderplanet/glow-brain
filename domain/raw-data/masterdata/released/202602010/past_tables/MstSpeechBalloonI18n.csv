@@ -1,0 +1,161 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,1,chara_dan_00001,ja,SpecialAttackCharge,Maru,Right,0.5,全てを\n許すことができる,202509010
+e,2,chara_dan_00001,ja,Summon,Maru,Left,1.5,強くならなきゃ\nもっと強く !!,202509010
+e,4,chara_dan_00002,ja,SpecialAttackCharge,Maru,Right,0.5,これが\nターボババアの力かよ…,202509010
+e,5,chara_dan_00002,ja,Summon,Maru,Left,1.5,萎えるぜ,202509010
+e,7,chara_dan_00101,ja,SpecialAttackCharge,Maru,Right,0.5,やったらあ！,202509010
+e,8,chara_dan_00101,ja,Summon,Maru,Left,1.5,おっしゃあ！\nやったらあ！,202509010
+e,13,chara_dan_00201,ja,SpecialAttackCharge,Maru,Right,0.5,選ばれた存在\nってことなのね !!,202510020
+e,14,chara_dan_00201,ja,Summon,Maru,Left,1.5,私は美少女\nなんだもの !!,202510020
+e,16,chara_dan_00202,ja,SpecialAttackCharge,Maru,Right,0.5,お舞踏\n\n\n\n︵パーティー︶の\n時間ですわ,202510020
+e,17,chara_dan_00202,ja,Summon,Maru,Left,1.5,選ばれた存在\nだったようですね,202510020
+e,19,chara_dan_00301,ja,SpecialAttackCharge,Maru,Right,0.5,ブチ殺したらあ !!,202510020
+e,20,chara_dan_00301,ja,Summon,Maru,Left,1.5,ボキャボキャ\nにするわあ !!,202510020
+e,22,chara_gom_00001,ja,SpecialAttackCharge,Maru,Left,0.5,この“拷問”\nもらった！,202509010
+e,23,chara_gom_00001,ja,Summon,Maru,Left,1.5,エクス…\n私は大丈夫だ,202509010
+e,25,chara_gom_00101,ja,SpecialAttackCharge,Maru,Right,0.5,それでは・・・,202509010
+e,26,chara_gom_00101,ja,Summon,Maru,Left,1.5,全力で\nいかせて頂きます,202509010
+e,28,chara_gom_00201,ja,SpecialAttackCharge,Maru,Right,0.5,これには\n耐えれるかな☆,202509010
+e,29,chara_gom_00201,ja,Summon,Maru,Left,1.5,さっさと\n話すことですね,202509010
+e,31,chara_jig_00001,ja,SpecialAttackCharge,Maru,Right,0.5,今は考えるな\nただ殺せ,202509010
+e,32,chara_jig_00001,ja,Summon,Maru,Left,1.5,殺しに来るなら\n殺すよ,202509010
+e,34,chara_jig_00101,ja,SpecialAttackCharge,Maru,Right,0.5,ただ黙って\n受け入れる\nなんて真っ平,202509010
+e,35,chara_jig_00101,ja,Summon,Maru,Left,1.5,刀には\n人の本性が映る,202509010
+e,37,chara_jig_00201,ja,SpecialAttackCharge,Maru,Right,0.5,やりたい事は\nやらなくちゃ,202509010
+e,38,chara_jig_00201,ja,Summon,Maru,Left,1.5,私の人生を\n邪魔する奴は\nブッ殺す！,202509010
+e,40,chara_jig_00301,ja,SpecialAttackCharge,Maru,Right,0.5,僕も…\n仕事なので,202509010
+e,41,chara_jig_00301,ja,Summon,Maru,Left,1.5,皆で情報\n整理しませんか？,202509010
+e,43,chara_sur_00001,ja,SpecialAttackCharge,Maru,Right,0.5,かっこつけ\nたかったんだよ,202509010
+e,44,chara_sur_00001,ja,Summon,Maru,Left,1.5,頑張り甲斐が\nあるってもんだ！,202509010
+e,46,chara_sur_00101,ja,SpecialAttackCharge,Maru,Right,0.5,速やかに潰す,202509010
+e,47,chara_sur_00101,ja,Summon,Maru,Left,1.5,我らも征くぞ,202509010
+e,49,chara_sur_00201,ja,SpecialAttackCharge,Maru,Right,0.5,お前は\n自分が倒す！,202509010
+e,50,chara_sur_00201,ja,Summon,Maru,Left,1.5,逆らうん\nじゃないわよ！,202509010
+e,52,chara_sur_00301,ja,SpecialAttackCharge,Maru,Right,0.5,盛り上がって\nきたねー,202509010
+e,53,chara_sur_00301,ja,Summon,Maru,Left,1.5,かっこいい所を\n見せないとね,202509010
+e,55,chara_sur_00401,ja,SpecialAttackCharge,Maru,Right,0.5,安心してください,202509010
+e,56,chara_sur_00401,ja,Summon,Maru,Left,1.5,応援たくさん\n頑張ります,202509010
+e,58,chara_kai_00001,ja,SpecialAttackCharge,Maru,Right,0.5,日比野カフカ\n出ます！,202509010
+e,59,chara_kai_00001,ja,Summon,Maru,Left,1.5,俺たちも行くぞ！,202509010
+e,61,chara_kai_00002,ja,SpecialAttackCharge,Maru,Right,0.5,安心して休んでろ,202509010
+e,62,chara_kai_00002,ja,Summon,Maru,Left,1.5,１発で解体するぜ,202509010
+e,64,chara_kai_00101,ja,SpecialAttackCharge,Maru,Right,0.5,行ってください,202509010
+e,65,chara_kai_00101,ja,Summon,Maru,Left,1.5,フォローします,202509010
+e,67,chara_kai_00301,ja,SpecialAttackCharge,Maru,Right,0.5,これ以上好き勝手\nさせないわよ,202509010
+e,68,chara_kai_00301,ja,Summon,Maru,Left,1.5,吠え面\nかかせてやるわ！,202509010
+e,70,chara_kai_00201,ja,SpecialAttackCharge,Maru,Right,0.5,カフカくん\nこれが今の私,202509010
+e,71,chara_kai_00201,ja,Summon,Maru,Left,1.5,皆\nよく耐えてくれた,202509010
+e,73,chara_kai_00401,ja,SpecialAttackCharge,Maru,Right,0.5,討伐する,202509010
+e,74,chara_kai_00401,ja,Summon,Maru,Left,1.5,怪獣退治の時間や,202509010
+e,76,chara_kai_00501,ja,SpecialAttackCharge,Maru,Right,0.5,愚か者め,202509010
+e,77,chara_kai_00501,ja,Summon,Maru,Left,1.5,処理を開始する,202509010
+e,79,chara_kai_00601,ja,SpecialAttackCharge,Maru,Right,0.5,お前が俺を\n守るんじゃねぇ,202509010
+e,80,chara_kai_00601,ja,Summon,Maru,Left,1.5,腹くくる\nしかねーな,202509010
+e,82,chara_dos_00001,ja,SpecialAttackCharge,Maru,Right,0.5,明日休み\nなんだし\nいいしょ？,202509010
+e,83,chara_dos_00001,ja,Summon,Maru,Left,1.5,ウチが一緒に\n行ったげる♪,202509010
+e,85,chara_dos_00101,ja,SpecialAttackCharge,Maru,Right,0.5,私決めたよ,202509010
+e,86,chara_dos_00101,ja,Summon,Maru,Left,1.5,師匠と呼べよ〜,202509010
+e,88,chara_chi_00001,ja,SpecialAttackCharge,Maru,Right,0.5,俺は！男と！\n喧嘩する！時ゃ！,202509010
+e,89,chara_chi_00001,ja,Summon,Maru,Left,1.5,俺がぶっ殺して\nやるぜ\n!!,202509010
+e,91,chara_chi_00002,ja,SpecialAttackCharge,Maru,Right,0.5,悪いヤツぁ\n好きだぜー？,202509010
+e,92,chara_chi_00002,ja,Summon,Maru,Right,1.5,食っちまうぞ！,202509010
+e,94,chara_chi_00201,ja,SpecialAttackCharge,Maru,Right,0.5,悪魔は全部殺す,202509010
+e,95,chara_chi_00201,ja,Summon,Maru,Left,1.5,お前らに\n人権はない…！,202509010
+e,97,chara_chi_00301,ja,SpecialAttackCharge,Maru,Right,0.5,ワシは血に\n飢えてるぞ！,202509010
+e,98,chara_chi_00301,ja,Summon,Maru,Left,1.5,バトルじゃ！,202509010
+e,100,chara_sum_00001,ja,SpecialAttackCharge,Maru,Right,0.5,落ち着け…,202509010
+e,101,chara_sum_00001,ja,Summon,Maru,Left,1.5,まかしとけっ！,202509010
+e,103,chara_sum_00101,ja,SpecialAttackCharge,Maru,Right,0.5,みんなによろしく\n言うといて！,202509010
+e,104,chara_sum_00101,ja,Summon,Maru,Left,1.5,私って何なん…,202509010
+e,106,chara_sum_00201,ja,SpecialAttackCharge,Maru,Right,0.5,おおーーい !!,202509010
+e,107,chara_sum_00201,ja,Summon,Maru,Left,1.5,長旅お疲れ\nさまあああ〜〜〜,202509010
+e,109,chara_tak_00001,ja,SpecialAttackCharge,Maru,Right,0.5,今日の\nハッピー道具は…,202509010
+e,110,chara_tak_00001,ja,Summon,Maru,Left,1.5,今日の道具は\nすごいっピ！,202509010
+e,112,chara_rik_00001,ja,SpecialAttackCharge,Maru,Right,0.5,アーイ！,202509010
+e,113,chara_rik_00001,ja,Summon,Maru,Left,1.5,ぼくリコピン！,202509010
+e,116,chara_rik_00101,ja,Summon,Maru,Left,1.5,これは夢？,202509010
+e,118,chara_aka_00101,ja,SpecialAttackCharge,Maru,Right,0.5,うちは\nラーメン屋なんで…,202509010
+e,119,chara_aka_00101,ja,Summon,Maru,Left,1.5,おとといきやがれ,202509010
+e,121,chara_aka_00001,ja,SpecialAttackCharge,Maru,Right,0.5,子猫じゃないん\nだからー,202509010
+e,122,chara_aka_00001,ja,Summon,Maru,Left,1.5,にゃー !!,202509010
+e,124,chara_spy_00101,ja,SpecialAttackCharge,Maru,Right,0.5,すべてはよりよき\n世界のために,202509010
+e,125,chara_spy_00101,ja,Summon,Maru,Left,1.5,この正体を\n隠し通さねば…！,202509010
+e,127,chara_spy_00001,ja,SpecialAttackCharge,Maru,Right,0.5,せいふくできた？,202509010
+e,128,chara_spy_00001,ja,Summon,Maru,Left,1.5,おでけけ　　　　おでけけ♪,202509010
+e,130,chara_spy_00201,ja,SpecialAttackCharge,Maru,Right,0.5,私の\n平穏はいらない,202509010
+e,131,chara_spy_00201,ja,Summon,Maru,Left,1.5,容赦\nいたしません !!,202509010
+e,133,chara_spy_00301,ja,SpecialAttackCharge,Maru,Right,0.5,何だ\n大したことないな,202510010
+e,134,chara_spy_00301,ja,Summon,Maru,Left,1.5,気安くしゃべり\nかけんな！,202510010
+e,136,chara_spy_00401,ja,SpecialAttackCharge,Maru,Right,0.5,情報屋をなめるなよ… !!,202510010
+e,137,chara_spy_00401,ja,Summon,Maru,Left,1.5,オレに任せろ,202510010
+e,139,chara_spy_00501,ja,SpecialAttackCharge,Maru,Right,0.5,姉さん姉さん\n姉さん姉さん,202510010
+e,140,chara_spy_00501,ja,Summon,Maru,Left,1.5,姉さんに折られたアバラが疼く…！,202510010
+e,142,chara_mag_00001,ja,SpecialAttackCharge,Maru,Right,0.5,パターンA展開\n対象直線距離,202509010
+e,143,chara_mag_00001,ja,Summon,Maru,Left,1.5,やるなら…\n私しかいない…\n!!,202509010
+e,145,chara_mag_00101,ja,SpecialAttackCharge,Maru,Right,0.5,すぐ戻っから,202509010
+e,146,chara_mag_00101,ja,Summon,Maru,Left,1.5,お仕事\n行きますか！,202509010
+e,148,chara_ron_00001,ja,SpecialAttackCharge,Maru,Right,0.5,絶対に僕から\n目をはなすな,202509010
+e,149,chara_ron_00001,ja,Summon,Maru,Left,1.5,さぁ\nトト出発だ !!,202509010
+e,151,chara_ron_00101,ja,SpecialAttackCharge,Maru,Right,0.5,ダメだ !!,202509010
+e,152,chara_ron_00101,ja,Summon,Maru,Left,1.5,まだ\nオレできます！,202509010
+e,154,chara_yuw_00001,ja,SpecialAttackCharge,Maru,Right,0.5,そんなリリエルに\n憧れてっ…,202509010
+e,155,chara_yuw_00001,ja,Summon,Maru,Left,1.5,一緒に\n撮影しませんか？,202509010
+e,157,chara_yuw_00101,ja,SpecialAttackCharge,Maru,Right,0.5,変わらなきゃ…,202509010
+e,158,chara_yuw_00101,ja,Summon,Maru,Left,1.5,せんぱいっ♡,202509010
+e,160,chara_bat_00001,ja,SpecialAttackCharge,Maru,Right,0.5,全力投球,202509010
+e,161,chara_bat_00001,ja,Summon,Maru,Left,1.5,早くかまえろ,202509010
+e,163,chara_bat_00101,ja,SpecialAttackCharge,Maru,Right,0.5,俺は俺を\n超えてみせる,202509010
+e,164,chara_bat_00101,ja,Summon,Maru,Left,1.5,もっと自信\n持っていこうぜ,202509010
+e,166,chara_aha_00001,ja,SpecialAttackCharge,Maru,Right,0.5,横入りして\nすまない,202509010
+e,167,chara_aha_00001,ja,Summon,Maru,Left,1.5,おはよう,202509010
+e,169,chara_aha_00101,ja,SpecialAttackCharge,Maru,Right,0.5,はい,202509010
+e,170,chara_aha_00101,ja,Summon,Maru,Left,1.5,メーデー\nメーデー,202509010
+e,172,chara_mag_00201,ja,SpecialAttackCharge,Maru,Right,0.5,テーブル展開,202511010
+e,173,chara_mag_00201,ja,Summon,Maru,Left,1.5,挨拶は\n省略致します,202511010
+e,174,chara_mag_00301,ja,SpecialAttackCharge,Maru,Right,0.5,大丈夫　そんなに\n慌てないで,202511010
+e,175,chara_mag_00301,ja,Summon,Maru,Left,1.5,ただ今より\n業務に当たります,202511010
+e,176,chara_mag_00401,ja,SpecialAttackCharge,Maru,Right,0.5,私が行きます,202511010
+e,177,chara_mag_00401,ja,Summon,Maru,Left,1.5,大丈夫です\nお任せあれ !!,202511010
+e,178,chara_mag_00501,ja,SpecialAttackCharge,Maru,Right,0.5,そこまで見えれば\n上出来だ,202511010
+e,179,chara_mag_00501,ja,Summon,Maru,Left,1.5,俺がすべて責任を取る,202511010
+e,180,chara_yuw_00201,ja,SpecialAttackCharge,Maru,Right,0.5,味方に決まってる\nじゃない…,202511020
+e,181,chara_yuw_00201,ja,Summon,Maru,Left,1.5,やるなら\n一番だ !!,202511020
+e,182,chara_yuw_00301,ja,SpecialAttackCharge,Maru,Right,0.5,私は違う\n誰かになれる,202511020
+e,183,chara_yuw_00301,ja,Summon,Maru,Left,1.5,友達を\n作るんだ！！,202511020
+e,184,chara_yuw_00401,ja,SpecialAttackCharge,Maru,Right,0.5,大好きだって\n伝えたい,202511020
+e,185,chara_yuw_00401,ja,Summon,Maru,Left,1.5,ウチは\nちょー元気 !!,202511020
+e,186,chara_yuw_00501,ja,SpecialAttackCharge,Maru,Right,0.5,考えてみて？,202511020
+e,187,chara_yuw_00501,ja,Summon,Maru,Left,1.5,一番のコスプレを\n見せてあげる！！,202511020
+e,188,chara_yuw_00601,ja,SpecialAttackCharge,Maru,Right,0.5,ここから先は\n俺の話だ,202511020
+e,189,chara_yuw_00601,ja,Summon,Maru,Left,1.5,そういう事なら\n任せておけ,202511020
+e,190,chara_sur_00501,ja,SpecialAttackCharge,Maru,Right,0.5,位置バッチリ,202512010
+e,191,chara_sur_00501,ja,Summon,Maru,Left,1.5,ノルマは六番組の\n完勝で行こ,202512010
+e,192,chara_sur_00601,ja,SpecialAttackCharge,Maru,Right,0.5,偉大な姉の指示に\n従うのじゃ,202512010
+e,193,chara_sur_00601,ja,Summon,Maru,Left,1.5,六番組に任せい！,202512010
+e,194,chara_sur_00701,ja,SpecialAttackCharge,Maru,Right,0.5,優希は千兆点の\nイケメンよ !!,202512010
+e,195,chara_sur_00701,ja,Summon,Maru,Left,1.5,さー\n\n\n\n\n\nやろっか,202512010
+e,196,chara_sur_00801,ja,SpecialAttackCharge,Maru,Right,0.5,ぶっ潰す !!,202512010
+e,197,chara_sur_00801,ja,Summon,Maru,Left,1.5,行かせるかよ！,202512010
+e,199,chara_osh_00001,ja,Summon,Maru,Left,1.5,　私は誰かを\n　愛したい,202512020
+e,200,chara_osh_00101,ja,SpecialAttackCharge,Maru,Right,0.5,滅茶苦茶やって\n帰るか,202512020
+e,201,chara_osh_00101,ja,Summon,Maru,Left,1.5,やりようは\nありそうだな,202512020
+e,202,chara_osh_00201,ja,SpecialAttackCharge,Maru,Right,0.5,だって憧れは\n止められない,202512020
+e,203,chara_osh_00201,ja,Summon,Maru,Left,1.5,私がんばる,202512020
+e,204,chara_osh_00301,ja,SpecialAttackCharge,Maru,Right,0.5,バズらせのプロ\nなんだけどぉ？,202512020
+e,205,chara_osh_00301,ja,Summon,Maru,Left,1.5,ここは年の功\nなのかなぁ,202512020
+e,206,chara_osh_00401,ja,SpecialAttackCharge,Maru,Right,0.5,アンタの\n\n\n\n推しの子に\nなってやる,202512020
+e,207,chara_osh_00401,ja,Summon,Maru,Left,1.5,私が\n\n\n\nなんとかする,202512020
+e,208,chara_osh_00601,ja,SpecialAttackCharge,Maru,Right,0.5,ボク年収1億ダヨ,202512020
+e,209,chara_osh_00601,ja,Summon,Maru,Left,1.5,オマカセ！,202512020
+e,210,chara_yuw_00102,ja,SpecialAttackCharge,Maru,Right,0.5,せんぱ〜い♡,202512015
+e,211,chara_yuw_00102,ja,Summon,Maru,Left,1.5,先輩の予定は？,202512015
+e,212,chara_osh_00501,ja,SpecialAttackCharge,Maru,Right,0.5,今は負けない,202512020
+e,213,chara_osh_00501,ja,Summon,Maru,Left,1.5,頑張らなきゃ,202512020
+e,214,chara_jig_00701,ja,SpecialAttackCharge,Maru,Right,0.5,タオ…\n\n\n\nツヨイヨワイ,202601010
+e,215,chara_jig_00701,ja,Summon,Maru,Left,1.5,島…出テ\n\n\n\n普通ニ暮ラシタイ,202601010
+e,216,chara_jig_00401,ja,SpecialAttackCharge,Maru,Right,0.5,オレはオレの\nやりたいように\nやる !!,202601010
+e,217,chara_jig_00401,ja,Summon,Maru,Left,1.5,化物だ 、殺す,202601010
+e,218,chara_jig_00601,ja,SpecialAttackCharge,Maru,Right,0.5,無罪など本当の\n目的じゃねえ,202601010
+e,219,chara_jig_00601,ja,Summon,Maru,Left,1.5,俺に退治させろ,202601010
+e,220,chara_jig_00501,ja,SpecialAttackCharge,Maru,Right,0.5,ずっと変わらない\n関係など\n\n\n\n不要だ,202601010
+e,221,chara_jig_00501,ja,Summon,Maru,Left,1.5,助けに\n\n\n\n来ましたよっ,202601010
