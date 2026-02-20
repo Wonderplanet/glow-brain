@@ -5,7 +5,20 @@
 全ての検証を実行して統合レポートを生成します。
 
 使用方法:
+    # sheet_schemaモード（デフォルト）: sheet_schemaテンプレートとの比較
     python validate_all.py --csv <CSVファイルパス>
+
+    # masterdataモード: 既存の実マスタデータCSVとの比較・自動修正
+    python validate_all.py --csv <CSVファイルパス> --mode masterdata
+
+    # masterdataモードで参照CSVを明示指定
+    python validate_all.py \
+        --csv <CSVファイルパス> \
+        --mode masterdata \
+        --reference-csv projects/glow-masterdata/MstAbility.csv
+
+    # masterdataモードでdry-run（修正内容のみ確認）
+    python validate_all.py --csv <CSVファイルパス> --mode masterdata --dry-run
 """
 
 import sys
@@ -13,7 +26,7 @@ import argparse
 import json
 import subprocess
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Optional
 
 
 def run_validation_script(script_path: str, args: List[str]) -> Dict[str, Any]:
@@ -55,9 +68,11 @@ def run_validation_script(script_path: str, args: List[str]) -> Dict[str, Any]:
         }
 
 
-def validate_all(csv_path: str) -> Dict[str, Any]:
+def validate_all_sheet_schema(csv_path: str) -> Dict[str, Any]:
     """
-    統合検証を実行
+    sheet_schemaモードの統合検証（既存の動作）
+
+    sheet_schema/*.csv（スキーマ定義テンプレート）との比較検証を実行します。
 
     Args:
         csv_path: CSVファイルのパス
@@ -84,6 +99,7 @@ def validate_all(csv_path: str) -> Dict[str, Any]:
 
     results = {
         "file": csv_filename,
+        "mode": "sheet_schema",
         "validations": {},
         "summary": {
             "total_issues": 0,
@@ -162,6 +178,76 @@ def validate_all(csv_path: str) -> Dict[str, Any]:
     return results
 
 
+def validate_all_masterdata(
+    csv_path: str,
+    reference_csv: Optional[str] = None,
+    dry_run: bool = False
+) -> Dict[str, Any]:
+    """
+    masterdataモードの統合検証
+
+    既存の実マスタデータCSVとの比較・自動修正を実行します。
+
+    Args:
+        csv_path: 検証対象CSVファイルのパス
+        reference_csv: 参照CSVのパス（省略時は自動推測）
+        dry_run: Trueの場合は修正内容のみ出力（CSVは書き換えない）
+
+    Returns:
+        result: 統合検証結果
+    """
+    if not Path(csv_path).exists():
+        return {
+            "file": Path(csv_path).name,
+            "mode": "masterdata",
+            "valid": False,
+            "error": f"CSVファイルが見つかりません: {csv_path}"
+        }
+
+    # スクリプトディレクトリ
+    script_dir = Path(__file__).parent
+
+    print(f"🔍 masterdataモード検証中...", file=sys.stderr)
+
+    # validate_masterdata.py に渡す引数を構築
+    masterdata_args = ['--csv', csv_path]
+    if reference_csv:
+        masterdata_args.extend(['--reference-csv', reference_csv])
+    if dry_run:
+        masterdata_args.append('--dry-run')
+
+    masterdata_result = run_validation_script(
+        str(script_dir / 'validate_masterdata.py'),
+        masterdata_args
+    )
+
+    return masterdata_result
+
+
+def validate_all(
+    csv_path: str,
+    mode: str = 'sheet_schema',
+    reference_csv: Optional[str] = None,
+    dry_run: bool = False
+) -> Dict[str, Any]:
+    """
+    統合検証を実行（モードに応じて処理分岐）
+
+    Args:
+        csv_path: CSVファイルのパス
+        mode: 'sheet_schema' または 'masterdata'
+        reference_csv: 参照CSVのパス（masterdataモード時に使用）
+        dry_run: masterdataモード時のdry-runフラグ
+
+    Returns:
+        result: 統合検証結果
+    """
+    if mode == 'masterdata':
+        return validate_all_masterdata(csv_path, reference_csv, dry_run)
+    else:
+        return validate_all_sheet_schema(csv_path)
+
+
 def main():
     parser = argparse.ArgumentParser(
         description='マスタデータCSVの統合検証'
@@ -171,11 +257,31 @@ def main():
         required=True,
         help='CSVファイルのパス'
     )
+    parser.add_argument(
+        '--mode',
+        choices=['sheet_schema', 'masterdata'],
+        default='sheet_schema',
+        help='検証モード: sheet_schema（デフォルト）または masterdata'
+    )
+    parser.add_argument(
+        '--reference-csv',
+        help='参照CSVのパス（masterdataモード時。省略時はファイル名から自動推測）'
+    )
+    parser.add_argument(
+        '--dry-run',
+        action='store_true',
+        help='masterdataモード: 修正内容をレポートのみ出力してCSVは書き換えない'
+    )
 
     args = parser.parse_args()
 
     # 検証実行
-    result = validate_all(args.csv)
+    result = validate_all(
+        args.csv,
+        mode=args.mode,
+        reference_csv=args.reference_csv,
+        dry_run=args.dry_run
+    )
 
     # JSON出力
     print(json.dumps(result, ensure_ascii=False, indent=2))
