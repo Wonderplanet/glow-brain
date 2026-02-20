@@ -1,0 +1,2 @@
+ENABLE,id,mst_quest_id,mst_in_game_id,stage_number,recommended_level,cost_stamina,exp,coin,prev_mst_stage_id,mst_stage_tips_group_id,auto_lap_type,max_auto_lap_count,sort_order,asset_key,mst_stage_limit_status_id,release_key,mst_artwork_fragment_drop_group_id,start_at,end_at
+e,normal_you_00001,quest_main_you_normal_1,normal_you_00001,1,5,10,100,100,,1,AfterClear,5,229,you_normal_01,,999999999,you_a_0001,2026-03-25 12:00:00,2030-01-01 00:00:00
