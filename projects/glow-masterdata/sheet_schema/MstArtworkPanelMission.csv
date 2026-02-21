@@ -1,0 +1,3 @@
+memo
+TABLE,MstArtworkPanelMission,MstArtworkPanelMission,MstArtworkPanelMission,MstArtworkPanelMission,MstArtworkPanelMission,MstArtworkPanelMission,MstArtworkPanelMission
+ENABLE,id,release_key,mst_artwork_id,mst_event_id,initial_open_mst_artwork_fragment_id,start_at,end_at

@@ -1,0 +1,463 @@
+enum:
+  - name: ServerErrorCode
+    params:
+      - name: ValidationError
+        number: 2
+      # アクセストークンの検証に失敗
+      - name: InvalidAccessToken
+        number: 3
+      # IDトークンの検証に失敗
+      - name: InvalidIdToken
+        number: 4
+      # データ連携の認証に失敗
+      - name: DeviceLinkAuthFailed
+        number: 5
+      # ユーザー作成に失敗（UUIDの重複？）
+      - name: UserCreateFailed
+        number: 6
+      # ユーザーが見つからない（アカウント削除済み？）
+      - name: UserNotFound
+        number: 7
+      # ユニットが見つからない
+      - name: UnitNotFound
+        number: 8
+      # 消費リソース不足
+      - name: LackOfResources
+        number: 9
+      # マスターデータがが見つからない
+      - name: MstNotFound
+        number: 10
+      # ユニットのレベルが十分でない
+      - name: UnitInsufficientLevel
+        number: 11
+      # 重複登録
+      - name: DuplicateEntry
+        number: 12
+      # 想定外の値を使用
+      - name: InvalidParameter
+        number: 13
+      # 抽選結果がない
+      - name: NoLotteryResult
+        number: 14
+      # 名前のクール時間中
+      - name: ChangeNameCoolTime
+        number: 15
+      # NGワードが使用されている
+      - name: NgWord
+        number: 16
+      # バイト数チェック（半角で18文字、全角で9文字が最大）
+      - name: PlayerNameOverByte
+        number: 17
+      # 頭文字にスペースが使われている（左が半角スペース、右が全角スペース）
+      - name: PlayerNameSpaceFirst
+        number: 18
+      # 対象のアバターを所持していない
+      - name: AvatarNotFound
+        number: 19
+      # 不明なプラットフォームだった
+      - name: InvalidPlatform
+        number: 20
+      # ユーザーの生年月日が既に登録されている
+      - name: UserBirthdateAlreadyRegistered
+        number: 21
+      # ユーザーの生年月日が未登録
+      - name: UserBirthdateNotRegistered
+        number: 22
+      # デバイスが見つからない
+      - name: DeviceNotFound
+        number: 23
+      # 同一アカウントに対して複数端末のログインが検出された
+      - name: MultipleDeviceLoginDetected
+        number: 24
+
+      # 広告商品購入時に指定されたIDが広告商品のものではない
+      - name: ShopCostTypeNotAd
+        number: 201
+      # 購入上限に達している商品を購入しようとした
+      - name: ShopTradeCountLimit
+        number: 202
+      # 未開放の条件パックを購入しようとした
+      - name: ShopConditionPackNotReleased
+        number: 203
+      # 期限切れの条件パックを購入しようとした
+      - name: ShopConditionPackExpired
+        number: 204
+      # 有効期限内のパスを購入しようとした
+      - name: ShopPassNotExpired
+        number: 205
+
+      # 報酬が受け取れない
+      - name: IdleIncentiveCannotReceiveReward
+        number: 301
+      # クイック探索の実行制限回数を超えている
+      - name: IdleIncentiveQuickReceiveCountLimit
+        number: 302
+
+      # ステージに挑戦していない
+      - name: StageNotStart
+        number: 1001
+      # ステージのマスタデータが存在しない
+      - name: StageNotFound
+        number: 1002
+      # ステージに挑戦できない
+      - name: StageCannotStart
+        number: 1003
+      # ステージ宝箱を受け取れない
+      - name: StageCannotReceiveTreasure
+        number: 1004
+      # ステージのコンティニュー上限を超えている
+      - name: StageContinueLimit
+        number: 1005
+      - name: QuestPeriodOutside
+        number: 1006
+      - name: EventPeriodOutside
+        number: 1007
+      - name: StageEventPeriodOutside
+        number: 1008
+      - name: QuestTypeNotFound
+        number: 1009
+      - name: StageEventPeriodDuplicate
+        number: 1010
+      # パーティがルールに適してない
+      - name: StageEventPartyViolationRule
+        number: 1011
+      # コンティニューできないステージ
+      - name: StageCanNotContinue
+        number: 1012
+      
+      # アイテム未所持
+      - name: ItemNotOwned
+        number: 2001
+      - name: ItemAmountIsNotEnough
+        number: 2002
+      # アイテムの交換上限に達していて、交換不可
+      - name: ItemTradeAmountLimitExceeded
+        number: 2003
+
+      # 広告制限でガシャが引けない(回数制限やインターバル中)
+      - name: GachaCannotAdLimitDraw
+        number: 3001
+      # 広告制限でガシャが引けない(回数制限やインターバル中)
+      - name: GachaCannotAdIntervalDraw
+        number: 3002
+      # ガシャ排出物に想定外のリソースが含まれている
+      - name: GachaNotExpectedResourceType
+        number: 3003
+      # 抽選BOXの中身が空
+      - name: GachaBoxIsEmpty
+        number: 3004
+      # 許可されてないガシャ実行の仕方
+      - name: GachaTypeUnexpected
+        number: 3005
+      # 不正なコストによる引き方
+      - name: GachaUnjustCosts
+        number: 3006
+      # ガシャ実行回数が上限
+      - name: GachaPlayLimit
+        number: 3007
+      # ガシャの既に引いている数がクライアントと違う
+      - name: GachaDrewCountDifferent
+        number: 3008
+      # 想定外のコスト消費
+      - name: GachaNotExpectedCost
+        number: 3009
+      # リクエストされたN連数が不正値
+      - name: GachaNotExpectedPlayNum
+        number: 3010
+      # N時間開放ガシャの有効期限が切れている
+      - name: GachaExpired
+        number: 3011
+
+      # スタミナ購入の回数制限
+      - name: UserBuyStaminaCountLimit
+        number: 4001
+      # 広告視聴スタミナ購入の広告視聴インターバル中
+      - name: UserBuyStaminaAdDuringInterval
+        number: 4002
+      # スタミナが最大のためスタミナを購入できない
+      - name: UserStaminaFull
+        number: 4003
+      # スタミナ購入によりシステム上限を超える
+      - name: UserStaminaExceedsLimit
+        number: 4004
+      # エンブレムを所持していない
+      - name: EmblemNotOwned
+        number: 4005
+      # BNIDアクセストークン取得APIエラー
+      - name: UserBnidAccessTokenApiError
+        number: 4006
+      # BNIDと連携していない
+      - name: UserBnidNotLinked
+        number: 4007
+      # 連携先アカウントのアカウント連携制限中
+      - name: UserBnidLinkLimit
+        number: 4008
+      # BNIDが他のアカウントと連携済み
+      - name: UserBnidLinkedOtherUser
+        number: 4009
+      # 自身のアカウントのアカウント連携制限中
+      - name: UserBnidLinkLimitMyAccount
+        number: 4010
+      
+      # ユニットを既に所持している
+      - name: UnitAlreadyOwned
+        number: 5001
+      # レベルリセットができない
+      - name: UnitCannotResetLevel
+        number: 5002
+      # レベルの値が不正
+      - name: UnitLevelUpInvalidLevel
+        number: 5003
+      # レベルが上限を超えている
+      - name: UnitLevelUpExceedLimitLevel
+        number: 5004
+      
+      # 無料購入ができないコイン商品
+      - name: ShopCoinProductIsNotFree
+        number: 6001
+      # コイン購入の回数制限
+      - name: ShopBuyCoinCountLimit
+        number: 6002
+      
+      # ユニット数が異常
+      - name: PartyInvalidUnitCount
+        number: 7001
+      # パーティNOが異常
+      - name: PartyInvalidPartyNo
+        number: 7002
+      # ユニットIDの重複
+      - name: PartyDuplicateUnitId
+        number: 7003
+      # ユニットIDが不正
+      - name: PartyInvalidUnitId
+        number: 7004
+      # パーティ名が不正
+      - name: PartyInvalidPartyName
+        number: 7005
+
+      # ミッションの報酬の受取ができない
+      - name: MissionCannotReceiveReward
+        number: 8001
+      # ミッションのクリアができない
+      - name: MissionCannotClear
+        number: 8002
+      # イベント期間外でミッション報酬の受取ができない
+      - name: MissionCannotReceiveOutPeriodEvent
+        number: 8003
+      # 期間外で期間限定ミッション報酬の受取ができない
+      - name: MissionCannotReceiveOutPeriodLimitedTerm
+        number: 8004
+
+      # 原画を所持していない
+      - name: ArtworkNotOwned
+        number: 9001
+      # ゲートを所持していない
+      - name: OutpostNotOwned
+        number: 9002
+
+      - name: EncyclopediaNotReachedEncyclopediaRank
+        number: 9501
+      - name: EncyclopediaRewardReceived
+        number: 9502
+
+      # allowanceで購入不可
+      - name: BillingAllowanceFailed
+        number: 10001
+      # レシート検証/購入不可の商品を買ってしまった
+      - name: BillingVerifyReceiptFailed
+        number: 10002
+      # レシート検証/不正レシート
+      - name: BillingVerifyReceiptInvalidReceipt
+        number: 10003
+      # 処理済みの重複レシート
+      - name: BillingVerifyReceiptDuplicateReceipt
+        number: 10004
+
+      # ショップ情報レコードが存在していない
+      - name: BillingShopInfoNotFound
+        number: 11001
+      # 使用できない環境
+      - name: BillingInvalidEnvironment
+        number: 11002
+      # 未対応の課金プラットフォーム
+      - name: BillingUnsupportedBillingPlatform
+        number: 11003
+      # 許可レコード(allowance)が不正
+      - name: BillingInvalidAllowance
+        number: 11004
+      # allowanceとOprProductが不整合
+      - name: BillingAllowanceAndOprProductNotMatch
+        number: 11005
+      # allowanceとMstStoreProductが不整合
+      - name: BillingAllowanceAndMstStoreProductNotMatch
+        number: 11006
+      # AppStoreからの応答ステータスがOKではない(AppStoreのみ)
+      - name: BillingAppstoreResponseStatusNotOk
+        number: 11007
+      # AppStoreのバンドルIDが一致しない(AppStoreのみ)
+      - name: BillingAppstoreBundleIdNotMatch
+        number: 11008
+      # 設定からbunndle_idが取得できない(AppStoreのみ)
+      - name: BillingAppstoreBundleIdNotSet
+        number: 11009
+      # 購入キャンセルステータスのレシートだった(GooglePlayのみ)
+      - name: BillingGoogleplayReceiptStatusCanceled
+        number: 11010
+      # 購入ペンディングステータスのレシートだった(GooglePlayのみ)
+      - name: BillingGoogleplayReceiptStatusPending
+        number: 11011
+      # その他、正常ではないステータスだった(GooglePlayのみ)
+      - name: BillingGoogleplayReceiptStatusOther
+        number: 11012
+      # 未成年の購入限度額超過エラー
+      - name: BillingUnderagePurchaseLimitExceeded
+        number: 11013
+      # 購入トランザクション終了用購入上限
+      - name: BillingTransactionEndPurchaseLimit
+        number: 11014
+      # 購入トランザクション終了
+      - name: BillingTransactionEnd
+        number: 11015
+      # その他、想定していないエラー
+      - name: BillingUnknownError
+        number: 11999
+
+      # 有償一次通貨が不足している
+      - name: CurrencyNotEnoughPaidCurrency
+        number: 12001
+      # 一次通貨が不足している
+      - name: CurrencyNotEnoughCurrency
+        number: 12002
+      # 二次通貨が不足している(廃止予定)
+      - name: CurrencyNotEnoughCash
+        number: 12003
+      # 無償一次通貨情報が存在しない
+      - name: CurrencyNotFoundFreeCurrency
+        number: 12004
+      # 通貨管理情報(usr_currency_summary)が存在しない
+      - name: CurrencyNotFoundCurrencySummary
+        number: 12005
+      # 有償一次通貨登録時の数量が0以下
+      - name: CurrencyFailedToAddPaidCurrencyByZero
+        number: 12006
+      # 一次通貨の所持数が上限を超えていて付与できない
+      - name: CurrencyAddCurrencyByOverMax
+        number: 12007
+      # デバッグ機能が使用できない環境
+      - name: CurrencyInvalidDebugEnvironment
+        number: 12008
+      # 想定していない課金プラットフォームが指定されたエラー
+      - name: CurrencyUnknownBillingPlatform
+        number: 12009
+      # 有償一次通貨の所持数が上限を超えていて付与できない
+      - name: CurrencyAddPaidCurrencyByOverMax
+        number: 12010
+      # 無償一次通貨の所持数が上限を超えていて付与できない
+      - name: CurrencyAddFreeCurrencyByOverMax
+        number: 12011
+      # その他、想定していないエラー
+      - name: CurrencyUnknownError
+        number: 12999
+      
+      # メッセージ既読日時更新に失敗
+      - name: FailureUpdateByMessageOpenedAt
+        number: 13001
+      # 対象ユーザーが持っていないメッセージIDだった
+      - name: UsrMessageNotFound
+        number: 13002
+      # 期限切れの報酬メッセージだった
+      - name: ExpiredMessageResource
+        number: 13003
+      # メッセージ報酬受け取り処理でエラー
+      - name: ErrorReceivedMessageResource
+        number: 13004
+      # ユーザーメッセージ日時(既読 or 受け取り)更新に失敗
+      - name: FailureUpdateByUserMessages
+        number: 13005
+      # 受け取りメッセージリワードの所持上限が超えている
+      - name: MessageRewardByOverMax
+        number: 13006
+      # 降臨バトルが期間外
+      - name: AdventBattlePeriodOutside
+        number: 14001
+      # 降臨バトルに挑戦できない
+      - name: AdventBattleCannotStart
+        number: 14002
+      # 降臨バトルのセッションデータ不整合
+      - name: AdventBattleSessionMismatch
+        number: 14003
+      # 不明な降臨バトルタイプ
+      - name: AdventBattleTypeNotFound
+        number: 14004
+      # 不明な降臨バトル報酬カテゴリー
+      - name: AdventBattleRewardCategoryNotFound
+        number: 14005
+      # 降臨バトルランキングが期間外
+      - name: AdventBattleRankingOutPeriod
+        number: 14006
+      
+      # ランクマッチ(Pvp)が期間外
+      - name: PvpPeriodOutside
+        number: 16001
+
+      # 交換所が期間外
+      - name: ExchangeNotTradePeriod
+        number: 18001
+      # 交換所の交換上限に達している
+      - name: ExchangeLineupTradeLimitExceeded
+        number: 18002
+      # 交換所とラインナップの不整合
+      - name: ExchangeLineupMismatch
+        number: 18003
+
+      # BOXガチャが期間外
+      - name: BoxGachaPeriodOutside
+        number: 19001
+      # BOXガチャの残数が足りない
+      - name: BoxGachaStockNotEnough
+        number: 19002
+      # BOXガチャのコストが足りない
+      - name: BoxGachaCostNotEnough
+        number: 19003
+      # BOXガチャの纏めて引ける数を超えている
+      - name: BoxGachaDrawCountExceeded
+        number: 19004
+
+      # アドミンデバッグで失敗した時
+      - name: AdminDebugFailed
+        number: 97001
+      
+      # クライアントのバージョンアップが必要
+      - name: RequireClientVersionUpdate
+        number: 98001
+      # マスターデータのバージョンアップが必要
+      - name: RequireResourceUpdate
+        number: 98002
+      # 有効なアセットバージョンが存在しない
+      - name: AvailableAssetVersionNotFound
+        number: 98003
+      # 日付変更が発生
+      - name: CrossDay
+        number: 98004
+      # 不正行為による、時限BANで、アカウント停止中のユーザー
+      - name: UserAccountBanTemporaryByCheating
+        number: 98005
+      # 異常なデータを検出したことによる、時限BANで、アカウント停止中のユーザー
+      - name: UserAccountBanTemporaryByDetectedAnomaly
+        number: 98006
+      # 永久BANで、アカウント停止中のユーザー
+      - name: UserAccountBanPermanent
+        number: 98007
+      # アカウント削除対応で、アカウント削除済みのユーザー
+      - name: UserAccountDeleted
+        number: 98008
+      # 返金対応中でアカウント一時停止中のユーザー
+      - name: UserAccountRefunding
+        number: 98009
+
+      # メンテナンス
+      - name: Maintenance
+        number: 99002
+      # マスターDBの接続先とreleaseControlの接続先情報が異なる
+      - name: MasterDatabaseConnectionsDifferent
+        number: 99005

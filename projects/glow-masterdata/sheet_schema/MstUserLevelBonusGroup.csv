@@ -1,0 +1,3 @@
+memo
+TABLE,MstUserLevelBonusGroup,MstUserLevelBonusGroup,MstUserLevelBonusGroup,MstUserLevelBonusGroup,MstUserLevelBonusGroup,MstUserLevelBonusGroup
+ENABLE,id,mst_user_level_bonus_group_id,resource_type,resource_id,resource_amount,release_key

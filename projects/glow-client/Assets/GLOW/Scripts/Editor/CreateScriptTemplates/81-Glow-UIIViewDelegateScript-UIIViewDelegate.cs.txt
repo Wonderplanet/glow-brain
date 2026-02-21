@@ -1,0 +1,7 @@
+namespace GLOW.Scenes.#SCRIPTNAME#.Presentation
+{
+    public interface I#SCRIPTNAME#ViewDelegate
+    {
+        
+    }
+}

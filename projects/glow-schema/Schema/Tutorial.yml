@@ -1,0 +1,194 @@
+enum:
+  - name: TutorialType
+    params:
+      - name: Intro
+      - name: Main
+      - name: Free
+
+  - name: TutorialConditionType
+    params:
+      - name: None
+      - name: UserLevel
+      - name: StageClear
+
+data:
+  - name: MstTutorial
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: type
+        type: TutorialType
+      - name: sortOrder
+        type: int
+      - name: functionName
+        type: string
+      - name: conditionType
+        type: TutorialConditionType
+      - name: conditionValue
+        type: string
+      - name: startAt
+        type: DateTimeOffset
+      - name: endAt
+        type: DateTimeOffset
+
+  - name: MstTutorialTipI18n
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: mstTutorialId
+        type: string
+      - name: language
+        type: Language
+      - name: sortOrder
+        type: int
+      - name: title
+        type: string
+      - name: assetKey
+        type: string
+
+  - name: UsrTutorial
+    obscure: true
+    impl_entity: true
+    params:
+      - name: mstTutorialFunctionName
+        type: string
+
+  # ResultData
+  - name: TutorialUpdateStatusResult
+    obscure: true
+    params:
+      - name: usrGachas
+        type: UsrGachaData[]
+      - name: usrIdleIncentive
+        type: UsrIdleIncentiveData?
+      - name: dailyBonusRewards
+        type: DailyBonusRewardData[]
+      - name: eventDailyBonusRewards
+        type: EventDailyBonusRewardData[]
+      - name: usrMissionEventDailyBonusProgresses
+        type: UsrMissionEventDailyBonusProgressData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrEmblems
+        type: UsrEmblemData[]
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+
+  - name: TutorialGachaDrawResult
+    obscure: true
+    params:
+      - name: gachaResults
+        type: GachaResultData[]
+
+  - name: TutorialGachaConfirmResult
+    obscure: true
+    params:
+      - name: tutorialStatus
+        type: string
+      - name: gachaResults
+        type: GachaResultData[]
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrParameter
+        type: UsrParameterData
+
+  - name: TutorialStageStartResult
+    obscure: true
+    params:
+      - name: usrInGameStatus
+        type: UsrInGameStatusData
+      - name: tutorialStatus
+        type: string
+
+  - name: TutorialStageEndResult
+    obscure: true
+    params:
+      - name: tutorialStatus
+        type: string
+      - name: usrParameter
+        type: UsrParameterData
+      - name: stageRewards
+        type: StageRewardData[]
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrEmblems
+        type: UsrEmblemData[]
+
+  - name: TutorialUnitLevelUpResult
+    obscure: true
+    params:
+      - name: tutorialStatus
+        type: string
+      - name: usrUnit
+        type: UsrUnitData
+      - name: usrParameter
+        type: UsrParameterData
+
+api:
+  - name: Tutorial
+    actions:
+      - name: UpdateStatus
+        path: "/api/tutorial/update_status"
+        params:
+          - name: mstTutorialFunctionName
+            type: string
+        method: POST
+        response: TutorialUpdateStatusResultData
+
+      - name: GachaDraw
+        path: "/api/tutorial/gacha_draw"
+        params:
+        method: POST
+        response: TutorialGachaDrawResultData
+
+      - name: GachaConfirm
+        path: "/api/tutorial/gacha_confirm"
+        params:
+        method: POST
+        response: TutorialGachaConfirmResultData
+
+      - name: StageStart
+        path: "/api/tutorial/stage_start"
+        params:
+          - name: mstTutorialFunctionName
+            type: string
+          - name: partyNo
+            type: int
+        method: POST
+        response: TutorialStageStartResultData
+
+      - name: StageEnd
+        path: "/api/tutorial/stage_end"
+        params:
+          - name: mstTutorialFunctionName
+            type: string
+        method: POST
+        response: TutorialStageEndResultData
+
+      - name: UnitLevelUp
+        path: "/api/tutorial/unit_level_up"
+        params:
+          - name: mstTutorialFunctionName
+            type: string
+          - name: usrUnitId
+            type: string
+          - name: level
+            type: int
+        method: POST
+        response: TutorialUnitLevelUpResultData

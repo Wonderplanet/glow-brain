@@ -1,0 +1,3 @@
+memo
+TABLE,MstOutpostEnhancementLevel,MstOutpostEnhancementLevel,MstOutpostEnhancementLevel,MstOutpostEnhancementLevel,MstOutpostEnhancementLevel,MstOutpostEnhancementLevel,MstOutpostEnhancementLevelI18n
+ENABLE,id,mst_outpost_enhancement_id,level,cost_coin,enhancement_value,release_key,description.ja

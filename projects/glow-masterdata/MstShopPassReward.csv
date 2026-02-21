@@ -1,0 +1,6 @@
+ENABLE,id,mst_shop_pass_id,pass_reward_type,resource_type,resource_id,resource_amount,release_key
+e,premium_pass_01_reward_1,premium_pass_01,Daily,FreeDiamond,,60,202509010
+e,premium_pass_02_reward_1,premium_pass_02,Daily,FreeDiamond,,80,202512020
+e,premium_pass_02_reward_2,premium_pass_02,Daily,Coin,,8000,202512020
+e,premium_pass_03_reward_1,premium_pass_03,Daily,FreeDiamond,,100,202603020
+e,premium_pass_03_reward_2,premium_pass_03,Daily,Coin,,1000,202603020
