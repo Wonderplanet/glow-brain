@@ -2,12 +2,14 @@
 
 ## 次にやること
 
-### Step 1: XLSX→CSV/JSON変換スクリプトの作成
-- [ ] openpyxlを使ったPythonスクリプトを作成
+### Step 1: XLSX→CSV/JSON変換スクリプトの作成 ✅ 完了
+- [x] openpyxlを使ったPythonスクリプトを作成
   - 実データ → CSV（シートごと）
-  - 式・書式・セル情報 → JSON
-- [ ] `scripts/xlsx_to_csv_json.py` として実装
-- [ ] 動作確認（既存の設計書XLSXで試す）
+  - 式・セル情報 → JSON（formula_type別: normal / computed_value / importrange）
+- [x] `scripts/xlsx_to_csv_json.py` として実装
+- [x] 動作確認（【ストーリー】必ず生きて帰る.xlsx で検証済み）
+  - 25シート → 25 CSV、cells.json（30,089セル）、metadata.json を生成
+  - IMPORTRANGE転記値も正しく実データとして抽出できた
 
 ### Step 2: CLIツールとして整備
 - [ ] コマンド一発で変換できるCLIインターフェースを追加
