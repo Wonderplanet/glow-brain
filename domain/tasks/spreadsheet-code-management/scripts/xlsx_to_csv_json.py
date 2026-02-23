@@ -10,6 +10,8 @@ Google Spreadsheet を XLSX でダウンロードし、コード管理できる�
       <シート名>.csv    # 実データ（計算済み値）
     cells.json          # 式情報（どのセルにどんな式があるか）
     metadata.json       # ブック全体のメタ情報
+    styles.json         # セルスタイル情報（色・フォント・罫線・配置・書式）
+    dimensions.json     # 行高さ・列幅情報
 
 Usage:
     python3 scripts/xlsx_to_csv_json.py <xlsx_file>
@@ -142,6 +144,293 @@ def classify_formula(formula: str) -> dict:
         "formula_type": "normal",
         "formula": formula,
     }
+
+
+# ---- スタイル抽出ヘルパー ---------------------------------------------------
+
+def _extract_color(color) -> str | dict | None:
+    """
+    openpyxl の Color オブジェクトを JSON シリアライズ可能な値に変換。
+
+    - rgb 型 → "RRGGBBAA" 文字列
+    - theme=1, tint=0.0 → None（デフォルト黒はスキップ）
+    - theme 型（その他） → {"theme": N, "tint": T}
+    - indexed 型 → {"indexed": N}
+    """
+    if color is None:
+        return None
+
+    color_type = getattr(color, 'type', None)
+
+    if color_type == 'rgb':
+        rgb = color.rgb
+        if rgb in ('00000000', '000000', None):
+            return None
+        return rgb
+
+    if color_type == 'theme':
+        theme = getattr(color, 'theme', None)
+        tint = getattr(color, 'tint', 0.0)
+        # theme=1, tint=0.0 はデフォルト黒なのでスキップ
+        if theme == 1 and tint == 0.0:
+            return None
+        return {'theme': theme, 'tint': tint}
+
+    if color_type == 'indexed':
+        indexed = getattr(color, 'indexed', None)
+        return {'indexed': indexed}
+
+    return None
+
+
+def _extract_font(font) -> dict:
+    """フォント情報を抽出。デフォルト値はスキップ。"""
+    result = {}
+    if font is None:
+        return result
+
+    name = getattr(font, 'name', None)
+    if name and name != 'Calibri':
+        result['name'] = name
+
+    size = getattr(font, 'size', None)
+    if size and size != 11.0:
+        result['size'] = size
+
+    bold = getattr(font, 'bold', None)
+    if bold:
+        result['bold'] = bold
+
+    italic = getattr(font, 'italic', None)
+    if italic:
+        result['italic'] = italic
+
+    underline = getattr(font, 'underline', None)
+    if underline:
+        result['underline'] = underline
+
+    strike = getattr(font, 'strike', None)
+    if strike:
+        result['strike'] = strike
+
+    color = _extract_color(getattr(font, 'color', None))
+    if color is not None:
+        result['color'] = color
+
+    return result
+
+
+def _extract_fill(fill) -> dict:
+    """
+    塗りつぶし情報を抽出。
+
+    patternType='none' はスキップ。
+    fgColor が '00000000' でも patternType='solid' なら保存（白背景として有効）。
+    """
+    result = {}
+    if fill is None:
+        return result
+
+    pattern_type = getattr(fill, 'patternType', None)
+    if not pattern_type or pattern_type == 'none':
+        return result
+
+    result['patternType'] = pattern_type
+
+    fg = _extract_color(getattr(fill, 'fgColor', None))
+    # fgColor='00000000' かつ patternType='solid' → 黒背景として保存
+    # ただし color type='rgb' で値が '00000000' の場合は _extract_color が None を返すので
+    # 直接チェックして保存する
+    fg_raw = getattr(fill, 'fgColor', None)
+    if fg_raw is not None and getattr(fg_raw, 'type', None) == 'rgb':
+        rgb_val = fg_raw.rgb
+        if rgb_val == '00000000' and pattern_type == 'solid':
+            result['fgColor'] = rgb_val
+        elif fg is not None:
+            result['fgColor'] = fg
+    elif fg is not None:
+        result['fgColor'] = fg
+
+    bg = _extract_color(getattr(fill, 'bgColor', None))
+    if bg is not None:
+        result['bgColor'] = bg
+
+    return result
+
+
+def _extract_border_side(side) -> dict | None:
+    """罫線の1辺を抽出。side が None の場合は None を返す。"""
+    if side is None:
+        return None
+
+    border_style = getattr(side, 'border_style', None)
+    if not border_style:
+        return None
+
+    result: dict = {'border_style': border_style}
+    color = _extract_color(getattr(side, 'color', None))
+    if color is not None:
+        result['color'] = color
+
+    return result
+
+
+def _extract_alignment(al) -> dict:
+    """配置情報を抽出。デフォルト値はスキップ。"""
+    result = {}
+    if al is None:
+        return result
+
+    horizontal = getattr(al, 'horizontal', None)
+    if horizontal:
+        result['horizontal'] = horizontal
+
+    vertical = getattr(al, 'vertical', None)
+    if vertical:
+        result['vertical'] = vertical
+
+    wrap_text = getattr(al, 'wrap_text', None)
+    if wrap_text:
+        result['wrap_text'] = wrap_text
+
+    shrink_to_fit = getattr(al, 'shrink_to_fit', None)
+    if shrink_to_fit:
+        result['shrink_to_fit'] = shrink_to_fit
+
+    indent = getattr(al, 'indent', None)
+    if indent:
+        result['indent'] = indent
+
+    text_rotation = getattr(al, 'text_rotation', None)
+    if text_rotation:
+        result['text_rotation'] = text_rotation
+
+    return result
+
+
+# ---- styles.json 出力 -------------------------------------------------------
+
+def export_styles_json(wb_data: openpyxl.Workbook, output_dir: Path) -> Path:
+    """
+    全シートの全セルのスタイル情報を styles.json に出力する。
+
+    スタイルが何もないセルは JSON に含めない（省スペース）。
+
+    出力形式:
+    {
+      "シート名": {
+        "A1": {
+          "font": {...},
+          "fill": {...},
+          "border": {"left": {...}, "right": {...}, ...},
+          "alignment": {...},
+          "number_format": "..."
+        },
+        ...
+      },
+      ...
+    }
+    """
+    styles_data: dict[str, dict] = {}
+
+    for sheet_name in wb_data.sheetnames:
+        ws = wb_data[sheet_name]
+        sheet_styles: dict[str, dict] = {}
+
+        for row in ws.iter_rows():
+            for cell in row:
+                cell_style: dict = {}
+
+                # フォント
+                font = _extract_font(getattr(cell, 'font', None))
+                if font:
+                    cell_style['font'] = font
+
+                # 塗りつぶし
+                fill = _extract_fill(getattr(cell, 'fill', None))
+                if fill:
+                    cell_style['fill'] = fill
+
+                # 罫線
+                border_obj = getattr(cell, 'border', None)
+                if border_obj:
+                    border: dict = {}
+                    for side_name in ('left', 'right', 'top', 'bottom', 'diagonal'):
+                        side = _extract_border_side(getattr(border_obj, side_name, None))
+                        if side:
+                            border[side_name] = side
+                    if border:
+                        cell_style['border'] = border
+
+                # 配置
+                alignment = _extract_alignment(getattr(cell, 'alignment', None))
+                if alignment:
+                    cell_style['alignment'] = alignment
+
+                # 書式（デフォルト 'General' はスキップ）
+                number_format = getattr(cell, 'number_format', None)
+                if number_format and number_format != 'General':
+                    cell_style['number_format'] = number_format
+
+                if cell_style:
+                    sheet_styles[cell.coordinate] = cell_style
+
+        if sheet_styles:
+            styles_data[sheet_name] = sheet_styles
+
+    styles_path = output_dir / 'styles.json'
+    with open(styles_path, 'w', encoding='utf-8') as f:
+        json.dump(styles_data, f, ensure_ascii=False, indent=2)
+
+    return styles_path
+
+
+# ---- dimensions.json 出力 ---------------------------------------------------
+
+def export_dimensions_json(wb_data: openpyxl.Workbook, output_dir: Path) -> Path:
+    """
+    全シートの行高さ・列幅を dimensions.json に出力する。
+
+    None の行高さ・列幅はスキップ。列幅 0 は保存（非表示列として有効）。
+
+    出力形式:
+    {
+      "シート名": {
+        "row_heights": {"1": 20.0, "3": 30.0},
+        "col_widths": {"A": 15.0, "C": 8.43}
+      },
+      ...
+    }
+    """
+    dimensions_data: dict[str, dict] = {}
+
+    for sheet_name in wb_data.sheetnames:
+        ws = wb_data[sheet_name]
+        row_heights: dict[str, float] = {}
+        col_widths: dict[str, float] = {}
+
+        for row_num, rd in ws.row_dimensions.items():
+            if rd.height is not None:
+                row_heights[str(row_num)] = rd.height
+
+        for col_letter, cd in ws.column_dimensions.items():
+            if cd.width is not None:
+                col_widths[col_letter] = cd.width
+
+        sheet_dim: dict = {}
+        if row_heights:
+            sheet_dim['row_heights'] = row_heights
+        if col_widths:
+            sheet_dim['col_widths'] = col_widths
+
+        if sheet_dim:
+            dimensions_data[sheet_name] = sheet_dim
+
+    dimensions_path = output_dir / 'dimensions.json'
+    with open(dimensions_path, 'w', encoding='utf-8') as f:
+        json.dump(dimensions_data, f, ensure_ascii=False, indent=2)
+
+    return dimensions_path
 
 
 # ---- CSV 出力 ---------------------------------------------------------------
@@ -295,26 +584,39 @@ def export_metadata(xlsx_path: Path, sheet_info: list[dict], cells_path: Path, o
 def convert(xlsx_path: Path, output_dir: Path) -> None:
     print(f'変換開始: {xlsx_path.name}')
 
-    print('  [1/4] 実データ読み込み (data_only=True)...')
+    print('  [1/6] 実データ読み込み (data_only=True)...')
     wb_data = openpyxl.load_workbook(xlsx_path, data_only=True)
 
-    print('  [2/4] 式情報読み込み (data_only=False)...')
+    print('  [2/6] 式情報読み込み (data_only=False)...')
     wb_formula = openpyxl.load_workbook(xlsx_path, data_only=False)
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    print('  [3/4] CSV 出力中...')
+    print('  [3/6] CSV 出力中...')
     sheet_info = export_csv(wb_data, wb_formula, output_dir)
     print(f'         {len(sheet_info)} シートを出力しました')
 
-    print('  [4/4] cells.json / metadata.json 出力中...')
+    print('  [4/6] cells.json / metadata.json 出力中...')
     cells_path = export_cells_json(wb_formula, output_dir)
     meta_path = export_metadata(xlsx_path, sheet_info, cells_path, output_dir)
+
+    print('  [5/6] styles.json 出力中...')
+    styles_path = export_styles_json(wb_data, output_dir)
+    total_style_cells = sum(
+        len(cells)
+        for cells in json.load(open(styles_path, encoding='utf-8')).values()
+    )
+    print(f'         {total_style_cells:,} セルのスタイル情報を出力しました')
+
+    print('  [6/6] dimensions.json 出力中...')
+    dimensions_path = export_dimensions_json(wb_data, output_dir)
 
     print(f'\n完了: {output_dir}')
     print(f'  csv/           : {len(sheet_info)} ファイル')
     print(f'  cells.json     : {cells_path.stat().st_size:,} bytes')
     print(f'  metadata.json  : {meta_path.stat().st_size:,} bytes')
+    print(f'  styles.json    : {styles_path.stat().st_size:,} bytes')
+    print(f'  dimensions.json: {dimensions_path.stat().st_size:,} bytes')
 
 
 def main() -> None:
