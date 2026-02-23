@@ -30,6 +30,8 @@ from openpyxl.formatting.rule import (
     FormatObject,
     DifferentialStyle,
 )
+from openpyxl.worksheet.formula import ArrayFormula
+from openpyxl.worksheet.datavalidation import DataValidation
 
 
 # ---- スタイル復元ヘルパー ---------------------------------------------------
@@ -348,6 +350,37 @@ def apply_conditional_formatting(ws, cf_list: list) -> None:
                 print(f'    警告: 条件付き書式の復元をスキップ ({sqref}): {e}', file=sys.stderr)
 
 
+# ---- データバリデーション復元 ------------------------------------------------
+
+def apply_data_validation(ws, dv_list: list) -> None:
+    """
+    data_validation.json の1シート分を適用。
+    DataValidation オブジェクトを生成して ws.add_data_validation() で追加。
+    """
+    for dv_info in dv_list:
+        try:
+            dv = DataValidation(
+                type=dv_info.get('type'),
+                formula1=dv_info.get('formula1'),
+                formula2=dv_info.get('formula2'),
+                operator=dv_info.get('operator'),
+                allow_blank=dv_info.get('allow_blank', True),
+                showDropDown=dv_info.get('showDropDown', False),
+                showInputMessage=dv_info.get('showInputMessage', False),
+                showErrorMessage=dv_info.get('showErrorMessage', False),
+                errorTitle=dv_info.get('errorTitle'),
+                error=dv_info.get('error'),
+                promptTitle=dv_info.get('promptTitle'),
+                prompt=dv_info.get('prompt'),
+            )
+            sqref = dv_info.get('sqref', '')
+            if sqref:
+                dv.sqref = sqref
+            ws.add_data_validation(dv)
+        except Exception as e:
+            print(f'    警告: データバリデーションの復元をスキップ ({dv_info.get("sqref", "")}): {e}', file=sys.stderr)
+
+
 # ---- 型変換 ------------------------------------------------------------------
 
 def parse_value(s: str):
@@ -426,8 +459,12 @@ def write_sheet(ws, csv_path: Path, sheet_formulas: dict) -> None:
 
                 if coord in sheet_formulas:
                     # formula を書き込む（= で始まる文字列は openpyxl が式として扱う）
-                    formula_str = sheet_formulas[coord].get('formula', '')
-                    cell.value = formula_str
+                    formula_info = sheet_formulas[coord]
+                    formula_str = formula_info.get('formula', '')
+                    if formula_info.get('is_array_formula') and formula_str:
+                        cell.value = ArrayFormula(formula_str)
+                    else:
+                        cell.value = formula_str
                 else:
                     cell.value = parse_value(raw_value)
 
@@ -447,6 +484,7 @@ def reconstruct(outputs_dir: Path, output_path: Path) -> None:
     cells_path = outputs_dir / 'cells.json'
     styles_path = outputs_dir / 'styles.json'
     cf_json_path = outputs_dir / 'conditional_formatting.json'
+    dv_json_path = outputs_dir / 'data_validation.json'
 
     if not meta_path.exists():
         print(f'エラー: metadata.json が見つかりません: {meta_path}', file=sys.stderr)
@@ -455,21 +493,21 @@ def reconstruct(outputs_dir: Path, output_path: Path) -> None:
     print(f'再構築開始: {outputs_dir.name}')
 
     # [1] metadata.json 読み込み
-    print('  [1/7] metadata.json 読み込み...')
+    print('  [1/8] metadata.json 読み込み...')
     with open(meta_path, encoding='utf-8') as f:
         metadata = json.load(f)
     sheets = metadata.get('sheets', [])
     print(f'         {len(sheets)} シートを検出')
 
     # [2] cells.json → formula_map
-    print('  [2/7] cells.json 読み込み...')
+    print('  [2/8] cells.json 読み込み...')
     formula_map = build_formula_map(cells_path)
     formula_sheet_count = len(formula_map)
     formula_cell_count = sum(len(v) for v in formula_map.values())
     print(f'         {formula_sheet_count} シート、{formula_cell_count:,} セルに式情報あり')
 
     # [3] styles.json → style_map（存在しない場合は空 dict）
-    print('  [3/7] styles.json 読み込み...')
+    print('  [3/8] styles.json 読み込み...')
     style_map = build_style_map(styles_path)
     if style_map:
         style_cell_count = sum(len(v) for v in style_map.values())
@@ -478,7 +516,7 @@ def reconstruct(outputs_dir: Path, output_path: Path) -> None:
         print('         styles.json なし（スタイルなしで再構築）')
 
     # [4] layout.json（or 旧 dimensions.json）→ layout_map
-    print('  [4/7] layout.json 読み込み...')
+    print('  [4/8] layout.json 読み込み...')
     layout_map = build_layout_map(outputs_dir)
     if layout_map:
         layout_path = outputs_dir / 'layout.json'
@@ -489,8 +527,20 @@ def reconstruct(outputs_dir: Path, output_path: Path) -> None:
     else:
         print('         layout.json / dimensions.json なし（レイアウトなしで再構築）')
 
-    # [5] conditional_formatting.json → cf_map（なければ空 dict）
-    print('  [5/7] conditional_formatting.json 読み込み...')
+    # [5] data_validation.json → dv_map（なければ空 dict）
+    print('  [5/8] data_validation.json 読み込み...')
+    dv_map: dict[str, list] = {}
+    if dv_json_path.exists():
+        with open(dv_json_path, encoding='utf-8') as f:
+            dv_map = json.load(f)
+        dv_sheet_count = len(dv_map)
+        dv_entry_count = sum(len(v) for v in dv_map.values())
+        print(f'         {dv_sheet_count} シート、{dv_entry_count} 個のデータバリデーションあり')
+    else:
+        print('         data_validation.json なし（データバリデーションなしで再構築）')
+
+    # [6] conditional_formatting.json → cf_map（なければ空 dict）
+    print('  [6/8] conditional_formatting.json 読み込み...')
     cf_map: dict[str, list] = {}
     if cf_json_path.exists():
         with open(cf_json_path, encoding='utf-8') as f:
@@ -501,8 +551,8 @@ def reconstruct(outputs_dir: Path, output_path: Path) -> None:
     else:
         print('         conditional_formatting.json なし（条件付き書式なしで再構築）')
 
-    # [6] ワークブック構築
-    print('  [6/7] シート再構築中...')
+    # [7] ワークブック構築
+    print('  [7/8] シート再構築中...')
     wb = openpyxl.Workbook()
     # デフォルトの "Sheet" を削除
     if wb.active:
@@ -533,10 +583,15 @@ def reconstruct(outputs_dir: Path, output_path: Path) -> None:
         if sheet_cf:
             apply_conditional_formatting(ws, sheet_cf)
 
+        # データバリデーション適用
+        sheet_dv = dv_map.get(sheet_name, [])
+        if sheet_dv:
+            apply_data_validation(ws, sheet_dv)
+
         print(f'    ✓ {sheet_name}')
 
-    # [7] 保存
-    print(f'  [7/7] XLSX 保存中: {output_path}')
+    # [8] 保存
+    print(f'  [8/8] XLSX 保存中: {output_path}')
     output_path.parent.mkdir(parents=True, exist_ok=True)
     wb.save(output_path)
 

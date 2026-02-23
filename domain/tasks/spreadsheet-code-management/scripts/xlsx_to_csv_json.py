@@ -28,6 +28,7 @@ from pathlib import Path
 from datetime import datetime
 import openpyxl
 from openpyxl.utils import get_column_letter
+from openpyxl.worksheet.formula import ArrayFormula
 
 
 # ---- 定数 / 正規表現 -------------------------------------------------------
@@ -669,6 +670,68 @@ def export_conditional_formatting_json(wb_data: openpyxl.Workbook, output_dir: P
     return cf_path
 
 
+# ---- data_validation.json 出力 ----------------------------------------------
+
+def export_data_validation_json(wb_data: openpyxl.Workbook, output_dir: Path) -> Path:
+    """
+    全シートのデータバリデーション（プルダウン・入力規則）を
+    data_validation.json に出力。
+
+    出力形式:
+    {
+      "シート名": [
+        {
+          "type": "list",
+          "formula1": "'エネミー出現'!$M$2:$M61",
+          "formula2": null,
+          "operator": null,
+          "allow_blank": true,
+          "showDropDown": false,
+          "showInputMessage": false,
+          "showErrorMessage": false,
+          "errorTitle": null,
+          "error": null,
+          "promptTitle": null,
+          "prompt": null,
+          "sqref": "M10:M86"
+        }
+      ]
+    }
+    """
+    dv_data: dict[str, list] = {}
+
+    for sheet_name in wb_data.sheetnames:
+        ws = wb_data[sheet_name]
+        sheet_dvs: list = []
+
+        for dv in ws.data_validations.dataValidation:
+            entry = {
+                'type': getattr(dv, 'type', None),
+                'formula1': getattr(dv, 'formula1', None),
+                'formula2': getattr(dv, 'formula2', None),
+                'operator': getattr(dv, 'operator', None),
+                'allow_blank': getattr(dv, 'allow_blank', True),
+                'showDropDown': getattr(dv, 'showDropDown', False),
+                'showInputMessage': getattr(dv, 'showInputMessage', False),
+                'showErrorMessage': getattr(dv, 'showErrorMessage', False),
+                'errorTitle': getattr(dv, 'errorTitle', None),
+                'error': getattr(dv, 'error', None),
+                'promptTitle': getattr(dv, 'promptTitle', None),
+                'prompt': getattr(dv, 'prompt', None),
+                'sqref': str(dv.sqref),
+            }
+            sheet_dvs.append(entry)
+
+        if sheet_dvs:
+            dv_data[sheet_name] = sheet_dvs
+
+    dv_path = output_dir / 'data_validation.json'
+    with open(dv_path, 'w', encoding='utf-8') as f:
+        json.dump(dv_data, f, ensure_ascii=False, indent=2)
+
+    return dv_path
+
+
 # ---- CSV 出力 ---------------------------------------------------------------
 
 def export_csv(wb_data: openpyxl.Workbook, wb_formula: openpyxl.Workbook, output_dir: Path) -> list[dict]:
@@ -756,10 +819,23 @@ def export_cells_json(wb_formula: openpyxl.Workbook, output_dir: Path) -> Path:
 
         for row in ws.iter_rows():
             for cell in row:
-                if cell.data_type != 'f' or not isinstance(cell.value, str):
+                if cell.data_type != 'f':
                     continue  # 式セルのみ対象
 
-                info = classify_formula(cell.value)
+                # ArrayFormula オブジェクトと通常文字列を両方処理
+                if isinstance(cell.value, ArrayFormula):
+                    formula_text = cell.value.text
+                    is_array = True
+                elif isinstance(cell.value, str):
+                    formula_text = cell.value
+                    is_array = False
+                else:
+                    continue  # 未知の型はスキップ
+
+                if not formula_text:
+                    continue  # formula_text が None or 空文字はスキップ
+
+                info = classify_formula(formula_text)
                 entry = {
                     'coord': cell.coordinate,
                     'row': cell.row,
@@ -767,6 +843,8 @@ def export_cells_json(wb_formula: openpyxl.Workbook, output_dir: Path) -> Path:
                     'col_letter': get_column_letter(cell.column),
                     **info,
                 }
+                if is_array:
+                    entry['is_array_formula'] = True
                 sheet_cells.append(entry)
 
         if sheet_cells:
@@ -820,23 +898,23 @@ def export_metadata(xlsx_path: Path, sheet_info: list[dict], cells_path: Path, o
 def convert(xlsx_path: Path, output_dir: Path) -> None:
     print(f'変換開始: {xlsx_path.name}')
 
-    print('  [1/7] 実データ読み込み (data_only=True)...')
+    print('  [1/8] 実データ読み込み (data_only=True)...')
     wb_data = openpyxl.load_workbook(xlsx_path, data_only=True)
 
-    print('  [2/7] 式情報読み込み (data_only=False)...')
+    print('  [2/8] 式情報読み込み (data_only=False)...')
     wb_formula = openpyxl.load_workbook(xlsx_path, data_only=False)
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    print('  [3/7] CSV 出力中...')
+    print('  [3/8] CSV 出力中...')
     sheet_info = export_csv(wb_data, wb_formula, output_dir)
     print(f'         {len(sheet_info)} シートを出力しました')
 
-    print('  [4/7] cells.json / metadata.json 出力中...')
+    print('  [4/8] cells.json / metadata.json 出力中...')
     cells_path = export_cells_json(wb_formula, output_dir)
     meta_path = export_metadata(xlsx_path, sheet_info, cells_path, output_dir)
 
-    print('  [5/7] styles.json 出力中...')
+    print('  [5/8] styles.json 出力中...')
     styles_path = export_styles_json(wb_data, output_dir)
     total_style_cells = sum(
         len(cells)
@@ -844,7 +922,7 @@ def convert(xlsx_path: Path, output_dir: Path) -> None:
     )
     print(f'         {total_style_cells:,} セルのスタイル情報を出力しました')
 
-    print('  [6/7] layout.json 出力中...')
+    print('  [6/8] layout.json 出力中...')
     layout_path = export_layout_json(wb_data, output_dir)
     layout_data = json.load(open(layout_path, encoding='utf-8'))
     total_merged = sum(
@@ -855,11 +933,17 @@ def convert(xlsx_path: Path, output_dir: Path) -> None:
     )
     print(f'         結合セル: {total_merged:,} 個、フリーズペイン: {sheets_with_freeze} シート')
 
-    print('  [7/7] conditional_formatting.json 出力中...')
+    print('  [7/8] conditional_formatting.json 出力中...')
     cf_path = export_conditional_formatting_json(wb_data, output_dir)
     cf_data = json.load(open(cf_path, encoding='utf-8'))
     total_cf_entries = sum(len(entries) for entries in cf_data.values())
     print(f'         {total_cf_entries} エントリの条件付き書式を出力しました')
+
+    print('  [8/8] data_validation.json 出力中...')
+    dv_path = export_data_validation_json(wb_formula, output_dir)
+    dv_data = json.load(open(dv_path, encoding='utf-8'))
+    total_dv_entries = sum(len(entries) for entries in dv_data.values())
+    print(f'         {total_dv_entries} 個のデータバリデーションを出力しました')
 
     print(f'\n完了: {output_dir}')
     print(f'  csv/                          : {len(sheet_info)} ファイル')
@@ -868,6 +952,7 @@ def convert(xlsx_path: Path, output_dir: Path) -> None:
     print(f'  styles.json                   : {styles_path.stat().st_size:,} bytes')
     print(f'  layout.json                   : {layout_path.stat().st_size:,} bytes')
     print(f'  conditional_formatting.json   : {cf_path.stat().st_size:,} bytes')
+    print(f'  data_validation.json          : {dv_path.stat().st_size:,} bytes')
 
 
 def main() -> None:
