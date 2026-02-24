@@ -128,39 +128,6 @@ def set_cell(ws, row: int, col: int, value, fill_color: str | None = None) -> No
         cell.fill = make_fill(fill_color)
 
 
-# ---- 基礎情報セクション処理 ---------------------------------------------------
-
-def add_page_id_field(ws) -> None:
-    """
-    基礎情報セクション（行12〜13）にページID入力欄を追加する。
-
-    現状: N12:P12 と N13:P13 が結合セルになっている
-    変更: 結合を解除して P12/P13 をページID用に使用する
-
-    - P12: ヘッダー「ページID」
-    - P13: データ入力セル（ユーザーが入力する）
-    """
-    # 既存の結合 N12:P12 を解除する
-    try:
-        ws.unmerge_cells("N12:P12")
-    except Exception:
-        pass  # 既に結合がない場合はスキップ
-
-    # 既存の結合 N13:P13 を解除する
-    try:
-        ws.unmerge_cells("N13:P13")
-    except Exception:
-        pass
-
-    # P12 にページIDヘッダーを設定
-    ws.cell(row=BASIC_INFO_HEADER_ROW, column=COL_P).value = "ページID"
-
-    # P13 はユーザー入力欄として空白のまま（既存値があれば上書きしない）
-    existing = ws.cell(row=BASIC_INFO_DATA_ROW, column=COL_P).value
-    if existing is None:
-        ws.cell(row=BASIC_INFO_DATA_ROW, column=COL_P).value = None
-
-
 # ---- コマ設計ヘッダー行 -------------------------------------------------------
 
 HEADER_LABELS = {
@@ -231,12 +198,12 @@ def add_koma_data_formulas(ws) -> None:
     - MstPage: id は行31のみ（ページ全体で1レコード）
     - MstKomaLine: 各行（行31〜35）にそれぞれのレコード
 
-    ページIDは $P$13 を参照（ユーザーが基礎情報セクションに入力した値）
+    ページIDは $E$13 を参照（ユーザーが基礎情報セクションに入力した値）
     リリースキーは $N$13 を参照
     """
     # -- MstPage（行31のみに追加）--
     # id: ページID入力欄を参照
-    set_cell(ws, KOMA_DATA_START_ROW, OUT_COL_EB, "=$P$13", DATA_FILL_COLOR)
+    set_cell(ws, KOMA_DATA_START_ROW, OUT_COL_EB, "=$E$13", DATA_FILL_COLOR)
     # release_key: リリースキー参照
     set_cell(ws, KOMA_DATA_START_ROW, OUT_COL_EC, "=$N$13", DATA_FILL_COLOR)
 
@@ -257,11 +224,11 @@ def add_koma_data_formulas(ws) -> None:
 
         # EF: id
         set_cell(ws, r, OUT_COL_EF,
-                 formula(f'CONCATENATE("koma_line_",$P$13,"_{row_offset}")'),
+                 formula(f'CONCATENATE("koma_line_",$E$13,"_{row_offset}")'),
                  DATA_FILL_COLOR)
 
         # EG: mst_page_id
-        set_cell(ws, r, OUT_COL_EG, formula("$P$13"), DATA_FILL_COLOR)
+        set_cell(ws, r, OUT_COL_EG, formula("$E$13"), DATA_FILL_COLOR)
 
         # EH: row
         set_cell(ws, r, OUT_COL_EH, formula(str(row_offset)), DATA_FILL_COLOR)
@@ -376,19 +343,15 @@ def add_koma_data_formulas(ws) -> None:
 # ---- シート処理 ---------------------------------------------------------------
 
 def process_sheet(ws, sheet_name: str) -> None:
-    """1シート分の処理（基礎情報追加 + コマ設計右側出力追加）"""
+    """1シート分の処理（コマ設計右側出力追加）"""
     print(f"  処理中: {sheet_name}")
 
-    # 1. 基礎情報セクションにページID入力欄を追加
-    add_page_id_field(ws)
-
-    # 2. コマ設計ヘッダー行にMstPage/MstKomaLineヘッダーを追加
+    # 1. コマ設計ヘッダー行にMstPage/MstKomaLineヘッダーを追加
     add_koma_header(ws)
 
-    # 3. コマ設計データ行にセル式を追加
+    # 2. コマ設計データ行にセル式を追加
     add_koma_data_formulas(ws)
 
-    print(f"    ✓ ページID入力欄追加（P{BASIC_INFO_HEADER_ROW}〜P{BASIC_INFO_DATA_ROW}）")
     print(f"    ✓ MstPageヘッダー追加（行{KOMA_HEADER_ROW}, EB〜EC列）")
     print(f"    ✓ MstKomaLineヘッダー追加（行{KOMA_HEADER_ROW}, EE〜FU列）")
     print(f"    ✓ コマ設計右側出力追加（行{KOMA_DATA_START_ROW}〜{KOMA_DATA_END_ROW}, EB〜FU列）")
@@ -453,9 +416,8 @@ def main() -> None:
     print(f"  出力先: {output_path}")
     print()
     print("次のステップ:")
-    print("  1. 各話シートのP13セル（ページID欄）に適切なページIDを入力してください")
-    print("     例: page_jig1_00101（1話）, page_jig1_00102（2話）等")
-    print("  2. コマ設計行（行31〜35）の右側出力（EB〜FU列）で計算結果を確認してください")
+    print("  各話シートの E13セル（敵ゲートID）を MstPage.id として参照しています。")
+    print("  コマ設計行（行31〜35）の右側出力（EB〜FU列）で計算結果を確認してください。")
 
 
 if __name__ == "__main__":
