@@ -1,18 +1,17 @@
 """
 MstPage/MstKomaLine投入用の汎用セル式を全対象シートに適用するスクリプト。
 
-汎用化の仕組み:
-- MATCH("敵ゲートID",E:E,0)+1 でpage_idのデータ行を動的取得
-- MATCH("リリースキー",N:N,0)+1 でrelease_keyのデータ行を動的取得
-- MATCH("■コマ設計",B:B,0)+3+(i-1) でコマ行データ行を動的取得
-- LET関数で式内変数化（Google Sheets 2022年以降対応）
+シートグループ別の固定行番号:
+  GROUP_A (ストーリー全話・チャレンジ1-2話・降臨バトル1話): er=13, rr=13, kr_start=31
+  GROUP_B (チャレンジ3-4話・高難度全話):                   er=13, rr=13, kr_start=32
+  GROUP_C (通常ブロック・ボスブロック):                     er=14, rr=14, kr_start=19
 
 対象:
 - 【チャレンジ】死罪人と首切り役人設計.xlsx: 1話〜4話
 - 【降臨バトル】まるで 悪夢を見ているようだ_地獄楽.xlsx: 1話
 - 【高難度】手負いの獣は恐ろしいぞ.xlsx: 1話〜3話
 - 検証用コピー_未完成_限界チャレンジ(VD)_アウトゲーム関連.xlsx: 通常ブロック, ボスブロック
-- 検証用コピー_【ストーリー】必ず生きて帰る.xlsx: 1話〜6話（既存式を動的式に更新）
+- 検証用コピー_【ストーリー】必ず生きて帰る.xlsx: 1話〜6話（既存式を更新）
 """
 import openpyxl
 from openpyxl.utils import column_index_from_string
@@ -43,154 +42,101 @@ KOMA_LINE_HEADERS = [
 
 EB_COL = column_index_from_string('EB')
 
+# シートグループ別パラメータ
+# er: page_id のExcel行番号（E列）
+# rr: release_key のExcel行番号（N列）
+# kr_start: コマ設計データ1行目のExcel行番号（D列〜）
+SHEET_PARAMS = {
+    'GROUP_A': {'er': 13, 'rr': 13, 'kr_start': 31},
+    'GROUP_B': {'er': 13, 'rr': 13, 'kr_start': 32},
+    'GROUP_C': {'er': 14, 'rr': 14, 'kr_start': 19},
+}
 
-def gen_page_formulas():
+
+def get_sheet_params(filename, sheet_name):
+    """ファイル名・シート名からシートグループパラメータを返す"""
+    if 'アウトゲーム' in filename:
+        return SHEET_PARAMS['GROUP_C']
+    elif 'チャレンジ' in filename and sheet_name in ('3話', '4話'):
+        return SHEET_PARAMS['GROUP_B']
+    elif '高難度' in filename:
+        return SHEET_PARAMS['GROUP_B']
+    else:
+        return SHEET_PARAMS['GROUP_A']
+
+
+def gen_page_formulas(er_row, rr_row):
     """MstPage用の式（29行目）を生成"""
     return {
-        'EB': '=LET(er,MATCH("敵ゲートID",E:E,0)+1,IF(INDIRECT("E"&er)="","","e"))',
-        'EC': '=LET(er,MATCH("敵ゲートID",E:E,0)+1,IF(INDIRECT("E"&er)="","",INDIRECT("E"&er)))',
-        'ED': ('=LET(er,MATCH("敵ゲートID",E:E,0)+1,'
-               'rr,MATCH("リリースキー",N:N,0)+1,'
-               'IF(INDIRECT("E"&er)="","",TEXT(INDIRECT("N"&rr),"0")))'),
+        'EB': f'=IF(E${er_row}="","","e")',
+        'EC': f'=IF(E${er_row}="","",E${er_row})',
+        'ED': f'=IF(E${er_row}="","",TEXT(N${rr_row},"0"))',
     }
 
 
-def gen_komaline_formulas(row_num):
+def gen_komaline_formulas(row_num, er_row, rr_row, kr_start):
     """MstKomaLine用の式を行番号（1-5）ごとに生成"""
-    offset = row_num - 1  # 1行目=+3, 2行目=+4, ...
-    kr_expr = f'MATCH("■コマ設計",B:B,0)+{3 + offset}'
-    er_expr = 'MATCH("敵ゲートID",E:E,0)+1'
-    rr_expr = 'MATCH("リリースキー",N:N,0)+1'
+    kr = kr_start + row_num - 1  # このコマ行のExcel行番号
 
-    # LETラッパー
-    def let_kr(inner):
-        return f'=LET(kr,{kr_expr},{inner})'
-
-    def let_er_kr(inner):
-        return f'=LET(er,{er_expr},kr,{kr_expr},{inner})'
-
-    def let_all(inner):
-        return f'=LET(er,{er_expr},rr,{rr_expr},kr,{kr_expr},{inner})'
-
-    def if_d(then, else_='""'):
-        return f'IF(INDIRECT("D"&kr)="",{else_},{then})'
-
-    def koma_exists(w):
-        return (f'AND({w}<>"",{w}<>"none",{w}<>"error",'
-                f'NOT(ISBLANK({w})))')
+    def ke(col):
+        """koma存在チェック式（コマなし/none/errorを除外）"""
+        return (f'AND({col}${kr}<>"",{col}${kr}<>"none",'
+                f'{col}${kr}<>"error",NOT(ISBLANK({col}${kr})))')
 
     return {
         # --- 基本フィールド ---
-        'EB': let_kr(if_d('"e"')),
-        'EC': let_er_kr(if_d(f'INDIRECT("E"&er)&"_{row_num}"')),
-        'ED': let_er_kr(if_d('INDIRECT("E"&er)')),
-        'EE': let_kr(if_d(str(row_num))),
-        'EF': let_kr(if_d('INDIRECT("H"&kr)')),
-        'EG': let_kr(if_d('INT(INDIRECT("D"&kr))')),
+        'EB': f'=IF(D${kr}="","","e")',
+        'EC': f'=IF(D${kr}="","",E${er_row}&"_{row_num}")',
+        'ED': f'=IF(D${kr}="","",E${er_row})',
+        'EE': f'=IF(D${kr}="","",{row_num})',
+        'EF': f'=IF(D${kr}="","",H${kr})',
+        'EG': f'=IF(D${kr}="","",INT(D${kr}))',
         # --- koma1 ---
-        'EH': let_kr(if_d('IFERROR(INDIRECT("R"&kr),"")')),
-        'EI': let_kr(if_d('INDIRECT("J"&kr)')),
-        'EJ': let_kr(if_d('IF(INDIRECT("J"&kr)=1,0,-1)')),
-        'EK': let_kr(if_d(
-            'IF(OR(INDIRECT("U"&kr)="",ISBLANK(INDIRECT("U"&kr))),"None",INDIRECT("U"&kr))')),
-        'EL': let_kr(if_d(
-            'IF(OR(INDIRECT("U"&kr)="",ISBLANK(INDIRECT("U"&kr))),0,INDIRECT("Z"&kr))')),
-        'EM': let_kr(if_d(
-            'IF(OR(INDIRECT("U"&kr)="",ISBLANK(INDIRECT("U"&kr))),0,INDIRECT("AB"&kr))')),
-        'EN': let_kr(if_d('"All"')),
-        'EO': let_kr(if_d('"All"')),
-        'EP': let_kr(if_d('"All"')),
+        'EH': f'=IF(D${kr}="","",IFERROR(R${kr},""))',
+        'EI': f'=IF(D${kr}="","",J${kr})',
+        'EJ': f'=IF(D${kr}="","",IF(J${kr}=1,0,-1))',
+        'EK': f'=IF(D${kr}="","",IF(OR(U${kr}="",ISBLANK(U${kr})),"None",U${kr}))',
+        'EL': f'=IF(D${kr}="","",IF(OR(U${kr}="",ISBLANK(U${kr})),0,Z${kr}))',
+        'EM': f'=IF(D${kr}="","",IF(OR(U${kr}="",ISBLANK(U${kr})),0,AB${kr}))',
+        'EN': f'=IF(D${kr}="","","All")',
+        'EO': f'=IF(D${kr}="","","All")',
+        'EP': f'=IF(D${kr}="","","All")',
         # --- koma2 ---
-        'EQ': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"L\"&kr)")},'
-            f'IFERROR(INDIRECT("R"&kr),""),"")')),
-        'ER': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"L\"&kr)")},'
-            f'INDIRECT("L"&kr),"")')),
-        'ES': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"L\"&kr)")},'
-            f'IF(INDIRECT("L"&kr)=1,0,-1),"__NULL__")')),
-        'ET': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"L\"&kr)")},'
-            f'IF(OR(INDIRECT("AD"&kr)="",ISBLANK(INDIRECT("AD"&kr))),'
-            f'"None",INDIRECT("AD"&kr)),"None")')),
-        'EU': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"L\"&kr)")},'
-            f'IF(OR(INDIRECT("AD"&kr)="",ISBLANK(INDIRECT("AD"&kr))),'
-            f'0,INDIRECT("AI"&kr)),"")')),
-        'EV': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"L\"&kr)")},'
-            f'IF(OR(INDIRECT("AD"&kr)="",ISBLANK(INDIRECT("AD"&kr))),'
-            f'0,INDIRECT("AK"&kr)),"")')),
-        'EW': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"L\"&kr)")},"All","__NULL__")')),
-        'EX': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"L\"&kr)")},"All","")')),
-        'EY': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"L\"&kr)")},"All","")')),
+        'EQ': f'=IF(D${kr}="","",IF({ke("L")},IFERROR(R${kr},""),""))',
+        'ER': f'=IF(D${kr}="","",IF({ke("L")},L${kr},""))',
+        'ES': f'=IF(D${kr}="","",IF({ke("L")},IF(L${kr}=1,0,-1),"__NULL__"))',
+        'ET': f'=IF(D${kr}="","",IF({ke("L")},IF(OR(AD${kr}="",ISBLANK(AD${kr})),"None",AD${kr}),"None"))',
+        'EU': f'=IF(D${kr}="","",IF({ke("L")},IF(OR(AD${kr}="",ISBLANK(AD${kr})),0,AI${kr}),""))',
+        'EV': f'=IF(D${kr}="","",IF({ke("L")},IF(OR(AD${kr}="",ISBLANK(AD${kr})),0,AK${kr}),""))',
+        'EW': f'=IF(D${kr}="","",IF({ke("L")},"All","__NULL__"))',
+        'EX': f'=IF(D${kr}="","",IF({ke("L")},"All",""))',
+        'EY': f'=IF(D${kr}="","",IF({ke("L")},"All",""))',
         # --- koma3 ---
-        'EZ': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"N\"&kr)")},'
-            f'IFERROR(INDIRECT("R"&kr),""),"")')),
-        'FA': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"N\"&kr)")},'
-            f'INDIRECT("N"&kr),"")')),
-        'FB': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"N\"&kr)")},'
-            f'IF(INDIRECT("N"&kr)=1,0,-1),"__NULL__")')),
-        'FC': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"N\"&kr)")},'
-            f'IF(OR(INDIRECT("AM"&kr)="",ISBLANK(INDIRECT("AM"&kr))),'
-            f'"None",INDIRECT("AM"&kr)),"None")')),
-        'FD': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"N\"&kr)")},'
-            f'IF(OR(INDIRECT("AM"&kr)="",ISBLANK(INDIRECT("AM"&kr))),'
-            f'0,INDIRECT("AR"&kr)),"")')),
-        'FE': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"N\"&kr)")},'
-            f'IF(OR(INDIRECT("AM"&kr)="",ISBLANK(INDIRECT("AM"&kr))),'
-            f'0,INDIRECT("AT"&kr)),"")')),
-        'FF': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"N\"&kr)")},"All","__NULL__")')),
-        'FG': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"N\"&kr)")},"All","")')),
-        'FH': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"N\"&kr)")},"All","")')),
+        'EZ': f'=IF(D${kr}="","",IF({ke("N")},IFERROR(R${kr},""),""))',
+        'FA': f'=IF(D${kr}="","",IF({ke("N")},N${kr},""))',
+        'FB': f'=IF(D${kr}="","",IF({ke("N")},IF(N${kr}=1,0,-1),"__NULL__"))',
+        'FC': f'=IF(D${kr}="","",IF({ke("N")},IF(OR(AM${kr}="",ISBLANK(AM${kr})),"None",AM${kr}),"None"))',
+        'FD': f'=IF(D${kr}="","",IF({ke("N")},IF(OR(AM${kr}="",ISBLANK(AM${kr})),0,AR${kr}),""))',
+        'FE': f'=IF(D${kr}="","",IF({ke("N")},IF(OR(AM${kr}="",ISBLANK(AM${kr})),0,AT${kr}),""))',
+        'FF': f'=IF(D${kr}="","",IF({ke("N")},"All","__NULL__"))',
+        'FG': f'=IF(D${kr}="","",IF({ke("N")},"All",""))',
+        'FH': f'=IF(D${kr}="","",IF({ke("N")},"All",""))',
         # --- koma4 ---
-        'FI': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"P\"&kr)")},'
-            f'IFERROR(INDIRECT("R"&kr),""),"")')),
-        'FJ': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"P\"&kr)")},'
-            f'INDIRECT("P"&kr),"")')),
-        'FK': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"P\"&kr)")},'
-            f'IF(INDIRECT("P"&kr)=1,0,-1),"__NULL__")')),
-        'FL': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"P\"&kr)")},'
-            f'IF(OR(INDIRECT("AV"&kr)="",ISBLANK(INDIRECT("AV"&kr))),'
-            f'"None",INDIRECT("AV"&kr)),"None")')),
-        'FM': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"P\"&kr)")},'
-            f'IF(OR(INDIRECT("AV"&kr)="",ISBLANK(INDIRECT("AV"&kr))),'
-            f'0,INDIRECT("BA"&kr)),"")')),
-        'FN': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"P\"&kr)")},'
-            f'IF(OR(INDIRECT("AV"&kr)="",ISBLANK(INDIRECT("AV"&kr))),'
-            f'0,INDIRECT("BC"&kr)),"")')),
-        'FO': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"P\"&kr)")},"All","__NULL__")')),
-        'FP': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"P\"&kr)")},"All","")')),
-        'FQ': let_kr(if_d(
-            f'IF({koma_exists("INDIRECT(\"P\"&kr)")},"All","")')),
+        'FI': f'=IF(D${kr}="","",IF({ke("P")},IFERROR(R${kr},""),""))',
+        'FJ': f'=IF(D${kr}="","",IF({ke("P")},P${kr},""))',
+        'FK': f'=IF(D${kr}="","",IF({ke("P")},IF(P${kr}=1,0,-1),"__NULL__"))',
+        'FL': f'=IF(D${kr}="","",IF({ke("P")},IF(OR(AV${kr}="",ISBLANK(AV${kr})),"None",AV${kr}),"None"))',
+        'FM': f'=IF(D${kr}="","",IF({ke("P")},IF(OR(AV${kr}="",ISBLANK(AV${kr})),0,BA${kr}),""))',
+        'FN': f'=IF(D${kr}="","",IF({ke("P")},IF(OR(AV${kr}="",ISBLANK(AV${kr})),0,BC${kr}),""))',
+        'FO': f'=IF(D${kr}="","",IF({ke("P")},"All","__NULL__"))',
+        'FP': f'=IF(D${kr}="","",IF({ke("P")},"All",""))',
+        'FQ': f'=IF(D${kr}="","",IF({ke("P")},"All",""))',
         # --- release_key ---
-        'FR': let_all(
-            'IF(INDIRECT("D"&kr)="","",TEXT(INDIRECT("N"&rr),"0"))'),
+        'FR': f'=IF(D${kr}="","",TEXT(N${rr_row},"0"))',
     }
 
 
-def apply_formulas_to_sheet(ws):
+def apply_formulas_to_sheet(ws, er_row, rr_row, kr_start):
     """指定シートに★MstPage/MstKomaLine投入用ヘッダー・式を書き込む"""
     # EA28: ★MstPage投入用ヘッダー
     ws['EA28'] = '★MstPage投入用▶'
@@ -199,7 +145,7 @@ def apply_formulas_to_sheet(ws):
     ws['ED28'] = 'release_key'
 
     # EB29〜ED29: MstPageデータ式
-    for col_letter, formula in gen_page_formulas().items():
+    for col_letter, formula in gen_page_formulas(er_row, rr_row).items():
         ws[f'{col_letter}29'] = formula
 
     # EA30: ★MstKomaLine投入用ヘッダー
@@ -212,7 +158,7 @@ def apply_formulas_to_sheet(ws):
     # EB31〜FR35: 1〜5行目データ式
     for row_num in range(1, 6):
         excel_row = 30 + row_num
-        for col_letter, formula in gen_komaline_formulas(row_num).items():
+        for col_letter, formula in gen_komaline_formulas(row_num, er_row, rr_row, kr_start).items():
             ws.cell(row=excel_row, column=column_index_from_string(col_letter),
                     value=formula)
 
@@ -231,11 +177,16 @@ def ensure_work_copy(raw_filename, work_filename=None):
 
 
 def process_file(work_path, target_sheets):
-    print(f'\n[{os.path.basename(work_path)}]')
+    filename = os.path.basename(work_path)
+    print(f'\n[{filename}]')
     wb = openpyxl.load_workbook(work_path)
     for sheet_name in target_sheets:
         if sheet_name in wb.sheetnames:
-            apply_formulas_to_sheet(wb[sheet_name])
+            params = get_sheet_params(filename, sheet_name)
+            apply_formulas_to_sheet(
+                wb[sheet_name],
+                params['er'], params['rr'], params['kr_start'],
+            )
         else:
             print(f'  ⚠ シートが見つかりません: {sheet_name}')
     wb.save(work_path)
