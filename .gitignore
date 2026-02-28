@@ -13,6 +13,9 @@ projects/*
 *.swo
 *~
 
+# Office系一時ファイル（ファイルを開いている間だけ生成されるロックファイル）
+~$*
+
 # Python
 __pycache__/
 *.py[cod]
