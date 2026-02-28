@@ -85,6 +85,16 @@ domain/tasks/dungeon-ingame-xlsx-generator/
 | クライアント実装（Unity/C#） | `projects/glow-client/` |
 | APIスキーマ定義 | `projects/glow-schema/` |
 
+### インゲームマスタデータ関連リソース
+
+インゲームのマスタデータ作成・設定に関しては以下を参照してください。
+
+| リソース | パス | 内容 |
+|---------|------|------|
+| インゲームマスタデータ設定方法 | `domain/tasks/masterdata-entry/in-game-tables/` 直下の各mdファイル | 各テーブルの設定方法・手順 |
+| 既存インゲームデータ詳細解説 | `domain/knowledge/masterdata/in-game/guides/` 直下の各mdファイル | 既存インゲームコンテンツの詳細説明（どんなインゲームなのか） |
+| マスタデータテーブルドキュメント | `domain/knowledge/masterdata/table-docs/` 直下の各mdファイル | テーブル1つあたり1ファイルでまとめたテーブル詳細ドキュメント |
+
 ### テーブル命名規則
 
 | 種類 | 命名規則 | 例 |
