@@ -124,6 +124,27 @@ domain/tasks/dungeon-ingame-xlsx-generator/
   - MstPage（行28-29）・MstKomaLine（行30-35）の投入用データがMstAutoPlayerSequenceと同じスタイルで表示される
   - 正解CSV（projects/glow-masterdata/MstKomaLine.csv）のjig1_charaget01データと照合済み
 - 現在のフェーズ: **MstKomaLine/MstPageのスプシ上でのデータ表示** 実装完了。Excel上での目視確認・正解データとの突合が必要。
+- 2026-02-28: **全対象シートに汎用式（LET+MATCH+INDIRECT）を適用完了**
+  - `scripts/apply_mst_formulas.py` で全5ファイル・全対象シートに一括適用
+  - 全シートで同一の式を使用（シートごとに異なる行位置をMATCHで動的解決）
+  - 【チャレンジ】死罪人1-4話、【降臨バトル】1話、【高難度】1-3話、通常/ボスブロック、ストーリー全話に適用
+  - **bg_offsetに関する制限**: チャレンジ/高難度/降臨バトルの既存正解CSVには特殊なbg_offset値（0.2, 0.3, 0.7等）があり、現在の式では生成できない。設計書にbg_offset入力列を追加することで将来的に対応可能。ストーリーは完全一致確認済み。
+
+### 追記: 汎用式の動的参照ロジック（重要）
+
+| 動的参照 | MATCHパターン | 説明 |
+|---------|-------------|------|
+| page_id行 | `MATCH("敵ゲートID",E:E,0)+1` | E列の「敵ゲートID」ヘッダーの次行 |
+| release_key行 | `MATCH("リリースキー",N:N,0)+1` | N列の「リリースキー」ヘッダーの次行 |
+| コマデータ第i行 | `MATCH("■コマ設計",B:B,0)+2+i` | B列の「■コマ設計」から+3〜+7行目 |
+
+シートタイプ別の実際の位置：
+
+| シートタイプ | 「敵ゲートID」行 | page_id行 | 「■コマ設計」行 | データ1行目 |
+|------------|---------------|----------|--------------|------------|
+| ストーリー/チャレンジ1-2話/降臨バトル | E12 | E13 | B28 or B35 | 行31 or 行38 |
+| チャレンジ3-4話/高難度 | E12 | E13 | B29 | 行32 |
+| 通常/ボスブロック | E13 | E14 | B16 | 行19 |
 
 ### 追記: スプシ1話シートのセル構造（重要）
 
@@ -142,10 +163,10 @@ domain/tasks/dungeon-ingame-xlsx-generator/
 | P31〜P35 | コマ幅4 ("none"でコマなし) |
 | R31〜R35 | コマ背景 (全コマ共通) |
 | U31〜 | コマ効果1 (koma1), AD=コマ効果2, AM=コマ効果3, AV=コマ効果4 |
-| BE28〜BH28 | ★MstPage投入用ヘッダー |
-| BF29〜BH29 | MstPageデータ (E13参照) |
-| BE30〜CV30 | ★MstKomaLine投入用ヘッダー (43列) |
-| BF31〜CV35 | MstKomaLineデータ (各コマ行) |
+| EA28〜ED28 | ★MstPage投入用ヘッダー（EA=ラベル, EB=ENABLE, EC=id, ED=release_key） |
+| EB29〜ED29 | MstPageデータ（動的式: MATCH("敵ゲートID",E:E,0)+1 で行参照） |
+| EA30〜FR30 | ★MstKomaLine投入用ヘッダー (43列) |
+| EB31〜FR35 | MstKomaLineデータ (各コマ行) (動的式: MATCH("■コマ設計",B:B,0)+3〜+7) |
 
 ### 追記: MstKomaLine CSV のコマなし時のパターン
 
@@ -153,10 +174,12 @@ domain/tasks/dungeon-ingame-xlsx-generator/
 |-----------|-----------|----------|
 | asset_key | 実値 | "" (空) |
 | width | 実値 | "" (空) |
-| back_ground_offset | IF(幅=1,0,-1) | "__NULL__" |
+| back_ground_offset | IF(幅=1,0,-1) ※1 | "__NULL__" |
 | effect_type | "None" or 実値 | "None" |
 | effect_parameter1 | 0 or 実値 | "" (空) |
 | effect_parameter2 | 0 or 実値 | "" (空) |
 | effect_target_side/colors/roles | "All" | "__NULL__" |
+
+※1 bg_offsetについて：ストーリーコンテンツはIF(幅=1,0,-1)で正解CSV一致。チャレンジ/高難度/降臨バトルの既存CSVには特殊値（0.2, 0.3等）があり近似値のみ生成可能。設計書にbg_offset入力列追加で将来対応可能。
 
 （作業を進めるにつれて、重要な決定・発見・注意点をここに追記してください）
