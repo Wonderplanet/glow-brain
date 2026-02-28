@@ -118,6 +118,45 @@ domain/tasks/dungeon-ingame-xlsx-generator/
 
 - 2026-02-28: タスク作成
 - 2026-02-28: 「通常ブロック」シートV27プルダウン修正。原因は参照シート（エネミー出現・コマ効果・行パターン・BGM_管理）が未追加だったため。ストーリーファイルから4シートをコピーして `work/` に修正済みファイルを配置
-- 現在のフェーズ: **P1（dungeonブロックテンプレートシートを用意）** が進行中。`work/` に修正済みのXLSXが存在する状態。
+- 2026-02-28: **「必ず生きて帰る」XLSXの1話シートにMstPage・MstKomaLine投入用データ表示を追加**
+  - `work/検証用コピー_【ストーリー】必ず生きて帰る.xlsx` を生成
+  - 1話シートのコマ設計セクション右側（BE列57〜CV列100）にセル数式を追加
+  - MstPage（行28-29）・MstKomaLine（行30-35）の投入用データがMstAutoPlayerSequenceと同じスタイルで表示される
+  - 正解CSV（projects/glow-masterdata/MstKomaLine.csv）のjig1_charaget01データと照合済み
+- 現在のフェーズ: **MstKomaLine/MstPageのスプシ上でのデータ表示** 実装完了。Excel上での目視確認・正解データとの突合が必要。
+
+### 追記: スプシ1話シートのセル構造（重要）
+
+| セル | 内容 |
+|------|------|
+| B13 | ゲートタイプ (default) |
+| E13 | **page_id** (例: event_jig1_charaget01_00001) |
+| H13 | 敵ゲートasset |
+| N13 | **release_key** (例: 202601010) |
+| B28 | ■コマ設計 ヘッダー |
+| D31〜D35 | 行パターンID (空なら行なし) |
+| H31〜H35 | コマ高さ |
+| J31〜J35 | コマ幅1 (VLOOKUP for layout) |
+| L31〜L35 | コマ幅2 ("none"でコマなし) |
+| N31〜N35 | コマ幅3 ("none"でコマなし) |
+| P31〜P35 | コマ幅4 ("none"でコマなし) |
+| R31〜R35 | コマ背景 (全コマ共通) |
+| U31〜 | コマ効果1 (koma1), AD=コマ効果2, AM=コマ効果3, AV=コマ効果4 |
+| BE28〜BH28 | ★MstPage投入用ヘッダー |
+| BF29〜BH29 | MstPageデータ (E13参照) |
+| BE30〜CV30 | ★MstKomaLine投入用ヘッダー (43列) |
+| BF31〜CV35 | MstKomaLineデータ (各コマ行) |
+
+### 追記: MstKomaLine CSV のコマなし時のパターン
+
+| フィールド | コマ存在時 | コマ不在時 |
+|-----------|-----------|----------|
+| asset_key | 実値 | "" (空) |
+| width | 実値 | "" (空) |
+| back_ground_offset | IF(幅=1,0,-1) | "__NULL__" |
+| effect_type | "None" or 実値 | "None" |
+| effect_parameter1 | 0 or 実値 | "" (空) |
+| effect_parameter2 | 0 or 実値 | "" (空) |
+| effect_target_side/colors/roles | "All" | "__NULL__" |
 
 （作業を進めるにつれて、重要な決定・発見・注意点をここに追記してください）
