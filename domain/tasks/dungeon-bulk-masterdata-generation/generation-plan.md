@@ -244,6 +244,81 @@ spy boss の移動先: `outputs/spy/dungeon_spy_boss_00001/`
 
 ---
 
+## 最終ステップ: XLSX統合
+
+全30ブロックの生成が完了したら、テーブルごとに全CSVを縦連結して1つのXLSXにまとめる。
+
+### 完成イメージ
+
+```
+outputs/xlsx/20260301_masterdata.xlsx
+  シート: MstEnemyStageParameter  ← 全30ブロック分を縦連結
+  シート: MstEnemyOutpost         ← 全30ブロック分を縦連結
+  シート: MstPage                 ← 全30ブロック分を縦連結
+  シート: MstKomaLine             ← 全30ブロック分を縦連結
+  シート: MstAutoPlayerSequence   ← 全30ブロック分を縦連結
+  シート: MstInGame               ← 全30ブロック分を縦連結
+```
+
+### Step 1: テーブルごとに縦連結して merged/ に集約
+
+各テーブルのCSVを全ブロック分まとめてDuckDBで縦連結する。
+
+```bash
+# マージ先ディレクトリを作成
+mkdir -p domain/tasks/dungeon-bulk-masterdata-generation/outputs/merged
+
+# 各テーブルを縦連結（6テーブル分実行）
+for table in MstEnemyStageParameter MstEnemyOutpost MstPage MstKomaLine MstAutoPlayerSequence MstInGame; do
+  duckdb -c "
+    COPY (
+      SELECT * FROM read_csv(
+        'domain/tasks/dungeon-bulk-masterdata-generation/outputs/*/dungeon_*_00001/generated/${table}.csv',
+        AUTO_DETECT=TRUE, nullstr='__NULL__', union_by_name=true
+      )
+    )
+    TO 'domain/tasks/dungeon-bulk-masterdata-generation/outputs/merged/${table}.csv'
+    WITH (HEADER, DELIMITER ',');
+  "
+done
+```
+
+> `union_by_name=true` により、列の過不足があっても安全にマージされる。
+
+### Step 2: merged/ の内容を確認
+
+```bash
+ls domain/tasks/dungeon-bulk-masterdata-generation/outputs/merged/
+# MstAutoPlayerSequence.csv
+# MstEnemyOutpost.csv
+# MstEnemyStageParameter.csv
+# MstInGame.csv
+# MstKomaLine.csv
+# MstPage.csv
+
+# 件数確認（ヘッダー除く）
+for f in domain/tasks/dungeon-bulk-masterdata-generation/outputs/merged/*.csv; do
+  echo "$(basename $f): $(tail -n +2 $f | wc -l) rows"
+done
+```
+
+### Step 3: `/masterdata-csv-to-xlsx` で XLSX に変換
+
+```
+/masterdata-csv-to-xlsx
+```
+
+スキル実行時の入力情報:
+
+```
+入力ディレクトリ: domain/tasks/dungeon-bulk-masterdata-generation/outputs/merged/
+出力ファイル名: dungeon_all_masterdata.xlsx
+```
+
+出力先: `outputs/merged/xlsx/dungeon_all_masterdata.xlsx`
+
+---
+
 ## 進捗管理
 
 生成完了したら状態列を更新する。
