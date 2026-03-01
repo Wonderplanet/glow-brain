@@ -26,10 +26,7 @@ domain/tasks/masterdata-entry/masterdata-ingame-creator/20260220_153042_event_ka
   ├── MstPage.csv
   ├── MstKomaLine.csv
   ├── MstAutoPlayerSequence.csv
-  ├── MstInGame.csv
-  ├── MstStage.csv
-  ├── MstStageEventSetting.csv
-  └── MstStageEventReward.csv
+  └── MstInGame.csv
 ```
 
 ---
@@ -44,11 +41,7 @@ domain/tasks/masterdata-entry/masterdata-ingame-creator/20260220_153042_event_ka
 | `MstKomaLine.csv` | **必須** | コマライン（コマ配置・コマ効果）設定 |
 | `MstAutoPlayerSequence.csv` | **必須** | 敵出現シーケンス設定 |
 | `MstInGame.csv` | **必須** | インゲーム全体設定（バトルフィールド参照） |
-| `MstStage.csv` | **必須** | ステージ設定（コスト・EXP・コイン等） |
-| `MstStageEventSetting.csv` | **必須** | ステージのイベント設定（期間・クリア回数） |
-| `MstStageEventReward.csv` | **必須** | ステージのドロップ報酬設定 |
 | `MstInGameI18n.csv` | オプション | インゲームの多言語テキスト（説明文・ティップス） |
-| `MstStageClearTimeReward.csv` | オプション | クリアタイム報酬（challenge/savage系のみ） |
 | `MstInGameSpecialRule.csv` | オプション | 特別ルール（コンティニュー禁止等） |
 
 ---
@@ -60,14 +53,15 @@ domain/tasks/masterdata-entry/masterdata-ingame-creator/20260220_153042_event_ka
 ユーザーの入力テキストを分析し、以下の情報が揃っているか確認する。
 **不足している場合は、まとめて1回だけ質問する。2回に分けない。**
 
-確認する6項目（[interview-questions.md](references/interview-questions.md) 参照）:
+確認する7項目（[interview-questions.md](references/interview-questions.md) 参照）:
 
-1. **ステージ種別** — event/challenge/savage/raid/daily/normal/hard/veryhard
-2. **インゲームID** — ユーザーが指定しているか（なければ命名規則に従い提案）
-3. **使用する敵キャラ** — `mst_enemy_character_id`（既存IDを確認が必要）
-4. **ボスの有無** — ボスキャラID、ボスの色属性
-5. **コマ効果** — 指定がなければ `None`（エフェクトなし）
-6. **特別ルール** — チャレンジ/サベージの場合は SpeedAttack/NoContinue等
+1. **コンテンツ種別** — event/normal/hard/veryhard/raid/pvp/tutorial 等（種別ごとの設定パターンは [ingame-content-type-patterns.md](references/ingame-content-type-patterns.md) を参照）
+2. **ステージ種別** — event/challenge/savage/raid/daily/normal/hard/veryhard
+3. **インゲームID** — ユーザーが指定しているか（なければ命名規則に従い提案）
+4. **使用する敵キャラ** — `mst_enemy_character_id`（既存IDを確認が必要）
+5. **ボスの有無** — ボスキャラID、ボスの色属性
+6. **コマ効果** — 指定がなければ `None`（エフェクトなし）
+7. **特別ルール** — チャレンジ/サベージの場合は SpeedAttack/NoContinue等
 
 設計確認サマリーを作成し、ユーザーに承認を求めてからStep 1に進む。
 
@@ -97,10 +91,7 @@ duckdb -c "SELECT * FROM read_csv('projects/glow-masterdata/MstInGame.csv', AUTO
 4. MstKomaLine（MstPageに属する）
 5. MstAutoPlayerSequence（MstEnemyStageParameterのIDを参照）
 6. MstInGame（上記すべてを参照）
-7. MstStage（MstInGameを参照）
-8. MstStageEventSetting（MstStageを参照）
-9. MstStageEventReward（MstStageを参照）
-10. （オプション）MstStageClearTimeReward / MstInGameSpecialRule / MstInGameI18n
+7. （オプション）MstInGameSpecialRule / MstInGameI18n
 
 ---
 
@@ -144,7 +135,6 @@ MstInGame.id
   = MstAutoPlayerSequence.sequence_set_id
   = MstPage.id（MstInGame.mst_page_idが参照）
   = MstEnemyOutpost.id（MstInGame.mst_enemy_outpost_idが参照）
-  = MstStage.mst_in_game_id
 ```
 
 **FK参照チェック:**
@@ -167,9 +157,6 @@ MstInGame.id
 - MstKomaLine.csv: {行数}行
 - MstAutoPlayerSequence.csv: {行数}行
 - MstInGame.csv: 1行（id: {id}）
-- MstStage.csv: {行数}行
-- MstStageEventSetting.csv: {行数}行
-- MstStageEventReward.csv: {行数}行
 
 ### 使用するID
 - インゲームID: {id}
@@ -245,6 +232,7 @@ MstInGame.id
 ## リファレンス一覧
 
 - [interview-questions.md](references/interview-questions.md) — Step 0 の質問フロー
+- [ingame-content-type-patterns.md](references/ingame-content-type-patterns.md) — インゲームコンテンツ種別ごとの設定パターン
 - [id-naming-rules.md](references/id-naming-rules.md) — ID命名規則の詳細
 - [table-creation-order.md](references/table-creation-order.md) — テーブル生成順序と依存関係
 - [stage-type-patterns.md](references/stage-type-patterns.md) — ステージ種別ごとの設定パターン
