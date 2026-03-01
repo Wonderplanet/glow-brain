@@ -50,7 +50,7 @@ domain/tasks/masterdata-entry/masterdata-ingame-creator/20260220_153042_event_ka
 
 ---
 
-## 10ステップワークフロー（2フェーズ構成）
+## 9ステップワークフロー（2フェーズ構成）
 
 > **重要**: Phase 1（設計フェーズ）でユーザーの承認を得てから、Phase 2（生成フェーズ）に進む。
 > 設計書の承認なしにCSVを生成してはならない。
@@ -195,11 +195,12 @@ domain/tasks/masterdata-entry/masterdata-ingame-creator/{タイムスタンプ}_
 
 ### Step 5: CSV生成（列ヘッダー厳守）
 
-**必須手順**: 各テーブルを生成する前に、実際のCSVファイルの1行目を読み取り、列順を厳守する。
+**必須手順**: 各テーブルを生成する前に、sheet_schemaのCSVファイルの3行目（ENABLE行）を読み取り、列順を厳守する。
 
 ```python
 # 各テーブル生成前に実行
-# Read tool で projects/glow-masterdata/{テーブル名}.csv の1行目を確認する
+# Read tool で projects/glow-masterdata/sheet_schema/{テーブル名}.csv の3行目（ENABLE行）を確認する
+# ※ 3行ヘッダー形式: 行1=memo, 行2=TABLE,テーブル名, 行3=ENABLE,カラム名,...
 ```
 
 生成のポイント:
@@ -210,38 +211,24 @@ domain/tasks/masterdata-entry/masterdata-ingame-creator/{タイムスタンプ}_
 
 ---
 
-### Step 6: CSVバリデーション（masterdata-csv-validator）
+### Step 6: インゲームデータ総合検証（masterdata-ingame-verifier）
 
-生成した全CSVを検証する。
+生成した全CSVを masterdata-ingame-verifier スキルで総合検証する。
+以下の5フェーズをカバーする:
 
-```bash
-for csv in domain/tasks/masterdata-entry/masterdata-ingame-creator/{フォルダ}/generated/*.csv; do
-  python .claude/skills/masterdata-csv-validator/scripts/validate_all.py --csv "$csv"
-done
-```
+- **フェーズA: フォーマット検証** — 列順・型・enum値（sheet_schemaベースで確認）
+- **フェーズB: ID整合性チェック** — 4テーブルのID連鎖・FK参照の確認
+- **フェーズC: ゲームプレイ品質チェック** — コマ幅合計・シーケンス合理性・ステージ種別固有ルール
+- **フェーズD: バランス比較** — 既存データの分布との比較（±5倍範囲外はWARNING）
+- **フェーズE: アセットキー形式チェック** — 必須アセットキーの空欄確認
 
-エラーがあれば修正してから次のステップへ進む。
-
----
-
-### Step 7: ID整合性チェック（4テーブルのID連鎖確認）
-
-以下のID連鎖が正しいことを確認する:
-
-```
-MstInGame.id
-  = MstAutoPlayerSequence.sequence_set_id
-  = MstPage.id（MstInGame.mst_page_idが参照）
-  = MstEnemyOutpost.id（MstInGame.mst_enemy_outpost_idが参照）
-```
-
-**FK参照チェック:**
-- `MstAutoPlayerSequence.action_value`（action_type=SummonEnemy時）→ `MstEnemyStageParameter.id` が存在するか
-- `MstInGame.boss_mst_enemy_stage_parameter_id` → `MstEnemyStageParameter.id` が存在するか
+**結果の扱い:**
+- CRITICAL エラー → 必ず修正してから次のステップへ進む
+- WARNING → 内容を確認し、意図的であればそのまま進んでよい
 
 ---
 
-### Step 8: ファイル保存とサマリー出力
+### Step 7: ファイル保存とサマリー出力
 
 全CSVをタイムスタンプ付きディレクトリに保存し、以下のサマリーを出力する:
 
@@ -262,14 +249,14 @@ MstInGame.id
 - ページID: {id}
 
 ### 次のステップ
-1. 詳細解説ドキュメントを生成する（Step 9）
+1. 詳細解説ドキュメントを生成する（Step 8）
 2. MstQuest（新規クエストの場合）を作成する
 3. projects/glow-masterdata/ に配置してDB投入する
 ```
 
 ---
 
-### Step 9: 詳細解説ドキュメント生成（masterdata-ingame-detail-explainer）
+### Step 8: 詳細解説ドキュメント生成（masterdata-ingame-detail-explainer）
 
 生成したCSVを元に、インゲームの詳細解説ドキュメントを生成する。
 
@@ -300,11 +287,12 @@ domain/tasks/masterdata-entry/masterdata-ingame-creator/{タイムスタンプ}_
 
 ### 1. 列ヘッダーの順番厳守
 
-各テーブルのCSVを生成する前に、**必ずRead toolで実際のCSVファイルの1行目を読み取り**、その順番に従う。
+各テーブルのCSVを生成する前に、**必ずRead toolでsheet_schemaのCSVファイルの3行目（ENABLE行）を読み取り**、その順番に従う。
 
 ```
 # NG: 記憶に基づいて列順を決める
-# OK: Read で projects/glow-masterdata/MstInGame.csv の先頭を確認してから生成
+# NG: projects/glow-masterdata/*.csv（実データ）の1行目から列順を読む（sheet_schemaと差異がある場合があるため）
+# OK: Read で projects/glow-masterdata/sheet_schema/MstInGame.csv の3行目（ENABLE行）を確認してから生成
 ```
 
 ### 2. IDの一貫性
