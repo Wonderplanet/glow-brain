@@ -1,6 +1,6 @@
 ---
 name: masterdata-ingame-creator
-description: インゲーム設計テキストからインゲーム関連マスタデータCSVを作成するスキル。ユーザーが提供した設計思想（敵構成・ステージ種別・難易度イメージ）を分析し、MstEnemyStageParameter・MstAutoPlayerSequence・MstInGame等の必須テーブルを含む全CSVを段階的に生成します。「インゲームCSV作成」「インゲームマスタ作成」「バトルステージ作成」「敵出現設定」「新規ステージ設計」「インゲーム設計」などのキーワードで使用します。
+description: インゲーム設計テキストからインゲーム関連マスタデータCSVを作成するスキル。ユーザーが提供した設計思想（敵構成・ステージ種別・難易度イメージ）を分析し、MstEnemyStageParameter・MstAutoPlayerSequence・MstInGame等の必須テーブルを含む全CSVを段階的に生成します。「インゲームCSV作成」「インゲームマスタ作成」「バトルステージ作成」「敵出現設定」「新規ステージ設計」「インゲーム設計」「限界チャレンジ」「dungeonブロック作成」などのキーワードで使用します。
 ---
 
 # インゲームマスタデータ作成スキル
@@ -55,8 +55,9 @@ domain/tasks/masterdata-entry/masterdata-ingame-creator/20260220_153042_event_ka
 
 確認する7項目（[interview-questions.md](references/interview-questions.md) 参照）:
 
-1. **コンテンツ種別** — event/normal/hard/veryhard/raid/pvp/tutorial 等（種別ごとの設定パターンは [ingame-content-type-patterns.md](references/ingame-content-type-patterns.md) を参照）
-2. **ステージ種別** — event/challenge/savage/raid/daily/normal/hard/veryhard
+1. **コンテンツ種別** — event/normal/hard/veryhard/raid/dungeon/pvp/tutorial 等（種別ごとの設定パターンは [ingame-content-type-patterns.md](references/ingame-content-type-patterns.md) を参照）
+   - **dungeon（限界チャレンジ）の場合**: ブロック種別（boss/normal）を確認し、MstEnemyOutpost HPとコマ行数は固定値を使用する（boss=HP:1,000/コマ1行、normal=HP:100/コマ3行）
+2. **ステージ種別** — event/challenge/savage/raid/dungeon_boss/dungeon_normal/normal/hard/veryhard
 3. **インゲームID** — ユーザーが指定しているか（なければ命名規則に従い提案）
 4. **使用する敵キャラ** — `mst_enemy_character_id`（既存IDを確認が必要）
 5. **ボスの有無** — ボスキャラID、ボスの色属性

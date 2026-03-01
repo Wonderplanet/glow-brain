@@ -16,6 +16,8 @@
 | `event_savage` | サベージ | サベージバトル（高難易度） |
 | `event_1day` | デイリー, 1日限定 | 1日限定イベントクエスト |
 | `raid` | レイド | レイドバトル（スコアアタック型） |
+| `dungeon_boss` | 限界チャレンジ, dungeonボス | 限界チャレンジ・ボスブロック（コマ1行・HP=1,000） |
+| `dungeon_normal` | 限界チャレンジ通常, dungeonノーマル | 限界チャレンジ・通常ブロック（コマ3行・HP=100） |
 | `normal` | 通常, フリクエ | 通常難易度クエスト |
 | `hard` | ハード | ハード難易度クエスト |
 | `veryhard` | VH, ベリーハード | ベリーハード難易度クエスト |
@@ -81,7 +83,7 @@
 
 **未確認の項目のみ質問する:**
 
-【ステージ種別】 event_charaget / event_challenge / event_savage / raid / normal / hard / veryhard のうちどれですか？
+【ステージ種別】 event_charaget / event_challenge / event_savage / raid / dungeon_boss / dungeon_normal / normal / hard / veryhard のうちどれですか？
 
 【使用する敵キャラ】
 - 雑魚敵のキャラID（例: chara_kai_00101, enemy_kai_00001）
@@ -96,6 +98,37 @@
 - コンティニュー禁止の有無
 - シリーズ制限の有無
 ```
+
+---
+
+## dungeon（限界チャレンジ）専用ヒアリング項目
+
+dungeon_boss / dungeon_normal が指定された場合、以下を追加で確認する:
+
+### dungeon専用質問
+
+```
+【シリーズID】
+- シリーズ略称（例: kai, dan, spy）を教えてください
+
+【ブロック構成】
+- 今回作成するブロック数は何ブロックですか？
+  例: boss 1個 + normal 3個 = 計4ブロック
+- 各ブロックの連番（例: boss_00001, normal_00001〜00003）は指定ありますか？
+
+【ボスブロック（dungeon_boss）の設定】
+- ボスキャラID（例: chara_kai_00201）
+- ボスの色属性: Colorless / Red / Blue / Yellow / Green
+- 雑魚敵の構成（種類・数）
+
+【通常ブロック（dungeon_normal）の設定】
+- 各normalブロックの雑魚敵の構成（ブロックごとに異なる場合は個別に）
+- ブロック間で敵を使い回す場合は共通設定を教えてください
+```
+
+**固定値の確認（ユーザーへの周知）:**
+- dungeon_boss: MstEnemyOutpost HP = **1,000** / コマ行数 = **1行**
+- dungeon_normal: MstEnemyOutpost HP = **100** / コマ行数 = **3行**
 
 ---
 
@@ -144,4 +177,46 @@ CSV生成前にユーザー承認を取るためのサマリー:
 9. MstStageEventReward（{N}行）
 {10. MstInGameSpecialRule（{N}行）} ※オプション
 {11. MstStageClearTimeReward（{N}行）} ※オプション
+```
+
+---
+
+## dungeon版 設計確認サマリーテンプレート
+
+dungeon_boss / dungeon_normal を作成する場合に使用するサマリー:
+
+```markdown
+## 設計確認サマリー（限界チャレンジ）
+
+以下の設計で限界チャレンジのインゲームマスタデータを生成します。問題なければ「OK」と入力してください。
+
+### 作成するブロック一覧
+
+| ブロック種別 | インゲームID | コマ行数 | アウトポストHP |
+|------------|-----------|--------:|--------------:|
+| dungeon_boss | `dungeon_{シリーズ}_boss_{連番}` | 1行 | 1,000 |
+| dungeon_normal | `dungeon_{シリーズ}_normal_{連番}` | 3行 | 100 |
+| dungeon_normal | `dungeon_{シリーズ}_normal_{連番+1}` | 3行 | 100 |
+...（ブロック数分繰り返し）
+
+### ボスブロック（dungeon_boss）の敵構成
+| 種別 | キャラID | 色 |
+|------|---------|-----|
+| ボス | `{キャラID}` | {色} |
+| 雑魚A | `{キャラID}` | {色} |
+
+### 通常ブロック（dungeon_normal）の敵構成
+| ブロック | 雑魚キャラID | 色 | 体数 |
+|---------|-------------|-----|----:|
+| normal_00001 | `{キャラID}` | {色} | {N} |
+| normal_00002 | `{キャラID}` | {色} | {N} |
+
+### 生成するCSVファイル（ブロックごと）
+各ブロックにつき:
+1. MstEnemyStageParameter（敵数分の行）
+2. MstEnemyOutpost（1行、HP固定値）
+3. MstPage（1行）
+4. MstKomaLine（boss=1行 / normal=3行）
+5. MstAutoPlayerSequence（シーケンス行数分）
+6. MstInGame（1行）
 ```
