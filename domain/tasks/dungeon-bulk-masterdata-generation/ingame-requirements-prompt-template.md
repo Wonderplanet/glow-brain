@@ -1,87 +1,80 @@
-# インゲーム要件テキスト 作成プロンプトテンプレート
+# dungeon インゲーム要件テキスト 生成プロンプト
 
-このファイルは、限界チャレンジ（dungeon）のインゲーム要件テキストを作成する際のプロンプト参考例です。
-`/masterdata-ingame-creator` スキルへの入力として使うインゲーム要件テキストを生成することが目的です。
-
----
-
-## 参照させるファイル（必須）
-
-プロンプトに以下を `@ファイルパス` で添付してください。
-
-| 役割 | ファイルパス |
-|------|------------|
-| インゲーム要件テキストの参考例 | `domain/tasks/dungeon-bulk-masterdata-generation/参考例_インゲーム要件テキスト.md` |
-| 対象作品のパターン分析 | `domain/tasks/dungeon-bulk-masterdata-generation/knowledge/ingame-patterns/{series_id}-pattern-analysis.md` |
-| dungeon基本要件（仕様） | `domain/tasks/dungeon-bulk-masterdata-generation/knowledge/dungeon-ingame-basic-requirements.md` |
+`/masterdata-ingame-creator` に渡す「インゲーム要件テキスト」を作成するためのプロンプト。
+`{series_id}` を対象作品のIDに置き換えて使う。
 
 ---
 
-## プロンプト本文（テンプレート）
+## プロンプト
 
 ```
-限界チャレンジ(dungeon)のインゲームマスタデータを作成するための
-インゲーム要件テキストを作りたい。（マスタデータ作成はまだやりません。）
+限界チャレンジ（dungeon）のインゲームマスタデータ作成に使う「インゲーム要件テキスト」を生成してください。
+マスタデータ（CSV）の作成はまだ行いません。
 
-インゲーム要件テキストの参考例：
-@参考例_インゲーム要件テキスト.md
+## 参考・仕様ドキュメント
 
-このような、インゲーム要件テキストをインプットとして、masterdata-ingame-creatorスキルを使って、
-インゲームマスタデータを作成することを考えています。
+インゲーム要件テキストの出力フォーマット参考：
+@domain/tasks/dungeon-bulk-masterdata-generation/参考例_インゲーム要件テキスト.md
 
-インゲーム要件については、作品ごとに各種要素で特徴があります。
-その特徴を既存データや下記のドキュメントを参考に、しっかり反映しつつ、
-作品ごとの特徴を捉えた、楽しいインゲームデータを作れるようにする必要があります。
-@knowledge/ingame-patterns/{series_id}-pattern-analysis.md
+対象作品のインゲームパターン分析（敵ID・アセットキー・シーケンスパターン等）：
+@domain/tasks/dungeon-bulk-masterdata-generation/knowledge/ingame-patterns/{series_id}-pattern-analysis.md
 
-限界チャレンジにおけるインゲームの基本要件についてはこちらです
-@knowledge/dungeon-ingame-basic-requirements.md
+限界チャレンジのバトルシステム・マスタデータ設計仕様：
+@domain/tasks/dungeon-bulk-masterdata-generation/knowledge/dungeon-ingame-basic-requirements.md
 
-上記のための「インゲーム要件テキスト」を
-まずは {series_id} で2ブロック(通常ブロック、ボスブロック)で、それぞれ1つずつを作ってください。
+## 作成対象
 
-禁止事項：
-- 下記は絶対に見ないでください。参考にしないでください。禁止です。
-    - /Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-supachababy/domain/tasks/masterdata-entry
+- 作品: {series_id}
+- ブロック: 通常ブロック（dungeon_normal）・ボスブロック（dungeon_boss）各1つ
+
+## 出力形式
+
+通常ブロック・ボスブロックの順に、各ブロックを以下の2パート構成で出力すること。
+
+**パート1: 要件テキスト（日本語散文）**
+参考例と同じスタイルで記述し、以下の内容を必ず含めること：
+- インゲームID・ブロック種別
+- 敵ゲートHP（dungeon仕様の固定値）
+- BGMアセットキー・ループ背景アセットキー
+- コマ行数（dungeon仕様の固定値）・コマ効果の有無
+- 登場する敵のキャラID・属性・HP・攻撃力・移動速度・役割
+- シーケンス構成（トリガー種別・グループ切替の有無・行数目安）
+- バトルヒント・ステージ説明文のイメージ
+
+**パート2: 設計メモ（表）**
+パート1の主要パラメータを一覧表にまとめること。
+
+## 設計の方針
+
+- パターン分析に記載された敵ID・アセットキーを正確に使用すること
+- dungeon仕様の固定値（HP・コマ行数等）を必ず守ること
+- 作品の世界観・キャラクターの個性が伝わる設計にすること
+
+## 禁止事項
+
+以下は絶対に参照しないこと：
+- domain/tasks/masterdata-entry
 ```
 
 ---
 
-## 生成後の保存先
+## 生成後の保存
 
-要件テキスト生成後は以下に保存してください。
+生成されたら以下のプロンプトで保存を依頼する。
 
+```
+outputs/{series_id}/boss, normal にmdファイルとして保存しておいて
+```
+
+保存先:
 ```
 outputs/{series_id}/normal/dungeon_{series_id}_normal_00001.md
 outputs/{series_id}/boss/dungeon_{series_id}_boss_00001.md
 ```
 
-保存を依頼する追加プロンプト例：
-```
-outputs/{series_id}/boss, normal ... にmdファイルとして保存しておいて
-```
-
 ---
 
-## SPY×FAMILYでの実施例（spy）
+## spy での実施記録
 
-### 生成された要件テキストの保存先
-
-- `outputs/spy/normal/dungeon_spy_normal_00001.md`
-- `outputs/spy/boss/dungeon_spy_boss_00001.md`
-
-### 生成時にClaudeが参照・活用した情報
-
-| 参照情報 | 使用内容 |
-|---------|---------|
-| `spy-pattern-analysis.md` | 雑魚敵ID（`enemy_spy_00001`, `enemy_spy_00101`）、ロイドのキャラID（`chara_spy_00101`）、BGM/背景アセットキー（`SSE_SBG_003_002`, `spy_00005`）の確認 |
-| `dungeon-ingame-basic-requirements.md` | normalブロック（HP=100固定、3行コマ、ElapsedTimeシーケンス）、bossブロック（HP=1000固定、1行コマ、InitialSummonボス配置、ゲートダメージ無効）の仕様確認 |
-| `参考例_インゲーム要件テキスト.md` | テキストの文体・粒度・構成フォーマットの参考 |
-
----
-
-## 注意事項
-
-- 禁止ディレクトリ（`domain/tasks/masterdata-entry`）は絶対に参照しないこと
-- インゲーム要件テキスト作成時点ではCSV生成は行わない（次のステップ）
-- 次のステップは `/masterdata-ingame-creator` スキルで要件テキストをインプットにCSVを生成する
+- 生成ファイル: `outputs/spy/normal/dungeon_spy_normal_00001.md`, `outputs/spy/boss/dungeon_spy_boss_00001.md`
+- 参照した主な情報: 雑魚敵ID（`enemy_spy_00001`, `enemy_spy_00101`）、ロイドのキャラID（`chara_spy_00101`）、BGM（`SSE_SBG_003_002`）、背景（`spy_00005`）
