@@ -79,6 +79,9 @@ dungeon_{シリーズID}_{ブロック種別}_{連番5桁}
 /masterdata-ingame-creator
 ```
 
+> **出力先**: `domain/tasks/dungeon-bulk-masterdata-generation/outputs/{series_id}/`
+> スキルのデフォルト出力先（`domain/tasks/masterdata-entry/masterdata-ingame-creator/`）ではなく、このフォルダ以下に保存すること。
+
 設計テキストに含める情報:
 - コンテンツ種別: `dungeon（限界チャレンジ）`
 - ブロック種別: `normal` or `boss`
@@ -102,11 +105,12 @@ dungeon_{シリーズID}_{ブロック種別}_{連番5桁}
 
 ---
 
-## マスタデータ出力先
+## マスタデータ出力先（重要）
 
-`masterdata-ingame-creator` の出力先:
+> **⚠️ このタスクディレクトリ内でスキルを実行する場合、出力先をスキルのデフォルトではなく以下に変更すること。**
+
 ```
-domain/tasks/masterdata-entry/masterdata-ingame-creator/{タイムスタンプ}_{英語要約}/
+domain/tasks/dungeon-bulk-masterdata-generation/outputs/{series_id}/
   ├── design.md
   ├── {INGAME_ID}.md
   └── generated/
@@ -118,12 +122,22 @@ domain/tasks/masterdata-entry/masterdata-ingame-creator/{タイムスタンプ}_
       └── MstInGame.csv
 ```
 
+**例（SPY×FAMILYのnormalブロック）:**
+```
+domain/tasks/dungeon-bulk-masterdata-generation/outputs/spy/
+  ├── design.md
+  ├── dungeon_spy_normal_00001.md
+  └── generated/
+      ├── MstEnemyStageParameter.csv
+      └── ...
+```
+
 ---
 
 ## SPY×FAMILY（spy）の参考情報
 
 既に `dungeon_spy_normal_00001` が生成済み（参考として利用可）。
-- 出力フォルダ: `domain/tasks/masterdata-entry/masterdata-ingame-creator/20260301_131508_dungeon_spy_normal_block/`
+- 参考フォルダ: `domain/tasks/masterdata-entry/masterdata-ingame-creator/20260301_131508_dungeon_spy_normal_block/`
 - 背景アセット: `spy_00005`
 - BGM: `SSE_SBG_003_002`
 - 雑魚敵: `enemy_spy_00001`（メイン）、`enemy_spy_00101`（サブ）
