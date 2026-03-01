@@ -5,7 +5,7 @@
     },
     "permissions": {
         "deny": [
-            "Read(//Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-hotei/domain/tasks/masterdata-entry/in-game-tables/generated/**)"
+            "Read(//Users/junki.mizutani/Documents/workspace/glow/glow-brain-repos/glow-brain-supachababy/domain/tasks/masterdata-entry/masterdata-ingame-creator/20260220_104212_normal_you_00001/**)"
         ]
     }
 }
