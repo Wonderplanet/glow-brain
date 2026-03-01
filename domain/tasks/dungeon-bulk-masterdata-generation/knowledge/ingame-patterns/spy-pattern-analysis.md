@@ -92,7 +92,7 @@
 
 ## エネミー別パラメータ（MstEnemyStageParameter）
 
-### 雑魚敵: enemy_spy_00001
+### 雑魚敵: enemy_spy_00001（密輸組織の残党）
 
 generalグループ（通常・ハード・超ハード別）:
 
@@ -112,7 +112,7 @@ generalグループ（通常・ハード・超ハード別）:
 | e_spy_00001_spy1challenge_Normal_Blue/Green/Yellow | チャレンジ | 5,000 | 25 | 300 |
 | e_spy_00001_spy1savage_Normal_Colorless | サベージ | 5,000 | 70 | 300 |
 
-### 雑魚敵: enemy_spy_00101
+### 雑魚敵: enemy_spy_00101（グエン）
 
 generalグループ:
 
@@ -126,7 +126,7 @@ generalグループ:
 | e_spy_00101_general_vh_Boss_Blue | Boss | Attack | Blue | 10,000 | 31 | 0.2 | 100 | 1 | 500 |
 | e_spy_00101_general_vh_Boss_Green | Boss | Attack | Green | 10,000 | 31 | 0.2 | 100 | 1 | 500 |
 
-### URキャラ（ボスとして登場）: chara_spy_00101
+### URキャラ（ボスとして登場）: chara_spy_00101（<黄昏> ロイド）
 
 | parameter_id | 用途 | character_unit_kind | role_type | color | HP | move_speed | attack_power | drop_battle_point |
 |-------------|-----|--------------------|-----------|----|---|---|---|---|
@@ -138,7 +138,7 @@ generalグループ:
 | c_spy_00101_general_vh_Boss_Colorless | veryhard用ボス | Boss | Attack | Colorless | 10,000 | 31 | 100 | 120 |
 | c_spy_00101_general_vh_Boss_Red | veryhard用ボス | Boss | Attack | Red | 10,000 | 31 | 100 | 120 |
 
-### URキャラ（ボスとして登場）: chara_spy_00201
+### URキャラ（ボスとして登場）: chara_spy_00201（<いばら姫> ヨル）
 
 | parameter_id | 用途 | character_unit_kind | role_type | color | HP | move_speed | attack_power |
 |-------------|-----|--------------------|-----------|----|---|---|---|
@@ -149,7 +149,7 @@ generalグループ:
 | c_spy_00201_general_vh_Boss_Blue | veryhard用ボス | Boss | Attack | Blue | 10,000 | 45 | 100 |
 | c_spy_00201_general_vh_Boss_Yellow | veryhard用ボス | Boss | Attack | Yellow | 10,000 | 45 | 100 |
 
-### URキャラ（ボスとして登場）: chara_spy_00401（注: URではなくSSR相当と思われる）
+### URキャラ（ボスとして登場）: chara_spy_00401 フランキー・フランクリン（注: URではなくSSR相当と思われる）
 
 | parameter_id | 用途 | character_unit_kind | role_type | color | HP | move_speed | attack_power |
 |-------------|-----|--------------------|-----------|----|---|---|---|
@@ -236,7 +236,7 @@ normalブロックのエネミーHP係数とシーケンス概要:
 
 #### normal_spy_00003〜00006
 
-`enemy_spy_00001`（ヨル・フォージャー系？）を主軸に使用。ボス役として `enemy_spy_00001_general_n_Boss_Blue` や URキャラ系パラメータを召喚する構成。
+`enemy_spy_00001`（密輸組織の残党）を主軸に使用。ボス役として `enemy_spy_00001_general_n_Boss_Blue` や URキャラ系パラメータを召喚する構成。
 
 ### hardブロックのシーケンス
 
@@ -351,7 +351,7 @@ normalブロックパターンを参考に:
 
 ### 雑魚敵の使用ルール
 
-1. **enemy_spy_00001**（ヨル系？）と **enemy_spy_00101**（アーニャ系？）が主力雑魚
+1. **enemy_spy_00001**（密輸組織の残党）と **enemy_spy_00101**（グエン）が主力雑魚
 2. generalパラメータIDの命名規則: `e_{enemy_id}_general_{難易度}_{unit_kind}_{color}`
    - 難易度: `n`（normal）, `h`（hard）, `vh`（veryhard）
    - unit_kind: `Normal`, `Boss`
@@ -360,9 +360,9 @@ normalブロックパターンを参考に:
 ### ボスエネミーのキャラ
 
 ゲームキャラ（c_spy_XXXXX_general_*）がボスとして登場:
-- `c_spy_00101_general_n_Boss_*` — Yellow: ヨル（通常難易度ボス）
-- `c_spy_00201_general_n_Boss_*` — Red: ロイド（通常難易度ボス）
-- `c_spy_00401_general_n_Boss_*` — Colorless: ボンド（通常難易度ボス）
+- `c_spy_00101_general_n_Boss_*` — <黄昏> ロイド（通常難易度ボス）
+- `c_spy_00201_general_n_Boss_*` — <いばら姫> ヨル（通常難易度ボス）
+- `c_spy_00401_general_n_Boss_*` — フランキー・フランクリン（通常難易度ボス）
 
 ### シーケンスのトリガー種別
 

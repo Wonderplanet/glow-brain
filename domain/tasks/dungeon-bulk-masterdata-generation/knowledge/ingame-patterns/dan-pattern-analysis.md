@@ -69,21 +69,23 @@
 
 danで使用されているエネミーキャラクターは以下の通り：
 
-| mst_enemy_character_id | 種別 | 主な役割 | 使用頻度 |
-|------------------------|------|---------|---------|
-| enemy_dan_00001 | 雑魚 | Defense（防御タイプ） | 95回（最多） |
-| enemy_dan_00101 | 雑魚 | Attack（攻撃タイプ） | 61回（2位） |
-| chara_dan_00001 | ガチャキャラ | Defense | 19回 |
-| chara_dan_00101 | ガチャキャラ | Attack | 7回 |
-| enemy_dan_00201 | 雑魚（大型） | Attack | 3回（特殊場面のみ） |
+| mst_enemy_character_id | 日本語名 | 種別 | 主な役割 | 使用頻度 |
+|------------------------|---------|------|---------|---------|
+| enemy_dan_00001 | セルポ星人 | 雑魚 | Defense（防御タイプ） | 95回（最多） |
+| enemy_dan_00101 | セルポ星人 (変身) | 雑魚 | Attack（攻撃タイプ） | 61回（2位） |
+| chara_dan_00001 | オカルン | ガチャキャラ | Defense | 19回 |
+| chara_dan_00101 | モモ | ガチャキャラ | Attack | 7回 |
+| chara_dan_00002 | ターボババアの霊力 オカルン（URキャラ） | ガチャキャラ | Attack | ボス役 |
+| chara_dan_00202 | アクさらの愛 アイラ（URキャラ） | ガチャキャラ | Attack | ボス役 |
+| enemy_dan_00201 | ターボババア | 雑魚（大型） | Attack | 3回（特殊場面のみ） |
 
-> **主力2体体制**: `enemy_dan_00001`（防御型・赤）＋ `enemy_dan_00101`（攻撃型・赤）
+> **主力2体体制**: `enemy_dan_00001`（セルポ星人 / 防御型・赤）＋ `enemy_dan_00101`（セルポ星人 (変身) / 攻撃型・赤）
 
 ---
 
 ## エネミー別パラメータ詳細
 
-### enemy_dan_00001（主力・防御タイプ）
+### enemy_dan_00001（セルポ星人 / 主力・防御タイプ）
 
 | id | unit_kind | role | color | HP | speed | attack | combo |
 |----|-----------|------|-------|----|-------|--------|-------|
@@ -105,7 +107,7 @@ danで使用されているエネミーキャラクターは以下の通り：
 
 > `enemy_dan_00001` は変身（transform）ギミックを持つ。変身後は role が Defense → Attack に切り替わる。
 
-### enemy_dan_00101（主力・攻撃タイプ）
+### enemy_dan_00101（セルポ星人 (変身) / 主力・攻撃タイプ）
 
 | id | unit_kind | role | color | HP | speed | attack | combo |
 |----|-----------|------|-------|----|-------|--------|-------|
@@ -119,7 +121,7 @@ danで使用されているエネミーキャラクターは以下の通り：
 
 > `enemy_dan_00101` は `enemy_dan_00001` より速い（speed 47 vs 34）。攻撃特化型。
 
-### enemy_dan_00201（大型ボス型・特殊用途）
+### enemy_dan_00201（ターボババア / 大型ボス型・特殊用途）
 
 | id | unit_kind | role | color | HP | speed | attack |
 |----|-----------|------|-------|----|-------|--------|
@@ -291,7 +293,7 @@ MstEnemyOutpost HP: 1,000（dungeon固定）
 行数: 1行
 
 URキャラをボスとして配置:
-  - chara_dan_00002（Blue / Attack）または chara_dan_00202（Green / Attack）
+  - chara_dan_00002（ターボババアの霊力 オカルン / Blue / Attack）または chara_dan_00202（アクさらの愛 アイラ / Green / Attack）
   - ベース HP: 50,000（normal難易度パラメータ参照）
 ```
 
@@ -313,9 +315,9 @@ URキャラをボスとして配置:
 
 ## まとめ・パターン特徴
 
-1. **2体体制**: `enemy_dan_00001`（防御/赤）と `enemy_dan_00101`（攻撃/赤 or 無色）の組み合わせが基本。
-2. **変身ギミック**: `enemy_dan_00001` は `_trans_` バリアントを持ち、変身後に role が Defense→Attack に切り替わる独特のギミックを保有。
+1. **2体体制**: `enemy_dan_00001`（セルポ星人 / 防御/赤）と `enemy_dan_00101`（セルポ星人 (変身) / 攻撃/赤 or 無色）の組み合わせが基本。
+2. **変身ギミック**: `enemy_dan_00001`（セルポ星人）は `_trans_` バリアントを持ち、変身後に role が Defense→Attack に切り替わる独特のギミックを保有。
 3. **シーケンスの多様性**: normal 6本でも `DarknessKomaCleared`、`FriendUnitTransform`、`InitialSummon` など多彩な条件タイプを使用。
 4. **HP スケール**: normal アウトポスト HP は 15,000 で固定、hard は 50,000（3.3倍）、veryhard は 150,000（10倍）。
 5. **dungeon固定値**: dungeon normal は HP=100、dungeon boss は HP=1,000 が仕様（他コンテンツとは桁が異なる）。
-6. **URキャラ（chara_dan_00002/00202）**: normal ステージでは `c_dan_00002_general_n_Boss_Red`（HP=10,000）、イベントでは `c_dan_00002_bbaget_Boss_Blue`（HP=50,000）として登場しており、dungeon boss では中間スペック相当（HP係数調整）が想定される。
+6. **URキャラ**: normal ステージでは `c_dan_00002_general_n_Boss_Red`（ターボババアの霊力 オカルン / HP=10,000）、イベントでは `c_dan_00002_bbaget_Boss_Blue`（HP=50,000）として登場しており、dungeon boss では中間スペック相当（HP係数調整）が想定される。`chara_dan_00202`（アクさらの愛 アイラ）も同様。
