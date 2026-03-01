@@ -1,4 +1,0 @@
-ENABLE,release_key,id,mst_enemy_character_id,character_unit_kind,role_type,color,sort_order,hp,damage_knock_back_count,move_speed,well_distance,attack_power,attack_combo_cycle,mst_unit_ability_id1,drop_battle_point,mstTransformationEnemyStageParameterId,transformationConditionType,transformationConditionValue
-e,999999999,c_spy_00101_spy_dungeon_boss_Boss_Colorless,chara_spy_00101,Boss,Attack,Colorless,1,50000,3,55,0.35,15000,7,,500,,None,
-e,999999999,e_spy_00001_spy_dungeon_Normal_Colorless,enemy_spy_00001,Normal,Attack,Colorless,1,1000,,45,0.35,5000,1,,100,,None,
-e,999999999,e_spy_00101_spy_dungeon_Normal_Colorless,enemy_spy_00101,Normal,Attack,Colorless,1,1000,,42,0.25,5000,1,,100,,None,
