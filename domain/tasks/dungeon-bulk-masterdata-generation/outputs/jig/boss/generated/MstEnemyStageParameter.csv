@@ -1,0 +1,3 @@
+ENABLE,release_key,id,mst_enemy_character_id,character_unit_kind,role_type,color,sort_order,hp,damage_knock_back_count,move_speed,well_distance,attack_power,attack_combo_cycle,mst_unit_ability_id1,drop_battle_point,mstTransformationEnemyStageParameterId,transformationConditionType,transformationConditionValue
+e,999999999,c_jig_00001_jig_dungeon_Boss_Red,chara_jig_00001,Boss,Technical,Red,1,5000,2,41,0.3,100,5,,400,,None,
+e,999999999,e_jig_00001_jig_dungeon_Normal_Colorless,enemy_jig_00001,Normal,Defense,Colorless,2,3500,2,31,0.25,50,1,,150,,None,

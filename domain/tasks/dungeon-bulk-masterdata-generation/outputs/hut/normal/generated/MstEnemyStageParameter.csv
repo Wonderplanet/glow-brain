@@ -1,0 +1,2 @@
+ENABLE,release_key,id,mst_enemy_character_id,character_unit_kind,role_type,color,sort_order,hp,damage_knock_back_count,move_speed,well_distance,attack_power,attack_combo_cycle,mst_unit_ability_id1,drop_battle_point,mstTransformationEnemyStageParameterId,transformationConditionType,transformationConditionValue
+e,999999999,e_glo_00001_hut_dungeon_Normal_Colorless,enemy_glo_00001,Normal,Attack,Colorless,,1000,1,40,0.2,100,1,,100,,None,
