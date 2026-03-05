@@ -1,0 +1,7 @@
+ENABLE,release_key,id,mst_item_id,language,name,description
+e,202603025,memory_chara_osh_00701_ja,memory_chara_osh_00701,ja,"雨宮 吾郎のメモリー","雨宮 吾郎のLv.上限開放に使用するアイテム"
+e,202603025,memory_chara_gom_00701_ja,memory_chara_gom_00701,ja,カナッジのメモリー,カナッジのLv.上限開放に使用するアイテム
+e,202603025,piece_kai_00701_ja,piece_kai_00701,ja,"識別怪獣兵器1 鳴海 弦のかけら","識別怪獣兵器1 鳴海 弦のグレードアップに使用するアイテム"
+e,202603025,piece_osh_00701_ja,piece_osh_00701,ja,"雨宮 吾郎のかけら","雨宮 吾郎のグレードアップに使用するアイテム"
+e,202603025,piece_gom_00701_ja,piece_gom_00701,ja,カナッジのかけら,カナッジのグレードアップに使用するアイテム
+e,202603025,box_item_l05anniv_00001_ja,box_item_l05anniv_00001,ja,"ハーフアニバーサリー いいジャンくじ券","ハーフアニバーサリー いいジャンくじ引換所で使用するアイテム"

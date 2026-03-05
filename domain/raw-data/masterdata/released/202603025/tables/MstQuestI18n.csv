@@ -1,0 +1,4 @@
+ENABLE,release_key,id,mst_quest_id,language,name,category_name,flavor_text
+e,202603025,quest_event_l05anniv_charaget01_ja,quest_event_l05anniv_charaget01,ja,一番星のように眩しかった！,ストーリー,
+e,202603025,quest_event_l05anniv_challenge01_ja,quest_event_l05anniv_challenge01,ja,今日の“拷問”は,チャレンジ,
+e,202603025,quest_event_l05anniv_1day_ja,quest_event_l05anniv_1day,ja,感謝祭！後半デイリークエスト,デイリー,

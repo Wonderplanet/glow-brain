@@ -1,0 +1,9 @@
+ENABLE,id,rarity,grade_level,mst_series_id,mst_artwork_id,release_key
+e,event_kai_0003_01,UR,2,kai,artwork_event_kai_0003,202603025
+e,event_kai_0003_02,UR,3,kai,artwork_event_kai_0003,202603025
+e,event_kai_0003_03,UR,4,kai,artwork_event_kai_0003,202603025
+e,event_kai_0003_04,UR,5,kai,artwork_event_kai_0003,202603025
+e,chara_kai_00701_01,UR,2,kai,artwork_chara_kai_00701,202603025
+e,chara_kai_00701_02,UR,3,kai,artwork_chara_kai_00701,202603025
+e,chara_kai_00701_03,UR,4,kai,artwork_chara_kai_00701,202603025
+e,chara_kai_00701_04,UR,5,kai,artwork_chara_kai_00701,202603025

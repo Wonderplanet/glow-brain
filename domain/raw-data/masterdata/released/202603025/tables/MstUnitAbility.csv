@@ -1,0 +1,5 @@
+ENABLE,id,mst_ability_id,ability_parameter1,ability_parameter2,ability_parameter3,release_key
+e,ability_kai_00701_01,ability_StunBlock,80,All,All,202603025
+e,ability_kai_00701_02,ability_FreezeBlock,80,All,All,202603025
+e,ability_kai_00701_03,ability_damage_cut_by_hp_percentage_less,75,30,0,202603025
+e,ability_gom_00701_01,ability_WeakeningBlock,0,All,All,202603025

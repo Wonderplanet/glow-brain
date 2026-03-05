@@ -1,0 +1,4 @@
+ENABLE,id,mst_quest_id,mst_unit_id,release_key
+e,quest_event_l05anniv_1day01,quest_event_l05anniv_1day,chara_gom_00701,202603025
+e,quest_event_l05anniv_charaget0101,quest_event_l05anniv_charaget01,chara_osh_00701,202603025
+e,quest_event_l05anniv_challenge0101,quest_event_l05anniv_challenge01,chara_gom_00101,202603025

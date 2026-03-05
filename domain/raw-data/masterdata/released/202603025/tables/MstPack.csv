@@ -1,0 +1,13 @@
+ENABLE,id,product_sub_id,discount_rate,sale_condition,sale_condition_value,sale_hours,is_display_expiration,pack_type,tradable_count,cost_type,is_first_time_free,cost_amount,is_recommend,asset_key,pack_decoration,release_key
+e,event_item_pack_44,112,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00043,__NULL__,202603025
+e,event_item_pack_45,113,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00044,__NULL__,202603025
+e,event_item_pack_46,114,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00039,__NULL__,202603025
+e,event_item_pack_47,115,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00040,__NULL__,202603025
+e,event_item_pack_48,116,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00041,__NULL__,202603025
+e,event_item_pack_49,117,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00005,__NULL__,202603025
+e,event_item_pack_50,118,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00042,__NULL__,202603025
+e,event_item_pack_51,119,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00045,__NULL__,202603025
+e,monthly_item_pack_5,120,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00017,__NULL__,202603025
+e,event_item_pack_52,121,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00029,__NULL__,202603025
+e,event_item_pack_53,122,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00030,__NULL__,202603025
+e,event_item_pack_54,123,0,__NULL__,0,,1,Normal,0,Cash,0,0,0,pack_00031,__NULL__,202603025

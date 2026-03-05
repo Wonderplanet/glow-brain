@@ -1,0 +1,10 @@
+ENABLE,id,hp,is_damage_invalidation,outpost_asset_key,artwork_asset_key,release_key
+e,event_l05anniv_1day_00001,500,,,event_kai_0003,202603025
+e,raid_l05anniv_00001,1000000,1,,glo_0002,202603025
+e,event_l05anniv_challenge01_00001,30000,,,gom_0002,202603025
+e,event_l05anniv_challenge01_00002,40000,,,gom_0002,202603025
+e,event_l05anniv_challenge01_00003,60000,,,gom_0002,202603025
+e,event_l05anniv_challenge01_00004,80000,,,gom_0002,202603025
+e,event_l05anniv_charaget01_00001,15000,,,event_osh_0001,202603025
+e,event_l05anniv_charaget01_00002,25000,,,event_osh_0001,202603025
+e,event_l05anniv_charaget01_00003,40000,,,event_osh_0001,202603025

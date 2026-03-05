@@ -1,0 +1,5 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,262,chara_gom_00701,ja,SpecialAttackCharge,Maru,Right,0.5,dev,202603025
+e,263,chara_gom_00701,ja,Summon,Maru,Left,1.5,dev,202603025
+e,264,chara_osh_00701,ja,SpecialAttackCharge,Maru,Right,0.5,dev,202603025
+e,265,chara_osh_00701,ja,Summon,Maru,Left,1.5,dev,202603025
