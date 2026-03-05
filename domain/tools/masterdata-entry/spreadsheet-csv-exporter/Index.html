@@ -252,6 +252,7 @@
       <button class="tab" onclick="switchTab('bulk')">フォルダ一括</button>
       <button class="tab" onclick="switchTab('usecase')">ユースケース</button>
       <button class="tab" onclick="switchTab('filelist')">ファイル一覧</button>
+      <button class="tab" onclick="switchTab('xlsx')">XLSX一括</button>
     </div>
 
     <!-- 単一スプシタブ -->
@@ -368,6 +369,18 @@
           <li>更新日時（YYYY-MM-DD HH:mm:ss形式）</li>
         </ul>
         <strong>注意：</strong> ファイル数が多い場合、処理に時間がかかることがあります。
+      </div>
+    </div>
+
+    <!-- XLSX一括タブ -->
+    <div id="tab-xlsx" class="tab-content">
+      <p>複数のスプレッドシートURLを入力し、それぞれをXLSX形式でダウンロードします。<br>
+         1行に1URLずつ入力してください。</p>
+      <label for="xlsx-urls">スプレッドシートURL（1行1URL）：</label>
+      <textarea id="xlsx-urls" rows="8"
+        placeholder="https://docs.google.com/spreadsheets/d/XXXXX/edit&#10;https://docs.google.com/spreadsheets/d/YYYYY/edit"></textarea>
+      <div style="margin-top:10px;">
+        <button id="btn-xlsx" class="primary" onclick="downloadXlsxBulk()">XLSXダウンロード</button>
       </div>
     </div>
 
@@ -1030,6 +1043,85 @@
       link.href = window.URL.createObjectURL(blob);
       link.download = result.fileName;
       link.click();
+    }
+
+    // ===== XLSX一括タブ =====
+    let xlsxUrls = [];
+    let xlsxCurrentIndex = 0;
+    let xlsxErrorCount = 0;
+
+    function downloadXlsxBulk() {
+      const lines = document.getElementById('xlsx-urls').value
+        .split('\n').map(l => l.trim()).filter(l => l);
+
+      if (lines.length === 0) {
+        alert('URLを1行に1つずつ入力してください');
+        return;
+      }
+
+      xlsxUrls = lines;
+      xlsxCurrentIndex = 0;
+      xlsxErrorCount = 0;
+
+      document.getElementById('btn-xlsx').disabled = true;
+      sessionId = 'session_' + Date.now();
+      startLogPolling();
+      showStatus(`処理中... 0/${xlsxUrls.length}`, 'info');
+
+      processNextXlsx();
+    }
+
+    function processNextXlsx() {
+      if (xlsxCurrentIndex >= xlsxUrls.length) {
+        // 全URL処理完了
+        stopLogPolling();
+        document.getElementById('btn-xlsx').disabled = false;
+        const msg = xlsxErrorCount > 0
+          ? `完了（${xlsxUrls.length}件中 ${xlsxErrorCount}件失敗）`
+          : `完了！ ${xlsxUrls.length}件ダウンロードしました`;
+        showStatus(msg, xlsxErrorCount > 0 ? 'warning' : 'success');
+        return;
+      }
+
+      const url = xlsxUrls[xlsxCurrentIndex];
+      showStatus(`処理中... ${xlsxCurrentIndex + 1}/${xlsxUrls.length}`, 'info');
+
+      google.script.run
+        .withSuccessHandler(onXlsxComplete)
+        .withFailureHandler(onXlsxError)
+        .exportSpreadsheetAsXlsx(url, sessionId);
+    }
+
+    function onXlsxComplete(result) {
+      if (result && result.data) {
+        downloadXlsxFile(result);
+      } else {
+        xlsxErrorCount++;
+      }
+      xlsxCurrentIndex++;
+      setTimeout(processNextXlsx, 500);  // 500ms待機してから次へ
+    }
+
+    function onXlsxError(error) {
+      xlsxErrorCount++;
+      xlsxCurrentIndex++;
+      setTimeout(processNextXlsx, 500);
+    }
+
+    function downloadXlsxFile(result) {
+      const byteCharacters = atob(result.data);
+      const byteArray = new Uint8Array(byteCharacters.length);
+      for (let i = 0; i < byteCharacters.length; i++) {
+        byteArray[i] = byteCharacters.charCodeAt(i);
+      }
+      const blob = new Blob([byteArray], {
+        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+      });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = result.fileName;
+      link.click();
+      link.remove();
     }
   </script>
 </body>
