@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "deny": [
+      "Read(./domain/raw-data/masterdata/**)",
+      "Read(./projects/glow-masterdata/**)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "domain/tasks/20260305_111309_ops-design-sheet-improvement/hooks/block-answer-files.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
