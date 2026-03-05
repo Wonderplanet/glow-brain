@@ -1,0 +1,4 @@
+memo
+TABLE,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost
+ENABLE,id,hp,is_damage_invalidation,outpost_asset_key,artwork_asset_key,release_key
+e,dungeon_yuw_normal_00001,100,,yuw_00001,yuw_00001,999999999

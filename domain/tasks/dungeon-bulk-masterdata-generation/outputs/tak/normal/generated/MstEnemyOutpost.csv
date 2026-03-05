@@ -1,0 +1,4 @@
+memo
+TABLE,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost
+ENABLE,id,hp,is_damage_invalidation,outpost_asset_key,artwork_asset_key,release_key
+e,dungeon_tak_normal_00001,100,,,glo_00004,999999999

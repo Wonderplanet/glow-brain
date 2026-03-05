@@ -1,6 +1,6 @@
 ---
 description: 現在のブランチの変更内容に基づいてPull Requestを作成または更新する。背景情報の記載をサポート。
-argument-hint: "[--update] [背景情報]"
+argument-hint: "[--update] [--base <ブランチ名>] [背景情報]"
 ---
 
 # PR作成コマンド
@@ -18,12 +18,15 @@ argument-hint: "[--update] [背景情報]"
 | オプション | 説明 |
 |-----------|------|
 | `--update` | 既存PRのタイトル・本文を最新のコード内容で更新 |
+| `--base <ブランチ名>` | ベースブランチを明示的に指定 |
 | (なし) | 新規PR作成、または既存PRがあれば確認後に更新 |
 
 ### 例
 
 **新規作成:**
-- `/general:create-pr` - 背景情報を対話形式で入力
+- `/general:create-pr` - 背景情報を対話形式で入力（ベースブランチも確認）
+- `/general:create-pr --base develop/v1.6.1` - ベースブランチを明示指定
+- `/general:create-pr --base develop/v1.6.1 CU-abc123def` - ベースブランチとClickUpタスクIDを指定
 - `/general:create-pr CU-abc123def` - ClickUpタスクIDを指定
 - `/general:create-pr https://slack.com/archives/... Slackでの依頼内容` - Slack URLと要約を指定
 
@@ -35,10 +38,29 @@ argument-hint: "[--update] [背景情報]"
 
 ### 0. オプション解析
 
-引数に `--update` が含まれているかを確認します。
+引数から以下のオプションを解析します。
 
+**`--update` の確認:**
 - `--update` あり → 既存PR更新モード（セクション1-A へ）
 - `--update` なし → 通常モード（セクション1-B へ）
+
+**`--base <ブランチ名>` の解析:**
+
+引数の文字列から `--base <value>` を探し、`BASE_BRANCH_ARG` 変数にセットします。
+
+```
+例: "--base develop/v1.6.1 CU-abc123def"
+  → BASE_BRANCH_ARG="develop/v1.6.1"
+  → 残りの引数: "CU-abc123def"（背景情報として使用）
+
+例: "--base develop/v1.6.1"
+  → BASE_BRANCH_ARG="develop/v1.6.1"
+
+例: "CU-abc123def"（--base なし）
+  → BASE_BRANCH_ARG=""（未指定）
+```
+
+`--base` が指定されていない場合は `BASE_BRANCH_ARG` を空のままにしておきます（セクション1-Bでユーザー確認を行います）。
 
 ### 1-A. 既存PR更新モード（--update指定時）
 
@@ -80,17 +102,49 @@ echo "現在のブランチ: $CURRENT_BRANCH"
 gh pr list --repo Wonderplanet/glow-brain --head $CURRENT_BRANCH --state open
 ```
 
-#### ベースブランチの確認
+#### ベースブランチの決定ロジック
 
-**既存PRがある場合**: そのPRのベースブランチを使用
-```bash
-gh pr view --repo Wonderplanet/glow-brain --json baseRefName --jq '.baseRefName'
+**ケース1: `--base` が指定されている場合**
+
+`BASE_BRANCH_ARG` の値をそのままベースブランチとして使用します。ユーザーへの確認は不要です。
+
+```
+ベースブランチ: develop/v1.6.1 （--base オプションで指定）
 ```
 
-**既存PRがない場合**: ユーザーに質問してベースブランチを確認
+**ケース2: `--base` が指定されていない場合（必ずユーザーに確認）**
 
-AskUserQuestionツールを使用して、ユーザーにベースブランチを質問します。
-未指定の場合は、デフォルトで `main` を使用します。
+まず以下のロジックで候補ブランチを推定します：
+
+1. **既存PRがある場合**: そのPRのベースブランチを候補として提示
+   ```bash
+   gh pr view --repo Wonderplanet/glow-brain --json baseRefName --jq '.baseRefName'
+   ```
+
+2. **ブランチ名にバージョンプレフィックスがある場合**: 対応するdevelopブランチを候補として提示
+   - `v1.4.0/xxx` → `develop/v1.4.0`
+   - `v1.3.0/xxx` → `develop/v1.3.0`
+   - `admin/v1.4.0/xxx` → `develop/v1.4.0`
+   - `api/v1.3.0/xxx` → `develop/v1.3.0`
+
+3. **上記に該当しない場合**: リモートのデフォルトブランチを候補として提示
+   ```bash
+   git remote show origin | grep 'HEAD branch' | sed 's/.*: //'
+   ```
+
+候補を推定した後、**必ず AskUserQuestion でユーザーに確認してください**:
+
+```
+ベースブランチを選択してください。
+
+選択肢:
+- ブランチ名から推定: develop/v1.4.0 ← 推定された候補
+- develop
+- main
+- その他（直接入力）
+```
+
+ユーザーが選択または入力したブランチを `BASE_BRANCH` としてセットします。
 
 ```bash
 # ベースブランチとの差分を確認
@@ -281,12 +335,17 @@ gh pr create ...
 | ClickUp | `CU-タスクID` | `CU-86c3xyz` |
 | Slack | URL + 要約 | `https://slack.com/archives/C01234/p1234567890`<br>要約: XXXの対応依頼 |
 
-### ベースブランチの決定方法
+### ベースブランチの決定
 
-ベースブランチは以下の方法で決定されます：
+ベースブランチは以下のルールで決定されます：
 
-1. **既存PRがある場合**: そのPRのベースブランチを使用
-2. **既存PRがない場合**: ユーザーに質問して確認（未指定の場合は `main` をデフォルトとして使用）
+1. **`--base <ブランチ名>` が指定された場合**: 指定値をそのまま使用（確認なし）
+2. **指定がない場合**: 以下の優先順位で候補を推定し、**AskUserQuestion で必ずユーザーに確認**
+   1. 既存PRのベースブランチ
+   2. ブランチ名のバージョンプレフィックス（`v1.4.0/xxx` → `develop/v1.4.0`）
+   3. リモートのデフォルトブランチ（`origin/HEAD`）
+
+`--update` モードでは既存PRからベースブランチを取得するため、このルールの対象外です。
 
 ## トラブルシューティング
 

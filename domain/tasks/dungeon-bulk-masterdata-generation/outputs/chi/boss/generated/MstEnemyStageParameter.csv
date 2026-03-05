@@ -1,0 +1,3 @@
+ENABLE,release_key,id,mst_enemy_character_id,character_unit_kind,role_type,color,sort_order,hp,damage_knock_back_count,move_speed,well_distance,attack_power,attack_combo_cycle,mst_unit_ability_id1,drop_battle_point,mstTransformationEnemyStageParameterId,transformationConditionType,transformationConditionValue
+e,999999999,c_chi_00002_chi_dungeon_Boss_Yellow,chara_chi_00002,Boss,Technical,Yellow,1,200000,5,50,0.35,900,5,,50,,None,
+e,999999999,e_chi_00101_chi_dungeon_Normal_Yellow,enemy_chi_00101,Normal,Technical,Yellow,2,13000,1,35,0.25,720,1,,50,,None,

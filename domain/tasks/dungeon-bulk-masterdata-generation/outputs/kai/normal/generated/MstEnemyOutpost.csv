@@ -1,0 +1,4 @@
+memo
+TABLE,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost
+ENABLE,id,hp,is_damage_invalidation,outpost_asset_key,artwork_asset_key,release_key
+e,dungeon_kai_normal_00001,100,,kai_00001,kai_00001,202604010

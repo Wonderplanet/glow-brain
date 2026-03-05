@@ -29,6 +29,26 @@
 | 通常クエスト | `normal_{シリーズ}_{連番}` | `normal_dan_00001` |
 | ハード | `hard_{シリーズ}_{連番}` | `hard_dan_00001` |
 | ベリーハード | `veryhard_{シリーズ}_{連番}` | `veryhard_dan_00001` |
+| 限界チャレンジ（bossブロック） | `dungeon_{シリーズ}_boss_{連番}` | `dungeon_kai_boss_00001` |
+| 限界チャレンジ（normalブロック） | `dungeon_{シリーズ}_normal_{連番}` | `dungeon_kai_normal_00001` |
+
+### dungeon（限界チャレンジ）専用命名規則
+
+限界チャレンジのブロックIDは以下のパターンを使用する:
+
+```
+dungeon_{シリーズ}_{ブロック種別}_{連番5桁}
+```
+
+| ブロック種別 | パターン | 例 |
+|------------|---------|-----|
+| ボスブロック | `dungeon_{シリーズ}_boss_{連番}` | `dungeon_kai_boss_00001` |
+| 通常ブロック | `dungeon_{シリーズ}_normal_{連番}` | `dungeon_kai_normal_00001` |
+
+- `{シリーズ}` はキャラシリーズ略称（`kai` / `dan` / `spy` など）
+- 1作品につき boss 1個 + normal N個のペアで構成する
+
+---
 
 ### シリーズIDの例
 
@@ -69,6 +89,7 @@
 | `event_kai1_challenge01` | `kai1_challenge01` | チャレンジ |
 | `event_jig1_savage` | `jig1_savage` | サベージ |
 | `raid_kai1` | `kai1_raid` | レイド |
+| `dungeon_kai_boss` | `kai_dungeon` | 限界チャレンジ（boss/normalで共通） |
 | 複数ステージで使い回す場合 | `general` | 汎用 |
 
 ### 実例

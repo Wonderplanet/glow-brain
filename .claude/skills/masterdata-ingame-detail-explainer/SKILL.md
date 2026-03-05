@@ -40,7 +40,7 @@ duckdb -c "SELECT * FROM read_csv('projects/glow-masterdata/MstInGame.csv', AUTO
 スタイル: デフォルト=`#6b7280` / w1〜w2=`#3b82f6` / w3〜w4=`#f59e0b` / w5以降=`#ef4444` / ループ起点直前=`#8b5cf6`
 
 ### Step 5: ドキュメント組み立て・保存（8セクション必須）
-1. 概要
+1. 概要（散文形式・約500文字）
 2. 関連テーブル設定（MstInGame / MstEnemyOutpost / MstPage+MstKomaLine / MstInGameI18n）
 3. 使用する敵パラメータ一覧（カラム解説 + 全パラメータ表 + 特性解説）
 4. グループ構造の全体フロー（Mermaid）

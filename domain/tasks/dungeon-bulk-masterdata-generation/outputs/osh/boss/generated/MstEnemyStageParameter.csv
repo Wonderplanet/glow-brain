@@ -1,0 +1,3 @@
+ENABLE,release_key,id,mst_enemy_character_id,character_unit_kind,role_type,color,sort_order,hp,damage_knock_back_count,move_speed,well_distance,attack_power,attack_combo_cycle,mst_unit_ability_id1,drop_battle_point,mstTransformationEnemyStageParameterId,transformationConditionType,transformationConditionValue
+e,999999999,c_osh_00001_general_osh_n_Boss_Colorless,chara_osh_00001,Boss,Technical,Colorless,1,1000,3,20,0.25,100,6,,500,,None,
+e,999999999,e_glo_00001_general_osh_n_Normal_Yellow,enemy_glo_00001,Normal,Attack,Yellow,2,1000,0,34,0.35,100,1,,100,,None,

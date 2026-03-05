@@ -1,0 +1,4 @@
+memo
+TABLE,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost,MstEnemyOutpost
+ENABLE,id,hp,is_damage_invalidation,outpost_asset_key,artwork_asset_key,release_key
+e,dungeon_spy_boss_00001,1000,,spy_00005,spy_00005,999999999
