@@ -72,38 +72,32 @@ def convert_csv_to_sheet(ws, csv_path: Path, schema_columns: list[str]) -> None:
         reader = csv.reader(f)
         rows = list(reader)
 
-    if len(rows) < 1:
-        # データなし
+    # 形式A/B 自動検出
+    # 形式A: 1行目がENABLE行（生成CSV）
+    # 形式B: 3行ヘッダー形式（行1: memo / 行2: TABLE / 行3: ENABLE）
+    if not rows:
         return
-
-    # CSVのフォーマットを自動検出
-    # 形式A: 1行目が ENABLE,col1,col2,... （生成CSVの形式）
-    # 形式B: 1行目memo / 2行目TABLE / 3行目ENABLE（sheet_schema形式）
     if rows[0] and rows[0][0].strip().upper() == 'ENABLE':
-        # 形式A: 1行目がENABLE行
+        # 形式A: 1行目がENABLE行（生成CSV）
         csv_header = rows[0]
         csv_columns = [c.strip() for c in csv_header[1:]]
-        # 2行目以降：先頭の e/d などのフラグ列を除いてデータ列のみ取得
         data_rows = []
         for r in rows[1:]:
             if not r or r[0].strip() in ('', 'ENABLE'):
                 continue
             data_rows.append(r[1:])
-    else:
-        # 形式B: 3行ヘッダー形式
-        if len(rows) < 3:
-            return
+    elif len(rows) >= 3 and rows[2] and rows[2][0].strip().upper() == 'ENABLE':
+        # 形式B: 3行ヘッダー形式（sheet_schema変換済みかつデータあり）
         csv_header = rows[2]
-        if csv_header and csv_header[0].strip().upper() == 'ENABLE':
-            csv_columns = [c.strip() for c in csv_header[1:]]
-        else:
-            csv_columns = [c.strip() for c in csv_header]
-        raw_data_rows = rows[3:]
+        csv_columns = [c.strip() for c in csv_header[1:]]
         data_rows = []
-        for r in raw_data_rows:
+        for r in rows[3:]:
             if not r or r[0].strip() in ('', 'ENABLE'):
                 continue
             data_rows.append(r[1:])
+    else:
+        print(f"[WARN] {csv_path.name}: 対応フォーマットではありません。スキップします。", file=sys.stderr)
+        return
 
     # 3. データをschema_columnsの順番で書き込む
     for data_row in data_rows:

@@ -207,23 +207,61 @@ def validate_masterdata_csv(generated_path: str, template_path: str) -> Dict[str
 
 def main():
     parser = argparse.ArgumentParser(
-        description='マスタデータCSVとテンプレートCSVの照合'
+        description='マスタデータCSVとsheet_schemaテンプレートCSVの照合'
+    )
+    # --csv は --generated の新しい名前（後方互換のため --generated も残す）
+    parser.add_argument(
+        '--csv',
+        dest='csv',
+        help='検証対象CSVファイルのパス'
     )
     parser.add_argument(
         '--generated',
-        required=True,
-        help='生成されたCSVファイルのパス'
+        dest='generated',
+        help='（非推奨）--csv を使用してください'
+    )
+    # --reference-csv は --template の新しい名前（後方互換のため --template も残す）
+    parser.add_argument(
+        '--reference-csv',
+        dest='reference_csv',
+        help='テンプレートCSVファイルのパス'
     )
     parser.add_argument(
         '--template',
-        required=True,
-        help='テンプレートCSVファイルのパス'
+        dest='template',
+        help='（非推奨）--reference-csv を使用してください'
+    )
+    parser.add_argument(
+        '--mode',
+        choices=['sheet_schema'],
+        default='sheet_schema',
+        help='検証モード（sheet_schema のみ対応）'
     )
 
     args = parser.parse_args()
 
+    # 新旧引数の統合（新しい名前を優先）
+    csv_path = args.csv or args.generated
+    template_path = args.reference_csv or args.template
+
+    if not csv_path:
+        parser.error('--csv（または非推奨の --generated）は必須です')
+    if not template_path:
+        parser.error('--reference-csv（または非推奨の --template）は必須です')
+
+    if args.generated:
+        print(
+            '警告: --generated は非推奨です。--csv を使用してください',
+            file=sys.stderr
+        )
+    if args.template:
+        print(
+            '警告: --template は非推奨です。--reference-csv を使用してください',
+            file=sys.stderr
+        )
+
     # 検証実行
-    result = validate_masterdata_csv(args.generated, args.template)
+    result = validate_masterdata_csv(csv_path, template_path)
 
     # JSON出力
     print(json.dumps(result, ensure_ascii=False, indent=2))

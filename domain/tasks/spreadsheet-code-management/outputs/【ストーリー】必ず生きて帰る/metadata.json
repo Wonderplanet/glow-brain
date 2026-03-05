@@ -1,0 +1,213 @@
+{
+  "source_file": "【ストーリー】必ず生きて帰る.xlsx",
+  "converted_at": "2026-02-23T19:35:20.009323",
+  "total_sheets": 25,
+  "sheets": [
+    {
+      "sheet_name": "チェック対象管理",
+      "file": "csv/チェック対象管理.csv",
+      "max_row": 19,
+      "max_col": 6,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "MstAutoPlayerSequence",
+      "file": "csv/MstAutoPlayerSequence.csv",
+      "max_row": 37,
+      "max_col": 35,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "master_config",
+      "file": "csv/master_config.csv",
+      "max_row": 2,
+      "max_col": 3,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "マッピング設定シート_new",
+      "file": "csv/マッピング設定シート_new.csv",
+      "max_row": 137,
+      "max_col": 8,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "ステージ概要",
+      "file": "csv/ステージ概要.csv",
+      "max_row": 19,
+      "max_col": 30,
+      "formula_counts": {
+        "normal": 12
+      }
+    },
+    {
+      "sheet_name": "早見表",
+      "file": "csv/早見表.csv",
+      "max_row": 52,
+      "max_col": 18,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "ステージ設計▶︎",
+      "file": "csv/ステージ設計__.csv",
+      "max_row": 1,
+      "max_col": 1,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "1話",
+      "file": "csv/1話.csv",
+      "max_row": 61,
+      "max_col": 163,
+      "formula_counts": {
+        "normal": 1018
+      }
+    },
+    {
+      "sheet_name": "2話",
+      "file": "csv/2話.csv",
+      "max_row": 61,
+      "max_col": 163,
+      "formula_counts": {
+        "normal": 1019
+      }
+    },
+    {
+      "sheet_name": "3話",
+      "file": "csv/3話.csv",
+      "max_row": 61,
+      "max_col": 163,
+      "formula_counts": {
+        "normal": 1019
+      }
+    },
+    {
+      "sheet_name": "4話",
+      "file": "csv/4話.csv",
+      "max_row": 61,
+      "max_col": 163,
+      "formula_counts": {
+        "normal": 1019
+      }
+    },
+    {
+      "sheet_name": "5話",
+      "file": "csv/5話.csv",
+      "max_row": 61,
+      "max_col": 163,
+      "formula_counts": {
+        "normal": 1019
+      }
+    },
+    {
+      "sheet_name": "6話",
+      "file": "csv/6話.csv",
+      "max_row": 61,
+      "max_col": 163,
+      "formula_counts": {
+        "normal": 1019
+      }
+    },
+    {
+      "sheet_name": "敗北tips",
+      "file": "csv/敗北tips.csv",
+      "max_row": 16,
+      "max_col": 19,
+      "formula_counts": {
+        "normal": 13
+      }
+    },
+    {
+      "sheet_name": "参照用▶︎",
+      "file": "csv/参照用__.csv",
+      "max_row": 1,
+      "max_col": 1,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "スタミナ表",
+      "file": "csv/スタミナ表.csv",
+      "max_row": 13,
+      "max_col": 10,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "行パターン",
+      "file": "csv/行パターン.csv",
+      "max_row": 13,
+      "max_col": 8,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "コマ効果",
+      "file": "csv/コマ効果.csv",
+      "max_row": 22,
+      "max_col": 2,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "エネミー出現",
+      "file": "csv/エネミー出現.csv",
+      "max_row": 1000,
+      "max_col": 20,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "変身設定について",
+      "file": "csv/変身設定について.csv",
+      "max_row": 17,
+      "max_col": 10,
+      "formula_counts": {}
+    },
+    {
+      "sheet_name": "ファントムマスター_イベント",
+      "file": "csv/ファントムマスター_イベント.csv",
+      "max_row": 1000,
+      "max_col": 30,
+      "formula_counts": {
+        "importrange": 1,
+        "computed_value": 11945
+      }
+    },
+    {
+      "sheet_name": "アイテムID_管理",
+      "file": "csv/アイテムID_管理.csv",
+      "max_row": 1000,
+      "max_col": 16,
+      "formula_counts": {
+        "importrange": 1,
+        "computed_value": 3148
+      }
+    },
+    {
+      "sheet_name": "クエストID_管理",
+      "file": "csv/クエストID_管理.csv",
+      "max_row": 1000,
+      "max_col": 16,
+      "formula_counts": {
+        "importrange": 1,
+        "computed_value": 6129
+      }
+    },
+    {
+      "sheet_name": "キャラID_管理",
+      "file": "csv/キャラID_管理.csv",
+      "max_row": 1000,
+      "max_col": 27,
+      "formula_counts": {
+        "importrange": 1,
+        "computed_value": 5190
+      }
+    },
+    {
+      "sheet_name": "BGM_管理",
+      "file": "csv/BGM_管理.csv",
+      "max_row": 1000,
+      "max_col": 27,
+      "formula_counts": {
+        "importrange": 1,
+        "computed_value": 93
+      }
+    }
+  ]
+}

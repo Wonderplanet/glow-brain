@@ -7,21 +7,58 @@ description: GLOWマスタデータCSVの検証スキル。作成したCSVファ
 
 ## 概要
 
-作成したマスタデータCSVファイルがDB投入可能か、server/client実装の想定と整合性があるかを検証します。以下の検証を自動実行：
+作成したマスタデータCSVファイルがDB投入可能か、server/client実装の想定と整合性があるかを検証します。
 
+### 2つの検証モード
+
+| モード | 用途 | 参照先 |
+|-------|------|-------|
+| `sheet_schema`（デフォルト） | 新規作成CSVのテンプレート照合 | `projects/glow-masterdata/sheet_schema/` |
+| `masterdata` | 既存マスタデータCSVとの列比較・自動修正 | `projects/glow-masterdata/` |
+
+**`sheet_schema` モードの検証内容**:
 1. **テンプレート一致**: 列順・列名がテンプレートCSVと一致するか（データ投入シートとの整合性）
 2. **CSV形式**: 改行エスケープ、ダブルクォート等の形式が正しいか（DB投入可能性）
 3. **必須カラム**: NULL不可カラムに値が設定されているか（DB制約違反防止）
 4. **DBスキーマ整合性**: 型、enum値がスキーマと一致するか（実装との整合性）
 
+**`masterdata` モードの検証内容**:
+1. **ヘッダー形式**: 行1が `ENABLE,col1,col2,...` 形式か確認
+2. **カラム名・順序**: 既存マスタデータとの列比較（欠損・余分・順序不一致を検出）
+3. **目視確認用データ**: サンプルレコードと列の値例を出力（Claudeが列位置ずれを判断）
+4. **自動修正**: カラム順序不一致を検出した場合にCSVを自動修正
+
 ## 基本的な使い方
 
-### 単一ファイルの検証
+### sheet_schemaモード（デフォルト）：新規作成CSVの検証
 
 ```bash
 python .claude/skills/masterdata-csv-validator/scripts/validate_all.py \
   --csv path/to/MstEvent.csv
 ```
+
+### masterdataモード：既存マスタデータとの比較・自動修正
+
+```bash
+# 自動修正あり（デフォルト）
+python .claude/skills/masterdata-csv-validator/scripts/validate_all.py \
+  --csv path/to/MstAbility.csv \
+  --mode masterdata
+
+# dry-runで修正内容だけ確認
+python .claude/skills/masterdata-csv-validator/scripts/validate_all.py \
+  --csv path/to/MstAbility.csv \
+  --mode masterdata \
+  --dry-run
+
+# 参照CSVを明示指定
+python .claude/skills/masterdata-csv-validator/scripts/validate_all.py \
+  --csv path/to/MstAbility.csv \
+  --mode masterdata \
+  --reference-csv projects/glow-masterdata/MstAbility.csv
+```
+
+### 単一ファイルの検証（sheet_schemaモード）
 
 **出力例（成功）**:
 ```json
@@ -166,10 +203,35 @@ CSVファイル名から自動的にテーブル名を推測します：
 ## 検証スクリプト一覧
 
 ### scripts/validate_all.py（推奨）
-統合検証スクリプト。全ての検証を実行して統合レポートを生成します。
+統合検証スクリプト。`--mode` オプションでモードを切り替え可能。
+
+**オプション:**
+| オプション | 説明 |
+|-----------|------|
+| `--csv` | 検証対象CSVのパス（必須） |
+| `--mode` | `sheet_schema`（デフォルト）または `masterdata` |
+| `--reference-csv` | 参照CSVのパス（masterdataモード、省略時は自動推測） |
+| `--dry-run` | masterdataモード: 修正内容のみ出力、CSVは書き換えない |
+
+### scripts/validate_masterdata.py（masterdataモード専用）
+既存マスタデータCSVとの比較・自動修正スクリプト。
+
+**オプション:**
+| オプション | 説明 |
+|-----------|------|
+| `--csv` | 検証対象CSVのパス（必須） |
+| `--reference-csv` | 参照CSVのパス（省略時はファイル名から自動推測） |
+| `--fix` / `--no-fix` | 自動修正の有効/無効（デフォルト: 有効） |
+| `--dry-run` | 修正内容のみ出力、CSVは書き換えない |
 
 ### scripts/validate_template.py
-テンプレートCSVとの照合（列順・列名の一致確認）。
+sheet_schemaテンプレートCSVとの照合（列順・列名の一致確認）。
+
+**オプション:**
+| オプション | 説明 |
+|-----------|------|
+| `--csv` | 検証対象CSVのパス（`--generated` は非推奨） |
+| `--reference-csv` | テンプレートCSVのパス（`--template` は非推奨） |
 
 ### scripts/validate_csv_format.py
 CSV形式の正しさを検証（改行エスケープ、ダブルクォート等）。
@@ -228,8 +290,26 @@ python .claude/skills/masterdata-csv-validator/scripts/validate_schema.py \
   --table mst_custom_tables
 ```
 
+## 参照CSV自動推測ルール（masterdataモード）
+
+`--reference-csv` を省略した場合、ファイル名から自動推測します：
+
+| 検証対象CSV | 自動推測される参照CSV |
+|-----------|-----------------|
+| `/path/to/MstAbility.csv` | `projects/glow-masterdata/MstAbility.csv` |
+| `/any/path/OprGacha.csv` | `projects/glow-masterdata/OprGacha.csv` |
+
+`--reference-csv` を明示指定した場合はそちらを優先します。
+
 ## 注意事項
 
+**sheet_schemaモード:**
 - **検証は非破壊的**: CSVファイルを読み取るのみで、変更は行いません
 - **エラー修正は手動**: 検証スクリプトはエラーを報告するのみで、自動修正は行いません
 - **テンプレート最優先**: テンプレートCSVとDBスキーマが一致しない場合、テンプレートに従います
+
+**masterdataモード:**
+- **自動修正はデフォルトで有効**: カラム順序の不一致が検出された場合、CSVを自動修正します
+- **バックアップなし**: Gitで管理されているため、修正前のバックアップは作成しません
+- **dry-run推奨**: 初回は `--dry-run` で修正内容を確認してから実行することを推奨します
+- **Claudeが内容を判断**: `inspection_data` に出力されるサンプルデータを確認し、列位置ずれの妥当性を判断します

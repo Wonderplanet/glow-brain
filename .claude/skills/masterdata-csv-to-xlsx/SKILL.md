@@ -7,13 +7,17 @@ description: 指定ディレクトリのマスタデータCSVをsheet_schemaの�
 
 ## 概要
 
-指定ディレクトリにあるマスタデータCSVファイルを、`sheet_schema`の列定義に準拠した1つのXLSXファイルに統合します。
+指定ディレクトリにある**sheet_schema形式**のマスタデータCSVファイルを、`sheet_schema`の列定義に準拠した1つのXLSXファイルに統合します。
 
+- **入力形式**: sheet_schema形式（3行ヘッダー）のCSVのみ受け付ける
 - 1CSVファイル = 1シート
 - 列順はsheet_schemaの3行目（ENABLE行）に従う
 - i18n列（`.ja`などサフィックス付き列）は空欄で出力
 - sheet_schemaが存在しないCSVはスキップ
+- sheet_schema形式でないCSVはスキップ
 - ヘッダー行のみ太字スタイル
+
+> **前提条件**: 生成CSVを入力する場合は、事前に `masterdata-csv-to-sheet-schema-converter` スキルで sheet_schema 形式に変換してください。
 
 ## 基本的な使い方
 
@@ -36,11 +40,18 @@ python .claude/skills/masterdata-csv-to-xlsx/scripts/convert_to_xlsx.py \
 
 ### Step 0: 対象CSVファイルの確認
 
-変換対象のCSVファイルを確認します。
+変換対象のCSVファイルを確認します。**入力はsheet_schema形式であること**を前提とします。
 
 ```bash
 ls <変換元CSVディレクトリ>/*.csv
 ```
+
+> **生成CSV（形式A）を使う場合**: 先に `masterdata-csv-to-sheet-schema-converter` で変換してください。
+> ```bash
+> python .claude/skills/masterdata-csv-to-sheet-schema-converter/scripts/convert.py \
+>   --input-dir <生成CSVディレクトリ>
+> # → <生成CSVディレクトリ>/sheet_schema/ にsheet_schema形式CSVが出力される
+> ```
 
 ### Step 1: 変換実行
 
