@@ -78,11 +78,20 @@ class SpreadsheetDownloader:
         Returns:
             ファイル名
         """
-        meta = self.drive_service.files().get(
-            fileId=file_id,
-            fields='name',
-            supportsAllDrives=True
-        ).execute()
+        try:
+            meta = self.drive_service.files().get(
+                fileId=file_id,
+                fields='name',
+                supportsAllDrives=True
+            ).execute()
+        except Exception as e:
+            if '404' in str(e):
+                raise Exception(
+                    f'ファイルが見つかりません (404): {file_id}\n'
+                    f'  → サービスアカウントにスプシの閲覧権限が付与されているか確認してください。\n'
+                    f'  → credentials.json の client_email をスプシに「共有」で追加してください。'
+                ) from e
+            raise
         return meta['name']
 
     def get_drive_folder_path(self, file_id: str) -> Path:
