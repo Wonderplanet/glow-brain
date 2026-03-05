@@ -1,0 +1,9 @@
+memo
+TABLE,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting,MstDungeonDepthSetting
+ENABLE,id,release_key,mst_dungeon_id,min_depth,normal_block_background_asset_key,boss_block_background_asset_key,rare_block_percentage,enemy_hp_coefficient,enemy_attack_coefficient,enemy_speed_coefficient,roulette_point_coefficient,series_point_coefficient
+e,dungeon_00001_depth_00001,999999999,dungeon_00001,1,glo_00016,glo_00016,10,1.0000,1.0000,1.0000,1.0000,1.0000
+e,dungeon_00001_depth_00002,999999999,dungeon_00001,3,glo_00016,glo_00016,12,1.1000,1.1000,1.0000,1.1000,1.1000
+e,dungeon_00001_depth_00003,999999999,dungeon_00001,5,glo_00016,glo_00016,15,1.3000,1.3000,1.0000,1.2000,1.2000
+e,dungeon_00001_depth_00004,999999999,dungeon_00001,10,glo_00016,glo_00016,18,1.6000,1.6000,1.0000,1.5000,1.5000
+e,dungeon_00001_depth_00005,999999999,dungeon_00001,20,glo_00016,glo_00016,20,2.0000,2.0000,1.0000,2.0000,2.0000
+e,dungeon_00001_depth_00006,999999999,dungeon_00001,30,glo_00016,glo_00016,25,3.0000,3.0000,1.0000,3.0000,3.0000

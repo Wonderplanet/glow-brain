@@ -1,0 +1,11 @@
+memo
+TABLE,MstDungeonDepthReward,MstDungeonDepthReward,MstDungeonDepthReward,MstDungeonDepthReward,MstDungeonDepthReward,MstDungeonDepthReward,MstDungeonDepthReward,MstDungeonDepthReward,MstDungeonDepthReward
+ENABLE,id,release_key,mst_dungeon_id,min_depth,resource_type,resource_id,resource_amount,sort_order
+e,dungeon_00001_depth_reward_00001,999999999,dungeon_00001,3,Coin,,3000,1
+e,dungeon_00001_depth_reward_00002,999999999,dungeon_00001,5,Coin,,5000,2
+e,dungeon_00001_depth_reward_00003,999999999,dungeon_00001,10,FreeDiamond,,50,3
+e,dungeon_00001_depth_reward_00004,999999999,dungeon_00001,15,FreeDiamond,,50,4
+e,dungeon_00001_depth_reward_00005,999999999,dungeon_00001,20,FreeDiamond,,100,5
+e,dungeon_00001_depth_reward_00006,999999999,dungeon_00001,25,FreeDiamond,,100,6
+e,dungeon_00001_depth_reward_00007,999999999,dungeon_00001,30,FreeDiamond,,200,7
+e,dungeon_00001_depth_reward_00008,999999999,dungeon_00001,50,FreeDiamond,,500,8

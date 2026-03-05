@@ -1,0 +1,4 @@
+memo
+TABLE,MstDungeon,MstDungeon,MstDungeon,MstDungeon,MstDungeon,MstDungeon,MstDungeon,MstDungeon,MstDungeon,MstDungeon,MstDungeon
+ENABLE,id,release_key,stamina_cost,normal_enemy_roulette_point,rare_enemy_roulette_point,boss_enemy_roulette_point,bgm_asset_key,boss_bgm_asset_key,start_at,end_at
+e,dungeon_00001,999999999,30,10,30,50,SSE_SBG_003_001,SSE_SBG_003_002,2021-01-01 00:00:00,2030-12-31 23:59:59
