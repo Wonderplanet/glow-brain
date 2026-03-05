@@ -49,12 +49,26 @@ domain/tasks/20260305_111309_ops-design-sheet-improvement/
 ├── README.md              # タスク概要・目的・成果定義
 ├── next-actions.md        # 次にやること（チェックリスト形式）
 ├── CLAUDE.md              # このファイル（Claudeへの引き継ぎ）
+├── specs/
+│   └── released.csv       # 過去リリースキー一覧と参照先ディレクトリ
 （タスクの内容に応じて追加）
 ├── inputs/                # 入力データ・要件（現状スプシの構造メモなど）
 ├── outputs/               # 成果物（フォーマット定義書、設計書）
 ├── analysis/              # 分析結果
 └── scripts/               # 実行スクリプト（スプシ操作など）
 ```
+
+## 参照データ
+
+### specs/released.csv - 過去リリースキー一覧
+
+| release_key | 参照先ディレクトリ |
+|-------------|------------------|
+| 202512020 | `domain/raw-data/masterdata/released/202512020` |
+| 202601010 | `domain/raw-data/masterdata/released/202601010` |
+| 202602015 | `domain/raw-data/masterdata/released/202602015` |
+
+フォーマット設計の参考として、過去のリリースキーごとのデータ構造をDuckDB等で調査できる。
 
 ---
 

@@ -71,7 +71,9 @@
 20260305_111309_ops-design-sheet-improvement/
 ├── README.md              # このファイル
 ├── next-actions.md        # ネクストアクション
-└── CLAUDE.md              # 次回セッション用の引き継ぎコンテキスト
+├── CLAUDE.md              # 次回セッション用の引き継ぎコンテキスト
+└── specs/
+    └── released.csv       # 過去リリースキー一覧と参照先ディレクトリ
 ```
 
 （必要に応じて追加されるフォルダ）
@@ -82,9 +84,22 @@
 └── scripts/               # 実行スクリプト
 ```
 
+## 参照データ
+
+### 過去リリースキー一覧（specs/released.csv）
+
+| release_key | 参照先 |
+|-------------|--------|
+| 202512020 | `domain/raw-data/masterdata/released/202512020` |
+| 202601010 | `domain/raw-data/masterdata/released/202601010` |
+| 202602015 | `domain/raw-data/masterdata/released/202602015` |
+
+フォーマット設計の参考として、過去のリリースキーごとのデータ構造を調査できる。
+
 ## 作業ログ
 
 - 2026-03-05 11:13: タスク作成
+- 2026-03-05: specs/released.csv 追加（過去リリースキーと参照先ディレクトリの一覧）
 
 ## 成果物
 
