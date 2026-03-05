@@ -1,0 +1,6 @@
+ENABLE,release_key,id,mst_quest_id,language,name,category_name,flavor_text
+e,202602020,quest_event_kim1_charaget01_ja,quest_event_kim1_charaget01,ja,キスゾンビ♡パニック,収集,
+e,202602020,quest_event_kim1_challenge_ja,quest_event_kim1_challenge,ja,恋太郎ファミリー,チャレンジ,
+e,202602020,quest_event_kim1_charaget02_ja,quest_event_kim1_charaget02,ja,最高の恋愛パートナー,ストーリー,
+e,202602020,quest_event_kim1_savage_ja,quest_event_kim1_savage,ja,"DEAD OR LOVE",高難易度,
+e,202602020,quest_event_kim1_1day_ja,quest_event_kim1_1day,ja,恋は盲目,デイリー,

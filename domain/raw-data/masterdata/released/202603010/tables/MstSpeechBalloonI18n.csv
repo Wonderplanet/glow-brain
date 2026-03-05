@@ -1,0 +1,8 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,234,chara_hut_00001,ja,SpecialAttackCharge,Maru,Right,0.5,"どんな気持ちに\nなるんだろう…",202603010
+e,235,chara_hut_00001,ja,Summon,Maru,Left,1.5,"目にもの見せて\nやるぜ",202603010
+e,234,chara_hut_00101,ja,SpecialAttackCharge,Maru,Right,0.5,機は熟した……,202603010
+e,235,chara_hut_00101,ja,Summon,Maru,Left,1.5,"私はなんだって\nやれる…… !!",202603010
+e,236,chara_hut_00201,ja,SpecialAttackCharge,Maru,Right,0.5,"気持ちごと\n\n走ってしまう！",202603010
+e,237,chara_hut_00201,ja,Summon,Maru,Left,1.5,上手くなったるからな,202603010
+e,239,chara_hut_00301,ja,Summon,Maru,Left,1.5,一時的にやるだけやから,202603010

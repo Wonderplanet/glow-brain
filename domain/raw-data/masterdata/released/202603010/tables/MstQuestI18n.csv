@@ -1,0 +1,6 @@
+ENABLE,release_key,id,mst_quest_id,language,name,category_name,flavor_text
+e,202603010,quest_event_hut1_charaget01_ja,quest_event_hut1_charaget01,ja,弾き語り修行をする,収集,
+e,202603010,quest_event_hut1_challenge_ja,quest_event_hut1_challenge,ja,文化祭が始まる,チャレンジ,
+e,202603010,quest_event_hut1_charaget02_ja,quest_event_hut1_charaget02,ja,バンドを結成する,ストーリー,
+e,202603010,quest_event_hut1_savage_ja,quest_event_hut1_savage,ja,ステージに立つ,高難易度,
+e,202603010,quest_event_hut1_1day_ja,quest_event_hut1_1day,ja,軽音部に入部する,デイリー,

@@ -1,0 +1,27 @@
+ENABLE,id,content_type,target_id,rule_type,rule_value,start_at,end_at,release_key
+e,event_kim1_savage_00001_1,Stage,event_kim1_savage_00001,SpeedAttack,1000,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00001_2,Stage,event_kim1_savage_00001,NoContinue,1,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00002_1,Stage,event_kim1_savage_00002,SpeedAttack,1000,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00002_2,Stage,event_kim1_savage_00002,NoContinue,1,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_1,Stage,event_kim1_savage_00003,SpeedAttack,1000,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_2,Stage,event_kim1_savage_00003,NoContinue,1,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_3,Stage,event_kim1_savage_00003,PartySeries,kim,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_4,Stage,event_kim1_savage_00003,PartySeries,chi,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_5,Stage,event_kim1_savage_00003,PartySeries,you,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_6,Stage,event_kim1_savage_00003,PartySeries,kai,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_7,Stage,event_kim1_savage_00003,PartySeries,dan,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_8,Stage,event_kim1_savage_00003,PartySeries,dos,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_9,Stage,event_kim1_savage_00003,PartyRoleType,Defense,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_10,Stage,event_kim1_savage_00003,PartyRoleType,Attack,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_11,Stage,event_kim1_savage_00003,PartyRoleType,Technical,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_savage_00003_12,Stage,event_kim1_savage_00003,PartyRoleType,Support,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_challenge_00001_1,Stage,event_kim1_challenge_00001,SpeedAttack,1000,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_challenge_00001_2,Stage,event_kim1_challenge_00001,NoContinue,1,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_challenge_00002_1,Stage,event_kim1_challenge_00002,SpeedAttack,1000,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_challenge_00002_2,Stage,event_kim1_challenge_00002,NoContinue,1,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_challenge_00003_1,Stage,event_kim1_challenge_00003,SpeedAttack,1000,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_challenge_00003_2,Stage,event_kim1_challenge_00003,NoContinue,1,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_challenge_00004_1,Stage,event_kim1_challenge_00004,SpeedAttack,1000,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,event_kim1_challenge_00004_2,Stage,event_kim1_challenge_00004,NoContinue,1,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,pvp_kim_specialrule_001,Pvp,2026008,UnitStatus,pvp_kim_specialrule_001_1,"2026-02-01 12:00:00","2026-03-31 23:59:59",202602020
+e,pvp_kim_specialrule_002,Pvp,2026009,UnitStatus,pvp_kim_specialrule_001_1,"2026-02-01 12:00:00","2026-03-31 23:59:59",202602020

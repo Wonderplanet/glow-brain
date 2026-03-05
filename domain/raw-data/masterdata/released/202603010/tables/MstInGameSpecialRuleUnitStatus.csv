@@ -1,0 +1,6 @@
+ENABLE,release_key,id,group_id,target_type,target_value,status_parameter_type,effect_value
+e,202603010,7,quest_event_hut1_Hp,Series,hut,Hp,20
+e,202603010,8,quest_event_hut1_AttackPower,Series,hut,AttackPower,20
+e,202603010,9,quest_event_hut1_Hp_savage,Series,hut,Hp,10
+e,202603010,10,quest_event_hut1_AttackPower_savage,Series,hut,AttackPower,10
+e,202603010,11,pvp_hut_specialrule_001_1,All,,Hp,200

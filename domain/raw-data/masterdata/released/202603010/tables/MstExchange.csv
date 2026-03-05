@@ -1,0 +1,2 @@
+ENABLE,id,mst_event_id,exchange_trade_type,start_at,end_at,lineup_group_id,display_order,release_key
+e,event_hut_00001_01,event_hut_00001,EventExchangeTrade,"2026-03-02 15:00:00","2026-04-03 10:59:59",event_hut_00001_01_lineup,1,202603010
