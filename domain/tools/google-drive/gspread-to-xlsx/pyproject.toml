@@ -1,0 +1,14 @@
+[project]
+name = "gspread-to-xlsx"
+version = "1.0.0"
+description = "Google SpreadsheetをXLSX形式でダウンロードするスクリプト"
+requires-python = ">=3.9"
+dependencies = [
+    "google-api-python-client>=2.111.0",
+    "google-auth>=2.26.2",
+    "requests>=2.31.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
