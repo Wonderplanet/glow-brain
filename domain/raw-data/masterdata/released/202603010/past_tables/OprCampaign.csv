@@ -1,0 +1,10 @@
+ENABLE,id,release_key,campaign_type,target_type,difficulty,target_id_type,target_id,effect_value,asset_key,start_at,end_at
+e,Campaign1_13,202510020,CoinDrop,EnhanceQuest,Normal,Quest,quest_enhance_00001,200,"",2025-10-22 15:00:00,2025-10-31 14:59:59
+e,BFCampaign1_1,202511020,Stamina,NormalQuest,Normal,Quest,"",50,"",2025-11-21 15:00:00,2025-12-01 23:59:59
+e,BFCampaign1_2,202511020,Stamina,NormalQuest,Hard,Quest,"",50,"",2025-11-21 15:00:00,2025-12-01 23:59:59
+e,BFCampaign1_3,202511020,Stamina,NormalQuest,Extra,Quest,"",50,"",2025-11-21 15:00:00,2025-12-01 23:59:59
+e,BFCampaign1_4,202511020,ChallengeCount,EnhanceQuest,Normal,Quest,quest_enhance_00001,2,"",2025-11-21 15:00:00,2025-12-02 03:59:59
+e,newyear_CP1_1,202512020,Stamina,NormalQuest,Normal,Quest,"",50,"",2025-12-26 12:00:00,2026-01-05 11:59:59
+e,newyear_CP1_2,202512020,Stamina,NormalQuest,Hard,Quest,"",50,"",2025-12-26 12:00:00,2026-01-05 11:59:59
+e,newyear_CP1_3,202512020,Stamina,NormalQuest,Extra,Quest,"",50,"",2025-12-26 12:00:00,2026-01-05 11:59:59
+e,newyear_CP1_4,202512020,ChallengeCount,EnhanceQuest,Normal,Quest,quest_enhance_00001,2,"",2025-12-26 12:00:00,2026-01-05 11:59:59

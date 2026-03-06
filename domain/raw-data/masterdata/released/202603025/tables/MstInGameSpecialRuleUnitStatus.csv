@@ -1,0 +1,16 @@
+ENABLE,release_key,id,group_id,target_type,target_value,status_parameter_type,effect_value
+e,202603025,25,pvp_half_specialrule_001_2,All,,Hp,200
+e,202603025,26,quest_event_l05anniv_Hp,Series,kai,Hp,20
+e,202603025,27,quest_event_l05anniv_AttackPower,Series,kai,AttackPower,20
+e,202603025,28,quest_event_l05anniv_Hp,Series,sur,Hp,20
+e,202603025,29,quest_event_l05anniv_AttackPower,Series,sur,AttackPower,20
+e,202603025,30,quest_event_l05anniv_Hp,Series,hyp,Hp,20
+e,202603025,31,quest_event_l05anniv_AttackPower,Series,hyp,AttackPower,20
+e,202603025,32,quest_event_l05anniv_Hp,Series,gam,Hp,20
+e,202603025,33,quest_event_l05anniv_AttackPower,Series,gam,AttackPower,20
+e,202603025,34,quest_event_l05anniv_Hp,Series,ara,Hp,20
+e,202603025,35,quest_event_l05anniv_AttackPower,Series,ara,AttackPower,20
+e,202603025,36,quest_event_l05anniv_Hp,Series,osh,Hp,20
+e,202603025,37,quest_event_l05anniv_AttackPower,Series,osh,AttackPower,20
+e,202603025,38,quest_event_l05anniv_Hp,Series,gom,Hp,20
+e,202603025,39,quest_event_l05anniv_AttackPower,Series,gom,AttackPower,20

@@ -1,0 +1,58 @@
+ENABLE,id,release_key,group_id,resource_type,resource_id,resource_amount,sort_order,備考
+e,mission_reward_645,202602020,event_kim_00001_daily_bonus_01,Item,ticket_glo_00003,2,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_646,202602020,event_kim_00001_daily_bonus_02,Coin,,5000,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_647,202602020,event_kim_00001_daily_bonus_03,FreeDiamond,,50,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_648,202602020,event_kim_00001_daily_bonus_04,Item,memoryfragment_glo_00001,15,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_649,202602020,event_kim_00001_daily_bonus_05,Item,memory_glo_00004,600,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_650,202602020,event_kim_00001_daily_bonus_06,Item,memory_glo_00003,600,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_651,202602020,event_kim_00001_daily_bonus_07,Item,ticket_glo_00002,2,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_652,202602020,event_kim_00001_daily_bonus_08,Coin,,10000,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_653,202602020,event_kim_00001_daily_bonus_09,FreeDiamond,,50,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_654,202602020,event_kim_00001_daily_bonus_10,Item,memory_glo_00002,600,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_655,202602020,event_kim_00001_daily_bonus_11,Item,memory_glo_00005,600,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_656,202602020,event_kim_00001_daily_bonus_12,Item,memoryfragment_glo_00002,4,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_657,202602020,event_kim_00001_daily_bonus_13,Item,ticket_glo_00003,1,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_658,202602020,event_kim_00001_daily_bonus_14,Item,ticket_glo_00002,1,1,"君のことが大大大大大好きな100人の彼女 いいジャン祭 特別ログインボーナス"
+e,mission_reward_659,202602020,kim_00001_event_reward_01,Coin,,5000,1,kimいいジャン祭_ミッション
+e,mission_reward_660,202602020,kim_00001_event_reward_02,Coin,,5000,1,kimいいジャン祭_ミッション
+e,mission_reward_661,202602020,kim_00001_event_reward_03,Coin,,5000,1,kimいいジャン祭_ミッション
+e,mission_reward_662,202602020,kim_00001_event_reward_04,Item,ticket_glo_00003,1,1,kimいいジャン祭_ミッション
+e,mission_reward_663,202602020,kim_00001_event_reward_05,Coin,,10000,1,kimいいジャン祭_ミッション
+e,mission_reward_664,202602020,kim_00001_event_reward_06,Item,ticket_glo_00002,1,1,kimいいジャン祭_ミッション
+e,mission_reward_665,202602020,kim_00001_event_reward_07,Item,piece_kim_00101,10,1,kimいいジャン祭_ミッション
+e,mission_reward_666,202602020,kim_00001_event_reward_08,Item,ticket_glo_00002,1,1,kimいいジャン祭_ミッション
+e,mission_reward_667,202602020,kim_00001_event_reward_09,Item,piece_kim_00201,10,1,kimいいジャン祭_ミッション
+e,mission_reward_668,202602020,kim_00001_event_reward_10,Item,ticket_glo_00002,1,1,kimいいジャン祭_ミッション
+e,mission_reward_669,202602020,kim_00001_event_reward_11,FreeDiamond,,50,1,kimいいジャン祭_ミッション
+e,mission_reward_670,202602020,kim_00001_event_reward_12,Item,ticket_glo_00003,1,1,kimいいジャン祭_ミッション
+e,mission_reward_671,202602020,kim_00001_event_reward_13,Item,piece_kim_00301,10,1,kimいいジャン祭_ミッション
+e,mission_reward_672,202602020,kim_00001_event_reward_14,Item,ticket_glo_00002,1,1,kimいいジャン祭_ミッション
+e,mission_reward_673,202602020,kim_00001_event_reward_15,Item,memoryfragment_glo_00003,1,1,kimいいジャン祭_ミッション
+e,mission_reward_674,202602020,kim_00001_event_reward_16,Item,ticket_glo_00002,1,1,kimいいジャン祭_ミッション
+e,mission_reward_675,202602020,kim_00001_event_reward_17,Item,ticket_glo_00003,1,1,kimいいジャン祭_ミッション
+e,mission_reward_676,202602020,kim_00001_event_reward_18,Item,ticket_glo_00002,1,1,kimいいジャン祭_ミッション
+e,mission_reward_677,202602020,kim_00001_event_reward_19,FreeDiamond,,50,1,kimいいジャン祭_ミッション
+e,mission_reward_678,202602020,kim_00001_event_reward_20,Item,ticket_glo_00002,1,1,kimいいジャン祭_ミッション
+e,mission_reward_679,202602020,kim_00001_event_reward_21,Item,memoryfragment_glo_00003,1,1,kimいいジャン祭_ミッション
+e,mission_reward_680,202602020,kim_00001_event_reward_22,Item,ticket_kim_00001,1,1,kimいいジャン祭_ミッション
+e,mission_reward_681,202602020,kim_00001_event_reward_23,Coin,,15000,1,kimいいジャン祭_ミッション
+e,mission_reward_682,202602020,kim_00001_event_reward_24,Coin,,15000,1,kimいいジャン祭_ミッション
+e,mission_reward_683,202602020,kim_00001_event_reward_25,Item,ticket_glo_00002,3,1,kimいいジャン祭_ミッション
+e,mission_reward_684,202602020,kim_00001_event_reward_26,Item,ticket_glo_00003,1,1,kimいいジャン祭_ミッション
+e,mission_reward_685,202602020,kim_00001_event_reward_27,Item,memoryfragment_glo_00001,5,1,kimいいジャン祭_ミッション
+e,mission_reward_686,202602020,kim_00001_event_reward_28,Item,memoryfragment_glo_00001,5,1,kimいいジャン祭_ミッション
+e,mission_reward_687,202602020,kim_00001_event_reward_29,Item,memoryfragment_glo_00001,5,1,kimいいジャン祭_ミッション
+e,mission_reward_688,202602020,kim_00001_event_reward_30,Item,memoryfragment_glo_00001,5,1,kimいいジャン祭_ミッション
+e,mission_reward_689,202602020,kim_00001_event_reward_31,Item,memoryfragment_glo_00001,10,1,kimいいジャン祭_ミッション
+e,mission_reward_690,202602020,kim_00001_event_reward_32,Item,memoryfragment_glo_00002,5,1,kimいいジャン祭_ミッション
+e,mission_reward_691,202602020,kim_00001_event_reward_33,Item,memoryfragment_glo_00002,5,1,kimいいジャン祭_ミッション
+e,mission_reward_692,202602020,kim_00001_event_reward_34,Item,memoryfragment_glo_00002,5,1,kimいいジャン祭_ミッション
+e,mission_reward_693,202602020,kim_00001_event_reward_35,Item,memoryfragment_glo_00002,5,1,kimいいジャン祭_ミッション
+e,mission_reward_694,202602020,kim_00001_event_reward_36,Item,memoryfragment_glo_00003,1,1,kimいいジャン祭_ミッション
+e,mission_reward_695,202602020,kim_00001_event_reward_37,Item,memoryfragment_glo_00003,1,1,kimいいジャン祭_ミッション
+e,mission_reward_696,202602020,kim_00001_event_reward_38,Item,memoryfragment_glo_00003,1,1,kimいいジャン祭_ミッション
+e,mission_reward_697,202602020,kim_00001_event_reward_39,Item,ticket_glo_00003,1,1,kimいいジャン祭_ミッション
+e,mission_reward_698,202602020,kim_00001_limited_term_1,Coin,,2000,1,降臨バトル「ラブミッション：インポッシブル」に5回挑戦しよう！
+e,mission_reward_699,202602020,kim_00001_limited_term_2,FreeDiamond,,20,1,降臨バトル「ラブミッション：インポッシブル」に10回挑戦しよう！
+e,mission_reward_700,202602020,kim_00001_limited_term_3,Coin,,3000,1,降臨バトル「ラブミッション：インポッシブル」に20回挑戦しよう！
+e,mission_reward_701,202602020,kim_00001_limited_term_4,FreeDiamond,,30,1,降臨バトル「ラブミッション：インポッシブル」に30回挑戦しよう！

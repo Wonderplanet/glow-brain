@@ -1,0 +1,9 @@
+ENABLE,id,mst_unit_id,language,condition_type,balloon_type,side,duration,text,release_key
+e,230,chara_kim_00001,ja,SpecialAttackCharge,Maru,Right,0.5,恋太郎ちゃん…ッ,202602020
+e,231,chara_kim_00001,ja,Summon,Maru,Left,1.5,ママって呼んでくれたらいいわよ♥,202602020
+e,232,chara_kim_00101,ja,SpecialAttackCharge,Maru,Right,0.5,恋太郎君♡,202602020
+e,233,chara_kim_00101,ja,Summon,Maru,Left,1.5,好きで好きでたまらないんです…,202602020
+e,230,chara_kim_00201,ja,SpecialAttackCharge,Maru,Right,0.5,"恋太郎っ !!",202602020
+e,231,chara_kim_00201,ja,Summon,Maru,Left,1.5,"とっとと\n\n\n終わらせるわよ",202602020
+e,232,chara_kim_00301,ja,SpecialAttackCharge,Maru,Right,0.5,“恋太郎君”,202602020
+e,233,chara_kim_00301,ja,Summon,Maru,Left,1.5,“私はそれを手伝う所存であった”,202602020

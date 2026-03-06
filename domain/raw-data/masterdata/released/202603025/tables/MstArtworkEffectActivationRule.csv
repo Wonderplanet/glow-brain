@@ -1,0 +1,9 @@
+ENABLE,id,mst_artwork_effect_id,condition_type,condition_value,release_key
+e,artwork_event_osh_0003_01,artwork_event_osh_0003,Series,osh,202603025
+e,artwork_event_osh_0003_02,artwork_event_osh_0003,Count,1,202603025
+e,artwork_event_gom_0001_01,artwork_event_gom_0001,Series,gom,202603025
+e,artwork_event_gom_0001_02,artwork_event_gom_0001,Count,1,202603025
+e,artwork_event_kai_0003_01,artwork_event_kai_0003,Series,kai,202603025
+e,artwork_event_kai_0003_02,artwork_event_kai_0003,Count,1,202603025
+e,artwork_chara_kai_00701_01,artwork_chara_kai_00701,Unit,chara_kai_00701,202603025
+e,artwork_chara_kai_00701_02,artwork_chara_kai_00701,Count,1,202603025

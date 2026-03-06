@@ -1,0 +1,6 @@
+ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key
+e,quest_event_hut1_charaget01,event,event_hut_00001,1,hut1_charaget01,"2026-03-02 15:00:00","2026-04-03 10:59:59",event_hut1_charaget_repeat,Normal,202603010
+e,quest_event_hut1_challenge,event,event_hut_00001,2,hut1_challenge01,"2026-03-02 15:00:00","2026-04-03 10:59:59",event_hut1_challenge,Normal,202603010
+e,quest_event_hut1_charaget02,event,event_hut_00001,3,hut1_charaget02,"2026-03-05 15:00:00","2026-04-03 10:59:59",event_hut1_charaget_story,Normal,202603010
+e,quest_event_hut1_savage,event,event_hut_00001,4,hut1_savage,"2026-03-09 15:00:00","2026-04-03 10:59:59",event_hut1_savege,Normal,202603010
+e,quest_event_hut1_1day,event,event_hut_00001,5,hut1_1day,"2026-03-02 15:00:00","2026-03-16 03:59:59",event_hut1_1day,Normal,202603010

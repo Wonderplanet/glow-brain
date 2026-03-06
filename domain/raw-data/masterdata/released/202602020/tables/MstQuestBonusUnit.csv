@@ -1,0 +1,5 @@
+ENABLE,id,mst_quest_id,mst_unit_id,coin_bonus_rate,start_at,end_at,release_key
+e,70,quest_enhance_00001,chara_kim_00001,0.2,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,71,quest_enhance_00001,chara_kim_00101,0.1,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,72,quest_enhance_00001,chara_kim_00201,0.1,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020
+e,73,quest_enhance_00001,chara_kim_00301,0.1,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020

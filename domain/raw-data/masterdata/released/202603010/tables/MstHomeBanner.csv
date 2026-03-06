@@ -1,0 +1,4 @@
+ENABLE,id,destination,destination_path,asset_key,start_at,end_at,sort_order,release_key
+e,38,Event,event_hut_00001,hometop_event_hut_00001,"2026-03-02 15:00:00","2026-03-16 14:59:59",7,202603010
+e,39,Gacha,Pickup_hut_001,hometop_gacha_hut_00001,"2026-03-02 15:00:00","2026-03-16 14:59:59",6,202603010
+e,40,Pack,,hometop_shop_pack_00032,"2026-03-10 15:00:00","2026-03-16 14:59:59",6,202603010

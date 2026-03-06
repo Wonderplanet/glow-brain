@@ -115,6 +115,63 @@ ORDER BY sort_order;
 
 ---
 
+## Step 2-6: MstEnemyCharacterI18n（敵キャラ日本語名・必須）
+
+MstEnemyStageParameterの`mst_enemy_character_id`からI18n日本語名を一括取得する。
+取得結果で `{キャラID: 日本語名}` マッピングを作成し、以降のドキュメント生成で必ず使用する。
+
+```bash
+duckdb -c "
+SELECT
+  esp.id AS stage_param_id,
+  esp.mst_enemy_character_id,
+  i18n.name AS enemy_name
+FROM read_csv('projects/glow-masterdata/MstEnemyStageParameter.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') esp
+LEFT JOIN read_csv('projects/glow-masterdata/MstEnemyCharacterI18n.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') i18n
+  ON esp.mst_enemy_character_id = i18n.mst_enemy_character_id
+  AND i18n.language = 'ja'
+WHERE esp.id IN (
+  SELECT DISTINCT action_value
+  FROM read_csv('projects/glow-masterdata/MstAutoPlayerSequence.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+  WHERE sequence_set_id = '{INGAME_ID}'
+    AND action_type = 'SummonEnemy'
+);
+"
+```
+
+---
+
+## Step 2-7: MstAbilityI18n（アビリティ日本語説明・アビリティがある場合は必須）
+
+MstEnemyStageParameterの`mst_unit_ability_id1`からI18n日本語説明を一括取得する。
+取得結果で `{アビリティID: 日本語説明}` マッピングを作成し、セクション3のabilityカラムに記載する。
+
+```bash
+duckdb -c "
+SELECT
+  a.id AS ability_id,
+  i18n.description AS ability_description
+FROM read_csv('projects/glow-masterdata/MstAbility.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') a
+LEFT JOIN read_csv('projects/glow-masterdata/MstAbilityI18n.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') i18n
+  ON a.id = i18n.mst_ability_id
+  AND i18n.language = 'ja'
+WHERE a.id IN (
+  SELECT DISTINCT esp.mst_unit_ability_id1
+  FROM read_csv('projects/glow-masterdata/MstEnemyStageParameter.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') esp
+  WHERE esp.id IN (
+    SELECT DISTINCT action_value
+    FROM read_csv('projects/glow-masterdata/MstAutoPlayerSequence.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
+    WHERE sequence_set_id = '{INGAME_ID}'
+      AND action_type = 'SummonEnemy'
+  )
+  AND esp.mst_unit_ability_id1 IS NOT NULL
+  AND esp.mst_unit_ability_id1 != ''
+);
+"
+```
+
+---
+
 ## 補助クエリ: グループ構造サマリー
 
 グループ切り替え行だけを抜き出してフロー把握に使う。
@@ -161,22 +218,6 @@ FROM read_csv('projects/glow-masterdata/MstAutoPlayerSequence.csv', AUTO_DETECT=
 WHERE sequence_set_id = '{INGAME_ID}'
   AND (sequence_group_id IS NULL OR sequence_group_id = '')
 ORDER BY sequence_element_id;
-"
-```
-
----
-
-## 補助クエリ: MstEnemyCharacter（キャラ日本語名）
-
-敵パラメータの `mst_enemy_character_id` から日本語名を取得する。
-
-```bash
-duckdb -c "
-SELECT ec.id, i.name
-FROM read_csv('projects/glow-masterdata/MstEnemyCharacter.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') ec
-LEFT JOIN read_csv('projects/glow-masterdata/MstEnemyCharacterI18n.csv', AUTO_DETECT=TRUE, nullstr='__NULL__') i
-  ON ec.id = i.mst_enemy_character_id AND i.language = 'ja'
-WHERE ec.id IN ({敵キャラIDリスト（カンマ区切り）});
 "
 ```
 

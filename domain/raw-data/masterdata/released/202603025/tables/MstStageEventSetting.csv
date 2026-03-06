@@ -1,0 +1,9 @@
+ENABLE,id,mst_stage_id,reset_type,clearable_count,ad_challenge_count,mst_stage_rule_group_id,start_at,end_at,release_key,background_asset_key
+e,258,event_l05anniv_1day_00001,__NULL__,,0,__NULL__,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025,glo_00030
+e,259,event_l05anniv_charaget01_00001,__NULL__,,0,__NULL__,"2026-03-30 15:00:00","2026-04-13 10:59:59",202603025,osh_00001
+e,260,event_l05anniv_charaget01_00002,__NULL__,,0,__NULL__,"2026-03-30 15:00:00","2026-04-13 10:59:59",202603025,osh_00001
+e,261,event_l05anniv_charaget01_00003,__NULL__,,0,__NULL__,"2026-03-30 15:00:00","2026-04-13 10:59:59",202603025,osh_00001
+e,262,event_l05anniv_challenge01_00001,__NULL__,,0,__NULL__,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025,gom_00002
+e,263,event_l05anniv_challenge01_00002,__NULL__,,0,__NULL__,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025,gom_00002
+e,264,event_l05anniv_challenge01_00003,__NULL__,,0,__NULL__,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025,gom_00002
+e,265,event_l05anniv_challenge01_00004,__NULL__,,0,__NULL__,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025,gom_00002

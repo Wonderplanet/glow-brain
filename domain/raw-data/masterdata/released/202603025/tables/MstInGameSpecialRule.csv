@@ -1,0 +1,26 @@
+ENABLE,id,content_type,target_id,rule_type,rule_value,start_at,end_at,release_key
+e,event_l05anniv_1day_00001_1,Stage,event_l05anniv_1day_00001,UnitStatus,quest_event_l05anniv_Hp,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_1day_00001_2,Stage,event_l05anniv_1day_00001,UnitStatus,quest_event_l05anniv_AttackPower,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_charaget01_00001_1,Stage,event_l05anniv_charaget01_00001,UnitStatus,quest_event_l05anniv_Hp,"2026-03-30 15:00:00","2026-04-13 10:59:59",202603025
+e,event_l05anniv_charaget01_00001_2,Stage,event_l05anniv_charaget01_00001,UnitStatus,quest_event_l05anniv_AttackPower,"2026-03-30 15:00:00","2026-04-13 10:59:59",202603025
+e,event_l05anniv_charaget01_00002_1,Stage,event_l05anniv_charaget01_00002,UnitStatus,quest_event_l05anniv_Hp,"2026-03-30 15:00:00","2026-04-13 10:59:59",202603025
+e,event_l05anniv_charaget01_00002_2,Stage,event_l05anniv_charaget01_00002,UnitStatus,quest_event_l05anniv_AttackPower,"2026-03-30 15:00:00","2026-04-13 10:59:59",202603025
+e,event_l05anniv_charaget01_00003_1,Stage,event_l05anniv_charaget01_00003,UnitStatus,quest_event_l05anniv_Hp,"2026-03-30 15:00:00","2026-04-13 10:59:59",202603025
+e,event_l05anniv_charaget01_00003_2,Stage,event_l05anniv_charaget01_00003,UnitStatus,quest_event_l05anniv_AttackPower,"2026-03-30 15:00:00","2026-04-13 10:59:59",202603025
+e,event_l05anniv_challenge01_00001_1,Stage,event_l05anniv_challenge01_00001,UnitStatus,quest_event_l05anniv_Hp,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00001_2,Stage,event_l05anniv_challenge01_00001,UnitStatus,quest_event_l05anniv_AttackPower,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00001_3,Stage,event_l05anniv_challenge01_00001,SpeedAttack,1000,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00001_4,Stage,event_l05anniv_challenge01_00001,NoContinue,1,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00002_1,Stage,event_l05anniv_challenge01_00002,UnitStatus,quest_event_l05anniv_Hp,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00002_2,Stage,event_l05anniv_challenge01_00002,UnitStatus,quest_event_l05anniv_AttackPower,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00002_3,Stage,event_l05anniv_challenge01_00002,SpeedAttack,1000,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00002_4,Stage,event_l05anniv_challenge01_00002,NoContinue,1,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00003_1,Stage,event_l05anniv_challenge01_00003,UnitStatus,quest_event_l05anniv_Hp,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00003_2,Stage,event_l05anniv_challenge01_00003,UnitStatus,quest_event_l05anniv_AttackPower,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00003_3,Stage,event_l05anniv_challenge01_00003,SpeedAttack,1000,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00003_4,Stage,event_l05anniv_challenge01_00003,NoContinue,1,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00004_1,Stage,event_l05anniv_challenge01_00004,UnitStatus,quest_event_l05anniv_Hp,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00004_2,Stage,event_l05anniv_challenge01_00004,UnitStatus,quest_event_l05anniv_AttackPower,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00004_3,Stage,event_l05anniv_challenge01_00004,SpeedAttack,1000,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,event_l05anniv_challenge01_00004_4,Stage,event_l05anniv_challenge01_00004,NoContinue,1,"2026-03-30 15:00:00","2026-04-13 03:59:59",202603025
+e,pvp_half_specialrule_002,Pvp,2026013,UnitStatus,pvp_half_specialrule_001_2,"2026-03-01 12:00:00","2026-05-31 23:59:59",202603025

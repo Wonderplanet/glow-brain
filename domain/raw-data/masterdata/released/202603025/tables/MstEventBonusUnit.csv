@@ -1,0 +1,10 @@
+ENABLE,id,mst_unit_id,bonus_percentage,event_bonus_group_id,is_pick_up,release_key
+e,78,chara_kai_00701,30,raid_l05anniv_00001,,202603025
+e,79,chara_kai_00102,30,raid_l05anniv_00001,,202603025
+e,80,chara_osh_00701,30,raid_l05anniv_00001,,202603025
+e,81,chara_gom_00701,30,raid_l05anniv_00001,,202603025
+e,82,chara_sur_00901,20,raid_l05anniv_00001,,202603025
+e,83,chara_osh_00801,20,raid_l05anniv_00001,,202603025
+e,84,chara_gam_00001,20,raid_l05anniv_00001,,202603025
+e,85,chara_hyp_00001,20,raid_l05anniv_00001,,202603025
+e,86,chara_ara_00001,20,raid_l05anniv_00001,,202603025

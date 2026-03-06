@@ -19,7 +19,7 @@
 ## グループ構造の要点
 
 ```mermaid
-flowchart LR
+flowchart TD
     START([バトル開始]) --> DEF
     DEF -- "2体撃破" --> W1
     W1 -- "9体撃破" --> W2

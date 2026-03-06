@@ -1,0 +1,7 @@
+ENABLE,id,type,group_type,rarity,asset_key,effect_value,sort_order,start_date,end_date,release_key,item_type,destination_opr_product_id
+e,piece_kim_00001,CharacterFragment,Etc,UR,piece_kim_00001,,1,"2026-02-16 15:00:00","2037-12-31 23:59:59",202602020,CharacterFragment,
+e,piece_kim_00101,CharacterFragment,Etc,SSR,piece_kim_00101,,1,"2026-02-16 15:00:00","2037-12-31 23:59:59",202602020,CharacterFragment,
+e,piece_kim_00201,CharacterFragment,Etc,SSR,piece_kim_00201,,1,"2026-02-16 15:00:00","2037-12-31 23:59:59",202602020,CharacterFragment,
+e,piece_kim_00301,CharacterFragment,Etc,SSR,piece_kim_00301,,1,"2026-02-16 15:00:00","2037-12-31 23:59:59",202602020,CharacterFragment,
+e,ticket_kim_00001,GachaTicket,Consumable,SSR,ticket_kim_00001,,30003,"2026-02-16 15:00:00","2037-12-31 23:59:59",202602020,GachaTicket,
+e,box_item_glo_00001,Etc,Etc,R,box_item_glo_00001,,20006,"2026-02-16 15:00:00","2026-03-16 10:59:59",202602020,Etc,

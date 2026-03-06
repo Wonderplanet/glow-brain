@@ -1,0 +1,8 @@
+ENABLE,id,opr_gacha_id,mst_unit_id,language,sort_order,description,release_key
+e,87,Pickup_kim_001,chara_kim_00001,ja,1,"必殺ワザで複数の相手\nに攻撃とノックバック\n特定の条件で自身への\n被ダメージカット!",202602020
+e,88,Pickup_kim_001,chara_kim_00101,ja,2,"必殺ワザで黄属性の\n相手に大ダメージ\nを与える!",202602020
+e,89,Pickup_kim_001,chara_kim_00201,ja,3,"必殺ワザで一定時間\n相手の攻撃ステータス\nをDOWNさせる!",202602020
+e,90,Pickup_kim_001,chara_kim_00301,ja,4,"必殺ワザで一定時間\n味方の黄属性キャラの\n攻撃ステータスをUP",202602020
+e,91,SSRticket_kim_001,chara_kim_00101,ja,1,"必殺ワザで黄属性の\n相手に大ダメージ\nを与える!",202602020
+e,92,SSRticket_kim_001,chara_kim_00201,ja,2,"必殺ワザで一定時間\n相手の攻撃ステータス\nをDOWNさせる!",202602020
+e,93,SSRticket_kim_001,chara_kim_00301,ja,3,"必殺ワザで一定時間\n味方の黄属性キャラの\n攻撃ステータスをUP",202602020

@@ -1,0 +1,4 @@
+ENABLE,id,quest_type,mst_event_id,sort_order,asset_key,start_date,end_date,quest_group,difficulty,release_key
+e,quest_event_l05anniv_charaget01,event,event_glo_00003,1,l05anniv_charaget01,"2026-03-30 15:00:00","2026-04-13 10:59:59",event_l05anniv_charaget_repeat,Normal,202603025
+e,quest_event_l05anniv_challenge01,event,event_glo_00003,2,l05anniv_challenge01,"2026-03-30 15:00:00","2026-04-13 03:59:59",quest_event_l05anniv_challenge01,Normal,202603025
+e,quest_event_l05anniv_1day,event,event_glo_00003,5,l05anniv_1day,"2026-03-30 15:00:00","2026-04-13 03:59:59",event_l05anniv_1day,Normal,202603025

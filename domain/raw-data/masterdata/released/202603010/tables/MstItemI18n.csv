@@ -1,0 +1,8 @@
+ENABLE,release_key,id,mst_item_id,language,name,description
+e,202603010,memory_chara_hut_00201_ja,memory_chara_hut_00201,ja,"内田 桃のメモリー","内田 桃のLv.上限開放に使用するアイテム"
+e,202603010,memory_chara_hut_00301_ja,memory_chara_hut_00301,ja,"藤井 彩目のメモリー","藤井 彩目のLv.上限開放に使用するアイテム"
+e,202603010,piece_hut_00001_ja,piece_hut_00001,ja,"ひたむきギタリスト 鳩野 ちひろのかけら","ひたむきギタリスト 鳩野 ちひろのグレードアップに使用するアイテム"
+e,202603010,piece_hut_00101_ja,piece_hut_00101,ja,"幸山 厘のかけら","幸山 厘のグレードアップに使用するアイテム"
+e,202603010,piece_hut_00201_ja,piece_hut_00201,ja,"内田 桃のかけら","内田 桃のグレードアップに使用するアイテム"
+e,202603010,piece_hut_00301_ja,piece_hut_00301,ja,"藤井 彩目のかけら","藤井 彩目のグレードアップに使用するアイテム"
+e,202603010,item_hut_00001_ja,item_hut_00001,ja,ギターピック,いいジャン祭交換所で使用するアイテム

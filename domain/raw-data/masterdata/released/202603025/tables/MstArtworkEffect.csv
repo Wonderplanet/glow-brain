@@ -1,0 +1,5 @@
+ENABLE,id,mst_artwork_id,effect_type,grade_level1_value,grade_level2_value,grade_level3_value,grade_level4_value,grade_level5_value,release_key
+e,artwork_event_osh_0003,artwork_event_osh_0003,AttackPowerUp,0.58,0.67,0.8,0.93,1.02,202603025
+e,artwork_event_gom_0001,artwork_event_gom_0001,HpUp,1.16,1.34,1.6,1.87,2.05,202603025
+e,artwork_event_kai_0003,artwork_event_kai_0003,ResummonSpeedUp,70,80,90,100,110,202603025
+e,artwork_chara_kai_00701,artwork_chara_kai_00701,HpUp,10,12,13,14,15,202603025
