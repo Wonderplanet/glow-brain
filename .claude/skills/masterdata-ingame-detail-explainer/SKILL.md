@@ -52,6 +52,13 @@ duckdb -c "SELECT * FROM read_csv('projects/glow-masterdata/MstInGame.csv', AUTO
 
 スタイル: デフォルト=`#6b7280` / w1〜w2=`#3b82f6` / w3〜w4=`#f59e0b` / w5以降=`#ef4444` / ループ起点直前=`#8b5cf6`
 
+**Mermaidノード記述ルール（必須）**:
+- 改行は `<br/>` を使用する（`\n` はレンダラーによって文字として表示される）
+- 絵文字はノードラベルに含めない（レンダリングが崩れる場合がある）
+- ひし形ノード `{}` は使用しない → 長方形 `[]` で代替する（`{}` 内では `<br/>` が動作しないため）
+- `style` には必ず `color:#fff` を明示する（背景色によっては文字が見えなくなる）
+- ノードラベルは3行以内に収める（見切れ防止）
+
 ### Step 5: ドキュメント組み立て・保存（8セクション必須）
 1. 概要（散文形式・約500文字）
 2. 関連テーブル設定（MstInGame / MstEnemyOutpost / MstPage+MstKomaLine / MstInGameI18n）
