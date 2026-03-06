@@ -965,3 +965,64 @@ function generateFileListCsv(folderInput, sessionId, maxDepth) {
     };
   }
 }
+
+/**
+ * スプレッドシートをXLSX形式でエクスポート
+ * @param {string} ssUrl - スプレッドシートURL
+ * @param {string} sessionId - セッションID
+ * @returns {object} - { data: base64文字列, fileName: XLSX名, error }
+ */
+function exportSpreadsheetAsXlsx(ssUrl, sessionId) {
+  const addLog = (log) => {
+    Logger.log(`[${log.type.toUpperCase()}] ${log.message}`);
+    saveLog(sessionId, log);
+  };
+
+  try {
+    const normalizedUrl = normalizeSpreadsheetUrl(ssUrl);
+    const ssId = extractSpreadsheetId(normalizedUrl);
+    if (!ssId) throw new Error('URLからスプレッドシートIDを取得できません: ' + ssUrl);
+
+    addLog({ type: 'info', message: `エクスポート中: ${ssUrl}` });
+
+    // スプシ名を取得（ファイル名に使用）
+    const ss = SpreadsheetApp.openById(ssId);
+    const ssName = ss.getName();
+
+    // Export API で XLSX エクスポート（gid指定なし = 全シート）
+    const exportUrl = `https://docs.google.com/spreadsheets/d/${ssId}/export?format=xlsx`;
+    const token = ScriptApp.getOAuthToken();
+
+    let response;
+    for (let retry = 0; retry < 3; retry++) {
+      response = UrlFetchApp.fetch(exportUrl, {
+        headers: { 'Authorization': 'Bearer ' + token },
+        muteHttpExceptions: true
+      });
+
+      const code = response.getResponseCode();
+      if (code === 200) break;
+
+      if (retry < 2 && (code === 429 || code >= 500)) {
+        const waitMs = 3000 * (retry + 1);
+        addLog({ type: 'warn', message: `リトライ ${retry + 1}/3 (HTTP ${code}, ${waitMs / 1000}秒待機)` });
+        Utilities.sleep(waitMs);
+      } else {
+        throw new Error(`エクスポート失敗: HTTP ${code}`);
+      }
+    }
+
+    const fileName = sanitizeFileName(ssName) + '.xlsx';
+    addLog({ type: 'success', message: `完了: ${fileName}` });
+
+    return {
+      data: Utilities.base64Encode(response.getContent()),
+      fileName: fileName,
+      error: null
+    };
+
+  } catch (e) {
+    addLog({ type: 'error', message: `エラー: ${e.message}` });
+    return { data: null, fileName: null, error: e.message };
+  }
+}

@@ -4,6 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ---
 
+## 重要ルール
+
+### スクリプトの自律実行禁止
+
+**Claudeはユーザーの明示的な許可なしにスクリプトを実行してはならない。**
+
+- `domain/tools/` 配下のスクリプト（Python等）を独断で実行することは禁止
+- 実行が必要な場合は、必ず `AskUserQuestion` ツールでユーザーに確認を取ること
+- ユーザーが「実行して確認して」と明示した場合のみ実行可能
+
+---
+
 ## プロジェクト概要
 
 glow-brainは、**GLOWゲームプロジェクト全体の開発支援のための統合コンテキストリポジトリ**です。
