@@ -60,7 +60,7 @@ duckdb -c "SELECT * FROM read_csv('projects/glow-masterdata/MstInGame.csv', AUTO
 - ノードラベルは3行以内に収める（見切れ防止）
 
 ### Step 5: ドキュメント組み立て・保存（8セクション必須）
-1. 概要（散文形式・約500文字）
+1. 概要（箇条書き形式）
 2. 関連テーブル設定（MstInGame / MstEnemyOutpost / MstPage+MstKomaLine / MstInGameI18n）
 3. 使用する敵パラメータ一覧（カラム解説 + 全パラメータ表 + 特性解説）
 4. グループ構造の全体フロー（Mermaid）
