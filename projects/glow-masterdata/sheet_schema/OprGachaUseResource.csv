@@ -1,0 +1,3 @@
+memo
+TABLE,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource,OprGachaUseResource
+ENABLE,id,opr_gacha_id,cost_type,cost_id,cost_num,draw_count,cost_priority,release_key

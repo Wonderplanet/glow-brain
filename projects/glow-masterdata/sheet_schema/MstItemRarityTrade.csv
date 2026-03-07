@@ -1,0 +1,3 @@
+memo
+TABLE,MstItemRarityTrade,MstItemRarityTrade,MstItemRarityTrade,MstItemRarityTrade,MstItemRarityTrade,MstItemRarityTrade
+ENABLE,id,rarity,cost_amount,reset_type,max_tradable_amount,release_key

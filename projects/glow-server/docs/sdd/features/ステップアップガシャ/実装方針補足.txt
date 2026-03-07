@@ -1,0 +1,44 @@
+◯実装方針
+・既存の/api/gacha/draw/diamond、/api/gacha/draw/paid_diamon、/api/gacha/draw/item、/api/gacha/draw/freeのAPIを使い、新規にAPIを増やさない
+・/api/gacha/draw/adはステップアップガシャには対応しない
+・既存の/api/gacha/draw系のAPIのレスポンスのusrGachaに、ステップアップガシャ用のパラメータを追加する(ステップアップガシャ以外の時は空になるように)
+・既存の/api/game/update_and_fetchのレスポンスのusrGachaにも上記のパラメータを追加する
+・既存の/api/gacha/prize、/api/gacha/historyのAPIもステップアップガシャ用の変更を加える
+・リクエスト時のステップ数の整合性チェックをしない
+・新しいDomainを追加しない
+・opr_gacha_prizesのテーブルを利用し、ステップアップガシャの賞品情報を管理する
+・追加するテーブルは下記
+　・opr_stepup_gachas(opr_gacha_idでopr_gachasに紐づけて、ステップアップガシャ用の情報を管理)
+　　・opr_gacha_id
+　　・max_step_number(最大ステップ数)
+　　・max_loop_count(最大周回数（NULLの場合は無限周回）)
+　・opr_stepup_gacha_steps(ステップ毎のコストやprize_group_id、fixed_prize_group_idなどの情報、prizeはopr_gacha_prizesを使う)
+　　・opr_gacha_id
+　　・step_number(ステップ数)
+　　・cost_type(コストの種類)
+　　・cost_id(コストのID)
+　　・cost_num(コストの数)
+　　・draw_count(排出回数（何連ガシャか）)
+　　・fixed_prize_count(確定枠数（0-10）)
+　　・fixed_prize_rarity_threshold_type(確定枠レアリティ条件)
+　　・prize_group_id(賞品グループID)
+　　・fixed_prize_group_id(確定枠賞品グループID)
+　　・is_first_free(初回のみ無料フラグ)
+　・opr_stepup_gacha_steps_i18n(ステップ毎の多言語テキスト情報)
+　　・opr_stepup_gacha_step_id(opr_stepup_gacha_steps.id)
+　　・language(言語コード)
+　　・fixed_prize_description(確定枠の表示文言/排出物テキスト)
+・変更する既存テーブルは下記
+　・opr_gachas
+　　・gacha_typeにStepUpを追加する
+　・usr_gachas(ユーザーのステップアップガシャの情報)
+　　・current_step_number(現在のステップ番号（1-10）)
+　　・loop_count(現在の周回数（0以上）)
+　・log_gacha_actions
+　　・step_number(実行したステップ番号)
+　　・loop_count(実行時の周回数)
+・通常のガシャと同様に共通的なガシャ情報はusr_gachasに登録し、ステップアップガシャ用の情報をusr_stepup_gachasに登録する
+・glow-schema/Schema/Gacha.ymlとglow-schema/Schema/Reward.ymlにgacha系のAPI設計がある
+・レスポンスにusrStepupGachasなどは追加せず、usrGachaの中にステップアップガシャ用のカラムを追加(current_step_number,loop_count)
+・opr_gachasのprize_group_idとfixed_prize_group_idをステップ共通IDとし、
+　opr_stepup_gacha_stepsのprize_group_idとfixed_prize_group_idがnullの場合にはopr_gachasのgroup_idを参照する形にする

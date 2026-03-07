@@ -1,0 +1,3 @@
+memo
+TABLE,MstUnitGradeUp,MstUnitGradeUp,MstUnitGradeUp,MstUnitGradeUp,MstUnitGradeUp
+ENABLE,id,unit_label,grade_level,require_amount,release_key
