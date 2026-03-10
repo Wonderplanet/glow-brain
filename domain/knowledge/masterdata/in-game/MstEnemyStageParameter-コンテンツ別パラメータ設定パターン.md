@@ -92,17 +92,17 @@ c_aka_00001_general_vh_Boss_Red
 
 対象: glo 以外の作品IDを持つキャラ上位5体（2026-03-10 時点）
 
-| キャラID | 件数 | 特徴 |
-|---|---|---|
-| `enemy_dan_00001` | 22件 | 変身ギミックが最多 |
-| `enemy_sur_00101` | 20件 | 高速移動・コンボ変動 |
-| `enemy_mag_00101` | 18件 | 超高速（speed=100）・高HP系列 |
-| `enemy_kai_00101` | 17件 | 属性によって速度が異なる |
-| `enemy_kai_00001` | 16件 | 高HP Bossと超低速の対比 |
+| キャラID | 日本語名 | 件数 | 特徴 |
+|---|---|---|---|
+| `enemy_dan_00001` | セルポ星人 | 22件 | 変身ギミックが最多 |
+| `enemy_sur_00101` | 醜鬼 | 20件 | 高速移動・コンボ変動 |
+| `enemy_mag_00101` | つらら | 18件 | 超高速（speed=100）・高HP系列 |
+| `enemy_kai_00101` | 怪獣 余獣 | 17件 | 属性によって速度が異なる |
+| `enemy_kai_00001` | 怪獣 本獣 | 16件 | 高HP Bossと超低速の対比 |
 
 ---
 
-### 2-1. enemy_dan_00001（dan作品）— 変身ギミック特化
+### 2-1. enemy_dan_00001 / セルポ星人（dan作品）— 変身ギミック特化
 
 **全22件中9件が変身（trans）データ。** 変身前は `mstTransformationEnemyStageParameterId` で変身後（`enemy_dan_00101`）を参照し、HP残量%で変身トリガー（`transformationConditionType = HpPercentage`）。
 
@@ -126,7 +126,7 @@ c_aka_00001_general_vh_Boss_Red
 
 ---
 
-### 2-2. enemy_sur_00101（sur作品）— 高速移動・コンボ変動
+### 2-2. enemy_sur_00101 / 醜鬼（sur作品）— 高速移動・コンボ変動
 
 **move_speed が全体で最大65と高速。** challenge のみ `attack_combo_cycle=4`、glo2_savage01 は `attack_combo_cycle=0` と、コンテンツによってコンボ設定が大きく異なる。
 
@@ -151,7 +151,7 @@ c_aka_00001_general_vh_Boss_Red
 
 ---
 
-### 2-3. enemy_mag_00101（mag作品）— 超高速移動・高HP系列
+### 2-3. enemy_mag_00101 / つらら（mag作品）— 超高速移動・高HP系列
 
 **move_speed=100 が基本値**（全データ中断トツ最速）。`general_as4` / `general_ori4` は HP が桁違いに高い高難易度専用エリート版。
 
@@ -175,7 +175,7 @@ c_aka_00001_general_vh_Boss_Red
 
 ---
 
-### 2-4. enemy_kai_00101（kai作品）— 属性ごとに速度が異なる
+### 2-4. enemy_kai_00101 / 怪獣 余獣（kai作品）— 属性ごとに速度が異なる
 
 **`eventchallenge01` は属性によって `move_speed` が大きく異なる**（Blue:23 / Colorless:21 / Green:35 / Red:20 / Yellow:31）。
 
@@ -197,7 +197,7 @@ c_aka_00001_general_vh_Boss_Red
 
 ---
 
-### 2-5. enemy_kai_00001（kai作品・別個体）— 高HP Bossと超低速の対比
+### 2-5. enemy_kai_00001 / 怪獣 本獣（kai作品・別個体）— 高HP Bossと超低速の対比
 
 `enemy_kai_00101` と同じ `general_kai_vh` / `kai1_advent` コンテンツに共存するペアキャラ。
 `general` は **Yellow 1属性のみ**（固有色として扱われている）。
@@ -243,15 +243,15 @@ c_aka_00001_general_vh_Boss_Red
 
 対象キャラ（2026-03-10 時点、件数上位）:
 
-| キャラID | 件数 | 特徴 |
-|---|---|---|
-| `chara_osh_00001` | 13件 | combo数で難易度表現・最大combo=10 |
-| `chara_dan_00001` | 13件 | role=Defense 全固定・変身なし |
-| `chara_spy_00101` | 12件 | 全件 Boss 種・超遠距離（well_dist=0.50） |
+| キャラID | 日本語名 | 件数 | 特徴 |
+|---|---|---|---|
+| `chara_osh_00001` | B小町不動のセンター アイ | 13件 | combo数で難易度表現・最大combo=10 |
+| `chara_dan_00001` | オカルン | 13件 | role=Defense 全固定・変身なし |
+| `chara_spy_00101` | \<黄昏\> ロイド | 12件 | 全件 Boss 種・超遠距離（well_dist=0.50） |
 
 ---
 
-### 4-1. chara_osh_00001（osh作品）— combo数で難易度を表現
+### 4-1. chara_osh_00001 / B小町不動のセンター アイ（osh作品）— combo数で難易度を表現
 
 **general 系は HP=1,000 に固定し、combo 数を増やすことで難易度を段階表現する設計。**
 `general_osh_vh` Boss/Technical の combo=10 は全データ中最大値。
@@ -279,7 +279,7 @@ c_aka_00001_general_vh_Boss_Red
 
 ---
 
-### 4-2. chara_dan_00001（dan作品）— role=Defense 全固定・enemy版と変身有無が異なる
+### 4-2. chara_dan_00001 / オカルン（dan作品）— role=Defense 全固定・enemy版と変身有無が異なる
 
 **全13件が role=Defense に固定。** 同キャラの `enemy_dan_00001`（trans 9件）と異なり、chara 版には変身ギミックが一切ない。
 
@@ -307,7 +307,7 @@ c_aka_00001_general_vh_Boss_Red
 
 ---
 
-### 4-3. chara_spy_00101（spy作品）— 全件 Boss 種・超遠距離攻撃
+### 4-3. chara_spy_00101 / \<黄昏\> ロイド（spy作品）— 全件 Boss 種・超遠距離攻撃
 
 **general 系の well_distance=0.50 は全データ中最大。** 全件 role=Attack 固定、Normal 種が1件のみ。
 
