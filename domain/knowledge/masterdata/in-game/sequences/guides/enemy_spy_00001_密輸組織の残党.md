@@ -15,6 +15,17 @@
 
 ---
 
+## 設計上の特徴
+
+1. **spyシリーズ最多登場の主役雑魚敵** - Normal〜VeryHard・サベージ・レイドまで全ステージタイプに登場
+2. **量的圧倒がコアデザイン** - 単体では弱いが、10体・20体・99体規模での一斉召喚が基本戦術
+3. **唯一のステージ5段階チェーン（normal_spy_00004）** - FriendUnitDead連鎖で1体→99体まで指数的にエスカレートする特殊構造
+4. **サベージ用特化形態** - `move_speed=70`という高速形態（`spy1savage_Normal_Colorless`）でマス突破を狙う役割
+5. **HP係数設計で幅広い難易度対応** - 通常形態（HP1,000）に対してHP係数1〜80まで適用し、Normal〜VeryHardで使い回す
+6. **BossBlue格上げパターン** - Normal難度でも仲間2体が倒されると`e_spy_00001_general_n_Boss_Blue`が登場する「中ボス化」トリガー
+
+---
+
 ## MstEnemyStageParameter 一覧
 
 | ID | character_unit_kind | role_type | color | HP | attack_power | move_speed | knockback | attack_combo_cycle |
@@ -172,13 +183,3 @@
 
 **特徴**: レイドでは全6ウェーブにわたって継続的に大量召喚（各30体）され、最終ウェーブでは**99体**に。ウェーブを重ねるごとにHP係数が上昇（4→5→5→6）し、着実に強化される長期消耗戦。
 
----
-
-## まとめ：密輸組織の残党の設計上の特徴
-
-1. **spyシリーズ最多登場の主役雑魚敵** - Normal〜VeryHard・サベージ・レイドまで全ステージタイプに登場
-2. **量的圧倒がコアデザイン** - 単体では弱いが、10体・20体・99体規模での一斉召喚が基本戦術
-3. **唯一のステージ5段階チェーン（normal_spy_00004）** - FriendUnitDead連鎖で1体→99体まで指数的にエスカレートする特殊構造
-4. **サベージ用特化形態** - `move_speed=70`という高速形態（`spy1savage_Normal_Colorless`）でマス突破を狙う役割
-5. **HP係数設計で幅広い難易度対応** - 通常形態（HP1,000）に対してHP係数1〜80まで適用し、Normal〜VeryHardで使い回す
-6. **BossBlue格上げパターン** - Normal難度でも仲間2体が倒されると`e_spy_00001_general_n_Boss_Blue`が登場する「中ボス化」トリガー

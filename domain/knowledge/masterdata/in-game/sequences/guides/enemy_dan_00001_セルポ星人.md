@@ -16,6 +16,19 @@
 
 ---
 
+## 設計上の特徴
+
+1. **量で攻める雑魚敵** - 通常は複数体〜大量（最大50体）で一斉召喚される
+2. **変身による強化ギミック** - HP50%で変身（enemy_dan_00101）し、変身後に援軍召喚トリガーが発動する場合がある
+3. **難易度ごとのトリガー差異**
+   - Normal: `DarknessKomaCleared`（闇コマ消し）
+   - Hard: `DarknessKomaCleared` → `FriendUnitDead`（仲間の死亡）
+   - VeryHard: `InitialSummon` + `OutpostDamage` → `FriendUnitDead` 多段トリガー
+4. **拠点ダメージ起点の大攻勢** - VeryHard以上では拠点に初めてダメージが入った瞬間にボス2体が即出現するデザイン
+5. **多様なカラー・役割タイプ** - Colorless/Red/Blue/Green/Yellow の5色、Defense/Attack/Technical の3ロールをカバーし、ステージ・難易度ごとに使い分けられる
+
+---
+
 ## MstEnemyStageParameter 一覧
 
 以下はenemy_dan_00001が持つ代表的なパラメータバリエーションです。
@@ -173,15 +186,3 @@
 
 **特徴**: チャレンジステージでは大量（50体）の召喚が特徴的。ターボババアと共演する場面も多い。
 
----
-
-## まとめ：セルポ星人の設計上の特徴
-
-1. **量で攻める雑魚敵** - 通常は複数体〜大量（最大50体）で一斉召喚される
-2. **変身による強化ギミック** - HP50%で変身（enemy_dan_00101）し、変身後に援軍召喚トリガーが発動する場合がある
-3. **難易度ごとのトリガー差異**
-   - Normal: `DarknessKomaCleared`（闇コマ消し）
-   - Hard: `DarknessKomaCleared` → `FriendUnitDead`（仲間の死亡）
-   - VeryHard: `InitialSummon` + `OutpostDamage` → `FriendUnitDead` 多段トリガー
-4. **拠点ダメージ起点の大攻勢** - VeryHard以上では拠点に初めてダメージが入った瞬間にボス2体が即出現するデザイン
-5. **多様なカラー・役割タイプ** - Colorless/Red/Blue/Green/Yellow の5色、Defense/Attack/Technical の3ロールをカバーし、ステージ・難易度ごとに使い分けられる
