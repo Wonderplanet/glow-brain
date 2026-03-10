@@ -1,0 +1,78 @@
+作品ID(MstSeries.id),敵キャラID(MstEnemyCharacter.id),データタイプ,敵キャラ名
+spy,enemy_spy_00001,ノーマルブロック登場,密輸組織の残党
+spy,enemy_glo_00001,ノーマルブロック登場,ファントム
+spy,chara_spy_00401,ボスブロック登場,フランキー・フランクリン
+spy,chara_spy_00101,UR対抗キャラ,<黄昏> ロイド
+dan,enemy_dan_00001,ノーマルブロック登場,セルポ星人
+dan,enemy_glo_00001,ノーマルブロック登場,ファントム
+dan,chara_dan_00301,ボスブロック登場,招き猫 ターボババア
+dan,chara_dan_00002,UR対抗キャラ,ターボババアの霊力 オカルン
+gom,enemy_gom_00402,ノーマルブロック登場,たこ焼き
+gom,enemy_gom_00501,ノーマルブロック登場,バタートースト
+gom,enemy_gom_00701,ノーマルブロック登場,ラーメン
+gom,enemy_glo_00001,ノーマルブロック登場,ファントム
+gom,chara_gom_00001,ボスブロック登場,囚われの王女 姫様
+gom,chara_gom_00001,UR対抗キャラ,囚われの王女 姫様
+chi,enemy_chi_00101,ノーマルブロック登場,ゾンビ
+chi,enemy_glo_00001,ノーマルブロック登場,ファントム
+chi,chara_chi_00002,ボスブロック登場,悪魔が恐れる悪魔 チェンソーマン
+chi,chara_chi_00002,UR対抗キャラ,悪魔が恐れる悪魔 チェンソーマン
+mag,enemy_mag_00001,ノーマルブロック登場,冷却系怪異
+mag,enemy_mag_00101,ノーマルブロック登場,つらら
+mag,enemy_glo_00001,ノーマルブロック登場,ファントム
+mag,chara_mag_00001,ボスブロック登場,新人魔法少女 桜木 カナ
+mag,chara_mag_00201,UR対抗キャラ,絶対効率の体現者 土刃 メイ
+kai,enemy_kai_00101,ノーマルブロック登場,怪獣 余獣
+kai,enemy_glo_00001,ノーマルブロック登場,ファントム
+kai,chara_kai_00002,ボスブロック登場,隠された英雄の姿 怪獣８号
+kai,chara_kai_00002,UR対抗キャラ,隠された英雄の姿 怪獣８号
+yuw,chara_yuw_00001,ノーマルブロック登場,リリエルに捧ぐ愛 天乃 リリサ
+yuw,chara_yuw_00101,ノーマルブロック登場,コスプレに託す乙女心 橘 美花莉
+yuw,chara_yuw_00301,ノーマルブロック登場,勇気を纏うコスプレ 乃愛
+yuw,chara_yuw_00401,ノーマルブロック登場,伝えたいウチの想い 喜咲 アリア
+yuw,enemy_glo_00001,ノーマルブロック登場,ファントム
+yuw,chara_yuw_00601,ボスブロック登場,奥村 正宗
+yuw,chara_yuw_00001,UR対抗キャラ,リリエルに捧ぐ愛 天乃 リリサ
+sur,enemy_sur_00101,ノーマルブロック登場,醜鬼
+sur,enemy_glo_00001,ノーマルブロック登場,ファントム
+sur,chara_sur_00801,ボスブロック登場,無窮の鎖 和倉 優希
+sur,chara_sur_00901,UR対抗キャラ,万物を統べる総組長 山城 恋
+sum,enemy_sum_00001,ノーマルブロック登場,影
+sum,enemy_glo_00001,ノーマルブロック登場,ファントム
+sum,chara_sum_00001,ボスブロック登場,網代 慎平
+sum,chara_sum_00101,UR対抗キャラ,影のウシオ 小舟 潮
+jig,enemy_jig_00001,ノーマルブロック登場,門神
+jig,enemy_jig_00401,ノーマルブロック登場,極楽蝶
+jig,enemy_glo_00001,ノーマルブロック登場,ファントム
+jig,chara_jig_00601,ボスブロック登場,民谷 巌鉄斎
+jig,chara_jig_00001,UR対抗キャラ,がらんの画眉丸
+tak,enemy_glo_00001,ノーマルブロック登場,ファントム
+tak,chara_tak_00001,ボスブロック登場,ハッピー星からの使者 タコピー
+tak,chara_tak_00001,UR対抗キャラ,ハッピー星からの使者 タコピー
+osh,chara_osh_00201,ノーマルブロック登場,星野 ルビー
+osh,chara_osh_00301,ノーマルブロック登場,MEMちょ
+osh,chara_osh_00401,ノーマルブロック登場,有馬 かな
+osh,chara_osh_00501,ノーマルブロック登場,黒川あかね
+osh,enemy_glo_00001,ノーマルブロック登場,ファントム
+osh,chara_osh_00601,ボスブロック登場,ぴえヨン
+osh,chara_osh_00001,UR対抗キャラ,B小町不動のセンター アイ
+you,enemy_you_00001,ノーマルブロック登場,不良系金髪イケメン
+you,enemy_you_00101,ノーマルブロック登場,イケメンじゃない殺し屋
+you,enemy_glo_00001,ノーマルブロック登場,ファントム
+you,chara_you_00201,ボスブロック登場,ダグ
+you,chara_you_00001,UR対抗キャラ,元殺し屋の新人教諭 リタ
+kim,chara_kim_00101,ノーマルブロック登場,花園 羽香里
+kim,chara_kim_00201,ノーマルブロック登場,院田 唐音
+kim,chara_kim_00301,ノーマルブロック登場,好本 静
+kim,enemy_glo_00001,ノーマルブロック登場,ファントム
+kim,chara_kim_00001,ボスブロック登場,溢れる母性 花園 羽々里
+kim,chara_kim_00001,UR対抗キャラ,溢れる母性 花園 羽々里
+hut,chara_hut_00001,ノーマルブロック登場,ひたむきギタリスト 鳩野 ちひろ
+hut,chara_hut_00201,ノーマルブロック登場,内田 桃
+hut,chara_hut_00301,ノーマルブロック登場,藤井 彩目
+hut,enemy_glo_00001,ノーマルブロック登場,ファントム
+hut,chara_hut_00101,ボスブロック登場,幸山 厘
+hut,chara_hut_00001,UR対抗キャラ,ひたむきギタリスト 鳩野 ちひろ
+aya,enemy_aya_00001,ノーマルブロック登場,シロガネ
+aya,enemy_glo_00001,ノーマルブロック登場,ファントム
+aya,chara_aya_00101,ボスブロック登場,花奏 すず
