@@ -1,17 +1,17 @@
-敵キャラID,敵キャラ名,カラー,相性が良いカラー
-chara_spy_00101,<黄昏> ロイド,Yellow,Blue
-chara_dan_00002,ターボババアの霊力 オカルン,Blue,Red
-chara_gom_00001,囚われの王女 姫様,Green,Yellow
-chara_chi_00002,悪魔が恐れる悪魔 チェンソーマン,Yellow,Blue
-chara_mag_00201,絶対効率の体現者 土刃 メイ,Red,Green
-chara_kai_00002,隠された英雄の姿 怪獣８号,Green,Yellow
-chara_yuw_00001,リリエルに捧ぐ愛 天乃 リリサ,Yellow,Blue
-chara_sur_00901,万物を統べる総組長 山城 恋,Blue,Red
-chara_sum_00101,影のウシオ 小舟 潮,Blue,Red
-chara_jig_00001,がらんの画眉丸,Red,Green
-chara_tak_00001,ハッピー星からの使者 タコピー,Yellow,Blue
-chara_osh_00001,B小町不動のセンター アイ,Red,Green
-chara_you_00001,元殺し屋の新人教諭 リタ,Red,Green
-chara_kim_00001,溢れる母性 花園 羽々里,Blue,Red
-chara_hut_00001,ひたむきギタリスト 鳩野 ちひろ,Green,Yellow
-chara_aya_00101,花奏 すず,Red,Green
+作品ID,敵キャラID,敵キャラ名,カラー,相性が良いカラー
+spy,chara_spy_00101,<黄昏> ロイド,Yellow,Blue
+dan,chara_dan_00002,ターボババアの霊力 オカルン,Blue,Red
+gom,chara_gom_00001,囚われの王女 姫様,Green,Yellow
+chi,chara_chi_00002,悪魔が恐れる悪魔 チェンソーマン,Yellow,Blue
+mag,chara_mag_00201,絶対効率の体現者 土刃 メイ,Red,Green
+kai,chara_kai_00002,隠された英雄の姿 怪獣８号,Green,Yellow
+yuw,chara_yuw_00001,リリエルに捧ぐ愛 天乃 リリサ,Yellow,Blue
+sur,chara_sur_00901,万物を統べる総組長 山城 恋,Blue,Red
+sum,chara_sum_00101,影のウシオ 小舟 潮,Blue,Red
+jig,chara_jig_00001,がらんの画眉丸,Red,Green
+tak,chara_tak_00001,ハッピー星からの使者 タコピー,Yellow,Blue
+osh,chara_osh_00001,B小町不動のセンター アイ,Red,Green
+you,chara_you_00001,元殺し屋の新人教諭 リタ,Red,Green
+kim,chara_kim_00001,溢れる母性 花園 羽々里,Blue,Red
+hut,chara_hut_00001,ひたむきギタリスト 鳩野 ちひろ,Green,Yellow
+aya,chara_aya_00101,花奏 すず,Red,Green
