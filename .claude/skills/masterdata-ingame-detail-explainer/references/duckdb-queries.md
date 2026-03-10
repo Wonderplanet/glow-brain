@@ -41,7 +41,10 @@ WHERE mst_in_game_id = '{INGAME_ID}'
 
 ---
 
-## Step 2-3: MstPage + MstKomaLine（コマフィールド）
+## Step 2-3: MstPage + MstKomaLine（コマフィールド・block-beta図用）
+
+> **用途**: コマ設計セクションの Mermaid block-beta 図を生成するために使用。
+> 各コマの `width`・`bg_offset`・`koma_effect` を取得し、`columns 10` 基準の幅比率に変換する。
 
 ```bash
 duckdb -c "
@@ -166,9 +169,10 @@ ORDER BY sequence_element_id;
 
 ---
 
-## 補助クエリ: MstEnemyCharacter（キャラ日本語名）
+## Step 2-6: MstEnemyCharacter（敵キャラ選定テーブル用）
 
-敵パラメータの `mst_enemy_character_id` から日本語名を取得する。
+> **用途**: 敵キャラ設計セクションの「敵キャラ選定（MstEnemyCharacter）」テーブル作成に使用。
+> MstEnemyStageParameterの `mst_enemy_character_id` から日本語名・モデル情報を取得する。
 
 ```bash
 duckdb -c "

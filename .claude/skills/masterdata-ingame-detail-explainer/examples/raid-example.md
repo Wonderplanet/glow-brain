@@ -1,119 +1,172 @@
-# raidタイプ例示: raid_osh1_00001
+# raidタイプ例示: raid_jig1_00001（v2フォーマット）
 
 > 完全な実例ドキュメント:
-> `domain/tasks/masterdata-entry/in-game-tables/raid_osh1_00001_詳細解説.md`
+> `domain/knowledge/masterdata/in-game/guides/raid_jig1_00001_v2.md`
 
 ---
 
 ## このコンテンツの特徴
 
-- **コンテンツタイプ**: レイドバトル
+- **コンテンツタイプ**: レイドバトル（スコアアタック型）
 - **ゲームモード**: スコアアタック型（`is_damage_invalidation` = 1）
-- **砦HP**: 1,000,000（ダメージ無効・時間制限でスコアを稼ぐ）
-- **シーケンス行数**: 60行（MstAutoPlayerSequenceの最多行数クラス）
-- **グループ構成**: デフォルト + w1〜w6（7グループ）
-- **特徴的なルール**: w6 → w1 ループ（累計47体でリセット）
+- **砦HP**: 1,000,000（ダメージ無効・制限時間内にバトルポイントを稼ぐ）
+- **フィールド**: 3行5コマ構成（全コマeffect=None、アセットjig_00001で統一）
+- **グループ構成**: デフォルト + w1〜w5（6グループ）
+- **ループ構造**: w5 → w1（累計505体撃破でw1へ戻る。2周目以降は実質w2スタート）
+- **初期配置**: デフォルトグループで竈神 魚（Boss）が位置1.7に `InitialSummon`
 
 ---
 
-## グループ構造の要点
+## v2フォーマットで特徴的な設定パターン
+
+### 1. コマ設計を Mermaid block-beta 図で表現
+
+MstPage + MstKomaLine の設定から、フィールドの視覚的構造を block-beta 図で示す。
+`columns 10` を基準に、各コマの幅を10分割比率の `:N` で表現する。
 
 ```mermaid
-flowchart LR
-    START([バトル開始]) --> DEF
-    DEF -- "2体撃破" --> W1
-    W1 -- "9体撃破" --> W2
-    W2 -- "15体撃破" --> W3
-    W3 -- "21体撃破" --> W4
-    W4 -- "29体撃破" --> W5
-    W5 -- "37体撃破" --> W6
-    W6 -- "47体撃破" --> W1
-
-    style DEF fill:#6b7280,color:#fff
-    style W1 fill:#3b82f6,color:#fff
-    style W2 fill:#3b82f6,color:#fff
-    style W3 fill:#f59e0b,color:#fff
-    style W4 fill:#f59e0b,color:#fff
-    style W5 fill:#ef4444,color:#fff
-    style W6 fill:#8b5cf6,color:#fff
+block-beta
+  columns 10
+  A["row=1 / koma1\n幅=0.4\nasset: jig_00001\noffset: -1.0\neffect: None"]:4
+  B["row=1 / koma2\n幅=0.6\nasset: jig_00001\noffset: -1.0\neffect: None"]:6
+  C["row=2 / koma1\n幅=1.0（全幅）\nasset: jig_00001\noffset: -0.4\neffect: None"]:10
+  D["row=3 / koma1\n幅=0.4\nasset: jig_00001\noffset: +0.7\neffect: None"]:4
+  E["row=3 / koma2\n幅=0.6\nasset: jig_00001\noffset: +0.7\neffect: None"]:6
 ```
+
+> **幅比率の求め方**: width=0.4 → `:4`、width=0.6 → `:6`、width=1.0 → `:10`（全行合計が必ず10になるよう調整）
 
 ---
 
-## 使用する敵（9種類）
+### 2. InitialSummon による固定初期配置
 
-| ID | 日本語名 | kind | color | 特徴 |
-|----|---------|------|-------|------|
-| `c_osh_00201_osh1_advent_Normal_Red` | 星野 ルビー | Normal | Red | Attack/高速(37) |
-| `c_osh_00201_osh1_advent_Boss_Red` | 星野 ルビー | Boss | Red | HP×10・やや遅い(31) |
-| `c_osh_00301_osh1_advent_Normal_Yellow` | MEMちょ | Normal | Yellow | Technical/射程0.27（最大） |
-| `c_osh_00301_osh1_advent_Boss_Yellow` | MEMちょ | Boss | Yellow | AdventBoss1〜2で使用 |
-| `c_osh_00401_osh1_advent_Normal_Colorless` | 有馬 かな | Normal | Colorless | 火傷攻撃キャラ |
-| `c_osh_00401_osh1_advent_Boss_Colorless` | 有馬 かな | Boss | Colorless | AdventBoss3で使用 |
-| `e_glo_00002_osh1_advent_Normal_Green` | 推し活ファントム（緑） | Normal | Green | Attack/最速(47) |
-| `e_glo_00002_osh1_advent_Normal_Colorless` | 推し活ファントム（無属性） | Normal | Colorless | Defense/最低速(20)/ノックバックなし/囮役 |
-| `e_glo_00002_osh1_advent_Boss_Green` | 推し活ファントム（緑/Boss） | Boss | Green | HP×10 |
+raidタイプでは `InitialSummon` を使い、バトル開始時点で高耐久ボスを固定座標に配置することが多い。
+これにより「開始直後からボスが既にそこにいる脅威」として演出される。
+
+```
+デフォルトグループ elem3: InitialSummon(1) → 竈神 魚（Colorless/Boss） 位置1.7（固定初期配置）
+```
+
+グループ別テーブルでは出現タイミング列に **太字** + `**InitialSummon(1)**` と明記し、召喚位置も `**位置1.7（固定初期配置）**` と強調する。
 
 ---
 
-## raidタイプで特徴的な設定パターン
+### 3. w5の撃破連鎖召喚
 
-### 1. InitialSummon による初期配置
-デフォルトグループの elem1〜7 が `condition_type = InitialSummon`。
-バトル開始時にキャラや雑魚を特定の位置（`summon_position`）に分散配置する。
+w5では `FriendUnitDead(elem_id)` を使い、特定の敵を倒すと次の敵が出現する「連鎖召喚」を設計している。
+単純な時間/体数トリガーではなく、ボスの撃破が次フェーズの鍵となる。
 
 ```
-elem1: InitialSummon → MEMちょ(Normal) 位置2.3 → ElapsedTime(250)後に移動
-elem2: InitialSummon → 有馬 かな(Normal) 位置2.5 → ElapsedTime(250)後に移動
-elem3: InitialSummon → 星野 ルビー(Normal) 位置2.7 → ElapsedTime(250)後に移動
-elem4〜7: InitialSummon → 推し活ファントム（無属性/Normal）各位置に1体
+[グループ起動] → 503（竈神 魚）召喚
+     ↓ 503撃破
+ 501（極楽蝶×20）+ 504（門神(大)/Yellow）同時出現
+     ↓ 504撃破
+ 502（門神×40）+ 505（朱槿）+ 506（門神(大)/Red）同時出現
+     ↓ 505撃破
+[groupchange → w1ループ]
 ```
 
-### 2. AdventBoss オーラ
-`aura` カラムでボス演出ランクを指定:
-- `AdventBoss1`: w1〜w2 のボス（緑ファントムBoss, MEMちょBoss）
-- `AdventBoss2`: w3〜w4 のボス（星野 ルビーBoss, 緑ファントムBoss）
-- `AdventBoss3`: w5〜w6 の最高ランクボス（有馬 かなBoss）
-
-### 3. 同一 sequence_element_id の複数行
-w1 の elem12 が4行ある（同一タイミングで4つの異なる位置に1体ずつ配置するテクニック）:
-```
-elem12（1行目）: 位置2.2 → 無属性ファントム1体
-elem12（2行目）: 位置2.4 → 無属性ファントム1体
-elem12（3行目）: 位置2.6 → 無属性ファントム1体
-elem12（4行目）: 位置2.8 → 無属性ファントム1体
-```
-
-### 4. Normal種別でも超強敵を作れる
-w5 では kind=Normal のキャラに高倍率を設定:
-- MEMちょ(Normal): hp倍300 → 実HP 300,000
-- 星野 ルビー(Normal): hp倍350 → 実HP 350,000
-ボスオーラがなく演出を抑えつつ高難度を実現。
-
-### 5. hp倍率の段階的スケーリング
-```
-デフォルト: hp×1〜5   / atk×0.5〜1.5
-w1:         hp×5〜10  / atk×2.5〜3
-w2:         hp×10〜20 / atk×3〜4
-w3:         hp×15〜30 / atk×6〜8
-w4:         hp×20〜50 / atk×7〜9
-w5:         hp×20〜350/ atk×10〜15
-w6:         hp×60〜70 / atk×12〜20
-```
+グループ別テーブルでは、この連鎖構造を別途ブロック図で補足する。
 
 ---
 
-## 対応するスキル手順の注意点
+### 4. グループ別の属性テーマ
 
-- `InitialSummon` 行には `summon_position`（位置）と `movement_start_condition`（移動開始条件）があることに注意
-- 同一 `sequence_element_id` が複数行ある場合、テーブルに明記する（elem12（1行目）〜（4行目）と表記）
-- w6 → w1 のループを Mermaid に反映する（ループバック矢印）
-- `aura` の `AdventBoss1/2/3` はUIの演出ランクを示すことを説明する
-- `defeated_score` と `override_drop_battle_point` の違いをスコア体系セクションで説明する
+各グループに属性テーマがあり、プレイヤーにキャラ選択の戦略性を与える設計。
+
+| グループ | 属性テーマ |
+|---------|---------|
+| デフォルト | Colorless（無属性） |
+| w1・w2 | Yellow（黄） |
+| w3 | Green（緑） |
+| w4 | Red（赤） |
+| w5 | 全属性混合（Colorless + Yellow + Red） |
+
+インゲーム要件テキストでこのテーマを明文化する。
+
+---
+
+### 5. FriendUnitDeadは累計値・リセットなし
+
+raidのループ構造で重要な設計ポイント。FriendUnitDead の値は累計体数で、ループ後もリセットされない。
+
+```
+w1→w2: FriendUnitDead(103)  ← 累計103体
+w2→w3: FriendUnitDead(202)  ← 累計202体
+...
+w5→w1: FriendUnitDead(505)  ← 累計505体でw1へループ
+```
+
+2周目はw1起動直後に既に累計103体が達成されているため即w2へ遷移。実質w2スタートになる。
+フェーズ切り替え表の注記欄に必ずこの仕様を記載する。
+
+---
+
+### 6. オーラランクのグループ別変化
+
+同一敵でもグループによってオーラランクが変化する設計。
+
+| 敵 | グループ | オーラ |
+|----|---------|-------|
+| 朱槿 | w2 | `AdventBoss2` |
+| 朱槿 | w5 | `AdventBoss3`（最高） |
+
+演出セクションのオーラテーブルで「グループによってランクが変化」と明記する。
+
+---
+
+### 7. 召喚アニメーション全Noneの場合は一文で済ませる
+
+全敵の `summon_animation_type` が `None` の場合、テーブルを展開せず以下の一文で記述する。
+
+> 全敵の`summon_animation_type`が`None`（アニメーションなし）。
+
+---
+
+## v2フォーマットのセクション構成（実例）
+
+```
+# raid_jig1_00001 インゲームデータ詳細解説
+> 参照リポジトリ: `projects/glow-masterdata`
+> リリースキー: `202601010`
+
+## インゲーム要件テキスト
+（散文5段落・箇条書きなし）
+
+---
+
+## レベルデザイン
+### 敵キャラ設計
+#### 敵キャラ選定（MstEnemyCharacter）    ← 4種類サマリーテーブル
+#### 敵キャラステータス調整（MstEnemyStageParameter → MstInGame基本設定）    ← 10種類素値テーブル
+
+---
+
+### コマ設計    ← block-beta図（3行5コマ）
+
+---
+
+### 敵キャラシーケンス設計
+#### どのフェーズで、どの敵を...    ← Mermaidフロー図 + 6グループ別テーブル
+#### 敵キャラの固有ステータス調整（hp_coef / atk_coef）    ← 実HP/ATK計算テーブル
+#### フェーズ切り替えはあるか    ← 6段階+ループ表
+
+---
+
+## 演出
+### アセット
+#### コマ背景    ← effect=Noneのため背景調整が必要と記述
+#### BGM
+
+---
+
+### 敵キャラオーラ    ← Default/AdventBoss1〜3テーブル
+### 敵キャラ召喚アニメーション    ← 全Noneのため一文
+```
 
 ---
 
 ## 完全実例の参照
 
-完全なドキュメント（60行分の詳細データ含む）は以下を参照:
-`domain/tasks/masterdata-entry/in-game-tables/raid_osh1_00001_詳細解説.md`
+完全なドキュメント（v2フォーマット）は以下を参照:
+`domain/knowledge/masterdata/in-game/guides/raid_jig1_00001_v2.md`
