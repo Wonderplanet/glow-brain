@@ -7,8 +7,8 @@
 ## 概要
 
 - **コンテンツ種別**: `vd`
-- **ブロック種別**: `vd_boss`
-- **IDプレフィックス**: `vd_{シリーズ}_boss_{連番5桁}`
+- **ブロック種別**: `Boss`
+- **IDプレフィックス**: `vd_{作品ID}_boss_{連番5桁}`
 - **構成単位**: 1作品につき **boss 1個**（normal N個とペアで運用）
 
 ### 動作仕様
@@ -30,19 +30,19 @@
 ## ID命名規則
 
 ```
-vd_{シリーズ}_boss_{連番5桁}
+vd_{作品ID}_boss_{連番5桁}
 ```
 
 **例**: `vd_kai_boss_00001`
 
-- `{シリーズ}` はキャラシリーズ略称（`kai` / `dan` / `spy` 等）
+- `{作品ID}` はキャラシリーズ略称（`kai` / `dan` / `spy` 等）
 - MstInGame.id・MstAutoPlayerSequence.sequence_set_id・MstPage.id・MstEnemyOutpost.id はすべて同一値を使用する
 
 ### MstEnemyStageParameter.id の短縮形
 
 | ケース | ID短縮形 |
 |--------|---------|
-| vd（boss/normalで共通） | `{シリーズ}_vd` |
+| vd（boss/normalで共通） | `{作品ID}_vd` |
 
 **例**:
 - ボス: `c_kai_00201_kai_vd_Boss_Red`
@@ -79,14 +79,14 @@ vd_{シリーズ}_boss_{連番5桁}
 
 ```
 行1: InitialSummon → SummonEnemy(ボス) × 1
-     summon_position=1.7（砦付近）
+     summon_position=1.7（ゲート付近）
      move_start_condition_type=Damage, move_start_condition_value=1
 
 行2: ElapsedTime(500) → SummonEnemy(雑魚A) × N体
 行3: ElapsedTime(3000) → SummonEnemy(雑魚A) × N体  ※任意
 ```
 
-- ボスは `InitialSummon` で砦付近（`summon_position=1.7`）に配置し、1ダメージ受けたら移動開始
+- ボスは `InitialSummon` でゲート付近（`summon_position=1.7`）に配置し、1ダメージ受けたら移動開始
 - `aura_type`: ボス = `Boss`、雑魚 = `Default`
 
 ---
@@ -95,7 +95,7 @@ vd_{シリーズ}_boss_{連番5桁}
 
 | カラム | 値 |
 |--------|-----|
-| `content_type` | `Vd` |
+| `content_type` | `Dungeon` |
 | `stage_type` | `vd_boss` |
 | `boss_mst_enemy_stage_parameter_id` | ボスパラメータID |
 
@@ -119,7 +119,7 @@ row=1: height=1.0, koma1_width=1.0
 
 | 項目 | 内容 |
 |------|------|
-| シリーズID | シリーズ略称（例: kai, dan, spy） |
+| 作品ID | 作品ID（例: kai, dan, spy） |
 | 連番 | `boss_00001`（1作品につき1個） |
 | ボスキャラ | ボスキャラID・色属性 |
 | 雑魚キャラ | 雑魚キャラID・色属性・体数（ElapsedTimeごと） |
@@ -144,4 +144,4 @@ row=1: height=1.0, koma1_width=1.0
 | `domain/knowledge/masterdata/table-docs/MstEnemyStageParameter.md` | 敵パラメータ詳細仕様 |
 | `domain/knowledge/masterdata/table-docs/MstPage.md` | ページ設計詳細 |
 | `domain/knowledge/masterdata/table-docs/MstKomaLine.md` | コマライン設計詳細 |
-| `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md` | 敵砦設計詳細 |
+| `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md` | 敵ゲート設計詳細 |

@@ -7,8 +7,8 @@
 ## 概要
 
 - **コンテンツ種別**: `vd`
-- **ブロック種別**: `vd_normal`
-- **IDプレフィックス**: `vd_{シリーズ}_normal_{連番5桁}`
+- **ブロック種別**: `Normal`
+- **IDプレフィックス**: `vd_{作品ID}_normal_{連番5桁}`
 - **構成単位**: 1作品につき **normal N個**（boss 1個とペアで運用）
 
 ### 動作仕様
@@ -30,19 +30,19 @@
 ## ID命名規則
 
 ```
-vd_{シリーズ}_normal_{連番5桁}
+vd_{作品ID}_normal_{連番5桁}
 ```
 
 **例**: `vd_kai_normal_00001`
 
-- `{シリーズ}` はキャラシリーズ略称（`kai` / `dan` / `spy` 等）
+- `{作品ID}` はキャラシリーズ略称（`kai` / `dan` / `spy` 等）
 - MstInGame.id・MstAutoPlayerSequence.sequence_set_id・MstPage.id・MstEnemyOutpost.id はすべて同一値を使用する
 
 ### MstEnemyStageParameter.id の短縮形
 
 | ケース | ID短縮形 |
 |--------|---------|
-| vd（boss/normalで共通） | `{シリーズ}_vd` |
+| vd（boss/normalで共通） | `{作品ID}_vd` |
 
 **例**: `e_kai_00001_kai_vd_Normal_Colorless`
 
@@ -91,7 +91,7 @@ vd_{シリーズ}_normal_{連番5桁}
 
 | カラム | 値 |
 |--------|-----|
-| `content_type` | `Vd` |
+| `content_type` | `Dungeon` |
 | `stage_type` | `vd_normal` |
 | `boss_mst_enemy_stage_parameter_id` | 空（ボスなし） |
 
@@ -117,7 +117,7 @@ row=3: ...
 
 | 項目 | 内容 |
 |------|------|
-| シリーズID | シリーズ略称（例: kai, dan, spy） |
+| 作品ID | 作品ID（例: kai, dan, spy） |
 | 連番 | `normal_00001〜000XX`（ブロック数分） |
 | 各ブロックの雑魚構成 | ブロックごとの雑魚キャラID・色属性・体数（ブロックごとに異なる場合は個別確認） |
 
@@ -141,4 +141,4 @@ row=3: ...
 | `domain/knowledge/masterdata/table-docs/MstEnemyStageParameter.md` | 敵パラメータ詳細仕様 |
 | `domain/knowledge/masterdata/table-docs/MstPage.md` | ページ設計詳細 |
 | `domain/knowledge/masterdata/table-docs/MstKomaLine.md` | コマライン設計詳細 |
-| `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md` | 敵砦設計詳細 |
+| `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md` | 敵ゲート設計詳細 |
