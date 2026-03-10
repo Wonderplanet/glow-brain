@@ -233,3 +233,111 @@ c_aka_00001_general_vh_Boss_Red
 | `well_distance` | `0.30〜0.35` | general_h / kai_00001 系 | 遠距離から攻撃する設定 |
 | `transformationConditionType` | `HpPercentage` | trans系（dan） | HP残量%での変身トリガー |
 | `character_unit_kind` | `AdventBattleBoss` | kai advent Boss | アドベント専用ボス（通常Bossとは別種） |
+
+---
+
+## 4. chara_ キャラの設定パターン（glo以外3体）
+
+`chara_` プレフィックスはプレイアブルキャラが NPC として出現するデータ。
+`enemy_` との設計思想の違いが顕著に現れる。
+
+対象キャラ（2026-03-10 時点、件数上位）:
+
+| キャラID | 件数 | 特徴 |
+|---|---|---|
+| `chara_osh_00001` | 13件 | combo数で難易度表現・最大combo=10 |
+| `chara_dan_00001` | 13件 | role=Defense 全固定・変身なし |
+| `chara_spy_00101` | 12件 | 全件 Boss 種・超遠距離（well_dist=0.50） |
+
+---
+
+### 4-1. chara_osh_00001（osh作品）— combo数で難易度を表現
+
+**general 系は HP=1,000 に固定し、combo 数を増やすことで難易度を段階表現する設計。**
+`general_osh_vh` Boss/Technical の combo=10 は全データ中最大値。
+
+| コンテンツ | kind | role | color | HP | ATK | 速度 | well_dist | combo |
+|---|---|---|---|---|---|---|---|---|
+| `general_osh_n`（Boss） | Boss | Technical | Colorless/Green | 1,000 | 100 | 20〜31 | 0.20〜0.30 | **6** |
+| `general_osh_n`（Normal） | Normal | Attack | Colorless | 1,000 | 100 | 31 | 0.30 | 5 |
+| `general_osh_h`（Boss） | Boss | Technical | Red | 1,000 | 100 | 31 | 0.20 | **6** |
+| `general_osh_h`（Normal） | Normal | Attack | Blue | 1,000 | 100 | 31 | 0.30 | 5 |
+| `general_osh_vh`（Boss/Technical） | Boss | Technical | Red | 1,000 | 100 | 31 | 0.20 | **10** |
+| `general_osh_vh`（Boss/Support） | Boss | Support | Colorless | 1,000 | 100 | 20 | 0.30 | **7** |
+| `general_osh_vh`（Normal） | Normal | Attack | Green | 1,000 | 100 | 31 | 0.30 | 5 |
+| `challenge` | Boss | Technical | Red | **50,000** | **300** | 32 | 0.27 | 4 |
+| `charaget_repeat` | Boss | Support | Colorless | 10,000 | 300 | 32 | 0.27 | 4 |
+| `l05anniv_charaget01` | Boss | Support | Blue | 10,000 | 100 | 25 | 0.35 | 5 |
+| `osh1savage02` | Boss | Support | Blue | **100,000** | 300 | 25 | 0.35 | 5 |
+| `osh1savage03` | Boss | Support | Green | **100,000** | 300 | 25 | 0.35 | 5 |
+
+**ポイント:**
+- general 系は HP=1,000 固定で、**combo 数が難易度指標**（n:5〜6 → h:5〜6 → vh:7〜10）
+- challenge は HP=50,000・combo=4 と、HP を上げることで難易度を付加する別方針に切り替え
+- savage 系は HP=100,000（general の100倍）と大幅増
+- Boss 種が大半を占め、Normal は general 系の3件のみ
+
+---
+
+### 4-2. chara_dan_00001（dan作品）— role=Defense 全固定・enemy版と変身有無が異なる
+
+**全13件が role=Defense に固定。** 同キャラの `enemy_dan_00001`（trans 9件）と異なり、chara 版には変身ギミックが一切ない。
+
+| コンテンツ | kind | role | color | HP | ATK | 速度 | well_dist | combo |
+|---|---|---|---|---|---|---|---|---|
+| `general_n` | Normal | **Defense** | Red | 10,000 | **50** | 31 | 0.20 | 6 |
+| `general_h`（Boss） | Boss | **Defense** | Colorless | 10,000 | 100 | 31 | 0.20 | 5 |
+| `general_h`（Normal） | Normal | **Defense** | Red | 10,000 | 100 | 31 | 0.20 | 6 |
+| `general_vh`（Boss） | Boss | **Defense** | Green/Red | 10,000 | 100 | 31 | 0.20 | 5 |
+| `general_vh`（Normal） | Normal | **Defense** | Green | 10,000 | 100 | 31 | 0.20 | 5 |
+| `1d1c` | Normal | **Defense** | Colorless | **30,000** | 100 | **20** | **0.15** | 4 |
+| `airaget` | Normal | **Defense** | Red | 20,000 | 100 | 30 | 0.20 | 4 |
+| `bbaget`（Boss） | Boss | **Defense** | Blue/Colorless | 20,000 | 100 | 30 | 0.20 | 4 |
+| `bbaget`（Normal） | Normal | **Defense** | Blue | 20,000 | 100 | 30 | 0.20 | 4 |
+| `mainquest_glo2` | Normal | **Defense** | Red | 10,000 | 100 | 30 | **0.16** | 5 |
+| `savage` | Normal | **Defense** | Yellow | 20,000 | 100 | **40** | 0.20 | 4 |
+
+**ポイント:**
+- 全件 role=Defense 固定（プレイアブルキャラの固有ロールが設定に直接反映）
+- 変身（trans）が一切ない（enemy_dan_00001 は同キャラで trans 9件あり）
+- `general_n` のみ ATK=50（他は全て100）→ ノーマルだけ攻撃力が半分
+- `1d1c` は well_distance=0.15（全データ中最短）かつ speed=20（低速）
+- HP の段階: general:10,000 → get/savage:20,000 → 1d1c:30,000（コンテンツで段階的に増加）
+- `savage` は speed=40 で全コンテンツ中最速
+
+---
+
+### 4-3. chara_spy_00101（spy作品）— 全件 Boss 種・超遠距離攻撃
+
+**general 系の well_distance=0.50 は全データ中最大。** 全件 role=Attack 固定、Normal 種が1件のみ。
+
+| コンテンツ | kind | role | color | HP | ATK | 速度 | well_dist | combo |
+|---|---|---|---|---|---|---|---|---|
+| `general_n` | Boss | **Attack** | Blue/Red | 10,000 | **50** | 31 | **0.50** | **7** |
+| `general_h` | Boss | **Attack** | Blue/Red | 10,000 | 50 | 31 | **0.50** | 5 |
+| `general_vh` | Boss | **Attack** | Blue/Colorless/Red | 10,000 | 100 | 31 | **0.50** | 5 |
+| `1d1c` | Normal | **Attack** | Colorless | 20,000 | 100 | 25 | 0.35 | 5 |
+| `damianget` | Boss | **Attack** | Colorless/Red | **25,000** | **400** | 30 | 0.35 | 5 |
+| `frankyget` | Boss | **Attack** | Yellow | **25,000** | **400** | 30 | 0.35 | 5 |
+| `spy1savage` | Boss | **Attack** | Blue | **25,000** | **400** | 30 | 0.35 | 5 |
+
+**ポイント:**
+- general 系の well_distance=0.50 は全データ中最大（通常の倍以上の射程）
+- `general_n` の combo=7 が `general_h/vh`（combo=5）より高い → n < h < vh の通常順序が逆転する珍しいパターン
+- `get` 系（damianget / frankyget）が存在 → 自作品以外のキャラゲットコンテンツにも出現
+- `1d1c` のみ Normal 種（他は全て Boss 種）
+- ATK が general 系:50〜100 に対し、get/savage 系:400 と4〜8倍に跳ね上がる
+
+---
+
+## 5. enemy_ vs chara_ の設計思想の違い
+
+| 観点 | `enemy_` | `chara_` |
+|---|---|---|
+| **role** | コンテンツ・属性ごとにバラつく | **全件固定**（プレイアブルキャラの固有ロール） |
+| **変身（trans）** | あり（dan は9件など） | **なし** |
+| **kind** | Normal/Boss 混在が多い | Boss 種に偏る（Normal が少ない） |
+| **HP（general系）** | コンテンツ間で変動 | 低め固定（1,000〜10,000）が多い |
+| **難易度の表現方法** | HP・ATK・speed を上下させる | **combo 数を増減**させることが多い |
+| **well_distance** | 0.11〜0.35 が主流 | spy は 0.50 と極端な設定もある |
+| **get 系コンテンツ** | ほぼ存在しない | キャラゲット・繰り返し get 等が存在する |
