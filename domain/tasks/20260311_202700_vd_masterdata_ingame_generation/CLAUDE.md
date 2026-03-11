@@ -86,4 +86,4 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **`vd-masterdata-ingame-design-creator`**: design.md 設計書の作成・調整
 - **`vd-masterdata-ingame-data-creator`**: design.md から SQLite 経由で CSV 生成
 - **`vd-masterdata-ingame-design-json-creator`**: design.md と generated CSV から design.json 生成
-- **`vd-block-design-xlsx`**: design.md と CSV から ブロック基礎設計 xlsx 生成
+- **`vd-masterdata-ingame-xlsx-creator`**: 全ブロックの design.json と generated CSV を統合した xlsx を `vd_all/vd_all.xlsx` に生成（全ブロック対象・全自動）
