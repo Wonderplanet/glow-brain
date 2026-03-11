@@ -78,7 +78,7 @@ def main() -> None:
     ws.title = f"ブロック基礎設計_{block_name}"
 
     # ── B1: タイトル ──────────────────────────────────────
-    _write(ws, "B1", data["title"])
+    _write(ws, "B1", data["title"], style=False)
 
     # ── B4: 要件テキスト ──────────────────────────────────
     _write(ws, "B4", data["requirements_text"])
