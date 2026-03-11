@@ -3,7 +3,8 @@
 VDブロック基礎設計xlsx生成スクリプト
 
 テンプレートxlsxをコピーし、Claudeが渡したJSONデータを書き込んで
-{block_name}_design.xlsx として出力する。
+{block_name}.xlsx として出力する。
+generated/ 配下のCSVも1シートずつ同一xlsxに追加する。
 
 使用方法:
     python create_design_xlsx.py --block-dir <パス> --data-json '<JSON>'
@@ -13,6 +14,7 @@ VDブロック基礎設計xlsx生成スクリプト
 """
 
 import argparse
+import csv
 import json
 import shutil
 import warnings
@@ -63,7 +65,7 @@ def main() -> None:
     data = json.loads(args.data_json)
     block_dir = Path(args.block_dir)
     block_name = data["block_name"]
-    output_path = block_dir / f"{block_name}_design.xlsx"
+    output_path = block_dir / f"{block_name}.xlsx"
 
     # テンプレートをコピー
     shutil.copy2(args.template, output_path)
@@ -151,6 +153,21 @@ def main() -> None:
         # テンプレートのサンプルテキストをクリア
         ws["C58"].value = ""
         ws["C59"].value = ""
+
+    # ── generated/ 配下のCSVを各シートとして追加 ──────────────
+    csv_files = sorted((block_dir / "generated").glob("*.csv"))
+    for csv_path in csv_files:
+        sheet_name = csv_path.stem  # 例: MstInGame
+        ws_csv = wb.create_sheet(title=sheet_name)
+        with open(csv_path, newline="", encoding="utf-8") as f:
+            reader = csv.reader(f)
+            for r_idx, row in enumerate(reader, start=1):
+                for c_idx, value in enumerate(row, start=1):
+                    cell = ws_csv.cell(row=r_idx, column=c_idx, value=value)
+                    if r_idx == 1:
+                        cell.font = Font(name="Arial", size=8, bold=True)
+                    else:
+                        cell.font = _FONT
 
     wb.save(output_path)
     print(f"生成完了: {output_path}")

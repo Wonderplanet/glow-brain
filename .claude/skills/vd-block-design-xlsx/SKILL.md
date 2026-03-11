@@ -8,7 +8,7 @@ description: VDブロック基礎設計xlsxをdesign.mdとgenerated CSVから自
 ## 概要
 
 `design.md` と `generated/` 配下のCSVからデータを読み取り、テンプレートxlsxに書き込んで
-`{block_name}_design.xlsx` を生成するスキル。
+`{block_name}.xlsx` を生成するスキル。生成されたCSVは各シートとして同一xlsx内に追加される。
 
 **役割分担**:
 - **Claude が担う**: design.md / generated CSV を読み、どのデータをどのセルに入れるかを判断
@@ -55,12 +55,12 @@ python .claude/skills/vd-block-design-xlsx/scripts/create_design_xlsx.py \
 python -c "
 import openpyxl, warnings
 warnings.filterwarnings('ignore')
-wb = openpyxl.load_workbook('{block_name}_design.xlsx のフルパス')
-ws = wb.active
-for row in ws.iter_rows():
-    for cell in row:
-        if cell.value not in (None, ''):
-            print(f'{cell.coordinate}: {cell.value}')
+wb = openpyxl.load_workbook('{block_name}.xlsx のフルパス')
+print('Sheets:', wb.sheetnames)
+for ws in wb.worksheets:
+    print(f'--- {ws.title} ---')
+    for row in ws.iter_rows(max_row=2):
+        print([c.value for c in row if c.value is not None])
 "
 ```
 
@@ -171,7 +171,7 @@ design.md の敵パラメータテーブルから読み取る。表記例:
 | 定数 | 値 |
 |------|-----|
 | テンプレートxlsx | `domain/tasks/20260310_115400_vd_ingame_masterdata_generation/specs/限界チャレンジ(VD)_アウトゲーム関連_ブロック基礎設計テンプレート.xlsx` |
-| 出力ファイル名 | `{block_name}_design.xlsx`（作業フォルダ直下） |
+| 出力ファイル名 | `{block_name}.xlsx`（作業フォルダ直下） |
 
 ---
 
