@@ -11,6 +11,16 @@
 - `sequence_group_id` は **空**（デフォルトグループのみ）
 - `koma_effect_type` は **`None` 固定**
 
+### c_キャラ（プレイアブルキャラが敵として出現）の制約
+
+- `action_value` が `c_` で始まるキャラは **同一トリガーで `summon_count >= 2` かつ `summon_interval = 0` を禁止**（瞬間同時複数召喚）
+  - 世界観的に同一プレイアブルキャラが複数体同時にフィールドに存在する状態は矛盾が生じる
+  - 実データでも `summon_interval=0` かつ `summon_count>=2` のc_キャラ召喚は 0件
+- 撃破後に再出撃させる場合は **`FriendUnitDead`（累積撃破数トリガー）** を使用する（実データ183件・最多パターン）
+  - `condition_value=1`（1体倒すごとに即時再召喚）が最基本パターン
+
+> 参考: `domain/tasks/20260310_115400_vd_ingame_masterdata_generation/knowledge/MstAutoPlayerSequence_c_キャラ召喚パターン分析.md`
+
 ---
 
 ## bossブロック（vd_boss）シーケンスパターン
