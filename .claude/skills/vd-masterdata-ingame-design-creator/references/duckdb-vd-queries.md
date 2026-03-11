@@ -69,12 +69,11 @@ ORDER BY sequence_element_id;
 ## VD MstEnemyStageParameter の確認
 
 ```bash
-# VD用パラメータの確認
+# VD専用キュレーション済みCSVからパラメータを確認
 duckdb -c "
 SELECT id, mst_enemy_character_id, character_unit_kind, color,
        hp, move_speed, attack_power, attack_combo_cycle, drop_battle_point
-FROM read_csv('projects/glow-masterdata/MstEnemyStageParameter.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
-WHERE id LIKE '%_vd_%'
+FROM read_csv('domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-creator/vd_all/data/MstEnemyStageParameter.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
 ORDER BY id;
 "
 ```

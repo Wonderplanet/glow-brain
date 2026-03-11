@@ -62,6 +62,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 | 連番 | 開始番号（通常は `00001`） |
 
 作品別の登場キャラは [vd-character-list.md](references/vd-character-list.md) を参照。
+**MstEnemyStageParameter.id の選出元**: 必ず `vd_all/data/MstEnemyStageParameter.csv` を読み込み、指定作品の `id` を確認して選出すること。
 
 ---
 
@@ -105,6 +106,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 7. **空欄カラムのデフォルト値は vd-column-defaults.md を参照**: 設定漏れを防ぐ
 8. **ボスの二重設定**: `MstInGame.boss_mst_enemy_stage_parameter_id` + `MstAutoPlayerSequence`のInitialSummonで設定することを設計書に明記する
 9. **normalブロックのMstKomaLineは3行固定**: row=1〜3 の3エントリを設計する
+10. **MstEnemyStageParameter.id の選出元は vd_all CSV から**: `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-creator/vd_all/data/MstEnemyStageParameter.csv` を読み込んで選出する。masterdata全体ではなくこのキュレーション済みCSVを使う
 
 ---
 
@@ -116,3 +118,5 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 - [vd-column-defaults.md](references/vd-column-defaults.md) — デザインフェーズで設定が必要なカラムのデフォルト値
 - [series-koma-assets.csv](references/series-koma-assets.csv) — 作品別コマアセットキー・back_ground_offset対応表
 - [koma-background-offset.md](references/koma-background-offset.md) — コマアセットキー別推奨back_ground_offset値
+- `vd_all/data/MstEnemyStageParameter.csv` — VD専用の敵キャラステージパラメータ一覧（選出元。47件。Normal/Boss・全作品分）
+  - パス: `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-creator/vd_all/data/MstEnemyStageParameter.csv`
