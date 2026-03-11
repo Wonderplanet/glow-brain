@@ -1,0 +1,122 @@
+{
+  "block_name": "vd_osh_normal_00001",
+  "title": "ブロック基礎設計_vd_osh_normal_00001",
+  "requirements_text": "ファントム（Colorless/Attack・HP5,000・ATK100・SPD34）が開幕250msに5体で序盤テンポを作り、その後【推しの子】Green属性キャラ4種（c_osh_00501→c_osh_00201→c_osh_00401→c_osh_00301の順）がHP10,000〜50,000で続く5波構成、合計21体。ファントムは`e_`キャラのため瞬時まとめ召喚、c_キャラは`summon_interval=500ms`で1体ずつ間隔を空けて召喚する。\n\nコマは3行固定。row1=2等分2コマ（0.50, 0.50）・row2=右広い3コマ（0.50, 0.25, 0.25）・row3=4等分4コマ（0.25×4）。コマアセット: osh_00001（back_ground_offset: -1.0）。\n\nUR対抗キャラ「B小町不動のセンター アイ」（chara_osh_00001）対抗。序盤ファントムで多属性対応を試しつつ、中盤以降はGreen属性対策コマが主軸となる設計。",
+  "basic_info": {
+    "id": "vd_osh_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "5行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {"row": "行1", "count": "2コマ", "asset": "osh_00001", "effect": "None", "widths": "0.5 / 0.5"},
+    {"row": "行2", "count": "3コマ", "asset": "osh_00001", "effect": "None", "widths": "0.5 / 0.25 / 0.25"},
+    {"row": "行3", "count": "4コマ", "asset": "osh_00001", "effect": "None", "widths": "0.25 / 0.25 / 0.25 / 0.25"}
+  ],
+  "enemies": [
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_osh_00501_vd_Normal_Green",
+      "name": "黒川あかね",
+      "color": "Green（緑属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_osh_00201_vd_Normal_Green",
+      "name": "星野 ルビー",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_osh_00401_vd_Normal_Green",
+      "name": "有馬 かな",
+      "color": "Green（緑属性）",
+      "role": "Technical",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 32,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_osh_00301_vd_Normal_Green",
+      "name": "MEMちょ",
+      "color": "Green（緑属性）",
+      "role": "Support",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "雑魚（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": ""
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 3000,
+      "enemy_id": "c_osh_00501_vd_Normal_Green",
+      "name": "黒川あかね",
+      "count": 4,
+      "notes": ""
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 8000,
+      "enemy_id": "c_osh_00201_vd_Normal_Green",
+      "name": "星野 ルビー",
+      "count": 4,
+      "notes": ""
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 13000,
+      "enemy_id": "c_osh_00401_vd_Normal_Green",
+      "name": "有馬 かな",
+      "count": 4,
+      "notes": ""
+    },
+    {
+      "num": 5,
+      "trigger": "ElapsedTime",
+      "value": 18000,
+      "enemy_id": "c_osh_00301_vd_Normal_Green",
+      "name": "MEMちょ",
+      "count": 4,
+      "notes": ""
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}
