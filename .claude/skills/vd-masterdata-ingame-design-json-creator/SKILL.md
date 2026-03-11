@@ -1,7 +1,6 @@
 ---
 name: vd-masterdata-ingame-design-json-creator
 description: VDインゲーム設計書（design.md）とgenerated CSVからdesign.jsonを生成するスキル。
-  vd-block-design-xlsxスキルが使用する--data-json形式のJSONファイルを自動生成します。
   「ブロックJSON作成」「design.json作成」「VDブロック設計JSON」「インゲームJSON生成」などのキーワードで使用します。
 ---
 
@@ -9,15 +8,13 @@ description: VDインゲーム設計書（design.md）とgenerated CSVからdesi
 
 ## 概要
 
-`design.md` と `generated/` 配下のCSVからデータを読み取り、`vd-block-design-xlsx` スキルが
-`--data-json` オプションに受け取る形式の `design.json` を自動生成するスキル。
+`design.md` と `generated/` 配下のCSVからデータを読み取り、`design.json` を自動生成するスキル。
 
 **パイプライン位置づけ**:
 ```
 [1] vd-masterdata-ingame-design-creator → design.md
 [2] vd-masterdata-ingame-data-creator   → generated/*.csv
 [3] このスキル（今回）                  → design.json
-[4] vd-block-design-xlsx                → {block_name}.xlsx
 ```
 
 **役割分担**:
@@ -209,12 +206,4 @@ MstKomaLine.csv の各行について:
 ```
 {block_dir}/
 └── design.json   ← このスキルが生成するファイル
-```
-
-生成した `design.json` は `vd-block-design-xlsx` スキルの `--data-json` に直接渡せる:
-
-```bash
-python .claude/skills/vd-block-design-xlsx/scripts/create_design_xlsx.py \
-  --block-dir "{block_dir}" \
-  --data-json "$(cat {block_dir}/design.json)"
 ```
