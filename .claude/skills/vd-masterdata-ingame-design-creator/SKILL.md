@@ -107,6 +107,9 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 8. **ボスの二重設定**: `MstInGame.boss_mst_enemy_stage_parameter_id` + `MstAutoPlayerSequence`のInitialSummonで設定することを設計書に明記する
 9. **normalブロックのMstKomaLineは3行固定**: row=1〜3 の3エントリを設計する
 10. **MstEnemyStageParameter.id の選出元は vd_all CSV から**: `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-creator/vd_all/data/MstEnemyStageParameter.csv` を読み込んで選出する。masterdata全体ではなくこのキュレーション済みCSVを使う
+11. **c_キャラ複数体は FriendUnitDead でチェーン**: c_キャラ（`c_` プレフィックス）が複数体登場する場合、初回のみ `ElapsedTime` でタイミングを制御し、2体目以降は必ず `FriendUnitDead` で前の c_キャラの撃破を待ってから召喚するよう設計する（フィールドに同時に2体以上出現させない）。また c_キャラのエントリは必ず `summon_count = 1` とする（summon_count を2以上にすると同時複数体が出現してしまうため）
+12. **ElapsedTime での複数 c_キャラ召喚は禁止**: `ElapsedTime` のみで複数の c_キャラを召喚する設計は原則禁止。≤500ms の短時間連続召喚（演出目的）が必要な場合はプランナーに確認する
+13. **e_glo_* はこの制約の対象外**: `e_glo_*`（グロー本体）は c_キャラではないため、同時出現制約の対象外
 
 ---
 

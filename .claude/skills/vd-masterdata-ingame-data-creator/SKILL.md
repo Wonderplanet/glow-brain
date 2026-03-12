@@ -142,6 +142,12 @@ COMMIT;
 SQL
 ```
 
+#### c_キャラ同時出現チェック（INSERT前に確認）
+
+- `action_value` が `c_` で始まるエントリのうち `ElapsedTime` を使うものは1件のみか確認する
+- 2件以上ある場合: 2体目以降の `condition_type` を `FriendUnitDead` に変更し、`condition_value` に前の c_キャラの `sequence_element_id` を設定する
+- `action_value` が `c_` で始まる全エントリの `summon_count` が `1` であることを確認する（2以上は禁止）
+
 **CHECK 制約エラーが出た場合**: エラー内容を確認して値を修正し、再 INSERT。
 
 #### INSERT時の主要な制約値
@@ -212,6 +218,7 @@ MstEnemyStageParameter ID をカンマ区切りで指定する。
 8. **boss ブロックは InitialSummon で SummonEnemy**: ボスの召喚は `InitialSummon` + `summon_position=1.7`
 9. **VD では SwitchSequenceGroup 禁止**: `action_type` に `SwitchSequenceGroup` は使わない
 10. **normalブロックの MstKomaLine は 3行固定**: row=1,2,3 の3エントリを生成する
+11. **c_キャラ同時出現チェック**: INSERT 前に以下を両方確認する。① `c_` プレフィックスの action_value を持つ行が `ElapsedTime` 条件で2件以上ある場合は2体目以降を `FriendUnitDead`（前の c_キャラの sequence_element_id を condition_value に指定）に修正する。② c_キャラのすべてのエントリの `summon_count` が `1` であることを確認する（2以上だと同時に複数体出現してしまうため）
 
 ---
 

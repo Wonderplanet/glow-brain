@@ -74,12 +74,24 @@ block-beta
 
 ### 敵キャラシーケンス設計
 
+> **c_キャラ同時出現ルール（プランナー確認済み）**: c_キャラ（`c_` プレフィックス）が複数体登場する場合、
+> 初回のみ `ElapsedTime`、2体目以降は `FriendUnitDead`（前の c_キャラの sequence_element_id を
+> condition_value に指定）でチェーンすること。また c_キャラの `summon_count` は必ず `1` とすること。`e_glo_*` は対象外。
+
 #### どのフェーズで、どの敵を、いつ、どこに、どのくらい出現させるか
 
 ```mermaid
 flowchart LR
   ...
 ```
+
+<!-- c_キャラが複数体登場する場合のチェーン例:
+flowchart LR
+  Start([開始]) --> E1[ElapsedTime: Xs\n1体目 c_xxx 召喚\nelem=1]
+  E1 --> E2[FriendUnitDead: elem=1\n2体目 c_xxx 召喚\nelem=2]
+  E2 --> E3[FriendUnitDead: elem=2\n3体目 c_xxx 召喚\nelem=3]
+  ※ 2体目以降は FriendUnitDead で前の c_キャラのelemを condition_value に指定
+-->
 
 | elem | 出現タイミング | 敵 | 数 | 累計出現数/召喚位置 |
 |------|-------------|---|---|-----------------|
