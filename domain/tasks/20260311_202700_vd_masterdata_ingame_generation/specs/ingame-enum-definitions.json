@@ -16,7 +16,7 @@
       "description": "キャラクターユニット種別",
       "source": "Enemy.yml",
       "usedIn": [
-        { "table": "MstEnemyStageParameter", "column": "characterUnitKind" }
+        { "table": "MstEnemyStageParameter", "column": "character_unit_kind" }
       ],
       "values": ["Normal", "Boss", "AdventBattleBoss"]
     },
@@ -24,7 +24,7 @@
       "description": "キャラクターユニットのロール種別",
       "source": "Unit.yml",
       "usedIn": [
-        { "table": "MstEnemyStageParameter", "column": "roleType" }
+        { "table": "MstEnemyStageParameter", "column": "role_type" }
       ],
       "values": ["None", "Attack", "Balance", "Defense", "Support", "Unique", "Technical", "Special"]
     },
@@ -47,7 +47,7 @@
       "description": "ユニット変身発動条件種別",
       "source": "Enemy.yml",
       "usedIn": [
-        { "table": "MstEnemyStageParameter", "column": "transformationConditionType" }
+        { "table": "MstEnemyStageParameter", "column": "transformation_condition_type" }
       ],
       "values": ["None", "HpPercentage", "StageTime"]
     },
@@ -55,8 +55,8 @@
       "description": "AutoPlayerSequenceの発動条件種別",
       "source": "Stage.yml",
       "usedIn": [
-        { "table": "MstAutoPlayerSequence", "column": "conditionType" },
-        { "table": "MstAutoPlayerSequence", "column": "deactivationConditionType" }
+        { "table": "MstAutoPlayerSequence", "column": "condition_type" },
+        { "table": "MstAutoPlayerSequence", "column": "deactivation_condition_type" }
       ],
       "values": [
         "None",
@@ -77,7 +77,7 @@
       "description": "AutoPlayerSequenceのアクション種別",
       "source": "Stage.yml",
       "usedIn": [
-        { "table": "MstAutoPlayerSequence", "column": "actionType" }
+        { "table": "MstAutoPlayerSequence", "column": "action_type" }
       ],
       "values": [
         "None",
@@ -94,7 +94,7 @@
       "description": "召喚アニメーション種別",
       "source": "Stage.yml",
       "usedIn": [
-        { "table": "MstAutoPlayerSequence", "column": "summonAnimationType" }
+        { "table": "MstAutoPlayerSequence", "column": "summon_animation_type" }
       ],
       "values": ["None", "Fall0", "Fall", "Fall4"]
     },
@@ -102,8 +102,8 @@
       "description": "移動開始条件種別",
       "source": "Stage.yml",
       "usedIn": [
-        { "table": "MstAutoPlayerSequence", "column": "moveStartConditionType" },
-        { "table": "MstAutoPlayerSequence", "column": "moveRestartConditionType" }
+        { "table": "MstAutoPlayerSequence", "column": "move_start_condition_type" },
+        { "table": "MstAutoPlayerSequence", "column": "move_restart_condition_type" }
       ],
       "values": [
         "None",
@@ -118,7 +118,7 @@
       "description": "移動停止条件種別",
       "source": "Stage.yml",
       "usedIn": [
-        { "table": "MstAutoPlayerSequence", "column": "moveStopConditionType" }
+        { "table": "MstAutoPlayerSequence", "column": "move_stop_condition_type" }
       ],
       "values": ["None", "ElapsedTime", "TargetPosition", "PassedKomaCount"]
     },
@@ -126,7 +126,7 @@
       "description": "ユニットオーラ種別",
       "source": "Stage.yml",
       "usedIn": [
-        { "table": "MstAutoPlayerSequence", "column": "auraType" }
+        { "table": "MstAutoPlayerSequence", "column": "aura_type" }
       ],
       "values": ["Default", "Boss", "AdventBoss1", "AdventBoss2", "AdventBoss3"]
     },
@@ -134,7 +134,7 @@
       "description": "ユニット死亡種別",
       "source": "Stage.yml",
       "usedIn": [
-        { "table": "MstAutoPlayerSequence", "column": "deathType" }
+        { "table": "MstAutoPlayerSequence", "column": "death_type" }
       ],
       "values": ["Normal", "Escape"]
     },
@@ -142,10 +142,10 @@
       "description": "コマのエフェクト種別",
       "source": "Stage.yml",
       "usedIn": [
-        { "table": "MstKomaLine", "column": "koma1EffectType" },
-        { "table": "MstKomaLine", "column": "koma2EffectType" },
-        { "table": "MstKomaLine", "column": "koma3EffectType" },
-        { "table": "MstKomaLine", "column": "koma4EffectType" }
+        { "table": "MstKomaLine", "column": "koma1_effect_type" },
+        { "table": "MstKomaLine", "column": "koma2_effect_type" },
+        { "table": "MstKomaLine", "column": "koma3_effect_type" },
+        { "table": "MstKomaLine", "column": "koma4_effect_type" }
       ],
       "values": [
         "None",
@@ -166,43 +166,43 @@
       "description": "コマエフェクトの対象サイド",
       "source": "Stage.yml",
       "usedIn": [
-        { "table": "MstKomaLine", "column": "koma1EffectTargetSide" },
-        { "table": "MstKomaLine", "column": "koma2EffectTargetSide" },
-        { "table": "MstKomaLine", "column": "koma3EffectTargetSide" },
-        { "table": "MstKomaLine", "column": "koma4EffectTargetSide" }
+        { "table": "MstKomaLine", "column": "koma1_effect_target_side" },
+        { "table": "MstKomaLine", "column": "koma2_effect_target_side" },
+        { "table": "MstKomaLine", "column": "koma3_effect_target_side" },
+        { "table": "MstKomaLine", "column": "koma4_effect_target_side" }
       ],
       "values": ["All", "Player", "Enemy"]
     }
   },
   "tableEnumColumns": {
     "MstEnemyStageParameter": {
-      "characterUnitKind": "CharacterUnitKind",
-      "roleType": "CharacterUnitRoleType",
+      "character_unit_kind": "CharacterUnitKind",
+      "role_type": "CharacterUnitRoleType",
       "color": "CharacterColor",
-      "transformationConditionType": "UnitTransformationConditionType"
+      "transformation_condition_type": "UnitTransformationConditionType"
     },
     "MstEnemyOutpost": {},
     "MstPage": {},
     "MstKomaLine": {
-      "koma1EffectType": "KomaEffectType",
-      "koma1EffectTargetSide": "KomaEffectTargetSide",
-      "koma2EffectType": "KomaEffectType",
-      "koma2EffectTargetSide": "KomaEffectTargetSide",
-      "koma3EffectType": "KomaEffectType",
-      "koma3EffectTargetSide": "KomaEffectTargetSide",
-      "koma4EffectType": "KomaEffectType",
-      "koma4EffectTargetSide": "KomaEffectTargetSide"
+      "koma1_effect_type": "KomaEffectType",
+      "koma1_effect_target_side": "KomaEffectTargetSide",
+      "koma2_effect_type": "KomaEffectType",
+      "koma2_effect_target_side": "KomaEffectTargetSide",
+      "koma3_effect_type": "KomaEffectType",
+      "koma3_effect_target_side": "KomaEffectTargetSide",
+      "koma4_effect_type": "KomaEffectType",
+      "koma4_effect_target_side": "KomaEffectTargetSide"
     },
     "MstAutoPlayerSequence": {
-      "conditionType": "AutoPlayerSequenceConditionType",
-      "actionType": "AutoPlayerSequenceActionType",
-      "summonAnimationType": "SummonAnimationType",
-      "moveStartConditionType": "MoveStartConditionType",
-      "moveStopConditionType": "MoveStopConditionType",
-      "moveRestartConditionType": "MoveStartConditionType",
-      "auraType": "UnitAuraType",
-      "deathType": "UnitDeathType",
-      "deactivationConditionType": "AutoPlayerSequenceConditionType"
+      "condition_type": "AutoPlayerSequenceConditionType",
+      "action_type": "AutoPlayerSequenceActionType",
+      "summon_animation_type": "SummonAnimationType",
+      "move_start_condition_type": "MoveStartConditionType",
+      "move_stop_condition_type": "MoveStopConditionType",
+      "move_restart_condition_type": "MoveStartConditionType",
+      "aura_type": "UnitAuraType",
+      "death_type": "UnitDeathType",
+      "deactivation_condition_type": "AutoPlayerSequenceConditionType"
     },
     "MstInGame": {}
   }
