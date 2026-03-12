@@ -116,6 +116,49 @@ elem 5: c_osh_00301  条件: ElapsedTime 18000ms  ← 間隔 5000ms
 この方式は `veryhard(main)` や `savage` コンテンツで広く採用されている実績のある設計パターン。
 既存データ調査では `rik`（112グループ）・`sum`・`chi`・`tak`・`mag` の各シリーズが全件この方針で設計されている。
 
+### 既存データの設定例
+
+#### 例1: event_osh1_savage_00003（oshシリーズ・c_キャラ4体チェーン＋e_キャラ同時追加）
+
+VDと同じoshシリーズの既存実装。c_キャラが倒されるたびに**次のc_キャラ + e_キャラ複数体**が同時に召喚される構造。
+
+| elem | action_value | condition_type | condition_value | 意図 |
+|------|-------------|----------------|-----------------|------|
+| 1〜19 | `e_glo_00002_osh1savage03b_*` | `InitialSummon` | 0 | 開幕に汎用e_キャラを大量配置 |
+| 20〜21 | `e_glo_00002_osh1savage03*` | `EnterTargetKomaIndex` | 1 | コマ進入で追加e_キャラ |
+| **22** | **`c_osh_00401_osh1savage03_Normal_Green`** | **`FriendUnitDead`** | **1** | **elem1(e_glo)撃破後にc_キャラ1体目登場** |
+| 23 | `e_glo_00002_osh1savage03b_Normal_Green` | `FriendUnitDead` | 1 | c_キャラ1体目と同タイミングでe_キャラ追加 |
+| **24** | **`c_osh_00301_osh1savage03_Normal_Green`** | **`FriendUnitDead`** | **22** | **elem22(c_osh_00401)撃破後にc_キャラ2体目登場** |
+| 25 | `e_glo_00002_osh1savage03b_Normal_Green` | `FriendUnitDead` | 22 | c_キャラ2体目と同タイミングでe_キャラ追加 |
+| **26** | **`c_osh_00201_osh1savage03_Normal_Green`** | **`FriendUnitDead`** | **24** | **elem24(c_osh_00301)撃破後にc_キャラ3体目登場** |
+| 27 | `e_glo_00002_osh1savage03b_Normal_Green` | `FriendUnitDead` | 24 | c_キャラ3体目と同タイミングでe_キャラ追加 |
+| **28** | **`c_osh_00001_osh1savage03_Boss_Green`** | **`FriendUnitDead`** | **26** | **elem26(c_osh_00201)撃破後にc_キャラ4体目(ボス)登場** |
+| 29〜34 | `e_glo_00002_osh1savage03b_Normal_Green` | `FriendUnitDead` | 26 | ボス登場と同タイミングでe_キャラを複数追加 |
+
+**ポイント**:
+- `FriendUnitDead` の `condition_value` は **対象elemのsequence_element_id** を指定する
+- c_キャラ同士はチェーン（前のc_キャラのelemIdを参照）で繋ぐため、常に1体ずつ出現
+- e_キャラは c_キャラと **同じ condition_value** を指定して同タイミングで召喚できる
+
+#### 例2: veryhard_glo4_00002（複数作品c_キャラ5体＋e_キャラ複合）
+
+複数シリーズのキャラが混在し、e_キャラでフェーズを繋ぐ複合パターン。
+
+| elem | action_value | condition_type | condition_value |
+|------|-------------|----------------|-----------------|
+| 1〜4 | `e_glo_00001_*` | `ElapsedTime` | 1〜2500ms | 開幕にe_キャラを時間差で配置 |
+| **5** | **`c_sum_00001_*`** | **`FriendUnitDead`** | **6** | elem6撃破後に登場 |
+| **6** | **`c_kai_00001_*`** | **`FriendUnitDead`** | **4** | elem4(e_glo)撃破後に登場 |
+| 8〜10 | `e_glo_00001_*` | `FriendUnitDead` | 8 / 6 / 5 | 各c_キャラ撃破に連動してe_キャラ追加 |
+| **11** | **`c_mag_00101_*`** | **`FriendUnitDead`** | **10** | elem10(e_glo)撃破後に登場 |
+| 12〜14 | `e_glo_00001_*` | `FriendUnitDead` | 11 | c_mag_00101撃破後にe_キャラ3体追加 |
+| **15** | **`c_mag_00001_*`** | **`FriendUnitDead`** | **14** | elem14(e_glo)撃破後に登場 |
+| 16〜21 | `e_glo_00001_*` | `FriendUnitDead` | 15 / 10 / 14 | 各撃破に連動 |
+| 22〜23 | `e_glo_00001_*` | `OutpostHpPercentage` | 50 | 砦HP50%以下で追加召喚 |
+| 24〜28 | `e_mag_00101_*` | `FriendUnitDead` | 10 | 作品固有の汎用e_キャラも使用 |
+
+---
+
 ### 修正後のシーケンス設計（vd_osh_normal_00001 の例）
 
 | elem | キャラ | condition_type | condition_value | 意図 |
