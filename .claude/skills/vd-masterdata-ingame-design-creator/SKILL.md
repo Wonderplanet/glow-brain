@@ -177,6 +177,36 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 ---
 
+## バッチモード（--batch）
+
+サブエージェントや一括処理での実行時は `--batch` フラグを指定する。
+
+### バッチモード引数
+
+| 引数 | 必須 | 説明 |
+|---|---|---|
+| `作品ID` | ✓ | kai / dan / spy 等 |
+| `ブロック種別` | ✓ | Normal または Boss |
+| `--batch` | ✓ | バッチモード有効化フラグ |
+
+### バッチモードの動作変更
+
+1. **Step 0（ヒアリング）をスキップ**
+   - 連番は `00001` を使用（既存フォルダが存在する場合は次の連番を使用）
+   - ユーザーへの確認なしで設計書の内容を決定する
+
+2. **Step 2（承認ループ）をスキップ**
+   - 設計書生成後、確認なしで直接 `design.md` に書き込む
+   - 「設計書を保存しました: {パス}」とのみ出力して終了
+
+### バッチモード呼び出し例
+
+```
+/vd-masterdata-ingame-design-creator 作品ID=dan ブロック種別=Normal --batch
+```
+
+---
+
 ## リファレンス一覧
 
 - [design-format.md](references/design-format.md) — design.md フォーマットテンプレート定義
