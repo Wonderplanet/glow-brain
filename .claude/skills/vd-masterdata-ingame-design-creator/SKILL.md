@@ -75,6 +75,13 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 | MstEnemyOutpost | `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md` |
 | MstPage | `domain/knowledge/masterdata/table-docs/MstPage.md` |
 
+**シーケンス設計参考ドキュメント読み込み（必須）**: 多彩なシーケンス設計のために以下のドキュメントも Read tool で読み込む。
+
+| ドキュメント | パス |
+|------------|------|
+| MstAutoPlayerSequence 具体例集 | `references/MstAutoPlayerSequence_具体例集.md` |
+| MstAutoPlayerSequence 設計パターン集 | `references/MstAutoPlayerSequence_設計パターン集.md` |
+
 ---
 
 ## レベルデザイン方針
@@ -93,6 +100,31 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 |------------|----------------|------|
 | normalブロック | **15体以上** | 雑魚扱いの敵キャラの合計（ボスを除く） |
 | bossブロック | 制約なし | ボス1体 + 雑魚は任意体数で設計する |
+
+### シーケンス設計の多様性
+
+**ElapsedTime だけでなく多彩なトリガーを活用して、面白みのある設計を目指す。**
+具体例集・設計パターン集から適切なパターンを選択すること。
+
+| トリガー | 設計のねらい | 活用例 |
+|---------|------------|--------|
+| `FriendUnitDead` | 「倒すほど強くなる」プレッシャー | N体倒したら強化雑魚追加・c_キャラ登場・無限補充開始 |
+| `OutpostHpPercentage` | 拠点防衛プレッシャー | 拠点50%削れたら覚醒ボス登場 |
+| `InitialSummon` | 開幕演出・ボス即配置 | 複数体を異なる位置で同時配置 |
+| `EnterTargetKomaIndex` | コマ進行連動 | コマ位置に合わせた伏兵出現 |
+| `DarknessKomaCleared` | 難易度自動調整 | 闇コマクリア数に応じたボス追加 |
+| `FriendUnitTransform` | 変身演出 | フレンド変身後に敵大量召喚 |
+
+**summon_count の活用パターン**:
+- `99` + 適切な interval = 実質無限補充（終盤強化に有効）
+- `10〜20` 体一気召喚 = 大規模ラッシュ演出
+- `1` 体精密召喚 = ボス・特殊キャラの確実な1体出現
+
+**推奨設計パターン（4種）**:
+- **A. FriendUnitDead型**: ElapsedTime 開幕 → FriendUnitDead で段階強化 → 終盤 summon_count=99 無限補充
+- **B. 拠点防衛型**: OutpostHpPercentage で残HP連動 → c_キャラ最終ボス
+- **C. ストーリー演出型**: InitialSummon でボス即配置 → FriendUnitDead チェーン
+- **D. キャラ変身型**: FriendUnitTransform=1 で変身後に大量召喚
 
 ---
 
@@ -164,3 +196,8 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 - `domain/knowledge/masterdata/table-docs/MstKomaLine.md`
 - `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md`
 - `domain/knowledge/masterdata/table-docs/MstPage.md`
+
+### シーケンス設計参考ドキュメント
+
+- [MstAutoPlayerSequence_具体例集.md](references/MstAutoPlayerSequence_具体例集.md) — 過去15ステージの実例集（N-1〜N-15。トリガー・体数・c_キャラ使用例）
+- [MstAutoPlayerSequence_設計パターン集.md](references/MstAutoPlayerSequence_設計パターン集.md) — condition_type・summon_count・aura_type等の設計パターン解説
