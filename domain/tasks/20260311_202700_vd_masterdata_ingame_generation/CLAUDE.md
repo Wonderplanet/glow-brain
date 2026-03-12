@@ -21,6 +21,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `domain/tasks/` 以下の**本タスクフォルダ以外**のタスクフォルダ全て
   - （例: `20260310_115400_vd_ingame_masterdata_generation/`, `dungeon-bulk-masterdata-generation/`, `masterdata-entry/`）
 - `domain/raw-data/` 以下全て
+- 本タスクフォルダ内の `archives/` 以下全て
 
 ---
 
