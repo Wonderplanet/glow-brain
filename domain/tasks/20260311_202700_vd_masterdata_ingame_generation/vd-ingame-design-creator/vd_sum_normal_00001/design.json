@@ -1,0 +1,156 @@
+{
+  "block_name": "vd_sum_normal_00001",
+  "title": "ブロック基礎設計_vd_sum_normal_00001",
+  "requirements_text": "ファントム（`e_glo_00001_vd_Normal_Colorless`：Colorless/Attack・HP5,000）が開幕250msに5体で先行登場し、影（`e_sum_00001_vd_Normal_Red`：Red/Defense・HP350,000）が1,500ms・2,500msと中盤に向けて押し寄せてくる構成。5体撃破で影が補充され、10体撃破すると網代 慎平（`c_sum_00001_vd_Boss_Red`：Red/Technical・HP245,000）がBossオーラつきで砦付近に出現。その後は影の撃破が続くと再度網代 慎平が補充登場し、最終的に影の無限補充と網代 慎平の繰り返し登場が重なる終盤圧力ラッシュへと移行する。合計確定出現数は20体以上で「最低15体以上」の要件を満たす。\n\nコマは3行固定（各行独立抽選）。row1=パターン12（4等分4コマ：0.25×4）、row2=パターン8（左広い3コマ：0.50/0.25/0.25）、row3=パターン6（2等分2コマ：0.50/0.50）。コマアセット: `sum_00001`（back_ground_offset: 0.6）。\n\nUR対抗キャラ「影のウシオ 小舟 潮」（`chara_sum_00101`）への対抗として、Red属性の影と網代 慎平が主軸となり、Red属性対策コマを活かした攻略を求める設計となっている。",
+  "basic_info": {
+    "id": "vd_sum_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "9行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "4コマ",
+      "asset": "sum_00001",
+      "effect": "None",
+      "widths": "0.25 / 0.25 / 0.25 / 0.25"
+    },
+    {
+      "row": "行2",
+      "count": "3コマ",
+      "asset": "sum_00001",
+      "effect": "None",
+      "widths": "0.5 / 0.25 / 0.25"
+    },
+    {
+      "row": "行3",
+      "count": "2コマ",
+      "asset": "sum_00001",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（共通）"
+    },
+    {
+      "id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "color": "Red（赤属性）",
+      "role": "Defense",
+      "hp": 350000,
+      "atk": 600,
+      "spd": 40,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_sum_00001_vd_Boss_Red",
+      "name": "網代 慎平",
+      "color": "Red（赤属性）",
+      "role": "Technical",
+      "hp": 245000,
+      "atk": 500,
+      "spd": 45,
+      "desc": "強化ボス（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "累計5体"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 3,
+      "notes": "累計8体"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 2500,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 3,
+      "notes": "累計11体"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 4000,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 3,
+      "notes": "累計14体"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 3,
+      "notes": "+3体追加"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "c_sum_00001_vd_Boss_Red",
+      "name": "網代 慎平",
+      "count": 1,
+      "notes": "position=1.7 / Bossオーラ"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 3,
+      "notes": "同タイミング elem=6と並列"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 99,
+      "notes": "無限補充スタート"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "c_sum_00001_vd_Boss_Red",
+      "name": "網代 慎平",
+      "count": 1,
+      "notes": "Bossオーラ / elem=8と並列"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

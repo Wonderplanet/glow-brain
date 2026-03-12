@@ -1,0 +1,146 @@
+{
+  "block_name": "vd_sur_normal_00001",
+  "title": "ブロック基礎設計_vd_sur_normal_00001",
+  "requirements_text": "醜鬼（Red/Attack・HP400,000・ATK850・SPD45）が開幕250msとその後の波状攻撃で計15体以上出現する構成。ファントム（Colorless/Attack・HP5,000・ATK100・SPD34）が序盤の足場を作り、醜鬼が FriendUnitDead トリガーに連動して色違い（Red/Colorless/Green）で段階的に追加召喚される設計。7体倒されると高威力Red醜鬼が無限補充（summon_count=99）に切り替わり、拠点を守り続けるプレッシャーが続く。合計通常召喚: 18体 + 無限補充（99×2本）。\n\nコマは3行固定（各行独立抽選）。row1=左広い3コマ（0.50, 0.25, 0.25）・row2=4等分4コマ（0.25×4）・row3=右広い2コマ（0.25, 0.75）。コマアセット: sur_00001（back_ground_offset: -1.0）。\n\nUR対抗キャラ「万物を統べる総組長 山城 恋」（chara_sur_00901）対抗。Red属性の醜鬼が主軸となるため、Red属性対策コマを活かしたプレイが有効になる設計。FriendUnitDead で段階的に強化される敵の波に対応するため、コマ選択と出撃タイミングの精度が求められる。",
+  "basic_info": {
+    "id": "vd_sur_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "9行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "3コマ",
+      "asset": "sur_00001",
+      "effect": "None",
+      "widths": "0.5 / 0.25 / 0.25"
+    },
+    {
+      "row": "行2",
+      "count": "4コマ",
+      "asset": "sur_00001",
+      "effect": "None",
+      "widths": "0.25 / 0.25 / 0.25 / 0.25"
+    },
+    {
+      "row": "行3",
+      "count": "2コマ",
+      "asset": "sur_00001",
+      "effect": "None",
+      "widths": "0.25 / 0.75"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "color": "Red（赤属性）",
+      "role": "Attack",
+      "hp": 400000,
+      "atk": 850,
+      "spd": 45,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（共通）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "序盤の足場を作る"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 1000,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 2,
+      "notes": "開幕1,000msで醜鬼2体"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 3,
+      "notes": "1,500msで醜鬼3体、計5体"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 2,
+      "notes": "3体撃破後に醜鬼2体追加（pos:1.3）"
+    },
+    {
+      "num": 5,
+      "trigger": "ElapsedTime",
+      "value": 2500,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "中盤のファントム3体"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 3,
+      "notes": "5体撃破後に醜鬼3体追加"
+    },
+    {
+      "num": 7,
+      "trigger": "ElapsedTime",
+      "value": 3500,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 2,
+      "notes": "3,500msで醜鬼2体（pos:1.3）"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 99,
+      "notes": "7体撃破後に無限補充1本目（interval=750ms）"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 99,
+      "notes": "7体撃破後に無限補充2本目（interval=1200ms）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "block_name": "vd_gom_boss_00001",
+  "title": "ブロック基礎設計_vd_gom_boss_00001",
+  "requirements_text": "ボスキャラとして「囚われの王女 姫様」（`c_gom_00001_vd_Boss_Yellow`、Yellow/Defense）が開始直後に砦付近に配置され、ダメージを受けるまで静止する。雑魚として「たこ焼き」（`e_gom_00501_vd_Normal_Yellow`）・「バタートースト」（`e_gom_00402_vd_Normal_Yellow`）・「ラーメン」（`e_gom_00701_vd_Normal_Yellow`）・「ファントム」（`e_glo_00001_vd_Normal_Colorless`）の4種が登場。ElapsedTimeで序盤に食べ物系キャラが定期的に押し寄せ、FriendUnitDead=3体で姫様専用対抗ファントムが出現、OutpostHpPercentage=80で拠点ダメージが入ると食べ物系が大量ラッシュ、OutpostHpPercentage=50で強化食べ物系99体の無限補充が始まる。UR対抗キャラ「囚われの王女 姫様」（`chara_gom_00001`）に対応し、Defense ロールを持つボスキャラがプレッシャーをかける設計。\n\nコマは1行構成（bossブロック固定）で、パターン1（1コマ全幅）を使用。アセットキーは `gom_00003`。",
+  "basic_info": {
+    "id": "vd_gom_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "11行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "gom_00003",
+      "effect": "None",
+      "widths": "1.0"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_gom_00001_vd_Boss_Yellow",
+      "name": "囚われの王女 姫様",
+      "color": "Yellow（黄属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 50,
+      "spd": 25,
+      "desc": "ボス（c_キャラ）"
+    },
+    {
+      "id": "e_gom_00501_vd_Normal_Yellow",
+      "name": "たこ焼き",
+      "color": "Yellow（黄属性）",
+      "role": "Defense",
+      "hp": 1000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_gom_00402_vd_Normal_Yellow",
+      "name": "バタートースト",
+      "color": "Yellow（黄属性）",
+      "role": "Attack",
+      "hp": 1000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_gom_00701_vd_Normal_Yellow",
+      "name": "ラーメン",
+      "color": "Yellow（黄属性）",
+      "role": "Attack",
+      "hp": 10000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_gom_00001_vd_Boss_Yellow",
+      "name": "囚われの王女 姫様",
+      "count": 1,
+      "notes": "position=1.7（砦付近）、Damage受けるまで静止"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 50,
+      "enemy_id": "e_gom_00501_vd_Normal_Yellow",
+      "name": "たこ焼き",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_gom_00402_vd_Normal_Yellow",
+      "name": "バタートースト",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 5,
+      "trigger": "ElapsedTime",
+      "value": 350,
+      "enemy_id": "e_gom_00701_vd_Normal_Yellow",
+      "name": "ラーメン",
+      "count": 2,
+      "notes": ""
+    },
+    {
+      "num": 6,
+      "trigger": "ElapsedTime",
+      "value": 450,
+      "enemy_id": "e_gom_00501_vd_Normal_Yellow",
+      "name": "たこ焼き",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "interval=300ms"
+    },
+    {
+      "num": 8,
+      "trigger": "OutpostHpPercentage",
+      "value": 80,
+      "enemy_id": "e_gom_00402_vd_Normal_Yellow",
+      "name": "バタートースト",
+      "count": 10,
+      "notes": "interval=500ms"
+    },
+    {
+      "num": 9,
+      "trigger": "OutpostHpPercentage",
+      "value": 80,
+      "enemy_id": "e_gom_00701_vd_Normal_Yellow",
+      "name": "ラーメン",
+      "count": 10,
+      "notes": "interval=700ms"
+    },
+    {
+      "num": 10,
+      "trigger": "OutpostHpPercentage",
+      "value": 50,
+      "enemy_id": "e_gom_00501_vd_Normal_Yellow",
+      "name": "たこ焼き",
+      "count": 99,
+      "notes": "interval=500ms"
+    },
+    {
+      "num": 11,
+      "trigger": "OutpostHpPercentage",
+      "value": 50,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 99,
+      "notes": "interval=800ms"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

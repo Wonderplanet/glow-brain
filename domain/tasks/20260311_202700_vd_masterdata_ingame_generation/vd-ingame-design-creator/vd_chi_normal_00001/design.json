@@ -1,0 +1,147 @@
+{
+  "block_name": "vd_chi_normal_00001",
+  "title": "ブロック基礎設計_vd_chi_normal_00001",
+  "requirements_text": "ファントム（Colorless/Attack・HP5,000・ATK100・SPD34）が開幕250msと3,000msに各5体ずつ、ゾンビ（Blue/Defense・HP5,000・ATK320・SPD35）が1,500ms・4,500msに各4体ずつ出現する序中盤構成（合計18体）。10体撃破を機に悪魔が恐れる悪魔 チェンソーマン（c_chi_00002・Boss/Technical/Blue・HP400,000）がBossオーラで1体登場し、同タイミングでゾンビ3体が追加される。さらに6,000msに追加ゾンビ5体が出現し、18体撃破後はゾンビ（Blue）が interval=500ms の無限補充（summon_count=99）へ移行する。合計確定出現数27体＋無限補充。ゾンビ・チェンソーマンともにBlue属性であるため、Blue対策コマが有効になる設計。",
+  "basic_info": {
+    "id": "vd_chi_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "3コマ",
+      "asset": "glo_00016",
+      "effect": "None",
+      "widths": "0.33 / 0.34 / 0.33"
+    },
+    {
+      "row": "行2",
+      "count": "2コマ",
+      "asset": "glo_00016",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    },
+    {
+      "row": "行3",
+      "count": "4コマ",
+      "asset": "glo_00016",
+      "effect": "None",
+      "widths": "0.25 / 0.25 / 0.25 / 0.25"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 5000,
+      "atk": 320,
+      "spd": 35,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（共通・e_キャラ）"
+    },
+    {
+      "id": "c_chi_00002_vd_Boss_Blue",
+      "name": "悪魔が恐れる悪魔 チェンソーマン",
+      "color": "Blue（青属性）",
+      "role": "Technical",
+      "hp": 400000,
+      "atk": 450,
+      "spd": 50,
+      "desc": "c_キャラ（ボス級）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "開幕5体・序盤の圧力"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 4,
+      "notes": "序中盤・Blue属性初登場"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 3000,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "3,000ms追加ファントム5体"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 4500,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 4,
+      "notes": "中盤・累計18体確定"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "c_chi_00002_vd_Boss_Blue",
+      "name": "悪魔が恐れる悪魔 チェンソーマン",
+      "count": 1,
+      "notes": "10体撃破でBossオーラ登場・summon_position=1.7"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 3,
+      "notes": "チェンソーマン登場と同タイミングでゾンビ3体追加"
+    },
+    {
+      "num": 7,
+      "trigger": "ElapsedTime",
+      "value": 6000,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 5,
+      "notes": "6,000msに追加ゾンビ5体・確定27体"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 18,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 99,
+      "notes": "18体撃破後・interval=500msで無限補充"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

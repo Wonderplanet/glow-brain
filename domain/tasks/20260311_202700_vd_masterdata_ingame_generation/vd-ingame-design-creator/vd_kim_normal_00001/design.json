@@ -1,0 +1,220 @@
+{
+  "block_name": "vd_kim_normal_00001",
+  "title": "ブロック基礎設計_vd_kim_normal_00001",
+  "requirements_text": "ファントム（Colorless/Attack・HP5,000）が開幕250msと中盤に合計11体、c_kim_00101（院田 唐音・Red/Attack・HP10,000）が4体、c_kim_00201（好本 静・Red/Technical・HP10,000）が4体、c_kim_00301（花園 羽香里・Red/Support・HP50,000）が2体の計21体構成。開幕はファントムで足場を作りながら院田 唐音・好本 静が時間差で次々と登場し、FriendUnitDeadトリガー連鎖で花園 羽香里が高HPの圧力をかけてくる設計。Red属性対策のコマを揃えることが攻略の鍵となる。\n\nコマは3行固定（各行独立抽選）。row1=4等分4コマ（0.25×4）・row2=左広い3コマ（0.50, 0.25, 0.25）・row3=2等分2コマ（0.50, 0.50）。コマアセット: glo_00011（back_ground_offset: -1.0）。\n\nUR対抗キャラ「溢れる母性 花園 羽々里」（chara_kim_00001）対抗。Red属性の c_kim キャラが主軸となり、Red属性対策コマを活かしたプレイが有効になる設計。",
+  "basic_info": {
+    "id": "vd_kim_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "15行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "4コマ",
+      "asset": "glo_00011",
+      "effect": "None",
+      "widths": "0.25 / 0.25 / 0.25 / 0.25"
+    },
+    {
+      "row": "行2",
+      "count": "3コマ",
+      "asset": "glo_00011",
+      "effect": "None",
+      "widths": "0.5 / 0.25 / 0.25"
+    },
+    {
+      "row": "行3",
+      "count": "2コマ",
+      "asset": "glo_00011",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_kim_00101_vd_Normal_Red",
+      "name": "院田 唐音",
+      "color": "Red（赤属性）",
+      "role": "Attack",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_kim_00201_vd_Normal_Red",
+      "name": "好本 静",
+      "color": "Red（赤属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_kim_00301_vd_Normal_Red",
+      "name": "花園 羽香里",
+      "color": "Red（赤属性）",
+      "role": "Support",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 40,
+      "desc": "強化雑魚（c_キャラ・高HP）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 4,
+      "notes": "開幕4体・足場形成"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 500,
+      "enemy_id": "c_kim_00101_vd_Normal_Red",
+      "name": "院田 唐音",
+      "count": 1,
+      "notes": "ElapsedTime 500ms・1体目"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 800,
+      "enemy_id": "c_kim_00201_vd_Normal_Red",
+      "name": "好本 静",
+      "count": 1,
+      "notes": "ElapsedTime 800ms・1体目"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 4,
+      "notes": "中盤追加4体"
+    },
+    {
+      "num": 5,
+      "trigger": "ElapsedTime",
+      "value": 2000,
+      "enemy_id": "c_kim_00101_vd_Normal_Red",
+      "name": "院田 唐音",
+      "count": 1,
+      "notes": "ElapsedTime 2000ms・2体目"
+    },
+    {
+      "num": 6,
+      "trigger": "ElapsedTime",
+      "value": 2500,
+      "enemy_id": "c_kim_00201_vd_Normal_Red",
+      "name": "好本 静",
+      "count": 1,
+      "notes": "ElapsedTime 2500ms・2体目"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 4,
+      "notes": "4体討伐後・追加4体"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "c_kim_00301_vd_Normal_Red",
+      "name": "花園 羽香里",
+      "count": 1,
+      "notes": "6体討伐後・Bossオーラ付き高HP登場（1体目）"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 8,
+      "enemy_id": "c_kim_00101_vd_Normal_Red",
+      "name": "院田 唐音",
+      "count": 1,
+      "notes": "8体討伐後・3体目"
+    },
+    {
+      "num": 10,
+      "trigger": "FriendUnitDead",
+      "value": 8,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "8体討伐後・追加3体（elem9と同時トリガー）"
+    },
+    {
+      "num": 11,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "c_kim_00201_vd_Normal_Red",
+      "name": "好本 静",
+      "count": 1,
+      "notes": "10体討伐後・3体目"
+    },
+    {
+      "num": 12,
+      "trigger": "FriendUnitDead",
+      "value": 12,
+      "enemy_id": "c_kim_00101_vd_Normal_Red",
+      "name": "院田 唐音",
+      "count": 1,
+      "notes": "12体討伐後・4体目"
+    },
+    {
+      "num": 13,
+      "trigger": "FriendUnitDead",
+      "value": 12,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 4,
+      "notes": "12体討伐後・追加4体（elem12と同時トリガー）"
+    },
+    {
+      "num": 14,
+      "trigger": "FriendUnitDead",
+      "value": 14,
+      "enemy_id": "c_kim_00301_vd_Normal_Red",
+      "name": "花園 羽香里",
+      "count": 1,
+      "notes": "14体討伐後・Bossオーラ付き高HP登場（2体目）"
+    },
+    {
+      "num": 15,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "c_kim_00201_vd_Normal_Red",
+      "name": "好本 静",
+      "count": 1,
+      "notes": "15体討伐後・4体目・最終波"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

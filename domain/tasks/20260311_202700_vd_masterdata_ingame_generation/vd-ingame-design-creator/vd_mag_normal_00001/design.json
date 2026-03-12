@@ -1,0 +1,165 @@
+{
+  "block_name": "vd_mag_normal_00001",
+  "title": "ブロック基礎設計_vd_mag_normal_00001",
+  "requirements_text": "UR対抗キャラ「絶対効率の体現者 土刃 メイ（chara_mag_00201）」を意識した設計。怪獣（e_mag_00001_vd_Normal_Green）とつらら（e_mag_00101_vd_Normal_Green）の2種の雑魚が序盤から中盤にかけて交互に押し寄せ、フレンドユニットが一定数倒されるとボスクラスの「新人魔法少女 桜木 カナ（c_mag_00001_vd_Boss_Green）」が登場してプレッシャーを高める。さらに倒し続けると終盤に両雑魚の大量補充が始まる無限ループ設計。最低20体以上の雑魚が登場する物量構成。\n\nコマは3行構成。row=1はパターン7（3等分）、row=2はパターン6（2等分）、row=3はパターン12（4等分）と異なるパターンを組み合わせてフィールドに変化をもたせる。コマアセットキーは `mag_00004`（back_ground_offset: 0.6）を使用。\n\n「絶対効率の体現者 土刃 メイ」の攻撃力強化系コマ効果に対し、複数コマにまたがるGreenカラー敵が多数出現することで、メイのコマ効果を活かして高効率に倒していく遊びが成立する構造。",
+  "basic_info": {
+    "id": "vd_mag_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "10行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "3コマ",
+      "asset": "mag_00004",
+      "effect": "None",
+      "widths": "0.33 / 0.34 / 0.33"
+    },
+    {
+      "row": "行2",
+      "count": "2コマ",
+      "asset": "mag_00004",
+      "effect": "AttackPowerDown",
+      "widths": "0.5 / 0.5"
+    },
+    {
+      "row": "行3",
+      "count": "4コマ",
+      "asset": "mag_00004",
+      "effect": "None",
+      "widths": "0.25 / 0.25 / 0.25 / 0.25"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_mag_00001_vd_Normal_Green",
+      "name": "冷却系怪異",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 1000000,
+      "atk": 2500,
+      "spd": 35,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_mag_00101_vd_Normal_Green",
+      "name": "つらら",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 20000,
+      "atk": 400,
+      "spd": 100,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_mag_00001_vd_Boss_Green",
+      "name": "新人魔法少女 桜木 カナ",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 320000,
+      "atk": 1200,
+      "spd": 45,
+      "desc": "ボス（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_mag_00101_vd_Normal_Green",
+      "name": "つらら",
+      "count": 3,
+      "notes": "累計3体"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 1000,
+      "enemy_id": "e_mag_00001_vd_Normal_Green",
+      "name": "冷却系怪異",
+      "count": 2,
+      "notes": "累計5体"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 2000,
+      "enemy_id": "e_mag_00101_vd_Normal_Green",
+      "name": "つらら",
+      "count": 3,
+      "notes": "累計8体"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 3000,
+      "enemy_id": "e_mag_00001_vd_Normal_Green",
+      "name": "冷却系怪異",
+      "count": 2,
+      "notes": "累計10体"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_mag_00101_vd_Normal_Green",
+      "name": "つらら",
+      "count": 5,
+      "notes": "累計15体"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 8,
+      "enemy_id": "c_mag_00001_vd_Boss_Green",
+      "name": "新人魔法少女 桜木 カナ",
+      "count": 1,
+      "notes": "累計16体（Bossオーラ・summon_position=1.7）"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 9,
+      "enemy_id": "e_mag_00001_vd_Normal_Green",
+      "name": "冷却系怪異",
+      "count": 3,
+      "notes": "累計19体"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 12,
+      "enemy_id": "e_mag_00101_vd_Normal_Green",
+      "name": "つらら",
+      "count": 10,
+      "notes": "累計29体（interval=500ms）"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "e_mag_00001_vd_Normal_Green",
+      "name": "冷却系怪異",
+      "count": 99,
+      "notes": "無限補充（interval=800ms）"
+    },
+    {
+      "num": 10,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "e_mag_00101_vd_Normal_Green",
+      "name": "つらら",
+      "count": 99,
+      "notes": "無限補充（interval=600ms）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

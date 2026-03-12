@@ -1,0 +1,123 @@
+{
+  "block_name": "vd_spy_boss_00001",
+  "title": "ブロック基礎設計_vd_spy_boss_00001",
+  "requirements_text": "ボスにフランキー・フランクリン（`c_spy_00401_vd_Boss_Blue`）を起用し、バトル開始直後に砦付近へ配置する。ダメージを受けるまで静止し、プレイヤーにプレッシャーを与える演出。雑魚は密輸組織の残党（`e_spy_00001_vd_Normal_Blue`）のみで構成し、ElapsedTime で序盤から定期的に押し寄せ、ボスに一定数の撃破ダメージが蓄積した時点（FriendUnitDead）で追加ラッシュを発生させる。終盤は summon_count=99 の無限補充で圧力を維持する。\n\nコマは1行構成（bossブロック固定）。アセットキーは `spy_00002`、back_ground_offset は `0.6`。\n\nUR対抗キャラは `<黄昏> ロイド`（`chara_spy_00101`）。ロイドが得意とするアクション封じに対して、ボスのフランキーは防衛型でHPが高く長期戦を強いる設計。密輸組織の残党がロイドのアクションを乱す援護役として機能する。",
+  "basic_info": {
+    "id": "vd_spy_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "spy_00002",
+      "effect": "None",
+      "widths": "1.0"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_spy_00401_vd_Boss_Blue",
+      "name": "フランキー・フランクリン",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 50,
+      "spd": 31,
+      "desc": "ボス（c_キャラ）"
+    },
+    {
+      "id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党",
+      "color": "Blue（青属性）",
+      "role": "Attack",
+      "hp": 10000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_spy_00401_vd_Boss_Blue",
+      "name": "フランキー・フランクリン（Boss）",
+      "count": 1,
+      "notes": ""
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 500,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党（Normal）",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 2000,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党（Normal）",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 3500,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党（Normal）",
+      "count": 5,
+      "notes": ""
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党（Normal）",
+      "count": 5,
+      "notes": ""
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 8,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党（Normal）",
+      "count": 10,
+      "notes": ""
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党（Normal）",
+      "count": 99,
+      "notes": ""
+    },
+    {
+      "num": 8,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党（Normal）",
+      "count": 99,
+      "notes": ""
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "block_name": "vd_spy_normal_00001",
+  "title": "ブロック基礎設計_vd_spy_normal_00001",
+  "requirements_text": "密輸組織の残党（`e_spy_00001_vd_Normal_Blue`）が主力雑魚として序盤から継続的に押し寄せる。開幕は `ElapsedTime` で密輸組織の残党3体を即配置し、倒すたびに補充が来る `FriendUnitDead` 連鎖構造を採用している。中盤（5体撃破）にはグロー汎用ファントム（`e_glo_00001_vd_Normal_Colorless`）が混入し始め、終盤（12体撃破）では密輸組織の残党のボスバージョンが登場してプレッシャーを高める。20体撃破を超えると雑魚の無限補充（summon_count=99）に移行する。合計雑魚体数は最低15体以上を確保。\n\nUR対抗キャラは `<黄昏> ロイド`（`chara_spy_00101`）。同キャラの青属性コマ効果（`AttackPowerDown`）を持つコマを配置し、ロイドの攻撃力を封じるギミックがある設計。ロイドで押すと攻撃が弱まる中、次々と現れる密輸組織残党をいかに効率よく撃破するかがポイント。",
+  "basic_info": {
+    "id": "vd_spy_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "10行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {"row": "行1", "count": "2コマ", "asset": "spy_00002", "effect": "AttackPowerDown", "widths": "0.5 / 0.5"},
+    {"row": "行2", "count": "3コマ", "asset": "spy_00002", "effect": "None", "widths": "0.33 / 0.34 / 0.33"},
+    {"row": "行3", "count": "4コマ", "asset": "spy_00002", "effect": "None", "widths": "0.25 / 0.25 / 0.25 / 0.25"}
+  ],
+  "enemies": [
+    {
+      "id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党",
+      "color": "Blue（青属性）",
+      "role": "Attack",
+      "hp": 10000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "グロー汎用ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党",
+      "count": 3,
+      "notes": "累計3体"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 2000,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党",
+      "count": 3,
+      "notes": "累計6体"
+    },
+    {
+      "num": 3,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "グロー汎用ファントム",
+      "count": 2,
+      "notes": "累計8体"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党",
+      "count": 3,
+      "notes": "累計11体"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "グロー汎用ファントム",
+      "count": 2,
+      "notes": "累計13体"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 8,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党",
+      "count": 4,
+      "notes": "累計17体"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 12,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党（Boss）",
+      "count": 1,
+      "notes": "累計18体 / position=1.7"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "グロー汎用ファントム",
+      "count": 3,
+      "notes": "累計21体"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 20,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党",
+      "count": 99,
+      "notes": "無限補充"
+    },
+    {
+      "num": 10,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_spy_00001_vd_Normal_Blue",
+      "name": "密輸組織の残党",
+      "count": 99,
+      "notes": "バックアップ無限補充"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

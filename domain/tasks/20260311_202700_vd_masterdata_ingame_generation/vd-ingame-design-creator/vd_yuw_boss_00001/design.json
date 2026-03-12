@@ -1,0 +1,135 @@
+{
+  "block_name": "vd_yuw_boss_00001",
+  "title": "ブロック基礎設計_vd_yuw_boss_00001",
+  "requirements_text": "ボス「奥村 正宗」（`c_yuw_00601_vd_Boss_Blue`、HP=10,000、ATK=300、Blue/Defense）が開幕から砦付近（position=1.7）にBossオーラで待機し、初ダメージを受けてから前進する。500ms 後にリリエルに捧ぐ愛 天乃 リリサ（`c_yuw_00001_vd_Normal_Blue`、Attack）1体が前衛として登場し、これが c_キャラ1体目となる（ElapsedTimeで初回召喚）。1,500ms 後にさらに 天乃 リリサ 2体が追加される。3体倒した段階でコスプレに託す乙女心 橘 美花莉（`c_yuw_00101_vd_Normal_Blue`、Technical）がFriendUnitDeadチェーンで登場する（c_キャラ2体目）。5体倒れると拠点防衛プレッシャーとして伝えたいウチの想い 喜咲 アリア（`c_yuw_00401_vd_Normal_Blue`、Defense）が追加召喚（c_キャラ3体目）される。拠点HPが70%を切ると終盤強化として勇気を纏うコスプレ 乃愛（`c_yuw_00301_vd_Normal_Blue`、Technical）が独立トリガーで登場する（c_キャラ4体目）。\n\nコマは1行・2等分（パターン6、幅0.5/0.5）のシンプル構成。コマアセットキーは `glo_00008`（back_ground_offset = -1.0）。UR対抗キャラ「リリエルに捧ぐ愛 天乃 リリサ（`chara_yuw_00001`）」のBlue属性スキルで奥村正宗を撃破しながら、Blue系コスプレキャラの多彩なrole（Attack/Technical/Defense）を素早く処理する対抗設計。",
+  "basic_info": {
+    "id": "vd_yuw_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "6行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "glo_00008",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_yuw_00601_vd_Boss_Blue",
+      "name": "奥村 正宗",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 300,
+      "spd": 25,
+      "desc": "ボス"
+    },
+    {
+      "id": "c_yuw_00001_vd_Normal_Blue",
+      "name": "リリエルに捧ぐ愛 天乃 リリサ",
+      "color": "Blue（青属性）",
+      "role": "Attack",
+      "hp": 10000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "雑魚（c_キャラ1体目）"
+    },
+    {
+      "id": "c_yuw_00101_vd_Normal_Blue",
+      "name": "コスプレに託す乙女心 橘 美花莉",
+      "color": "Blue（青属性）",
+      "role": "Technical",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 29,
+      "desc": "雑魚（c_キャラ2体目）"
+    },
+    {
+      "id": "c_yuw_00401_vd_Normal_Blue",
+      "name": "伝えたいウチの想い 喜咲 アリア",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "雑魚（c_キャラ3体目）"
+    },
+    {
+      "id": "c_yuw_00301_vd_Normal_Blue",
+      "name": "勇気を纏うコスプレ 乃愛",
+      "color": "Blue（青属性）",
+      "role": "Technical",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 29,
+      "desc": "雑魚（c_キャラ4体目）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_yuw_00601_vd_Boss_Blue",
+      "name": "奥村 正宗",
+      "count": 1,
+      "notes": "pos=1.7、aura=Boss、move_start=Damage(1)"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 500,
+      "enemy_id": "c_yuw_00001_vd_Normal_Blue",
+      "name": "リリエルに捧ぐ愛 天乃 リリサ",
+      "count": 1,
+      "notes": "summon_count=1、aura=Boss、c_キャラ1体目"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "c_yuw_00001_vd_Normal_Blue",
+      "name": "リリエルに捧ぐ愛 天乃 リリサ",
+      "count": 2,
+      "notes": "interval=300、aura=Default"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "c_yuw_00101_vd_Normal_Blue",
+      "name": "コスプレに託す乙女心 橘 美花莉",
+      "count": 1,
+      "notes": "elem=2チェーン、summon_count=1、aura=Boss、c_キャラ2体目"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "c_yuw_00401_vd_Normal_Blue",
+      "name": "伝えたいウチの想い 喜咲 アリア",
+      "count": 1,
+      "notes": "elem=4チェーン、summon_count=1、aura=Boss、c_キャラ3体目"
+    },
+    {
+      "num": 6,
+      "trigger": "OutpostHpPercentage",
+      "value": 70,
+      "enemy_id": "c_yuw_00301_vd_Normal_Blue",
+      "name": "勇気を纏うコスプレ 乃愛",
+      "count": 1,
+      "notes": "独立トリガー、summon_count=1、aura=Boss、c_キャラ4体目"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

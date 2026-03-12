@@ -1,0 +1,151 @@
+{
+  "block_name": "vd_jig_boss_00001",
+  "title": "ブロック基礎設計_vd_jig_boss_00001",
+  "requirements_text": "地獄楽（jig）のボスブロック。UR対抗キャラ「がらんの画眉丸」（`chara_jig_00001`）に対抗するボスステージ。`c_jig_00601_vd_Boss_Green`（民谷 巌鉄斎）がボスとして砦付近に初期配置される。序盤はElapsedTimeで門神（`e_jig_00001_vd_Normal_Green`）と極楽蝶（`e_jig_00401_vd_Normal_Green`）が入り混じって出現し、拠点へのプレッシャーをかける。拠点HPが70%以下になると強化された極楽蝶が追加召喚される。さらに10体撃破でボスが活性化し、最終盤はFriendUnitDeadで無限補充に切り替わる設計。\n\nコマは1行構成（bossブロック固定）。コマアセットキー `jig_00002`、`koma1_back_ground_offset = -1.0`（jig系標準）。\n\n対抗キャラ「がらんの画眉丸」はGreen属性を得意とするため、敵はGreen単色で統一し、画眉丸のスキル効果（Green属性優遇）が最大限に活用できる設計とした。",
+  "basic_info": {
+    "id": "vd_jig_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "10行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "jig_00002",
+      "effect": "None",
+      "widths": "1.0"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_jig_00001_vd_Normal_Green",
+      "name": "門神",
+      "color": "Green（緑属性）",
+      "role": "Defense",
+      "hp": 3500,
+      "atk": 50,
+      "spd": 31,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_jig_00401_vd_Normal_Green",
+      "name": "極楽蝶",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 3000,
+      "atk": 100,
+      "spd": 32,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_jig_00601_vd_Boss_Green",
+      "name": "民谷 巌鉄斎",
+      "color": "Green（緑属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "ボス（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_jig_00601_vd_Boss_Green",
+      "name": "民谷 巌鉄斎",
+      "count": 1,
+      "notes": "砦付近（position=1.7）に開幕配置、Damage待機"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_jig_00001_vd_Normal_Green",
+      "name": "門神",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 1000,
+      "enemy_id": "e_jig_00401_vd_Normal_Green",
+      "name": "極楽蝶",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 2500,
+      "enemy_id": "e_jig_00001_vd_Normal_Green",
+      "name": "門神",
+      "count": 4,
+      "notes": ""
+    },
+    {
+      "num": 5,
+      "trigger": "ElapsedTime",
+      "value": 4000,
+      "enemy_id": "e_jig_00401_vd_Normal_Green",
+      "name": "極楽蝶",
+      "count": 4,
+      "notes": ""
+    },
+    {
+      "num": 6,
+      "trigger": "OutpostHpPercentage",
+      "value": 70,
+      "enemy_id": "e_jig_00401_vd_Normal_Green",
+      "name": "極楽蝶",
+      "count": 5,
+      "notes": "強化（hp_coef=2.0, atk_coef=1.5）、position=1.3"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_jig_00001_vd_Normal_Green",
+      "name": "門神",
+      "count": 5,
+      "notes": "強化（hp_coef=2.0, atk_coef=1.5）"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_jig_00401_vd_Normal_Green",
+      "name": "極楽蝶",
+      "count": 5,
+      "notes": "強化（hp_coef=2.0, atk_coef=1.5）、position=2.8"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 20,
+      "enemy_id": "e_jig_00001_vd_Normal_Green",
+      "name": "門神",
+      "count": 99,
+      "notes": "無限補充（interval=750ms）、強化（hp_coef=3.0, atk_coef=2.0）"
+    },
+    {
+      "num": 10,
+      "trigger": "FriendUnitDead",
+      "value": 20,
+      "enemy_id": "e_jig_00401_vd_Normal_Green",
+      "name": "極楽蝶",
+      "count": 99,
+      "notes": "無限補充（interval=1200ms）、強化（hp_coef=3.0, atk_coef=2.0）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

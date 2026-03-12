@@ -1,0 +1,114 @@
+{
+  "block_name": "vd_aya_boss_00001",
+  "title": "ブロック基礎設計_vd_aya_boss_00001",
+  "requirements_text": "開幕、ボス「花奏 すず」（`c_aya_00101_vd_Boss_Green`）が砦付近（position=1.7）に待機し、1ダメージを受けた瞬間に進軍を開始する。同時に雑魚「シロガネ」（`e_aya_00001_vd_Normal_Green`）がElapsedTime=250msで3体召喚されフィールドを埋める。その後シロガネはElapsedTime=1500ms・3000msで追加召喚（各3体）されテンポよく押し寄せる。プレイヤーが5体撃破した時点でシロガネ5体が一気に砦付近から押し寄せ（position=2.9）、10体撃破でボスと同属性の強化シロガネが3体追加される。15体撃破後はシロガネの無限補充（summon_count=99, interval=600ms）が開始し、拠点への継続的プレッシャーをかける。\n\nコマは1行構成（bossブロック固定）。パターン1（1コマ・幅1.0）で画面全幅を使い、アセットキー `aya_00002`、背景オフセット `-1.0` を設定する。\n\nUR対抗キャラは未選定（vd-character-list.md 記載なし）。シロガネがボスの護衛として複数フェーズで連続出現するデザインにより、ボスへの到達を妨げる堅牢な防衛ラインを形成している。",
+  "basic_info": {
+    "id": "vd_aya_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "7行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "aya_00002",
+      "effect": "None",
+      "widths": "1.0"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 10,
+      "spd": 50,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_aya_00101_vd_Boss_Green",
+      "name": "花奏 すず",
+      "color": "Green（緑属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "ボス"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_aya_00101_vd_Boss_Green",
+      "name": "花奏 すず（ボス）",
+      "count": 1,
+      "notes": "position=1.7（砦付近）に待機。Damage=1を受けるまで静止し、進軍開始"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 3,
+      "notes": "ランダム位置から通常召喚"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 3,
+      "notes": "interval=500ms"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 3000,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 3,
+      "notes": "interval=500ms"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 5,
+      "notes": "position=2.9（砦付近から押し込み）、interval=300ms"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 3,
+      "notes": "interval=400ms"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 99,
+      "notes": "interval=600ms（無限補充）。事実上ゲーム終了まで継続的な圧力"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

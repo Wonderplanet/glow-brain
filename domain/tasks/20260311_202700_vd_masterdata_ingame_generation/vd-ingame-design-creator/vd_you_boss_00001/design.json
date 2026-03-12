@@ -1,0 +1,134 @@
+{
+  "block_name": "vd_you_boss_00001",
+  "title": "ブロック基礎設計_vd_you_boss_00001",
+  "requirements_text": "ボス「ダグ」（c_you_00201_vd_Boss_Green・Technical・HP10,000・ATK500・SPD32）が開幕から砦付近（position=1.7）に配置され、1ダメージを受けた瞬間に進軍を開始する。ファントム（Colorless/Attack・HP5,000・ATK100）が250msに3体、不良系金髪イケメン（Green/Attack・HP1,000・ATK100）が1,500msに4体続いて押し寄せる。3体撃破でイケメンじゃない殺し屋（Green/Attack・HP1,000・ATK100・well_distance=0.4）が3体追加、8体撃破で不良系金髪イケメン4体が再投入され、4,000msにはイケメンじゃない殺し屋5体の大波が来る。拠点HPが50%以下になるとファントム3体が砦付近（position=2.8）から追い打ちをかける。合計ウェーブ数は23体（ボス1体込み）。\n\nコマは1行固定（bossブロック）。row1=2等分2コマ（0.5, 0.5）。コマアセット: you_00003（back_ground_offset: -1.0）。\n\nUR対抗キャラ「元殺し屋の新人教諭 リタ」（chara_you_00001）対抗。Green属性のイケメン系敵が主軸のため、Green属性対策コマ確保が重要。ボス「ダグ」は開幕から砦付近に立ちはだかり、雑魚をかいくぐりながら倒さなければならないプレッシャー設計。拠点が削られると後詰ファントムが登場し、守りを崩しにかかる。",
+  "basic_info": {
+    "id": "vd_you_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "7行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "you_00003",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_you_00201_vd_Boss_Green",
+      "name": "ダグ",
+      "color": "Green（緑属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 500,
+      "spd": 32,
+      "desc": "ボス"
+    },
+    {
+      "id": "e_you_00001_vd_Normal_Green",
+      "name": "不良系金髪イケメン",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 1000,
+      "atk": 100,
+      "spd": 37,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_you_00101_vd_Normal_Green",
+      "name": "イケメンじゃない殺し屋",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 1000,
+      "atk": 100,
+      "spd": 30,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（共通）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_you_00201_vd_Boss_Green",
+      "name": "ダグ",
+      "count": 1,
+      "notes": "pos=1.7 / move_start=Damage(1) / Boss"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_you_00001_vd_Normal_Green",
+      "name": "不良系金髪イケメン",
+      "count": 4,
+      "notes": "interval=300ms"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_you_00101_vd_Normal_Green",
+      "name": "イケメンじゃない殺し屋",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 8,
+      "enemy_id": "e_you_00001_vd_Normal_Green",
+      "name": "不良系金髪イケメン",
+      "count": 4,
+      "notes": ""
+    },
+    {
+      "num": 6,
+      "trigger": "ElapsedTime",
+      "value": 4000,
+      "enemy_id": "e_you_00101_vd_Normal_Green",
+      "name": "イケメンじゃない殺し屋",
+      "count": 5,
+      "notes": ""
+    },
+    {
+      "num": 7,
+      "trigger": "OutpostHpPercentage",
+      "value": 50,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "position=2.8"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "block_name": "vd_kim_boss_00001",
+  "title": "ブロック基礎設計_vd_kim_boss_00001",
+  "requirements_text": "ボスステージ。開幕からボス「溢れる母性 花園 羽々里」（c_kim_00001_vd_Boss_Red、HP 50,000）がInitialSummonで中央後方に出現し、プレイヤーを迎え撃つ。雑魚キャラは「花園 羽香里」（c_kim_00101、HP 10,000）が序盤、「院田 唐音」（c_kim_00201、HP 10,000）が中盤ElapsedTimeで登場し戦力を補充する。FriendUnitDead=3 で「好本 静」（c_kim_00301、HP 50,000）がボスオーラつきで1体参戦し、さらに FriendUnitDead=6 でc_kim_00101が再登場・追撃してくる。拠点HP80%以下になると c_kim_00101 が大量降臨し、拠点防衛プレッシャーを与える設計。UR対抗キャラ「溢れる母性 花園 羽々里」（chara_kim_00001）の防御・回復系スキルを意識したギミックとして、ボスは高HP・低速の Defense ロール設定とした。\n\nコマは1行・1コマのフルワイド構成（koma_asset_key: glo_00011）。bossブロックのためコマ1行固定。\n\nUR対抗「溢れる母性 花園 羽々里」の防御特性を逆手に取り、雑魚の波状攻撃で拠点への継続ダメージを演出する拠点防衛型ボスステージ。",
+  "basic_info": {
+    "id": "vd_kim_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "7行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "glo_00011",
+      "effect": "None",
+      "widths": "1.0"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_kim_00001_vd_Boss_Red",
+      "name": "溢れる母性 花園 羽々里",
+      "color": "Red（赤属性）",
+      "role": "Defense",
+      "hp": 50000,
+      "atk": 100,
+      "spd": 40,
+      "desc": "ボス（c_キャラ）"
+    },
+    {
+      "id": "c_kim_00101_vd_Normal_Red",
+      "name": "花園 羽香里",
+      "color": "Red（赤属性）",
+      "role": "Attack",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_kim_00201_vd_Normal_Red",
+      "name": "院田 唐音",
+      "color": "Red（赤属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_kim_00301_vd_Normal_Red",
+      "name": "好本 静",
+      "color": "Red（赤属性）",
+      "role": "Support",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 40,
+      "desc": "雑魚（準ボス）（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_kim_00001_vd_Boss_Red",
+      "name": "溢れる母性 花園 羽々里",
+      "count": 1,
+      "notes": "開幕即配置・pos=1.7・Bossオーラ"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 300,
+      "enemy_id": "c_kim_00101_vd_Normal_Red",
+      "name": "花園 羽香里",
+      "count": 1,
+      "notes": "序盤登場"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "c_kim_00101_vd_Normal_Red",
+      "name": "花園 羽香里",
+      "count": 2,
+      "notes": "序盤〜中盤・interval=200"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 2500,
+      "enemy_id": "c_kim_00201_vd_Normal_Red",
+      "name": "院田 唐音",
+      "count": 2,
+      "notes": "中盤登場・interval=300"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "c_kim_00301_vd_Normal_Red",
+      "name": "好本 静",
+      "count": 1,
+      "notes": "FriendUnitDead=3・Bossオーラつき"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "c_kim_00101_vd_Normal_Red",
+      "name": "花園 羽香里",
+      "count": 3,
+      "notes": "FriendUnitDead=6・追撃・interval=200"
+    },
+    {
+      "num": 7,
+      "trigger": "OutpostHpPercentage",
+      "value": 80,
+      "enemy_id": "c_kim_00101_vd_Normal_Red",
+      "name": "花園 羽香里",
+      "count": 5,
+      "notes": "拠点HP80%以下・interval=300・拠点防衛プレッシャー"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

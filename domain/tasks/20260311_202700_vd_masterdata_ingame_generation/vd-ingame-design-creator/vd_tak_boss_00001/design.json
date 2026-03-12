@@ -1,0 +1,114 @@
+{
+  "block_name": "vd_tak_boss_00001",
+  "title": "ブロック基礎設計_vd_tak_boss_00001",
+  "requirements_text": "UR対抗キャラ「ハッピー星からの使者 タコピー」（`c_tak_00001_vd_Boss_Blue`）がボスとして砦付近（position=1.7）に開幕即配置し、初ダメージを受けるまで待機状態を保つ。500ms後にファントム2体が前衛を形成し、1500ms後にさらにファントム2体が追加。累計3体撃破後はファントム3体と後方ファントム1体（pos=2.8）が同時展開する（elem=4,5 同タイミング）。5体撃破後にはファントム3体の援護波が来る。拠点に初ダメージ（OutpostHpPercentage=99）が入ると独立トリガーでファントム3体が駆けつける。タコピーを主役に据え、ファントムが断続的に押し寄せながらプレイヤーに圧をかける設計。\n\nコマは1行・2等分（パターン6、幅0.5/0.5）のシンプル構成。コマアセットキーは `glo_00004`（tak用アセット）、`koma1_back_ground_offset = 0.0`（仮値：tak用実績データなし）。ボス本体「ハッピー星からの使者 タコピー」（chara_tak_00001）が UR対抗として設定されており、同URキャラのコマ効果・スキルが戦闘上の対抗手段となる。",
+  "basic_info": {
+    "id": "vd_tak_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "7行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "glo_00004",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_tak_00001_vd_Boss_Blue",
+      "name": "ハッピー星からの使者 タコピー",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 300,
+      "spd": 25,
+      "desc": "ボス（c_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_tak_00001_vd_Boss_Blue",
+      "name": "ハッピー星からの使者 タコピー（ボス）",
+      "count": 1,
+      "notes": "pos=1.7 / aura=Boss / move_start=Damage(1)、初ダメージを受けるまで待機"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 50,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 2,
+      "notes": "500ms後、前衛2体"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 2,
+      "notes": "1500ms後、追加2体"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "累計3体撃破後、3体同時展開（elem=5と同タイミング）"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 1,
+      "notes": "累計3体撃破後、後方1体（pos=2.8）（elem=4と同タイミング）"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "累計5体撃破後、援護波3体"
+    },
+    {
+      "num": 7,
+      "trigger": "OutpostHpPercentage",
+      "value": 99,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "拠点初ダメージ時（独立トリガー）、3体"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "block_name": "vd_sur_boss_00001",
+  "title": "ブロック基礎設計_vd_sur_boss_00001",
+  "requirements_text": "ボス「無窮の鎖 和倉 優希」（c_sur_00801_vd_Boss_Red）が砦付近に配置された状態でステージが開幕する。雑魚の醜鬼（e_sur_00101_vd_Normal_Red）が序盤から中盤にかけて断続的に出現し、ボスを取り囲むような構成となる。ボスはダメージを受けるまで静止し、フレンドユニットが10体撃破された時点で追加の醜鬼が大量召喚されてプレッシャーが増す。終盤はアウトポストにダメージが入ると無限補充が始まる設計。UR対抗キャラ「万物を統べる総組長 山城 恋」（chara_sur_00901）に対しての対抗として、コマに攻撃力ダウンエフェクトを設置することで山城 恋の特性（高攻撃力）を活かしたプレイヤーへのプレッシャーを付与する。\n\nコマは1行構成（bossブロック固定）で、パターン2（2コマ: 幅0.6+0.4）を採用。コマアセットキーは `sur_00001`、背景オフセットは `-1.0`。",
+  "basic_info": {
+    "id": "vd_sur_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "sur_00001",
+      "effect": "AttackPowerDown",
+      "widths": "0.6 / 0.4"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_sur_00801_vd_Boss_Red",
+      "name": "無窮の鎖 和倉 優希",
+      "color": "Red（赤属性）",
+      "role": "Defense",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 32,
+      "desc": "ボス（c_キャラ）"
+    },
+    {
+      "id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "color": "Red（赤属性）",
+      "role": "Attack",
+      "hp": 400000,
+      "atk": 850,
+      "spd": 45,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_sur_00801_vd_Boss_Red",
+      "name": "無窮の鎖 和倉 優希（ボス）",
+      "count": 1,
+      "notes": "position=1.7 / Damage待機（move_start_condition_type=Damage, value=1）/ aura=Boss"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 3,
+      "notes": "interval=300"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 1000,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 2,
+      "notes": "interval=50"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 1800,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 3,
+      "notes": "interval=100"
+    },
+    {
+      "num": 5,
+      "trigger": "ElapsedTime",
+      "value": 3000,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 3,
+      "notes": "interval=100"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 5,
+      "notes": "position=2.7 / interval=300"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 5,
+      "notes": "interval=500"
+    },
+    {
+      "num": 8,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 99,
+      "notes": "interval=750 / 実質無限補充（終盤演出）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

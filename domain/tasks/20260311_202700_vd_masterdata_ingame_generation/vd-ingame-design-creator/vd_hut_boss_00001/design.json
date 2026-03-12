@@ -1,0 +1,134 @@
+{
+  "block_name": "vd_hut_boss_00001",
+  "title": "ブロック基礎設計_vd_hut_boss_00001",
+  "requirements_text": "ボスステージ。開幕 InitialSummon でボス「幸山 厘」（c_hut_00101_vd_Boss_Yellow、HP 10,000）が position=1.7 の後方に配置され、プレイヤーを迎え撃つ。雑魚は「ひたむきギタリスト 鳩野 ちひろ」（c_hut_00001、HP 10,000）が ElapsedTime=300ms で先行登場し、その後も ElapsedTime で「c_hut_00201」（HP 10,000）が中盤に出現して波を形成する。FriendUnitDead=3 で「c_hut_00301」（HP 10,000）がボスオーラつきで追加され、さらに FriendUnitDead=6 で「c_hut_00001」が追撃する。拠点 HP が 70% 以下になると「c_hut_00001」が大量降臨し、拠点防衛プレッシャーを一気に高める設計。UR対抗キャラ「ひたむきギタリスト 鳩野 ちひろ」（chara_hut_00001）の特性を逆手に取り、同キャラを雑魚として波状に送り込むことで、プレイヤーが自分のキャラの強さを実感できる設計とした。\n\nコマは 1 行・1 コマのフルワイド構成（koma_asset_key: glo_00014）。bossブロックのためコマ 1 行固定。\n\nUR対抗「ひたむきギタリスト 鳩野 ちひろ」の Technical 特性に対抗するギミックとして、ボスは高コンボ・高攻撃速度の Support ロール設定とし、雑魚を絶えず補充して盾役にしながらボスが後方から圧力をかける拠点防衛型ボスステージ。",
+  "basic_info": {
+    "id": "vd_hut_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "7行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "glo_00014",
+      "effect": "None",
+      "widths": "1.0"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_hut_00101_vd_Boss_Yellow",
+      "name": "幸山 厘",
+      "color": "Yellow（黄属性）",
+      "role": "Support",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "ボス"
+    },
+    {
+      "id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト 鳩野 ちひろ",
+      "color": "Yellow（黄属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "（hut_00201）",
+      "color": "Yellow（黄属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_hut_00301_vd_Normal_Yellow",
+      "name": "（hut_00301）",
+      "color": "Yellow（黄属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（準ボス）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_hut_00101_vd_Boss_Yellow",
+      "name": "幸山 厘",
+      "count": 1,
+      "notes": ""
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 300,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト 鳩野 ちひろ",
+      "count": 1,
+      "notes": ""
+    },
+    {
+      "num": 3,
+      "trigger": "FriendUnitDead",
+      "value": 2,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト 鳩野 ちひろ",
+      "count": 1,
+      "notes": "c_キャラ同時出現ルール適用: 元はElapsedTime=1500、2体目のためFriendUnitDead=2に変更"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 2500,
+      "enemy_id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "（hut_00201）",
+      "count": 1,
+      "notes": ""
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "c_hut_00301_vd_Normal_Yellow",
+      "name": "（hut_00301）",
+      "count": 1,
+      "notes": "ボスオーラつき"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト 鳩野 ちひろ",
+      "count": 1,
+      "notes": "c_キャラのためsummon_count=1に修正（元は3）"
+    },
+    {
+      "num": 7,
+      "trigger": "OutpostHpPercentage",
+      "value": 70,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト 鳩野 ちひろ",
+      "count": 1,
+      "notes": "c_キャラのためsummon_count=1に修正（元は5）。拠点70%以下で発動"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

@@ -1,0 +1,5 @@
+ENABLE,release_key,id,mst_enemy_character_id,character_unit_kind,role_type,color,sort_order,hp,damage_knock_back_count,move_speed,well_distance,attack_power,attack_combo_cycle,mst_unit_ability_id1,drop_battle_point,mstTransformationEnemyStageParameterId,transformationConditionType,transformationConditionValue
+e,202604010,e_gom_00501_vd_Normal_Yellow,enemy_gom_00501,Normal,Defense,Yellow,12,1000,,34,0.14,50,1,,200,,None,
+e,202604010,e_gom_00402_vd_Normal_Yellow,enemy_gom_00402,Normal,Attack,Yellow,20,1000,,34,0.11,50,1,,100,,None,
+e,202604010,e_gom_00701_vd_Normal_Yellow,enemy_gom_00701,Normal,Attack,Yellow,34,10000,,34,0.11,50,1,,100,,None,
+e,202604010,c_gom_00001_vd_Boss_Yellow,chara_gom_00001,Boss,Defense,Yellow,45,10000,1,25,0.16,50,6,,500,,None,

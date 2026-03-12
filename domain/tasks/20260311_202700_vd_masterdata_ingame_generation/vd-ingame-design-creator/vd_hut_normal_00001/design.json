@@ -1,0 +1,167 @@
+{
+  "block_name": "vd_hut_normal_00001",
+  "title": "ブロック基礎設計_vd_hut_normal_00001",
+  "requirements_text": "開幕から e_glo_00001（ファントム/Colorless）が 5 体ラッシュし、1500ms で c_hut_00201（藤井 彩目/Yellow）が 4 体追加される。7 体撃破で c_hut_00001（ひたむきギタリスト 鳩野 ちひろ/Yellow・Boss オーラ）が 1 体登場し、UR 対抗キャラとして UR「ひたむきギタリスト 鳩野 ちひろ」の対抗を意識した FriendUnitDead チェーンで c_hut_00301（内田 桃/Yellow）が続く。その後 FriendUnitDead=15 体で c_hut_00201 を 3 体まとめて追加し、終盤は 拠点ダメージ OutpostHpPercentage=80 で e_glo_00001 の 99 体無限補充に切り替わる。合計雑魚体数は最低 20 体以上となる設計。\n\nコマは 3 行構成。row=1 はアセットキー `glo_00014` で 2 コマ（各幅 0.5）、row=2 は同アセットキーで 3 コマ（幅 0.33/0.34/0.33）、row=3 は同アセットキーで 4 コマ均等（各幅 0.25）。back_ground_offset はいずれも -1.0。コマエフェクトはすべて None。\n\nUR 対抗キャラ「ひたむきギタリスト 鳩野 ちひろ」（chara_hut_00001）への対抗として、c_hut_00001 を FriendUnitDead で 1 体確実に召喚することで「倒すほど本気のちひろが来る」緊張感を演出する。",
+  "basic_info": {
+    "id": "vd_hut_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "glo_00014",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    },
+    {
+      "row": "行2",
+      "count": "3コマ",
+      "asset": "glo_00014",
+      "effect": "None",
+      "widths": "0.33 / 0.34 / 0.33"
+    },
+    {
+      "row": "行3",
+      "count": "4コマ",
+      "asset": "glo_00014",
+      "effect": "None",
+      "widths": "0.25 / 0.25 / 0.25 / 0.25"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト 鳩野 ちひろ",
+      "color": "Yellow（黄属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 0.21,
+      "desc": "強化雑魚（BossオーラつきNormal）/ UR対抗キャラ。FriendUnitDeadで登場"
+    },
+    {
+      "id": "c_hut_00101_vd_Boss_Yellow",
+      "name": "幸山 厘",
+      "color": "Yellow（黄属性）",
+      "role": "Support",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 0.42,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "藤井 彩目",
+      "color": "Yellow（黄属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 0.5,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "c_hut_00301_vd_Normal_Yellow",
+      "name": "内田 桃",
+      "color": "Yellow（黄属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 0.5,
+      "desc": "雑魚（c_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 0.22,
+      "desc": "雑魚（e_キャラ）/ 基本・終盤無限補充"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "累計5体 / ランダム"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "藤井 彩目",
+      "count": 4,
+      "notes": "累計9体 / ランダム"
+    },
+    {
+      "num": 3,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト 鳩野 ちひろ",
+      "count": 1,
+      "notes": "累計10体 / ランダム / Bossオーラ"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "c_hut_00301_vd_Normal_Yellow",
+      "name": "内田 桃",
+      "count": 1,
+      "notes": "c_キャラチェーン（elem=3のsequence_element_id=3参照）/ 累計11体 / ランダム"
+    },
+    {
+      "num": 5,
+      "trigger": "ElapsedTime",
+      "value": 3000,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 4,
+      "notes": "累計15体 / ランダム"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "累計20体 / ランダム"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "藤井 彩目",
+      "count": 3,
+      "notes": "累計23体 / ランダム / interval=500ms"
+    },
+    {
+      "num": 8,
+      "trigger": "OutpostHpPercentage",
+      "value": 80,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 99,
+      "notes": "無限補充 / ランダム / interval=750ms"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "block_name": "vd_tak_normal_00001",
+  "title": "ブロック基礎設計_vd_tak_normal_00001",
+  "requirements_text": "開幕からファントム（e_glo_00001_vd_Normal_Colorless）が複数波で押し寄せ、序中盤は ElapsedTime で定期的に計15体以上を補充する。倒し進めると FriendUnitDead=8 を契機にタコピー（c_tak_00001_vd_Boss_Blue）が1体目として登場し、続けて FriendUnitDead チェーンで2体目・3体目が順次現れる。c_tak は Boss オーラ付きで summon_count=1 の精密召喚とし、フィールドに同時に2体以上出現しないよう制御する。最終的に FriendUnitDead=20 でファントムの summon_count=99 無限補充が始まり、拠点への圧力が増し続ける。コマは3行構成でアセットキーは `glo_00004`（tak 用）を使用し、各行のコマ数はランダム独立抽選（1〜4コマ）で構成する。UR対抗キャラ「ハッピー星からの使者 タコピー」に対抗するステージとして、タコピー自身が敵として何度も立ちはだかる演出を設計している。",
+  "basic_info": {
+    "id": "vd_tak_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "glo_00004",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    },
+    {
+      "row": "行2",
+      "count": "3コマ",
+      "asset": "glo_00004",
+      "effect": "None",
+      "widths": "0.33 / 0.34 / 0.33"
+    },
+    {
+      "row": "行3",
+      "count": "4コマ",
+      "asset": "glo_00004",
+      "effect": "None",
+      "widths": "0.25 / 0.25 / 0.25 / 0.25"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_tak_00001_vd_Boss_Blue",
+      "name": "ハッピー星からの使者 タコピー",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 300,
+      "spd": 25,
+      "desc": "ボス（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "累計5体"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 2000,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "累計10体"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 4000,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "累計15体"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 6000,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "累計20体"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 8,
+      "enemy_id": "c_tak_00001_vd_Boss_Blue",
+      "name": "タコピー",
+      "count": 1,
+      "notes": "累計21体 / Bossオーラ"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "c_tak_00001_vd_Boss_Blue",
+      "name": "タコピー",
+      "count": 1,
+      "notes": "FriendUnitDead=5（elem=5撃破）, 累計22体 / Bossオーラ"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "c_tak_00001_vd_Boss_Blue",
+      "name": "タコピー",
+      "count": 1,
+      "notes": "FriendUnitDead=6（elem=6撃破）, 累計23体 / Bossオーラ"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 20,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 99,
+      "notes": "無限補充開始"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

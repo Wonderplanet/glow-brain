@@ -1,0 +1,3 @@
+ENABLE,release_key,id,mst_enemy_character_id,character_unit_kind,role_type,color,sort_order,hp,damage_knock_back_count,move_speed,well_distance,attack_power,attack_combo_cycle,mst_unit_ability_id1,drop_battle_point,mstTransformationEnemyStageParameterId,transformationConditionType,transformationConditionValue
+e,202604010,e_sur_00101_vd_Normal_Red,enemy_sur_00101,Normal,Attack,Red,904,400000,3,45,0.2,850,1,,10,,None,
+e,202604010,e_glo_00001_vd_Normal_Colorless,enemy_glo_00001,Normal,Attack,Colorless,1001,5000,3,34,0.22,100,1,,150,,None,

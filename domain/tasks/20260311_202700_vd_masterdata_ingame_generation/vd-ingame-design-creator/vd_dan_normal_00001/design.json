@@ -1,0 +1,146 @@
+{
+  "block_name": "vd_dan_normal_00001",
+  "title": "ブロック基礎設計_vd_dan_normal_00001",
+  "requirements_text": "セルポ星人（`e_dan_00001_vd_Normal_Red`）が開幕から中盤にかけて時間差で押し寄せ、一定数撃破すると招き猫 ターボババア（`c_dan_00301_vd_Boss_Red`）がBossオーラつきで登場する設計。セルポ星人は倒すほど追加補充が続き、最終的にはセルポ星人とターボババアが同時に無限補充される終盤ラッシュへと移行する。UR対抗キャラ「ターボババアの霊力 オカルン」（`chara_dan_00002`）を持つプレイヤーへの対抗として、Redカラーの敵が揃いオカルンのカラー相性ボーナスを意識した配置となっている。\n\nコマは3行構成で、各行独立したパターンでランダム抽選。行1はパターン8（3コマ：左広め0.50/0.25/0.25）、行2はパターン6（2コマ：均等0.50/0.50）、行3はパターン12（4コマ：4等分0.25/0.25/0.25/0.25）とした。コマアセットキーは `dan_00007`（背景オフセット 0.6）を使用。",
+  "basic_info": {
+    "id": "vd_dan_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "9行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "3コマ",
+      "asset": "dan_00007",
+      "effect": "None",
+      "widths": "0.5 / 0.25 / 0.25"
+    },
+    {
+      "row": "行2",
+      "count": "2コマ",
+      "asset": "dan_00007",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    },
+    {
+      "row": "行3",
+      "count": "4コマ",
+      "asset": "dan_00007",
+      "effect": "None",
+      "widths": "0.25 / 0.25 / 0.25 / 0.25"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "color": "Red（赤属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_dan_00301_vd_Boss_Red",
+      "name": "招き猫 ターボババア",
+      "color": "Red（赤属性）",
+      "role": "Attack",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "強化ボス（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 3,
+      "notes": "累計3体"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 1000,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 3,
+      "notes": "累計6体"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 2000,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 3,
+      "notes": "累計9体"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 3500,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 3,
+      "notes": "累計12体"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 3,
+      "notes": "+3体追加"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "c_dan_00301_vd_Boss_Red",
+      "name": "招き猫 ターボババア",
+      "count": 1,
+      "notes": "position=1.7 / Bossオーラ"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 3,
+      "notes": "同タイミング elem=6と並列"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 14,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 99,
+      "notes": "無限補充スタート"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 14,
+      "enemy_id": "c_dan_00301_vd_Boss_Red",
+      "name": "招き猫 ターボババア",
+      "count": 1,
+      "notes": "Bossオーラ / FriendUnitDead=14で elem=8と並列"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "block_name": "vd_gom_normal_00001",
+  "title": "ブロック基礎設計_vd_gom_normal_00001",
+  "requirements_text": "たこ焼き（e_gom_00501）・バタートースト（e_gom_00402）・ラーメン（e_gom_00701）の3種の食べ物キャラが交互に押し寄せる。序盤はたこ焼きとバタートーストの2種が ElapsedTime で出現し、6体撃破後にラーメンが増援として加わる。15体撃破時点で UR対抗キャラ「囚われの王女 姫様」（c_gom_00001）がボスオーラを纏って降臨し、以降は拠点ダメージが入ったタイミングでたこ焼き・バタートースト・ラーメンが無限補充に切り替わる。\n\nコマは3行構成。コマアセットキーは `gom_00003`、back_ground_offset は `0.6`。行ごとに異なるコマ数パターンを採用し、エフェクトはすべて `None`。\n\nUR対抗キャラ「囚われの王女 姫様」（`chara_gom_00001`）に対抗できるキャラが有利に働くよう、ボスには Defense/Yellow の高HP設計を採用している。",
+  "basic_info": {
+    "id": "vd_gom_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "10行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "gom_00003",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    },
+    {
+      "row": "行2",
+      "count": "3コマ",
+      "asset": "gom_00003",
+      "effect": "None",
+      "widths": "0.33 / 0.34 / 0.33"
+    },
+    {
+      "row": "行3",
+      "count": "2コマ",
+      "asset": "gom_00003",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_gom_00501_vd_Normal_Yellow",
+      "name": "たこ焼き",
+      "color": "Yellow（黄属性）",
+      "role": "Defense",
+      "hp": 1000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_gom_00402_vd_Normal_Yellow",
+      "name": "バタートースト",
+      "color": "Yellow（黄属性）",
+      "role": "Attack",
+      "hp": 1000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_gom_00701_vd_Normal_Yellow",
+      "name": "ラーメン",
+      "color": "Yellow（黄属性）",
+      "role": "Attack",
+      "hp": 10000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（強化版・e_キャラ）"
+    },
+    {
+      "id": "c_gom_00001_vd_Boss_Yellow",
+      "name": "囚われの王女 姫様",
+      "color": "Yellow（黄属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 50,
+      "spd": 25,
+      "desc": "ボス（c_キャラ・UR対抗キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_gom_00501_vd_Normal_Yellow",
+      "name": "たこ焼き",
+      "count": 3,
+      "notes": "interval=300"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_gom_00402_vd_Normal_Yellow",
+      "name": "バタートースト",
+      "count": 3,
+      "notes": "interval=50"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 3000,
+      "enemy_id": "e_gom_00501_vd_Normal_Yellow",
+      "name": "たこ焼き",
+      "count": 4,
+      "notes": "interval=300"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 4500,
+      "enemy_id": "e_gom_00402_vd_Normal_Yellow",
+      "name": "バタートースト",
+      "count": 3,
+      "notes": "interval=50"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "e_gom_00701_vd_Normal_Yellow",
+      "name": "ラーメン",
+      "count": 3,
+      "notes": "interval=500"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_gom_00501_vd_Normal_Yellow",
+      "name": "たこ焼き",
+      "count": 4,
+      "notes": "interval=300"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "c_gom_00001_vd_Boss_Yellow",
+      "name": "囚われの王女 姫様",
+      "count": 1,
+      "notes": "aura=Boss, summon_count必ず1"
+    },
+    {
+      "num": 8,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_gom_00501_vd_Normal_Yellow",
+      "name": "たこ焼き",
+      "count": 99,
+      "notes": "interval=500、終盤無限補充"
+    },
+    {
+      "num": 9,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_gom_00402_vd_Normal_Yellow",
+      "name": "バタートースト",
+      "count": 99,
+      "notes": "interval=750"
+    },
+    {
+      "num": 10,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_gom_00701_vd_Normal_Yellow",
+      "name": "ラーメン",
+      "count": 99,
+      "notes": "interval=1200"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

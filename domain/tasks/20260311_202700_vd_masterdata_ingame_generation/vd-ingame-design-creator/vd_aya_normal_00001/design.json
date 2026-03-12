@@ -1,0 +1,119 @@
+{
+  "block_name": "vd_aya_normal_00001",
+  "title": "ブロック基礎設計_vd_aya_normal_00001",
+  "requirements_text": "あやかしトライアングル（aya）のノーマルブロック。雑魚はシロガネ（`e_aya_00001_vd_Normal_Green`）を主力とし、序盤はElapsedTimeで定期召喚、中盤以降はFriendUnitDeadトリガーで段階的に増援を送り込む設計。7体倒されるとc_キャラ（花奏 すず `c_aya_00101_vd_Boss_Green`）がボスオーラ付きで初登場し、その後も2回の追加登場チェーンで緊張感を維持する。12体倒された段階でシロガネのsummon_count=99の無限補充に移行し、終盤プレッシャーを高める。合計雑魚体数は15体以上を確保している。\n\nコマは3行構成。row=1が2コマ（幅0.6/0.4）、row=2が3コマ（幅0.5/0.25/0.25）、row=3が1コマ（幅1.0）のバリエーションを持つ。コマアセットキーは `aya_00002`（back_ground_offset=-1.0）を使用。\n\nUR対抗キャラは未選定（vd-character-listに記載なし）のため、c_キャラを複数チェーンで登場させる演出でゲームプレイの面白みを演出している。",
+  "basic_info": {
+    "id": "vd_aya_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {"row": "行1", "count": "2コマ", "asset": "aya_00002", "effect": "None", "widths": "0.6 / 0.4"},
+    {"row": "行2", "count": "3コマ", "asset": "aya_00002", "effect": "None", "widths": "0.5 / 0.25 / 0.25"},
+    {"row": "行3", "count": "1コマ", "asset": "aya_00002", "effect": "None", "widths": "1.0"}
+  ],
+  "enemies": [
+    {
+      "id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 10,
+      "spd": 50,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_aya_00101_vd_Boss_Green",
+      "name": "花奏 すず",
+      "color": "Green（緑属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "ボス役（c_キャラ）。FriendUnitDeadチェーンで複数登場"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 3,
+      "notes": "開幕3体・序盤の圧力"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 4,
+      "notes": "累計7体"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 3000,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 3,
+      "notes": "累計10体"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 3,
+      "notes": "5体倒した後に追加増援3体"
+    },
+    {
+      "num": 5,
+      "trigger": "ElapsedTime",
+      "value": 5000,
+      "enemy_id": "c_aya_00101_vd_Boss_Green",
+      "name": "花奏 すず",
+      "count": 1,
+      "notes": "c_キャラ1体目・Bossオーラ付き初登場"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 14,
+      "enemy_id": "c_aya_00101_vd_Boss_Green",
+      "name": "花奏 すず",
+      "count": 1,
+      "notes": "c_キャラ2体目・elem5撃破後に登場"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "c_aya_00101_vd_Boss_Green",
+      "name": "花奏 すず",
+      "count": 1,
+      "notes": "c_キャラ3体目・elem6撃破後に登場"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 12,
+      "enemy_id": "e_aya_00001_vd_Normal_Green",
+      "name": "シロガネ",
+      "count": 99,
+      "notes": "12体倒した後に無限補充（summon_count=99, interval=600ms）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

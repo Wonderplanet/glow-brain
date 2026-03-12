@@ -1,0 +1,124 @@
+{
+  "block_name": "vd_chi_boss_00001",
+  "title": "ブロック基礎設計_vd_chi_boss_00001",
+  "requirements_text": "UR対抗キャラ「悪魔が恐れる悪魔 チェンソーマン」（`c_chi_00002_vd_Boss_Blue`、HP=400,000、ATK=450、Technical/Blue）がボスとして砦付近（position=1.7）に開幕即配置し、初ダメージを受けるまで待機状態を保つ。500ms後にゾンビ2体が前衛に登場し、2,000ms後にさらにゾンビ3体が追加される。4体撃破後はゾンビ4体とファントム1体（pos=2.8）が同時展開し、8体撃破後はゾンビ3体が追加投入される。拠点HPが80%を切ると独立トリガーでゾンビ3体が増援として登場する。ボス本体のHigh-ATK（450）とTechnicalロールに対抗するため、同URキャラのスキルやコマ効果が有効に機能する設計。\n\nコマは1行・2等分（パターン6、幅0.5/0.5）のシンプル構成。コマアセットキーは `glo_00016`（chiシリーズ共通）、`koma1_back_ground_offset = 0.0`（仮値・アセット担当者要確認）。ボス本体がチェンソーマン（`chara_chi_00002`）であるため、同URキャラへの対抗が直接的な戦略目標となる。",
+  "basic_info": {
+    "id": "vd_chi_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "7行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "glo_00016",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_chi_00002_vd_Boss_Blue",
+      "name": "悪魔が恐れる悪魔 チェンソーマン",
+      "color": "Blue（青属性）",
+      "role": "Technical",
+      "hp": 400000,
+      "atk": 450,
+      "spd": 50,
+      "desc": "ボス"
+    },
+    {
+      "id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 5000,
+      "atk": 320,
+      "spd": 35,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_chi_00002_vd_Boss_Blue",
+      "name": "チェンソーマン（ボス）",
+      "count": 1,
+      "notes": "pos=1.7 / aura=Boss / move_start=Damage(1)"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 50,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 2,
+      "notes": "interval=200ms"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 200,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 3,
+      "notes": "interval=300ms"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 4,
+      "notes": "interval=200ms"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 1,
+      "notes": "elem=4と同タイミング / pos=2.8"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 8,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 3,
+      "notes": "interval=300ms"
+    },
+    {
+      "num": 7,
+      "trigger": "OutpostHpPercentage",
+      "value": 80,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 3,
+      "notes": "独立トリガー / interval=200ms"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

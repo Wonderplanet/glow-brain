@@ -1,0 +1,133 @@
+{
+  "block_name": "vd_mag_boss_00001",
+  "title": "ブロック基礎設計_vd_mag_boss_00001",
+  "requirements_text": "UR対抗キャラ「絶対効率の体現者 土刃 メイ（chara_mag_00201）」を意識したボスブロック設計。開幕から「新人魔法少女 桜木 カナ（c_mag_00001_vd_Boss_Green）」がボスオーラ付きで砦付近に配置され、プレイヤーに即座にプレッシャーをかける。同時に冷却系怪異（e_mag_00001_vd_Normal_Green）が時間差で押し寄せ、序盤から手数が必要な構成にしている。フレンドユニットが一定数倒されるとつらら（e_mag_00101_vd_Normal_Green）が追加召喚され、ボスとの同時対処を強いる。さらに拠点への初ダメージを契機に両雑魚の大量補充が無限に続く設計。\n\nコマは1行構成（bossブロック固定）。パターン7（3等分）を採用して3コマで横幅を均等分割する。コマアセットキーは `mag_00004`（back_ground_offset: 0.6）を使用。\n\n「絶対効率の体現者 土刃 メイ」の攻撃力強化系コマ効果に対し、Greenカラーの強敵が多数出現することで、メイのコマ効果を活かしたプレイが求められる設計。ボスの二重設定として MstInGame.boss_mst_enemy_stage_parameter_id に `c_mag_00001_vd_Boss_Green` を設定し、InitialSummon でもボスを配置する。",
+  "basic_info": {
+    "id": "vd_mag_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "3コマ",
+      "asset": "mag_00004",
+      "effect": "None",
+      "widths": "0.33 / 0.34 / 0.33"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_mag_00001_vd_Boss_Green",
+      "name": "新人魔法少女 桜木 カナ",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 320000,
+      "atk": 1200,
+      "spd": 45,
+      "desc": "ボス（c_キャラ）"
+    },
+    {
+      "id": "e_mag_00001_vd_Normal_Green",
+      "name": "冷却系怪異",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 1000000,
+      "atk": 2500,
+      "spd": 35,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_mag_00101_vd_Normal_Green",
+      "name": "つらら",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 20000,
+      "atk": 400,
+      "spd": 100,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_mag_00001_vd_Boss_Green",
+      "name": "新人魔法少女 桜木 カナ",
+      "count": 1,
+      "notes": "累計1体（Bossオーラ・summon_position=1.7）"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_mag_00001_vd_Normal_Green",
+      "name": "冷却系怪異",
+      "count": 2,
+      "notes": "累計3体"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_mag_00001_vd_Normal_Green",
+      "name": "冷却系怪異",
+      "count": 2,
+      "notes": "累計5体"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_mag_00101_vd_Normal_Green",
+      "name": "つらら",
+      "count": 3,
+      "notes": "累計8体"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_mag_00001_vd_Normal_Green",
+      "name": "冷却系怪異",
+      "count": 2,
+      "notes": "累計10体"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "e_mag_00101_vd_Normal_Green",
+      "name": "つらら",
+      "count": 5,
+      "notes": "累計15体（interval=300ms）"
+    },
+    {
+      "num": 7,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_mag_00001_vd_Normal_Green",
+      "name": "冷却系怪異",
+      "count": 99,
+      "notes": "無限補充（interval=800ms）"
+    },
+    {
+      "num": 8,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_mag_00101_vd_Normal_Green",
+      "name": "つらら",
+      "count": 99,
+      "notes": "無限補充（interval=400ms）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

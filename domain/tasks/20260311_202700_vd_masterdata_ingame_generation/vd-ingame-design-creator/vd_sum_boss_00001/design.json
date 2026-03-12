@@ -1,0 +1,133 @@
+{
+  "block_name": "vd_sum_boss_00001",
+  "title": "ブロック基礎設計_vd_sum_boss_00001",
+  "requirements_text": "ボス「網代 慎平」（`c_sum_00001_vd_Boss_Red`：Red/Technical・HP245,000）が開幕 `InitialSummon` で砦付近（position=1.7）に即座に配置され、プレイヤーを出迎える設計。雑魚は影（`e_sum_00001_vd_Normal_Red`：Red/Defense・HP350,000）とファントム（`e_glo_00001_vd_Normal_Colorless`：Colorless/Attack・HP5,000）で構成される。ElapsedTime 250ms でファントム3体が先行登場し、1,500ms から影が段階的に押し寄せる。ファントムや影を倒すほど `FriendUnitDead` トリガーで追加の影が登場し、拠点HP50%以下になると `OutpostHpPercentage=50` で網代 慎平が再度覚醒登場するプレッシャー設計。ボスは `MstInGame.boss_mst_enemy_stage_parameter_id` と `InitialSummon` の両方で設定する。\n\nコマは1行固定（Bossブロック固定）。row1=パターン9（中央広い3コマ：0.25/0.50/0.25）。コマアセット: `sum_00001`（back_ground_offset: 0.6）。\n\nUR対抗キャラ「影のウシオ 小舟 潮」（`chara_sum_00101`）への対抗として、Red属性の影と網代 慎平が主軸となり、Red属性対策コマを活かした攻略を求める設計。開幕ボス即配置 + 拠点防衛プレッシャーにより、UR潮の強力な攻撃・変身ギミックを機能させる前に決断を迫る難度設計となっている。",
+  "basic_info": {
+    "id": "vd_sum_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "3コマ",
+      "asset": "sum_00001",
+      "effect": "None",
+      "widths": "0.25 / 0.5 / 0.25"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_sum_00001_vd_Boss_Red",
+      "name": "網代 慎平",
+      "color": "Red（赤属性）",
+      "role": "Technical",
+      "hp": 245000,
+      "atk": 500,
+      "spd": 45,
+      "desc": "ボス（c_キャラ）"
+    },
+    {
+      "id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "color": "Red（赤属性）",
+      "role": "Defense",
+      "hp": 350000,
+      "atk": 600,
+      "spd": 40,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ・共通）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 1,
+      "enemy_id": "c_sum_00001_vd_Boss_Red",
+      "name": "網代 慎平",
+      "count": 1,
+      "notes": "position=1.7 / Bossオーラ / MstInGame.boss_mst_enemy_stage_parameter_idも設定"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "Default"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 3,
+      "notes": "interval=500 / Default"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 3000,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 3,
+      "notes": "interval=500 / Default"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 3,
+      "notes": "interval=500 / Default"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 3,
+      "notes": "interval=500 / Default"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_sum_00001_vd_Normal_Red",
+      "name": "影",
+      "count": 3,
+      "notes": "interval=500 / Default"
+    },
+    {
+      "num": 8,
+      "trigger": "OutpostHpPercentage",
+      "value": 50,
+      "enemy_id": "c_sum_00001_vd_Boss_Red",
+      "name": "網代 慎平",
+      "count": 1,
+      "notes": "Bossオーラ / 拠点HP50%以下で覚醒再登場"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}
