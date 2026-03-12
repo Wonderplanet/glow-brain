@@ -1,0 +1,194 @@
+{
+  "block_name": "vd_osh_normal_00001",
+  "title": "ブロック基礎設計_vd_osh_normal_00001",
+  "requirements_text": "開幕 ElapsedTime=250ms でファントムが3体出現し、コマ0・コマ1・コマ2 到達ごとにファントムが伏兵として2〜3体追加される。ElapsedTime=2500ms で黒川あかね（`c_osh_00501`・HP低め）が最初のc_キャラとして登場し、以降は6体・10体・15体倒すたびに星野ルビー→MEMちょ→有馬かなが1体ずつ Bossオーラ付きで順番に登場する。16体全員倒した後はファントムが無限補充に切り替わってステージが継続する。\n\nElapsedTime / EnterTargetKomaIndex / FriendUnitDead の3種のトリガーを組み合わせることで、時間・コマ進行・倒した数の3軸からプレッシャーを与える構成。コマを進めるほど伏兵が増え、倒すほど強いキャラが次々と登場するスパイラル構造。\n\nコマは3行構成。row1 はパターン6（2コマ均等 0.5/0.5）、row2 はパターン9（3コマ 中央広め 0.25/0.5/0.25）、row3 はパターン12（4コマ均等 0.25×4）で、コマ数が行ごとに増える段階的なレイアウト。コマアセットキーは `osh_00001`（back_ground_offset = -1.0）。\n\nUR対抗キャラ「B小町不動のセンター アイ（`chara_osh_00001`）」のGreen属性コマ効果・オーラを最大限に活かして、コマ伏兵を素早く処理しながらB小町メンバーを撃破する立ち回りを要求する設計。",
+  "basic_info": {
+    "id": "vd_osh_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "11行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "osh_00001",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    },
+    {
+      "row": "行2",
+      "count": "3コマ",
+      "asset": "osh_00001",
+      "effect": "None",
+      "widths": "0.25 / 0.5 / 0.25"
+    },
+    {
+      "row": "行3",
+      "count": "4コマ",
+      "asset": "osh_00001",
+      "effect": "None",
+      "widths": "0.25 / 0.25 / 0.25 / 0.25"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_osh_00501_vd_Normal_Green",
+      "name": "黒川 あかね",
+      "color": "Green（緑属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "c_キャラ（Bossオーラ）1体目"
+    },
+    {
+      "id": "c_osh_00201_vd_Normal_Green",
+      "name": "星野 ルビー",
+      "color": "Green（緑属性）",
+      "role": "Attack",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "c_キャラ（Bossオーラ）2体目"
+    },
+    {
+      "id": "c_osh_00301_vd_Normal_Green",
+      "name": "MEMちょ",
+      "color": "Green（緑属性）",
+      "role": "Support",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "c_キャラ（Bossオーラ）3体目"
+    },
+    {
+      "id": "c_osh_00401_vd_Normal_Green",
+      "name": "有馬 かな",
+      "color": "Green（緑属性）",
+      "role": "Technical",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 32,
+      "desc": "c_キャラ（Bossオーラ）4体目"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "開幕ウェーブ"
+    },
+    {
+      "num": 2,
+      "trigger": "EnterTargetKomaIndex",
+      "value": 0,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 2,
+      "notes": "コマ0伏兵"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 2500,
+      "enemy_id": "c_osh_00501_vd_Normal_Green",
+      "name": "黒川 あかね",
+      "count": 1,
+      "notes": "黒川あかね（1体目c_）"
+    },
+    {
+      "num": 4,
+      "trigger": "EnterTargetKomaIndex",
+      "value": 1,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "コマ1伏兵"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "c_osh_00201_vd_Normal_Green",
+      "name": "星野 ルビー",
+      "count": 1,
+      "notes": "星野ルビー（2体目c_）elem1+2+3全滅後"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 2,
+      "notes": "補充（elem5と同タイミング）"
+    },
+    {
+      "num": 7,
+      "trigger": "EnterTargetKomaIndex",
+      "value": 2,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "コマ2伏兵"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "c_osh_00301_vd_Normal_Green",
+      "name": "MEMちょ",
+      "count": 1,
+      "notes": "MEMちょ（3体目c_）"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "補充（elem8と同タイミング）"
+    },
+    {
+      "num": 10,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "c_osh_00401_vd_Normal_Green",
+      "name": "有馬 かな",
+      "count": 1,
+      "notes": "有馬かな（4体目c_）"
+    },
+    {
+      "num": 11,
+      "trigger": "FriendUnitDead",
+      "value": 15,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 99,
+      "notes": "終盤無限補充（elem10と同タイミング）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}
