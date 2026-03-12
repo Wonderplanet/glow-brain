@@ -3,6 +3,10 @@
 過去の本番データから「合計召喚数15体以上・単一グループ」の実例を抜粋。
 設計書作成時の条件値・構成の参考として使用してください。
 
+- [パターン A: e_キャラのみ出現](#パターン-a-e_キャラのみ出現)（A-1〜A-5）
+- [パターン B: c_キャラも出現](#パターン-b-c_キャラも出現)（B-1〜B-5）
+- [パターン N: Normalクエスト normal難易度](#パターン-n-normalクエスト-normal難易度)（N-1〜N-5）
+
 > **読み方**: 各テーブルは `sequence_element_id` 昇順。同じ elem_id の行は同タイミングで発火（位置・キャラ違いの並列召喚）。
 
 ---
@@ -364,6 +368,167 @@
 
 ---
 
+---
+
+## パターン N: Normalクエスト normal難易度
+
+### N-1. normal_mag_00005
+**合計召喚数**: 432体（summon=99×4含む）/ **要素数**: 14行 / **c_キャラ**: なし
+**特徴**: ElapsedTime で序盤を進め、FriendUnitDead=13体で Boss ユニット登場。14体で3色99無限補充を一斉スタート。OutpostDamage=1 もバックアップとして追加。
+
+| elem | condition_type | condition_value | action_value | count | interval | position | aura |
+|------|---------------|----------------|--------------|-------|----------|----------|------|
+| 1 | ElapsedTime | 150 | e_mag_00301_general_Normal_Colorless | 2 | 50 | - | Default |
+| 2 | ElapsedTime | 1000 | e_mag_00301_general_Normal_Colorless | 1 | 0 | - | Default |
+| 3 | ElapsedTime | 1050 | e_mag_00301_general_Normal_Colorless | 1 | 0 | - | Default |
+| 8 | ElapsedTime | 2000 | e_mag_00301_general_Normal_Colorless | 1 | 0 | - | Default |
+| 13 | ElapsedTime | 3000 | e_mag_00301_general_Normal_Red | 1 | 0 | - | Default |
+| 14 | FriendUnitDead | 13 | e_mag_00201_general_**Boss**_Red | 1 | 0 | - | Default |
+| 15 | FriendUnitDead | 13 | e_mag_00301_general_Normal_Colorless | 1 | 0 | 2.8 | Default |
+| 16 | FriendUnitDead | 13 | e_mag_00301_general_Normal_Colorless | 1 | 0 | 2.9 | Default |
+| 17 | FriendUnitDead | 15 | e_mag_00301_general_Normal_Blue | 10 | 500 | 2.9 | Default |
+| 18 | FriendUnitDead | 16 | e_mag_00301_general_Normal_Red | 5 | 750 | 2.9 | Default |
+| 19 | FriendUnitDead | 14 | e_mag_00301_general_Normal_Colorless | **99** | 500 | - | Default |
+| 20 | FriendUnitDead | 14 | e_mag_00301_general_Normal_Blue | **99** | 750 | - | Default |
+| 21 | FriendUnitDead | 14 | e_mag_00301_general_Normal_Red | **99** | 1200 | - | Default |
+| 22 | OutpostDamage | 1 | e_mag_00301_general_Normal_Red | **99** | 750 | - | Default |
+
+**設計のポイント**:
+- `FriendUnitDead=13` で Bossユニット登場＋位置指定2体配置（elem 14/15/16 同タイミング）
+- `FriendUnitDead=14` で3色99無限補充を一斉スタート（間隔500/750/1200ms でずらして密度を演出）
+- `OutpostDamage=1` を独立したバックアップとして追加（elem 22）
+
+---
+
+### N-2. normal_sur_00003
+**合計召喚数**: 275体（summon=99×2含む）/ **要素数**: 19行 / **c_キャラ**: なし
+**特徴**: ElapsedTime と FriendUnitDead を交互に組み合わせ、後半は time=2500〜5700ms の幅広い時間帯に大量召喚。OutpostDamage=1 で2本の99無限補充。
+
+| elem | condition_type | condition_value | action_value | count | interval | position | aura |
+|------|---------------|----------------|--------------|-------|----------|----------|------|
+| 1 | ElapsedTime | 150 | e_sur_00101_general_Normal_Blue | 3 | 300 | - | Default |
+| 2 | ElapsedTime | 1000 | e_sur_00101_general_Normal_Blue | 2 | 50 | - | Default |
+| 3 | ElapsedTime | 1500 | e_sur_00101_general_Normal_Blue | 3 | 50 | - | Default |
+| 4 | FriendUnitDead | 3 | e_sur_00101_general_Normal_Colorless | 2 | 50 | - | Default |
+| 5 | FriendUnitDead | 3 | e_sur_00101_general_Normal_Blue | 1 | 0 | - | Default |
+| 6 | ElapsedTime | 2800 | e_sur_00101_general_Normal_Colorless | 1 | 0 | - | Default |
+| 7 | ElapsedTime | 2700 | e_sur_00101_general_Normal_Blue | 1 | 0 | - | Default |
+| 8 | FriendUnitDead | 6 | e_sur_00101_general_Normal_Colorless | 3 | 100 | - | Default |
+| 9 | FriendUnitDead | 7 | e_sur_00101_general_Normal_Blue | 3 | 100 | - | Default |
+| 10 | ElapsedTime | 3200 | e_sur_00101_general_Normal_Colorless | 3 | 100 | 1.3 | Default |
+| 11 | ElapsedTime | 3600 | e_sur_00101_general_Normal_Blue | 10 | 500 | - | Default |
+| 12 | ElapsedTime | 3000 | e_sur_00101_general_Normal_Green | 10 | 600 | - | Default |
+| 13 | ElapsedTime | 4500 | e_sur_00101_general_Normal_Colorless | 3 | 100 | 1.3 | Default |
+| 14 | ElapsedTime | 4000 | e_sur_00101_general_Normal_Green | 10 | 800 | - | Default |
+| 15 | ElapsedTime | 5500 | e_sur_00101_general_Normal_Green | 10 | 1200 | - | Default |
+| 16 | ElapsedTime | 2500 | e_sur_00101_general_Normal_Green | 10 | 1200 | - | Default |
+| 17 | ElapsedTime | 5700 | e_sur_00101_general_Normal_Blue | 2 | 50 | 1.3 | Default |
+| 18 | OutpostDamage | 1 | e_sur_00101_general_Normal_Green | **99** | 750 | - | Default |
+| 19 | OutpostDamage | 1 | e_sur_00101_general_Normal_Green | **99** | 1200 | - | Default |
+
+**設計のポイント**:
+- 2500〜5700ms の広い時間帯に count=10 の集中ウェーブを複数配置（elem 11/12/13/14/15/16）
+- `FriendUnitDead` は3/6/7体と低め設定で序中盤に色変え追加
+- `OutpostDamage=1` で2本の99補充（750ms/1200ms でずらして間隔に変化）
+
+---
+
+### N-3. normal_osh_00002
+**合計召喚数**: 41体 / **要素数**: 19行 / **c_キャラ**: 1行（EnterTargetKomaIndex）
+**特徴**: `InitialSummon=0` で9体を全て位置指定して開幕盤面を構築。コマ0到達で c_osh がボスとして登場。その後は FriendUnitDead 1体ごとに位置指定で追加。
+
+| elem | condition_type | condition_value | action_value | count | interval | position | aura |
+|------|---------------|----------------|--------------|-------|----------|----------|------|
+| 1 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Colorless | 1 | 0 | 0.5 | Default |
+| 2 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Colorless | 1 | 0 | 0.8 | Default |
+| 3 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 1.2 | Default |
+| 4 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 1.3 | Default |
+| 5 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 1.7 | Default |
+| 6 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 1.8 | Default |
+| 7 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 2.1 | Default |
+| 8 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 2.3 | Default |
+| 9 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 2.7 | Default |
+| 10 | EnterTargetKomaIndex | 0 | **c_osh_00001_general_osh_n_Boss_Colorless** | 1 | 0 | 1.5 | Default |
+| 11 | FriendUnitDead | 1 | e_glo_00002_general_osh_n_Normal_Colorless | 5 | 500 | - | Default |
+| 12 | FriendUnitDead | 2 | e_glo_00002_general_osh_n_Normal_Colorless | 3 | 250 | - | Default |
+| 13 | FriendUnitDead | 3 | e_glo_00002_general_osh_n_Normal_Green | 5 | 500 | - | Default |
+| 14 | FriendUnitDead | 4 | e_glo_00002_general_osh_n_Normal_Green | 3 | 250 | - | Default |
+| 15 | FriendUnitDead | 5 | e_glo_00002_general_osh_n_Normal_Green | 3 | 250 | 1.7 | Default |
+| 16 | FriendUnitDead | 6 | e_glo_00002_general_osh_n_Normal_Green | 3 | 250 | 1.8 | Default |
+| 17 | FriendUnitDead | 7 | e_glo_00002_general_osh_n_Normal_Colorless | 3 | 250 | 2.1 | Default |
+| 18 | FriendUnitDead | 8 | e_glo_00002_general_osh_n_Normal_Colorless | 3 | 250 | 2.3 | Default |
+| 19 | FriendUnitDead | 9 | e_glo_00002_general_osh_n_Normal_Colorless | 3 | 250 | 2.7 | Default |
+
+**設計のポイント**:
+- `InitialSummon=0` で9行・9つの異なる position を指定 → 盤面を隙間なく埋める開幕演出
+- `EnterTargetKomaIndex=0` （コマ0＝最初のコマ）到達で c_キャラがボスとして出迎える
+- `FriendUnitDead` は 1/2/3/4/5/6/7/8/9 体と毎体ごとに追加（初期配置を倒しながら補充される構造）
+- `FriendUnitDead` の position が InitialSummon の配置位置と対応（補充先が同じ場所）
+
+---
+
+### N-4. normal_osh_00003
+**合計召喚数**: 69体（count=15×2含む）/ **要素数**: 16行 / **c_キャラ**: 2行
+**特徴**: ElapsedTime=250ms で c_キャラが即登場。`EnterTargetKomaIndex` でコマ進行ごとに伏兵配置。`FriendUnitDead=9` で15体の大波を一度に出す。
+
+| elem | condition_type | condition_value | action_value | count | interval | position | aura | delay |
+|------|---------------|----------------|--------------|-------|----------|----------|------|-------|
+| 1 | ElapsedTime | 250 | **c_osh_00001_general_osh_n_Boss_Green** | 1 | 0 | - | Default | - |
+| 2 | EnterTargetKomaIndex | 0 | e_glo_00001_general_osh_n_Normal_Green | 2 | 100 | 1.1 | Default | 100 |
+| 3 | EnterTargetKomaIndex | 1 | e_glo_00001_general_osh_n_Normal_Green | 3 | 150 | 1.5 | Default | - |
+| 4 | EnterTargetKomaIndex | 2 | e_glo_00001_general_osh_n_Normal_Green | 2 | 250 | 3.3 | Default | - |
+| 5 | EnterTargetKomaIndex | 3 | e_glo_00001_general_osh_n_Normal_Green | 3 | 50 | 3.5 | Default | - |
+| 6 | EnterTargetKomaIndex | 4 | e_glo_00001_general_osh_n_Normal_Green | 3 | 500 | 3.7 | Default | - |
+| 7 | EnterTargetKomaIndex | 5 | e_glo_00001_general_osh_n_Normal_Green | 5 | 150 | - | Default | - |
+| 8 | EnterTargetKomaIndex | 5 | e_glo_00001_general_osh_n_Normal_Green | 3 | 50 | 0.8 | Default | - |
+| 9 | FriendUnitDead | 1 | **c_osh_00001_general_osh_n_Normal_Colorless** | 1 | 0 | - | Default | 4500 |
+| 10 | FriendUnitDead | 9 | e_glo_00001_general_osh_n_Normal_Green | **15** | 50 | 0.3 | Default | 50 |
+| 11 | FriendUnitDead | 1 | e_glo_00001_general_osh_n_Normal_Green | 4 | 250 | - | Default | 500 |
+| 12 | FriendUnitDead | 1 | e_glo_00001_general_osh_n_Normal_Green | 4 | 50 | - | Default | - |
+| 13 | FriendUnitDead | 1 | e_glo_00001_general_osh_n_Normal_Green | 2 | 100 | 2.8 | Default | - |
+| 14 | FriendUnitDead | 1 | e_glo_00001_general_osh_n_Normal_Green | 3 | 50 | - | Default | 2000 |
+| 15 | FriendUnitDead | 9 | e_glo_00001_general_osh_n_Normal_Green | **15** | 50 | - | Default | 50 |
+| 16 | ElapsedTime | 4000 | e_glo_00001_general_osh_n_Normal_Green | 3 | 500 | - | Default | - |
+
+**設計のポイント**:
+- `EnterTargetKomaIndex=0〜5` でコマ進行に合わせた伏兵を順次配置（コマ0〜5全てに設定）
+- `FriendUnitDead=1` の同タイミングに4行 → 1体倒れると計13体が一度に追加（delay=0/500/2000ms でずらし）
+- `FriendUnitDead=9` で count=15 の大波が position 違いで2本（elem 10/15）
+- c_キャラの2体目（elem 9）は `action_delay=4500ms` と長めの遅延で「間を置いてから再登場」演出
+
+---
+
+### N-5. normal_rik_00002
+**合計召喚数**: 415体（summon=99×4含む）/ **要素数**: 16行 / **c_キャラ**: 16/16行（全て c_キャラ）
+**特徴**: 全要素が `c_rik_00001` で構成、全て Bossオーラ付き。ElapsedTime で定期召喚 → FriendUnitDead でも追加 → 後半は ElapsedTime=5000〜5500ms と OutpostDamage=1 で 99×4本が同時稼働。
+
+| elem | condition_type | condition_value | action_value | count | interval | position | aura |
+|------|---------------|----------------|--------------|-------|----------|----------|------|
+| 1 | ElapsedTime | 200 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | - | **Boss** |
+| 2 | ElapsedTime | 800 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | - | Boss |
+| 3 | ElapsedTime | 1400 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | - | Boss |
+| 4 | FriendUnitDead | 2 | **c_rik_00001_general_Normal_Colorless** | 2 | 50 | - | Boss |
+| 5 | ElapsedTime | 1700 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | - | Boss |
+| 6 | FriendUnitDead | 5 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | - | Boss |
+| 7 | FriendUnitDead | 5 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | 2.9 | Boss |
+| 8 | FriendUnitDead | 5 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | 2.8 | Boss |
+| 9 | FriendUnitDead | 6 | **c_rik_00001_general_Boss_Red** | 1 | 0 | - | Boss |
+| 10 | FriendUnitDead | 9 | **c_rik_00001_general_Normal_Colorless** | 3 | 25 | 2.84 | Boss |
+| 11 | FriendUnitDead | 9 | **c_rik_00001_general_Normal_Colorless** | 3 | 50 | 2.86 | Boss |
+| 12 | FriendUnitDead | 9 | **c_rik_00001_general_Normal_Colorless** | 3 | 75 | 2.88 | Boss |
+| 13 | ElapsedTime | 5000 | **c_rik_00001_general_Normal_Colorless** | **99** | 1000 | 2.88 | Boss |
+| 14 | ElapsedTime | 5500 | **c_rik_00001_general_Normal_Colorless** | **99** | 1000 | 2.9 | Boss |
+| 15 | OutpostDamage | 1 | **c_rik_00001_general_Normal_Colorless** | **99** | 750 | - | Boss |
+| 16 | OutpostDamage | 1 | **c_rik_00001_general_Normal_Colorless** | **99** | 750 | - | Boss |
+
+**設計のポイント**:
+- 全要素が同一の c_キャラで Bossオーラ付き → 「主人公が大量に押し寄せる」という世界観演出
+- `FriendUnitDead=9` で 3体×3行・position 2.84/2.86/2.88 の微差配置（密集ウェーブ）
+- `FriendUnitDead=5` で3行同タイミング（位置なし/2.9/2.8 の3パターン同時）
+- 終盤は ElapsedTime(5000ms/5500ms) と OutpostDamage(=1) の計4本が99補充として同時稼働
+
+---
+
 ## まとめ：設計ポイント早見表
 
 | パターン | 合計体数 | c_キャラ | 主なトリガー | 特徴キーワード |
@@ -378,3 +543,8 @@
 | B-3 veryhard_glo3_00002 | 231 | 17% | ElapsedTime+FriendUnitDead+OutpostHpPercentage | 5体でc_キャラ+99×2同時展開 |
 | B-4 veryhard_glo4_00001 | 141 | 17% | ElapsedTime+FriendUnitDead+OutpostDamage | c_キャラが序盤と終盤の2段階登場 |
 | B-5 veryhard_glo1_00002 | 55 | 17% | InitialSummon+ElapsedTime+FriendUnitDead+OutpostHpPercentage | 4作品クロスオーバー、全トリガー混在 |
+| N-1 normal_mag_00005 | 432 | なし | ElapsedTime+FriendUnitDead+OutpostDamage | 14体で3色99×3一斉スタート |
+| N-2 normal_sur_00003 | 275 | なし | ElapsedTime+FriendUnitDead+OutpostDamage | 2500〜5700msに10体×複数波 |
+| N-3 normal_osh_00002 | 41 | 5% | InitialSummon+EnterTargetKomaIndex+FriendUnitDead | 9体位置指定開幕、1体ごと補充 |
+| N-4 normal_osh_00003 | 69 | 13% | ElapsedTime+EnterTargetKomaIndex+FriendUnitDead | コマ0〜5全連動、9体で15体大波 |
+| N-5 normal_rik_00002 | 415 | 100% | ElapsedTime+FriendUnitDead+OutpostDamage | 全c_キャラ全Bossオーラ、99×4本同時 |
