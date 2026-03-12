@@ -142,8 +142,9 @@ INSERT INTO mst_auto_player_sequences (id, sequence_set_id, sequence_element_id,
 VALUES (...);
 
 -- MstInGame
+-- ※ mst_auto_player_sequence_id はレガシーカラム（実装未使用）のため必ず空文字を設定する
 INSERT INTO mst_in_games (id, mst_auto_player_sequence_id, mst_auto_player_sequence_set_id, bgm_asset_key, mst_page_id, mst_enemy_outpost_id, boss_mst_enemy_stage_parameter_id, boss_count, normal_enemy_hp_coef, normal_enemy_attack_coef, normal_enemy_speed_coef, boss_enemy_hp_coef, boss_enemy_attack_coef, boss_enemy_speed_coef, release_key, ...)
-VALUES (...);
+VALUES ('{ブロックID}', '', '{シーケンスセットID}', ...);
 
 -- MstInGameI18n（result_tips/descriptionがある場合のみ）
 -- INSERT INTO mst_in_games_i18n (id, mst_in_game_id, language, result_tips, description)
@@ -230,6 +231,9 @@ MstEnemyStageParameter ID をカンマ区切りで指定する。
 9. **VD では SwitchSequenceGroup 禁止**: `action_type` に `SwitchSequenceGroup` は使わない
 10. **normalブロックの MstKomaLine は 3行固定**: row=1,2,3 の3エントリを生成する
 11. **c_キャラ同時出現チェック**: INSERT 前に以下を両方確認する。① `c_` プレフィックスの action_value を持つ行が `ElapsedTime` 条件で2件以上ある場合は2体目以降を `FriendUnitDead`（前の c_キャラの sequence_element_id を condition_value に指定）に修正する。② c_キャラのすべてのエントリの `summon_count` が `1` であることを確認する（2以上だと同時に複数体出現してしまうため）
+12. **mst_auto_player_sequence_id は常に空文字**: レガシーカラム（実装未使用）のため、全パターンで `mst_auto_player_sequence_id = ''` を設定する。値を入れると `export_csv.py` の検証でエラーになる
+13. **FriendUnitDead/FriendUnitSummoned/SequenceElementActivated の condition_value は同一シーケンスセット内の sequence_element_id を参照**: 存在しない sequence_element_id を condition_value に指定しないこと。`export_csv.py` の検証でエラーになる
+14. **TransformGimmickObjectToEnemy の action_value2 は同一グループ内の SummonGimmickObject の sequence_element_id を参照**: 同じ sequence_set_id かつ同じ sequence_group_id 内で action_type=SummonGimmickObject の行が存在しない場合はエラーになる
 
 ---
 
