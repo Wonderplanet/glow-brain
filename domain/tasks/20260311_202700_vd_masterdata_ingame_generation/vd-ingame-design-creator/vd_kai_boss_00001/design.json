@@ -1,0 +1,124 @@
+{
+  "block_name": "vd_kai_boss_00001",
+  "title": "ブロック基礎設計_vd_kai_boss_00001",
+  "requirements_text": "UR対抗キャラ「隠された英雄の姿 怪獣８号」（`c_kai_00002_vd_Boss_Yellow`）がボスとして砦付近（position=1.7）に開幕即配置し、初ダメージを受けるまで待機状態を保つ。1500ms後にファントム2体が前衛を形成し、2000ms後に怪獣余獣2体が追加。累計3体撃破後は怪獣余獣3体と後方ファントム1体（pos=2.8）が同時展開する。さらに6体撃破後は怪獣余獣3体が追加。拠点に初ダメージが入ると独立したトリガーで怪獣余獣3体が援護を展開する。ボスを主役にした適度な雑魚量で、ボス撃破に集中できる設計。\n\nコマは1行・2等分（パターン6、幅0.5/0.5）のシンプル構成。コマアセットキーは `kai_00001`、`koma1_back_ground_offset = -1.0`。ボス本体が「隠された英雄の姿 怪獣８号」（chara_kai_00002）のVD敵バージョンであるため、同URキャラのコマ効果・スキルが戦闘上の対抗手段となる。",
+  "basic_info": {
+    "id": "vd_kai_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 1000,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "7行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "kai_00001",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_kai_00002_vd_Boss_Yellow",
+      "name": "隠された英雄の姿 怪獣８号",
+      "color": "Yellow（黄属性）",
+      "role": "Support",
+      "hp": 700000,
+      "atk": 1700,
+      "spd": 45,
+      "desc": "ボス（c_キャラ・VD UR対抗）"
+    },
+    {
+      "id": "e_kai_00101_vd_Normal_Yellow",
+      "name": "怪獣 余獣",
+      "color": "Yellow（黄属性）",
+      "role": "Defense",
+      "hp": 25000,
+      "atk": 350,
+      "spd": 45,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（グロー汎用）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_kai_00002_vd_Boss_Yellow",
+      "name": "隠された英雄の姿 怪獣８号",
+      "count": 1,
+      "notes": "1体 / pos=1.7"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 2,
+      "notes": "3体 / デフォルト"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 200,
+      "enemy_id": "e_kai_00101_vd_Normal_Yellow",
+      "name": "怪獣 余獣",
+      "count": 2,
+      "notes": "5体 / デフォルト"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_kai_00101_vd_Normal_Yellow",
+      "name": "怪獣 余獣",
+      "count": 3,
+      "notes": "8体 / デフォルト"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 1,
+      "notes": "9体 / pos=2.8（elem=4と同タイミング）"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "e_kai_00101_vd_Normal_Yellow",
+      "name": "怪獣 余獣",
+      "count": 3,
+      "notes": "12体 / デフォルト"
+    },
+    {
+      "num": 7,
+      "trigger": "OutpostHpPercentage",
+      "value": 99,
+      "enemy_id": "e_kai_00101_vd_Normal_Yellow",
+      "name": "怪獣 余獣",
+      "count": 3,
+      "notes": "15体 / デフォルト（独立トリガー）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}
