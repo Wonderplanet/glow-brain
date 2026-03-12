@@ -31,12 +31,14 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 | 項目 | bossブロック | normalブロック |
 |------|------------|--------------|
-| `MstInGame.content_type` | `Dungeon` | `Dungeon` |
-| `MstInGame.stage_type` | `vd_boss` | `vd_normal` |
-| `MstEnemyOutpost.hp` | **1,000**（固定） | **100**（固定） |
+| `MstEnemyOutpost.hp` | **100**（固定） | **100**（固定） |
 | `MstKomaLine` 行数 | **1行**（固定） | **3行固定**（各行ごとにコマ数1〜4でランダム独立抽選） |
 | フェーズ切り替え | **禁止**（SwitchSequenceGroup使用不可） | **禁止** |
 | BGM | `SSE_SBG_003_004` | `SSE_SBG_003_010` |
+| `mst_defense_target_id` | `__NULL__` | `__NULL__` |
+| `mst_auto_player_sequence_id` | `""`（空文字） | `""`（空文字） |
+| `boss_bgm_asset_key` | `""`（空文字） | `""`（空文字） |
+| 全coefカラム（6カラム） | `1.0`（固定） | `1.0`（固定） |
 
 ### IDプレフィックス
 
@@ -160,7 +162,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 ## ガードレール（必ず守ること）
 
 1. **IDプレフィックスは `vd_`**
-2. **ゲート(Outpost)HP固定**: boss=1,000固定、normal=100固定（変更不可）
+2. **ゲート(Outpost)HP固定**: boss/normal共に100固定（変更不可）
 3. **フェーズ切り替え禁止**: `SwitchSequenceGroup` は使用しない
 4. **承認前に完了しない**: ユーザーが「OK」と言うまで修正ループを続ける
 5. **コマアセットキーは series-koma-assets.csv を参照**: 作品IDに合った `koma1_asset_key` を設定する
@@ -174,6 +176,10 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 13. **e_glo_* はこの制約の対象外**: `e_glo_*`（グロー本体）は c_キャラではないため、同時出現制約の対象外
 14. **normalブロックは雑魚敵を最低15体以上**: normalブロックでは雑魚扱いの敵キャラ（c_キャラ含む）の合計が**最低15体以上**になるよう設計する
 15. **bossブロックの体数制約なし**: bossブロックは雑魚15体以上の制約はない。ボス1体 + 雑魚は任意体数で設計する
+16. **mst_defense_target_id は `__NULL__`**: 空文字だと参照エラー。`__NULL__`（NULLリテラル）が必須
+17. **content_type/stage_typeをdesign.mdやCSVに記載しない**: 不要な情報。設計書・CSVへの記載は禁止
+18. **mst_auto_player_sequence_idは空文字**: レガシーカラム。値を設定するとバリデーションエラーになる
+19. **全coefカラムは1.0固定**: 6カラム（normal_enemy_hp/attack/speed_coef・boss_enemy_hp/attack/speed_coef）全て1.0固定
 
 ---
 

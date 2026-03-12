@@ -74,3 +74,27 @@
 | `is_damage_invalidation` | 520/539件が空欄 | 修正不要 | 基本は空欄 |
 | `outpost_asset_key` | 505/539件が空欄 | 修正不要 | 空欄が多数派 |
 | `artwork_asset_key` | 48/539件が空欄 | **要確認** | 大半は値あり。VD用アセットキーがあれば設定推奨（例: `aya_0001` 等）。アセット担当者に確認する |
+
+---
+
+## MstInGame（重要な設定値）
+
+| カラム | 設定値 | 備考 |
+|--------|-------|------|
+| `mst_auto_player_sequence_id` | `""`（空文字） | レガシーカラム。値を設定するとバリデーションエラー |
+| `mst_auto_player_sequence_set_id` | `{block_id}` | MstInGame.id と同値（必須） |
+| `mst_defense_target_id` | `__NULL__` | 空文字ではなく`__NULL__`（NULL値）が必須 |
+| `boss_bgm_asset_key` | `""`（空文字） | BGM切り替えなし。VD全ブロック共通 |
+| 全coefカラム×6 | `1.0` | `normal/boss_enemy_hp/attack/speed_coef` 全て1.0固定 |
+| `loop_background_asset_key` | Normal原則空文字 / Boss作品対応アセット | 下表参照 |
+
+### loop_background_asset_key 作品別設定値
+
+| 種別 | 作品 | 設定値 |
+|------|------|-------|
+| Normal例外 | jig | `jig_00002` |
+| Normal例外 | mag | `mag_00004` |
+| Boss | kai | `kai_00001` |
+| Boss | dan | `dan_00001` |
+| その他Normal | 全作品 | `""`（空文字） |
+| その他Boss | 未定作品 | `""`（空文字） |
