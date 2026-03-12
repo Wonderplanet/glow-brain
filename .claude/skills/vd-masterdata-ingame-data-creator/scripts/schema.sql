@@ -40,9 +40,9 @@ CREATE TABLE IF NOT EXISTS mst_enemy_stage_parameters (
 CREATE TABLE IF NOT EXISTS mst_enemy_outposts (
     id TEXT PRIMARY KEY,
     hp INTEGER NOT NULL,
-    is_damage_invalidation INTEGER DEFAULT '__NULL__',
-    outpost_asset_key TEXT DEFAULT '__NULL__',
-    artwork_asset_key TEXT DEFAULT '',
+    is_damage_invalidation INTEGER NOT NULL DEFAULT 0,
+    outpost_asset_key TEXT NOT NULL DEFAULT '',
+    artwork_asset_key TEXT NOT NULL DEFAULT '',
     release_key INTEGER DEFAULT 1
 );
 
@@ -81,8 +81,8 @@ CREATE TABLE IF NOT EXISTS mst_koma_lines (
     koma2_width REAL,
     koma2_back_ground_offset REAL,
     koma2_effect_type TEXT DEFAULT 'None' CHECK (koma2_effect_type IN ('None','AttackPowerUp','AttackPowerDown','MoveSpeedUp','SlipDamage','Gust','Poison','Darkness','Burn','Stun','Freeze','Weakening')),
-    koma2_effect_parameter1 TEXT,
-    koma2_effect_parameter2 TEXT,
+    koma2_effect_parameter1 TEXT NOT NULL DEFAULT '',
+    koma2_effect_parameter2 TEXT NOT NULL DEFAULT '',
     koma2_effect_target_side TEXT DEFAULT 'All' CHECK (koma2_effect_target_side IN ('All','Player','Enemy')),
     koma2_effect_target_colors TEXT DEFAULT 'All',
     koma2_effect_target_roles TEXT DEFAULT 'All',
@@ -91,8 +91,8 @@ CREATE TABLE IF NOT EXISTS mst_koma_lines (
     koma3_width REAL,
     koma3_back_ground_offset REAL,
     koma3_effect_type TEXT DEFAULT 'None' CHECK (koma3_effect_type IN ('None','AttackPowerUp','AttackPowerDown','MoveSpeedUp','SlipDamage','Gust','Poison','Darkness','Burn','Stun','Freeze','Weakening')),
-    koma3_effect_parameter1 TEXT,
-    koma3_effect_parameter2 TEXT,
+    koma3_effect_parameter1 TEXT NOT NULL DEFAULT '',
+    koma3_effect_parameter2 TEXT NOT NULL DEFAULT '',
     koma3_effect_target_side TEXT CHECK (koma3_effect_target_side IN ('All','Player','Enemy')),
     koma3_effect_target_colors TEXT,
     koma3_effect_target_roles TEXT,
@@ -101,8 +101,8 @@ CREATE TABLE IF NOT EXISTS mst_koma_lines (
     koma4_width REAL,
     koma4_back_ground_offset REAL,
     koma4_effect_type TEXT DEFAULT 'None' CHECK (koma4_effect_type IN ('None','AttackPowerUp','AttackPowerDown','MoveSpeedUp','SlipDamage','Gust','Poison','Darkness','Burn','Stun','Freeze','Weakening')),
-    koma4_effect_parameter1 TEXT,
-    koma4_effect_parameter2 TEXT,
+    koma4_effect_parameter1 TEXT NOT NULL DEFAULT '',
+    koma4_effect_parameter2 TEXT NOT NULL DEFAULT '',
     koma4_effect_target_side TEXT CHECK (koma4_effect_target_side IN ('All','Player','Enemy')),
     koma4_effect_target_colors TEXT,
     koma4_effect_target_roles TEXT,
@@ -143,22 +143,22 @@ CREATE TABLE IF NOT EXISTS mst_auto_player_sequences (
     summon_count INTEGER DEFAULT 0,
     summon_interval INTEGER DEFAULT 0,
     summon_animation_type TEXT DEFAULT 'None' CHECK (summon_animation_type IN ('None','Fall0','Fall','Fall4')),
-    summon_position REAL DEFAULT '__NULL__',
+    summon_position REAL NOT NULL DEFAULT 0,
     move_start_condition_type TEXT DEFAULT 'None' CHECK (move_start_condition_type IN (
         'None','ElapsedTime','FoeEnterSameKoma','EnterTargetKoma','Damage','DeadFriendUnitCount'
     )),
-    move_start_condition_value INTEGER DEFAULT '__NULL__',
+    move_start_condition_value INTEGER NOT NULL DEFAULT 0,
     move_stop_condition_type TEXT DEFAULT 'None' CHECK (move_stop_condition_type IN (
         'None','ElapsedTime','TargetPosition','PassedKomaCount'
     )),
-    move_stop_condition_value INTEGER DEFAULT '__NULL__',
+    move_stop_condition_value INTEGER NOT NULL DEFAULT 0,
     move_restart_condition_type TEXT DEFAULT 'None' CHECK (move_restart_condition_type IN (
         'None','ElapsedTime','FoeEnterSameKoma','EnterTargetKoma','Damage','DeadFriendUnitCount'
     )),
-    move_restart_condition_value INTEGER DEFAULT '__NULL__',
-    move_loop_count INTEGER DEFAULT '__NULL__',
-    is_summon_unit_outpost_damage_invalidation INTEGER DEFAULT '__NULL__',
-    last_boss_trigger INTEGER DEFAULT '__NULL__',
+    move_restart_condition_value INTEGER NOT NULL DEFAULT 0,
+    move_loop_count INTEGER NOT NULL DEFAULT 0,
+    is_summon_unit_outpost_damage_invalidation INTEGER NOT NULL DEFAULT 0,
+    last_boss_trigger INTEGER NOT NULL DEFAULT 0,
     aura_type TEXT DEFAULT 'Default' CHECK (aura_type IN ('Default','Boss','AdventBoss1','AdventBoss2','AdventBoss3')),
     death_type TEXT DEFAULT 'Normal' CHECK (death_type IN ('Normal','Escape')),
     enemy_hp_coef REAL DEFAULT 1,
@@ -166,14 +166,14 @@ CREATE TABLE IF NOT EXISTS mst_auto_player_sequences (
     enemy_speed_coef REAL DEFAULT 1,
     override_drop_battle_point INTEGER DEFAULT '__NULL__',
     defeated_score INTEGER DEFAULT 0,
-    action_delay INTEGER DEFAULT '__NULL__',
+    action_delay INTEGER NOT NULL DEFAULT 0,
     deactivation_condition_type TEXT DEFAULT 'None' CHECK (deactivation_condition_type IN (
         'None','ElapsedTime','OutpostDamage','OutpostHpPercentage',
         'InitialSummon','EnterTargetKomaIndex','DarknessKomaCleared',
         'FriendUnitDead','FriendUnitTransform','FriendUnitSummoned',
         'SequenceElementActivated','ElapsedTimeSinceSequenceGroupActivated'
     )),
-    deactivation_condition_value TEXT DEFAULT '__NULL__',
+    deactivation_condition_value TEXT NOT NULL DEFAULT '',
     release_key INTEGER DEFAULT 1
 );
 
