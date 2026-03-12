@@ -138,6 +138,18 @@ def write_design_to_sheet(ws, data: dict) -> None:
         ws["C59"].value = ""
 
 
+def auto_adjust_column_width(ws, min_width: int = 8, max_width: int = 50) -> None:
+    """シートの全列を内容に合わせて幅を自動調整する。"""
+    for col in ws.columns:
+        max_length = 0
+        col_letter = col[0].column_letter
+        for cell in col:
+            if cell.value is not None:
+                max_length = max(max_length, len(str(cell.value)))
+        adjusted_width = min(max(max_length + 2, min_width), max_width)
+        ws.column_dimensions[col_letter].width = adjusted_width
+
+
 def add_csv_rows_to_sheet(wb, sheet_name: str, rows: list, is_first: bool) -> None:
     """CSVデータをワークシートとして追加または既存シートに追記する。
 
@@ -277,7 +289,19 @@ def main() -> None:
     else:
         print(f"  警告: MstEnemyStageParameter.csv が見つかりません: {esp_path}")
 
-    # ── 4. 保存 ────────────────────────────────────────────────────────
+    # ── 4. 全テーブルシートの列幅を自動調整 ────────────────────────────
+    print("\n[列幅自動調整]")
+    for sheet_name in CSV_TABLE_ORDER:
+        if sheet_name in wb.sheetnames:
+            auto_adjust_column_width(wb[sheet_name])
+            print(f"  調整: {sheet_name}")
+
+    esp_sheet_name = "MstEnemyStageParameter"
+    if esp_sheet_name in wb.sheetnames:
+        auto_adjust_column_width(wb[esp_sheet_name])
+        print(f"  調整: {esp_sheet_name}")
+
+    # ── 5. 保存 ────────────────────────────────────────────────────────
     wb.save(output_path)
     print(f"\n生成完了: {output_path}")
     print(f"シート一覧: {wb.sheetnames}")
