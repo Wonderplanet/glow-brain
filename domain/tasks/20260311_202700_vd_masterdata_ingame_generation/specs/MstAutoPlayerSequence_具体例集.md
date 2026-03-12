@@ -1,11 +1,11 @@
 # MstAutoPlayerSequence 具体例集
 
-過去の本番データから「合計召喚数15体以上・単一グループ」の実例を抜粋。
+過去の本番データから単一グループの実例を抜粋。
 設計書作成時の条件値・構成の参考として使用してください。
 
 - [パターン A: e_キャラのみ出現](#パターン-a-e_キャラのみ出現)（A-1〜A-5）
 - [パターン B: c_キャラも出現](#パターン-b-c_キャラも出現)（B-1〜B-5）
-- [パターン N: Normalクエスト normal難易度](#パターン-n-normalクエスト-normal難易度)（N-1〜N-5）
+- [パターン N: Normalクエスト normal難易度](#パターン-n-normalクエスト-normal難易度)（N-1〜N-10）
 
 > **読み方**: 各テーブルは `sequence_element_id` 昇順。同じ elem_id の行は同タイミングで発火（位置・キャラ違いの並列召喚）。
 
@@ -529,6 +529,110 @@
 
 ---
 
+### N-6. normal_gom_00001
+**合計召喚数**: 10体 / **要素数**: 2行 / **c_キャラ**: なし
+**特徴**: ElapsedTime のみ2行という最もシンプルな構成。2種類のトースト系キャラを異なるタイミングで5体ずつ召喚。
+
+| elem | condition_type | condition_value | action_value | count | interval | aura |
+|------|---------------|----------------|--------------|-------|----------|------|
+| 1 | ElapsedTime | 250 | 割きトースト (e_gom_00502_general_n_Normal_Colorless) | 5 | 300 | Default |
+| 2 | ElapsedTime | 800 | バタートースト (e_gom_00501_general_n_Normal_Colorless) | 5 | 25 | Default |
+
+**設計のポイント**:
+- 要素2行・トリガー1種類だけの最小構成
+- 2種の敵を 250ms と 800ms の時間差で出し分け
+
+---
+
+### N-7. normal_spy_00003
+**合計召喚数**: 12体 / **要素数**: 3行 / **c_キャラ**: なし
+**特徴**: `InitialSummon` で1体を位置指定して開幕配置 → `ElapsedTime` で10体ラッシュ → `FriendUnitDead=2` でボスユニット追加という3段構成。
+
+| elem | condition_type | condition_value | action_value | count | interval | position | aura | delay |
+|------|---------------|----------------|--------------|-------|----------|----------|------|-------|
+| 1 | ElapsedTime | 500 | 密輸組織の残党 (e_spy_00001_general_n_Normal_Colorless) | 10 | 1250 | - | Default | - |
+| 2 | InitialSummon | 1 | 密輸組織の残党 (e_spy_00001_general_n_Normal_Colorless) | 1 | 0 | 1.6 | Default | - |
+| 3 | FriendUnitDead | 2 | 密輸組織の残党 (e_spy_00001_general_n_Boss_Blue) | 1 | 0 | - | Default | 50 |
+
+**設計のポイント**:
+- `InitialSummon=1` で1体を position=1.6 に配置してから ElapsedTime=500ms で10体ラッシュ
+- 2体倒されると同じキャラの Blue ボスバージョンが delay=50ms で登場（色違い強化演出）
+- 3行で3トリガーを使う最小複合構成
+
+---
+
+### N-8. normal_glo4_00002
+**合計召喚数**: 11体 / **要素数**: 11行 / **c_キャラ**: 5/11行（45%）
+**特徴**: `Fall` アニメーションつきで敵が落下登場。FriendUnitDead=2/3 の同タイミングに c_キャラと e_キャラを複数行同時展開する密な構成。
+
+| elem | condition_type | condition_value | action_value | count | interval | position | aura | anim |
+|------|---------------|----------------|--------------|-------|----------|----------|------|------|
+| 1 | ElapsedTime | 350 | **日比野 カフカ** (c_kai_00001_general_as4_Normal_Blue) | 1 | 0 | - | **Boss** | None |
+| 2 | ElapsedTime | 375 | **網代 慎平** (c_sum_00001_general_as4_Normal_Blue) | 1 | 0 | - | **Boss** | None |
+| 3 | FriendUnitDead | 2 | **四ノ宮 キコル** (c_kai_00301_general_as4_Normal_Blue) | 1 | 0 | 2.85 | **Boss** | **Fall** |
+| 4 | FriendUnitDead | 2 | つらら (e_mag_00101_general_as4_Normal_Blue) | 1 | 0 | 2.9 | Default | **Fall** |
+| 5 | FriendUnitDead | 2 | つらら (e_mag_00101_general_as4_Normal_Colorless) | 1 | 0 | 2.8 | Default | **Fall** |
+| 6 | FriendUnitDead | 2 | つらら (e_mag_00101_general_as4_Normal_Colorless) | 1 | 0 | 2.75 | Default | **Fall** |
+| 7 | FriendUnitDead | 3 | つらら (e_mag_00101_general_as4_Normal_Blue) | 1 | 0 | 2.9 | Default | **Fall** |
+| 8 | FriendUnitDead | 3 | つらら (e_mag_00101_general_as4_Normal_Colorless) | 1 | 0 | 2.8 | Default | **Fall** |
+| 9 | FriendUnitDead | 3 | つらら (e_mag_00101_general_as4_Normal_Colorless) | 1 | 0 | 2.75 | Default | **Fall** |
+| 10 | FriendUnitDead | 3 | **越谷 仁美** (c_mag_00101_general_as4_Normal_Blue) | 1 | 0 | - | **Boss** | None |
+| 11 | FriendUnitDead | 3 | **新人魔法少女 桜木 カナ** (c_mag_00001_general_as4_Boss_Blue) | 1 | 0 | - | Default | None |
+
+**設計のポイント**:
+- `FriendUnitDead=2` で c_キャラ(Boss)+e_キャラ×3体が Fall アニメで同時落下（elem 3〜6 の4行同タイミング）
+- `FriendUnitDead=3` でも同様に5行同タイミング（e_キャラ×3 + c_キャラ×2）
+- e_キャラ「つらら」は position 2.75/2.8/2.9 の微差配置で1体ずつ落下演出
+- 合計11体でも11行という「1体ずつ丁寧に管理する」設計スタイル
+
+---
+
+### N-9. normal_dan_00006
+**合計召喚数**: 14体 / **要素数**: 8行 / **c_キャラ**: 3行
+**特徴**: `FriendUnitTransform=1`（フレンドユニット変身）というレアなトリガーを使用。変身後に敵が強化されるストーリー演出。
+
+| elem | condition_type | condition_value | action_value | count | interval | aura | delay |
+|------|---------------|----------------|--------------|-------|----------|------|-------|
+| 1 | InitialSummon | 1 | セルポ星人 (e_dan_00001_general_n_trans_Normal_Red) | 1 | 0 | Default | - |
+| 2 | ElapsedTime | 0 | **モモ** (c_dan_00101_general_n_Boss_Red) | 1 | 0 | Default | - |
+| 3 | ElapsedTime | 750 | **オカルン** (c_dan_00001_general_n_Normal_Red) | 1 | 0 | **Boss** | - |
+| 4 | ElapsedTime | 850 | ターボババア (e_dan_00201_general_n_Boss_Red) | 1 | 0 | Default | - |
+| 5 | FriendUnitDead | 3 | **ターボババアの霊力 オカルン** (c_dan_00002_general_n_Boss_Red) | 1 | 0 | Default | 50 |
+| 6 | FriendUnitTransform | 1 | セルポ星人 (変身) (e_dan_00101_general_n_Normal_Red) | 3 | 150 | Default | - |
+| 7 | FriendUnitTransform | 1 | セルポ星人 (変身) (e_dan_00101_general_n_Normal_Red) | 3 | 300 | Default | 50 |
+| 8 | FriendUnitTransform | 1 | セルポ星人 (変身) (e_dan_00101_general_n_Normal_Red) | 3 | 650 | Default | 100 |
+
+**設計のポイント**:
+- `FriendUnitTransform=1` でフレンドが変身した瞬間に敵3行（計9体）が間隔とdelayをずらして大量登場
+- elem 6/7/8 は同じキャラを interval(150/300/650ms) と delay(0/50/100ms) で微妙にずらし「群れで迫ってくる」演出
+- `InitialSummon=1` + `ElapsedTime=0ms` で「ゲーム開始と同時に」c_キャラとe_キャラが一斉に開幕配置
+
+---
+
+### N-10. normal_glo1_00001
+**合計召喚数**: 19体 / **要素数**: 10行 / **c_キャラ**: 4/10行（40%）
+**特徴**: 350〜1450ms の短時間帯に4種の作品キャラが次々と ElapsedTime で登場。FriendUnitDead は 1/2/3 体と低めで食べ物系キャラが追加されるユニークな設計。
+
+| elem | condition_type | condition_value | action_value | count | interval | aura | delay |
+|------|---------------|----------------|--------------|-------|----------|------|-------|
+| 1 | ElapsedTime | 350 | **フランキー・フランクリン** (c_spy_00401_general_n_Boss_Colorless) | 1 | 0 | Default | - |
+| 2 | ElapsedTime | 450 | グエン (e_spy_00101_general_n_Normal_Colorless) | 1 | 0 | Default | - |
+| 3 | ElapsedTime | 1350 | **文蔵** (c_aka_00101_general_n_Boss_Red) | 1 | 0 | Default | - |
+| 4 | FriendUnitDead | 2 | ラーメン (e_gom_00701_general_n_Boss_Colorless) | 1 | 0 | Default | 200 |
+| 5 | FriendUnitDead | 2 | ライス (e_gom_00801_general_n_Normal_Colorless) | 3 | 750 | Default | 300 |
+| 6 | FriendUnitDead | 2 | ライス (海苔) (e_gom_00901_general_n_Normal_Colorless) | 3 | 800 | Default | 350 |
+| 7 | FriendUnitDead | 3 | ライス (海苔) (e_gom_00901_general_n_Normal_Colorless) | 2 | 400 | Default | - |
+| 8 | FriendUnitDead | 1 | ライス (e_gom_00801_general_n_Normal_Colorless) | 5 | 1000 | Default | - |
+| 9 | ElapsedTime | 1450 | **<黄昏> ロイド** (c_spy_00101_general_n_Boss_Red) | 1 | 0 | Default | - |
+| 10 | FriendUnitDead | 2 | **トーチャー・トルチュール** (c_gom_00101_general_n_Boss_Red) | 1 | 0 | Default | 50 |
+
+**設計のポイント**:
+- 350ms → 450ms → 1350ms → 1450ms と1100ms内に4キャラが続けて登場する高密度開幕
+- `FriendUnitDead=2` の同タイミングに4行（delay=200/300/350ms のずれ）：ラーメン1体→ライス3体→ライス(海苔)3体と順次追加
+- `FriendUnitDead=1` で5体のライスを先行追加（elem 8）、複数の FriendUnitDead 閾値が交差する複雑な発火順
+
+---
+
 ## まとめ：設計ポイント早見表
 
 | パターン | 合計体数 | c_キャラ | 主なトリガー | 特徴キーワード |
@@ -548,3 +652,8 @@
 | N-3 normal_osh_00002 | 41 | 5% | InitialSummon+EnterTargetKomaIndex+FriendUnitDead | 9体位置指定開幕、1体ごと補充 |
 | N-4 normal_osh_00003 | 69 | 13% | ElapsedTime+EnterTargetKomaIndex+FriendUnitDead | コマ0〜5全連動、9体で15体大波 |
 | N-5 normal_rik_00002 | 415 | 100% | ElapsedTime+FriendUnitDead+OutpostDamage | 全c_キャラ全Bossオーラ、99×4本同時 |
+| N-6 normal_gom_00001 | 10 | なし | ElapsedTime | 2行最小構成、2種キャラを時間差で5体ずつ |
+| N-7 normal_spy_00003 | 12 | なし | InitialSummon+ElapsedTime+FriendUnitDead | 3行3トリガー、色違いボス登場 |
+| N-8 normal_glo4_00002 | 11 | 45% | ElapsedTime+FriendUnitDead | Fall落下アニメ、同タイミング多行展開 |
+| N-9 normal_dan_00006 | 14 | 38% | InitialSummon+ElapsedTime+FriendUnitDead+FriendUnitTransform | 変身トリガー後に敵強化、delay連打 |
+| N-10 normal_glo1_00001 | 19 | 40% | ElapsedTime+FriendUnitDead | 1100ms以内に4キャラ登場、複数FriendUnitDead閾値交差 |
