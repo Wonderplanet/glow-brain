@@ -5,7 +5,7 @@
 
 - [パターン A: e_キャラのみ出現](#パターン-a-e_キャラのみ出現)（A-1〜A-5）
 - [パターン B: c_キャラも出現](#パターン-b-c_キャラも出現)（B-1〜B-5）
-- [パターン N: Normalクエスト normal難易度](#パターン-n-normalクエスト-normal難易度)（N-1〜N-10）
+- [パターン N: Normalクエスト normal難易度](#パターン-n-normalクエスト-normal難易度)（N-1〜N-15）
 
 > **読み方**: 各テーブルは `sequence_element_id` 昇順。同じ elem_id の行は同タイミングで発火（位置・キャラ違いの並列召喚）。
 
@@ -633,6 +633,104 @@
 
 ---
 
+### N-11. normal_dan_00001
+**合計召喚数**: 6体 / **要素数**: 2行 / **c_キャラ**: なし
+**特徴**: `DarknessKomaCleared=2`（闇コマを2個クリアしたら）というレアトリガーでボスキャラを召喚。通常のElapsedTimeと組み合わせた2行構成。
+
+| elem | condition_type | condition_value | action_value | count | interval | aura |
+|------|---------------|----------------|--------------|-------|----------|------|
+| 1 | ElapsedTime | 500 | ファントム (e_glo_00001_general_n_Normal_Colorless) | 5 | 1200 | Default |
+| 2 | DarknessKomaCleared | 2 | ターボババア (e_dan_00201_general_n_Boss_Colorless) | 1 | 0 | Default |
+
+**設計のポイント**:
+- `DarknessKomaCleared=2` でプレイヤーが闇コマを2個クリアした時点でボス敵が追加召喚される「難易度自動調整」的な設計
+- ElapsedTime=500ms の雑魚5体と独立して発火する非同期2トリガー構成
+
+---
+
+### N-12. normal_glo4_00001
+**合計召喚数**: 6体 / **要素数**: 6行 / **c_キャラ**: 4/6行（67%）
+**特徴**: 6体を6行で個別管理。`InitialSummon=2` で開幕配置し、`FriendUnitDead` 1/2/3体ごとに1行ずつ丁寧に展開。FriendUnitDead=3 では `Fall` アニメで2体同時落下。
+
+| elem | condition_type | condition_value | action_value | count | interval | position | aura | anim |
+|------|---------------|----------------|--------------|-------|----------|----------|------|------|
+| 1 | InitialSummon | 2 | 小舟 澪の影 (包丁) (e_sum_00201_general_as4_Normal_Green) | 1 | 0 | 2.6 | Default | None |
+| 2 | FriendUnitDead | 1 | 小舟 澪の影 (拳銃) (e_sum_00101_general_as4_Normal_Green) | 1 | 0 | - | Default | None |
+| 3 | FriendUnitDead | 2 | **隠された英雄の姿 怪獣８号** (c_kai_00002_general_as4_Normal_Green) | 1 | 0 | - | **Boss** | None |
+| 4 | FriendUnitDead | 2 | **市川 レノ** (c_kai_00101_general_as4_Normal_Green) | 1 | 0 | - | **Boss** | None |
+| 5 | FriendUnitDead | 3 | **影のウシオ 小舟 潮** (c_sum_00101_general_as4_Boss_Green) | 1 | 0 | 2.9 | Default | **Fall** |
+| 6 | FriendUnitDead | 3 | **小舟 澪** (c_sum_00201_general_as4_Normal_Green) | 1 | 0 | 2.8 | **Boss** | **Fall** |
+
+**設計のポイント**:
+- FriendUnitDead=1/2/3 と毎体倒すたびに新しい展開（1体→1体→2体同時→2体同時）
+- `FriendUnitDead=2` で c_キャラ（怪獣8号系）2体同時 Bossオーラ登場
+- `FriendUnitDead=3` で Fall アニメつき c_キャラ2体が position=2.9/2.8 に落下
+- 6体しかいないのに6行・3トリガー(InitialSummon+FriendUnitDead2種)という「質重視」の設計
+
+---
+
+### N-13. normal_glo1_00003
+**合計召喚数**: 12体 / **要素数**: 6行 / **c_キャラ**: なし
+**特徴**: FriendUnitDead を一切使わず、`InitialSummon` と `ElapsedTime` のみで構成。難易度違い（vh/h）の同一キャラを時系列で切り替える設計。
+
+| elem | condition_type | condition_value | action_value | count | interval | position | aura |
+|------|---------------|----------------|--------------|-------|----------|----------|------|
+| 4 | InitialSummon | 0 | ファントム (e_glo_00001_general_h_Normal_Blue) | 1 | 0 | 1.2 | Default |
+| 5 | InitialSummon | 0 | ファントム (e_glo_00001_general_h_Normal_Blue) | 1 | 0 | 1.8 | Default |
+| 1 | ElapsedTime | 300 | ボスファントム (e_glo_00101_general_n_Boss_Blue) | 1 | 0 | - | Default |
+| 2 | ElapsedTime | 750 | ファントム (e_glo_00001_general_vh_Normal_Colorless) | 2 | 50 | - | Default |
+| 3 | ElapsedTime | 1000 | ファントム (e_glo_00001_general_h_Normal_Blue) | 4 | 500 | - | Default |
+| 6 | ElapsedTime | 3200 | ファントム (e_glo_00001_general_vh_Normal_Colorless) | 3 | 500 | - | Default |
+
+**設計のポイント**:
+- `InitialSummon=0` で h(ハード)難易度ファントム2体を position 指定して開幕配置
+- ElapsedTime=300ms で n(ノーマル)ボスファントム → 750ms で vh(ベリーハード)→ 1000ms で h → 3200ms で再び vh と難易度を切り替えながら展開
+- `FriendUnitDead` なし：倒した数に関係なく時間だけで全てが決まるシンプルな設計
+
+---
+
+### N-14. normal_dan_00004
+**合計召喚数**: 12体 / **要素数**: 7行 / **c_キャラ**: 1/7行
+**特徴**: ElapsedTime=400ms で開幕即 c_キャラ登場。その後は同一 e_キャラ（セルポ星人変身）を ElapsedTime と FriendUnitDead の両方で継続補充するシンプルな反復設計。
+
+| elem | condition_type | condition_value | action_value | count | interval | aura |
+|------|---------------|----------------|--------------|-------|----------|------|
+| 1 | ElapsedTime | 400 | **ターボババアの霊力 オカルン** (c_dan_00002_general_n_Boss_Red) | 1 | 0 | Default |
+| 2 | ElapsedTime | 1000 | セルポ星人 (変身) (e_dan_00101_general_n_Normal_Colorless) | 1 | 0 | Default |
+| 3 | ElapsedTime | 1700 | セルポ星人 (変身) (e_dan_00101_general_n_Normal_Colorless) | 1 | 0 | Default |
+| 4 | ElapsedTime | 2050 | セルポ星人 (変身) (e_dan_00101_general_n_Normal_Colorless) | 1 | 0 | Default |
+| 5 | FriendUnitDead | 2 | セルポ星人 (変身) (e_dan_00101_general_n_Normal_Colorless) | 2 | 200 | Default |
+| 6 | FriendUnitDead | 3 | セルポ星人 (変身) (e_dan_00101_general_n_Normal_Colorless) | 3 | 550 | Default |
+| 7 | ElapsedTime | 2000 | セルポ星人 (変身) (e_dan_00101_general_n_Normal_Colorless) | 3 | 1000 | Default |
+
+**設計のポイント**:
+- `ElapsedTime=400ms` で c_キャラが開幕即登場（InitialSummon より少し遅い「開幕直後」演出）
+- 同一の e_キャラを ElapsedTime（1000/1700/2000/2050ms）と FriendUnitDead（2/3体）の両方のトリガーで補充
+- elem 7（ElapsedTime=2000ms・3体）と elem 4（ElapsedTime=2050ms・1体）は50ms差でほぼ同タイミング発火
+
+---
+
+### N-15. normal_glo2_00002
+**合計召喚数**: 36体 / **要素数**: 7行 / **c_キャラ**: 6/7行（86%）
+**特徴**: 3作品（jig/dan/tak）から6種の c_キャラが ElapsedTime で 450〜2500ms に1体ずつ順番に登場。背景の大量ファントムが ElapsedTime=400ms で先行展開。
+
+| elem | condition_type | condition_value | action_value | count | interval | aura | delay |
+|------|---------------|----------------|--------------|-------|----------|------|-------|
+| 7 | ElapsedTime | 400 | ファントム (e_glo_00001_general_Normal_Colorless) | 30 | 750 | Default | - |
+| 1 | ElapsedTime | 450 | **山田浅ェ門 佐切** (c_jig_00101_mainquest_glo2_Normal_Red) | 1 | 0 | **Boss** | - |
+| 2 | ElapsedTime | 1300 | **オカルン** (c_dan_00001_mainquest_glo2_Normal_Red) | 1 | 0 | **Boss** | - |
+| 6 | ElapsedTime | 1600 | **ハッピー星からの使者 タコピー** (c_tak_00001_mainquest_glo2_Normal_Red) | 1 | 0 | **Boss** | - |
+| 3 | ElapsedTime | 1800 | **モモ** (c_dan_00101_mainquest_glo2_Normal_Red) | 1 | 0 | **Boss** | - |
+| 4 | ElapsedTime | 2500 | **がらんの画眉丸** (c_jig_00001_mainquest_glo2_Normal_Red) | 1 | 0 | **Boss** | - |
+| 5 | FriendUnitDead | 2 | **ターボババアの霊力 オカルン** (c_dan_00002_mainquest_glo2_Boss_Red) | 1 | 0 | Default | 200 |
+
+**設計のポイント**:
+- e_ファントム30体（interval=750ms）が背景で流れ続ける中、c_キャラが次々と個別登場する「ボス連続出現」演出
+- c_キャラ6体全て Bossオーラつき・1体ずつ ElapsedTime で時間差登場（450→1300→1600→1800→2500ms）
+- 3作品（ジグザグ→ダンダダン→タコピー→ダンダダン→ジグザグ→ダンダダン）がクロスオーバー
+
+---
+
 ## まとめ：設計ポイント早見表
 
 | パターン | 合計体数 | c_キャラ | 主なトリガー | 特徴キーワード |
@@ -657,3 +755,8 @@
 | N-8 normal_glo4_00002 | 11 | 45% | ElapsedTime+FriendUnitDead | Fall落下アニメ、同タイミング多行展開 |
 | N-9 normal_dan_00006 | 14 | 38% | InitialSummon+ElapsedTime+FriendUnitDead+FriendUnitTransform | 変身トリガー後に敵強化、delay連打 |
 | N-10 normal_glo1_00001 | 19 | 40% | ElapsedTime+FriendUnitDead | 1100ms以内に4キャラ登場、複数FriendUnitDead閾値交差 |
+| N-11 normal_dan_00001 | 6 | なし | DarknessKomaCleared+ElapsedTime | 闇コマクリアトリガー、2行2トリガー |
+| N-12 normal_glo4_00001 | 6 | 67% | InitialSummon+FriendUnitDead | 6体6行・Fall×2、FriendUnitDead毎体ごとに展開 |
+| N-13 normal_glo1_00003 | 12 | なし | InitialSummon+ElapsedTime | FriendUnitDeadなし、難易度違いファントムを時系列に配置 |
+| N-14 normal_dan_00004 | 12 | 8% | ElapsedTime+FriendUnitDead | 開幕即c_キャラ、同一e_キャラを時間+倒した数の両方で継続補充 |
+| N-15 normal_glo2_00002 | 36 | 17% | ElapsedTime+FriendUnitDead | 5作品c_キャラ6種がElapsedTimeで1体ずつ順番登場 |
