@@ -278,7 +278,11 @@ FriendUnitTransform=1 → 変身後に雑魚を大量召喚
 
 ---
 
-## 10. 参照元データ
+## 10. 関連ドキュメント・参照元データ
+
+- **具体例集**: `MstAutoPlayerSequence_具体例集.md` — e_キャラのみ5例・c_キャラ含む5例の実データ（合計15体以上・単一グループ）
+
+## 11. 参照元データ
 
 - **本番データ件数**: 4,641件（MstAutoPlayerSequence.csv）
 - **VD既存ブロック**: `vd-ingame-design-creator/vd_kai_normal_00001/`
