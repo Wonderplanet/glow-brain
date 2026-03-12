@@ -87,7 +87,7 @@ print('basic_info:', d['basic_info'])
 | `title` | block_name | `"ブロック基礎設計_{block_name}"` |
 | `requirements_text` | design.md | `## インゲーム要件テキスト` セクション本文（改行保持） |
 | `basic_info.id` | MstInGame.csv | `id` 列 |
-| `basic_info.block_type` | MstInGame.csv | `stage_type`: `vd_normal`→`Normal`, `vd_boss`→`Boss` |
+| `basic_info.block_type` | block_name（フォルダ名） | `_normal_` を含む → `Normal`、`_boss_` を含む → `Boss` |
 | `basic_info.gate_hp` | MstEnemyOutpost.csv | `hp` 列（**数値型**） |
 | `basic_info.koma_rows` | MstKomaLine.csv | データ行数 + `"行"` |
 | `basic_info.group_switch` | 固定値 | `"なし（デフォルトグループのみ）"` |

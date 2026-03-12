@@ -177,9 +177,8 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 14. **normalブロックは雑魚敵を最低15体以上**: normalブロックでは雑魚扱いの敵キャラ（c_キャラ含む）の合計が**最低15体以上**になるよう設計する
 15. **bossブロックの体数制約なし**: bossブロックは雑魚15体以上の制約はない。ボス1体 + 雑魚は任意体数で設計する
 16. **mst_defense_target_id は `__NULL__`**: 空文字だと参照エラー。`__NULL__`（NULLリテラル）が必須
-17. **content_type/stage_typeをdesign.mdやCSVに記載しない**: 不要な情報。設計書・CSVへの記載は禁止
-18. **mst_auto_player_sequence_idは空文字**: レガシーカラム。値を設定するとバリデーションエラーになる
-19. **全coefカラムは1.0固定**: 6カラム（normal_enemy_hp/attack/speed_coef・boss_enemy_hp/attack/speed_coef）全て1.0固定
+17. **mst_auto_player_sequence_idは空文字**: レガシーカラム。値を設定するとバリデーションエラーになる
+18. **全coefカラムは1.0固定**: 6カラム（normal_enemy_hp/attack/speed_coef・boss_enemy_hp/attack/speed_coef）全て1.0固定
 
 ---
 

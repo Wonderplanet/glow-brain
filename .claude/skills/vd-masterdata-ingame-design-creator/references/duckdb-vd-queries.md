@@ -17,7 +17,7 @@ duckdb -c "SELECT ... FROM read_csv('projects/glow-masterdata/{テーブル}.csv
 
 ```bash
 duckdb -c "
-SELECT id, bgm_asset_key, boss_bgm_asset_key, content_type, stage_type,
+SELECT id, bgm_asset_key, boss_bgm_asset_key,
        boss_mst_enemy_stage_parameter_id, mst_page_id, mst_enemy_outpost_id,
        normal_enemy_hp_coef, normal_enemy_attack_coef, boss_enemy_hp_coef, boss_enemy_attack_coef
 FROM read_csv('projects/glow-masterdata/MstInGame.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
@@ -102,7 +102,7 @@ VDが存在しない場合は、既存の `dungeon_` データを参考にする
 ```bash
 # dungeon_ InGame の確認（boss/normalブロック比較）
 duckdb -c "
-SELECT id, content_type, stage_type,
+SELECT id,
        normal_enemy_hp_coef, normal_enemy_attack_coef,
        boss_enemy_hp_coef, boss_enemy_attack_coef,
        boss_mst_enemy_stage_parameter_id
