@@ -85,6 +85,17 @@ Read tool で design.md を読み込み、以下のデータを抽出する。
 
 **空欄になりがちなカラムのデフォルト値**: [vd-column-defaults.md](../../vd-masterdata-ingame-design-creator/references/vd-column-defaults.md) を参照する。
 
+**テーブル詳細ドキュメント（必要に応じて参照）**: 各テーブルの全カラム定義・enum値・制約を確認する場合は以下を参照する。schema.sql の CHECK 制約と一致させることが目的。
+
+| テーブル | ドキュメントパス |
+|---------|----------------|
+| MstInGame | `domain/knowledge/masterdata/table-docs/MstInGame.md` |
+| MstEnemyStageParameter | `domain/knowledge/masterdata/table-docs/MstEnemyStageParameter.md` |
+| MstAutoPlayerSequence | `domain/knowledge/masterdata/table-docs/MstAutoPlayerSequence.md` |
+| MstKomaLine | `domain/knowledge/masterdata/table-docs/MstKomaLine.md` |
+| MstEnemyOutpost | `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md` |
+| MstPage | `domain/knowledge/masterdata/table-docs/MstPage.md` |
+
 ---
 
 ### Step 2: SQLite DB 構築
@@ -228,3 +239,12 @@ MstEnemyStageParameter ID をカンマ区切りで指定する。
 - [export_csv.py](scripts/export_csv.py) — CSV エクスポートスクリプト
 - [vd-column-defaults.md](../../vd-masterdata-ingame-design-creator/references/vd-column-defaults.md) — デフォルト値定義
 - [vd-masterdata-ingame-design-creator SKILL.md](../../vd-masterdata-ingame-design-creator/SKILL.md) — 前工程のスキル
+
+### マスタテーブル詳細ドキュメント（カラム定義・enum値の正確な参照元）
+
+- `domain/knowledge/masterdata/table-docs/MstInGame.md`
+- `domain/knowledge/masterdata/table-docs/MstEnemyStageParameter.md`
+- `domain/knowledge/masterdata/table-docs/MstAutoPlayerSequence.md`
+- `domain/knowledge/masterdata/table-docs/MstKomaLine.md`
+- `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md`
+- `domain/knowledge/masterdata/table-docs/MstPage.md`

@@ -64,6 +64,17 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 作品別の登場キャラは [vd-character-list.md](references/vd-character-list.md) を参照。
 **MstEnemyStageParameter.id の選出元**: 必ず `vd_all/data/MstEnemyStageParameter.csv` を読み込み、指定作品の `id` を確認して選出すること。
 
+**テーブル詳細ドキュメント読み込み（必須）**: 設計書生成前に以下のドキュメントを Read tool で読み込み、各カラムの定義・enum値・制約を把握する。
+
+| テーブル | ドキュメントパス |
+|---------|----------------|
+| MstInGame | `domain/knowledge/masterdata/table-docs/MstInGame.md` |
+| MstEnemyStageParameter | `domain/knowledge/masterdata/table-docs/MstEnemyStageParameter.md` |
+| MstAutoPlayerSequence | `domain/knowledge/masterdata/table-docs/MstAutoPlayerSequence.md` |
+| MstKomaLine | `domain/knowledge/masterdata/table-docs/MstKomaLine.md` |
+| MstEnemyOutpost | `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md` |
+| MstPage | `domain/knowledge/masterdata/table-docs/MstPage.md` |
+
 ---
 
 ### Step 1: 設計書MD生成
@@ -123,3 +134,12 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 - [koma-background-offset.md](references/koma-background-offset.md) — コマアセットキー別推奨back_ground_offset値
 - `vd_all/data/MstEnemyStageParameter.csv` — VD専用の敵キャラステージパラメータ一覧（選出元。47件。Normal/Boss・全作品分）
   - パス: `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-creator/vd_all/data/MstEnemyStageParameter.csv`
+
+### マスタテーブル詳細ドキュメント（カラム定義・enum値の正確な参照元）
+
+- `domain/knowledge/masterdata/table-docs/MstInGame.md`
+- `domain/knowledge/masterdata/table-docs/MstEnemyStageParameter.md`
+- `domain/knowledge/masterdata/table-docs/MstAutoPlayerSequence.md`
+- `domain/knowledge/masterdata/table-docs/MstKomaLine.md`
+- `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md`
+- `domain/knowledge/masterdata/table-docs/MstPage.md`
