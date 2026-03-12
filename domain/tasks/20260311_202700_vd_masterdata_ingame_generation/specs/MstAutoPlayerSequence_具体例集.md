@@ -19,17 +19,17 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | position | aura |
 |------|---------------|----------------|--------------|-------|----------|----------|------|
-| 1 | ElapsedTime | 200 | e_mag_00301_siget_Normal_Yellow | 8 | 150 | - | Default |
-| 2 | InitialSummon | 1 | e_mag_00301_siget_Normal_Yellow | 1 | 0 | 1.75 | Default |
-| 3 | InitialSummon | 1 | e_mag_00301_siget_Normal_Yellow | 1 | 0 | 1.4 | Default |
-| 4 | InitialSummon | 2 | e_mag_00301_siget_Normal_Yellow | 1 | 0 | 2.5 | Default |
-| 5 | InitialSummon | 2 | e_mag_00301_siget_Normal_Yellow | 1 | 0 | 2.8 | Default |
-| 6 | ElapsedTime | 4500 | e_mag_00301_siget_Normal_Yellow | 5 | 700 | 0.65 | **Boss** |
-| 17 | OutpostHpPercentage | 99 | e_mag_00401_savage_Boss_Green | 1 | 0 | - | Default |
-| 18 | OutpostHpPercentage | 99 | e_mag_00301_aknget_Normal_Green | 3 | 100 | 2.7 | **Boss** |
-| 19 | OutpostHpPercentage | 99 | e_mag_00301_aknget_Normal_Green | 20 | 1000 | - | Default |
-| 23 | FriendUnitDead | 17 | e_mag_00301_aknget_Normal_Green | 8 | 50 | - | Default |
-| 24 | FriendUnitDead | 17 | e_mag_00401_savage_Boss_Green | 1 | 0 | - | Default |
+| 1 | ElapsedTime | 200 | 建造物寄生型の怪異 (e_mag_00301_siget_Normal_Yellow) | 8 | 150 | - | Default |
+| 2 | InitialSummon | 1 | 建造物寄生型の怪異 (e_mag_00301_siget_Normal_Yellow) | 1 | 0 | 1.75 | Default |
+| 3 | InitialSummon | 1 | 建造物寄生型の怪異 (e_mag_00301_siget_Normal_Yellow) | 1 | 0 | 1.4 | Default |
+| 4 | InitialSummon | 2 | 建造物寄生型の怪異 (e_mag_00301_siget_Normal_Yellow) | 1 | 0 | 2.5 | Default |
+| 5 | InitialSummon | 2 | 建造物寄生型の怪異 (e_mag_00301_siget_Normal_Yellow) | 1 | 0 | 2.8 | Default |
+| 6 | ElapsedTime | 4500 | 建造物寄生型の怪異 (e_mag_00301_siget_Normal_Yellow) | 5 | 700 | 0.65 | **Boss** |
+| 17 | OutpostHpPercentage | 99 | 工事現場の怪異 (e_mag_00401_savage_Boss_Green) | 1 | 0 | - | Default |
+| 18 | OutpostHpPercentage | 99 | 建造物寄生型の怪異 (e_mag_00301_aknget_Normal_Green) | 3 | 100 | 2.7 | **Boss** |
+| 19 | OutpostHpPercentage | 99 | 建造物寄生型の怪異 (e_mag_00301_aknget_Normal_Green) | 20 | 1000 | - | Default |
+| 23 | FriendUnitDead | 17 | 建造物寄生型の怪異 (e_mag_00301_aknget_Normal_Green) | 8 | 50 | - | Default |
+| 24 | FriendUnitDead | 17 | 工事現場の怪異 (e_mag_00401_savage_Boss_Green) | 1 | 0 | - | Default |
 
 **設計のポイント**:
 - `InitialSummon` で同タイミングに複数の位置指定配置（position=1.4, 1.75, 2.5, 2.8）
@@ -44,28 +44,28 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | aura |
 |------|---------------|----------------|--------------|-------|----------|------|
-| 1 | ElapsedTime | 400 | e_glo_00001_general_ori3_vh3_Normal_Colorless | 4 | 600 | Default |
-| 2 | ElapsedTime | 1200 | e_glo_00001_general_ori3_vh3_Normal_Colorless | 2 | 1200 | Default |
-| 3 | ElapsedTime | 2000 | e_glo_00001_general_ori3_vh3_Normal_Red | 1 | 0 | Default |
-| 4 | FriendUnitDead | 3 | e_glo_00001_general_ori3_vh3_Normal_Red | 2 | 1500 | Default |
-| 5 | FriendUnitDead | 3 | e_glo_00001_general_ori3_vh3_Normal_Red | 1 | 0 | Default |
-| 6 | FriendUnitDead | 5 | e_glo_00001_general_ori3_vh3_Normal_Red | 1 | 0 | Default |
-| 7 | FriendUnitDead | 5 | e_glo_00001_general_ori3_vh3_Normal_Colorless | **99** | 800 | Default |
-| 8 | FriendUnitDead | 5 | e_glo_00101_general_ori3_vh3_Boss_Colorless | 1 | 0 | **Boss** |
-| 9 | FriendUnitDead | 5 | e_glo_00001_general_ori3_vh3_**big**_Normal_Colorless | 1 | 0 | Boss |
-| 10 | FriendUnitDead | 5 | e_glo_00001_general_ori3_vh3_**big**_Normal_Colorless | 1 | 0 | Boss |
-| 11 | FriendUnitDead | 8 | e_glo_00001_general_ori3_vh3_Normal_Red | 3 | 200 | Default |
-| 12 | FriendUnitDead | 8 | e_glo_00001_general_ori3_vh3_Normal_Colorless | 1 | 0 | Default |
-| 13 | FriendUnitDead | 12 | e_glo_00101_general_ori3_vh3_Boss_Red | 1 | 0 | Boss |
-| 14 | FriendUnitDead | 12 | e_glo_00001_general_ori3_vh3_big_Normal_Red | 1 | 0 | Boss |
-| 15 | FriendUnitDead | 12 | e_glo_00001_general_ori3_vh3_big_Normal_Red | 1 | 0 | Boss |
-| 16 | FriendUnitDead | 15 | e_glo_00001_general_ori3_vh3_Normal_Red | 3 | 800 | Default |
-| 17 | FriendUnitDead | 15 | e_glo_00001_general_ori3_vh3_Normal_Red | 3 | 500 | Default |
-| 18 | OutpostDamage | 1 | e_glo_00001_general_ori3_vh3_big_Normal_Red | 1 | 0 | Boss |
-| 19 | OutpostHpPercentage | 50 | e_glo_00001_general_ori3_vh3_big_Normal_Colorless | 1 | 0 | Boss |
-| 20 | OutpostHpPercentage | 50 | e_glo_00001_general_ori3_vh3_big_Normal_Red | 1 | 0 | Boss |
-| 21 | FriendUnitDead | 9 | e_glo_00001_general_ori3_vh3_big_Normal_Red | 1 | 0 | Boss |
-| 22 | FriendUnitDead | 10 | e_glo_00001_general_ori3_vh3_big_Normal_Red | 1 | 0 | Boss |
+| 1 | ElapsedTime | 400 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Colorless) | 4 | 600 | Default |
+| 2 | ElapsedTime | 1200 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Colorless) | 2 | 1200 | Default |
+| 3 | ElapsedTime | 2000 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Red) | 1 | 0 | Default |
+| 4 | FriendUnitDead | 3 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Red) | 2 | 1500 | Default |
+| 5 | FriendUnitDead | 3 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Red) | 1 | 0 | Default |
+| 6 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Red) | 1 | 0 | Default |
+| 7 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Colorless) | **99** | 800 | Default |
+| 8 | FriendUnitDead | 5 | ボスファントム (e_glo_00101_general_ori3_vh3_Boss_Colorless) | 1 | 0 | **Boss** |
+| 9 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_ori3_vh3_big_Normal_Colorless) | 1 | 0 | Boss |
+| 10 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_ori3_vh3_big_Normal_Colorless) | 1 | 0 | Boss |
+| 11 | FriendUnitDead | 8 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Red) | 3 | 200 | Default |
+| 12 | FriendUnitDead | 8 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Colorless) | 1 | 0 | Default |
+| 13 | FriendUnitDead | 12 | ボスファントム (e_glo_00101_general_ori3_vh3_Boss_Red) | 1 | 0 | Boss |
+| 14 | FriendUnitDead | 12 | ファントム (e_glo_00001_general_ori3_vh3_big_Normal_Red) | 1 | 0 | Boss |
+| 15 | FriendUnitDead | 12 | ファントム (e_glo_00001_general_ori3_vh3_big_Normal_Red) | 1 | 0 | Boss |
+| 16 | FriendUnitDead | 15 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Red) | 3 | 800 | Default |
+| 17 | FriendUnitDead | 15 | ファントム (e_glo_00001_general_ori3_vh3_Normal_Red) | 3 | 500 | Default |
+| 18 | OutpostDamage | 1 | ファントム (e_glo_00001_general_ori3_vh3_big_Normal_Red) | 1 | 0 | Boss |
+| 19 | OutpostHpPercentage | 50 | ファントム (e_glo_00001_general_ori3_vh3_big_Normal_Colorless) | 1 | 0 | Boss |
+| 20 | OutpostHpPercentage | 50 | ファントム (e_glo_00001_general_ori3_vh3_big_Normal_Red) | 1 | 0 | Boss |
+| 21 | FriendUnitDead | 9 | ファントム (e_glo_00001_general_ori3_vh3_big_Normal_Red) | 1 | 0 | Boss |
+| 22 | FriendUnitDead | 10 | ファントム (e_glo_00001_general_ori3_vh3_big_Normal_Red) | 1 | 0 | Boss |
 
 **設計のポイント**:
 - `FriendUnitDead=5` で無限補充（count=99）スタート＋ Bossオーラ＋big ユニットを同タイミングで一気に展開
@@ -80,27 +80,27 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | aura |
 |------|---------------|----------------|--------------|-------|----------|------|
-| 1 | ElapsedTime | 1 | e_glo_00001_general_chi_vh_Normal_Red | 5 | 350 | Default |
-| 2 | ElapsedTime | 700 | e_glo_00001_general_chi_vh_Normal_Red | **99** | 700 | Default |
-| 3 | ElapsedTime | 1525 | e_glo_00001_general_chi_vh_Normal_Green | 1 | 0 | Default |
-| 4 | ElapsedTime | 1500 | e_glo_00001_general_chi_vh_Normal_Red | 3 | 500 | Default |
-| 5 | FriendUnitDead | 3 | e_chi_00201_general_chi_vh_Normal_Yellow | 1 | 0 | **Boss** |
-| 6 | FriendUnitDead | 3 | e_glo_00001_general_chi_vh_Normal_Red | 5 | 350 | Default |
-| 7 | FriendUnitDead | 3 | e_glo_00001_general_chi_vh_Normal_Green | 2 | 300 | Default |
-| 8 | FriendUnitDead | 5 | e_glo_00001_general_chi_vh_Normal_Red | 5 | 350 | Default |
-| 9 | FriendUnitDead | 5 | e_glo_00001_general_chi_vh_Normal_Green | 2 | 300 | Default |
-| 10 | FriendUnitDead | 5 | e_glo_00001_general_chi_vh_Normal_Green | 1 | 0 | Default |
-| 11 | FriendUnitDead | 10 | e_glo_00001_general_chi_vh_big_Normal_Yellow | 1 | 0 | **Boss** |
-| 12 | FriendUnitDead | 10 | e_glo_00001_general_chi_vh_big_Normal_Yellow | 1 | 0 | Boss |
-| 13 | FriendUnitDead | 11 | e_glo_00001_general_chi_vh_Normal_Red | 5 | 350 | Default |
-| 14 | FriendUnitDead | 12 | e_glo_00001_general_chi_vh_Normal_Green | 1 | 0 | Default |
-| 15 | FriendUnitDead | 14 | e_chi_00201_general_chi_vh_Boss_Yellow | 1 | 0 | Default |
-| 16 | FriendUnitDead | 15 | e_glo_00001_general_chi_vh_Normal_Red | 1 | 0 | **Boss** |
-| 17 | FriendUnitDead | 15 | e_glo_00001_general_chi_vh_Normal_Red | 3 | 50 | Boss |
-| 18 | OutpostHpPercentage | 70 | e_glo_00001_general_chi_vh_Normal_Green | 1 | 0 | Default |
-| 19 | OutpostHpPercentage | 50 | e_glo_00001_general_chi_vh_Normal_Green | 1 | 0 | Boss |
-| 20 | OutpostHpPercentage | 50 | e_glo_00001_general_chi_vh_big_Normal_Yellow | 1 | 0 | Boss |
-| 21 | ElapsedTime | 2500 | e_glo_00001_general_chi_vh_Normal_Colorless | 3 | 600 | Default |
+| 1 | ElapsedTime | 1 | ファントム (e_glo_00001_general_chi_vh_Normal_Red) | 5 | 350 | Default |
+| 2 | ElapsedTime | 700 | ファントム (e_glo_00001_general_chi_vh_Normal_Red) | **99** | 700 | Default |
+| 3 | ElapsedTime | 1525 | ファントム (e_glo_00001_general_chi_vh_Normal_Green) | 1 | 0 | Default |
+| 4 | ElapsedTime | 1500 | ファントム (e_glo_00001_general_chi_vh_Normal_Red) | 3 | 500 | Default |
+| 5 | FriendUnitDead | 3 | コウモリの悪魔 (e_chi_00201_general_chi_vh_Normal_Yellow) | 1 | 0 | **Boss** |
+| 6 | FriendUnitDead | 3 | ファントム (e_glo_00001_general_chi_vh_Normal_Red) | 5 | 350 | Default |
+| 7 | FriendUnitDead | 3 | ファントム (e_glo_00001_general_chi_vh_Normal_Green) | 2 | 300 | Default |
+| 8 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_chi_vh_Normal_Red) | 5 | 350 | Default |
+| 9 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_chi_vh_Normal_Green) | 2 | 300 | Default |
+| 10 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_chi_vh_Normal_Green) | 1 | 0 | Default |
+| 11 | FriendUnitDead | 10 | ファントム (e_glo_00001_general_chi_vh_big_Normal_Yellow) | 1 | 0 | **Boss** |
+| 12 | FriendUnitDead | 10 | ファントム (e_glo_00001_general_chi_vh_big_Normal_Yellow) | 1 | 0 | Boss |
+| 13 | FriendUnitDead | 11 | ファントム (e_glo_00001_general_chi_vh_Normal_Red) | 5 | 350 | Default |
+| 14 | FriendUnitDead | 12 | ファントム (e_glo_00001_general_chi_vh_Normal_Green) | 1 | 0 | Default |
+| 15 | FriendUnitDead | 14 | コウモリの悪魔 (e_chi_00201_general_chi_vh_Boss_Yellow) | 1 | 0 | Default |
+| 16 | FriendUnitDead | 15 | ファントム (e_glo_00001_general_chi_vh_Normal_Red) | 1 | 0 | **Boss** |
+| 17 | FriendUnitDead | 15 | ファントム (e_glo_00001_general_chi_vh_Normal_Red) | 3 | 50 | Boss |
+| 18 | OutpostHpPercentage | 70 | ファントム (e_glo_00001_general_chi_vh_Normal_Green) | 1 | 0 | Default |
+| 19 | OutpostHpPercentage | 50 | ファントム (e_glo_00001_general_chi_vh_Normal_Green) | 1 | 0 | Boss |
+| 20 | OutpostHpPercentage | 50 | ファントム (e_glo_00001_general_chi_vh_big_Normal_Yellow) | 1 | 0 | Boss |
+| 21 | ElapsedTime | 2500 | ファントム (e_glo_00001_general_chi_vh_Normal_Colorless) | 3 | 600 | Default |
 
 **設計のポイント**:
 - `ElapsedTime=700` で早々に count=99 の無限補充を仕込み、その後の FriendUnitDead は「追加の敵種」という構造
@@ -115,26 +115,26 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | aura |
 |------|---------------|----------------|--------------|-------|----------|------|
-| 1 | ElapsedTime | 150 | e_glo_00001_general_kai_vh_Normal_Red | 3 | 350 | Default |
-| 2 | ElapsedTime | 1000 | e_glo_00001_general_kai_vh_Normal_Red | 3 | 500 | Default |
-| 3 | ElapsedTime | 1025 | e_glo_00001_general_kai_vh_Normal_Red | 3 | 500 | Default |
-| 4 | ElapsedTime | 1100 | e_glo_00001_general_kai_vh_Normal_Red | 1 | 0 | Default |
-| 5 | FriendUnitDead | 4 | e_kai_00301_general_kai_vh_Normal_Green | 1 | 0 | Default |
-| 6 | FriendUnitDead | 4 | e_glo_00001_general_kai_vh_Normal_Red | **99** | 500 | Default |
-| 7 | FriendUnitDead | 5 | e_glo_00001_general_kai_vh_Normal_Red | 5 | 500 | Default |
-| 8 | FriendUnitDead | 5 | e_glo_00001_general_kai_vh_Normal_Red | 1 | 0 | Default |
-| 9 | FriendUnitDead | 8 | e_kai_00301_general_kai_vh_Normal_Green | 1 | 0 | Default |
-| 10 | FriendUnitDead | 8 | e_kai_00301_general_kai_vh_Normal_Green | 1 | 0 | Default |
-| 11 | FriendUnitDead | 10 | e_glo_00001_general_kai_vh_**big**_Normal_Red | 1 | 0 | **Boss** |
-| 12 | FriendUnitDead | 8 | e_glo_00001_general_kai_vh_Normal_Red | 5 | 500 | Default |
-| 13 | FriendUnitDead | 11 | e_glo_00001_general_kai_vh_Normal_Red | 1 | 0 | Default |
-| 14 | FriendUnitDead | 13 | e_glo_00001_general_kai_vh_big_Normal_Red | 1 | 0 | **Boss** |
-| 15 | FriendUnitDead | 13 | e_glo_00001_general_kai_vh_big_Normal_Red | 1 | 0 | Boss |
-| 16 | FriendUnitDead | 13 | e_kai_00301_general_kai_vh_**Boss**_Green | 1 | 0 | Default |
-| 17 | FriendUnitDead | 13 | e_glo_00001_general_kai_vh_big_Normal_Red | 1 | 0 | Boss |
-| 18 | FriendUnitDead | 13 | e_glo_00001_general_kai_vh_big_Normal_Red | 1 | 0 | Boss |
-| 19 | FriendUnitDead | 13 | e_glo_00001_general_kai_vh_Normal_Red | **99** | 700 | Default |
-| 20 | OutpostHpPercentage | 50 | e_kai_00301_general_kai_vh_Normal_Green | 3 | 25 | Default |
+| 1 | ElapsedTime | 150 | ファントム (e_glo_00001_general_kai_vh_Normal_Red) | 3 | 350 | Default |
+| 2 | ElapsedTime | 1000 | ファントム (e_glo_00001_general_kai_vh_Normal_Red) | 3 | 500 | Default |
+| 3 | ElapsedTime | 1025 | ファントム (e_glo_00001_general_kai_vh_Normal_Red) | 3 | 500 | Default |
+| 4 | ElapsedTime | 1100 | ファントム (e_glo_00001_general_kai_vh_Normal_Red) | 1 | 0 | Default |
+| 5 | FriendUnitDead | 4 | 蜘蛛の怪獣 (e_kai_00301_general_kai_vh_Normal_Green) | 1 | 0 | Default |
+| 6 | FriendUnitDead | 4 | ファントム (e_glo_00001_general_kai_vh_Normal_Red) | **99** | 500 | Default |
+| 7 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_kai_vh_Normal_Red) | 5 | 500 | Default |
+| 8 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_kai_vh_Normal_Red) | 1 | 0 | Default |
+| 9 | FriendUnitDead | 8 | 蜘蛛の怪獣 (e_kai_00301_general_kai_vh_Normal_Green) | 1 | 0 | Default |
+| 10 | FriendUnitDead | 8 | 蜘蛛の怪獣 (e_kai_00301_general_kai_vh_Normal_Green) | 1 | 0 | Default |
+| 11 | FriendUnitDead | 10 | ファントム (e_glo_00001_general_kai_vh_big_Normal_Red) | 1 | 0 | **Boss** |
+| 12 | FriendUnitDead | 8 | ファントム (e_glo_00001_general_kai_vh_Normal_Red) | 5 | 500 | Default |
+| 13 | FriendUnitDead | 11 | ファントム (e_glo_00001_general_kai_vh_Normal_Red) | 1 | 0 | Default |
+| 14 | FriendUnitDead | 13 | ファントム (e_glo_00001_general_kai_vh_big_Normal_Red) | 1 | 0 | **Boss** |
+| 15 | FriendUnitDead | 13 | ファントム (e_glo_00001_general_kai_vh_big_Normal_Red) | 1 | 0 | Boss |
+| 16 | FriendUnitDead | 13 | 蜘蛛の怪獣 (e_kai_00301_general_kai_vh_Boss_Green) | 1 | 0 | Default |
+| 17 | FriendUnitDead | 13 | ファントム (e_glo_00001_general_kai_vh_big_Normal_Red) | 1 | 0 | Boss |
+| 18 | FriendUnitDead | 13 | ファントム (e_glo_00001_general_kai_vh_big_Normal_Red) | 1 | 0 | Boss |
+| 19 | FriendUnitDead | 13 | ファントム (e_glo_00001_general_kai_vh_Normal_Red) | **99** | 700 | Default |
+| 20 | OutpostHpPercentage | 50 | 蜘蛛の怪獣 (e_kai_00301_general_kai_vh_Normal_Green) | 3 | 25 | Default |
 
 **設計のポイント**:
 - 4体倒れたら即 count=99 の無限補充開始（elem 6）
@@ -149,26 +149,26 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | position | aura |
 |------|---------------|----------------|--------------|-------|----------|----------|------|
-| 1 | ElapsedTime | 250 | e_chi_00101_general_Normal_Colorless | 2 | 350 | - | Default |
-| 2 | ElapsedTime | 700 | e_chi_00101_general_Normal_Colorless | 2 | 350 | - | Default |
-| 3 | ElapsedTime | 1200 | e_chi_00101_general_Normal_Colorless | 1 | 0 | - | Default |
-| 4 | FriendUnitDead | 3 | e_chi_00101_general_Normal_Colorless | 10 | 500 | - | Default |
-| 5 | ElapsedTime | 1500 | e_chi_00101_general_Normal_Yellow | 1 | 0 | - | Default |
-| 6 | ElapsedTime | 1700 | e_chi_00101_general_Normal_Yellow | 2 | 500 | - | Default |
-| 7 | FriendUnitDead | 5 | e_chi_00101_general_Normal_Yellow | 2 | 500 | - | Default |
-| 8 | ElapsedTime | 2300 | e_chi_00101_general_Normal_Yellow | 1 | 0 | - | Default |
-| 9 | FriendUnitDead | 8 | e_chi_00101_general_Normal_Yellow | 3 | 350 | 1.9 | Default |
-| 10 | FriendUnitDead | 8 | e_chi_00101_general_Normal_Yellow | 3 | 350 | 1.8 | Default |
-| 11 | FriendUnitDead | 8 | e_chi_00101_general_Normal_Colorless | 20 | 500 | - | Default |
-| 12 | ElapsedTime | 3000 | e_chi_00101_general_Normal_Yellow | 1 | 0 | - | Default |
-| 13 | FriendUnitDead | 12 | e_chi_00101_general_Normal_Yellow | 3 | 750 | 1.83 | Default |
-| 14 | FriendUnitDead | 12 | e_chi_00101_general_Normal_Yellow | 3 | 750 | 1.86 | Default |
-| 15 | FriendUnitDead | 12 | e_chi_00101_general_Normal_Yellow | 3 | 750 | 1.88 | Default |
-| 16 | ElapsedTime | 4500 | e_chi_00101_general_Normal_Yellow | 3 | 750 | 1.83 | Default |
-| 17 | ElapsedTime | 4600 | e_chi_00101_general_Normal_Yellow | 3 | 750 | 1.86 | Default |
-| 18 | ElapsedTime | 4700 | e_chi_00101_general_Normal_Yellow | 3 | 750 | 1.88 | Default |
-| 19 | OutpostDamage | 1 | e_chi_00101_general_Normal_Yellow | **99** | 250 | 1.9 | Default |
-| 20 | OutpostDamage | 1 | e_chi_00101_general_Normal_Yellow | **99** | 250 | 1.8 | Default |
+| 1 | ElapsedTime | 250 | ゾンビ (e_chi_00101_general_Normal_Colorless) | 2 | 350 | - | Default |
+| 2 | ElapsedTime | 700 | ゾンビ (e_chi_00101_general_Normal_Colorless) | 2 | 350 | - | Default |
+| 3 | ElapsedTime | 1200 | ゾンビ (e_chi_00101_general_Normal_Colorless) | 1 | 0 | - | Default |
+| 4 | FriendUnitDead | 3 | ゾンビ (e_chi_00101_general_Normal_Colorless) | 10 | 500 | - | Default |
+| 5 | ElapsedTime | 1500 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 1 | 0 | - | Default |
+| 6 | ElapsedTime | 1700 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 2 | 500 | - | Default |
+| 7 | FriendUnitDead | 5 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 2 | 500 | - | Default |
+| 8 | ElapsedTime | 2300 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 1 | 0 | - | Default |
+| 9 | FriendUnitDead | 8 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 3 | 350 | 1.9 | Default |
+| 10 | FriendUnitDead | 8 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 3 | 350 | 1.8 | Default |
+| 11 | FriendUnitDead | 8 | ゾンビ (e_chi_00101_general_Normal_Colorless) | 20 | 500 | - | Default |
+| 12 | ElapsedTime | 3000 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 1 | 0 | - | Default |
+| 13 | FriendUnitDead | 12 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 3 | 750 | 1.83 | Default |
+| 14 | FriendUnitDead | 12 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 3 | 750 | 1.86 | Default |
+| 15 | FriendUnitDead | 12 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 3 | 750 | 1.88 | Default |
+| 16 | ElapsedTime | 4500 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 3 | 750 | 1.83 | Default |
+| 17 | ElapsedTime | 4600 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 3 | 750 | 1.86 | Default |
+| 18 | ElapsedTime | 4700 | ゾンビ (e_chi_00101_general_Normal_Yellow) | 3 | 750 | 1.88 | Default |
+| 19 | OutpostDamage | 1 | ゾンビ (e_chi_00101_general_Normal_Yellow) | **99** | 250 | 1.9 | Default |
+| 20 | OutpostDamage | 1 | ゾンビ (e_chi_00101_general_Normal_Yellow) | **99** | 250 | 1.8 | Default |
 
 **設計のポイント**:
 - `FriendUnitDead=12` で同じ敵を 3行・position 違いで配置（1.83/1.86/1.88 の微妙な位置差）
@@ -186,28 +186,28 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | aura | delay |
 |------|---------------|----------------|--------------|-------|----------|------|-------|
-| 1 | ElapsedTime | 1000 | **c_jig_00001_jig1_savage_Boss_Colorless** | 1 | 0 | Default | - |
-| 2 | FriendUnitDead | 1 | **c_jig_00001_jig1_savage_Boss_Colorless** | 1 | 0 | Default | 2000 |
-| 3 | ElapsedTime | 250 | **c_jig_00401_jig1_savage_Normal_Colorless** | 1 | 0 | Default | - |
-| 4 | FriendUnitDead | 3 | **c_jig_00401_jig1_savage_Normal_Colorless** | 1 | 0 | Default | 100 |
-| 5 | FriendUnitDead | 4 | **c_jig_00401_jig1_savage_Normal_Colorless** | 1 | 0 | Default | 300 |
-| 6 | ElapsedTime | 500 | e_jig_00601_jig1_savage_Normal_Yellow | 1 | 0 | Default | - |
-| 7 | FriendUnitDead | 6 | e_jig_00601_jig1_savage_Normal_Yellow | 1 | 0 | Default | 50 |
-| 8 | FriendUnitDead | 7 | e_jig_00601_jig1_savage_Normal_Yellow | 1 | 0 | Default | 250 |
-| 9 | FriendUnitDead | 8 | e_jig_00601_jig1_savage_Normal_Yellow | 1 | 0 | Default | 500 |
-| 10 | FriendUnitDead | 5 | **c_jig_00401_jig1_savage_Normal_Colorless** | 1 | 0 | Default | 500 |
-| 10 | FriendUnitDead | 15 | **c_jig_00401_jig1_savage_Normal_Colorless** | 1 | 0 | Default | 1000 |
-| 11 | FriendUnitDead | 10 | **c_jig_00401_jig1_savage_Normal_Colorless** | 1 | 0 | Default | 500 |
-| 12 | FriendUnitDead | 11 | **c_jig_00401_jig1_savage_Normal_Colorless** | 1 | 0 | Default | 500 |
-| 13 | FriendUnitDead | 12 | **c_jig_00401_jig1_savage_Normal_Colorless** | 1 | 0 | Default | 1000 |
-| 14 | FriendUnitDead | 13 | **c_jig_00401_jig1_savage_Normal_Colorless** | 1 | 0 | Default | 1000 |
-| 15 | FriendUnitDead | 14 | **c_jig_00401_jig1_savage_Normal_Colorless** | 1 | 0 | Default | 1000 |
-| 16 | FriendUnitDead | 9 | e_jig_00601_jig1_savage_Normal_Yellow | 1 | 0 | Default | 500 |
-| 17 | FriendUnitDead | 16 | e_jig_00601_jig1_savage_Normal_Yellow | 1 | 0 | Default | 500 |
-| 18 | FriendUnitDead | 17 | e_jig_00601_jig1_savage_Normal_Yellow | 1 | 0 | Default | 1000 |
-| 19 | FriendUnitDead | 18 | e_jig_00601_jig1_savage_Normal_Yellow | 1 | 0 | Default | 1000 |
-| 20 | FriendUnitDead | 19 | e_jig_00601_jig1_savage_Normal_Yellow | 1 | 0 | Default | 1000 |
-| 21 | FriendUnitDead | 20 | e_jig_00601_jig1_savage_Normal_Yellow | 1 | 0 | Default | 1000 |
+| 1 | ElapsedTime | 1000 | **がらんの画眉丸** (c_jig_00001_jig1_savage_Boss_Colorless) | 1 | 0 | Default | - |
+| 2 | FriendUnitDead | 1 | **がらんの画眉丸** (c_jig_00001_jig1_savage_Boss_Colorless) | 1 | 0 | Default | 2000 |
+| 3 | ElapsedTime | 250 | **賊王 亜左 弔兵衛** (c_jig_00401_jig1_savage_Normal_Colorless) | 1 | 0 | Default | - |
+| 4 | FriendUnitDead | 3 | **賊王 亜左 弔兵衛** (c_jig_00401_jig1_savage_Normal_Colorless) | 1 | 0 | Default | 100 |
+| 5 | FriendUnitDead | 4 | **賊王 亜左 弔兵衛** (c_jig_00401_jig1_savage_Normal_Colorless) | 1 | 0 | Default | 300 |
+| 6 | ElapsedTime | 500 | 朱槿 (e_jig_00601_jig1_savage_Normal_Yellow) | 1 | 0 | Default | - |
+| 7 | FriendUnitDead | 6 | 朱槿 (e_jig_00601_jig1_savage_Normal_Yellow) | 1 | 0 | Default | 50 |
+| 8 | FriendUnitDead | 7 | 朱槿 (e_jig_00601_jig1_savage_Normal_Yellow) | 1 | 0 | Default | 250 |
+| 9 | FriendUnitDead | 8 | 朱槿 (e_jig_00601_jig1_savage_Normal_Yellow) | 1 | 0 | Default | 500 |
+| 10 | FriendUnitDead | 5 | **賊王 亜左 弔兵衛** (c_jig_00401_jig1_savage_Normal_Colorless) | 1 | 0 | Default | 500 |
+| 10 | FriendUnitDead | 15 | **賊王 亜左 弔兵衛** (c_jig_00401_jig1_savage_Normal_Colorless) | 1 | 0 | Default | 1000 |
+| 11 | FriendUnitDead | 10 | **賊王 亜左 弔兵衛** (c_jig_00401_jig1_savage_Normal_Colorless) | 1 | 0 | Default | 500 |
+| 12 | FriendUnitDead | 11 | **賊王 亜左 弔兵衛** (c_jig_00401_jig1_savage_Normal_Colorless) | 1 | 0 | Default | 500 |
+| 13 | FriendUnitDead | 12 | **賊王 亜左 弔兵衛** (c_jig_00401_jig1_savage_Normal_Colorless) | 1 | 0 | Default | 1000 |
+| 14 | FriendUnitDead | 13 | **賊王 亜左 弔兵衛** (c_jig_00401_jig1_savage_Normal_Colorless) | 1 | 0 | Default | 1000 |
+| 15 | FriendUnitDead | 14 | **賊王 亜左 弔兵衛** (c_jig_00401_jig1_savage_Normal_Colorless) | 1 | 0 | Default | 1000 |
+| 16 | FriendUnitDead | 9 | 朱槿 (e_jig_00601_jig1_savage_Normal_Yellow) | 1 | 0 | Default | 500 |
+| 17 | FriendUnitDead | 16 | 朱槿 (e_jig_00601_jig1_savage_Normal_Yellow) | 1 | 0 | Default | 500 |
+| 18 | FriendUnitDead | 17 | 朱槿 (e_jig_00601_jig1_savage_Normal_Yellow) | 1 | 0 | Default | 1000 |
+| 19 | FriendUnitDead | 18 | 朱槿 (e_jig_00601_jig1_savage_Normal_Yellow) | 1 | 0 | Default | 1000 |
+| 20 | FriendUnitDead | 19 | 朱槿 (e_jig_00601_jig1_savage_Normal_Yellow) | 1 | 0 | Default | 1000 |
+| 21 | FriendUnitDead | 20 | 朱槿 (e_jig_00601_jig1_savage_Normal_Yellow) | 1 | 0 | Default | 1000 |
 
 **設計のポイント**:
 - c_キャラが主役。`FriendUnitDead` を 1体おきに細かく設定して「1体倒すたびに主人公が再登場」演出
@@ -223,28 +223,28 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | position | aura |
 |------|---------------|----------------|--------------|-------|----------|----------|------|
-| 1 | InitialSummon | 1 | **c_you_00001_you1_savage01_Boss_Red** | 1 | 0 | 1.65 | **Boss** |
-| 2 | InitialSummon | 1 | **c_you_00301_you1_savage01_Boss_Green** | 1 | 0 | 1.75 | **Boss** |
-| 3 | FriendUnitDead | 1 | **c_you_00001_you1_savage01_Boss_Red** | 1 | 0 | - | Boss |
-| 4 | EnterTargetKomaIndex | 4 | **c_you_00201_you1_savage01_Boss_Green** | 1 | 0 | 1.55 | Boss |
-| 5 | EnterTargetKomaIndex | 4 | e_you_00001_you1_savage01_Normal_Green | 1 | 0 | 1.35 | Boss |
-| 6 | EnterTargetKomaIndex | 4 | e_you_00001_you1_savage01_Normal_Green | 1 | 0 | 2.45 | Default |
-| 7 | EnterTargetKomaIndex | 4 | e_you_00101_you1_savage01_Normal_Green | 1 | 0 | 2.55 | Default |
-| 8 | OutpostDamage | 1 | **c_you_00001_you1_savage01_Boss_Red** | 1 | 0 | - | Boss |
-| 9 | OutpostDamage | 1 | **c_you_00101_you1_savage01_Boss_Blue** | 1 | 0 | - | Boss |
-| 10 | ElapsedTime | 300 | e_you_00001_you1_savage01_02_Normal_Colorless | 12 | 1000 | - | Default |
-| 11 | ElapsedTime | 800 | e_you_00001_you1_savage01_02_Normal_Colorless | 10 | 1400 | - | Default |
-| 12 | ElapsedTime | 900 | e_you_00101_you1_savage01_Normal_Colorless | 10 | 1500 | - | Default |
-| 13 | FriendUnitDead | 1 | e_you_00001_you1_savage01_Normal_Green | 3 | 1000 | - | Default |
-| 14 | FriendUnitDead | 1 | e_you_00101_you1_savage01_Normal_Green | 3 | 1100 | - | Default |
-| 15 | FriendUnitDead | 3 | e_you_00001_you1_savage01_Normal_Green | 8 | 1500 | - | Default |
-| 16 | FriendUnitDead | 3 | e_you_00101_you1_savage01_Normal_Green | 8 | 1600 | - | Default |
-| 17 | EnterTargetKomaIndex | 4 | e_you_00001_you1_savage01_02_Normal_Colorless | 1 | 0 | 2.75 | Default |
-| 18 | EnterTargetKomaIndex | 4 | e_you_00001_you1_savage01_Normal_Green | 1 | 0 | 2.85 | Default |
-| 19 | EnterTargetKomaIndex | 7 | e_you_00001_you1_savage01_Normal_Green | 7 | 2000 | - | Default |
-| 20 | EnterTargetKomaIndex | 7 | e_you_00101_you1_savage01_Normal_Green | 7 | 2000 | - | Default |
-| 21 | ElapsedTime | 12300 | e_you_00001_you1_savage01_02_Normal_Colorless | 4 | 1300 | - | Default |
-| 22 | ElapsedTime | 12400 | e_you_00101_you1_savage01_Normal_Colorless | 4 | 1400 | - | Default |
+| 1 | InitialSummon | 1 | **元殺し屋の新人教諭 リタ** (c_you_00001_you1_savage01_Boss_Red) | 1 | 0 | 1.65 | **Boss** |
+| 2 | InitialSummon | 1 | **ハナ** (c_you_00301_you1_savage01_Boss_Green) | 1 | 0 | 1.75 | **Boss** |
+| 3 | FriendUnitDead | 1 | **元殺し屋の新人教諭 リタ** (c_you_00001_you1_savage01_Boss_Red) | 1 | 0 | - | Boss |
+| 4 | EnterTargetKomaIndex | 4 | **ダグ** (c_you_00201_you1_savage01_Boss_Green) | 1 | 0 | 1.55 | Boss |
+| 5 | EnterTargetKomaIndex | 4 | 不良系金髪イケメン (e_you_00001_you1_savage01_Normal_Green) | 1 | 0 | 1.35 | Boss |
+| 6 | EnterTargetKomaIndex | 4 | 不良系金髪イケメン (e_you_00001_you1_savage01_Normal_Green) | 1 | 0 | 2.45 | Default |
+| 7 | EnterTargetKomaIndex | 4 | イケメンじゃない殺し屋 (e_you_00101_you1_savage01_Normal_Green) | 1 | 0 | 2.55 | Default |
+| 8 | OutpostDamage | 1 | **元殺し屋の新人教諭 リタ** (c_you_00001_you1_savage01_Boss_Red) | 1 | 0 | - | Boss |
+| 9 | OutpostDamage | 1 | **ルーク** (c_you_00101_you1_savage01_Boss_Blue) | 1 | 0 | - | Boss |
+| 10 | ElapsedTime | 300 | 不良系金髪イケメン (e_you_00001_you1_savage01_02_Normal_Colorless) | 12 | 1000 | - | Default |
+| 11 | ElapsedTime | 800 | 不良系金髪イケメン (e_you_00001_you1_savage01_02_Normal_Colorless) | 10 | 1400 | - | Default |
+| 12 | ElapsedTime | 900 | イケメンじゃない殺し屋 (e_you_00101_you1_savage01_Normal_Colorless) | 10 | 1500 | - | Default |
+| 13 | FriendUnitDead | 1 | 不良系金髪イケメン (e_you_00001_you1_savage01_Normal_Green) | 3 | 1000 | - | Default |
+| 14 | FriendUnitDead | 1 | イケメンじゃない殺し屋 (e_you_00101_you1_savage01_Normal_Green) | 3 | 1100 | - | Default |
+| 15 | FriendUnitDead | 3 | 不良系金髪イケメン (e_you_00001_you1_savage01_Normal_Green) | 8 | 1500 | - | Default |
+| 16 | FriendUnitDead | 3 | イケメンじゃない殺し屋 (e_you_00101_you1_savage01_Normal_Green) | 8 | 1600 | - | Default |
+| 17 | EnterTargetKomaIndex | 4 | 不良系金髪イケメン (e_you_00001_you1_savage01_02_Normal_Colorless) | 1 | 0 | 2.75 | Default |
+| 18 | EnterTargetKomaIndex | 4 | 不良系金髪イケメン (e_you_00001_you1_savage01_Normal_Green) | 1 | 0 | 2.85 | Default |
+| 19 | EnterTargetKomaIndex | 7 | 不良系金髪イケメン (e_you_00001_you1_savage01_Normal_Green) | 7 | 2000 | - | Default |
+| 20 | EnterTargetKomaIndex | 7 | イケメンじゃない殺し屋 (e_you_00101_you1_savage01_Normal_Green) | 7 | 2000 | - | Default |
+| 21 | ElapsedTime | 12300 | 不良系金髪イケメン (e_you_00001_you1_savage01_02_Normal_Colorless) | 4 | 1300 | - | Default |
+| 22 | ElapsedTime | 12400 | イケメンじゃない殺し屋 (e_you_00101_you1_savage01_Normal_Colorless) | 4 | 1400 | - | Default |
 
 **設計のポイント**:
 - 開幕から c_キャラ2種を Bossオーラつきで位置指定配置（elem 1・2 が InitialSummon=1）
@@ -261,29 +261,29 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | aura |
 |------|---------------|----------------|--------------|-------|----------|------|
-| 1 | ElapsedTime | 400 | e_glo_00001_general_ori3_vh2_Normal_Colorless | 4 | 600 | Default |
-| 2 | ElapsedTime | 1200 | e_glo_00001_general_ori3_vh2_Normal_Colorless | 2 | 1200 | Default |
-| 3 | ElapsedTime | 2000 | e_glo_00001_general_ori3_vh2_Normal_Blue | 1 | 0 | Default |
-| 4 | FriendUnitDead | 3 | e_glo_00001_general_ori3_vh2_Normal_Blue | 2 | 1500 | Default |
-| 5 | FriendUnitDead | 3 | e_glo_00001_general_ori3_vh2_Normal_Blue | 1 | 0 | Default |
-| 6 | FriendUnitDead | 5 | **c_sur_00201_general_ori3_vh2_Normal_Blue** | 1 | 0 | **Boss** |
-| 7 | FriendUnitDead | 5 | **c_sur_00301_general_ori3_vh2_Normal_Blue** | 1 | 0 | Boss |
-| 8 | FriendUnitDead | 5 | e_glo_00001_general_ori3_vh2_Normal_Colorless | **99** | 800 | Default |
-| 9 | FriendUnitDead | 5 | e_glo_00001_general_ori3_vh2_Normal_Blue | **99** | 1300 | Default |
-| 10 | FriendUnitDead | 7 | e_glo_00001_general_ori3_vh2_Normal_Blue | 1 | 0 | Default |
-| 11 | FriendUnitDead | 10 | **c_chi_00002_general_ori3_vh2_Normal_Blue** | 1 | 0 | **Boss** |
-| 12 | FriendUnitDead | 11 | e_glo_00001_general_ori3_vh2_Normal_Blue | 3 | 600 | Default |
-| 13 | FriendUnitDead | 11 | **c_rik_00101_general_ori3_vh2_Boss_Blue** | 1 | 0 | **Boss** |
-| 14 | FriendUnitDead | 11 | e_glo_00001_general_ori3_vh2_big_Normal_Colorless | 1 | 0 | Boss |
-| 15 | FriendUnitDead | 11 | e_glo_00001_general_ori3_vh2_big_Normal_Blue | 1 | 0 | Boss |
-| 16 | FriendUnitDead | 15 | e_glo_00001_general_ori3_vh2_Normal_Blue | 2 | 50 | **Boss** |
-| 17 | FriendUnitDead | 14 | e_glo_00001_general_ori3_vh2_Normal_Colorless | 2 | 700 | Default |
-| 18 | FriendUnitDead | 15 | e_glo_00001_general_ori3_vh2_Normal_Blue | 2 | 700 | Default |
-| 19 | FriendUnitDead | 16 | e_glo_00001_general_ori3_vh2_Normal_Blue | 2 | 700 | Default |
-| 20 | OutpostHpPercentage | 50 | e_glo_00001_general_ori3_vh2_big_Normal_Colorless | 1 | 0 | Boss |
-| 21 | OutpostHpPercentage | 50 | e_glo_00001_general_ori3_vh2_big_Normal_Blue | 1 | 0 | Boss |
-| 22 | FriendUnitDead | 3 | e_glo_00001_general_ori3_vh2_Normal_Blue | 2 | 50 | Default |
-| 23 | FriendUnitDead | 5 | e_glo_00001_general_ori3_vh2_Normal_Blue | 1 | 0 | Default |
+| 1 | ElapsedTime | 400 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Colorless) | 4 | 600 | Default |
+| 2 | ElapsedTime | 1200 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Colorless) | 2 | 1200 | Default |
+| 3 | ElapsedTime | 2000 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | 1 | 0 | Default |
+| 4 | FriendUnitDead | 3 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | 2 | 1500 | Default |
+| 5 | FriendUnitDead | 3 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | 1 | 0 | Default |
+| 6 | FriendUnitDead | 5 | **東 日万凛** (c_sur_00201_general_ori3_vh2_Normal_Blue) | 1 | 0 | **Boss** |
+| 7 | FriendUnitDead | 5 | **駿河 朱々** (c_sur_00301_general_ori3_vh2_Normal_Blue) | 1 | 0 | Boss |
+| 8 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Colorless) | **99** | 800 | Default |
+| 9 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | **99** | 1300 | Default |
+| 10 | FriendUnitDead | 7 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | 1 | 0 | Default |
+| 11 | FriendUnitDead | 10 | **悪魔が恐れる悪魔 チェンソーマン** (c_chi_00002_general_ori3_vh2_Normal_Blue) | 1 | 0 | **Boss** |
+| 12 | FriendUnitDead | 11 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | 3 | 600 | Default |
+| 13 | FriendUnitDead | 11 | **甘戸 めめ** (c_rik_00101_general_ori3_vh2_Boss_Blue) | 1 | 0 | **Boss** |
+| 14 | FriendUnitDead | 11 | ファントム (e_glo_00001_general_ori3_vh2_big_Normal_Colorless) | 1 | 0 | Boss |
+| 15 | FriendUnitDead | 11 | ファントム (e_glo_00001_general_ori3_vh2_big_Normal_Blue) | 1 | 0 | Boss |
+| 16 | FriendUnitDead | 15 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | 2 | 50 | **Boss** |
+| 17 | FriendUnitDead | 14 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Colorless) | 2 | 700 | Default |
+| 18 | FriendUnitDead | 15 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | 2 | 700 | Default |
+| 19 | FriendUnitDead | 16 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | 2 | 700 | Default |
+| 20 | OutpostHpPercentage | 50 | ファントム (e_glo_00001_general_ori3_vh2_big_Normal_Colorless) | 1 | 0 | Boss |
+| 21 | OutpostHpPercentage | 50 | ファントム (e_glo_00001_general_ori3_vh2_big_Normal_Blue) | 1 | 0 | Boss |
+| 22 | FriendUnitDead | 3 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | 2 | 50 | Default |
+| 23 | FriendUnitDead | 5 | ファントム (e_glo_00001_general_ori3_vh2_Normal_Blue) | 1 | 0 | Default |
 
 **設計のポイント**:
 - `FriendUnitDead=5` の同タイミングで c_キャラ2体＋2種の count=99 無限補充を一気に開始（elem 6/7/8/9）
@@ -299,29 +299,29 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | aura |
 |------|---------------|----------------|--------------|-------|----------|------|
-| 1 | ElapsedTime | 1 | e_glo_00001_general2_ori4_Normal_Colorless | 6 | 500 | Default |
-| 2 | ElapsedTime | 2100 | e_glo_00001_general2_ori4_Normal_Colorless | 3 | 600 | Default |
-| 3 | ElapsedTime | 2200 | e_glo_00001_general2_ori4_Normal_Colorless | 1 | 0 | Default |
-| 4 | ElapsedTime | 2300 | e_glo_00001_general_ori4_Normal_Green | 3 | 800 | Default |
-| 5 | FriendUnitDead | 4 | e_glo_00001_general2_ori4_Normal_Colorless | **99** | 700 | Default |
-| 6 | FriendUnitDead | 4 | e_glo_00001_general_ori4_Normal_Green | 1 | 0 | Default |
-| 7 | FriendUnitDead | 4 | e_glo_00001_general_ori4_Normal_Green | 2 | 35 | Default |
-| 8 | FriendUnitDead | 6 | **c_sum_00101_general_ori4_Normal_Green** | 1 | 0 | **Boss** |
-| 9 | FriendUnitDead | 6 | **c_sum_00201_general_ori4_Normal_Green** | 1 | 0 | **Boss** |
-| 10 | FriendUnitDead | 9 | e_glo_00001_general2_ori4_Normal_Colorless | 4 | 25 | Default |
-| 11 | FriendUnitDead | 9 | e_glo_00001_general_ori4_Normal_Green | 2 | 50 | Default |
-| 12 | FriendUnitDead | 9 | e_glo_00001_general_ori4_Normal_Green | 1 | 0 | Default |
-| 13 | FriendUnitDead | 6 | e_glo_00001_general2_ori4_big_Normal_Colorless | 1 | 0 | **Boss** |
-| 14 | FriendUnitDead | 9 | e_glo_00001_general_ori4_big_Normal_Green | 1 | 0 | Boss |
-| 15 | FriendUnitDead | 19 | e_glo_00001_general2_ori4_big_Normal_Colorless | 1 | 0 | Boss |
-| 16 | FriendUnitDead | 20 | e_glo_00001_general_ori4_big_Normal_Green | 1 | 0 | Boss |
-| 17 | FriendUnitDead | 8 | e_glo_00001_general_ori4_Normal_Green | 3 | 50 | Default |
-| 18 | FriendUnitDead | 9 | e_glo_00001_general_ori4_Normal_Green | 2 | 50 | Default |
-| 19 | FriendUnitDead | 8 | e_glo_00001_general_ori4_Normal_Green | 1 | 0 | Default |
-| 20 | FriendUnitDead | 19 | **c_kai_00002_general_ori4_Boss_Green** | 1 | 0 | **Boss** |
-| 21 | FriendUnitDead | 19 | **c_kai_00101_general_ori4_Normal_Green** | 1 | 0 | **Boss** |
-| 22 | OutpostDamage | 1 | e_glo_00001_general_ori4_Normal_Green | 2 | 50 | Default |
-| 23 | OutpostDamage | 1 | e_glo_00001_general2_ori4_big_Normal_Colorless | 3 | 50 | Boss |
+| 1 | ElapsedTime | 1 | ファントム (e_glo_00001_general2_ori4_Normal_Colorless) | 6 | 500 | Default |
+| 2 | ElapsedTime | 2100 | ファントム (e_glo_00001_general2_ori4_Normal_Colorless) | 3 | 600 | Default |
+| 3 | ElapsedTime | 2200 | ファントム (e_glo_00001_general2_ori4_Normal_Colorless) | 1 | 0 | Default |
+| 4 | ElapsedTime | 2300 | ファントム (e_glo_00001_general_ori4_Normal_Green) | 3 | 800 | Default |
+| 5 | FriendUnitDead | 4 | ファントム (e_glo_00001_general2_ori4_Normal_Colorless) | **99** | 700 | Default |
+| 6 | FriendUnitDead | 4 | ファントム (e_glo_00001_general_ori4_Normal_Green) | 1 | 0 | Default |
+| 7 | FriendUnitDead | 4 | ファントム (e_glo_00001_general_ori4_Normal_Green) | 2 | 35 | Default |
+| 8 | FriendUnitDead | 6 | **影のウシオ 小舟 潮** (c_sum_00101_general_ori4_Normal_Green) | 1 | 0 | **Boss** |
+| 9 | FriendUnitDead | 6 | **小舟 澪** (c_sum_00201_general_ori4_Normal_Green) | 1 | 0 | **Boss** |
+| 10 | FriendUnitDead | 9 | ファントム (e_glo_00001_general2_ori4_Normal_Colorless) | 4 | 25 | Default |
+| 11 | FriendUnitDead | 9 | ファントム (e_glo_00001_general_ori4_Normal_Green) | 2 | 50 | Default |
+| 12 | FriendUnitDead | 9 | ファントム (e_glo_00001_general_ori4_Normal_Green) | 1 | 0 | Default |
+| 13 | FriendUnitDead | 6 | ファントム (e_glo_00001_general2_ori4_big_Normal_Colorless) | 1 | 0 | **Boss** |
+| 14 | FriendUnitDead | 9 | ファントム (e_glo_00001_general_ori4_big_Normal_Green) | 1 | 0 | Boss |
+| 15 | FriendUnitDead | 19 | ファントム (e_glo_00001_general2_ori4_big_Normal_Colorless) | 1 | 0 | Boss |
+| 16 | FriendUnitDead | 20 | ファントム (e_glo_00001_general_ori4_big_Normal_Green) | 1 | 0 | Boss |
+| 17 | FriendUnitDead | 8 | ファントム (e_glo_00001_general_ori4_Normal_Green) | 3 | 50 | Default |
+| 18 | FriendUnitDead | 9 | ファントム (e_glo_00001_general_ori4_Normal_Green) | 2 | 50 | Default |
+| 19 | FriendUnitDead | 8 | ファントム (e_glo_00001_general_ori4_Normal_Green) | 1 | 0 | Default |
+| 20 | FriendUnitDead | 19 | **隠された英雄の姿 怪獣８号** (c_kai_00002_general_ori4_Boss_Green) | 1 | 0 | **Boss** |
+| 21 | FriendUnitDead | 19 | **市川 レノ** (c_kai_00101_general_ori4_Normal_Green) | 1 | 0 | **Boss** |
+| 22 | OutpostDamage | 1 | ファントム (e_glo_00001_general_ori4_Normal_Green) | 2 | 50 | Default |
+| 23 | OutpostDamage | 1 | ファントム (e_glo_00001_general2_ori4_big_Normal_Colorless) | 3 | 50 | Boss |
 
 **設計のポイント**:
 - c_キャラが「序盤の強化」(elem 8/9, FriendUnitDead=6) と「終盤のフィナーレ」(elem 20/21, FriendUnitDead=19) の2段階で登場
@@ -337,29 +337,29 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | position | aura |
 |------|---------------|----------------|--------------|-------|----------|----------|------|
-| 1 | ElapsedTime | 200 | **c_gom_00001_general_h_Boss_Yellow** | 1 | 0 | - | Default |
-| 2 | FriendUnitDead | 1 | e_gom_00301_general_n_Boss_Yellow | 1 | 0 | - | Default |
-| 3 | ElapsedTime | 950 | **c_gom_00201_general_vh_Boss_Yellow** | 1 | 0 | - | Default |
-| 4 | FriendUnitDead | 3 | **c_spy_00201_general_vh_Boss_Yellow** | 1 | 0 | - | Default |
-| 5 | FriendUnitDead | 3 | e_gom_00401_general_vh_Boss_Yellow | 1 | 0 | - | Default |
-| 6 | OutpostHpPercentage | 99 | **c_aka_00001_general_vh_Boss_Yellow** | 1 | 0 | - | Default |
-| 7 | FriendUnitDead | 1 | e_gom_00402_general_vh_Normal_Yellow | 3 | 250 | - | Default |
-| 8 | InitialSummon | 1 | e_spy_00001_general_vh_Normal_Yellow | 1 | 0 | 0.6 | Default |
-| 9 | InitialSummon | 1 | e_spy_00001_general_vh_Normal_Yellow | 1 | 0 | 1.3 | Default |
-| 10 | InitialSummon | 1 | e_spy_00001_general_vh_Normal_Yellow | 1 | 0 | 1.5 | Default |
-| 11 | ElapsedTime | 300 | e_gom_01001_general_vh_Normal_Yellow | 3 | 150 | - | Default |
-| 12 | ElapsedTime | 400 | e_gom_01002_general_vh_Normal_Yellow | 3 | 250 | - | Default |
-| 13 | FriendUnitDead | 8 | e_gom_01001_general_n_Normal_Yellow | 2 | 50 | 1.2 | Default |
-| 14 | FriendUnitDead | 8 | e_gom_01002_general_n_Normal_Yellow | 3 | 50 | 1.4 | Default |
-| 15 | FriendUnitDead | 10 | e_gom_01001_general_n_Normal_Yellow | 3 | 150 | 1.7 | Default |
-| 16 | FriendUnitDead | 10 | e_gom_01002_general_n_Normal_Yellow | 4 | 150 | 1.9 | Default |
-| 17 | OutpostHpPercentage | 99 | e_gom_00401_general_vh_Boss_Yellow | 1 | 0 | 1.4 | Default |
-| 18 | OutpostHpPercentage | 99 | e_gom_00402_general_vh_Normal_Yellow | 4 | 50 | - | Default |
-| 19 | OutpostHpPercentage | 40 | e_gom_00402_general_vh_Normal_Yellow | 4 | 50 | - | Default |
-| 20 | ElapsedTime | 3000 | e_gom_01001_general_n_Normal_Yellow | 4 | 100 | - | Default |
-| 21 | ElapsedTime | 3050 | e_gom_01002_general_n_Normal_Yellow | 4 | 100 | - | Default |
-| 22 | FriendUnitDead | 1 | e_gom_00402_general_vh_Normal_Yellow | 5 | 450 | - | Default |
-| 23 | FriendUnitDead | 4 | e_spy_00001_general_vh_Normal_Yellow | 3 | 50 | 2.5 | Default |
+| 1 | ElapsedTime | 200 | **囚われの王女 姫様** (c_gom_00001_general_h_Boss_Yellow) | 1 | 0 | - | Default |
+| 2 | FriendUnitDead | 1 | キュイ (e_gom_00301_general_n_Boss_Yellow) | 1 | 0 | - | Default |
+| 3 | ElapsedTime | 950 | **クロル** (c_gom_00201_general_vh_Boss_Yellow) | 1 | 0 | - | Default |
+| 4 | FriendUnitDead | 3 | **<いばら姫> ヨル** (c_spy_00201_general_vh_Boss_Yellow) | 1 | 0 | - | Default |
+| 5 | FriendUnitDead | 3 | たこ焼きくん (e_gom_00401_general_vh_Boss_Yellow) | 1 | 0 | - | Default |
+| 6 | OutpostHpPercentage | 99 | **佐々木** (c_aka_00001_general_vh_Boss_Yellow) | 1 | 0 | - | Default |
+| 7 | FriendUnitDead | 1 | たこ焼き (e_gom_00402_general_vh_Normal_Yellow) | 3 | 250 | - | Default |
+| 8 | InitialSummon | 1 | 密輸組織の残党 (e_spy_00001_general_vh_Normal_Yellow) | 1 | 0 | 0.6 | Default |
+| 9 | InitialSummon | 1 | 密輸組織の残党 (e_spy_00001_general_vh_Normal_Yellow) | 1 | 0 | 1.3 | Default |
+| 10 | InitialSummon | 1 | 密輸組織の残党 (e_spy_00001_general_vh_Normal_Yellow) | 1 | 0 | 1.5 | Default |
+| 11 | ElapsedTime | 300 | あんぱん (e_gom_01001_general_vh_Normal_Yellow) | 3 | 150 | - | Default |
+| 12 | ElapsedTime | 400 | トーストあんぱん (e_gom_01002_general_vh_Normal_Yellow) | 3 | 250 | - | Default |
+| 13 | FriendUnitDead | 8 | あんぱん (e_gom_01001_general_n_Normal_Yellow) | 2 | 50 | 1.2 | Default |
+| 14 | FriendUnitDead | 8 | トーストあんぱん (e_gom_01002_general_n_Normal_Yellow) | 3 | 50 | 1.4 | Default |
+| 15 | FriendUnitDead | 10 | あんぱん (e_gom_01001_general_n_Normal_Yellow) | 3 | 150 | 1.7 | Default |
+| 16 | FriendUnitDead | 10 | トーストあんぱん (e_gom_01002_general_n_Normal_Yellow) | 4 | 150 | 1.9 | Default |
+| 17 | OutpostHpPercentage | 99 | たこ焼きくん (e_gom_00401_general_vh_Boss_Yellow) | 1 | 0 | 1.4 | Default |
+| 18 | OutpostHpPercentage | 99 | たこ焼き (e_gom_00402_general_vh_Normal_Yellow) | 4 | 50 | - | Default |
+| 19 | OutpostHpPercentage | 40 | たこ焼き (e_gom_00402_general_vh_Normal_Yellow) | 4 | 50 | - | Default |
+| 20 | ElapsedTime | 3000 | あんぱん (e_gom_01001_general_n_Normal_Yellow) | 4 | 100 | - | Default |
+| 21 | ElapsedTime | 3050 | トーストあんぱん (e_gom_01002_general_n_Normal_Yellow) | 4 | 100 | - | Default |
+| 22 | FriendUnitDead | 1 | たこ焼き (e_gom_00402_general_vh_Normal_Yellow) | 5 | 450 | - | Default |
+| 23 | FriendUnitDead | 4 | 密輸組織の残党 (e_spy_00001_general_vh_Normal_Yellow) | 3 | 50 | 2.5 | Default |
 
 **設計のポイント**:
 - c_キャラが ElapsedTime(200ms, 950ms) と FriendUnitDead(3体) と OutpostHpPercentage(99%) の3トリガーで登場
@@ -378,20 +378,20 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | position | aura |
 |------|---------------|----------------|--------------|-------|----------|----------|------|
-| 1 | ElapsedTime | 150 | e_mag_00301_general_Normal_Colorless | 2 | 50 | - | Default |
-| 2 | ElapsedTime | 1000 | e_mag_00301_general_Normal_Colorless | 1 | 0 | - | Default |
-| 3 | ElapsedTime | 1050 | e_mag_00301_general_Normal_Colorless | 1 | 0 | - | Default |
-| 8 | ElapsedTime | 2000 | e_mag_00301_general_Normal_Colorless | 1 | 0 | - | Default |
-| 13 | ElapsedTime | 3000 | e_mag_00301_general_Normal_Red | 1 | 0 | - | Default |
-| 14 | FriendUnitDead | 13 | e_mag_00201_general_**Boss**_Red | 1 | 0 | - | Default |
-| 15 | FriendUnitDead | 13 | e_mag_00301_general_Normal_Colorless | 1 | 0 | 2.8 | Default |
-| 16 | FriendUnitDead | 13 | e_mag_00301_general_Normal_Colorless | 1 | 0 | 2.9 | Default |
-| 17 | FriendUnitDead | 15 | e_mag_00301_general_Normal_Blue | 10 | 500 | 2.9 | Default |
-| 18 | FriendUnitDead | 16 | e_mag_00301_general_Normal_Red | 5 | 750 | 2.9 | Default |
-| 19 | FriendUnitDead | 14 | e_mag_00301_general_Normal_Colorless | **99** | 500 | - | Default |
-| 20 | FriendUnitDead | 14 | e_mag_00301_general_Normal_Blue | **99** | 750 | - | Default |
-| 21 | FriendUnitDead | 14 | e_mag_00301_general_Normal_Red | **99** | 1200 | - | Default |
-| 22 | OutpostDamage | 1 | e_mag_00301_general_Normal_Red | **99** | 750 | - | Default |
+| 1 | ElapsedTime | 150 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Colorless) | 2 | 50 | - | Default |
+| 2 | ElapsedTime | 1000 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Colorless) | 1 | 0 | - | Default |
+| 3 | ElapsedTime | 1050 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Colorless) | 1 | 0 | - | Default |
+| 8 | ElapsedTime | 2000 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Colorless) | 1 | 0 | - | Default |
+| 13 | ElapsedTime | 3000 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Red) | 1 | 0 | - | Default |
+| 14 | FriendUnitDead | 13 | 建造物寄生型の怪異 (大) (e_mag_00201_general_Boss_Red) | 1 | 0 | - | Default |
+| 15 | FriendUnitDead | 13 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Colorless) | 1 | 0 | 2.8 | Default |
+| 16 | FriendUnitDead | 13 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Colorless) | 1 | 0 | 2.9 | Default |
+| 17 | FriendUnitDead | 15 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Blue) | 10 | 500 | 2.9 | Default |
+| 18 | FriendUnitDead | 16 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Red) | 5 | 750 | 2.9 | Default |
+| 19 | FriendUnitDead | 14 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Colorless) | **99** | 500 | - | Default |
+| 20 | FriendUnitDead | 14 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Blue) | **99** | 750 | - | Default |
+| 21 | FriendUnitDead | 14 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Red) | **99** | 1200 | - | Default |
+| 22 | OutpostDamage | 1 | 建造物寄生型の怪異 (e_mag_00301_general_Normal_Red) | **99** | 750 | - | Default |
 
 **設計のポイント**:
 - `FriendUnitDead=13` で Bossユニット登場＋位置指定2体配置（elem 14/15/16 同タイミング）
@@ -406,25 +406,25 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | position | aura |
 |------|---------------|----------------|--------------|-------|----------|----------|------|
-| 1 | ElapsedTime | 150 | e_sur_00101_general_Normal_Blue | 3 | 300 | - | Default |
-| 2 | ElapsedTime | 1000 | e_sur_00101_general_Normal_Blue | 2 | 50 | - | Default |
-| 3 | ElapsedTime | 1500 | e_sur_00101_general_Normal_Blue | 3 | 50 | - | Default |
-| 4 | FriendUnitDead | 3 | e_sur_00101_general_Normal_Colorless | 2 | 50 | - | Default |
-| 5 | FriendUnitDead | 3 | e_sur_00101_general_Normal_Blue | 1 | 0 | - | Default |
-| 6 | ElapsedTime | 2800 | e_sur_00101_general_Normal_Colorless | 1 | 0 | - | Default |
-| 7 | ElapsedTime | 2700 | e_sur_00101_general_Normal_Blue | 1 | 0 | - | Default |
-| 8 | FriendUnitDead | 6 | e_sur_00101_general_Normal_Colorless | 3 | 100 | - | Default |
-| 9 | FriendUnitDead | 7 | e_sur_00101_general_Normal_Blue | 3 | 100 | - | Default |
-| 10 | ElapsedTime | 3200 | e_sur_00101_general_Normal_Colorless | 3 | 100 | 1.3 | Default |
-| 11 | ElapsedTime | 3600 | e_sur_00101_general_Normal_Blue | 10 | 500 | - | Default |
-| 12 | ElapsedTime | 3000 | e_sur_00101_general_Normal_Green | 10 | 600 | - | Default |
-| 13 | ElapsedTime | 4500 | e_sur_00101_general_Normal_Colorless | 3 | 100 | 1.3 | Default |
-| 14 | ElapsedTime | 4000 | e_sur_00101_general_Normal_Green | 10 | 800 | - | Default |
-| 15 | ElapsedTime | 5500 | e_sur_00101_general_Normal_Green | 10 | 1200 | - | Default |
-| 16 | ElapsedTime | 2500 | e_sur_00101_general_Normal_Green | 10 | 1200 | - | Default |
-| 17 | ElapsedTime | 5700 | e_sur_00101_general_Normal_Blue | 2 | 50 | 1.3 | Default |
-| 18 | OutpostDamage | 1 | e_sur_00101_general_Normal_Green | **99** | 750 | - | Default |
-| 19 | OutpostDamage | 1 | e_sur_00101_general_Normal_Green | **99** | 1200 | - | Default |
+| 1 | ElapsedTime | 150 | 醜鬼 (e_sur_00101_general_Normal_Blue) | 3 | 300 | - | Default |
+| 2 | ElapsedTime | 1000 | 醜鬼 (e_sur_00101_general_Normal_Blue) | 2 | 50 | - | Default |
+| 3 | ElapsedTime | 1500 | 醜鬼 (e_sur_00101_general_Normal_Blue) | 3 | 50 | - | Default |
+| 4 | FriendUnitDead | 3 | 醜鬼 (e_sur_00101_general_Normal_Colorless) | 2 | 50 | - | Default |
+| 5 | FriendUnitDead | 3 | 醜鬼 (e_sur_00101_general_Normal_Blue) | 1 | 0 | - | Default |
+| 6 | ElapsedTime | 2800 | 醜鬼 (e_sur_00101_general_Normal_Colorless) | 1 | 0 | - | Default |
+| 7 | ElapsedTime | 2700 | 醜鬼 (e_sur_00101_general_Normal_Blue) | 1 | 0 | - | Default |
+| 8 | FriendUnitDead | 6 | 醜鬼 (e_sur_00101_general_Normal_Colorless) | 3 | 100 | - | Default |
+| 9 | FriendUnitDead | 7 | 醜鬼 (e_sur_00101_general_Normal_Blue) | 3 | 100 | - | Default |
+| 10 | ElapsedTime | 3200 | 醜鬼 (e_sur_00101_general_Normal_Colorless) | 3 | 100 | 1.3 | Default |
+| 11 | ElapsedTime | 3600 | 醜鬼 (e_sur_00101_general_Normal_Blue) | 10 | 500 | - | Default |
+| 12 | ElapsedTime | 3000 | 醜鬼 (e_sur_00101_general_Normal_Green) | 10 | 600 | - | Default |
+| 13 | ElapsedTime | 4500 | 醜鬼 (e_sur_00101_general_Normal_Colorless) | 3 | 100 | 1.3 | Default |
+| 14 | ElapsedTime | 4000 | 醜鬼 (e_sur_00101_general_Normal_Green) | 10 | 800 | - | Default |
+| 15 | ElapsedTime | 5500 | 醜鬼 (e_sur_00101_general_Normal_Green) | 10 | 1200 | - | Default |
+| 16 | ElapsedTime | 2500 | 醜鬼 (e_sur_00101_general_Normal_Green) | 10 | 1200 | - | Default |
+| 17 | ElapsedTime | 5700 | 醜鬼 (e_sur_00101_general_Normal_Blue) | 2 | 50 | 1.3 | Default |
+| 18 | OutpostDamage | 1 | 醜鬼 (e_sur_00101_general_Normal_Green) | **99** | 750 | - | Default |
+| 19 | OutpostDamage | 1 | 醜鬼 (e_sur_00101_general_Normal_Green) | **99** | 1200 | - | Default |
 
 **設計のポイント**:
 - 2500〜5700ms の広い時間帯に count=10 の集中ウェーブを複数配置（elem 11/12/13/14/15/16）
@@ -439,25 +439,25 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | position | aura |
 |------|---------------|----------------|--------------|-------|----------|----------|------|
-| 1 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Colorless | 1 | 0 | 0.5 | Default |
-| 2 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Colorless | 1 | 0 | 0.8 | Default |
-| 3 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 1.2 | Default |
-| 4 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 1.3 | Default |
-| 5 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 1.7 | Default |
-| 6 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 1.8 | Default |
-| 7 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 2.1 | Default |
-| 8 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 2.3 | Default |
-| 9 | InitialSummon | 0 | e_glo_00002_general_osh_n_Normal_Green | 1 | 0 | 2.7 | Default |
-| 10 | EnterTargetKomaIndex | 0 | **c_osh_00001_general_osh_n_Boss_Colorless** | 1 | 0 | 1.5 | Default |
-| 11 | FriendUnitDead | 1 | e_glo_00002_general_osh_n_Normal_Colorless | 5 | 500 | - | Default |
-| 12 | FriendUnitDead | 2 | e_glo_00002_general_osh_n_Normal_Colorless | 3 | 250 | - | Default |
-| 13 | FriendUnitDead | 3 | e_glo_00002_general_osh_n_Normal_Green | 5 | 500 | - | Default |
-| 14 | FriendUnitDead | 4 | e_glo_00002_general_osh_n_Normal_Green | 3 | 250 | - | Default |
-| 15 | FriendUnitDead | 5 | e_glo_00002_general_osh_n_Normal_Green | 3 | 250 | 1.7 | Default |
-| 16 | FriendUnitDead | 6 | e_glo_00002_general_osh_n_Normal_Green | 3 | 250 | 1.8 | Default |
-| 17 | FriendUnitDead | 7 | e_glo_00002_general_osh_n_Normal_Colorless | 3 | 250 | 2.1 | Default |
-| 18 | FriendUnitDead | 8 | e_glo_00002_general_osh_n_Normal_Colorless | 3 | 250 | 2.3 | Default |
-| 19 | FriendUnitDead | 9 | e_glo_00002_general_osh_n_Normal_Colorless | 3 | 250 | 2.7 | Default |
+| 1 | InitialSummon | 0 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Colorless) | 1 | 0 | 0.5 | Default |
+| 2 | InitialSummon | 0 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Colorless) | 1 | 0 | 0.8 | Default |
+| 3 | InitialSummon | 0 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 1 | 0 | 1.2 | Default |
+| 4 | InitialSummon | 0 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 1 | 0 | 1.3 | Default |
+| 5 | InitialSummon | 0 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 1 | 0 | 1.7 | Default |
+| 6 | InitialSummon | 0 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 1 | 0 | 1.8 | Default |
+| 7 | InitialSummon | 0 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 1 | 0 | 2.1 | Default |
+| 8 | InitialSummon | 0 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 1 | 0 | 2.3 | Default |
+| 9 | InitialSummon | 0 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 1 | 0 | 2.7 | Default |
+| 10 | EnterTargetKomaIndex | 0 | **B小町不動のセンター アイ** (c_osh_00001_general_osh_n_Boss_Colorless) | 1 | 0 | 1.5 | Default |
+| 11 | FriendUnitDead | 1 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Colorless) | 5 | 500 | - | Default |
+| 12 | FriendUnitDead | 2 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Colorless) | 3 | 250 | - | Default |
+| 13 | FriendUnitDead | 3 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 5 | 500 | - | Default |
+| 14 | FriendUnitDead | 4 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 3 | 250 | - | Default |
+| 15 | FriendUnitDead | 5 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 3 | 250 | 1.7 | Default |
+| 16 | FriendUnitDead | 6 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Green) | 3 | 250 | 1.8 | Default |
+| 17 | FriendUnitDead | 7 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Colorless) | 3 | 250 | 2.1 | Default |
+| 18 | FriendUnitDead | 8 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Colorless) | 3 | 250 | 2.3 | Default |
+| 19 | FriendUnitDead | 9 | 推し活ファントム (e_glo_00002_general_osh_n_Normal_Colorless) | 3 | 250 | 2.7 | Default |
 
 **設計のポイント**:
 - `InitialSummon=0` で9行・9つの異なる position を指定 → 盤面を隙間なく埋める開幕演出
@@ -473,22 +473,22 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | position | aura | delay |
 |------|---------------|----------------|--------------|-------|----------|----------|------|-------|
-| 1 | ElapsedTime | 250 | **c_osh_00001_general_osh_n_Boss_Green** | 1 | 0 | - | Default | - |
-| 2 | EnterTargetKomaIndex | 0 | e_glo_00001_general_osh_n_Normal_Green | 2 | 100 | 1.1 | Default | 100 |
-| 3 | EnterTargetKomaIndex | 1 | e_glo_00001_general_osh_n_Normal_Green | 3 | 150 | 1.5 | Default | - |
-| 4 | EnterTargetKomaIndex | 2 | e_glo_00001_general_osh_n_Normal_Green | 2 | 250 | 3.3 | Default | - |
-| 5 | EnterTargetKomaIndex | 3 | e_glo_00001_general_osh_n_Normal_Green | 3 | 50 | 3.5 | Default | - |
-| 6 | EnterTargetKomaIndex | 4 | e_glo_00001_general_osh_n_Normal_Green | 3 | 500 | 3.7 | Default | - |
-| 7 | EnterTargetKomaIndex | 5 | e_glo_00001_general_osh_n_Normal_Green | 5 | 150 | - | Default | - |
-| 8 | EnterTargetKomaIndex | 5 | e_glo_00001_general_osh_n_Normal_Green | 3 | 50 | 0.8 | Default | - |
-| 9 | FriendUnitDead | 1 | **c_osh_00001_general_osh_n_Normal_Colorless** | 1 | 0 | - | Default | 4500 |
-| 10 | FriendUnitDead | 9 | e_glo_00001_general_osh_n_Normal_Green | **15** | 50 | 0.3 | Default | 50 |
-| 11 | FriendUnitDead | 1 | e_glo_00001_general_osh_n_Normal_Green | 4 | 250 | - | Default | 500 |
-| 12 | FriendUnitDead | 1 | e_glo_00001_general_osh_n_Normal_Green | 4 | 50 | - | Default | - |
-| 13 | FriendUnitDead | 1 | e_glo_00001_general_osh_n_Normal_Green | 2 | 100 | 2.8 | Default | - |
-| 14 | FriendUnitDead | 1 | e_glo_00001_general_osh_n_Normal_Green | 3 | 50 | - | Default | 2000 |
-| 15 | FriendUnitDead | 9 | e_glo_00001_general_osh_n_Normal_Green | **15** | 50 | - | Default | 50 |
-| 16 | ElapsedTime | 4000 | e_glo_00001_general_osh_n_Normal_Green | 3 | 500 | - | Default | - |
+| 1 | ElapsedTime | 250 | **B小町不動のセンター アイ** (c_osh_00001_general_osh_n_Boss_Green) | 1 | 0 | - | Default | - |
+| 2 | EnterTargetKomaIndex | 0 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 2 | 100 | 1.1 | Default | 100 |
+| 3 | EnterTargetKomaIndex | 1 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 3 | 150 | 1.5 | Default | - |
+| 4 | EnterTargetKomaIndex | 2 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 2 | 250 | 3.3 | Default | - |
+| 5 | EnterTargetKomaIndex | 3 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 3 | 50 | 3.5 | Default | - |
+| 6 | EnterTargetKomaIndex | 4 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 3 | 500 | 3.7 | Default | - |
+| 7 | EnterTargetKomaIndex | 5 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 5 | 150 | - | Default | - |
+| 8 | EnterTargetKomaIndex | 5 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 3 | 50 | 0.8 | Default | - |
+| 9 | FriendUnitDead | 1 | **B小町不動のセンター アイ** (c_osh_00001_general_osh_n_Normal_Colorless) | 1 | 0 | - | Default | 4500 |
+| 10 | FriendUnitDead | 9 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | **15** | 50 | 0.3 | Default | 50 |
+| 11 | FriendUnitDead | 1 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 4 | 250 | - | Default | 500 |
+| 12 | FriendUnitDead | 1 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 4 | 50 | - | Default | - |
+| 13 | FriendUnitDead | 1 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 2 | 100 | 2.8 | Default | - |
+| 14 | FriendUnitDead | 1 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 3 | 50 | - | Default | 2000 |
+| 15 | FriendUnitDead | 9 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | **15** | 50 | - | Default | 50 |
+| 16 | ElapsedTime | 4000 | ファントム (e_glo_00001_general_osh_n_Normal_Green) | 3 | 500 | - | Default | - |
 
 **設計のポイント**:
 - `EnterTargetKomaIndex=0〜5` でコマ進行に合わせた伏兵を順次配置（コマ0〜5全てに設定）
@@ -504,22 +504,22 @@
 
 | elem | condition_type | condition_value | action_value | count | interval | position | aura |
 |------|---------------|----------------|--------------|-------|----------|----------|------|
-| 1 | ElapsedTime | 200 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | - | **Boss** |
-| 2 | ElapsedTime | 800 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | - | Boss |
-| 3 | ElapsedTime | 1400 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | - | Boss |
-| 4 | FriendUnitDead | 2 | **c_rik_00001_general_Normal_Colorless** | 2 | 50 | - | Boss |
-| 5 | ElapsedTime | 1700 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | - | Boss |
-| 6 | FriendUnitDead | 5 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | - | Boss |
-| 7 | FriendUnitDead | 5 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | 2.9 | Boss |
-| 8 | FriendUnitDead | 5 | **c_rik_00001_general_Normal_Colorless** | 1 | 0 | 2.8 | Boss |
-| 9 | FriendUnitDead | 6 | **c_rik_00001_general_Boss_Red** | 1 | 0 | - | Boss |
-| 10 | FriendUnitDead | 9 | **c_rik_00001_general_Normal_Colorless** | 3 | 25 | 2.84 | Boss |
-| 11 | FriendUnitDead | 9 | **c_rik_00001_general_Normal_Colorless** | 3 | 50 | 2.86 | Boss |
-| 12 | FriendUnitDead | 9 | **c_rik_00001_general_Normal_Colorless** | 3 | 75 | 2.88 | Boss |
-| 13 | ElapsedTime | 5000 | **c_rik_00001_general_Normal_Colorless** | **99** | 1000 | 2.88 | Boss |
-| 14 | ElapsedTime | 5500 | **c_rik_00001_general_Normal_Colorless** | **99** | 1000 | 2.9 | Boss |
-| 15 | OutpostDamage | 1 | **c_rik_00001_general_Normal_Colorless** | **99** | 750 | - | Boss |
-| 16 | OutpostDamage | 1 | **c_rik_00001_general_Normal_Colorless** | **99** | 750 | - | Boss |
+| 1 | ElapsedTime | 200 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 1 | 0 | - | **Boss** |
+| 2 | ElapsedTime | 800 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 1 | 0 | - | Boss |
+| 3 | ElapsedTime | 1400 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 1 | 0 | - | Boss |
+| 4 | FriendUnitDead | 2 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 2 | 50 | - | Boss |
+| 5 | ElapsedTime | 1700 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 1 | 0 | - | Boss |
+| 6 | FriendUnitDead | 5 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 1 | 0 | - | Boss |
+| 7 | FriendUnitDead | 5 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 1 | 0 | 2.9 | Boss |
+| 8 | FriendUnitDead | 5 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 1 | 0 | 2.8 | Boss |
+| 9 | FriendUnitDead | 6 | **リコピン** (c_rik_00001_general_Boss_Red) | 1 | 0 | - | Boss |
+| 10 | FriendUnitDead | 9 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 3 | 25 | 2.84 | Boss |
+| 11 | FriendUnitDead | 9 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 3 | 50 | 2.86 | Boss |
+| 12 | FriendUnitDead | 9 | **リコピン** (c_rik_00001_general_Normal_Colorless) | 3 | 75 | 2.88 | Boss |
+| 13 | ElapsedTime | 5000 | **リコピン** (c_rik_00001_general_Normal_Colorless) | **99** | 1000 | 2.88 | Boss |
+| 14 | ElapsedTime | 5500 | **リコピン** (c_rik_00001_general_Normal_Colorless) | **99** | 1000 | 2.9 | Boss |
+| 15 | OutpostDamage | 1 | **リコピン** (c_rik_00001_general_Normal_Colorless) | **99** | 750 | - | Boss |
+| 16 | OutpostDamage | 1 | **リコピン** (c_rik_00001_general_Normal_Colorless) | **99** | 750 | - | Boss |
 
 **設計のポイント**:
 - 全要素が同一の c_キャラで Bossオーラ付き → 「主人公が大量に押し寄せる」という世界観演出
