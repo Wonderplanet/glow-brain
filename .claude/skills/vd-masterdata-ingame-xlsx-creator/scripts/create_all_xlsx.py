@@ -151,7 +151,7 @@ def add_csv_rows_to_sheet(wb, sheet_name: str, rows: list, is_first: bool) -> No
     else:
         ws = wb[sheet_name]
         rows_to_write = rows[1:]  # ヘッダー行をスキップ
-        start_row = ws.max_row + 1
+        start_row = ws.max_row + 2  # 1行空けて追記
 
     for r_offset, row in enumerate(rows_to_write):
         r_idx = start_row + r_offset
