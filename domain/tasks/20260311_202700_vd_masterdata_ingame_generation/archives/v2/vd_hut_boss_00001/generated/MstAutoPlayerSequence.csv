@@ -2,7 +2,7 @@ ENABLE,id,sequence_set_id,sequence_group_id,sequence_element_id,priority_sequenc
 e,vd_hut_boss_00001_1,vd_hut_boss_00001,,1,__NULL__,InitialSummon,0,SummonEnemy,c_hut_00101_vd_Boss_Yellow,,1,0,None,1.7,None,0,None,0,None,0,0,0,0,Boss,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
 e,vd_hut_boss_00001_2,vd_hut_boss_00001,,2,__NULL__,ElapsedTime,300,SummonEnemy,c_hut_00001_vd_Normal_Yellow,,1,0,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
 e,vd_hut_boss_00001_3,vd_hut_boss_00001,,3,__NULL__,FriendUnitDead,2,SummonEnemy,c_hut_00001_vd_Normal_Yellow,,1,200,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
-e,vd_hut_boss_00001_4,vd_hut_boss_00001,,4,__NULL__,ElapsedTime,2500,SummonEnemy,c_hut_00201_vd_Normal_Yellow,,1,300,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
+e,vd_hut_boss_00001_4,vd_hut_boss_00001,,4,__NULL__,FriendUnitDead,3,SummonEnemy,c_hut_00201_vd_Normal_Yellow,,1,300,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
 e,vd_hut_boss_00001_5,vd_hut_boss_00001,,5,__NULL__,FriendUnitDead,3,SummonEnemy,c_hut_00301_vd_Normal_Yellow,,1,0,None,0.0,None,0,None,0,None,0,0,0,0,Boss,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
 e,vd_hut_boss_00001_6,vd_hut_boss_00001,,6,__NULL__,FriendUnitDead,6,SummonEnemy,c_hut_00001_vd_Normal_Yellow,,1,200,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
 e,vd_hut_boss_00001_7,vd_hut_boss_00001,,7,__NULL__,OutpostHpPercentage,70,SummonEnemy,c_hut_00001_vd_Normal_Yellow,,1,300,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010

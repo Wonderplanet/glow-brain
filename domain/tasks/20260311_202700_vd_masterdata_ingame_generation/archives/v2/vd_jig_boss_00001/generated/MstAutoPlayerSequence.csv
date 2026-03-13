@@ -7,5 +7,5 @@ e,vd_jig_boss_00001_5,vd_jig_boss_00001,,5,__NULL__,ElapsedTime,4000,SummonEnemy
 e,vd_jig_boss_00001_6,vd_jig_boss_00001,,6,__NULL__,OutpostHpPercentage,70,SummonEnemy,e_jig_00401_vd_Normal_Green,,5,100,None,1.3,None,0,None,0,None,0,0,0,0,Default,Normal,2.0,1.5,1.0,__NULL__,0,0,None,,202604010
 e,vd_jig_boss_00001_7,vd_jig_boss_00001,,7,__NULL__,FriendUnitDead,10,SummonEnemy,e_jig_00001_vd_Normal_Green,,5,200,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,2.0,1.5,1.0,__NULL__,0,0,None,,202604010
 e,vd_jig_boss_00001_8,vd_jig_boss_00001,,8,__NULL__,FriendUnitDead,10,SummonEnemy,e_jig_00401_vd_Normal_Green,,5,200,None,2.8,None,0,None,0,None,0,0,0,0,Default,Normal,2.0,1.5,1.0,__NULL__,0,0,None,,202604010
-e,vd_jig_boss_00001_9,vd_jig_boss_00001,,9,__NULL__,FriendUnitDead,20,SummonEnemy,e_jig_00001_vd_Normal_Green,,99,750,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,3.0,2.0,1.0,__NULL__,0,0,None,,202604010
-e,vd_jig_boss_00001_10,vd_jig_boss_00001,,10,__NULL__,FriendUnitDead,20,SummonEnemy,e_jig_00401_vd_Normal_Green,,99,1200,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,3.0,2.0,1.0,__NULL__,0,0,None,,202604010
+e,vd_jig_boss_00001_9,vd_jig_boss_00001,,9,__NULL__,FriendUnitDead,8,SummonEnemy,e_jig_00001_vd_Normal_Green,,99,750,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,3.0,2.0,1.0,__NULL__,0,0,None,,202604010
+e,vd_jig_boss_00001_10,vd_jig_boss_00001,,10,__NULL__,FriendUnitDead,8,SummonEnemy,e_jig_00401_vd_Normal_Green,,99,1200,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,3.0,2.0,1.0,__NULL__,0,0,None,,202604010

@@ -4,6 +4,6 @@ e,vd_sum_boss_00001_2,vd_sum_boss_00001,,2,__NULL__,ElapsedTime,250,SummonEnemy,
 e,vd_sum_boss_00001_3,vd_sum_boss_00001,,3,__NULL__,ElapsedTime,1500,SummonEnemy,e_sum_00001_vd_Normal_Red,,3,500,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
 e,vd_sum_boss_00001_4,vd_sum_boss_00001,,4,__NULL__,ElapsedTime,3000,SummonEnemy,e_sum_00001_vd_Normal_Red,,3,500,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
 e,vd_sum_boss_00001_5,vd_sum_boss_00001,,5,__NULL__,FriendUnitDead,3,SummonEnemy,e_sum_00001_vd_Normal_Red,,3,500,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
-e,vd_sum_boss_00001_6,vd_sum_boss_00001,,6,__NULL__,FriendUnitDead,6,SummonEnemy,e_sum_00001_vd_Normal_Red,,3,500,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
-e,vd_sum_boss_00001_7,vd_sum_boss_00001,,7,__NULL__,FriendUnitDead,10,SummonEnemy,e_sum_00001_vd_Normal_Red,,3,500,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
+e,vd_sum_boss_00001_6,vd_sum_boss_00001,,6,__NULL__,FriendUnitDead,5,SummonEnemy,e_sum_00001_vd_Normal_Red,,3,500,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
+e,vd_sum_boss_00001_7,vd_sum_boss_00001,,7,__NULL__,FriendUnitDead,6,SummonEnemy,e_sum_00001_vd_Normal_Red,,3,500,None,0.0,None,0,None,0,None,0,0,0,0,Default,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
 e,vd_sum_boss_00001_8,vd_sum_boss_00001,,8,__NULL__,OutpostHpPercentage,50,SummonEnemy,c_sum_00001_vd_Boss_Red,,1,0,None,0.0,None,0,None,0,None,0,0,0,0,Boss,Normal,1.0,1.0,1.0,__NULL__,0,0,None,,202604010
