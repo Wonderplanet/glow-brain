@@ -489,7 +489,125 @@ HP = 10000 × MstAutoPlayerSequence.enemy_hp_coef(1.5) × MstInGame.boss_enemy_h
 
 ---
 
-## 6. 参照テーブル・CSVパス
+## 6. 全カラム設定例とデフォルト値
+
+各テーブルの **1レコード全体** を示す。「仕様書の各例で説明したカラム以外」がどんな値になっているかを確認できる。
+
+### 凡例
+- **固定値**: 全レコードで常に同じ値が入る
+- **NULL / デフォルト**: 未使用時に設定する値（空欄 or 規定値）
+- **個別設定**: ステージ・キャラによって変わる値
+
+---
+
+### MstEnemyStageParameter（1レコード例: グエン Normal形態）
+
+```
+ENABLE,release_key,id,mst_enemy_character_id,character_unit_kind,role_type,color,sort_order,hp,damage_knock_back_count,move_speed,well_distance,attack_power,attack_combo_cycle,mst_unit_ability_id1,drop_battle_point,mstTransformationEnemyStageParameterId,transformationConditionType,transformationConditionValue
+e,202509010,e_spy_00101_general_n_Normal_Colorless,enemy_spy_00101,Normal,Attack,Colorless,1,1000,,31,0.2,50,1,,200,,None,
+```
+
+| カテゴリ | カラム | 値 | 備考 |
+|---------|--------|-----|------|
+| 固定値 | ENABLE | `e` | 有効フラグ。`e`=enabled（常にe） |
+| 固定値 | release_key | `202509010` | リリースキー |
+| 固定値 | transformationConditionType | `None` | 変身条件。基本的に`None`（変身なし） |
+| 個別設定 | sort_order | `1`, `2`… | 同一キャラのNormal/Boss間でのソート順 |
+| NULL | damage_knock_back_count | （空） | Normalキャラはノックバック耐性なし。Bossは数値を設定 |
+| NULL | mst_unit_ability_id1 | （空） | 特殊アビリティなしの場合は空欄 |
+| NULL | mstTransformationEnemyStageParameterId | （空） | 変身先敵ID。変身なしなら空欄 |
+| NULL | transformationConditionValue | （空） | 変身条件値。変身なしなら空欄 |
+
+---
+
+### MstAttack（1レコード例: グエン Normal攻撃）
+
+```
+ENABLE,release_key,id,mst_unit_id,unit_grade,attack_kind,killer_colors,killer_percentage,action_frames,attack_delay,next_attack_interval,asset_key
+e,202509010,e_spy_00101_general_n_Normal_Colorless_Normal_00000,e_spy_00101_general_n_Normal_Colorless,0,Normal,,,60,25,50,
+```
+
+| カテゴリ | カラム | 値 | 備考 |
+|---------|--------|-----|------|
+| 固定値 | ENABLE | `e` | 有効フラグ |
+| 固定値 | unit_grade | `0` | ユニットグレード（強化段階）。現状は常に`0` |
+| NULL | killer_colors | （空） | 特定色へのキラー倍率対象色。設定なしなら空欄 |
+| NULL | killer_percentage | （空） | キラー倍率（%）。`killer_colors`と対で設定 |
+| NULL | asset_key | （空） | 攻撃モーションの差し替えアセットキー。基本空欄 |
+
+> IDルール: `{mst_unit_id}_{attack_kind}_{連番5桁}` 例: `..._Normal_00000`, `..._Appearance_00001`
+
+---
+
+### MstAttackElement（1レコード例: グエン Normal攻撃 単体ヒット）
+
+```
+ENABLE,release_key,id,mst_attack_id,sort_order,attack_delay,attack_type,range_start_type,range_start_parameter,range_end_type,range_end_parameter,max_target_count,target,target_type,target_colors,target_roles,damage_type,hit_type,hit_parameter1,hit_parameter2,hit_effect_id,is_hit_stop,probability,power_parameter_type,power_parameter,effect_type,effective_count,effective_duration,effect_parameter,effect_value,effect_trigger_roles,effect_trigger_colors
+e,202509010,e_spy_00101_general_n_Normal_Colorless_Normal_00000_1,..._Normal_00000,1,0,Direct,Distance,0,Distance,0.21,1,Foe,All,All,All,Damage,Normal,0,0,dageki_1,,100,Percentage,100.0,None,0,0,0.0,,,
+```
+
+| カテゴリ | カラム | 値 | 備考 |
+|---------|--------|-----|------|
+| 固定値 | ENABLE | `e` | 有効フラグ |
+| 固定値 | range_start_type | `Distance` | 射程の開始計算方式。常に`Distance` |
+| 固定値 | range_start_parameter | `0` | 射程の開始距離。通常0（自分の位置から） |
+| 固定値 | target_type | `All` | ターゲット選択方式。基本`All` |
+| 固定値 | target_colors | `All` | 対象カラー。基本`All`（全色対象） |
+| 固定値 | target_roles | `All` | 対象ロール。基本`All`（全ロール対象） |
+| 固定値 | probability | `100` | 発動確率（%）。基本100（必ず発動） |
+| 個別設定 | hit_effect_id | `dageki_1` 等 | ヒット時のエフェクトID。攻撃種別ごとに設定 |
+| 固定値(0) | hit_parameter1/2 | `0` | ヒット時の追加パラメータ。通常使わない |
+| NULL | is_hit_stop | （空） | ヒットストップ有無。空欄=なし |
+| NULL | effect_value / effect_trigger_* | （空） | 効果トリガー条件の詳細設定。基本未使用 |
+| 0扱い | effective_count / effective_duration / effect_parameter | `0` | `effect_type=None` のときは全て`0`。効果あり時のみ設定 |
+
+> IDルール: `{mst_attack_id}_{sort_order}` 例: `..._Normal_00000_1`, `..._Normal_00000_2`（多段ヒット時）
+
+---
+
+### MstInGame（1レコード例: normal_spy_00001）
+
+```
+ENABLE,id,mst_auto_player_sequence_id,mst_auto_player_sequence_set_id,bgm_asset_key,boss_bgm_asset_key,loop_background_asset_key,player_outpost_asset_key,mst_page_id,mst_enemy_outpost_id,mst_defense_target_id,boss_mst_enemy_stage_parameter_id,boss_count,normal_enemy_hp_coef,normal_enemy_attack_coef,normal_enemy_speed_coef,boss_enemy_hp_coef,boss_enemy_attack_coef,boss_enemy_speed_coef,release_key
+e,normal_spy_00001,normal_spy_00001,normal_spy_00001,SSE_SBG_003_002,,spy_00005,,normal_spy_00001,normal_spy_00001,,1,,1.0,1.0,1,1.0,1.0,1,202509010
+```
+
+| カテゴリ | カラム | 値 | 備考 |
+|---------|--------|-----|------|
+| 固定値 | ENABLE | `e` | 有効フラグ |
+| 固定値 | normal/boss_enemy_speed_coef | `1` | 速度倍率。現状は常に`1`（変更しない） |
+| 同値 | mst_auto_player_sequence_id | MstInGame.idと同値 | sequence_set_idと同じ値を入れる |
+| 個別設定 | bgm_asset_key | `SSE_SBG_003_002` 等 | ステージBGMのアセットキー |
+| 個別設定 | loop_background_asset_key | `spy_00005` 等 | 背景スクロール画像のアセットキー |
+| NULL | boss_bgm_asset_key | （空） | ボス出現時のBGM変化。変化なしなら空欄 |
+| NULL | player_outpost_asset_key | （空） | プレイヤー拠点のカスタムアセット。基本空欄 |
+| NULL | mst_defense_target_id | （空） | 防衛対象ID。防衛ステージ以外は空欄 |
+| NULL | boss_count | （空） | ボス出現数の上限。空欄=制限なし |
+| ダミー | boss_mst_enemy_stage_parameter_id | `1` | ボスなしステージはダミー値`1`を設定 |
+
+---
+
+### MstAutoPlayerSequence（1レコード例: normal_spy_00001_1）
+
+```
+ENABLE,id,sequence_set_id,sequence_element_id,condition_type,condition_value,action_type,action_value,summon_count,summon_interval,summon_animation_type,move_start_condition_type,move_stop_condition_type,move_restart_condition_type,aura_type,death_type,enemy_hp_coef,enemy_attack_coef,enemy_speed_coef,deactivation_condition_type,release_key
+e,normal_spy_00001_1,normal_spy_00001,1,ElapsedTime,650,SummonEnemy,e_spy_00101_general_n_Normal_Colorless,1,0,None,None,None,None,Default,Normal,1.5,2.0,1.0,None,202509010
+```
+
+| カテゴリ | カラム | 値 | 備考 |
+|---------|--------|-----|------|
+| 固定値 | ENABLE | `e` | 有効フラグ |
+| 固定値 | summon_animation_type | `None` | 召喚演出。基本`None` |
+| 固定値 | move_start/stop/restart_condition_type | `None` | 召喚後の移動制御。基本全て`None`（通常移動） |
+| 固定値 | aura_type | `Default` | オーラ表示設定。基本`Default` |
+| 固定値 | death_type | `Normal` | 撃破演出。基本`Normal` |
+| 固定値 | enemy_speed_coef | `1.0` | 速度倍率。現状は常に`1.0` |
+| 固定値 | deactivation_condition_type | `None` | シーケンス無効化条件。基本`None` |
+| 個別設定 | sequence_element_id | `1`, `2`… | 同一sequence_set内での順序番号 |
+
+---
+
+## 7. 参照テーブル・CSVパス
 
 | テーブル | CSVパス |
 |---------|---------|
