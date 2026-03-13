@@ -212,3 +212,4 @@ MstEnemyStageParameter.id
 - **カラム名確認**: クエリ前に必ず `search_schema.sh columns` でカラム名を確認する
 - **MstAttack連携**: `MstEnemyStageParameter.id = MstAttack.mst_unit_id`（DB外部キーなし、クライアント結合）
 - **VD敵にMstAttackなし**: `_vd_` を含むIDに対応するMstAttackレコードは存在しない（設計上）
+- **クライアントコード調査**: enum値・計算ロジック・コマ効果の仕様確認が必要な場合は [references/client-code-guide.md](references/client-code-guide.md) を参照
