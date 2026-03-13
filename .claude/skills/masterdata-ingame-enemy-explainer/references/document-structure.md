@@ -22,6 +22,7 @@
 > 作成日: {YYYY-MM-DD}
 > mst_enemy_character_id: {id}
 > mst_series_id: {mst_series_id}
+> 作品名: {MstSeriesI18n.name (language='ja')}
 
 ---
 
@@ -31,23 +32,39 @@
 |--------|-----|
 | id | `{id}` |
 | mst_series_id | `{mst_series_id}` |
+| 作品名 | {MstSeriesI18n.name (language='ja')} |
 | asset_key | `{asset_key}` |
 | is_phantomized | `{is_phantomized}` |
 
 ---
 
-## 2. ステータスバリエーション
+## 2. キャラクター特徴まとめ
 
-### バリエーション一覧
+{複数インゲームの使用実態を横断比較して読み取れる傾向を散文形式で記載。
+以下の観点を含める:
+- どのコンテンツで主に使われているか
+- HP・攻撃力のレンジ感（強敵/中程度/雑魚等）
+- character_unit_kind・role_typeの傾向（Normal/Boss・Attack/Defense等）
+- 変身設定があるかどうか・あればどのような設定か
+- よく使われるコマ効果の傾向}
+
+---
+
+## 3. ステージ別使用実態
+
+### {インゲームID}（{コンテンツ種別}）
+
+#### このステージでの役割
+
+{このインゲームにおけるキャラクターの役割を1〜3文で説明。ボス/雑魚/強化版等の位置づけ、難易度への寄与、ステージ特有の意図を記載。}
+
+#### 使用パラメータ
 
 | パラメータID | kind | role | color | HP | 攻撃力 | 移動速度 | 索敵距離 | ノックバック数 |
 |------------|------|------|-------|-----|--------|---------|---------|--------------|
 | `{id}` | {character_unit_kind} | {role_type} | {color} | {hp:,} | {attack_power:,} | {move_speed} | {well_distance} | {damage_knock_back_count} |
-| ... | ... | ... | ... | ... | ... | ... | ... | ... |
 
-> 数値は3桁区切りカンマ表示。全行省略なし。
-
-### アビリティ・変身設定
+**アビリティ・変身設定**
 
 | パラメータID | アビリティ(mst_unit_ability_id1) | 変身条件(transformationConditionType) | 変身条件値 | 変身後パラメータID |
 |------------|--------------------------------|--------------------------------------|----------|----------------|
@@ -55,81 +72,15 @@
 
 > アビリティなし・変身なしの場合は「なし」または空文字と記載。
 
-### 設定傾向分析
+#### 攻撃パターン
 
-**character_unit_kind別傾向**
-- {unit_kind_A}: {傾向の説明}
-- {unit_kind_B}: {傾向の説明}
+| attack_kind | unit_grade | killer_colors | killer_percentage | action_frames |
+|------------|-----------|--------------|------------------|--------------|
+| {attack_kind} | {unit_grade} | {killer_colors} | {killer_percentage} | {action_frames} |
 
-**role_type別傾向**
-- {role_A}: {傾向の説明}
+> VD専用パラメータ（`_vd_` を含む id）は MstAttack レコードが存在しないため「データなし」と記載。
 
-**ステータス範囲**
-- HP: {min:,} 〜 {max:,}（平均 {avg:,}）
-- 攻撃力(attack_power): {min:,} 〜 {max:,}（平均 {avg:,}）
-- 移動速度(move_speed): {min} 〜 {max}（平均 {avg}）
-
-**変身設定**
-- {変身設定の有無と条件の説明。変身ありの場合は変身後パラメータとの差分も記載。}
-
----
-
-## 3. 攻撃パターン
-
-### 攻撃一覧（MstAttack）
-
-| パラメータID | attack_kind | unit_grade | killer_colors | killer_percentage | action_frames |
-|------------|------------|-----------|--------------|------------------|--------------|
-| `{mst_unit_id}` | {attack_kind} | {unit_grade} | {killer_colors} | {killer_percentage} | {action_frames} |
-
-> 対応するパラメータIDが存在しない場合（VD専用パラメータ等）は「データなし」と記載。
-
-### 攻撃要素詳細（MstAttackElement）
-
-| mst_attack_id | sort_order | attack_type | target | damage_type | power_parameter | effect_type |
-|--------------|-----------|------------|--------|------------|----------------|------------|
-| `{mst_attack_id}` | {sort_order} | {attack_type} | {target} | {damage_type} | {power_parameter} | {effect_type} |
-
----
-
-## 4. インゲーム使用実績
-
-### コンテンツ別使用状況
-
-| コンテンツ種別 | ステージ数 |
-|-------------|---------|
-| VD Normal | {count} |
-| VD Boss | {count} |
-| メインクエスト Normal | {count} |
-| メインクエスト Hard | {count} |
-| 降臨バトル | {count} |
-| イベント | {count} |
-| その他 | {count} |
-| **合計** | **{total}** |
-
-### 使用ステージ一覧
-
-| インゲームID | コンテンツ種別 | 使用パラメータID | kind | role | color |
-|------------|-------------|--------------|------|------|-------|
-| `{ingame_id}` | {content_type} | `{param_id}` | {character_unit_kind} | {role_type} | {color} |
-| ... | ... | ... | ... | ... | ... |
-
----
-
-## 5. 出現シーケンスパターン
-
-### 出現タイミングパターン
-
-| condition_type | 使用回数 | 典型的なパターン |
-|--------------|---------|--------------|
-| {condition_type} | {count} | {pattern_desc} |
-| ... | ... | ... |
-
-### 代表的なシーケンス設定例
-
-以下に、よく使われるパターンを 2〜3 例示します。
-
-**例1: {インゲームID}（{コンテンツ種別}）**
+#### シーケンス設定
 
 ```
 condition_type: {condition_type}
@@ -145,53 +96,23 @@ sequence_group_id: {sequence_group_id}
 
 {この設定の特徴を1〜2文で説明}
 
-**例2: {インゲームID}（{コンテンツ種別}）**
+#### コマ効果
 
-（同様の形式で記載）
-
----
-
-## 6. よく使われるコマ効果
-
-| コマ効果種別 | 使用回数 | 対象サイド(effect_target_side) | 代表ステージ例 |
-|-----------|---------|------------------------------|-------------|
-| {koma_effect_type} | {count} | {koma_effect_target_side} | `{ingame_id}` |
-| ... | ... | ... | ... |
+| コマ効果種別 | 使用回数 | 対象サイド(effect_target_side) |
+|-----------|---------|------------------------------|
+| {koma_effect_type} | {count} | {koma_effect_target_side} |
 
 > コマ効果なし（None）は集計から除外。
 
 ---
 
-## 7. インゲーム設計ガイド
+### {インゲームID_2}（{コンテンツ種別}）
 
-### このキャラの特徴
+（同様の形式で繰り返す）
 
-{ステータス・行動・使用実績から読み取れる設計特性を散文形式で記載。
-以下の観点を含める:
-- どのコンテンツで主に使われているか
-- HP・攻撃力のレンジ感（強敵/中程度/雑魚等）
-- character_unit_kind・role_typeの傾向（Normal/Boss・Attack/Defense等）
-- 変身設定があるかどうか・あればどのような設定か}
+---
 
-### 推奨設定パターン
-
-**よく使われる組み合わせ:**
-
-| character_unit_kind | role_type | color | 使用回数 |
-|--------------------|----------|-------|---------|
-| {unit_kind} | {role_type} | {color} | {count} |
-
-**代表的なシーケンス設定:**
-
-- {シーケンス設定パターンA}: {説明}
-- {シーケンス設定パターンB}: {説明}
-
-### 注意点・特記事項
-
-- {変身設定がある場合}: 変身条件（transformationConditionType={condition}）に注意。変身後パラメータ `{mstTransformationEnemyStageParameterId}` のシーケンス登録も必要。
-- {VD専用の場合}: `_vd_` を含むパラメータIDに対応する MstAttack レコードは存在しない（設計上の制約）。
-- {特殊アビリティがある場合}: mst_unit_ability_id1 `{ability}` の効果に注意。
-- {使用実績が少ない場合}: 過去の使用例が少なく、バランス参考値が限定的。
+（以降、全ステージ分繰り返す）
 ````
 
 ---
@@ -202,6 +123,9 @@ sequence_group_id: {sequence_group_id}
 - **全行省略なし**: バリエーション一覧は省略せず全行記載
 - **コードブロック**: IDは `` ` `` で囲む（例: `` `enemy_kai_00001` ``）
 - **該当なしの場合**: 「なし」または「データなし」と記載（セルを空にしない）
+- **「このステージでの役割」は必ず冒頭に配置**: 各インゲームサブセクションの最初のセクションは必ず「このステージでの役割」にする
+- **作品名はMstSeriesI18n.nameを使う**: 必ず `SELECT name FROM MstSeriesI18n WHERE mst_series_id='{id}' AND language='ja'` で正式名称を引く。通称・略称・カタカナ読みは禁止
+- **フィルタが指定された場合**: 全セクションでフィルタ対象データのみ記載する（フィルタ外のパラメータはステータス一覧にも含めない）
 - **コンテンツ種別分類** は以下のルールで判定:
 
 | IDパターン | コンテンツ種別 |

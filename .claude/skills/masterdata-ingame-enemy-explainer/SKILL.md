@@ -51,6 +51,8 @@ enemy_kai_00001 の詳細解説を作って
 引数を解析して対象キャラクターを特定する。
 
 - `--output-dir` が指定されていれば保存先ディレクトリとして記録（省略時はカレントディレクトリ）
+- キャラクターID・名前以外の追加テキスト引数（例: 「メインクエストNormalのみ対象」「VD限定」）は**コンテンツフィルタ**として記録する
+- フィルタが指定された場合、Step 2〜6 の全クエリに一貫して適用する
 - DuckDB で MstEnemyCharacter + MstEnemyCharacterI18n(language='ja') を JOIN してキャラ情報を取得
 - 出力ファイル名を決定: `{MstEnemyCharacter.id}_{MstEnemyCharacterI18n.name}.md`
 
@@ -145,3 +147,5 @@ duckdb -init .claude/skills/masterdata-explorer/.duckdbrc
 - **nullstr='\_\_NULL\_\_'**: DuckDB 読み込み時は常に `nullstr='__NULL__'` を指定する
 - **VD敵にMstAttackなし**: `_vd_` を含む MstEnemyStageParameter.id に対応する MstAttack レコードは存在しない（設計上）
 - **複数キャラヒット時**: 同名キャラが複数存在する場合は一覧を提示してユーザーに選択を求める
+- **コンテンツフィルタ**: 絞り込み指示がある場合、全 Step でフィルタを貫徹する。特に Step 2 では、フィルタ対象ステージで使用されているパラメータID（MstAutoPlayerSequence 経由）のみを収集する。フィルタ外のパラメータはステータス一覧にも含めない
+- **作品名の記載**: `mst_series_id` から推察した通称（「spyシリーズ」「ゴム系」等）は使わない。必ず DuckDB で `MstSeriesI18n.name (language='ja')` を引いて正式作品名を使う
