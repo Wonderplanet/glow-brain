@@ -6,9 +6,9 @@
 2. [メインクエスト（Normal/Hard/VeryHard）](#2-メインクエスト)
 3. [限界チャレンジ（VD）](#3-限界チャレンジvd)
 4. [イベントクエスト](#4-イベントクエスト)
-5. [レイドバトル](#5-レイドバトル)
-6. [降臨バトル](#6-降臨バトル)
-7. [PvP](#7-pvp)
+5. [降臨バトル](#5-降臨バトル)
+6. [降臨バトルボスパラメータ（AdventBattleBoss）](#6-降臨バトルボスパラメータadventbattleboss)
+7. [ランクマッチ（PvP）](#7-ランクマッチpvp)
 8. [横断分析クエリ](#8-横断分析クエリ)
 
 ---
@@ -200,16 +200,18 @@ ORDER BY release_key, id;
 
 ---
 
-## 5. レイドバトル
+## 5. 降臨バトル
+
+> データ内部IDのプレフィックスは `raid_`。ゲーム内の呼称は「降臨バトル」。
 
 ```sql
--- レイドバトル一覧
+-- 降臨バトル一覧
 SELECT id, normal_enemy_hp_coef, normal_enemy_attack_coef, mst_enemy_outpost_id
 FROM read_csv('projects/glow-masterdata/MstInGame.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
 WHERE id LIKE 'raid_%' AND ENABLE = 'e'
 ORDER BY id;
 
--- レイドシーケンスの全ウェーブ構造
+-- 降臨バトルシーケンスの全ウェーブ構造
 SELECT
     sequence_set_id,
     sequence_group_id,
@@ -229,12 +231,15 @@ ORDER BY sequence_set_id, sequence_group_id, CAST(sequence_element_id AS VARCHAR
 
 ---
 
-## 6. 降臨バトル
+## 6. 降臨バトルボスパラメータ（AdventBattleBoss）
+
+> 降臨バトルで使用するボス敵パラメータを `character_unit_kind = 'AdventBattleBoss'` で絞り込む。
+> Section 5 は MstInGame 側（ステージ）の絞り込み、Section 6 は MstEnemyStageParameter 側（敵パラメータ）の絞り込み。
 
 **絞り込み条件**: `character_unit_kind = 'AdventBattleBoss'`
 
 ```sql
--- 降臨バトル用ボスパラメータ一覧
+-- 降臨バトルボスパラメータ一覧
 SELECT id, mst_enemy_character_id, color, hp, move_speed, attack_power, mst_unit_ability_id1
 FROM read_csv('projects/glow-masterdata/MstEnemyStageParameter.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
 WHERE character_unit_kind = 'AdventBattleBoss' AND ENABLE = 'e'
@@ -256,10 +261,12 @@ ORDER BY sequence_set_id, CAST(sequence_element_id AS VARCHAR);
 
 ---
 
-## 7. PvP
+## 7. ランクマッチ（PvP）
+
+> データ内部IDのプレフィックスは `pvp_`。ゲーム内の呼称は「ランクマッチ」。
 
 ```sql
--- PvPステージ一覧
+-- ランクマッチ（PvP）ステージ一覧
 SELECT id, mst_page_id, mst_enemy_outpost_id, release_key
 FROM read_csv('projects/glow-masterdata/MstInGame.csv', AUTO_DETECT=TRUE, nullstr='__NULL__')
 WHERE id LIKE 'pvp_%' OR id = 'default_pvp' AND ENABLE = 'e'

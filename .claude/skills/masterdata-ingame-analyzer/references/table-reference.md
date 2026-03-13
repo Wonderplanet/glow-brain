@@ -76,8 +76,8 @@ MstEnemyStageParameter.id
 | Normalクエスト | `normal_{キャラ}_{5桁}` |
 | Hardクエスト | `hard_{キャラ}_{5桁}` |
 | VeryHardクエスト | `veryhard_{キャラ}_{5桁}` |
-| PvP | `pvp_{識別子}_{連番}` |
-| レイド | `raid_{キャラ}_{5桁}` |
+| ランクマッチ（PvP） | `pvp_{識別子}_{連番}` |
+| 降臨バトル | `raid_{キャラ}_{5桁}` |
 | イベント | `event_{キャラ}_{種別}_{5桁}` |
 | 限界チャレンジ | `vd_{作品}_{種別}_{5桁}` |
 | チュートリアル | `tutorial`, `tutorial_2` |
@@ -127,7 +127,7 @@ sequence_set_id（= MstInGame.id）
 | `aura_type` | enum | 出現オーラ演出 |
 | `death_type` | enum | 死亡演出 |
 | `override_drop_battle_point` | int | バトルポイント上書き |
-| `defeated_score` | int | 撃破スコア（レイド用） |
+| `defeated_score` | int | 撃破スコア（降臨バトル用） |
 
 ### condition_type（発火条件）
 
@@ -221,7 +221,7 @@ c_{キャラID}_vd_{unit_kind}_{color}
 |---------|----|----|
 | `id` | varchar | 命名: `{difficulty}_{キャラ}_{5桁}` など |
 | `hp` | int | ゲート最大HP |
-| `is_damage_invalidation` | varchar | `1`=ダメージ無効（レイド・強化クエスト等） |
+| `is_damage_invalidation` | varchar | `1`=ダメージ無効（降臨バトル・強化クエスト等） |
 | `outpost_asset_key` | varchar | 3Dモデルアセットキー |
 | `artwork_asset_key` | varchar | アートワーク画像キー（outpost_asset_keyと排他） |
 | `release_key` | int | リリースキー |
@@ -233,7 +233,7 @@ c_{キャラID}_vd_{unit_kind}_{color}
 | 通常クエスト(normal) | 5,000〜100,000 |
 | ハード(hard) | 50,000〜200,000 |
 | ベリーハード(veryhard) | 100,000〜300,000 |
-| レイド | 1,000,000（固定、ダメージ無効） |
+| 降臨バトル | 1,000,000（固定、ダメージ無効） |
 | VD(限界チャレンジ) | 100（固定） |
 
 ---

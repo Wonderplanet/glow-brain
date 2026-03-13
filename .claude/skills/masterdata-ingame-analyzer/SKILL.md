@@ -138,9 +138,9 @@ ORDER BY final_hp DESC;
 | 限界チャレンジ(VD)Normal | `MstInGame.id LIKE 'vd_%normal%'` | MstInGame, MstAutoPlayerSequence, MstEnemyStageParameter |
 | 限界チャレンジ(VD)Boss | `MstInGame.id LIKE 'vd_%boss%'` | MstInGame, MstAutoPlayerSequence, MstEnemyStageParameter |
 | イベントチャレンジ | `MstInGame.id LIKE 'event_%challenge%'` | MstInGame, MstAutoPlayerSequence |
-| レイドバトル | `MstInGame.id LIKE 'raid_%'` | MstInGame, MstAutoPlayerSequence |
-| 降臨バトル | `MstEnemyStageParameter.character_unit_kind = 'AdventBattleBoss'` | MstEnemyStageParameter, MstAutoPlayerSequence |
-| PvP | `MstInGame.id LIKE 'pvp_%'` | MstInGame |
+| 降臨バトル | `MstInGame.id LIKE 'raid_%'` | MstInGame, MstAutoPlayerSequence |
+| 降臨バトルボスパラメータ | `MstEnemyStageParameter.character_unit_kind = 'AdventBattleBoss'` | MstEnemyStageParameter, MstAutoPlayerSequence |
+| ランクマッチ（PvP） | `MstInGame.id LIKE 'pvp_%'` | MstInGame |
 
 詳細なクエリ例は [references/content-filter-guide.md](references/content-filter-guide.md) を参照。
 
