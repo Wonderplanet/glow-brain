@@ -6,11 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## タスク概要
 
-限界チャレンジ（VD）インゲームマスタデータCSVを生成するタスクフォルダです。
+限界チャレンジ（VD、開発コード: Dungeon）インゲームマスタデータCSVを生成するタスクフォルダです。
 
 - **ブロック種別**: Normal / Boss
 - **主要成果物**: MstEnemyStageParameter・MstAutoPlayerSequence・MstInGame等のCSV
 - **リリースキー**: 202604010
+
+> **重要**: VD（限界チャレンジ）は新規コンテンツです。VD関連のマスタデータは現時点で一切存在せず、全て本タスクで新規作成します。既存データの流用・参照はできません。
 
 ---
 
