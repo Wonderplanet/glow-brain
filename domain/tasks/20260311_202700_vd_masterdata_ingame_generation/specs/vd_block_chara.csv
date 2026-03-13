@@ -1,0 +1,81 @@
+mst_series_id,data_type,name,chara_id
+作品ID（MstSeries.asset_key）,ブロック種別（Normal=ノーマル敵 / Boss=ボス敵 / Counter=対抗ユニット）,キャラ日本語名（Normal/BossはMstEnemyCharacterI18n.name / CounterはMstUnitI18n.name）,対象キャラのID（Normal/BossはMstEnemyCharacter.id / CounterはMstUnit.id）
+spy,Normal,密輸組織の残党,enemy_spy_00001
+spy,Normal,ファントム,enemy_glo_00001
+spy,Boss,フランキー・フランクリン,chara_spy_00401
+spy,Counter,<黄昏> ロイド,chara_spy_00101
+dan,Normal,セルポ星人,enemy_dan_00001
+dan,Normal,ファントム,enemy_glo_00001
+dan,Boss,招き猫 ターボババア,chara_dan_00301
+dan,Counter,オカルン,chara_dan_00001
+gom,Normal,たこ焼き,enemy_gom_00402
+gom,Normal,バタートースト,enemy_gom_00501
+gom,Normal,ラーメン,enemy_gom_00701
+gom,Normal,ファントム,enemy_glo_00001
+gom,Boss,囚われの王女 姫様,chara_gom_00001
+gom,Counter,囚われの王女 姫様,chara_gom_00001
+chi,Normal,ゾンビ,enemy_chi_00101
+chi,Normal,ファントム,enemy_glo_00001
+chi,Boss,悪魔が恐れる悪魔 チェンソーマン,chara_chi_00002
+chi,Counter,悪魔が恐れる悪魔 チェンソーマン,chara_chi_00002
+mag,Normal,冷却系怪異,enemy_mag_00001
+mag,Normal,つらら,enemy_mag_00101
+mag,Normal,ファントム,enemy_glo_00001
+mag,Boss,新人魔法少女 桜木 カナ,chara_mag_00001
+mag,Counter,新人魔法少女 桜木 カナ,chara_mag_00001
+kai,Normal,怪獣 余獣,enemy_kai_00101
+kai,Normal,ファントム,enemy_glo_00001
+kai,Boss,隠された英雄の姿 怪獣８号,chara_kai_00002
+kai,Counter,隠された英雄の姿 怪獣８号,chara_kai_00002
+yuw,Normal,リリエルに捧ぐ愛 天乃 リリサ,chara_yuw_00001
+yuw,Normal,コスプレに託す乙女心 橘 美花莉,chara_yuw_00101
+yuw,Normal,勇気を纏うコスプレ 乃愛,chara_yuw_00301
+yuw,Normal,伝えたいウチの想い 喜咲 アリア,chara_yuw_00401
+yuw,Normal,ファントム,enemy_glo_00001
+yuw,Boss,奥村 正宗,chara_yuw_00601
+yuw,Counter,リリエルに捧ぐ愛 天乃 リリサ,chara_yuw_00001
+sur,Normal,醜鬼,enemy_sur_00101
+sur,Normal,ファントム,enemy_glo_00001
+sur,Boss,無窮の鎖 和倉 優希,chara_sur_00801
+sur,Counter,誇り高き魔都の剣姫 羽前 京香,chara_sur_00101
+sum,Normal,影,enemy_sum_00001
+sum,Normal,ファントム,enemy_glo_00001
+sum,Boss,網代 慎平,chara_sum_00001
+sum,Counter,影のウシオ 小舟 潮,chara_sum_00101
+jig,Normal,門神,enemy_jig_00001
+jig,Normal,極楽蝶,enemy_jig_00401
+jig,Normal,ファントム,enemy_glo_00001
+jig,Boss,民谷 巌鉄斎,chara_jig_00601
+jig,Counter,がらんの画眉丸,chara_jig_00001
+tak,Normal,ファントム,enemy_glo_00001
+tak,Boss,ハッピー星からの使者 タコピー,chara_tak_00001
+tak,Counter,ハッピー星からの使者 タコピー,chara_tak_00001
+osh,Normal,星野 ルビー,chara_osh_00201
+osh,Normal,MEMちょ,chara_osh_00301
+osh,Normal,有馬 かな,chara_osh_00401
+osh,Normal,黒川あかね,chara_osh_00501
+osh,Normal,ファントム,enemy_glo_00001
+osh,Boss,ぴえヨン,chara_osh_00601
+osh,Counter,B小町不動のセンター アイ,chara_osh_00001
+you,Normal,不良系金髪イケメン,enemy_you_00001
+you,Normal,イケメンじゃない殺し屋,enemy_you_00101
+you,Normal,ファントム,enemy_glo_00001
+you,Boss,ダグ,chara_you_00201
+you,Counter,元殺し屋の新人教諭 リタ,chara_you_00001
+kim,Normal,花園 羽香里,chara_kim_00101
+kim,Normal,院田 唐音,chara_kim_00201
+kim,Normal,好本 静,chara_kim_00301
+kim,Normal,ファントム,enemy_glo_00001
+kim,Boss,溢れる母性 花園 羽々里,chara_kim_00001
+kim,Counter,溢れる母性 花園 羽々里,chara_kim_00001
+hut,Normal,ひたむきギタリスト 鳩野 ちひろ,chara_hut_00001
+hut,Normal,内田 桃,chara_hut_00201
+hut,Normal,藤井 彩目,chara_hut_00301
+hut,Normal,ファントム,enemy_glo_00001
+hut,Boss,幸山 厘,chara_hut_00101
+hut,Counter,ひたむきギタリスト 鳩野 ちひろ,chara_hut_00001
+aya,Normal,シロガネ,enemy_aya_00001
+aya,Normal,ファントム,enemy_glo_00001
+aya,Boss,花奏 すず,chara_aya_00101
+aya,Counter,まつり,
+glo,Normal,レアファントム,
