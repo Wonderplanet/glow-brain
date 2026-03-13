@@ -1,0 +1,173 @@
+{
+  "block_name": "vd_sur_normal_00001",
+  "title": "ブロック基礎設計_vd_sur_normal_00001",
+  "requirements_text": "醜鬼（`e_sur_00101_vd_Normal_Red`）が序盤から中盤にかけてElapsedTimeとFriendUnitDeadの両トリガーで波状に押し寄せる。開幕150msに3体、倒すごとに追加が入り、中盤5000ms以降は10体×複数ウェーブが連続して計20体近くが一気に押し寄せる。11体撃破を境に強化ボスキャラ「無窮の鎖 和倉 優希」（`c_sur_00801_vd_Boss_Red`）がBossオーラとともに登場し、以降は `OutpostDamage=1` で醜鬼の無限補充（interval=750ms）が発動する。UR対抗「万物を統べる総組長 山城 恋」（`chara_sur_00901`）はvd_all CSVに専用エントリが存在しないため今回は採用できないが、代わりにボス格相当の `c_sur_00801_vd_Boss_Red` を終盤決戦キャラとして位置づけ、難易度のピークを演出する。コマは3行・各行独立抽選（1〜4コマ）で、アセットキー `sur_00001`・背景オフセット `-1.0` を使用する。",
+  "basic_info": {
+    "id": "vd_sur_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "12行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "sur_00001",
+      "effect": "None",
+      "widths": "1.0"
+    },
+    {
+      "row": "行2",
+      "count": "2コマ",
+      "asset": "sur_00001",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    },
+    {
+      "row": "行3",
+      "count": "4コマ",
+      "asset": "sur_00001",
+      "effect": "None",
+      "widths": "0.25 / 0.25 / 0.25 / 0.25"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "color": "Red（赤属性）",
+      "role": "Attack",
+      "hp": 400000,
+      "atk": 850,
+      "spd": 45,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_sur_00801_vd_Boss_Red",
+      "name": "無窮の鎖 和倉 優希",
+      "color": "Red（赤属性）",
+      "role": "Defense",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 32,
+      "desc": "ボス（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 3,
+      "notes": "累計3"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 1000,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 2,
+      "notes": "累計5"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 1500,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 3,
+      "notes": "累計8"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 2,
+      "notes": "累計10"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 1,
+      "notes": "累計11"
+    },
+    {
+      "num": 6,
+      "trigger": "ElapsedTime",
+      "value": 3200,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 3,
+      "notes": "累計14 / pos=1.3"
+    },
+    {
+      "num": 7,
+      "trigger": "ElapsedTime",
+      "value": 4000,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 10,
+      "notes": "累計24 / interval=800ms"
+    },
+    {
+      "num": 8,
+      "trigger": "ElapsedTime",
+      "value": 5000,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 10,
+      "notes": "累計34 / interval=1200ms"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 3,
+      "notes": "累計37 / interval=100ms"
+    },
+    {
+      "num": 10,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 3,
+      "notes": "累計40 / interval=100ms"
+    },
+    {
+      "num": 11,
+      "trigger": "FriendUnitDead",
+      "value": 11,
+      "enemy_id": "c_sur_00801_vd_Boss_Red",
+      "name": "無窮の鎖 和倉 優希",
+      "count": 1,
+      "notes": "累計41 / pos=1.7 / aura=Boss"
+    },
+    {
+      "num": 12,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_sur_00101_vd_Normal_Red",
+      "name": "醜鬼",
+      "count": 99,
+      "notes": "無限補充 / interval=750ms"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

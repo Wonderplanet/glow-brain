@@ -1,0 +1,123 @@
+{
+  "block_name": "vd_tak_boss_00001",
+  "title": "ブロック基礎設計_vd_tak_boss_00001",
+  "requirements_text": "ボスはタコピー（`c_tak_00001_vd_Boss_Blue`、HP=10000、青属性、Defenseロール）が開幕 InitialSummon で砦付近（position=1.7）に配置される。タコピーはダメージを受けるまで静止し（move_start=Damage:1）、戦闘開始の緊張感を演出する。ElapsedTime=500ms からファントム（`e_glo_00001_vd_Normal_Colorless`）が interval=500ms で3体ずつ押し寄せ、倒すたびに次のファントムウェーブが連鎖する（FriendUnitDead=1/3/5 で各3体追加）。ファントムを8体倒すと2体目のタコピーが FriendUnitDead でチェーン登場し、さらに15体倒したタイミングで OutpostHpPercentage=99 が発火、ファントムが interval=600ms で無限補充（summon_count=99）に切り替わる。UR対抗キャラ「ハッピー星からの使者 タコピー」に対し、タコピー自身がボスとして繰り返し出現する「自己対峙」設計。",
+  "basic_info": {
+    "id": "vd_tak_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 100,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "glo_00004",
+      "effect": "None",
+      "widths": "1.0"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_tak_00001_vd_Boss_Blue",
+      "name": "ハッピー星からの使者 タコピー",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 300,
+      "spd": 25,
+      "desc": "ボス（c_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_tak_00001_vd_Boss_Blue",
+      "name": "タコピー（Boss）",
+      "count": 1,
+      "notes": "ボス初期配置。position=1.7、Damage受けるまで静止"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 50,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 3,
+      "trigger": "FriendUnitDead",
+      "value": 2,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "c_tak_00001_vd_Boss_Blue",
+      "name": "タコピー2体目（Boss）",
+      "count": 1,
+      "notes": "ボス2体目チェーン登場。position=1.7、Damage受けるまで静止"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": ""
+    },
+    {
+      "num": 8,
+      "trigger": "OutpostHpPercentage",
+      "value": 99,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム（無限補充）",
+      "count": 99,
+      "notes": "拠点初ダメージで発火。interval=600ms、無限補充に切り替わり"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

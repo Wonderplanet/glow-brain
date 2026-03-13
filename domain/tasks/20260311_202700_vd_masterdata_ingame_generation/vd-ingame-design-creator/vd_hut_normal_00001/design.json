@@ -1,0 +1,192 @@
+{
+  "block_name": "vd_hut_normal_00001",
+  "title": "ブロック基礎設計_vd_hut_normal_00001",
+  "requirements_text": "序盤は c_hut_00001（鳩野 ちひろ / Defense-Yellow）が ElapsedTime=250ms で1体出現し、その後 ElapsedTime=1000ms / 2000ms / 3500ms と段階的に追加召喚する。5体撃破ごとに FriendUnitDead でチェーンし、c_hut_00201（Technical-Yellow）が登場して中盤の圧力を高める。さらに10体撃破トリガーで c_hut_00301（Technical-Yellow）が召喚され、終盤は c_hut_00001 の summon_count=99 無限補充に切り替わる。c_キャラは2体目以降 FriendUnitDead でチェーンし、フィールド上の同時出現は最大1体に制御する。合計出現体数は最低15体（無限補充除く初期ウェーブで18体以上）を確保する。\n\nコマは3行構成。アセットキーは作品カラー `glo_00014` を使用。行1はパターン8（3コマ：幅0.5/0.25/0.25）、行2はパターン6（2コマ：幅0.5/0.5）、行3はパターン7（3コマ：幅0.33/0.34/0.33）。エフェクトはすべて None（ひたむきギタリスト 鳩野 ちひろ対抗のコマ効果は実装なし）。\n\nUR対抗キャラ：ひたむきギタリスト 鳩野 ちひろ（chara_hut_00001）の Defense 特性に対抗するため、c_hut_00001 を主力として Defense ロールの敵を繰り返し召喚する設計。FriendUnitDead でのチェーンにより「倒すほど次の仲間が現れる」軽音楽部らしい連携演出を狙っている。",
+  "basic_info": {
+    "id": "vd_hut_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "13行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "3コマ",
+      "asset": "glo_00014",
+      "effect": "None",
+      "widths": "0.5 / 0.25 / 0.25"
+    },
+    {
+      "row": "行2",
+      "count": "2コマ",
+      "asset": "glo_00014",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    },
+    {
+      "row": "行3",
+      "count": "3コマ",
+      "asset": "glo_00014",
+      "effect": "None",
+      "widths": "0.33 / 0.34 / 0.33"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "color": "Yellow（黄属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（主力）"
+    },
+    {
+      "id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト（中盤）",
+      "color": "Yellow（黄属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（中盤）"
+    },
+    {
+      "id": "c_hut_00301_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト（後半）",
+      "color": "Yellow（黄属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（後半）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 250,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "開幕1体"
+    },
+    {
+      "num": 2,
+      "trigger": "FriendUnitDead",
+      "value": 1,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "interval=200ms"
+    },
+    {
+      "num": 3,
+      "trigger": "FriendUnitDead",
+      "value": 2,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "interval=200ms"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "interval=300ms"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "interval=300ms"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト（中盤）",
+      "count": 1,
+      "notes": "中盤強化登場（5体倒したら登場）"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "interval=400ms"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "interval=400ms"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 8,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "interval=400ms"
+    },
+    {
+      "num": 10,
+      "trigger": "FriendUnitDead",
+      "value": 9,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "interval=400ms"
+    },
+    {
+      "num": 11,
+      "trigger": "FriendUnitDead",
+      "value": 10,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "interval=300ms"
+    },
+    {
+      "num": 12,
+      "trigger": "FriendUnitDead",
+      "value": 11,
+      "enemy_id": "c_hut_00301_vd_Normal_Yellow",
+      "name": "ひたむきギタリスト（後半）",
+      "count": 1,
+      "notes": "後半強化登場（10体倒したら登場）"
+    },
+    {
+      "num": 13,
+      "trigger": "FriendUnitDead",
+      "value": 12,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "無限補充開始（interval=600ms）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

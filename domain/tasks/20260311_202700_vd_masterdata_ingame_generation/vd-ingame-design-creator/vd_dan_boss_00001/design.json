@@ -1,0 +1,105 @@
+{
+  "block_name": "vd_dan_boss_00001",
+  "title": "ブロック基礎設計_vd_dan_boss_00001",
+  "requirements_text": "ダンダダン Bossブロック。ボスは招き猫 ターボババア（`c_dan_00301_vd_Boss_Red`）で、開幕 InitialSummon で砦付近（position=1.7）に配置し、ダメージを受けるまで静止する。雑魚はセルポ星人（`e_dan_00001_vd_Normal_Red`）が ElapsedTime で序盤から段階的に出現し、FriendUnitDead で強化・補充される設計。UR対抗キャラ「ターボババアの霊力 オカルン」（`chara_dan_00002`）に対抗する赤属性 Boss ステージとして、セルポ星人が連続出現する中でボスが砦を守り続ける展開を狙う。\n\nコマ設計は Bossブロック固定の1行構成。コマアセットキーは `dan_00007`（back_ground_offset=0.6）。",
+  "basic_info": {
+    "id": "vd_dan_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 100,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "6行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "dan_00007",
+      "effect": "None",
+      "widths": "1.0"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_dan_00301_vd_Boss_Red",
+      "name": "招き猫 ターボババア",
+      "color": "Red（赤属性）",
+      "role": "Attack",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "ボス（c_キャラ）"
+    },
+    {
+      "id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "color": "Red（赤属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_dan_00301_vd_Boss_Red",
+      "name": "招き猫 ターボババア",
+      "count": 1,
+      "notes": "砦前（position=1.7）に配置。Damage受けるまで静止。Bossオーラ付き"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 5,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 3,
+      "notes": "interval=300ms"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 20,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 3,
+      "notes": "interval=300ms"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 5,
+      "notes": "elem=3消滅後に補充。interval=500ms"
+    },
+    {
+      "num": 5,
+      "trigger": "ElapsedTime",
+      "value": 40,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 5,
+      "notes": "interval=500ms"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 99,
+      "notes": "elem=5消滅後に無限補充。interval=1000ms"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

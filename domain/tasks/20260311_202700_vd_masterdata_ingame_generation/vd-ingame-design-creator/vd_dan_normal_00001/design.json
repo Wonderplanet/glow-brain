@@ -1,0 +1,147 @@
+{
+  "block_name": "vd_dan_normal_00001",
+  "title": "ブロック基礎設計_vd_dan_normal_00001",
+  "requirements_text": "開幕から赤属性のセルポ星人（`e_dan_00001_vd_Normal_Red`）が3体登場し、1000ms後にはグローファントム（`e_glo_00001_vd_Normal_Colorless`）が3体加わる。2500ms後にセルポ星人が再び3体出現する第2波構成。1体でも倒されると2体が追加補充され、7体倒された時点でセルポ星人が一気に4体押し寄せる。闇コマを2個クリアすると「ターボババアの霊力 オカルン」（`c_dan_00301_vd_Boss_Red`）が降臨する。さらに7体到達と同時にグローファントムが無限補充（interval=750ms）に切り替わり、終盤の物量プレッシャーを演出する。雑魚の合計出現数は19体以上（無限補充除く）。",
+  "basic_info": {
+    "id": "vd_dan_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "2コマ",
+      "asset": "dan_00007",
+      "effect": "None",
+      "widths": "0.4 / 0.6"
+    },
+    {
+      "row": "行2",
+      "count": "3コマ",
+      "asset": "dan_00007",
+      "effect": "None",
+      "widths": "0.33 / 0.34 / 0.33"
+    },
+    {
+      "row": "行3",
+      "count": "2コマ",
+      "asset": "dan_00007",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "color": "Red（赤属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 50,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "グローファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_dan_00301_vd_Boss_Red",
+      "name": "ターボババアの霊力 オカルン",
+      "color": "Red（赤属性）",
+      "role": "Attack",
+      "hp": 50000,
+      "atk": 300,
+      "spd": 30,
+      "desc": "ボス（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 3,
+      "notes": "開幕第1波"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 1000,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "グローファントム",
+      "count": 3,
+      "notes": "1000ms後に加勢"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 2500,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 3,
+      "notes": "2500ms後の第2波"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 1,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 2,
+      "notes": "elem1の1体倒したら追加補充"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "グローファントム",
+      "count": 3,
+      "notes": "elem4の1体倒したら追加"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "e_dan_00001_vd_Normal_Red",
+      "name": "セルポ星人",
+      "count": 4,
+      "notes": "elem5の1体倒したら4体押し寄せ"
+    },
+    {
+      "num": 7,
+      "trigger": "DarknessKomaCleared",
+      "value": 2,
+      "enemy_id": "c_dan_00301_vd_Boss_Red",
+      "name": "ターボババアの霊力 オカルン",
+      "count": 1,
+      "notes": "闇コマ2個クリアでBoss降臨 / aura=Boss"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "グローファントム",
+      "count": 99,
+      "notes": "elem6の1体倒したら無限補充 / interval=750ms"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "block_name": "vd_chi_normal_00001",
+  "title": "ブロック基礎設計_vd_chi_normal_00001",
+  "requirements_text": "チェンソーマン作品の雑魚はゾンビ（`e_chi_00101_vd_Normal_Blue` / Blue）を中心に構成し、序盤はElapsedTimeで定期的に送り込んだあと、倒した数に応じてFriendUnitDeadで段階的に強化。15体倒した時点でUR対抗キャラである「悪魔が恐れる悪魔 チェンソーマン」（`c_chi_00002_vd_Boss_Blue`）が登場し、さらに25体倒されると終盤の無限補充ラッシュに切り替わる設計。合計の雑魚出現数は175体超（summon_count=99×2本含む）で達成。\n\nコマは3行構成。行1は1コマ全幅でエフェクトなし、行2は2コマ（0.5:0.5の均等割り）、行3は3コマ（0.33:0.34:0.33の3等分）。コマアセットキーは`glo_00016`（chiシリーズ用）。\n\n悪魔が恐れる悪魔 チェンソーマン（Blueボス）は「UR チェンソーマン（`chara_chi_00002`）」の対抗ユニットとして設計されており、倒すほど強くなる圧力設計によって「チェンソーマンURを使わないと止まらない」体験を目指している。",
+  "basic_info": {
+    "id": "vd_chi_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "10行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "glo_00016",
+      "effect": "None",
+      "widths": "1.0"
+    },
+    {
+      "row": "行2",
+      "count": "2コマ",
+      "asset": "glo_00016",
+      "effect": "None",
+      "widths": "0.5 / 0.5"
+    },
+    {
+      "row": "行3",
+      "count": "3コマ",
+      "asset": "glo_00016",
+      "effect": "None",
+      "widths": "0.33 / 0.34 / 0.33"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 5000,
+      "atk": 320,
+      "spd": 35,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_chi_00002_vd_Boss_Blue",
+      "name": "悪魔が恐れる悪魔 チェンソーマン",
+      "color": "Blue（青属性）",
+      "role": "Technical",
+      "hp": 400000,
+      "atk": 450,
+      "spd": 50,
+      "desc": "UR対抗ボス（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 5,
+      "notes": "序盤から定期的にゾンビを送り込む（1500ms）"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 800,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 3,
+      "notes": "ElapsedTimeで追加（8000ms）"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 2000,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 5,
+      "notes": "ElapsedTimeで追加（20000ms）"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 3500,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 5,
+      "notes": "ElapsedTimeで追加（35000ms）"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 3,
+      "notes": "elem=3のゾンビが1体倒されたら3体追加"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 10,
+      "notes": "elem=4のゾンビが1体倒されたら後方（position=2.9）に10体一気に押し出す強化ウェーブ"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "c_chi_00002_vd_Boss_Blue",
+      "name": "悪魔が恐れる悪魔 チェンソーマン",
+      "count": 1,
+      "notes": "elem=6の1体が倒されたらUR対抗ボス「チェンソーマン」が登場（c_キャラ・summon_count=1）"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 99,
+      "notes": "チェンソーマン（elem=7）が1体倒されたらゾンビ無限補充（interval=500ms）"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 99,
+      "notes": "チェンソーマン（elem=7）が1体倒されたらゾンビ無限補充（position=2.9, interval=750ms）"
+    },
+    {
+      "num": 10,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 99,
+      "notes": "拠点に初ダメージが入ったら独立した99補充が発動（interval=1000ms）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

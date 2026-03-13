@@ -1,0 +1,137 @@
+{
+  "block_name": "vd_tak_normal_00001",
+  "title": "ブロック基礎設計_vd_tak_normal_00001",
+  "requirements_text": "タコピーの原罪作品の雑魚はファントム（`e_glo_00001_vd_Normal_Colorless`）を中心に構成し、序盤はElapsedTimeで定期的に送り込んだあと、倒した数に応じてFriendUnitDeadで段階的に強化。elem=4のファントムが1体倒された時点で後方（position=2.9）に10体の大波が押し寄せ、さらにその1体が倒されるとUR対抗キャラである「ハッピー星からの使者 タコピー」（`c_tak_00001_vd_Boss_Blue`）が登場する設計。タコピー撃破後に無限補充ラッシュへ移行し、合計雑魚出現数は31体（summon_count=99×3本含む）を達成。\n\nコマは3行構成。行1は1コマ全幅でエフェクトなし、行2は2コマ（0.5:0.5の均等割り）でエフェクトなし、行3は3コマ（0.33:0.34:0.33の3等分）でエフェクトなし。コマアセットキーは`glo_00004`（takシリーズ用）。\n\n「ハッピー星からの使者 タコピー」（Blue・Bossオーラ）は「UR タコピー（`chara_tak_00001`）」の対抗ユニットとして設計されており、倒すほど強くなる圧力設計によって「タコピーURを使わないと止まらない」体験を目指している。",
+  "basic_info": {
+    "id": "vd_tak_normal_00001",
+    "block_type": "Normal",
+    "gate_hp": 100,
+    "koma_rows": "3行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "10行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {"row": "行1", "count": "1コマ", "asset": "glo_00004", "effect": "None", "widths": "1.0"},
+    {"row": "行2", "count": "2コマ", "asset": "glo_00004", "effect": "None", "widths": "0.5 / 0.5"},
+    {"row": "行3", "count": "3コマ", "asset": "glo_00004", "effect": "None", "widths": "0.33 / 0.34 / 0.33"}
+  ],
+  "enemies": [
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "c_tak_00001_vd_Boss_Blue",
+      "name": "ハッピー星からの使者 タコピー",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 300,
+      "spd": 25,
+      "desc": "UR対抗ボス（c_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "序盤から定期的に送り込む（合計18体のうち最初の5体）"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 800,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "定期補充（累計8体）"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 2000,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "定期補充（累計13体）。elem=5のFriendUnitDeadトリガー元"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 3500,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 5,
+      "notes": "定期補充（累計18体）。elem=6のFriendUnitDeadトリガー元"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 3,
+      "notes": "elem=3のファントムが1体倒されたら3体追加（累計21体）"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 10,
+      "notes": "elem=4が1体倒されたら後方（position=2.9）に10体一気に押し出す強化ウェーブ（累計31体）"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "c_tak_00001_vd_Boss_Blue",
+      "name": "ハッピー星からの使者 タコピー",
+      "count": 1,
+      "notes": "elem=6の1体が倒されたらUR対抗ボス「タコピー」が登場（c_キャラ・Bossオーラ・summon_count=1）"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 99,
+      "notes": "タコピー撃破後ファントム無限補充（interval=500、random位置）"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 99,
+      "notes": "タコピー撃破後ファントム無限補充（interval=750、position=2.9）"
+    },
+    {
+      "num": 10,
+      "trigger": "OutpostDamage",
+      "value": 1,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 99,
+      "notes": "拠点に初ダメージが入ったら独立した99補充が発動（バックアップ、interval=1000）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

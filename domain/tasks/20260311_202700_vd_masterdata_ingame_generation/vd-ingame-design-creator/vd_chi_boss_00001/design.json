@@ -1,0 +1,133 @@
+{
+  "block_name": "vd_chi_boss_00001",
+  "title": "ブロック基礎設計_vd_chi_boss_00001",
+  "requirements_text": "ボス「悪魔が恐れる悪魔 チェンソーマン」（`c_chi_00002_vd_Boss_Blue`、HP 400,000）が開幕から砦付近に配置され、1ダメージを受けた瞬間に動き始める。雑魚にはゾンビ（`e_chi_00101_vd_Normal_Blue`、HP 5,000）を使用し、開始250ms後から定期的に召喚して序盤の圧力を演出する。10体倒されると強化版ゾンビ（Blue×3体）が追加出現し、さらに15体倒されると再び強化ゾンビ波が来る。20体倒されると拠点に危険が迫るタイミングでファントム（`e_glo_00001_vd_Normal_Colorless`）の無限補充が始まる設計。UR対抗キャラ「悪魔が恐れる悪魔 チェンソーマン」（`chara_chi_00002`）に対し、ボスオーラ付きで砦前に陣取るボスを各種ギミックを活用して突破する体験を狙う。コマは1行構成（bossブロック固定）でアセットキー `glo_00016` を使用する。",
+  "basic_info": {
+    "id": "vd_chi_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 100,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "8行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "glo_00016",
+      "effect": "None",
+      "widths": "1.0"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_chi_00002_vd_Boss_Blue",
+      "name": "悪魔が恐れる悪魔 チェンソーマン",
+      "color": "Blue（青属性）",
+      "role": "Technical",
+      "hp": 400000,
+      "atk": 450,
+      "spd": 50,
+      "desc": "ボス"
+    },
+    {
+      "id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "color": "Blue（青属性）",
+      "role": "Defense",
+      "hp": 5000,
+      "atk": 320,
+      "spd": 35,
+      "desc": "雑魚（e_キャラ）"
+    },
+    {
+      "id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "color": "Colorless（無属性）",
+      "role": "Attack",
+      "hp": 5000,
+      "atk": 100,
+      "spd": 34,
+      "desc": "雑魚（e_キャラ）"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_chi_00002_vd_Boss_Blue",
+      "name": "悪魔が恐れる悪魔 チェンソーマン",
+      "count": 1,
+      "notes": "position=1.7、Bossオーラ。ダメージ受けたら移動開始"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 25,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 3,
+      "notes": "序盤ラッシュ開始"
+    },
+    {
+      "num": 3,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 3,
+      "notes": "中盤継続"
+    },
+    {
+      "num": 4,
+      "trigger": "ElapsedTime",
+      "value": 300,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 4,
+      "notes": "後半強化"
+    },
+    {
+      "num": 5,
+      "trigger": "ElapsedTime",
+      "value": 500,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 3,
+      "notes": "終盤追加"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 2,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 3,
+      "notes": "elem=2のゾンビが1体でも倒されたら強化追加"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 6,
+      "enemy_id": "e_chi_00101_vd_Normal_Blue",
+      "name": "ゾンビ",
+      "count": 5,
+      "notes": "さらに倒すと追加ラッシュ"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 7,
+      "enemy_id": "e_glo_00001_vd_Normal_Colorless",
+      "name": "ファントム",
+      "count": 99,
+      "notes": "無限補充開始（interval=500ms）"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}

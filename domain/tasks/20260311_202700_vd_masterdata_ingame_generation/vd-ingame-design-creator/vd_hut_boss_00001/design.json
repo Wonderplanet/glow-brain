@@ -1,0 +1,206 @@
+{
+  "block_name": "vd_hut_boss_00001",
+  "title": "ブロック基礎設計_vd_hut_boss_00001",
+  "requirements_text": "ボスキャラは「幸山 厘」（`c_hut_00101_vd_Boss_Yellow`、Support / Yellow）を使用し、UR対抗キャラ「ひたむきギタリスト 鳩野 ちひろ」（`chara_hut_00001`）を意識した設計。ボスは開幕 `InitialSummon` で砦付近（position=1.7）に配置し、ダメージを受けるまで静止する演出とする。雑魚ウェーブは「鳩野 ちひろ」（`c_hut_00001_vd_Normal_Yellow`）・「藤井 彩目」（`c_hut_00201_vd_Normal_Yellow`）・「内田 桃」（`c_hut_00301_vd_Normal_Yellow`）の3キャラで構成し、ElapsedTime で序盤の定期ウェーブを送りつつ、FriendUnitDead で撃破数が増えるほど強化雑魚が追加される設計。終盤はボスを倒すと `FriendUnitDead` で c_hut キャラが大量追加される流れとなる。\n\nコマ設計は boss ブロック固有の1行構成。コマアセットキーは `glo_00014`（hut シリーズ）を使用し、koma1_back_ground_offset は仮値 `-1.0` を設定する。\n\nUR対抗の狙いとして、「ひたむきギタリスト 鳩野 ちひろ」のスキルがフィールド上で活きやすいよう、同色 Yellow の雑魚を連続して送り込む構成とした。",
+  "basic_info": {
+    "id": "vd_hut_boss_00001",
+    "block_type": "Boss",
+    "gate_hp": 100,
+    "koma_rows": "1行",
+    "group_switch": "なし（デフォルトグループのみ）",
+    "sequence_rows": "15行",
+    "release_key": 202604010
+  },
+  "koma_rows": [
+    {
+      "row": "行1",
+      "count": "1コマ",
+      "asset": "glo_00014",
+      "effect": "None",
+      "widths": "1.0"
+    }
+  ],
+  "enemies": [
+    {
+      "id": "c_hut_00101_vd_Boss_Yellow",
+      "name": "幸山 厘",
+      "color": "Yellow（黄属性）",
+      "role": "Support",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "ボス"
+    },
+    {
+      "id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "color": "Yellow（黄属性）",
+      "role": "Defense",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（c_キャラ）・UR対抗キャラ。序盤〜中盤・ボス撃破後に登場"
+    },
+    {
+      "id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "藤井 彩目",
+      "color": "Yellow（黄属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（c_キャラ）・中盤以降の強化雑魚"
+    },
+    {
+      "id": "c_hut_00301_vd_Normal_Yellow",
+      "name": "内田 桃",
+      "color": "Yellow（黄属性）",
+      "role": "Technical",
+      "hp": 10000,
+      "atk": 100,
+      "spd": 35,
+      "desc": "雑魚（c_キャラ）・中盤以降の強化雑魚"
+    }
+  ],
+  "sequences": [
+    {
+      "num": 1,
+      "trigger": "InitialSummon",
+      "value": 0,
+      "enemy_id": "c_hut_00101_vd_Boss_Yellow",
+      "name": "幸山 厘（ボス）",
+      "count": 1,
+      "notes": "ボス開幕配置 position=1.7 / Damage で動き始め / Boss オーラ / hp_coef=5.0 atk_coef=3.0"
+    },
+    {
+      "num": 2,
+      "trigger": "ElapsedTime",
+      "value": 150,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "序盤 1500ms / hp_coef=1.0 atk_coef=1.0"
+    },
+    {
+      "num": 3,
+      "trigger": "FriendUnitDead",
+      "value": 2,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "中盤ウェーブ（分割1体目）/ hp_coef=1.5 atk_coef=1.5"
+    },
+    {
+      "num": 4,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "中盤ウェーブ（分割2体目）/ hp_coef=1.5 atk_coef=1.5"
+    },
+    {
+      "num": 5,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "藤井 彩目",
+      "count": 1,
+      "notes": "中盤強化雑魚 / hp_coef=1.5 atk_coef=1.5"
+    },
+    {
+      "num": 6,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "c_hut_00301_vd_Normal_Yellow",
+      "name": "内田 桃",
+      "count": 1,
+      "notes": "中盤強化雑魚 / hp_coef=1.5 atk_coef=1.5"
+    },
+    {
+      "num": 7,
+      "trigger": "FriendUnitDead",
+      "value": 2,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "後半強化 / hp_coef=2.0 atk_coef=2.0"
+    },
+    {
+      "num": 8,
+      "trigger": "FriendUnitDead",
+      "value": 3,
+      "enemy_id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "藤井 彩目",
+      "count": 1,
+      "notes": "後半強化（2体分割1体目）/ hp_coef=2.0 atk_coef=2.0"
+    },
+    {
+      "num": 9,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "c_hut_00301_vd_Normal_Yellow",
+      "name": "内田 桃",
+      "count": 1,
+      "notes": "後半強化（2体分割1体目）/ hp_coef=2.5 atk_coef=2.5"
+    },
+    {
+      "num": 10,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "藤井 彩目",
+      "count": 1,
+      "notes": "後半強化（3体分割1体目）/ hp_coef=2.5 atk_coef=2.5"
+    },
+    {
+      "num": 11,
+      "trigger": "FriendUnitDead",
+      "value": 4,
+      "enemy_id": "c_hut_00301_vd_Normal_Yellow",
+      "name": "内田 桃",
+      "count": 1,
+      "notes": "後半強化（2体分割2体目）/ hp_coef=2.5 atk_coef=2.5"
+    },
+    {
+      "num": 12,
+      "trigger": "FriendUnitDead",
+      "value": 5,
+      "enemy_id": "c_hut_00201_vd_Normal_Yellow",
+      "name": "藤井 彩目",
+      "count": 1,
+      "notes": "後半強化（3体分割2体目）/ hp_coef=2.5 atk_coef=2.5"
+    },
+    {
+      "num": 13,
+      "trigger": "FriendUnitDead",
+      "value": 1,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "ボス撃破後（3体分割1体目）/ hp_coef=3.0 atk_coef=2.0"
+    },
+    {
+      "num": 14,
+      "trigger": "FriendUnitDead",
+      "value": 1,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "ボス撃破後（3体分割2体目）/ hp_coef=3.0 atk_coef=2.0"
+    },
+    {
+      "num": 15,
+      "trigger": "FriendUnitDead",
+      "value": 1,
+      "enemy_id": "c_hut_00001_vd_Normal_Yellow",
+      "name": "鳩野 ちひろ",
+      "count": 1,
+      "notes": "ボス撃破後（3体分割3体目）/ hp_coef=3.0 atk_coef=2.0"
+    }
+  ],
+  "stage_description": {
+    "battle_hint": "",
+    "stage_text": ""
+  }
+}
