@@ -63,46 +63,50 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 **作品**: SPY×FAMILY
 **EnemyStageParameter ID**: `e_spy_00101_general_n_Normal_Colorless`
 
-#### ステータス
+**解説**: 典型的な雑魚敵。単体近接攻撃のみ。HP1,000、短い攻撃間隔（50フレーム）で次々と攻撃してくる。登場演出・スペシャル攻撃は持たず、`attack_combo_cycle=1` のためSpecial発動なし。ボスに昇格する前の基本形態。
+
+#### ステータス（MstEnemyStageParameter）
 
 | パラメータ | 値 | 説明 |
 |-----------|-----|------|
-| mst_enemy_character_id | enemy_spy_00101 | キャラ参照（グエン） |
-| character_unit_kind | **Normal** | 雑魚敵 |
-| role_type | Attack | 攻撃ロール |
-| color | Colorless | 無色 |
-| hp | **1,000** | 基本HP |
-| damage_knock_back_count | （空）| ノックバック耐性なし |
-| move_speed | 31 | 移動速度 |
-| well_distance | 0.2 | 攻撃可能距離 |
-| attack_power | 50 | 攻撃力 |
-| attack_combo_cycle | 1 | コンボサイクル |
-| drop_battle_point | 200 | 撃破時バトルポイント |
+| mst_enemy_character_id | enemy_spy_00101 | MstEnemyCharacterへの参照ID。キャラクターの見た目・名前（グエン）を決定する |
+| character_unit_kind | **Normal** | 戦闘での役割区分。`Normal`=雑魚敵（撃破対象として大量出現）、`Boss`=ボス敵（HP大・登場演出あり） |
+| role_type | Attack | 戦闘スタイル区分。`Attack`=単体近距離攻撃の標準型、`Defense`=耐久特化・自己バフ型、`Technical`=全体攻撃・デバフ付与型 |
+| color | Colorless | カラーマッチング用の色属性。プレイヤーユニットとの有利・不利関係に影響する。`Colorless`=色なし（有利色なし） |
+| hp | **1,000** | 基本HP値。実際のHPは `MstInGame.normal_enemy_hp_coef × MstAutoPlayerSequence.enemy_hp_coef × この値` の積で決まる |
+| damage_knock_back_count | （空）| ノックバック発生に必要な被ヒット数。空欄=ノックバック耐性なし（1ヒットでもノックバックする） |
+| move_speed | 31 | 1フレームあたりの移動量（ゲーム内単位）。大きいほど高速移動する |
+| well_distance | 0.2 | 攻撃を開始する最大距離（ゲーム内単位）。敵がこの距離以内に入ると攻撃モーションを開始する |
+| attack_power | 50 | ダメージ計算の基礎値。`power_parameter_type=Percentage` の場合、実際のダメージ = `attack_power × power_parameter / 100` |
+| attack_combo_cycle | 1 | 通常攻撃のサイクル数。この回数通常攻撃した後にSpecial攻撃を発動する。`1`=Specialなし（雑魚敵の標準）、`6`=6回ごとにSpecial（ボスの標準） |
+| drop_battle_point | 200 | 撃破時にプレイヤーが獲得するバトルポイント。`MstAutoPlayerSequence.override_drop_battle_point` で上書き可能 |
 
 #### 攻撃設定（MstAttack）
 
-| attack_kind | action_frames | attack_delay | next_attack_interval |
-|-------------|--------------|--------------|---------------------|
-| Normal | 60 | 25 | 50 |
+| attack_kind | action_frames | attack_delay | next_attack_interval | 説明 |
+|-------------|--------------|--------------|---------------------|------|
+| Normal | 60 | 25 | 50 | 通常攻撃のみ（登場演出・スペシャルなし） |
 
-> Normalのみ（登場演出・スペシャルなし）
+> **カラム説明**:
+> - `attack_kind`: 攻撃の発動タイプ。`Normal`=通常の攻撃行動、`Appearance`=ステージ登場時に一度だけ発動（ボス限定）、`Special`=combo_cycleに達したときに発動（ボス限定）
+> - `action_frames`: このアクション全体のフレーム数（モーション長）。この間は次のアクションに移れない
+> - `attack_delay`: アクション開始からダメージ判定が発生するまでの遅延フレーム数。モーションの"振り"部分の長さに相当する
+> - `next_attack_interval`: ダメージ判定後、次のアクションを開始するまでのインターバル（フレーム）。0の場合は即座に次の行動へ移行
 
 #### 攻撃効果（MstAttackElement）
 
-| 項目 | 値 |
-|------|-----|
-| attack_type | Direct（直接攻撃） |
-| range_end_type | Distance |
-| range_end_parameter | 0.21（短射程） |
-| max_target_count | 1（単体） |
-| target | Foe / All |
-| damage_type | **Damage** |
-| hit_type | Normal |
-| power_parameter_type | Percentage |
-| power_parameter | **100%** |
-| effect_type | None |
-
-**解説**: 典型的な雑魚敵。単体近接攻撃のみ。HP1,000、短い攻撃間隔（50フレーム）で次々と攻撃してくる。
+| 項目 | 値 | 説明 |
+|------|-----|------|
+| attack_type | Direct（直接攻撃） | 攻撃の物理的な方式。`Direct`=対象に直接当たる接触型攻撃 |
+| range_end_type | Distance | 射程の計算方式。`Distance`=距離によって射程範囲を決定する |
+| range_end_parameter | 0.21（短射程） | 攻撃が届く最大距離（ゲーム内単位）。0.21=近接のみ、50.0=全画面範囲 |
+| max_target_count | 1（単体） | 一度に攻撃できる最大ターゲット数。1=単体攻撃、100=実質全体攻撃 |
+| target | Foe / All | ターゲットの選択条件。`Foe/All`=全ての敵対ユニット（プレイヤー視点の味方）、`Self`=自分自身 |
+| damage_type | **Damage** | ダメージを与えるかどうか。`Damage`=ダメージあり、`None`=ダメージなし（バフ・デバフのみ付与） |
+| hit_type | Normal | ヒット時の追加効果。`Normal`=通常ヒット、`ForcedKnockBack5`=強制的に大きくノックバックさせる |
+| power_parameter_type | Percentage | ダメージ倍率の計算方式。`Percentage`=attack_powerに対するパーセンテージで計算 |
+| power_parameter | **100%** | ダメージ倍率（%）。100=attack_powerの100%分のダメージを与える |
+| effect_type | None | ヒット時に付与するステータス効果。`None`=効果なし、`DamageCut`=被ダメージ軽減、`AttackPowerDown`=攻撃力ダウン |
 
 ---
 
@@ -111,16 +115,18 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 **作品**: SPY×FAMILY
 **EnemyStageParameter ID**: `e_spy_00101_general_n_Boss_Colorless`
 
+**解説**: ボス昇格で HP が10倍（1,000→10,000）になり、ノックバック耐性（2ヒット必要）も追加される。登場時に全体強制ノックバックを発動し、プレイヤーの味方を吹き飛ばすことができる。この登場演出（Appearance）はボス限定の行動。同一キャラの `Normal形態`（例1）との差分を把握することで、ステージ難易度調整のパターンを理解できる。
+
 #### ステータス（例1との比較）
 
-| パラメータ | Normal形態 | **Boss形態** |
-|-----------|------------|-------------|
-| character_unit_kind | Normal | **Boss** |
-| hp | 1,000 | **10,000（×10）** |
-| damage_knock_back_count | なし | **2（2ヒットでノックバック）** |
-| move_speed | 31 | 31（変化なし） |
-| attack_power | 50 | 50（変化なし） |
-| drop_battle_point | 200 | **500** |
+| パラメータ | Normal形態 | **Boss形態** | 変更点の意味 |
+|-----------|------------|-------------|------------|
+| character_unit_kind | Normal | **Boss** | ボス判定になることで登場演出（Appearance）が使えるようになり、HPバーUIも表示される |
+| hp | 1,000 | **10,000（×10）** | ステージのクリア難易度を大きく左右するメインパラメータ |
+| damage_knock_back_count | なし | **2（2ヒットでノックバック）** | N回ヒットしないとノックバックしない耐性。数値が大きいほど吹き飛ばしにくく、ボスらしい重厚感が出る |
+| move_speed | 31 | 31（変化なし） | ボスでも移動速度は据え置き |
+| attack_power | 50 | 50（変化なし） | 攻撃力は変化なし（coef倍率で実質的な強さは変わる） |
+| drop_battle_point | 200 | **500** | ボスは撃破報酬が高い |
 
 #### 攻撃設定（MstAttack）
 
@@ -133,22 +139,20 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 
 **Appearance（登場時）**:
 
-| 項目 | 値 |
-|------|-----|
-| hit_type | **ForcedKnockBack5**（強制ノックバック） |
-| range_end_parameter | 50.0（全画面範囲） |
-| max_target_count | 100（全体） |
-| damage_type | None（ダメージなし） |
+| 項目 | 値 | 説明 |
+|------|-----|------|
+| hit_type | **ForcedKnockBack5** | `attack_delay=0` で登場と同時に全プレイヤーユニットを強制ノックバック。数値5は吹き飛ばし距離の強さを示す |
+| range_end_parameter | 50.0（全画面範囲） | 実質画面全体をカバーする射程。登場した瞬間に全ユニットへ影響する |
+| max_target_count | 100（全体） | 全プレイヤーユニットが対象 |
+| damage_type | None（ダメージなし） | ノックバックのみで実ダメージは与えない。プレイヤーの陣形を崩す効果に特化 |
 
 **Normal（通常攻撃）**:
 
-| 項目 | 値 |
-|------|-----|
-| range_end_parameter | 0.21（近距離） |
-| damage_type | Damage |
-| power_parameter | 100% |
-
-**解説**: ボス昇格で HP が10倍。登場時に全体強制ノックバックを発動し、プレイヤーの味方を吹き飛ばすことができる。この登場演出（Appearance）はボス限定の行動。
+| 項目 | 値 | 説明 |
+|------|-----|------|
+| range_end_parameter | 0.21（近距離） | Normal形態と同じ近接射程 |
+| damage_type | Damage | 通常ダメージを与える |
+| power_parameter | 100% | attack_powerの100%分のダメージ |
 
 ---
 
@@ -157,21 +161,23 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 **作品**: 拷問王女（gom）
 **EnemyStageParameter ID**: `c_gom_00001_general_n_Boss_Yellow`
 
+**解説**: `attack_combo_cycle=6` のため、6回通常攻撃した後にスペシャルを発動する設計。スペシャルは自身にダメージカット効果を付与する自己強化型で、`role_type=Defense` らしい耐久特化設計。IDプレフィックスが `c_`（characterの略）であり、作品の登場キャラクターを敵として使用するパターン。low_speed（25）とDamageCutの組み合わせで、高耐久・鈍足型ボスの典型例。
+
 #### ステータス
 
-| パラメータ | 値 |
-|-----------|-----|
-| mst_enemy_character_id | chara_gom_00001（囚われの王女 姫様） |
-| character_unit_kind | Boss |
-| role_type | **Defense**（防御ロール） |
-| color | **Yellow** |
-| hp | 10,000 |
-| damage_knock_back_count | 1 |
-| move_speed | 25（低速） |
-| well_distance | 0.16 |
-| attack_power | 50 |
-| attack_combo_cycle | **6** |
-| drop_battle_point | 500 |
+| パラメータ | 値 | 説明 |
+|-----------|-----|------|
+| mst_enemy_character_id | chara_gom_00001 | 囚われの王女 姫様 |
+| character_unit_kind | Boss | ボス敵 |
+| role_type | **Defense** | 防御ロール。低速・高耐久・自己バフが設計思想 |
+| color | **Yellow** | Yellow色敵。プレイヤー側の有利色ユニットと組み合わせてゲームプレイに影響する |
+| hp | 10,000 | ボス標準HP |
+| damage_knock_back_count | 1 | 1ヒットでノックバックする（ノックバック耐性あり・最小値） |
+| move_speed | 25（低速） | 他ボスの平均より低速。Defenseロールの鈍足設計 |
+| well_distance | 0.16 | 近距離でないと攻撃しない |
+| attack_power | 50 | 標準攻撃力 |
+| attack_combo_cycle | **6** | 6回通常攻撃した後にSpecialを発動するサイクル数 |
+| drop_battle_point | 500 | ボス標準BP |
 
 #### 攻撃設定（MstAttack）
 
@@ -181,26 +187,26 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 | Normal | 65 | 25 | 100 |
 | **Special** | **200** | **115** | 0 |
 
+> `Special` の `action_frames=200` はモーション全体が長く、発動中プレイヤーが対処する猶予がある。`attack_delay=115` でダメージ/効果判定が遅れて発生するため、モーション前半が長い"ため"演出になっている。
+
 #### 攻撃効果（MstAttackElement）
 
 **Appearance（登場時）**:
-- 全体強制ノックバック5（ボス共通）
+- 全体強制ノックバック5（ボス共通演出）
 
 **Normal（通常攻撃）**:
-- range_end: 0.17、単体、Damage 100%
+- range_end: 0.17（近距離単体攻撃）、Damage 100%
 
 **Special（スペシャル攻撃）** ← ポイント:
 
-| 項目 | 値 |
-|------|-----|
-| target | **Self（自分自身）** |
-| damage_type | **None**（ダメージなし） |
-| effect_type | **DamageCut** |
-| effective_count | -1（回数無制限） |
-| effective_duration | **500**（フレーム） |
-| effect_parameter | 5 |
-
-**解説**: `attack_combo_cycle = 6` のため、6回通常攻撃した後にスペシャルを発動。スペシャルは自身にダメージカット効果を付与する自己強化型。Defenseロールらしい耐久特化設計。
+| 項目 | 値 | 説明 |
+|------|-----|------|
+| target | **Self（自分自身）** | 自身を対象とするため、プレイヤーユニットへのダメージは発生しない |
+| damage_type | **None**（ダメージなし） | 攻撃ではなく自己強化専用アクション |
+| effect_type | **DamageCut** | 被ダメージを軽減するバフ効果。Defenseロールらしい生存特化設計 |
+| effective_count | -1（回数無制限） | 持続時間が尽きるまで何度被弾してもDamageCutが有効 |
+| effective_duration | **500**（フレーム） | 効果の持続フレーム数。約8.3秒間ダメージカットが有効 |
+| effect_parameter | 5 | DamageCutの軽減率（%）。被ダメージを5%カットする |
 
 ---
 
@@ -209,20 +215,22 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 **作品**: 拷問王女（gom）
 **EnemyStageParameter ID**: `c_gom_00101_general_n_Boss_Yellow`
 
+**解説**: `role_type=Technical` らしい「対複数＋デバフ」型の設計。スペシャルが全体攻撃 + 攻撃力ダウン20%（1000フレーム継続）で、プレイヤー全体のDPSを長時間低下させる。通常攻撃のモーション（`action_frames=145`）も他キャラと比べて長く、のっそりした動きが設計に反映されている。`well_distance=0.39` とやや長めの射程で、プレイヤーが近寄る前に攻撃できる。
+
 #### ステータス
 
-| パラメータ | 値 |
-|-----------|-----|
-| mst_enemy_character_id | chara_gom_00101（トーチャー・トルチュール） |
-| character_unit_kind | Boss |
-| role_type | **Technical** |
-| color | Yellow |
-| hp | 10,000 |
-| move_speed | 25 |
-| well_distance | 0.39 |
-| attack_power | 50 |
-| attack_combo_cycle | **6** |
-| drop_battle_point | 500 |
+| パラメータ | 値 | 説明 |
+|-----------|-----|------|
+| mst_enemy_character_id | chara_gom_00101 | トーチャー・トルチュール |
+| character_unit_kind | Boss | ボス敵 |
+| role_type | **Technical** | 技巧ロール。全体攻撃・デバフ付与が設計思想 |
+| color | Yellow | Yellow色敵 |
+| hp | 10,000 | ボス標準HP |
+| move_speed | 25 | 低速（姫様と同じ） |
+| well_distance | 0.39 | やや長射程。近距離以外からも攻撃できる |
+| attack_power | 50 | 標準攻撃力 |
+| attack_combo_cycle | **6** | 6回通常攻撃後にSpecialを発動 |
+| drop_battle_point | 500 | ボス標準BP |
 
 #### 攻撃設定（MstAttack）
 
@@ -232,6 +240,8 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 | Normal | **145** | **75** | 100 |
 | Special | 230 | 150 | 0 |
 
+> Normal攻撃の `action_frames=145`（他ボスの60〜65に対して2倍以上）は、のっそりした重い動作を表現している。`attack_delay=75` でダメージ判定も遅く、攻撃モーション開始から約1.25秒後にやっとダメージが発生する。
+
 #### 攻撃効果（MstAttackElement）
 
 **Normal（通常攻撃）**:
@@ -239,19 +249,17 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 
 **Special（スペシャル攻撃）** ← ポイント:
 
-| 項目 | 値 |
-|------|-----|
-| range_end_parameter | 0.4 |
-| max_target_count | **100（全体）** |
-| target | Foe / All |
-| damage_type | Damage |
-| power_parameter | 100% |
-| effect_type | **AttackPowerDown** |
-| effective_count | -1 |
-| effective_duration | **1000（フレーム）** |
-| effect_parameter | **20** |
-
-**解説**: スペシャルが全体攻撃 + 攻撃力ダウン20%（1000フレーム継続）。Technicalロールらしい「対複数＋デバフ」型。通常攻撃のモーション（145フレーム）も他と比べて長く、動きの遅さが設計に反映されている。
+| 項目 | 値 | 説明 |
+|------|-----|------|
+| range_end_parameter | 0.4 | Normal攻撃と同じ射程でSpecialも届く |
+| max_target_count | **100（全体）** | 全プレイヤーユニットを対象にする全体攻撃 |
+| target | Foe / All | 全ての敵対ユニット（プレイヤー側全員）が対象 |
+| damage_type | Damage | 全体ダメージを与えつつデバフも付与する |
+| power_parameter | 100% | attack_powerの100%分のダメージ |
+| effect_type | **AttackPowerDown** | 攻撃力ダウンのデバフ効果。ヒットした全ユニットに付与する |
+| effective_count | -1 | 持続時間が尽きるまで効果が有効（回数制限なし） |
+| effective_duration | **1000（フレーム）** | 約16.7秒間の長時間デバフ。combo_cycle=6のため次のSpecialまで約1000フレーム相当の時間があり、実質的に常時デバフが入り続ける設計 |
+| effect_parameter | **20** | 攻撃力ダウンの低下率（%）。プレイヤーユニット全員の攻撃力を20%ダウンさせる |
 
 ---
 
@@ -260,21 +268,23 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 **作品**: 拷問王女（gom）
 **EnemyStageParameter ID**: `c_gom_00201_general_n_Boss_Yellow`
 
+**解説**: `move_speed=50`（他ボスの約2倍の高速移動）で `well_distance=0.6`（長射程）を持ち、素早く距離を詰めて攻撃するアタッカー型ボス。通常攻撃が3段ヒット（総ダメージ150%）、スペシャルは9段連続攻撃（10フレーム間隔、最終ヒットが2倍ダメージのフィニッシュブロー設計）。攻撃力は姫様・トーチャーと同じ `attack_power=50` だが、coef倍率が大きめに設定されることが多く、実質最高ダメージを出すボス。
+
 #### ステータス
 
-| パラメータ | 値 |
-|-----------|-----|
-| mst_enemy_character_id | chara_gom_00201（クロル） |
-| character_unit_kind | Boss |
-| role_type | **Attack** |
-| color | Yellow |
-| hp | 10,000 |
-| damage_knock_back_count | **2** |
-| move_speed | **50（高速）** |
-| well_distance | **0.6（長射程）** |
-| attack_power | 50 |
-| attack_combo_cycle | **6** |
-| drop_battle_point | 500 |
+| パラメータ | 値 | 説明 |
+|-----------|-----|------|
+| mst_enemy_character_id | chara_gom_00201 | クロル |
+| character_unit_kind | Boss | ボス敵 |
+| role_type | **Attack** | 攻撃ロール。高速・長射程・多段ヒットが設計思想 |
+| color | Yellow | Yellow色敵 |
+| hp | 10,000 | ボス標準HP |
+| damage_knock_back_count | **2** | 2ヒット必要なノックバック耐性。高速移動中にノックバックされにくい設計 |
+| move_speed | **50（高速）** | 他ボスの約2倍。プレイヤー陣地に素早く到達し、長射程攻撃を仕掛ける |
+| well_distance | **0.6（長射程）** | 他ボス（0.16〜0.39）と比べて格段に長い攻撃射程。遠距離からでも攻撃開始できる |
+| attack_power | 50 | 標準攻撃力（多段ヒットにより実質ダメージは高い） |
+| attack_combo_cycle | **6** | 6回通常攻撃後にSpecialを発動 |
+| drop_battle_point | 500 | ボス標準BP |
 
 #### 攻撃設定（MstAttack）
 
@@ -284,50 +294,56 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 | Normal | 65 | 0 | 100 |
 | Special | **250** | 0 | 0 |
 
+> Special の `action_frames=250` はこのキャラ最長のモーション。`attack_delay=0` から開始し、MstAttackElement の `sort_order` ごとに異なる `attack_delay` を設定することで9段連続ヒットを実現している。
+
 #### 攻撃効果（MstAttackElement）
 
 **Normal（通常攻撃） ── 3段ヒット**:
 
-| sort_order | attack_delay | range_end | power_parameter |
-|-----------|-------------|-----------|----------------|
-| 1 | 20 | 0.62 | 100% |
-| 2 | 30 | 0.62 | 25% |
-| 3 | 40 | 0.62 | 25% |
+| sort_order | attack_delay | range_end | power_parameter | 説明 |
+|-----------|-------------|-----------|-----------------|------|
+| 1 | 20 | 0.62 | 100% | 1段目：メインヒット（attack_powerの100%） |
+| 2 | 30 | 0.62 | 25% | 2段目：追加ヒット（10フレーム後） |
+| 3 | 40 | 0.62 | 25% | 3段目：追加ヒット（さらに10フレーム後） |
+
+> `sort_order` は同一攻撃内でのヒット順序。`attack_delay` の差分（10フレーム間隔）で連続ヒットを表現する。全段ヒット総ダメージ: `100% + 25% + 25% = 150%`
 
 **Special（スペシャル攻撃） ── 9段ヒット**:
 
-| sort_order | attack_delay | range_end | power_parameter |
-|-----------|-------------|-----------|----------------|
-| 1 | 105 | 0.65 | 15% |
-| 2 | 115 | 0.65 | 15% |
-| 3 | 125 | 0.65 | 15% |
-| 4 | 135 | 0.65 | 15% |
-| 5 | 145 | 0.65 | 15% |
-| 6 | 160 | 0.65 | 15% |
-| 7 | 170 | 0.65 | 15% |
-| 8 | 180 | 0.65 | 15% |
-| 9 | 190 | 0.65 | **30%** |
+| sort_order | attack_delay | range_end | power_parameter | 説明 |
+|-----------|-------------|-----------|-----------------|------|
+| 1 | 105 | 0.65 | 15% | 1段目（attack開始から105フレーム後） |
+| 2 | 115 | 0.65 | 15% | 2段目（10フレーム間隔） |
+| 3 | 125 | 0.65 | 15% | 3段目 |
+| 4 | 135 | 0.65 | 15% | 4段目 |
+| 5 | 145 | 0.65 | 15% | 5段目 |
+| 6 | 160 | 0.65 | 15% | 6段目（15フレーム間隔に変化） |
+| 7 | 170 | 0.65 | 15% | 7段目 |
+| 8 | 180 | 0.65 | 15% | 8段目 |
+| 9 | 190 | 0.65 | **30%** | 9段目（フィニッシュブロー：他の2倍ダメージ） |
 
-総ダメージ（スペシャル）: `15% × 8 + 30% = 150%`
-総ダメージ（ノーマル）: `100% + 25% + 25% = 150%`
-
-**解説**: move_speed=50（他ボスの約2倍）で高速移動し、well_distance=0.6の長射程で攻撃する。通常攻撃も3段ヒット、スペシャルは9段連続攻撃（間隔10フレームごと）。スペシャルが最後の1ヒットが2倍ダメージになるフィニッシュブロー設計。
+> 総ダメージ（スペシャル）: `15% × 8 + 30% = 150%`
+> 総ダメージ（ノーマル）: `100% + 25% + 25% = 150%`
+>
+> 通常・スペシャルともに総ダメージ150%で統一されており、スペシャルは「ため演出（105フレーム）＋高速9連打＋フィニッシュ」の見栄えに特化した設計。
 
 ---
 
 ### 例6: ステージシーケンス ── 単純出現 `normal_spy_00001`（SPY Stage 1）
 
+**解説**: 最もシンプルなシーケンス構造。ゲーム開始から650フレーム後（約10.8秒）にグエン（雑魚）を1体召喚。召喚時の個別倍率として HP×1.5、攻撃力×2 が適用される（MstInGameの基本coef×シーケンスcoefの積）。シーケンスグループ遷移なし、ウェーブなし、ボスなしのチュートリアル的ステージ。
+
 **MstInGame設定**:
 
-| パラメータ | 値 |
-|-----------|-----|
-| id | normal_spy_00001 |
-| mst_auto_player_sequence_set_id | normal_spy_00001 |
-| boss_mst_enemy_stage_parameter_id | 1（ダミー） |
-| normal_enemy_hp_coef | 1.0 |
-| normal_enemy_attack_coef | 1.0 |
-| boss_enemy_hp_coef | 1.0 |
-| boss_enemy_attack_coef | 1.0 |
+| パラメータ | 値 | 説明 |
+|-----------|-----|------|
+| id | normal_spy_00001 | ステージID（MstStage.mst_in_game_idと一致） |
+| mst_auto_player_sequence_set_id | normal_spy_00001 | 紐づくシーケンスのset_id（通常MstInGame.idと同値） |
+| boss_mst_enemy_stage_parameter_id | 1（ダミー） | ボスHP表示バー用の参照ID。このステージはボスなしのためダミー値を設定 |
+| normal_enemy_hp_coef | 1.0 | 通常敵のHP全体倍率。MstAutoPlayerSequenceのenemy_hp_coefと積になる |
+| normal_enemy_attack_coef | 1.0 | 通常敵の攻撃力全体倍率 |
+| boss_enemy_hp_coef | 1.0 | ボス敵のHP全体倍率 |
+| boss_enemy_attack_coef | 1.0 | ボス敵の攻撃力全体倍率 |
 
 **MstAutoPlayerSequence**:
 
@@ -335,11 +351,31 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 |----|----------------|----------------|-------------|--------------|--------------|---------------|-------------------|
 | normal_spy_00001_1 | ElapsedTime | **650** | SummonEnemy | e_spy_00101_general_n_Normal_Colorless | 1 | **1.5** | **2** |
 
-**解説**: 最もシンプルな構造。ゲーム開始から650フレーム後（約10.8秒）にグエン（雑魚）を1体召喚。召喚時の個別倍率として HP×1.5、攻撃力×2 が適用される（MstInGameの基本coef×シーケンスcoefの積）。
+> **カラム説明**:
+> - `condition_type`: 出現トリガーの種別。`ElapsedTime`=ゲーム開始からの経過フレーム数、`FriendUnitDead`=味方ユニット（敵側から見た友軍）の撃破数、`ElapsedTimeSinceGroupActivated`=グループ遷移後の経過フレーム数
+> - `condition_value`: トリガー発火の閾値。`ElapsedTime`の場合はフレーム数（60fps換算：650フレーム ≒ 10.8秒）
+> - `action_type`: トリガー発火時に実行するアクション。`SummonEnemy`=指定した敵を召喚、`SwitchSequenceGroup`=次のフェーズへ遷移
+> - `action_value`: アクションの対象ID。`SummonEnemy`の場合はMstEnemyStageParameter.id、`SwitchSequenceGroup`の場合はグループ名（例: `group1`）
+> - `summon_count`: 召喚する敵の最大体数。`summon_interval`が設定されている場合は間隔ごとに1体ずつ召喚してこの数に達したら停止
+> - `enemy_hp_coef`: この召喚エントリ個別のHP倍率。**MstInGame.normal/boss_enemy_hp_coefと積**になる（例: MstInGame側1.0 × シーケンス側1.5 = 実際のHP×1.5）
+> - `enemy_attack_coef`: この召喚エントリ個別の攻撃力倍率
+
+**HP計算例**:
+```
+実際のHP = MstEnemyStageParameter.hp × MstInGame.normal_enemy_hp_coef × MstAutoPlayerSequence.enemy_hp_coef
+         = 1,000 × 1.0 × 1.5 = 1,500 HP
+```
 
 ---
 
 ### 例7: ステージシーケンス ── グループ遷移とボス出現 `normal_gom_00002`（GOM Stage 2）
+
+**解説**:
+- 最初にたこ焼き（通常敵）を1体だけ出現させる（`override_drop_battle_point=500` で高倍率報酬）
+- たこ焼きを撃破（`FriendUnitDead=1`）すると `SwitchSequenceGroup` で **group1 に遷移**
+- group1 ではボス（ラーメン）が即座に登場し、同時にたこ焼きが大量召喚される（最大99体を複数ウェーブ）
+- `SummonEnemy count=99, interval=300` は「300フレーム間隔で上限99体まで連続召喚」を意味する
+- 「弱い雑魚を撃破 → ボス出現 + 大量増援」という二段階構成で、プレイヤーに油断と緊張感の変化を与える設計
 
 **MstAutoPlayerSequence（全シーケンス）**:
 
@@ -349,6 +385,10 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 |----|----------------|----------------|-------------|--------------|--------------|---------------|---------------|-------------------|
 | _1 | ElapsedTime | 250 | SummonEnemy | e_gom_00402_general_n_Normal_Colorless（たこ焼き） | 1 | **500** | 2.0 | 2.4 |
 | _9 | FriendUnitDead | **1** | **SwitchSequenceGroup** | **group1** | - | - | - | - |
+
+> - `override_drop_battle_point`: この敵が撃破されたときのBP上書き値。MstEnemyStageParameterの `drop_battle_point` を無視してこの値（500）を使用する。最初の1体を撃破することへのインセンティブ設計
+> - `FriendUnitDead=1`: 1体撃破したら発火するトリガー。このたこ焼きを倒すことがボス出現条件になっている
+> - `SwitchSequenceGroup`: フェーズ遷移アクション。`group1` という名前のシーケンスグループを有効化する
 
 **フェーズ1（group1 - ボス出現後）**:
 
@@ -362,11 +402,9 @@ MstAttackElement（攻撃の詳細：範囲・ダメージ・効果）
 | _7 | ElapsedTimeSinceGroupActivated | 75 | SummonEnemy | e_gom_00402_general_n_Normal_Colorless | 1 | - |
 | _8 | ElapsedTimeSinceGroupActivated | 200 | SummonEnemy | e_gom_00402_general_n_Normal_Colorless | 1 | - |
 
-**解説**:
-- 最初にたこ焼き（通常敵）を1体だけ出現させる（`override_drop_battle_point=500` で高倍率報酬）
-- たこ焼きを撃破（`FriendUnitDead=1`）すると `SwitchSequenceGroup` で **group1 に遷移**
-- group1 ではボス（ラーメン）が即座に登場し、同時にたこ焼きが大量召喚される（最大99体を複数ウェーブ）
-- `SummonEnemy count=99, interval=300` は「300フレーム間隔で上限99体まで連続召喚」を意味する
+> - `ElapsedTimeSinceGroupActivated`: グループ遷移（SwitchSequenceGroup）からの経過フレーム数。`condition_value=0` はグループ遷移と同時に即座に発火する
+> - `summon_count=99, summon_interval=300`: 300フレーム（5秒）間隔で1体ずつ召喚し、最大99体まで出し続けるウェーブ設定。複数のウェーブエントリを重ねることで「ランダムに見える」不規則な大量召喚を実現している
+> - `_2〜_8` の複数エントリが `condition_value=0`（即時）から `200`（約3.3秒後）まで分散しており、グループ切り替え直後に様々なタイミングで敵が押し寄せる設計
 
 ---
 
