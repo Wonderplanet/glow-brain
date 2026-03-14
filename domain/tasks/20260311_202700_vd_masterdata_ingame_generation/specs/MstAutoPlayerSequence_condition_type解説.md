@@ -11,7 +11,6 @@
 | condition_type | 件数 | 主なコンテンツ |
 |---|---|---|
 | FriendUnitDead | 1,463 | 全コンテンツ |
-| ElapsedTimeSinceSequenceGroupActivated | 603 | Savage系、BootGet02系 |
 | EnterTargetKomaIndex | 229 | Challenge系、Savage系 |
 | OutpostHpPercentage | 155 | CharaGet系、Challenge系 |
 | OutpostDamage | 136 | Challenge系、Savage系 |
@@ -27,6 +26,8 @@
 
 **「フレンドユニットの累計撃破数がcondition_valueに達した時点で発動」**。
 最も広く使われるcondition_type（全体の約57%）。バトル開始前から有効で、撃破数が蓄積されるたびに対応するレコードの発動条件が充足される。
+
+**フレンドユニット**とは MstAutoPlayerSequence（自動プレイヤー＝敵側）の視点における味方ユニット、すなわちバトルフィールドに出現している**他の敵キャラクター**を指す。
 
 ### condition_value の意味
 
@@ -58,23 +59,7 @@ summon_count:    1
 
 ---
 
-**例2: 複数体撃破で段階的に次のウェーブへ切り替え（SwitchSequenceGroup）**
-
-```
-sequence_set_id:    event_jig1_savage_00001
-sequence_group_id:  （空）
-condition_type:     FriendUnitDead
-condition_value:    2
-action_type:        SwitchSequenceGroup
-action_value:       w1
-action_delay:       50
-```
-
-解説: 2体撃破でグループ `w1` へ移行。撃破が進むたびに `w1→w2→w3→w4` と段階的にウェーブを切り替える設計（Savage系で多用）。
-
----
-
-**例3: 段階的に蓄積されるボス召喚**
+**例2: 段階的に蓄積されるボス召喚**
 
 ```
 sequence_set_id:  event_aya1_charaget02_00004
@@ -98,7 +83,7 @@ enemy_attack_coef: 5.0
 
 ---
 
-**例4: condition_value=0 — バトル開始直後に即時発動**
+**例3: condition_value=0 — バトル開始直後に即時発動**
 
 ```
 sequence_set_id:  event_yuw1_savage_00001
@@ -116,7 +101,7 @@ summon_interval:  800
 
 ---
 
-**例5: 大量撃破カウンターで強化敵が出現（高難易度のエスカレート）**
+**例4: 大量撃破カウンターで強化敵が出現（高難易度のエスカレート）**
 
 ```
 sequence_set_id:  normal_glo3_00001
@@ -136,130 +121,59 @@ summon_interval:  1200
 
 ### 1レコード 完全設定例
 
-```csv
-ENABLE,id,sequence_set_id,sequence_group_id,sequence_element_id,priority_sequence_element_id,condition_type,condition_value,action_type,action_value,action_value2,summon_count,summon_interval,summon_animation_type,summon_position,move_start_condition_type,move_start_condition_value,move_stop_condition_type,move_stop_condition_value,move_restart_condition_type,move_restart_condition_value,move_loop_count,is_summon_unit_outpost_damage_invalidation,last_boss_trigger,aura_type,death_type,enemy_hp_coef,enemy_attack_coef,enemy_speed_coef,override_drop_battle_point,defeated_score,action_delay,deactivation_condition_type,deactivation_condition_value,release_key
-e,hard_glo3_00001_2,hard_glo3_00001,,2,,FriendUnitDead,1,SummonEnemy,c_sur_00301_general_as_Normal_Yellow,,1,0,Fall,2.8,None,,None,,None,,,,,Boss,Normal,2.5,1.5,1,300,0,250,None,,202509010
-```
-
----
-
-## 2. ElapsedTimeSinceSequenceGroupActivated
-
-### 概要
-
-**「sequence_group がアクティブになってからの経過時間（ミリ秒）がcondition_valueに達したら発動」**。
-`sequence_group_id` が設定されているレコード専用のcondition_type。Savage（討伐）系コンテンツでウェーブ内の時間経過による出現制御に使う。
-
-### condition_value の意味
-
-`condition_value` = 「そのグループがアクティブになってからの経過ミリ秒数」
-`0` は「グループ切り替え直後に即時発動」。
-
-| 値 | 実時間換算 |
+| カラム | 値 |
 |---|---|
-| 0 | グループ開始直後 |
-| 300 | 0.3秒後 |
-| 500 | 0.5秒後 |
-| 1000 | 1.0秒後 |
-| 2000 | 2.0秒後 |
-
-### 具体例
-
-**例1: グループ切り替え直後に即時召喚（condition_value=0）**
-
-```
-sequence_set_id:    event_jig1_savage_00001
-sequence_group_id:  w1
-condition_type:     ElapsedTimeSinceSequenceGroupActivated
-condition_value:    0
-action_type:        SummonEnemy
-action_value:       c_jig_00401_jig1_savage_Normal_Colorless
-enemy_hp_coef:      80
-enemy_attack_coef:  7
-summon_count:       1
-```
-
-解説: `w1` グループが始まった瞬間に固定ボスを召喚。ウェーブの「顔」となる敵を先出しする典型パターン。
-
----
-
-**例2: グループ開始後0.3秒・0.5秒・1.5秒で段階的に追加召喚**
-
-```
-# 0.3秒後
-sequence_group_id:  w1
-condition_type:     ElapsedTimeSinceSequenceGroupActivated
-condition_value:    300
-action_value:       e_jig_00001_jig1_savage_Normal_Yellow
-summon_count:       3
-summon_interval:    750
-
-# 0.5秒後
-condition_value:    500
-action_value:       e_jig_00001_jig1_savage_Normal_Colorless
-summon_count:       3
-summon_interval:    750
-
-# 1.5秒後
-condition_value:    1500
-action_value:       e_jig_00001_jig1_savage_Normal_Yellow
-summon_count:       3
-summon_interval:    1200
-```
-
-解説: グループ開始後に時間を分散して複数の敵を段階召喚。プレイヤーに適度なインターバルを与えながら敵密度を上げる。
+| ENABLE | e |
+| id | hard_glo3_00001_2 |
+| sequence_set_id | hard_glo3_00001 |
+| sequence_group_id | |
+| sequence_element_id | 2 |
+| priority_sequence_element_id | |
+| condition_type | FriendUnitDead |
+| condition_value | 1 |
+| action_type | SummonEnemy |
+| action_value | c_sur_00301_general_as_Normal_Yellow |
+| action_value2 | |
+| summon_count | 1 |
+| summon_interval | 0 |
+| summon_animation_type | Fall |
+| summon_position | 2.8 |
+| move_start_condition_type | None |
+| move_start_condition_value | |
+| move_stop_condition_type | None |
+| move_stop_condition_value | |
+| move_restart_condition_type | None |
+| move_restart_condition_value | |
+| move_loop_count | |
+| is_summon_unit_outpost_damage_invalidation | |
+| last_boss_trigger | |
+| aura_type | Boss |
+| death_type | Normal |
+| enemy_hp_coef | 2.5 |
+| enemy_attack_coef | 1.5 |
+| enemy_speed_coef | 1 |
+| override_drop_battle_point | 300 |
+| defeated_score | 0 |
+| action_delay | 250 |
+| deactivation_condition_type | None |
+| deactivation_condition_value | |
+| release_key | 202509010 |
 
 ---
 
-**例3: グループの最後で次グループへ切り替え**
-
-```
-sequence_set_id:    event_jig1_savage_00001
-sequence_group_id:  w4
-condition_type:     ElapsedTimeSinceSequenceGroupActivated
-condition_value:    2000
-action_type:        SwitchSequenceGroup
-action_value:       w1
-```
-
-解説: `w4` グループが2秒続いたら `w1` に戻る（ループ）。この場合 `FriendUnitDead` による `SwitchSequenceGroup` と組み合わせて「撃破数 or タイムアウト」どちらかで次ウェーブへ進む設計になっている。
-
----
-
-**例4: 時間差で複数のボスキャラを押し寄せる**
-
-```
-sequence_group_id:  w1
-condition_value:    1000
-action_value:       c_kim_00101_kim1_savage01_Boss_Blue
-enemy_hp_coef:      6
-summon_count:       1
-
-condition_value:    900
-action_value:       c_kim_00201_kim1_savage01_Boss_Blue
-enemy_hp_coef:      7
-summon_count:       1
-```
-
-解説: 0.9秒後・1.0秒後に異なるボスを同時期に出現させる。少しタイミングをずらすことで圧力を演出。
-
----
-
-### 1レコード 完全設定例
-
-```csv
-ENABLE,id,sequence_set_id,sequence_group_id,sequence_element_id,priority_sequence_element_id,condition_type,condition_value,action_type,action_value,action_value2,summon_count,summon_interval,summon_animation_type,summon_position,move_start_condition_type,move_start_condition_value,move_stop_condition_type,move_stop_condition_value,move_restart_condition_type,move_restart_condition_value,move_loop_count,is_summon_unit_outpost_damage_invalidation,last_boss_trigger,aura_type,death_type,enemy_hp_coef,enemy_attack_coef,enemy_speed_coef,override_drop_battle_point,defeated_score,action_delay,deactivation_condition_type,deactivation_condition_value,release_key
-e,event_jig1_savage_00001_7,event_jig1_savage_00001,w1,5,,ElapsedTimeSinceSequenceGroupActivated,0,SummonEnemy,c_jig_00401_jig1_savage_Normal_Colorless,,1,0,None,,None,,None,,None,,,,,,Default,Normal,80,7,1,100,0,,None,,202601010
-```
-
----
-
-## 3. EnterTargetKomaIndex
+## 2. EnterTargetKomaIndex
 
 ### 概要
 
 **「プレイヤーのコマがターゲットコマインデックス（コマ配置列）に到達・通過したとき発動」**。
-condition_value はコマのインデックス番号（0〜7）を指す。CharaGet02（挑戦状）や特定のSavageで使用。
+CharaGet02（挑戦状）や特定のSavageで使用。
+
+`condition_value` は **そのステージの MstPage に紐づく MstKomaLine 全行のコマを0から順に累積カウントした位置インデックス**。
+
+- カウント方法: row=1 の koma1→0, koma2→1, koma3→2 ... row=2 の koma1→(row=1のコマ総数), koma2→(row=1のコマ総数+1) ...
+- 空/NULL のコマスロットはカウントに含めない
+- 設計時は対象 MstPage の MstKomaLine 行構成を確認してインデックスを計算する必要がある
+- 例: row=1に2コマ、row=2に3コマの場合 → インデックス0〜1が1行目、2〜4が2行目
 
 ### condition_value の意味
 
@@ -323,7 +237,7 @@ summon_position:  2.5
 
 ---
 
-**例3: コマ5到達でボスを強化してリスポーン**
+**例3: 累積コマインデックス3到達で強めのボスが召喚**
 
 ```
 sequence_set_id:  event_dan1_charaget02_00005
@@ -336,7 +250,7 @@ enemy_attack_coef: 1.4
 summon_count:     1
 ```
 
-解説: コマインデックス3到達で通常より強化された敵を出現。「このコマラインを超えると敵が強くなる」演出。
+解説: コマインデックス3到達で通常より強化された敵を出現。「このコマ位置に到達すると強めの敵が召喚されて難易度が上がる」演出。
 
 ---
 
@@ -355,7 +269,7 @@ enemy_attack_coef: 6.0
 summon_count:     1
 ```
 
-解説: 後半の難しいコマに到達したときに最強ボスを召喚。コマが奥に進むほど敵が強くなる緊張感を演出。
+解説: 後半の難しいコマに到達したときに最強ボスを召喚。コマが奥に進むほど強めの敵が召喚されて難易度が高まる緊張感を演出。
 
 ---
 
@@ -379,23 +293,56 @@ summon_interval:  400
 
 ### 1レコード 完全設定例
 
-```csv
-ENABLE,id,sequence_set_id,sequence_group_id,sequence_element_id,priority_sequence_element_id,condition_type,condition_value,action_type,action_value,action_value2,summon_count,summon_interval,summon_animation_type,summon_position,move_start_condition_type,move_start_condition_value,move_stop_condition_type,move_stop_condition_value,move_restart_condition_type,move_restart_condition_value,move_loop_count,is_summon_unit_outpost_damage_invalidation,last_boss_trigger,aura_type,death_type,enemy_hp_coef,enemy_attack_coef,enemy_speed_coef,override_drop_battle_point,defeated_score,action_delay,deactivation_condition_type,deactivation_condition_value,release_key
-e,event_aya1_charaget02_00006_1,event_aya1_charaget02_00006,,1,,EnterTargetKomaIndex,6,SummonEnemy,e_aya_00001_aya1_charaget02_Boss_Green,,1,1000,None,2.5,None,,None,,None,,,,,,Default,Normal,12,6,1,200,0,,None,,202604010
-```
+| カラム | 値 |
+|---|---|
+| ENABLE | e |
+| id | event_aya1_charaget02_00006_1 |
+| sequence_set_id | event_aya1_charaget02_00006 |
+| sequence_group_id | |
+| sequence_element_id | 1 |
+| priority_sequence_element_id | |
+| condition_type | EnterTargetKomaIndex |
+| condition_value | 6 |
+| action_type | SummonEnemy |
+| action_value | e_aya_00001_aya1_charaget02_Boss_Green |
+| action_value2 | |
+| summon_count | 1 |
+| summon_interval | 1000 |
+| summon_animation_type | None |
+| summon_position | 2.5 |
+| move_start_condition_type | None |
+| move_start_condition_value | |
+| move_stop_condition_type | None |
+| move_stop_condition_value | |
+| move_restart_condition_type | None |
+| move_restart_condition_value | |
+| move_loop_count | |
+| is_summon_unit_outpost_damage_invalidation | |
+| last_boss_trigger | |
+| aura_type | Default |
+| death_type | Normal |
+| enemy_hp_coef | 12 |
+| enemy_attack_coef | 6 |
+| enemy_speed_coef | 1 |
+| override_drop_battle_point | 200 |
+| defeated_score | 0 |
+| action_delay | |
+| deactivation_condition_type | None |
+| deactivation_condition_value | |
+| release_key | 202604010 |
 
 ---
 
-## 4. OutpostHpPercentage
+## 3. OutpostHpPercentage
 
 ### 概要
 
-**「アウトポスト（拠点）のHPが condition_value % 以下になったとき発動」**。
+**「ゲートのHPが condition_value % 以下になったとき発動」**。
 大多数が `condition_value=99`（= 「最初のダメージを受けた瞬間」を意味する実質即時発動）。CharaGet系でバトル開始時の最初のボス召喚トリガーとして多用される。
 
 ### condition_value の意味
 
-`condition_value` = 「アウトポストのHP残量パーセント（この値以下になったとき発動）」
+`condition_value` = 「ゲートのHP残量パーセント（この値以下になったとき発動）」
 
 | condition_value | 件数 | 用途 |
 |---|---|---|
@@ -423,7 +370,7 @@ enemy_attack_coef: 4.5
 summon_count:     1
 ```
 
-解説: 最初にアウトポストがダメージを受けた瞬間にボスを召喚。`InitialSummon` とほぼ同等の効果だが、「ダメージを受けた後」という条件が明確。
+解説: 最初にゲートがダメージを受けた瞬間にボスを召喚。`InitialSummon` とほぼ同等の効果だが、「ダメージを受けた後」という条件が明確。
 
 ---
 
@@ -468,7 +415,7 @@ enemy_attack_coef: 1.0
 summon_count:     1
 ```
 
-解説: アウトポストのHPが半分になったことをトリガーに、特殊な強化ボスが召喚される。「ゲームの折り返し地点での逆転演出」。
+解説: ゲートのHPが半分になったことをトリガーに、特殊な強化ボスが召喚される。「ゲームの折り返し地点での逆転演出」。
 
 ---
 
@@ -507,23 +454,56 @@ action_value:     phase2
 
 ### 1レコード 完全設定例
 
-```csv
-ENABLE,id,sequence_set_id,sequence_group_id,sequence_element_id,priority_sequence_element_id,condition_type,condition_value,action_type,action_value,action_value2,summon_count,summon_interval,summon_animation_type,summon_position,move_start_condition_type,move_start_condition_value,move_stop_condition_type,move_stop_condition_value,move_restart_condition_type,move_restart_condition_value,move_loop_count,is_summon_unit_outpost_damage_invalidation,last_boss_trigger,aura_type,death_type,enemy_hp_coef,enemy_attack_coef,enemy_speed_coef,override_drop_battle_point,defeated_score,action_delay,deactivation_condition_type,deactivation_condition_value,release_key
-e,event_aya1_charaget01_00003_1,event_aya1_charaget01_00003,,1,,OutpostHpPercentage,99,SummonEnemy,e_aya_00001_aya1_charaget01_Boss_Green,,1,0,None,,None,,None,,None,,,,,,Default,Normal,8,4.5,1,200,0,,None,,202604010
-```
+| カラム | 値 |
+|---|---|
+| ENABLE | e |
+| id | event_aya1_charaget01_00003_1 |
+| sequence_set_id | event_aya1_charaget01_00003 |
+| sequence_group_id | |
+| sequence_element_id | 1 |
+| priority_sequence_element_id | |
+| condition_type | OutpostHpPercentage |
+| condition_value | 99 |
+| action_type | SummonEnemy |
+| action_value | e_aya_00001_aya1_charaget01_Boss_Green |
+| action_value2 | |
+| summon_count | 1 |
+| summon_interval | 0 |
+| summon_animation_type | None |
+| summon_position | |
+| move_start_condition_type | None |
+| move_start_condition_value | |
+| move_stop_condition_type | None |
+| move_stop_condition_value | |
+| move_restart_condition_type | None |
+| move_restart_condition_value | |
+| move_loop_count | |
+| is_summon_unit_outpost_damage_invalidation | |
+| last_boss_trigger | |
+| aura_type | Default |
+| death_type | Normal |
+| enemy_hp_coef | 8 |
+| enemy_attack_coef | 4.5 |
+| enemy_speed_coef | 1 |
+| override_drop_battle_point | 200 |
+| defeated_score | 0 |
+| action_delay | |
+| deactivation_condition_type | None |
+| deactivation_condition_value | |
+| release_key | 202604010 |
 
 ---
 
-## 5. OutpostDamage
+## 4. OutpostDamage
 
 ### 概要
 
-**「アウトポストへの累計ダメージがcondition_valueに達したとき発動」**。
+**「ゲートへの累計ダメージがcondition_valueに達したとき発動」**。
 条件値 `1` が圧倒的多数（= 「最初にダメージを受けた瞬間」= OutpostHpPercentage:99 とほぼ同等の効果）。Challenge系でのボス初期召喚に多用される。
 
 ### condition_value の意味
 
-`condition_value` = 「アウトポストへの累計ダメージ量（ゲーム内数値）」
+`condition_value` = 「ゲートへの累計ダメージ量（ゲーム内数値）」
 
 | condition_value | 件数 | 解釈 |
 |---|---|---|
@@ -624,14 +604,47 @@ summon_interval:  900
 
 ### 1レコード 完全設定例
 
-```csv
-ENABLE,id,sequence_set_id,sequence_group_id,sequence_element_id,priority_sequence_element_id,condition_type,condition_value,action_type,action_value,action_value2,summon_count,summon_interval,summon_animation_type,summon_position,move_start_condition_type,move_start_condition_value,move_stop_condition_type,move_stop_condition_value,move_restart_condition_type,move_restart_condition_value,move_loop_count,is_summon_unit_outpost_damage_invalidation,last_boss_trigger,aura_type,death_type,enemy_hp_coef,enemy_attack_coef,enemy_speed_coef,override_drop_battle_point,defeated_score,action_delay,deactivation_condition_type,deactivation_condition_value,release_key
-e,event_jig1_challenge01_00002_1,event_jig1_challenge01_00002,,1,,OutpostDamage,1,SummonEnemy,c_jig_00201_jig1_challenge_Boss_Green,,1,,None,,None,,None,,None,,,,,,Boss,Normal,3.3,6.4,1,,0,,None,,202601010
-```
+| カラム | 値 |
+|---|---|
+| ENABLE | e |
+| id | event_jig1_challenge01_00002_1 |
+| sequence_set_id | event_jig1_challenge01_00002 |
+| sequence_group_id | |
+| sequence_element_id | 1 |
+| priority_sequence_element_id | |
+| condition_type | OutpostDamage |
+| condition_value | 1 |
+| action_type | SummonEnemy |
+| action_value | c_jig_00201_jig1_challenge_Boss_Green |
+| action_value2 | |
+| summon_count | 1 |
+| summon_interval | |
+| summon_animation_type | None |
+| summon_position | |
+| move_start_condition_type | None |
+| move_start_condition_value | |
+| move_stop_condition_type | None |
+| move_stop_condition_value | |
+| move_restart_condition_type | None |
+| move_restart_condition_value | |
+| move_loop_count | |
+| is_summon_unit_outpost_damage_invalidation | |
+| last_boss_trigger | |
+| aura_type | Boss |
+| death_type | Normal |
+| enemy_hp_coef | 3.3 |
+| enemy_attack_coef | 6.4 |
+| enemy_speed_coef | 1 |
+| override_drop_battle_point | |
+| defeated_score | 0 |
+| action_delay | |
+| deactivation_condition_type | None |
+| deactivation_condition_value | |
+| release_key | 202601010 |
 
 ---
 
-## 6. DarknessKomaCleared
+## 5. DarknessKomaCleared
 
 ### 概要
 
@@ -739,19 +752,54 @@ summon_count:     1
 
 ### 1レコード 完全設定例
 
-```csv
-ENABLE,id,sequence_set_id,sequence_group_id,sequence_element_id,priority_sequence_element_id,condition_type,condition_value,action_type,action_value,action_value2,summon_count,summon_interval,summon_animation_type,summon_position,move_start_condition_type,move_start_condition_value,move_stop_condition_type,move_stop_condition_value,move_restart_condition_type,move_restart_condition_value,move_loop_count,is_summon_unit_outpost_damage_invalidation,last_boss_trigger,aura_type,death_type,enemy_hp_coef,enemy_attack_coef,enemy_speed_coef,override_drop_battle_point,defeated_score,action_delay,deactivation_condition_type,deactivation_condition_value,release_key
-e,normal_dan_00001_1,normal_dan_00001,,1,,DarknessKomaCleared,2,SummonEnemy,e_dan_00201_general_n_Boss_Colorless,,1,0,None,,None,,None,,None,,,,,,Default,Normal,0.55,0.3,1,,0,,None,,202509010
-```
+| カラム | 値 |
+|---|---|
+| ENABLE | e |
+| id | normal_dan_00001_1 |
+| sequence_set_id | normal_dan_00001 |
+| sequence_group_id | |
+| sequence_element_id | 1 |
+| priority_sequence_element_id | |
+| condition_type | DarknessKomaCleared |
+| condition_value | 2 |
+| action_type | SummonEnemy |
+| action_value | e_dan_00201_general_n_Boss_Colorless |
+| action_value2 | |
+| summon_count | 1 |
+| summon_interval | 0 |
+| summon_animation_type | None |
+| summon_position | |
+| move_start_condition_type | None |
+| move_start_condition_value | |
+| move_stop_condition_type | None |
+| move_stop_condition_value | |
+| move_restart_condition_type | None |
+| move_restart_condition_value | |
+| move_loop_count | |
+| is_summon_unit_outpost_damage_invalidation | |
+| last_boss_trigger | |
+| aura_type | Default |
+| death_type | Normal |
+| enemy_hp_coef | 0.55 |
+| enemy_attack_coef | 0.3 |
+| enemy_speed_coef | 1 |
+| override_drop_battle_point | |
+| defeated_score | 0 |
+| action_delay | |
+| deactivation_condition_type | None |
+| deactivation_condition_value | |
+| release_key | 202509010 |
 
 ---
 
-## 7. FriendUnitTransform
+## 6. FriendUnitTransform
 
 ### 概要
 
 **「フレンドユニットの変身回数が condition_value に達したとき発動」**。
 全20件で `condition_value=1` のみ（1回変身したら発動）。Dan作品のメインクエストに特化しており、「ダグが変身した瞬間に反応する」仕様。
+
+**フレンドユニット**とは MstAutoPlayerSequence（自動プレイヤー＝敵側）の視点における味方ユニット、すなわちバトルフィールドに出現している**他の敵キャラクター**を指す。
 
 ### condition_value の意味
 
@@ -850,19 +898,54 @@ summon_interval:  50
 
 ### 1レコード 完全設定例
 
-```csv
-ENABLE,id,sequence_set_id,sequence_group_id,sequence_element_id,priority_sequence_element_id,condition_type,condition_value,action_type,action_value,action_value2,summon_count,summon_interval,summon_animation_type,summon_position,move_start_condition_type,move_start_condition_value,move_stop_condition_type,move_stop_condition_value,move_restart_condition_type,move_restart_condition_value,move_loop_count,is_summon_unit_outpost_damage_invalidation,last_boss_trigger,aura_type,death_type,enemy_hp_coef,enemy_attack_coef,enemy_speed_coef,override_drop_battle_point,defeated_score,action_delay,deactivation_condition_type,deactivation_condition_value,release_key
-e,hard_dan_00004_5,hard_dan_00004,,3,,FriendUnitTransform,1,SummonEnemy,e_dan_00101_general_h_Normal_Colorless,,3,100,None,,None,,None,,None,,,,,,Default,Normal,2.2,7,1,50,0,100,None,,202509010
-```
+| カラム | 値 |
+|---|---|
+| ENABLE | e |
+| id | hard_dan_00004_5 |
+| sequence_set_id | hard_dan_00004 |
+| sequence_group_id | |
+| sequence_element_id | 3 |
+| priority_sequence_element_id | |
+| condition_type | FriendUnitTransform |
+| condition_value | 1 |
+| action_type | SummonEnemy |
+| action_value | e_dan_00101_general_h_Normal_Colorless |
+| action_value2 | |
+| summon_count | 3 |
+| summon_interval | 100 |
+| summon_animation_type | None |
+| summon_position | |
+| move_start_condition_type | None |
+| move_start_condition_value | |
+| move_stop_condition_type | None |
+| move_stop_condition_value | |
+| move_restart_condition_type | None |
+| move_restart_condition_value | |
+| move_loop_count | |
+| is_summon_unit_outpost_damage_invalidation | |
+| last_boss_trigger | |
+| aura_type | Default |
+| death_type | Normal |
+| enemy_hp_coef | 2.2 |
+| enemy_attack_coef | 7 |
+| enemy_speed_coef | 1 |
+| override_drop_battle_point | 50 |
+| defeated_score | 0 |
+| action_delay | 100 |
+| deactivation_condition_type | None |
+| deactivation_condition_value | |
+| release_key | 202509010 |
 
 ---
 
-## 8. FriendUnitSummoned
+## 7. FriendUnitSummoned
 
 ### 概要
 
 **「フレンドユニットの召喚数（累計）が condition_value に達したとき発動」**。
 件数は9件と少ない。Savage系の特定コンテンツ（`event_f05anniv_savage`、`event_l05anniv_challenge01`）や `event_you1_charaget02` など、特殊な召喚メカニクスを持つステージで使用。
+
+**フレンドユニット**とは MstAutoPlayerSequence（自動プレイヤー＝敵側）の視点における味方ユニット、すなわちバトルフィールドに出現している**他の敵キャラクター**を指す。
 
 ### condition_value の意味
 
@@ -959,10 +1042,43 @@ summon_interval:  1600
 
 ### 1レコード 完全設定例
 
-```csv
-ENABLE,id,sequence_set_id,sequence_group_id,sequence_element_id,priority_sequence_element_id,condition_type,condition_value,action_type,action_value,action_value2,summon_count,summon_interval,summon_animation_type,summon_position,move_start_condition_type,move_start_condition_value,move_stop_condition_type,move_stop_condition_value,move_restart_condition_type,move_restart_condition_value,move_loop_count,is_summon_unit_outpost_damage_invalidation,last_boss_trigger,aura_type,death_type,enemy_hp_coef,enemy_attack_coef,enemy_speed_coef,override_drop_battle_point,defeated_score,action_delay,deactivation_condition_type,deactivation_condition_value,release_key
-e,event_f05anniv_savage_00002_8,event_f05anniv_savage_00002,,8,,FriendUnitSummoned,2,SummonEnemy,e_sur_00101_glo2_savage01_Normal_Red,,2,200,None,,None,,None,,None,,,,,,Default,Normal,55,2,1.2,,0,,None,,202603020
-```
+| カラム | 値 |
+|---|---|
+| ENABLE | e |
+| id | event_f05anniv_savage_00002_8 |
+| sequence_set_id | event_f05anniv_savage_00002 |
+| sequence_group_id | |
+| sequence_element_id | 8 |
+| priority_sequence_element_id | |
+| condition_type | FriendUnitSummoned |
+| condition_value | 2 |
+| action_type | SummonEnemy |
+| action_value | e_sur_00101_glo2_savage01_Normal_Red |
+| action_value2 | |
+| summon_count | 2 |
+| summon_interval | 200 |
+| summon_animation_type | None |
+| summon_position | |
+| move_start_condition_type | None |
+| move_start_condition_value | |
+| move_stop_condition_type | None |
+| move_stop_condition_value | |
+| move_restart_condition_type | None |
+| move_restart_condition_value | |
+| move_loop_count | |
+| is_summon_unit_outpost_damage_invalidation | |
+| last_boss_trigger | |
+| aura_type | Default |
+| death_type | Normal |
+| enemy_hp_coef | 55 |
+| enemy_attack_coef | 2 |
+| enemy_speed_coef | 1.2 |
+| override_drop_battle_point | |
+| defeated_score | 0 |
+| action_delay | |
+| deactivation_condition_type | None |
+| deactivation_condition_value | |
+| release_key | 202603020 |
 
 ---
 
@@ -974,8 +1090,6 @@ e,event_f05anniv_savage_00002_8,event_f05anniv_savage_00002,,8,,FriendUnitSummon
 |---|---|
 | バトル開始直後に出現（実質即時） | `OutpostHpPercentage: 99` または `OutpostDamage: 1` |
 | 敵を倒すたびに次の敵が出現する直線進行 | `FriendUnitDead: 1, 2, 3, ...` |
-| wave（フェーズ）の切り替え | `FriendUnitDead + SwitchSequenceGroup` |
-| wave内での時間経過による敵出現制御 | `ElapsedTimeSinceSequenceGroupActivated` |
 | コマ進行度に連動した出現 | `EnterTargetKomaIndex` |
 | HP残量に応じたフェーズ変化 | `OutpostHpPercentage: 50, 30, 10...` |
 | 暗黒コマ演出との連動 | `DarknessKomaCleared` |
@@ -985,5 +1099,5 @@ e,event_f05anniv_savage_00002_8,event_f05anniv_savage_00002,,8,,FriendUnitSummon
 ### 複合パターン（複数のcondition_typeを同一ステージで使う）
 
 - **CharaGet02**: `OutpostHpPercentage:99`（開始ボス）+ `EnterTargetKomaIndex`（コマ進行ボス）+ `FriendUnitDead`（撃破数進行）
-- **Savage（討伐）**: `FriendUnitDead + SwitchSequenceGroup`（ウェーブ切替）+ `ElapsedTimeSinceSequenceGroupActivated`（wave内時系列）+ `OutpostHpPercentage or OutpostDamage`（HP連動）
+- **Savage（討伐）**: `FriendUnitDead + SwitchSequenceGroup`（ウェーブ切替）+ `OutpostHpPercentage or OutpostDamage`（HP連動）
 - **メインクエスト（dan）**: `DarknessKomaCleared` + `FriendUnitTransform` + `FriendUnitDead`
