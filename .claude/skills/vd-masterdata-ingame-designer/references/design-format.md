@@ -38,12 +38,6 @@ vd-masterdata-ingame-design-creator スキルが Step 2 で生成する設計書
 
 ## レベルデザイン
 
-### 勝利条件
-
-| 条件 | 詳細 |
-|------|------|
-| {勝利条件} | {詳細} |
-
 ### 敵キャラ設計
 
 #### 敵キャラ選定（MstEnemyCharacter）
@@ -52,7 +46,7 @@ vd-masterdata-ingame-design-creator スキルが Step 2 で生成する設計書
 | {id} | {名前} | {ボス/雑魚} | {備考} |
 
 #### 敵キャラステータス（MstEnemyStageParameter）
-> 既存参照の場合はその旨と参照先バッチを注記
+> 全て新規設計（VDでは既存MstEnemyStageParameterを参照せず、各ブロックで新規作成）
 | MstEnemyStageParameter ID | 日本語名 | kind | role | color | base_hp | base_atk | base_spd | well_dist | knockback | combo | drop_bp |
 |--------------------------|---------|------|------|-------|---------|----------|----------|-----------|-----------|-------|---------|
 | {id} | {名前} | {値} | {値} | {値} | {値} | {値} | {値} | {値} | {値} | {値} | {値} |
@@ -70,25 +64,15 @@ vd-masterdata-ingame-design-creator スキルが Step 2 で生成する設計書
 ```mermaid
 block-beta
   columns {N}
-  A["row=1 / koma1<br/>幅={width}<br/>effect: None"]:{span} B["row=1 / koma2<br/>幅={width}<br/>effect: None"]:{span} ...
-  C["row=2 / koma1<br/>幅={width}<br/>effect: None"]:{span} ...
-  D["row=3 / koma1<br/>幅={width}<br/>effect: None"]:{span} ...
+  A["row=1 / koma1<br/>幅={width} / asset={asset_key}<br/>offset={offset} / effect={effect}"]:{span} B["row=1 / koma2<br/>幅={width} / asset={asset_key}<br/>offset={offset} / effect=None"]:{span} ...
+  C["row=2 / koma1<br/>幅={width} / asset={asset_key}<br/>offset={offset} / effect=None"]:{span} ...
+  D["row=3 / koma1<br/>幅={width} / asset={asset_key}<br/>offset={offset} / effect=None"]:{span} ...
 ```
-※ columns は1つのみ。各行のスパン合計 = N になること。
-
-| row | height | 選択パターン | コマ数 | 各幅 | 幅合計 |
-|-----|--------|------------|-------|------|--------|
-| 1 | 0.33 | パターン{N} | {コマ数} | {各幅} | 1.0 |
-| 2 | 0.33 | パターン{N} | {コマ数} | {各幅} | 1.0 |
-| 3 | 0.34 | パターン{N} | {コマ数} | {各幅} | 1.0 |
+※ columns は1つのみ。各行のスパン合計 = N になること。row=1: height=0.33 / row=2: height=0.33 / row=3: height=0.34
 
 ---
 
 ### 敵キャラシーケンス設計
-
-> **c_キャラ同時出現ルール（プランナー確認済み）**: c_キャラ（`c_` プレフィックス）が複数体登場する場合、
-> 2体目以降は必ず `FriendUnitDead`（前の c_キャラの sequence_element_id を condition_value に指定）で
-> チェーンすること。また c_キャラの `summon_count` は必ず `1` とすること。`e_glo_*` は対象外。
 
 #### どのフェーズで、どの敵を、いつ、どこに、どのくらい出現させるか
 
@@ -97,25 +81,14 @@ flowchart LR
   ...
 ```
 
-<!-- c_キャラが複数体登場する場合のチェーン例:
-flowchart LR
-  Start([開始]) --> E1["FriendUnitDead: {先行c_キャラのelem}<br/>1体目 c_xxx 召喚<br/>elem=1"]
-  E1 --> E2["FriendUnitDead: elem=1<br/>2体目 c_xxx 召喚<br/>elem=2"]
-  E2 --> E3["FriendUnitDead: elem=2<br/>3体目 c_xxx 召喚<br/>elem=3"]
-  ※ 2体目以降は FriendUnitDead で前の c_キャラのelemを condition_value に指定
--->
-
-| elem | 出現タイミング | 敵 | 数 | 累計出現数/召喚位置 |
-|------|-------------|---|---|-----------------|
-| {値} | {値} | {敵名} | {値} | {値} |
+| elem | 出現タイミング | 敵 | 召喚数 | 召喚間隔(ms) | 召喚位置 | 備考 |
+|------|-------------|---|-------|------------|---------|------|
+| {値} | {値} | {敵名} | {値} | {値} | {値} | {敵名}(elem={前のelem})を1体倒すと{内容} |
 
 #### 敵キャラの固有ステータス調整（hp_coef / atk_coef）
 | 波/フェーズ | 敵 | base_hp | hp_coef | 実HP | base_atk | atk_coef | 実ATK |
 |-----------|---|---------|---------|------|----------|----------|-------|
 | {値} | {敵名} | {値} | {値} | {値} | {値} | {値} | {値} |
-
-#### フェーズ切り替えはあるか
-{なし（VDではSwitchSequenceGroup使用禁止）}
 
 ---
 

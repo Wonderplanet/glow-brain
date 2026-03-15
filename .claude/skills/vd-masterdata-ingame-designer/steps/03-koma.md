@@ -21,10 +21,20 @@ VDインゲーム設計書（design.md）の **`### コマ設計`** セクショ
 以下を読み込む。
 
 **参照ファイル（必須）**:
-- `.claude/skills/vd-masterdata-ingame-designer/references/series-koma-assets.csv` — 作品別コマアセットキー
 - `.claude/skills/vd-masterdata-ingame-designer/references/koma-background-offset.md` — 推奨back_ground_offset値
 - `.claude/skills/vd-masterdata-ingame-designer/references/vd-column-defaults.md` — デフォルト値（koma_line_layout_asset_key対応表）
 - `domain/knowledge/masterdata/table-docs/MstKomaLine.md` — テーブル定義
+
+**コマアセットキーの取得（DuckDBクエリ）**:
+
+作品IDに合った `koma1_asset_key` と `koma1_back_ground_offset` を以下のDuckDBクエリで取得する:
+
+```sql
+SELECT DISTINCT koma1_asset_key, koma1_back_ground_offset
+FROM read_csv_auto('projects/glow-masterdata/MstKomaLine.csv')
+WHERE id LIKE '%_{作品ID}_%'
+LIMIT 5;
+```
 
 ## Step 1: コマレイアウト設計
 
@@ -56,8 +66,8 @@ VDインゲーム設計書（design.md）の **`### コマ設計`** セクショ
 
 #### コマアセットキーの決定
 
-`series-koma-assets.csv` を参照して、引数の `作品ID` に合った `koma1_asset_key` を設定する。
-`koma-background-offset.md` を参照して `koma1_back_ground_offset` の推奨値を設定する。
+Step 0 の DuckDB クエリで取得した `koma1_asset_key` を使用する。
+`koma-background-offset.md` を参照して `koma1_back_ground_offset` の推奨値を確認する。
 
 ## Step 2: 設計セクション生成
 
@@ -108,7 +118,7 @@ block-beta
 ## ガードレール
 
 1. **行数はブロック種別で固定**: normal=3行、boss=1行（変更不可）
-2. **`koma1_asset_key` は series-koma-assets.csv を参照**: 作品IDに合った値のみ使用
+2. **`koma1_asset_key` は DuckDB クエリで取得**: `projects/glow-masterdata/MstKomaLine.csv` から作品ID別に取得した値のみ使用
 3. **`koma1_back_ground_offset` は koma-background-offset.md を参照**: 推奨値を使用
 4. **Mermaid columns は1つのみ宣言**: 複数の `columns` 宣言は行崩れの原因
 5. **各行のスパン合計が N になること**: Mermaid図の整合性を確認
@@ -117,7 +127,7 @@ block-beta
 
 ## リファレンス
 
-- `.claude/skills/vd-masterdata-ingame-designer/references/series-koma-assets.csv` — 作品別コマアセットキー
+- `projects/glow-masterdata/MstKomaLine.csv` — DuckDBクエリでコマアセットキーを取得（`WHERE id LIKE '%_{作品ID}_%'`）
 - `.claude/skills/vd-masterdata-ingame-designer/references/koma-background-offset.md` — 推奨back_ground_offset値
 - `.claude/skills/vd-masterdata-ingame-designer/references/vd-column-defaults.md` — デフォルト値（koma_line_layout_asset_key対応表）
 - `domain/knowledge/masterdata/table-docs/MstKomaLine.md` — テーブル定義

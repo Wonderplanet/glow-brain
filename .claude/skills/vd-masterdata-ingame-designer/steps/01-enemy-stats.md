@@ -14,15 +14,12 @@ VDインゲーム設計書（design.md）の **`### 敵キャラ設計`** セク
 **テーブル詳細ドキュメント（必須）**:
 - `domain/knowledge/masterdata/table-docs/MstEnemyStageParameter.md`
 
-**既存EnemyStageParameter参照CSV（必須）**:
-```
-domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-creator/vd_all/data/MstEnemyStageParameter.csv
-```
+**VD敵ステータスは全て新規設計**:
+- VDのMstEnemyStageParameterは全て新規設計。既存VDデータは参照しない
 
 **メインクエスト実績参照（キャラが存在すれば）**:
-- `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/メインクエスト_Normal難易度_エネミー/` 配下のMDファイルを確認
-  - ファイル命名: `{MstEnemyCharacter.id}_{MstEnemyCharacterI18n.name}.md`
-  - 対象キャラIDのファイルが存在すれば Read tool で読み込み、実績ステータスを参考にする
+- `masterdata-ingame-analyzer` スキルを使って対象キャラのメインクエスト Normal難易度での実績ステータスを調査する
+  - 例: `/masterdata-ingame-analyzer 対象=enemy_dan_00001 コンテンツ=メインクエスト 難易度=Normal`
 
 ## Step 1: ステータス設計
 
@@ -57,15 +54,11 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 | {id} | {名前} | {ボス/雑魚/フレンド} | {備考} |
 
 #### 敵キャラステータス（MstEnemyStageParameter）
-> 既存参照の場合はその旨と参照先バッチを注記
+> 全て新規設計（VDでは既存MstEnemyStageParameterを参照せず、各ブロックで新規作成）
 | MstEnemyStageParameter ID | 日本語名 | kind | role | color | base_hp | base_atk | base_spd | well_dist | knockback | combo | drop_bp |
 |--------------------------|---------|------|------|-------|---------|----------|----------|-----------|-----------|-------|---------|
 | {id} | {名前} | {値} | {値} | {値} | {値} | {値} | {値} | {値} | {値} | {値} | {値} |
 ```
-
-**既存IDの扱い**:
-- `vd_all/data/MstEnemyStageParameter.csv` に既に存在するIDは「既存参照」と注記し、CSVの既存値を転記する
-- 新規IDはステータスを設計して記載する
 
 ## Step 3: 確認・更新
 
@@ -84,7 +77,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 ## ガードレール
 
 1. **キャラ選定は引数のみ**: 引数に含まれないキャラIDを独自に追加してはいけない
-2. **既存IDのステータスは上書きしない**: 既存CSV値をそのまま使用する
+2. **全て新規設計**: VDのMstEnemyStageParameterは全て新規作成。既存VDデータは参照しない
 3. **bossブロックはボスのみ**: bossブロックでは雑魚キャラを追加しない
 4. **normalブロックは15体以上設計できる体数を確保**: 敵キャラの合計出現数が15体以上になれる構成を選ぶ
 
@@ -93,5 +86,4 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 ## リファレンス
 
 - `domain/knowledge/masterdata/table-docs/MstEnemyStageParameter.md` — テーブル定義
-- `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-creator/vd_all/data/MstEnemyStageParameter.csv` — 既存敵パラメータ一覧
-- `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/メインクエスト_Normal難易度_エネミー/` — 実績ステータス参照
+- `masterdata-ingame-analyzer` スキル — メインクエスト Normal難易度の実績ステータス調査に使用
