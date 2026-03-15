@@ -63,7 +63,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 | 雑魚キャラ | 雑魚キャラID・色属性・体数（condition_type区切りごと） |
 | 連番 | 開始番号（通常は `00001`） |
 
-作品別の登場キャラは [vd-character-list.md](references/vd-character-list.md) を参照。
+作品別の登場キャラは `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/vd_block_chara.csv` を参照（`mst_series_id` で作品IDを絞り込み、`data_type` で Normal / Boss / Counter を区別する）。
 
 **テーブル詳細ドキュメント読み込み（必須）**: 設計書生成前に以下のドキュメントを Read tool で読み込み、各カラムの定義・enum値・制約を把握する。
 
@@ -77,6 +77,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 | MstPage | `domain/knowledge/masterdata/table-docs/MstPage.md` |
 | MstAttack | `domain/knowledge/masterdata/table-docs/MstAttack.md` |
 | MstAttackElement | `domain/knowledge/masterdata/table-docs/MstAttackElement.md` |
+| MstUnitAbility解説 | `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/MstUnitAbility_特性とインゲームコマ効果_網羅解説.md` |
 
 **シーケンス設計参考ドキュメント読み込み（必須）**: 多彩なシーケンス設計のために以下のドキュメントも Read tool で読み込む。
 
@@ -119,17 +120,21 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 ##### 対抗キャラ弱点・軽減情報の調べ方
 
-1. `vd-character-list.md` の対抗キャラエントリを参照
-2. キャラのスキル・パッシブ説明から「〇〇ダメージ軽減」「〇〇耐性」を特定
-3. 軽減している属性に対応するコマ効果を1〜2個選択する（例: ロイドが対抗 → 毒軽減 → 毒コマを1〜2個）
+1. `vd_block_chara.csv` の `data_type=Counter` エントリで対抗キャラの `chara_id` を確認
+2. `MstUnitAbility_特性とインゲームコマ効果_網羅解説.md` を参照し、そのキャラの `ability_type` を特定
+3. ability_type に対応するコマ効果を1〜2個選択する：
+   - `PoisonDamageCut` → 毒コマ（koma_effect_type=Poison）
+   - `BurnDamageCut` → 炎コマ（koma_effect_type=Burn）
+   - `SlipDamageKomaBlock` → スリップダメージコマ（koma_effect_type=SlipDamage）
+   - `AttackPowerDownKomaBlock` → 攻撃DOWNコマ（koma_effect_type=AttackPowerDown）
+   - `GustKomaBlock` → 突風コマ（koma_effect_type=Gust）
 
 #### ボスブロック
 
 - 出現させるのは**ボスのみ**（雑魚なし）
 - ゲートあり（MstEnemyOutpost設定）
-  - **全作品・全ボスブロック共通の1レコード**（`vd_all/data/MstEnemyOutpost.csv`）を使用
-  - HP=100固定。ブロックごとに個別設定不要
-  - `MstInGame.mst_enemy_outpost_id` には共通レコードのIDを設定する
+  - 各ボスブロックの `generated/MstEnemyOutpost.csv` に1レコードを作成する（id = `{block_id}`）
+  - HP=100固定（ワンパン撃破できるよう固定値）
 
 #### ノーマルブロック
 
@@ -149,7 +154,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 ヒアリング内容を基に、登場する敵キャラのステータスを設計する。
 
-- 作品別の登場キャラは [vd-character-list.md](references/vd-character-list.md) を参照して敵キャラを選定
+- 作品別の登場キャラは `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/vd_block_chara.csv` を参照して敵キャラを選定
 - ステータス設計: `base_hp` / `base_atk` / `base_spd` / `knockback` / `combo` / `drop_bp` 等を決定
 - 行動パターン設計: 各敵キャラの `MstAttack` / `MstAttackElement` の構成（攻撃種別・効果・対象・ダメージ種別）を設計する
   - `MstAttackElement.damage_type` で毒・炎ダメージを指定すると対抗キャラの軽減システムと連動する
@@ -159,7 +164,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 ### UR対抗キャラ・ギミックの活用
 
 - **その作品のURキャラの対抗となるギミックやコマ効果を持つ敵キャラを使用することを基本とする**
-- `vd-character-list.md` の「UR対抗キャラ」列を確認し、そのキャラに対応したギミック・コマ効果を持つ敵キャラを優先的に採用する
+- `vd_block_chara.csv` の `data_type=Counter` エントリを確認し、そのキャラに対応したギミック・コマ効果を持つ敵キャラを優先的に採用する
 - UR対抗の観点で設計書に反映できない場合は、Step 3 のユーザー確認時にその旨をコメントする
 
 ### 登場体数の設計目標
@@ -228,7 +233,7 @@ Step 1 の敵キャラ設計を踏まえて `design.md` を生成して出力先
 ## ガードレール（必ず守ること）
 
 1. **IDプレフィックスは `vd_`**
-2. **ゲート(Outpost)HP固定**: 全作品・全ボスブロック共通の1レコード（`vd_all/data/MstEnemyOutpost.csv`）を使用。HP=100固定（変更不可）
+2. **ゲート(Outpost)HP固定**: bossブロックは各ブロックの generated/MstEnemyOutpost.csv に1レコードを作成。HP=100固定（変更不可）
 3. **フェーズ切り替え禁止**: `SwitchSequenceGroup` は使用しない
 4. **承認前に完了しない**: ユーザーが「OK」と言うまで修正ループを続ける
 5. **コマアセットキーは series-koma-assets.csv を参照**: 作品IDに合った `koma1_asset_key` を設定する
@@ -281,7 +286,8 @@ Step 1 の敵キャラ設計を踏まえて `design.md` を生成して出力先
 ## リファレンス一覧
 
 - [design-format.md](references/design-format.md) — design.md フォーマットテンプレート定義
-- [vd-character-list.md](references/vd-character-list.md) — 作品別登場キャラ一覧
+- `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/vd_block_chara.csv` — 作品別登場キャラ一覧（data_type: Normal / Boss / Counter）
+- `MstUnitAbility_特性とインゲームコマ効果_網羅解説.md` — 全特性タイプとコマ効果対応一覧
 - [duckdb-vd-queries.md](references/duckdb-vd-queries.md) — VD用DuckDBクエリ集
 - [vd-column-defaults.md](references/vd-column-defaults.md) — デザインフェーズで設定が必要なカラムのデフォルト値
 - [series-koma-assets.csv](references/series-koma-assets.csv) — 作品別コマアセットキー・back_ground_offset対応表
