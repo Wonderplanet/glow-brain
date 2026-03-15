@@ -202,6 +202,5 @@ Read tool で `.claude/skills/vd-masterdata-ingame-designer/steps/05-presentatio
 - `.claude/skills/vd-masterdata-ingame-designer/references/design-format.md` — design.md フォーマットテンプレート
 - `.claude/skills/vd-masterdata-ingame-designer/references/vd-common-requirements.md` — VD共通要件（難易度基準・禁止ルール・固定値）
 - `.claude/skills/vd-masterdata-ingame-designer/references/koma-background-offset.md` — 推奨back_ground_offset値（DuckDBで `projects/glow-masterdata/MstKomaLine.csv` から取得したコマアセットキーと組み合わせて使用）
-- `.claude/skills/vd-masterdata-ingame-designer/references/vd-column-defaults.md` — カラムデフォルト値定義
 - `.claude/skills/vd-masterdata-ingame-designer/references/MstAutoPlayerSequence_具体例集.md` — 過去実例集
 - `.claude/skills/vd-masterdata-ingame-designer/references/MstAutoPlayerSequence_設計パターン集.md` — 設計パターン集

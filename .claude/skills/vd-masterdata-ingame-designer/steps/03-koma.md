@@ -22,7 +22,6 @@ VDインゲーム設計書（design.md）の **`### コマ設計`** セクショ
 
 **参照ファイル（必須）**:
 - `.claude/skills/vd-masterdata-ingame-designer/references/koma-background-offset.md` — 推奨back_ground_offset値
-- `.claude/skills/vd-masterdata-ingame-designer/references/vd-column-defaults.md` — デフォルト値（koma_line_layout_asset_key対応表）
 - `domain/knowledge/masterdata/table-docs/MstKomaLine.md` — テーブル定義
 
 **コマアセットキーの取得（DuckDBクエリ）**:
@@ -40,14 +39,22 @@ LIMIT 5;
 
 #### コマ数・幅パターンの選択
 
-`vd-column-defaults.md` の `koma_line_layout_asset_key 全パターン対応表` を参照し、各行のパターンを選択する:
+以下のパターン対応表から各行のパターンを選択する:
 
-| パターン | コマ数 | 幅パターン |
-|---------|------|---------|
-| 1 | 1 | 1.0 |
-| 2〜6 | 2 | 各種 |
-| 7〜11 | 3 | 各種 |
-| 12 | 4 | 0.25×4 |
+| パターン番号 | コマ数 | 幅パターン（koma1〜4） | 説明 |
+|-----------|------|-------------------|------|
+| 1 | 1 | 1.0 | 1コマフル幅 |
+| 2 | 2 | 0.6, 0.4 | 左広い |
+| 3 | 2 | 0.4, 0.6 | 右広い |
+| 4 | 2 | 0.75, 0.25 | 左がかなり広い |
+| 5 | 2 | 0.25, 0.75 | 右がかなり広い |
+| 6 | 2 | 0.5, 0.5 | 2等分（完全均等）|
+| 7 | 3 | 0.33, 0.34, 0.33 | 3等分 |
+| 8 | 3 | 0.5, 0.25, 0.25 | 左広い・右2等分 |
+| 9 | 3 | 0.25, 0.5, 0.25 | 中央広い |
+| 10 | 3 | 0.25, 0.25, 0.5 | 右広い・左2等分 |
+| 11 | 3 | 0.4, 0.2, 0.4 | 左右広い・中央狭い |
+| 12 | 4 | 0.25, 0.25, 0.25, 0.25 | 4等分（完全均等）|
 
 **選択の多様性確保**:
 - normalブロック（3行）: 3行それぞれ異なるパターンを選択することを推奨
@@ -129,5 +136,4 @@ block-beta
 
 - `projects/glow-masterdata/MstKomaLine.csv` — DuckDBクエリでコマアセットキーを取得（`WHERE id LIKE '%_{作品ID}_%'`）
 - `.claude/skills/vd-masterdata-ingame-designer/references/koma-background-offset.md` — 推奨back_ground_offset値
-- `.claude/skills/vd-masterdata-ingame-designer/references/vd-column-defaults.md` — デフォルト値（koma_line_layout_asset_key対応表）
 - `domain/knowledge/masterdata/table-docs/MstKomaLine.md` — テーブル定義
