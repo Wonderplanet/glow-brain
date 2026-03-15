@@ -83,7 +83,7 @@ Read tool で design.md を読み込み、以下のデータを抽出する。
 | 演出 > BGM | bgm_asset_key値 | MstInGame |
 | ID一覧 | 全テーブルのID | 各テーブル共通 |
 
-**空欄になりがちなカラムのデフォルト値**: [vd-column-defaults.md](../../vd-masterdata-ingame-design-creator/references/vd-column-defaults.md) を参照する。
+**空欄になりがちなカラムのデフォルト値**: [vd-column-defaults.md](../../vd-masterdata-ingame-designer/references/vd-column-defaults.md) を参照する。
 
 **テーブル詳細ドキュメント（必要に応じて参照）**: 各テーブルの全カラム定義・enum値・制約を確認する場合は以下を参照する。schema.sql の CHECK 制約と一致させることが目的。
 
@@ -241,7 +241,7 @@ MstEnemyStageParameter ID をカンマ区切りで指定する。
 
 - [schema.sql](scripts/schema.sql) — SQLite スキーマ定義（7テーブル）
 - [export_csv.py](scripts/export_csv.py) — CSV エクスポートスクリプト
-- [vd-column-defaults.md](../../vd-masterdata-ingame-design-creator/references/vd-column-defaults.md) — デフォルト値定義
+- [vd-column-defaults.md](../../vd-masterdata-ingame-designer/references/vd-column-defaults.md) — デフォルト値定義
 - [vd-masterdata-ingame-design-creator SKILL.md](../../vd-masterdata-ingame-design-creator/SKILL.md) — 前工程のスキル
 
 ### マスタテーブル詳細ドキュメント（カラム定義・enum値の正確な参照元）

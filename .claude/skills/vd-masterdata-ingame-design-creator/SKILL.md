@@ -3,6 +3,9 @@ name: vd-masterdata-ingame-design-creator
 description: VDインゲーム設計書（design.md）の作成と調整に特化したスキル。作品ID・ブロック種別・敵構成をヒアリングし、設計書MDを生成、ユーザーが承認するまで修正ループを繰り返します。「VD設計書作成」「VDインゲーム設計」「VD設計調整」「design.md作成」「VDブロック設計」などのキーワードで使用します。
 ---
 
+> **[廃止] このスキルは廃止されました。代わりに `vd-masterdata-ingame-designer` を使用してください。**
+> `references/` フォルダは後方互換のために保持されています。
+
 # VDインゲーム設計書作成スキル（design.md 専用）
 
 ## 概要

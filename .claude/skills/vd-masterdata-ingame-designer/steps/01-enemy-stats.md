@@ -1,35 +1,13 @@
----
-name: vd-masterdata-ingame-enemy-stats-designer
-description: VDインゲーム設計書（design.md）の「敵キャラ基礎ステータス設計」セクションを生成・更新するスキル。引数で渡されたキャラIDをもとにHP/ATK/SPD等を設計し、敵キャラ選定テーブルと敵キャラステータステーブルを生成します。「VD敵ステータス設計」「敵キャラHP設計」「enemy-stats」などのキーワードで使用します。
----
+# Step 01: 敵キャラ基礎ステータス設計
 
-# VD敵キャラ基礎ステータス設計スキル
-
-## 概要
-
-VDインゲーム設計書（design.md）の **`### 敵キャラ設計`** セクション（敵キャラ選定テーブル＋敵キャラステータステーブル）を生成・更新する専門スキル。
+VDインゲーム設計書（design.md）の **`### 敵キャラ設計`** セクション（敵キャラ選定テーブル＋敵キャラステータステーブル）を生成・更新する手順。
 
 - **担当セクション**: `## レベルデザイン > ### 敵キャラ設計 > #### 敵キャラ選定` と `#### 敵キャラステータス`
 - **キャラ選定は行わない**: 引数で渡されたキャラIDを前提とする
 
 ---
 
-## 入力引数
-
-| 引数 | 必須 | 説明 |
-|------|------|------|
-| `作品ID` | ✓ | kai / dan / spy 等 |
-| `ブロック種別` | ✓ | normal または boss |
-| `キャラリスト` | ✓ | キャラID・色属性・体数のリスト（カンマ区切り）。例: `e_kai_00101_vd_Normal_Yellow,e_kai_00201_vd_Normal_Red,c_kai_00301_vd_Normal_Green` |
-| `[ボスキャラID]` | ボスのみ | bossブロックのボスキャラID |
-| `[ブロックID]` | 任意 | 既存design.mdへのパスに使用。省略時は自動生成 |
-| `[--batch]` | 任意 | 確認ループをスキップ |
-
----
-
-## 3ステップワークフロー
-
-### Step 0: 準備・ドキュメント読み込み
+## Step 0: 準備・ドキュメント読み込み
 
 以下を確認・読み込む。
 
@@ -46,7 +24,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
   - ファイル命名: `{MstEnemyCharacter.id}_{MstEnemyCharacterI18n.name}.md`
   - 対象キャラIDのファイルが存在すれば Read tool で読み込み、実績ステータスを参考にする
 
-### Step 1: ステータス設計
+## Step 1: ステータス設計
 
 引数のキャラIDごとに以下のカラムを決定する。
 
@@ -68,7 +46,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 - c_キャラ: `base_hp` = 30,000〜80,000（雑魚より強め）
 - ボス: `base_hp` = 100,000〜500,000、`base_atk` = 500〜2,000
 
-### Step 2: 設計テーブル生成
+## Step 2: 設計テーブル生成
 
 以下のMarkdownテーブルを生成する。
 
@@ -89,7 +67,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 - `vd_all/data/MstEnemyStageParameter.csv` に既に存在するIDは「既存参照」と注記し、CSVの既存値を転記する
 - 新規IDはステータスを設計して記載する
 
-### Step 3: 確認・更新
+## Step 3: 確認・更新
 
 `--batch` フラグがない場合:
 ```
@@ -106,10 +84,9 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 ## ガードレール
 
 1. **キャラ選定は引数のみ**: 引数に含まれないキャラIDを独自に追加してはいけない
-2. **`vd_block_chara.csv` 未掲載の色違いを作成しない**: `vd_all/data/MstEnemyStageParameter.csv` にないIDは「新規」として設計書に記載
-3. **既存IDのステータスは上書きしない**: 既存CSV値をそのまま使用する
-4. **bossブロックはボスのみ**: bossブロックでは雑魚キャラを追加しない
-5. **normalブロックは15体以上設計できる体数を確保**: 敵キャラの合計出現数が15体以上になれる構成を選ぶ
+2. **既存IDのステータスは上書きしない**: 既存CSV値をそのまま使用する
+3. **bossブロックはボスのみ**: bossブロックでは雑魚キャラを追加しない
+4. **normalブロックは15体以上設計できる体数を確保**: 敵キャラの合計出現数が15体以上になれる構成を選ぶ
 
 ---
 
@@ -118,4 +95,3 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 - `domain/knowledge/masterdata/table-docs/MstEnemyStageParameter.md` — テーブル定義
 - `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-creator/vd_all/data/MstEnemyStageParameter.csv` — 既存敵パラメータ一覧
 - `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/メインクエスト_Normal難易度_エネミー/` — 実績ステータス参照
-- `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/vd_block_chara.csv` — 作品別キャラ一覧

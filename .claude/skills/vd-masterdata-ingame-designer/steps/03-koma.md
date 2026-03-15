@@ -1,27 +1,9 @@
----
-name: vd-masterdata-ingame-koma-designer
-description: VDインゲーム設計書（design.md）の「コマ設計」セクションをMermaid block-beta図付きで生成・更新するスキル。作品IDに合ったコマアセットキーを設定し、行別レイアウトテーブルを生成します。「VDコマ設計」「フィールド設計」「koma-design」「コマレイアウト」などのキーワードで使用します。
----
+# Step 03: コマ設計
 
-# VDコマ設計スキル
-
-## 概要
-
-VDインゲーム設計書（design.md）の **`### コマ設計`** セクションを生成・更新する専門スキル。
+VDインゲーム設計書（design.md）の **`### コマ設計`** セクションを生成・更新する手順。
 
 - **担当セクション**: `## レベルデザイン > ### コマ設計`
 - 生成物: Mermaid block-beta 図 + 行別テーブル
-
----
-
-## 入力引数
-
-| 引数 | 必須 | 説明 |
-|------|------|------|
-| `作品ID` | ✓ | kai / dan / spy 等 |
-| `ブロック種別` | ✓ | normal または boss |
-| `[対抗キャラ能力]` | 任意 | コマ効果選択のため（PoisonDamageCut等） |
-| `[--batch]` | 任意 | 確認ループをスキップ |
 
 ---
 
@@ -34,19 +16,17 @@ VDインゲーム設計書（design.md）の **`### コマ設計`** セクショ
 
 ---
 
-## 3ステップワークフロー
-
-### Step 0: 準備・ドキュメント読み込み
+## Step 0: 準備・ドキュメント読み込み
 
 以下を読み込む。
 
 **参照ファイル（必須）**:
-- `.claude/skills/vd-masterdata-ingame-design-creator/references/series-koma-assets.csv` — 作品別コマアセットキー
-- `.claude/skills/vd-masterdata-ingame-design-creator/references/koma-background-offset.md` — 推奨back_ground_offset値
-- `.claude/skills/vd-masterdata-ingame-design-creator/references/vd-column-defaults.md` — デフォルト値（koma_line_layout_asset_key対応表）
+- `.claude/skills/vd-masterdata-ingame-designer/references/series-koma-assets.csv` — 作品別コマアセットキー
+- `.claude/skills/vd-masterdata-ingame-designer/references/koma-background-offset.md` — 推奨back_ground_offset値
+- `.claude/skills/vd-masterdata-ingame-designer/references/vd-column-defaults.md` — デフォルト値（koma_line_layout_asset_key対応表）
 - `domain/knowledge/masterdata/table-docs/MstKomaLine.md` — テーブル定義
 
-### Step 1: コマレイアウト設計
+## Step 1: コマレイアウト設計
 
 #### コマ数・幅パターンの選択
 
@@ -79,7 +59,7 @@ VDインゲーム設計書（design.md）の **`### コマ設計`** セクショ
 `series-koma-assets.csv` を参照して、引数の `作品ID` に合った `koma1_asset_key` を設定する。
 `koma-background-offset.md` を参照して `koma1_back_ground_offset` の推奨値を設定する。
 
-### Step 2: 設計セクション生成
+## Step 2: 設計セクション生成
 
 以下のフォーマットでMarkdownを生成する。
 
@@ -111,7 +91,7 @@ block-beta
 - 各ブロックのスパン = `N × コマ幅`（幅0.25→`:1`、幅0.50→`:2`、幅0.33→`:1`等）
 - 各行のスパン合計が N になることを確認する
 
-### Step 3: 確認・更新
+## Step 3: 確認・更新
 
 `--batch` フラグがない場合:
 ```
@@ -137,7 +117,7 @@ block-beta
 
 ## リファレンス
 
-- `.claude/skills/vd-masterdata-ingame-design-creator/references/series-koma-assets.csv` — 作品別コマアセットキー
-- `.claude/skills/vd-masterdata-ingame-design-creator/references/koma-background-offset.md` — 推奨back_ground_offset値
-- `.claude/skills/vd-masterdata-ingame-design-creator/references/vd-column-defaults.md` — デフォルト値（koma_line_layout_asset_key対応表）
+- `.claude/skills/vd-masterdata-ingame-designer/references/series-koma-assets.csv` — 作品別コマアセットキー
+- `.claude/skills/vd-masterdata-ingame-designer/references/koma-background-offset.md` — 推奨back_ground_offset値
+- `.claude/skills/vd-masterdata-ingame-designer/references/vd-column-defaults.md` — デフォルト値（koma_line_layout_asset_key対応表）
 - `domain/knowledge/masterdata/table-docs/MstKomaLine.md` — テーブル定義

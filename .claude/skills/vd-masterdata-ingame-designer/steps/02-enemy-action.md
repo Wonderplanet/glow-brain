@@ -1,33 +1,13 @@
----
-name: vd-masterdata-ingame-enemy-action-designer
-description: VDインゲーム設計書（design.md）の「敵キャラ行動パターン設計」セクションを生成・更新するスキル。引数で渡されたキャラIDをもとにMstAttack/MstAttackElementの攻撃種別・効果・対象・ダメージ種別を設計します。「VD行動パターン設計」「敵キャラ攻撃設計」「enemy-action」などのキーワードで使用します。
----
+# Step 02: 敵キャラ行動パターン設計
 
-# VD敵キャラ行動パターン設計スキル
-
-## 概要
-
-VDインゲーム設計書（design.md）の **`#### 行動パターン（MstAttack / MstAttackElement）`** セクションを生成・更新する専門スキル。
+VDインゲーム設計書（design.md）の **`#### 行動パターン（MstAttack / MstAttackElement）`** セクションを生成・更新する手順。
 
 - **担当セクション**: `## レベルデザイン > ### 敵キャラ設計 > #### 行動パターン`
 - **キャラ選定は行わない**: 引数で渡されたキャラIDを前提とする
 
 ---
 
-## 入力引数
-
-| 引数 | 必須 | 説明 |
-|------|------|------|
-| `作品ID` | ✓ | kai / dan / spy 等 |
-| `キャラリスト` | ✓ | キャラIDのリスト（前ステップ・enemy-stats-designerの結果） |
-| `[対抗キャラID]` | 任意 | 対抗キャラの能力に合わせたダメージ種別選択のため |
-| `[--batch]` | 任意 | 確認ループをスキップ |
-
----
-
-## 3ステップワークフロー
-
-### Step 0: 準備・ドキュメント読み込み
+## Step 0: 準備・ドキュメント読み込み
 
 以下を確認・読み込む。
 
@@ -41,7 +21,7 @@ VDインゲーム設計書（design.md）の **`#### 行動パターン（MstAtt
   - ファイル命名: `{MstEnemyCharacter.id}_{MstEnemyCharacterI18n.name}.md`
   - 対象キャラIDのファイルが存在すれば Read tool で読み込み、攻撃パターン実績（attack_kind・damage_type・effect_type 等）を参考にする
 
-### Step 1: 行動パターン設計
+## Step 1: 行動パターン設計
 
 引数のキャラIDごとに攻撃パターンを設計する。
 
@@ -65,7 +45,7 @@ VDインゲーム設計書（design.md）の **`#### 行動パターン（MstAtt
    - `BurnDamageCut` → `damage_type=Burn`
    - `SlipDamageKomaBlock` → `damage_type=Slip`
 
-### Step 2: 設計テーブル生成
+## Step 2: 設計テーブル生成
 
 以下のMarkdownテーブルを生成する。
 
@@ -77,7 +57,7 @@ VDインゲーム設計書（design.md）の **`#### 行動パターン（MstAtt
 | {キャラID} | {攻撃名} | {attack_kind} | {damage_type} | {effect_type} | {target_type} | {range} | {備考} |
 ```
 
-### Step 3: 確認・更新
+## Step 3: 確認・更新
 
 `--batch` フラグがない場合:
 ```
