@@ -1,0 +1,143 @@
+---
+name: vd-masterdata-ingame-koma-designer
+description: VDインゲーム設計書（design.md）の「コマ設計」セクションをMermaid block-beta図付きで生成・更新するスキル。作品IDに合ったコマアセットキーを設定し、行別レイアウトテーブルを生成します。「VDコマ設計」「フィールド設計」「koma-design」「コマレイアウト」などのキーワードで使用します。
+---
+
+# VDコマ設計スキル
+
+## 概要
+
+VDインゲーム設計書（design.md）の **`### コマ設計`** セクションを生成・更新する専門スキル。
+
+- **担当セクション**: `## レベルデザイン > ### コマ設計`
+- 生成物: Mermaid block-beta 図 + 行別テーブル
+
+---
+
+## 入力引数
+
+| 引数 | 必須 | 説明 |
+|------|------|------|
+| `作品ID` | ✓ | kai / dan / spy 等 |
+| `ブロック種別` | ✓ | normal または boss |
+| `[対抗キャラ能力]` | 任意 | コマ効果選択のため（PoisonDamageCut等） |
+| `[--batch]` | 任意 | 確認ループをスキップ |
+
+---
+
+## ルール（VD固定）
+
+| ブロック種別 | 行数 | 各行のコマ数 |
+|------------|------|------------|
+| normal | **3行固定**（row=1,2,3） | 各行独立で1〜4コマをランダム選択 |
+| boss | **1行固定**（row=1） | 1〜4コマ |
+
+---
+
+## 3ステップワークフロー
+
+### Step 0: 準備・ドキュメント読み込み
+
+以下を読み込む。
+
+**参照ファイル（必須）**:
+- `.claude/skills/vd-masterdata-ingame-design-creator/references/series-koma-assets.csv` — 作品別コマアセットキー
+- `.claude/skills/vd-masterdata-ingame-design-creator/references/koma-background-offset.md` — 推奨back_ground_offset値
+- `.claude/skills/vd-masterdata-ingame-design-creator/references/vd-column-defaults.md` — デフォルト値（koma_line_layout_asset_key対応表）
+- `domain/knowledge/masterdata/table-docs/MstKomaLine.md` — テーブル定義
+
+### Step 1: コマレイアウト設計
+
+#### コマ数・幅パターンの選択
+
+`vd-column-defaults.md` の `koma_line_layout_asset_key 全パターン対応表` を参照し、各行のパターンを選択する:
+
+| パターン | コマ数 | 幅パターン |
+|---------|------|---------|
+| 1 | 1 | 1.0 |
+| 2〜6 | 2 | 各種 |
+| 7〜11 | 3 | 各種 |
+| 12 | 4 | 0.25×4 |
+
+**選択の多様性確保**:
+- normalブロック（3行）: 3行それぞれ異なるパターンを選択することを推奨
+- 対抗キャラ能力に合わせたコマ効果（`koma1_effect_type`）を1〜2行に設定
+
+#### コマ効果の選択
+
+対抗キャラ能力（引数）に応じて以下のいずれかを選択:
+- `PoisonDamageCut` → `koma_effect_type=Poison`
+- `BurnDamageCut` → `koma_effect_type=Burn`
+- `SlipDamageKomaBlock` → `koma_effect_type=SlipDamage`
+- `AttackPowerDownKomaBlock` → `koma_effect_type=AttackPowerDown`
+- `GustKomaBlock` → `koma_effect_type=Gust`
+
+対抗キャラ能力が渡されない場合は `None`（効果なし）とする。
+
+#### コマアセットキーの決定
+
+`series-koma-assets.csv` を参照して、引数の `作品ID` に合った `koma1_asset_key` を設定する。
+`koma-background-offset.md` を参照して `koma1_back_ground_offset` の推奨値を設定する。
+
+### Step 2: 設計セクション生成
+
+以下のフォーマットでMarkdownを生成する。
+
+````markdown
+### コマ設計
+
+```mermaid
+block-beta
+  columns {N}
+  A["row=1 / koma1<br/>幅={width}<br/>effect: {effect}"]:{span} B["row=1 / koma2<br/>幅={width}<br/>effect: None"]:{span}
+  ...（各行）
+```
+※ columns は1つのみ。各行のスパン合計 = {N} になること。
+
+| row | height | 選択パターン | コマ数 | 各幅 | koma1_asset_key | koma1_effect_type | 幅合計 |
+|-----|--------|------------|-------|------|----------------|------------------|--------|
+| 1 | 0.33 | パターン{N} | {コマ数} | {各幅} | {asset_key} | {effect} | 1.0 |
+| 2 | 0.33 | パターン{N} | {コマ数} | {各幅} | {asset_key} | None | 1.0 |
+| 3 | 0.34 | パターン{N} | {コマ数} | {各幅} | {asset_key} | None | 1.0 |
+````
+
+**height の設定**:
+- normalブロック（3行）: row=1 → `0.33`、row=2 → `0.33`、row=3 → `0.34`
+- bossブロック（1行）: row=1 → `1.0`
+
+**Mermaid block-beta図の作成ルール**:
+- `columns N` は1つだけ宣言する（複数不可）
+- N は全行のコマ幅をスパン整数で表現できる値（通常は 4）
+- 各ブロックのスパン = `N × コマ幅`（幅0.25→`:1`、幅0.50→`:2`、幅0.33→`:1`等）
+- 各行のスパン合計が N になることを確認する
+
+### Step 3: 確認・更新
+
+`--batch` フラグがない場合:
+```
+コマ設計を生成しました。内容をご確認ください。
+
+修正がなければ「OK」または「承認」とお伝えください。
+修正がある場合は具体的にご指示ください。
+```
+
+承認後（または `--batch` 時）、design.md の該当セクションを更新する。
+
+---
+
+## ガードレール
+
+1. **行数はブロック種別で固定**: normal=3行、boss=1行（変更不可）
+2. **`koma1_asset_key` は series-koma-assets.csv を参照**: 作品IDに合った値のみ使用
+3. **`koma1_back_ground_offset` は koma-background-offset.md を参照**: 推奨値を使用
+4. **Mermaid columns は1つのみ宣言**: 複数の `columns` 宣言は行崩れの原因
+5. **各行のスパン合計が N になること**: Mermaid図の整合性を確認
+
+---
+
+## リファレンス
+
+- `.claude/skills/vd-masterdata-ingame-design-creator/references/series-koma-assets.csv` — 作品別コマアセットキー
+- `.claude/skills/vd-masterdata-ingame-design-creator/references/koma-background-offset.md` — 推奨back_ground_offset値
+- `.claude/skills/vd-masterdata-ingame-design-creator/references/vd-column-defaults.md` — デフォルト値（koma_line_layout_asset_key対応表）
+- `domain/knowledge/masterdata/table-docs/MstKomaLine.md` — テーブル定義
