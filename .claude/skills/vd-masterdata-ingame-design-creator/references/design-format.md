@@ -38,6 +38,12 @@ vd-masterdata-ingame-design-creator スキルが Step 2 で生成する設計書
 
 ## レベルデザイン
 
+### 勝利条件
+
+| 条件 | 詳細 |
+|------|------|
+| {勝利条件} | {詳細} |
+
 ### 敵キャラ設計
 
 #### 敵キャラ選定（MstEnemyCharacter）
@@ -51,6 +57,12 @@ vd-masterdata-ingame-design-creator スキルが Step 2 で生成する設計書
 |--------------------------|---------|------|------|-------|---------|----------|----------|-----------|-----------|-------|---------|
 | {id} | {名前} | {値} | {値} | {値} | {値} | {値} | {値} | {値} | {値} | {値} | {値} |
 
+#### 行動パターン（MstAttack / MstAttackElement）
+
+| 敵キャラID | 攻撃名 | 攻撃種別 | 効果 | 備考 |
+|-----------|-------|---------|------|------|
+| {id} | {攻撃名} | {種別} | {効果} | {備考} |
+
 ---
 
 ### コマ設計
@@ -58,9 +70,9 @@ vd-masterdata-ingame-design-creator スキルが Step 2 で生成する設計書
 ```mermaid
 block-beta
   columns {N}
-  A["row=1 / koma1\n幅={width}\neffect: None"]:{span} B["row=1 / koma2\n幅={width}\neffect: None"]:{span} ...
-  C["row=2 / koma1\n幅={width}\neffect: None"]:{span} ...
-  D["row=3 / koma1\n幅={width}\neffect: None"]:{span} ...
+  A["row=1 / koma1<br/>幅={width}<br/>effect: None"]:{span} B["row=1 / koma2<br/>幅={width}<br/>effect: None"]:{span} ...
+  C["row=2 / koma1<br/>幅={width}<br/>effect: None"]:{span} ...
+  D["row=3 / koma1<br/>幅={width}<br/>effect: None"]:{span} ...
 ```
 ※ columns は1つのみ。各行のスパン合計 = N になること。
 
@@ -75,8 +87,8 @@ block-beta
 ### 敵キャラシーケンス設計
 
 > **c_キャラ同時出現ルール（プランナー確認済み）**: c_キャラ（`c_` プレフィックス）が複数体登場する場合、
-> 初回のみ `ElapsedTime`、2体目以降は `FriendUnitDead`（前の c_キャラの sequence_element_id を
-> condition_value に指定）でチェーンすること。また c_キャラの `summon_count` は必ず `1` とすること。`e_glo_*` は対象外。
+> 2体目以降は必ず `FriendUnitDead`（前の c_キャラの sequence_element_id を condition_value に指定）で
+> チェーンすること。また c_キャラの `summon_count` は必ず `1` とすること。`e_glo_*` は対象外。
 
 #### どのフェーズで、どの敵を、いつ、どこに、どのくらい出現させるか
 
@@ -87,9 +99,9 @@ flowchart LR
 
 <!-- c_キャラが複数体登場する場合のチェーン例:
 flowchart LR
-  Start([開始]) --> E1[ElapsedTime: Xs\n1体目 c_xxx 召喚\nelem=1]
-  E1 --> E2[FriendUnitDead: elem=1\n2体目 c_xxx 召喚\nelem=2]
-  E2 --> E3[FriendUnitDead: elem=2\n3体目 c_xxx 召喚\nelem=3]
+  Start([開始]) --> E1["FriendUnitDead: {先行c_キャラのelem}<br/>1体目 c_xxx 召喚<br/>elem=1"]
+  E1 --> E2["FriendUnitDead: elem=1<br/>2体目 c_xxx 召喚<br/>elem=2"]
+  E2 --> E3["FriendUnitDead: elem=2<br/>3体目 c_xxx 召喚<br/>elem=3"]
   ※ 2体目以降は FriendUnitDead で前の c_キャラのelemを condition_value に指定
 -->
 
@@ -131,5 +143,5 @@ flowchart LR
 ---
 
 ### 敵キャラ召喚アニメーション
-{InitialSummon・SummonEnemyアクションでの召喚演出を説明}
+{SummonEnemyアクションでの召喚演出を説明}
 ````

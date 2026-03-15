@@ -49,7 +49,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 ---
 
-## 3ステップワークフロー
+## 4ステップワークフロー
 
 ### Step 0: 情報確認
 
@@ -60,11 +60,10 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 | 作品ID | シリーズ略称（`kai` / `dan` / `spy` 等）。未指定なら確認する |
 | ブロック種別 | `boss` または `normal` のどちらか |
 | ボスキャラ | bossブロックのみ：ボスキャラID・色属性 |
-| 雑魚キャラ | 雑魚キャラID・色属性・体数（ElapsedTime区切りごと） |
+| 雑魚キャラ | 雑魚キャラID・色属性・体数（condition_type区切りごと） |
 | 連番 | 開始番号（通常は `00001`） |
 
 作品別の登場キャラは [vd-character-list.md](references/vd-character-list.md) を参照。
-**MstEnemyStageParameter.id の選出元**: 必ず `vd_all/data/MstEnemyStageParameter.csv` を読み込み、指定作品の `id` を確認して選出すること。
 
 **テーブル詳細ドキュメント読み込み（必須）**: 設計書生成前に以下のドキュメントを Read tool で読み込み、各カラムの定義・enum値・制約を把握する。
 
@@ -76,6 +75,8 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 | MstKomaLine | `domain/knowledge/masterdata/table-docs/MstKomaLine.md` |
 | MstEnemyOutpost | `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md` |
 | MstPage | `domain/knowledge/masterdata/table-docs/MstPage.md` |
+| MstAttack | `domain/knowledge/masterdata/table-docs/MstAttack.md` |
+| MstAttackElement | `domain/knowledge/masterdata/table-docs/MstAttackElement.md` |
 
 **シーケンス設計参考ドキュメント読み込み（必須）**: 多彩なシーケンス設計のために以下のドキュメントも Read tool で読み込む。
 
@@ -90,11 +91,76 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 設計書を生成する際は、以下の方針を守ること。
 
+### 設計共通方針
+
+#### 難易度
+
+- **既存のnormalクエストNormal難易度**程度のレベル感で設計する
+
+#### condition_type 禁止事項（VD共通）
+
+- `InitialSummon` および `ElapsedTime` は **VDでは使用禁止**
+- 以下から選択すること：
+  - `FriendUnitDead` — 友軍キャラが倒されたとき
+  - `OutpostHpPercentage` — 拠点HPが指定%以下になったとき
+  - `EnterTargetKomaIndex` — 対象コマインデックスに入ったとき
+  - `DarknessKomaCleared` — 闇コマをクリアした数に応じて
+  - `FriendUnitTransform` — フレンドキャラが変身したとき
+  - `OutpostDamage` — 拠点がダメージを受けたとき
+  - `FriendUnitSummoned` — 友軍キャラが召喚されたとき
+  - `FoeEnterSameKomaLine` — 自分のコマライン（行）に敵対者が入ったとき
+  - `OnFieldPlayerCharacterCount` — フィールド上の通常プレイヤーキャラ数
+
+#### 対抗キャラによる調整
+
+- **雑魚キャラ**: 対抗キャラが有利になるカラーで用意する
+- **ファントム・ボス**: 無属性にする
+- **コマ効果**: 対抗キャラが有利な効果のコマを **1〜2個**（ブロックごとにランダムに決定）入れる
+
+##### 対抗キャラ弱点・軽減情報の調べ方
+
+1. `vd-character-list.md` の対抗キャラエントリを参照
+2. キャラのスキル・パッシブ説明から「〇〇ダメージ軽減」「〇〇耐性」を特定
+3. 軽減している属性に対応するコマ効果を1〜2個選択する（例: ロイドが対抗 → 毒軽減 → 毒コマを1〜2個）
+
+#### ボスブロック
+
+- 出現させるのは**ボスのみ**（雑魚なし）
+- ゲートあり（MstEnemyOutpost設定）
+  - **全作品・全ボスブロック共通の1レコード**（`vd_all/data/MstEnemyOutpost.csv`）を使用
+  - HP=100固定。ブロックごとに個別設定不要
+  - `MstInGame.mst_enemy_outpost_id` には共通レコードのIDを設定する
+
+#### ノーマルブロック
+
+- 雑魚キャラを**最低15体以上**出現させる
+- ゲートのマスタ設定**なし**（MstEnemyOutpost設定なし）
+
+#### 敵シーケンスの召喚場所指定
+
+- 召喚位置は `0〜1` が1行目、`1〜2` が2行目、`2〜3` が3行目（行インデックス）
+- **ボスブロック**: 1行固定 → 値は必ず `0〜1` の範囲内
+- **ノーマルブロック**: 3行固定 → 値は必ず `0〜3` の範囲内
+- 0付近はプレイヤー陣地のため、召喚位置として設定しない（通常は1.0以上を使用）
+
+---
+
+### Step 1: 敵キャラ基礎ステータス設計（MstEnemyStageParameter）
+
+ヒアリング内容を基に、登場する敵キャラのステータスを設計する。
+
+- 作品別の登場キャラは [vd-character-list.md](references/vd-character-list.md) を参照して敵キャラを選定
+- ステータス設計: `base_hp` / `base_atk` / `base_spd` / `knockback` / `combo` / `drop_bp` 等を決定
+- 行動パターン設計: 各敵キャラの `MstAttack` / `MstAttackElement` の構成（攻撃種別・効果・対象・ダメージ種別）を設計する
+  - `MstAttackElement.damage_type` で毒・炎ダメージを指定すると対抗キャラの軽減システムと連動する
+
+---
+
 ### UR対抗キャラ・ギミックの活用
 
 - **その作品のURキャラの対抗となるギミックやコマ効果を持つ敵キャラを使用することを基本とする**
 - `vd-character-list.md` の「UR対抗キャラ」列を確認し、そのキャラに対応したギミック・コマ効果を持つ敵キャラを優先的に採用する
-- UR対抗の観点で設計書に反映できない場合は、Step 2 のユーザー確認時にその旨をコメントする
+- UR対抗の観点で設計書に反映できない場合は、Step 3 のユーザー確認時にその旨をコメントする
 
 ### 登場体数の設計目標
 
@@ -105,34 +171,34 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 ### シーケンス設計の多様性
 
-**ElapsedTime だけでなく多彩なトリガーを活用して、面白みのある設計を目指す。**
+**多彩なトリガーを活用して、面白みのある設計を目指す（`InitialSummon` / `ElapsedTime` は使用禁止）。**
 具体例集・設計パターン集から適切なパターンを選択すること。
 
 | トリガー | 設計のねらい | 活用例 |
 |---------|------------|--------|
 | `FriendUnitDead` | 「倒すほど強くなる」プレッシャー | N体倒したら強化雑魚追加・c_キャラ登場・無限補充開始 |
 | `OutpostHpPercentage` | 拠点防衛プレッシャー | 拠点50%削れたら覚醒ボス登場 |
-| `InitialSummon` | 開幕演出・ボス即配置 | 複数体を異なる位置で同時配置 |
 | `EnterTargetKomaIndex` | コマ進行連動 | コマ位置に合わせた伏兵出現 |
 | `DarknessKomaCleared` | 難易度自動調整 | 闇コマクリア数に応じたボス追加 |
 | `FriendUnitTransform` | 変身演出 | フレンド変身後に敵大量召喚 |
+| `FoeEnterSameKomaLine` | 行侵入連動 | 自コマラインに敵が入ったら追加召喚 |
+| `OnFieldPlayerCharacterCount` | フィールド人数連動 | キャラ数に応じた難易度調整 |
 
 **summon_count の活用パターン**:
 - `99` + 適切な interval = 実質無限補充（終盤強化に有効）
 - `10〜20` 体一気召喚 = 大規模ラッシュ演出
 - `1` 体精密召喚 = ボス・特殊キャラの確実な1体出現
 
-**推奨設計パターン（4種）**:
-- **A. FriendUnitDead型**: ElapsedTime 開幕 → FriendUnitDead で段階強化 → 終盤 summon_count=99 無限補充
+**推奨設計パターン（3種）**:
+- **A. FriendUnitDead型**: FriendUnitDead で段階強化 → 終盤 summon_count=99 無限補充
 - **B. 拠点防衛型**: OutpostHpPercentage で残HP連動 → c_キャラ最終ボス
-- **C. ストーリー演出型**: InitialSummon でボス即配置 → FriendUnitDead チェーン
 - **D. キャラ変身型**: FriendUnitTransform=1 で変身後に大量召喚
 
 ---
 
-### Step 1: 設計書MD生成
+### Step 2: 設計書MD生成
 
-ヒアリング内容を基に `design.md` を生成して出力先ディレクトリに保存する。
+Step 1 の敵キャラ設計を踏まえて `design.md` を生成して出力先ディレクトリに保存する。
 
 **設計書フォーマット**: [design-format.md](references/design-format.md) を参照。
 
@@ -144,7 +210,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 ---
 
-### Step 2: ユーザー確認・修正ループ
+### Step 3: ユーザー確認・修正ループ
 
 ```
 設計書を生成しました（design.md）。内容をご確認ください。
@@ -155,24 +221,24 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 **ユーザーが「OK」または「承認」と言うまで修正ループを繰り返す。**
 
-**Step 2 完了時**: design.md のパスを案内して終了する。
+**Step 3 完了時**: design.md のパスを案内して終了する。
 
 ---
 
 ## ガードレール（必ず守ること）
 
 1. **IDプレフィックスは `vd_`**
-2. **ゲート(Outpost)HP固定**: boss/normal共に100固定（変更不可）
+2. **ゲート(Outpost)HP固定**: 全作品・全ボスブロック共通の1レコード（`vd_all/data/MstEnemyOutpost.csv`）を使用。HP=100固定（変更不可）
 3. **フェーズ切り替え禁止**: `SwitchSequenceGroup` は使用しない
 4. **承認前に完了しない**: ユーザーが「OK」と言うまで修正ループを続ける
 5. **コマアセットキーは series-koma-assets.csv を参照**: 作品IDに合った `koma1_asset_key` を設定する
 6. **koma1_back_ground_offset は koma-background-offset.md を参照**: 推奨仮値を設定する
 7. **空欄カラムのデフォルト値は vd-column-defaults.md を参照**: 設定漏れを防ぐ
-8. **ボスの二重設定**: `MstInGame.boss_mst_enemy_stage_parameter_id` + `MstAutoPlayerSequence`のInitialSummonで設定することを設計書に明記する
+8. **ボスは `MstInGame.boss_mst_enemy_stage_parameter_id` で設定**: `InitialSummon` は使用禁止。ボスキャラは必ず `boss_mst_enemy_stage_parameter_id` に設定する
 9. **normalブロックのMstKomaLineは3行固定**: row=1〜3 の3エントリを設計する
-10. **MstEnemyStageParameter.id の選出元は vd_all CSV から**: `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-creator/vd_all/data/MstEnemyStageParameter.csv` を読み込んで選出する。masterdata全体ではなくこのキュレーション済みCSVを使う
-11. **c_キャラ複数体は FriendUnitDead でチェーン**: c_キャラ（`c_` プレフィックス）が複数体登場する場合、初回のみ `ElapsedTime` でタイミングを制御し、2体目以降は必ず `FriendUnitDead` で前の c_キャラの撃破を待ってから召喚するよう設計する（フィールドに同時に2体以上出現させない）。また c_キャラのエントリは必ず `summon_count = 1` とする（summon_count を2以上にすると同時複数体が出現してしまうため）
-12. **ElapsedTime での複数 c_キャラ召喚は禁止**: `ElapsedTime` のみで複数の c_キャラを召喚する設計は原則禁止。≤500ms の短時間連続召喚（演出目的）が必要な場合はプランナーに確認する
+10. **`InitialSummon` / `ElapsedTime` は使用禁止**: VDでは condition_type として `InitialSummon` と `ElapsedTime` を使用してはならない。使用可能な condition_type は設計共通方針のリストから選ぶこと
+11. **c_キャラ複数体は FriendUnitDead でチェーン**: c_キャラ（`c_` プレフィックス）が複数体登場する場合、2体目以降は必ず `FriendUnitDead` で前の c_キャラの撃破を待ってから召喚するよう設計する（フィールドに同時に2体以上出現させない）。また c_キャラのエントリは必ず `summon_count = 1` とする（summon_count を2以上にすると同時複数体が出現してしまうため）
+12. **複数 c_キャラの同時召喚は禁止**: 複数の c_キャラを同じタイミング・トリガーで召喚する設計は原則禁止。≤500ms の短時間連続召喚（演出目的）が必要な場合はプランナーに確認する
 13. **e_glo_* はこの制約の対象外**: `e_glo_*`（グロー本体）は c_キャラではないため、同時出現制約の対象外
 14. **normalブロックは雑魚敵を最低15体以上**: normalブロックでは雑魚扱いの敵キャラ（c_キャラ含む）の合計が**最低15体以上**になるよう設計する
 15. **bossブロックの体数制約なし**: bossブロックは雑魚15体以上の制約はない。ボス1体 + 雑魚は任意体数で設計する
@@ -200,7 +266,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
    - 連番は `00001` を使用（既存フォルダが存在する場合は次の連番を使用）
    - ユーザーへの確認なしで設計書の内容を決定する
 
-2. **Step 2（承認ループ）をスキップ**
+2. **Step 3（承認ループ）をスキップ**
    - 設計書生成後、確認なしで直接 `design.md` に書き込む
    - 「設計書を保存しました: {パス}」とのみ出力して終了
 
@@ -220,9 +286,6 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 - [vd-column-defaults.md](references/vd-column-defaults.md) — デザインフェーズで設定が必要なカラムのデフォルト値
 - [series-koma-assets.csv](references/series-koma-assets.csv) — 作品別コマアセットキー・back_ground_offset対応表
 - [koma-background-offset.md](references/koma-background-offset.md) — コマアセットキー別推奨back_ground_offset値
-- `vd_all/data/MstEnemyStageParameter.csv` — VD専用の敵キャラステージパラメータ一覧（選出元。47件。Normal/Boss・全作品分）
-  - パス: `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-creator/vd_all/data/MstEnemyStageParameter.csv`
-
 ### マスタテーブル詳細ドキュメント（カラム定義・enum値の正確な参照元）
 
 - `domain/knowledge/masterdata/table-docs/MstInGame.md`
@@ -231,6 +294,8 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 - `domain/knowledge/masterdata/table-docs/MstKomaLine.md`
 - `domain/knowledge/masterdata/table-docs/MstEnemyOutpost.md`
 - `domain/knowledge/masterdata/table-docs/MstPage.md`
+- `domain/knowledge/masterdata/table-docs/MstAttack.md`
+- `domain/knowledge/masterdata/table-docs/MstAttackElement.md`
 
 ### シーケンス設計参考ドキュメント
 
