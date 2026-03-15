@@ -156,7 +156,9 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 - 作品別の登場キャラは `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/vd_block_chara.csv` を参照して敵キャラを選定
 - ステータス設計: `base_hp` / `base_atk` / `base_spd` / `knockback` / `combo` / `drop_bp` 等を決定
+  - 参考値として `specs/メインクエスト_Normal難易度_エネミー/` に `{MstEnemyCharacter.id}_{MstEnemyCharacterI18n.name}.md` 形式のファイルが存在すれば Read tool で読み込み、メインクエスト Normal難易度での実績値を確認する
 - 行動パターン設計: 各敵キャラの `MstAttack` / `MstAttackElement` の構成（攻撃種別・効果・対象・ダメージ種別）を設計する
+  - 同ファイルに攻撃パターン実績（attack_kind・damage_type・effect_type 等）が記載されていれば設計の参考にする
   - `MstAttackElement.damage_type` で毒・炎ダメージを指定すると対抗キャラの軽減システムと連動する
 
 ---
@@ -292,6 +294,7 @@ Step 1 の敵キャラ設計を踏まえて `design.md` を生成して出力先
 - [vd-column-defaults.md](references/vd-column-defaults.md) — デザインフェーズで設定が必要なカラムのデフォルト値
 - [series-koma-assets.csv](references/series-koma-assets.csv) — 作品別コマアセットキー・back_ground_offset対応表
 - [koma-background-offset.md](references/koma-background-offset.md) — コマアセットキー別推奨back_ground_offset値
+- `specs/メインクエスト_Normal難易度_エネミー/` — メインクエスト Normal難易度での敵キャラ実使用データ（ステータス実績・攻撃パターン・コマ効果）。`{MstEnemyCharacter.id}_{MstEnemyCharacterI18n.name}.md` の形式で1キャラ1ファイル（masterdata-ingame-enemy-explainer スキルで生成）
 ### マスタテーブル詳細ドキュメント（カラム定義・enum値の正確な参照元）
 
 - `domain/knowledge/masterdata/table-docs/MstInGame.md`
