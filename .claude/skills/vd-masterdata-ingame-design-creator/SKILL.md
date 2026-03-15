@@ -144,9 +144,9 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 #### 敵シーケンスの召喚場所指定
 
 - 召喚位置は `0〜1` が1行目、`1〜2` が2行目、`2〜3` が3行目（行インデックス）
-- **ボスブロック**: 1行固定 → 値は必ず `0〜1` の範囲内
+- **ボスブロック**: 1行固定 → 値は必ず `0〜1` の範囲内。ボス配置の推奨値は **0.7** 程度（1.0以上は画面からはみ出す可能性がある）
 - **ノーマルブロック**: 3行固定 → 値は必ず `0〜3` の範囲内
-- 0付近はプレイヤー陣地のため、召喚位置として設定しない（通常は1.0以上を使用）
+- 0付近はプレイヤー陣地のため、召喚位置として設定しない（ノーマルブロックは通常1.0以上を使用）
 
 ---
 
@@ -154,7 +154,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 
 ヒアリング内容を基に、登場する敵キャラのステータスを設計する。
 
-- 作品別の登場キャラは `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/vd_block_chara.csv` を参照して敵キャラを選定
+- 作品別の登場キャラは `domain/tasks/20260311_202700_vd_masterdata_ingame_generation/specs/vd_block_chara.csv` を参照して敵キャラを選定。**vd_block_chara.csv に記載のあるキャラID・色属性のみ使用すること。CSV未掲載の色違いを独自に作成・追加してはいけない**
 - ステータス設計: `base_hp` / `base_atk` / `base_spd` / `knockback` / `combo` / `drop_bp` 等を決定
   - 参考値として `specs/メインクエスト_Normal難易度_エネミー/` に `{MstEnemyCharacter.id}_{MstEnemyCharacterI18n.name}.md` 形式のファイルが存在すれば Read tool で読み込み、メインクエスト Normal難易度での実績値を確認する
 - 行動パターン設計: 各敵キャラの `MstAttack` / `MstAttackElement` の構成（攻撃種別・効果・対象・ダメージ種別）を設計する
@@ -174,7 +174,7 @@ domain/tasks/20260311_202700_vd_masterdata_ingame_generation/vd-ingame-design-cr
 | ブロック種別 | 雑魚敵の最低体数 | 備考 |
 |------------|----------------|------|
 | normalブロック | **15体以上** | 雑魚扱いの敵キャラの合計（ボスを除く） |
-| bossブロック | 制約なし | ボス1体 + 雑魚は任意体数で設計する |
+| bossブロック | ボスのみ（雑魚なし） | ボスキャラ1体のみ出現。雑魚キャラは出現させない |
 
 ### シーケンス設計の多様性
 
@@ -248,10 +248,11 @@ Step 1 の敵キャラ設計を踏まえて `design.md` を生成して出力先
 12. **複数 c_キャラの同時召喚は禁止**: 複数の c_キャラを同じタイミング・トリガーで召喚する設計は原則禁止。≤500ms の短時間連続召喚（演出目的）が必要な場合はプランナーに確認する
 13. **e_glo_* はこの制約の対象外**: `e_glo_*`（グロー本体）は c_キャラではないため、同時出現制約の対象外
 14. **normalブロックは雑魚敵を最低15体以上**: normalブロックでは雑魚扱いの敵キャラ（c_キャラ含む）の合計が**最低15体以上**になるよう設計する
-15. **bossブロックの体数制約なし**: bossブロックは雑魚15体以上の制約はない。ボス1体 + 雑魚は任意体数で設計する
+15. **bossブロックはボスのみ**: bossブロックは出現させるのはボスキャラ1体のみ。雑魚キャラは出現させない
 16. **mst_defense_target_id は `__NULL__`**: 空文字だと参照エラー。`__NULL__`（NULLリテラル）が必須
 17. **mst_auto_player_sequence_idは空文字**: レガシーカラム。値を設定するとバリデーションエラーになる
 18. **全coefカラムは1.0固定**: 6カラム（normal_enemy_hp/attack/speed_coef・boss_enemy_hp/attack/speed_coef）全て1.0固定
+19. **シーケンスと敵キャラ選定テーブルの一貫性**: シーケンスで召喚する全 MstEnemyStageParameter.id は、敵キャラ選定テーブル（MstEnemyCharacter）に必ず記載すること
 
 ---
 
