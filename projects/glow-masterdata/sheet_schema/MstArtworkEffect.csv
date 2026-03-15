@@ -1,0 +1,3 @@
+memo
+TABLE,MstArtworkEffect,MstArtworkEffect,MstArtworkEffect,MstArtworkEffect,MstArtworkEffect,MstArtworkEffect,MstArtworkEffect,MstArtworkEffect,MstArtworkEffect
+ENABLE,id,mst_artwork_id,effect_type,grade_level1_value,grade_level2_value,grade_level3_value,grade_level4_value,grade_level5_value,release_key

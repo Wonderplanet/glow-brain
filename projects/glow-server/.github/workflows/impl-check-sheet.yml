@@ -1,0 +1,446 @@
+name: 実装確認シート管理
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request:
+    types: [closed]
+
+jobs:
+  create-check-sheet:
+    # PRコメントで、かつ「Task linked:」を含むコメントのみ処理対象
+    if: |
+      github.event_name == 'issue_comment' &&
+      github.event.issue.pull_request != null &&
+      contains(github.event.comment.body, 'Task linked:')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: ClickUpタスクID抽出
+        id: extract-task
+        run: |
+          COMMENT_BODY="${{ github.event.comment.body }}"
+          echo "Comment body: $COMMENT_BODY"
+
+          # Task linked: [CU-xxxxx タイトル](URL) のパターンを抽出
+          # タイトルには角括弧などあらゆる文字が含まれる可能性があるため、URLまでの任意の文字列にマッチさせる
+          if echo "$COMMENT_BODY" | grep -E 'Task linked:\s*\[CU-[a-zA-Z0-9]+\s+.*\]\(https://app\.clickup\.com/t/[a-zA-Z0-9]+\)' > /dev/null; then
+            # CU-プレフィックスなしのIDを抽出（ClickUp API用）
+            TASK_ID=$(echo "$COMMENT_BODY" | grep -Eo '\[CU-[a-zA-Z0-9]+' | sed 's/\[CU-//' | head -1)
+            TASK_URL_ID=$(echo "$COMMENT_BODY" | grep -Eo 'https://app\.clickup\.com/t/[a-zA-Z0-9]+' | sed 's|.*/||' | head -1)
+
+            # API用のID（CU-なし）と表示用のID（CU-あり）を両方出力
+            echo "task_id=${TASK_ID}" >> $GITHUB_OUTPUT
+            echo "task_id_display=CU-${TASK_ID}" >> $GITHUB_OUTPUT
+            echo "task_url_id=${TASK_URL_ID}" >> $GITHUB_OUTPUT
+            echo "skip=false" >> $GITHUB_OUTPUT
+            echo "Found ClickUp task: CU-${TASK_ID} (API ID: ${TASK_ID})"
+          else
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "Skipping: ClickUp task link not found"
+          fi
+
+      - name: Checkout repository
+        if: steps.extract-task.outputs.skip == 'false'
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: PR情報取得
+        if: steps.extract-task.outputs.skip == 'false'
+        id: pr-info
+        run: |
+          PR_NUMBER="${{ github.event.issue.number }}"
+          PR_DATA=$(gh pr view $PR_NUMBER --json number,headRefName)
+          PR_BRANCH=$(echo "$PR_DATA" | jq -r '.headRefName')
+
+          echo "pr_number=${PR_NUMBER}" >> $GITHUB_OUTPUT
+          echo "pr_branch=${PR_BRANCH}" >> $GITHUB_OUTPUT
+          echo "PR Branch: ${PR_BRANCH}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ClickUpタスク情報取得
+        if: steps.extract-task.outputs.skip == 'false'
+        id: clickup-task
+        run: |
+          # CU-プレフィックスなしのIDを使用
+          TASK_ID="${{ steps.extract-task.outputs.task_id }}"
+
+          # ClickUp APIでタスク情報を取得
+          HTTP_CODE=$(curl -s -o /tmp/clickup_response.json -w "%{http_code}" -X GET \
+            "https://api.clickup.com/api/v2/task/${TASK_ID}" \
+            -H "Authorization: ${{ secrets.CLICKUP_API_KEY }}" \
+            -H "Content-Type: application/json")
+
+          RESPONSE=$(cat /tmp/clickup_response.json)
+
+          # HTTPステータスコードをチェック
+          if [ "$HTTP_CODE" -ne 200 ]; then
+            echo "Error: ClickUp API returned HTTP $HTTP_CODE"
+            echo "Response: $RESPONSE"
+            exit 1
+          fi
+
+          # エラーレスポンスをチェック
+          if echo "$RESPONSE" | jq -e '.err' > /dev/null 2>&1; then
+            echo "Error: ClickUp API error: $(echo "$RESPONSE" | jq -r '.err')"
+            exit 1
+          fi
+
+          # タスク名を取得
+          TASK_NAME=$(echo "$RESPONSE" | jq -r '.name')
+          TASK_URL=$(echo "$RESPONSE" | jq -r '.url')
+
+          # タスク名が取得できたかチェック
+          if [ "$TASK_NAME" = "null" ] || [ -z "$TASK_NAME" ]; then
+            echo "Error: Failed to get task name from ClickUp API"
+            echo "Response: $RESPONSE"
+            exit 1
+          fi
+
+          # locations配列の最初の要素のnameを取得、なければlist.name、それもなければ"others"を使用
+          LOCATION=$(echo "$RESPONSE" | jq -r '.locations[0].name // .list.name // "others"')
+
+          echo "task_name=${TASK_NAME}" >> $GITHUB_OUTPUT
+          echo "task_url=${TASK_URL}" >> $GITHUB_OUTPUT
+          echo "location=${LOCATION}" >> $GITHUB_OUTPUT
+          echo "Task: ${TASK_NAME}"
+          echo "Location: ${LOCATION}"
+
+      - name: ファイル名・内容生成
+        if: steps.extract-task.outputs.skip == 'false'
+        id: generate-file
+        run: |
+          # 現在日付取得（YYYYMMDD形式）
+          DATE_STR=$(date +%Y%m%d)
+          CURRENT_DATE=$(date +%Y-%m-%d)
+
+          # タスクIDを取得
+          TASK_ID="${{ steps.extract-task.outputs.task_id }}"
+
+          # タスクタイトルから不要文字を除去してファイル名生成
+          TASK_NAME="${{ steps.clickup-task.outputs.task_name }}"
+          # ファイル名として使用できない文字（/, \, :, *, ?, ", <, >, |）のみをアンダースコアに変換
+          # それ以外の文字（日本語、記号含む）は保持
+          TASK_TITLE_CLEAN=$(echo "$TASK_NAME" | sed 's/[\/\\:*?"<>|]/_/g')
+          FILE_NAME="${DATE_STR}_${TASK_ID}_${TASK_TITLE_CLEAN}.md"
+
+          # ファイルパス生成（locationをそのままフォルダ名として使用）
+          LOCATION="${{ steps.clickup-task.outputs.location }}"
+          # フォルダ名としても不正な文字を置換
+          LOCATION_CLEAN=$(echo "$LOCATION" | sed 's/[\/\\:*?"<>|]/_/g')
+          FILE_PATH="docs/impl_check_sheet/${LOCATION_CLEAN}/${FILE_NAME}"
+
+          echo "file_name=${FILE_NAME}" >> $GITHUB_OUTPUT
+          echo "file_path=${FILE_PATH}" >> $GITHUB_OUTPUT
+          echo "current_date=${CURRENT_DATE}" >> $GITHUB_OUTPUT
+
+          echo "Target file: ${FILE_PATH}"
+
+      - name: PRブランチにチェックアウト
+        if: steps.extract-task.outputs.skip == 'false'
+        run: |
+          git fetch origin ${{ steps.pr-info.outputs.pr_branch }}
+          git checkout ${{ steps.pr-info.outputs.pr_branch }}
+
+      - name: ファイル存在チェック
+        if: steps.extract-task.outputs.skip == 'false'
+        id: check-file-exists
+        run: |
+          TASK_ID="${{ steps.extract-task.outputs.task_id }}"
+
+          # タスクIDを含むファイルを検索（ファイル名パターン: *_taskid_*.md）
+          # docs/impl_check_sheet/配下の全ディレクトリから検索
+          EXISTING_FILE=$(find "docs/impl_check_sheet/" -name "*_${TASK_ID}_*.md" 2>/dev/null | head -1)
+
+          if [ -n "$EXISTING_FILE" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "File already exists for task ${TASK_ID}: ${EXISTING_FILE}"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+            echo "No file found for task ${TASK_ID}, will create new file"
+          fi
+
+      - name: Git設定
+        if: steps.check-file-exists.outputs.skip == 'false'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: シート作成コミット
+        if: steps.check-file-exists.outputs.skip == 'false'
+        id: commit-sheet
+        run: |
+          FILE_PATH="${{ steps.generate-file.outputs.file_path }}"
+          TASK_ID_DISPLAY="${{ steps.extract-task.outputs.task_id_display }}"
+          TASK_NAME="${{ steps.clickup-task.outputs.task_name }}"
+          TASK_URL="${{ steps.clickup-task.outputs.task_url }}"
+          CURRENT_DATE="${{ steps.generate-file.outputs.current_date }}"
+          LOCATION="${{ steps.clickup-task.outputs.location }}"
+          LOCATION_CLEAN=$(echo "$LOCATION" | sed 's/[\/\\:*?"<>|]/_/g')
+
+          # テンプレート取得
+          TEMPLATE=$(cat docs/impl_check_sheet/template.md)
+
+          # テンプレート変数置換
+          CONTENT=$(echo "$TEMPLATE" | sed \
+            -e "s/{{TASK_TITLE}}/${TASK_NAME}/g" \
+            -e "s|{{TASK_URL}}|${TASK_URL}|g" \
+            -e "s/{{DATE}}/${CURRENT_DATE}/g")
+
+          # ディレクトリ作成
+          if ! mkdir -p "docs/impl_check_sheet/${LOCATION_CLEAN}"; then
+            echo "Error: Failed to create directory"
+            exit 1
+          fi
+
+          # ファイル保存
+          if ! echo "$CONTENT" > "${FILE_PATH}"; then
+            echo "Error: Failed to create file"
+            exit 1
+          fi
+
+          # Git add
+          if ! git add "${FILE_PATH}"; then
+            echo "Error: Failed to add file to git"
+            exit 1
+          fi
+
+          # 変更があるか確認
+          if ! git diff --cached --exit-code > /dev/null; then
+            echo "File changes detected, committing..."
+          else
+            echo "Error: No file changes detected"
+            exit 1
+          fi
+
+          # Git commit
+          if ! git commit -m "feat: 実装確認シート追加 (${TASK_ID_DISPLAY})"; then
+            echo "Error: Commit failed"
+            exit 1
+          fi
+
+          # Git push
+          if ! git push origin ${{ steps.pr-info.outputs.pr_branch }}; then
+            echo "Error: Push failed"
+            exit 1
+          fi
+
+          echo "Committed and pushed: ${FILE_PATH}"
+
+      - name: PRにコメント通知
+        if: steps.check-file-exists.outputs.skip == 'false'
+        run: |
+          FILE_PATH="${{ steps.generate-file.outputs.file_path }}"
+          PR_NUMBER="${{ steps.pr-info.outputs.pr_number }}"
+
+          cat <<EOF > /tmp/comment.txt
+          ✅ 実装確認シートを作成しました。
+
+          📝 ファイル: \`${FILE_PATH}\`
+
+          このPRブランチに実装確認シートが追加されました。内容を記入してコミットしてください。
+          EOF
+
+          gh pr comment $PR_NUMBER --body-file /tmp/comment.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  notify-check-sheet:
+    # PRがマージされた場合のみ実行
+    if: |
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 新規追加ファイル検出
+        id: detect-new-files
+        run: |
+          # PRでdocs/impl_check_sheet/配下に追加されたファイルを検出
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+
+          # 日本語ファイル名を正しく扱うためにquotePathを無効化
+          git config core.quotePath false
+
+          echo "Comparing ${BASE_SHA}..${HEAD_SHA}"
+
+          # シンプルなフィルタリング
+          NEW_FILES=$(git diff --name-only --diff-filter=A ${BASE_SHA} ${HEAD_SHA} | \
+            grep 'docs/impl_check_sheet/' | \
+            grep -v 'template\.md' | \
+            grep -v 'README\.md' || true)
+
+          echo "Found files:"
+          echo "${NEW_FILES}"
+
+          if [ -z "$NEW_FILES" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "No new implementation check sheets found"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+            # 複数ファイルの場合は最初の1つを処理（通常は1ファイルのはず）
+            FILE_PATH=$(echo "$NEW_FILES" | head -1)
+            echo "file_path=${FILE_PATH}" >> $GITHUB_OUTPUT
+            echo "Found new check sheet: ${FILE_PATH}"
+          fi
+
+      - name: ClickUpタスクID抽出
+        if: steps.detect-new-files.outputs.skip == 'false'
+        id: extract-task-id
+        run: |
+          FILE_PATH="${{ steps.detect-new-files.outputs.file_path }}"
+          FILE_NAME=$(basename "$FILE_PATH")
+
+          # ファイル名フォーマット: yyyymmdd_taskid_title.md
+          # 期待されるパターン: 8桁の数字_英数字とハイフン_任意の文字列.md
+          # 例: 20231225_abc123xyz_feature.md
+
+          # ファイル名パターンの検証
+          if ! echo "$FILE_NAME" | grep -E '^[0-9]{8}_[A-Za-z0-9-]+_.*\.md$' > /dev/null; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "::warning::Filename does not match expected pattern (yyyymmdd_taskid_title.md): ${FILE_NAME}"
+            exit 0
+          fi
+
+          # 正規表現を使用してTASK_IDを抽出（最初と2番目のアンダースコアの間）
+          TASK_ID=$(echo "$FILE_NAME" | sed -E 's/^[0-9]{8}_([A-Za-z0-9-]+)_.*\.md$/\1/')
+
+          # 抽出結果の検証
+          if [ -z "$TASK_ID" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "::warning::Could not extract task ID from filename: ${FILE_NAME}"
+            exit 0
+          fi
+
+          # TASK_IDのフォーマット検証（英数字とハイフンのみ、1文字以上）
+          if ! echo "$TASK_ID" | grep -E '^[A-Za-z0-9-]+$' > /dev/null; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "::warning::Extracted task ID contains invalid characters: ${TASK_ID}"
+            exit 0
+          fi
+
+          echo "skip=false" >> $GITHUB_OUTPUT
+          echo "task_id=${TASK_ID}" >> $GITHUB_OUTPUT
+          echo "Extracted task ID: ${TASK_ID}"
+
+      - name: ファイル内容解析
+        if: steps.extract-task-id.outputs.skip == 'false'
+        id: parse-content
+        run: |
+          FILE_PATH="${{ steps.detect-new-files.outputs.file_path }}"
+
+          # 一時ファイルを作成
+          IMPACT_FILE="/tmp/impact_items.txt"
+          QA_FILE="/tmp/qa_notes.txt"
+
+          # 影響範囲チェックリストの抽出（[x]がついている項目）
+          # "## 影響範囲" から "##" で始まる次のセクションまでを対象
+          awk '
+            /^## 影響範囲/ { in_section=1; next }
+            /^## / && in_section { in_section=0 }
+            in_section && /^- \[x\]/ {
+              # "- [x] " を除去して項目名のみ抽出
+              gsub(/^- \[x\] /, "");
+              print
+            }
+          ' "$FILE_PATH" > "$IMPACT_FILE"
+
+          # QA連絡事項の抽出
+          # "## QA連絡事項" から "---" または次の "##" まで
+          awk '
+            /^## QA連絡事項/ { in_section=1; next }
+            /^---$/ && in_section { in_section=0; next }
+            /^## / && in_section { in_section=0 }
+            in_section && NF { print }
+          ' "$FILE_PATH" > "$QA_FILE"
+
+          # ファイルが空でないか確認
+          if [ ! -s "$IMPACT_FILE" ] && [ ! -s "$QA_FILE" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "No impact items or QA notes found"
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+            echo "Parsed content successfully"
+          fi
+
+      - name: ClickUpコメント投稿
+        if: steps.parse-content.outputs.skip == 'false'
+        env:
+          TASK_ID: ${{ steps.extract-task-id.outputs.task_id }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: |
+          # コメント本文を構築
+          echo "(PRからの自動投稿です)" > /tmp/comment.md
+          echo "" >> /tmp/comment.md
+          echo "## 実装内容について" >> /tmp/comment.md
+          echo "" >> /tmp/comment.md
+          echo "### 影響範囲" >> /tmp/comment.md
+
+          # 影響範囲チェックリストを追加
+          if [ -s /tmp/impact_items.txt ]; then
+            while IFS= read -r line; do
+              echo "- $line" >> /tmp/comment.md
+            done < /tmp/impact_items.txt
+          else
+            echo "- （チェック項目なし）" >> /tmp/comment.md
+          fi
+
+          # QA連絡事項を追加
+          echo "" >> /tmp/comment.md
+          echo "### QA連絡事項" >> /tmp/comment.md
+
+          if [ -s /tmp/qa_notes.txt ]; then
+            cat /tmp/qa_notes.txt >> /tmp/comment.md
+          else
+            echo "（記載なし）" >> /tmp/comment.md
+          fi
+
+          # PR情報を最後に追加
+          echo "" >> /tmp/comment.md
+          echo "---" >> /tmp/comment.md
+          echo "" >> /tmp/comment.md
+          echo "PR: [#${PR_NUMBER} ${PR_TITLE}](${PR_URL})" >> /tmp/comment.md
+
+          # ClickUp APIでコメント投稿
+          COMMENT_TEXT=$(cat /tmp/comment.md)
+
+          # JSONエスケープ処理
+          COMMENT_JSON=$(jq -n --arg text "$COMMENT_TEXT" '{comment_text: $text}')
+
+          # ClickUp APIへのコメント投稿（エラーハンドリング付き）
+          HTTP_CODE=$(curl -X POST \
+            "https://api.clickup.com/api/v2/task/${TASK_ID}/comment" \
+            -H "Authorization: ${{ secrets.CLICKUP_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d "$COMMENT_JSON" \
+            -w "%{http_code}" \
+            -s -o /tmp/curl_response.txt)
+
+          # HTTPステータスコードの検証
+          if [ "$HTTP_CODE" != "200" ] && [ "$HTTP_CODE" != "201" ]; then
+            echo "::error::ClickUp API error - HTTP Status: $HTTP_CODE"
+            echo "Response body:"
+            cat /tmp/curl_response.txt
+            exit 1
+          fi
+
+          echo "Posted comment to ClickUp task: ${TASK_ID}"

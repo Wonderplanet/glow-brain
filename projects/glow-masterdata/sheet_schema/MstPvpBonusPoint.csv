@@ -1,0 +1,3 @@
+memo
+TABLE,MstPvpBonusPoint,MstPvpBonusPoint,MstPvpBonusPoint,MstPvpBonusPoint,MstPvpBonusPoint
+ENABLE,id,release_key,condition_value,bonus_point,bonus_type

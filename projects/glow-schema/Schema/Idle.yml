@@ -1,0 +1,128 @@
+data:
+  - name: MstIdleIncentive
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: initialRewardReceiveMinutes
+        type: int
+      - name: rewardIncreaseIntervalMinutes
+        type: int
+      - name: maxIdleHours
+        type: int
+      - name: maxDailyDiamondQuickReceiveAmount
+        type: int
+      - name: requiredQuickReceiveDiamondAmount
+        type: int
+      - name: maxDailyAdQuickReceiveAmount
+        type: int
+      - name: adIntervalSeconds
+        type: int
+      - name: quickIdleMinutes
+        type: int
+  - name: MstIdleIncentiveReward
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstStageId
+        type: string
+      - name: baseCoinAmount
+        type: float
+      - name: baseExpAmount
+        type: float
+      - name: mstIdleIncentiveItemGroupId
+        type: string
+  - name: MstIdleIncentiveItem
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstIdleIncentiveItemGroupId
+        type: string
+      - name: mstItemId
+        type: string
+      - name: baseAmount
+        type: float
+  - name: UsrIdleIncentive
+    obscure: true
+    params:
+      - name: idleStartedAt
+        type: DateTimeOffset
+      - name: diamondQuickReceiveCount
+        type: int
+      - name: adQuickReceiveCount
+        type: int
+      - name: diamondQuickReceiveAt
+        type: DateTimeOffset
+      - name: adQuickReceiveAt
+        type: DateTimeOffset
+  - name: IdleIncentiveReceiveResult
+    obscure: true
+    params:
+      - name: rewards
+        type: ReceiveRewardData[]
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrIdleIncentive
+        type: UsrIdleIncentiveData
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+  - name: IdleIncentiveQuickReceiveByDiamondResult
+    obscure: true
+    params:
+      - name: rewards
+        type: ReceiveRewardData[]
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrIdleIncentive
+        type: UsrIdleIncentiveData
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+  - name: IdleIncentiveQuickReceiveByAdResult
+    obscure: true
+    params:
+      - name: rewards
+        type: ReceiveRewardData[]
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrIdleIncentive
+        type: UsrIdleIncentiveData
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+  - name: ReceiveReward
+    obscure: true
+    params:
+      - name: reward
+        type: RewardData
+
+api:
+  - name: IdleIncentive
+    actions:
+    - name: Receive
+      path: "/api/idle_incentive/receive"
+      params:
+      method: POST
+      response: IdleIncentiveReceiveResultData
+    - name: QuickReceiveByDiamond
+      path: "/api/idle_incentive/quick_receive_by_diamond"
+      params:
+      method: POST
+      response: IdleIncentiveQuickReceiveByDiamondResultData
+    - name: QuickReceiveByAd
+      path: "/api/idle_incentive/quick_receive_by_ad"
+      params:
+      method: POST
+      response: IdleIncentiveQuickReceiveByAdResultData

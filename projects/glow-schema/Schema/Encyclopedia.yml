@@ -1,0 +1,384 @@
+enum:
+  - name: UnitEncyclopediaEffectType
+    params:
+      - name: Hp
+      - name: AttackPower
+      - name: Heal
+      - name: SummonCost
+
+  - name: EncyclopediaType
+    params:
+      - name: Artwork
+      - name: Unit
+      - name: Emblem
+      - name: EnemyDiscovery
+
+  - name: ArtworkEffectType
+    params:
+      - name: AttackPowerUp
+      - name: HpUp
+      - name: ResummonSpeedUp
+      - name: SpecialAttackChargeSpeedUp
+      - name: InitialLeaderPointUp
+      - name: JumbleRushChargeSpeedUp
+      - name: JumbleRushDamageUp
+
+  - name: ArtworkEffectTargetRuleType
+    params:
+      - name: All
+      - name: TargetCount
+      - name: Unit
+      - name: CharacterUnitRoleType
+      - name: CharacterColor
+      - name: Series
+
+  - name: ArtworkEffectActivationRuleType
+    params:
+      - name: None
+      - name: Unit
+      - name: CharacterUnitRoleType
+      - name: CharacterColor
+      - name: Series
+      - name: Count
+
+  - name: ArtworkAcquisitionRouteType
+    params:
+      - name: Fragment
+      - name: UnitGrade
+      - name: Exchange
+      - name: Shop
+      - name: PanelMission
+      - name: EventMission
+      - name: BoxGasha
+      - name: Gasha
+
+data:
+  - name: MstSeries
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: jumpPlusUrl
+        type: string
+      - name: assetKey
+        type: string
+      - name: bannerAssetKey
+        type: string
+
+  - name: MstSeriesI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstSeriesId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+      - name: prefixWord
+        type: string
+
+  - name: MstArtwork
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstSeriesId
+        type: string
+      - name: outpostAdditionalHp
+        type: int
+      - name: assetKey
+        type: string
+      - name: sortOrder
+        type: int
+      - name: rarity
+        type: Rarity
+
+  - name: MstArtworkI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstArtworkId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+      - name: description
+        type: string
+
+  - name: MstArtworkFragment
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstArtworkId
+        type: string
+      - name: dropGroupId
+        type: string
+      - name: dropPercentage
+        type: int
+      - name: rarity
+        type: Rarity
+      - name: assetNum
+        type: int
+
+  - name: MstArtworkFragmentI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstArtworkFragmentId
+        type: string
+      - name: language
+        type: Language
+      - name: name
+        type: string
+
+  - name: MstArtworkFragmentPosition
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstArtworkFragmentId
+        type: string
+      - name: position
+        type: int
+
+  - name: MstArtworkEffect
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstArtworkId
+        type: string
+      - name: effectType
+        type: ArtworkEffectType
+      - name: gradeLevel1Value
+        type: float
+      - name: gradeLevel2Value
+        type: float
+      - name: gradeLevel3Value
+        type: float
+      - name: gradeLevel4Value
+        type: float
+      - name: gradeLevel5Value
+        type: float
+
+  - name: MstArtworkEffectI18n
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstArtworkId
+        type: string
+      - name: language
+        type: Language
+      - name: gradeLevel1EffectText
+        type: string
+      - name: gradeLevel2EffectText
+        type: string
+      - name: gradeLevel3EffectText
+        type: string
+      - name: gradeLevel4EffectText
+        type: string
+      - name: gradeLevel5EffectText
+        type: string
+
+  - name: MstArtworkAcquisitionRoute
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstArtworkId
+        type: string
+      - name: contentType
+        type: ArtworkAcquisitionRouteType
+      - name: contentId
+        type: string
+
+  - name: MstArtworkGradeUp
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: rarity
+        type: Rarity
+      - name: gradeLevel
+        type: int
+      - name: mstSeriesId
+        type: string
+      - name: mstArtworkId
+        type: string?
+
+  - name: MstArtworkGradeUpCost
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstArtworkGradeUpId
+        type: string
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string?
+      - name: resourceAmount
+        type: int
+
+  - name: MstArtworkEffectTargetRule
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstArtworkEffectId
+        type: string
+      - name: conditionType
+        type: ArtworkEffectTargetRuleType
+      - name: conditionValue
+        type: string
+
+  - name: MstArtworkEffectActivationRule
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstArtworkEffectId
+        type: string
+      - name: conditionType
+        type: ArtworkEffectActivationRuleType
+      - name: conditionValue
+        type: string
+
+  - name: MstUnitEncyclopediaReward
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: unitEncyclopediaRank
+        type: int
+      - name: resourceType
+        type: ResourceType
+      - name: resourceId
+        type: string
+      - name: resourceAmount
+        type: int
+
+  - name: MstUnitEncyclopediaEffect
+    obscure: true
+    params:
+      - name: id
+        type: string
+      - name: mstUnitEncyclopediaRewardId
+        type: string
+      - name: effectType
+        type: UnitEncyclopediaEffectType
+      - name: value
+        type: float
+
+  - name: UsrArtwork
+    obscure: true
+    params:
+      - name: mstArtworkId
+        type: string
+      - name: isNewEncyclopedia
+        type: bool
+      - name: gradeLevel
+        type: int
+
+  - name: UsrArtworkFragment
+    obscure: true
+    params:
+      - name: mstArtworkId
+        type: string
+      - name: mstArtworkFragmentId
+        type: string
+
+  - name: UsrReceivedUnitEncyclopediaReward
+    obscure: true
+    params:
+      - name: mstUnitEncyclopediaRewardId
+        type: string
+
+  - name: UnitEncyclopediaReward
+    obscure: true
+    params:
+      - name: reward
+        type: RewardData
+
+  - name: EncyclopediaReceiveRewardResult
+    obscure: true
+    params:
+      - name: usrReceivedUnitEncyclopediaRewards
+        type: UsrReceivedUnitEncyclopediaRewardData[]
+      - name: unitEncyclopediaRewards
+        type: UnitEncyclopediaRewardData[]
+      - name: isEmblemDuplicated
+        type: bool
+      - name: usrParameter
+        type: UsrParameterData
+      - name: usrItems
+        type: UsrItemData[]
+      - name: userLevel
+        type: UserLevelUpData
+      - name: usrConditionPacks
+        type: UsrConditionPackData[]
+
+  - name: EncyclopediaFirstCollectionReward
+    obscure: true
+    params:
+      - name: reward
+        type: RewardData
+
+  - name: EncyclopediaReceiveFirstCollectionRewardResult
+    obscure: true
+    params:
+      - name: usrEmblems
+        type: UsrEmblemData[]
+      - name: usrArtworks
+        type: UsrArtworkData[]
+      - name: usrEnemyDiscoveries
+        type: UsrEnemyDiscoveryData[]
+      - name: usrUnits
+        type: UsrUnitData[]
+      - name: usrParameter
+        type: UsrParameterData
+      - name: encyclopediaFirstCollectionRewards
+        type: EncyclopediaFirstCollectionRewardData[]
+
+  - name: ArtworkGradeUpResult
+    obscure: true
+    impl_entity: true
+    params:
+      - name: usrArtwork
+        type: UsrArtworkData
+      - name: usrItems
+        type: UsrItemData[]
+
+api:
+  - name: Encyclopedia
+    actions:
+      - name: ReceiveReward
+        path: "/api/encyclopedia/receive_reward"
+        params:
+          - name: mstUnitEncyclopediaRewardIds
+            type: string[]
+        method: POST
+        response: EncyclopediaReceiveRewardResultData
+      - name: ReceiveFirstCollectionReward
+        path: "/api/encyclopedia/receive_first_collection_reward"
+        params:
+          - name: encyclopediaType
+            type: string
+          - name: encyclopediaId
+            type: string
+        method: POST
+        response: EncyclopediaReceiveFirstCollectionRewardResultData
+      - name: ArtworkGradeUp
+        path: "/api/encyclopedia/artwork/grade_up"
+        params:
+          - name: mstArtworkId
+            type: string
+        method: POST
+        response: ArtworkGradeUpResultData

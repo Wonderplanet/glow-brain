@@ -1,0 +1,7 @@
+ENABLE,release_key,id,opr_gacha_id,max_step_number,max_loop_count
+e,999999999,1,step_1,5,99999
+e,999999999,2,step_2,5,1
+e,999999999,3,step_3,2,2
+e,999999999,4,test_stepup_1,5,5
+e,202603020,5,stepup_half_1,5,__NULL__
+e,202603020,6,stepup_half_Ticket_1,5,__NULL__

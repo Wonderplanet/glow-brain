@@ -1,0 +1,126 @@
+version: 0.2
+env:
+  variables:
+    DOCKER_BUILDKIT: 1
+  parameter-store:
+    DOCKER_USER: dockerhub-user
+    DOCKER_TOKEN: dockerhub-token
+    AWS_ACCOUNT_ID: account-id
+    DB_PASS: db-pass
+  secrets-manager:
+    DB_HOST: glow-${INFRA_ENV}-secrets:glow-tidb-host
+    DB_USERNAME: glow-${INFRA_ENV}-secrets:glow-tidb-user
+    DB_PASSWORD: glow-${INFRA_ENV}-secrets:glow-tidb-pass
+    MASTER_DB_USERNAME: glow-${INFRA_ENV}-secrets:db-root-user
+    MASTER_DB_PASSWORD: glow-${INFRA_ENV}-secrets:db-root-password
+    MANAGE_DB_USERNAME: glow-${INFRA_ENV}-secrets:db-root-user
+    MANAGE_DB_PASSWORD: glow-${INFRA_ENV}-secrets:db-root-password
+    MOMENTO_API_KEY: glow-${INFRA_ENV}-secrets:glow-momento-api-key
+    TIDB_MYSQL_ATTR_SSL_CA: glow-${INFRA_ENV}-secrets:tidb-mysql-attr-ssl-ca
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com
+      - PHP_REPOSITORY=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${PJ_NAME}-${INFRA_ENV}-api-php
+      - NGINX_REPOSITORY=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${PJ_NAME}-${INFRA_ENV}-api-nginx
+      - DB_REPOSITORY=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${PJ_NAME}-${INFRA_ENV}-api-db
+      - REDIS_REPOSITORY=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${PJ_NAME}-${INFRA_ENV}-api-redis
+      - DATADOG_REPOSITORY=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${PJ_NAME}-${INFRA_ENV}-api-datadog
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - echo ${DOCKER_TOKEN} | docker login -u ${DOCKER_USER} --password-stdin
+      - echo Pulling the Docker images...
+      - docker pull ${PHP_REPOSITORY}:latest-cache || true
+      - docker pull ${NGINX_REPOSITORY}:latest-cache || true
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - |
+        docker build \
+          --build-arg MOMENTO_API_KEY="${MOMENTO_API_KEY}" \
+          --build-arg BUILDKIT_INLINE_CACHE=1 \
+          -f docker/envs/ecs/php/Dockerfile \
+          -t ${PHP_REPOSITORY}:latest \
+          -t ${PHP_REPOSITORY}:latest-cache \
+          -t ${PHP_REPOSITORY}:${COMMIT_HASH} \
+          --cache-from ${PHP_REPOSITORY}:latest-cache \
+        .
+      - |
+        docker build \
+          --build-arg BUILDKIT_INLINE_CACHE=1 \
+          -f docker/envs/ecs/nginx/Dockerfile \
+          -t ${NGINX_REPOSITORY}:latest \
+          -t ${NGINX_REPOSITORY}:latest-cache \
+          -t ${NGINX_REPOSITORY}:${COMMIT_HASH} \
+          --cache-from ${NGINX_REPOSITORY}:latest-cache \
+        .
+      - |
+        docker build \
+          -f docker/envs/ecs/datadog/Dockerfile \
+          -t ${DATADOG_REPOSITORY}:latest \
+          -t ${DATADOG_REPOSITORY}:latest-cache \
+          -t ${DATADOG_REPOSITORY}:${COMMIT_HASH} \
+          --no-cache \
+        .
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker images...
+      - |
+        docker run \
+          -e TIDB_MYSQL_ATTR_SSL_CA=${TIDB_MYSQL_ATTR_SSL_CA} \
+          -e DB_CONNECTION=tidb \
+          -e TIDB_DATABASE=${INFRA_ENV} \
+          -e TIDB_HOST=${DB_HOST} \
+          -e TIDB_PORT=4000 \
+          -e TIDB_USERNAME=${DB_USERNAME} \
+          -e TIDB_PASSWORD=${DB_PASSWORD} \
+          -e MASTER_DB_CONNECTION=mst  \
+          -e MASTER_DB_DATABASE=${INFRA_ENV} \
+          -e MASTER_DB_HOST=db-write.${INFRA_ENV}.glow.internal \
+          -e MASTER_DB_PORT=3306 \
+          -e MASTER_DB_USERNAME=${MASTER_DB_USERNAME} \
+          -e MASTER_DB_PASSWORD=${MASTER_DB_PASSWORD} \
+          -e MANAGE_DB_CONNECTION=mng  \
+          -e MANAGE_DB_DATABASE=mng \
+          -e MANAGE_DB_HOST=db-write.${INFRA_ENV}.glow.internal \
+          -e MANAGE_DB_PORT=3306 \
+          -e MANAGE_DB_USERNAME=${MANAGE_DB_USERNAME} \
+          -e MANAGE_DB_PASSWORD=${MANAGE_DB_PASSWORD} \
+          -e REDIS_HOST=redis.${INFRA_ENV}.glow.internal \
+          -e MOMENTO_API_KEY=${MOMENTO_API_KEY} -dit --init --name php ${PHP_REPOSITORY}:latest
+      - docker exec php bash -c "php /var/www/api/artisan migrate"
+      - docker push ${PHP_REPOSITORY}:latest
+      - docker push ${PHP_REPOSITORY}:latest-cache
+      - docker push ${PHP_REPOSITORY}:${COMMIT_HASH}
+      - docker push ${NGINX_REPOSITORY}:latest
+      - docker push ${NGINX_REPOSITORY}:latest-cache
+      - docker push ${NGINX_REPOSITORY}:${COMMIT_HASH}
+      - docker push ${DATADOG_REPOSITORY}:latest
+      - docker push ${DATADOG_REPOSITORY}:latest-cache
+      - docker push ${DATADOG_REPOSITORY}:${COMMIT_HASH}
+      - PJ_NAME2=$(echo ${PJ_NAME} | sed "s/\(.*\)/\U\1/")
+      - |
+        sed -i \
+          -e "s;<PHP_IMAGE>;${PHP_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<NGINX_IMAGE>;${NGINX_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<DATADOG_IMAGE>;${DATADOG_REPOSITORY}:${COMMIT_HASH};g" \
+          codebuild/artifacts/imagedefinitions.json
+      - |
+        sed -i \
+          -e "s;<PHP_IMAGE>;${PHP_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<NGINX_IMAGE>;${NGINX_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<DATADOG_IMAGE>;${DATADOG_REPOSITORY}:${COMMIT_HASH};g" \
+          -e "s;<SECRET>;${SECRET};g" \
+          -e "s;<INFRA_ENV>;${INFRA_ENV};g" \
+          -e "s;<PJ_NAME>;${PJ_NAME};g" \
+          -e "s;<PJ_NAME2>;${PJ_NAME2};g" \
+          -e "s;<APP_ENV>;${APP_ENV};g" \
+          -e "s;<AWS_DEFAULT_REGION>;${AWS_DEFAULT_REGION};g" \
+          -e "s;<AWS_ACCOUNT_ID>;${AWS_ACCOUNT_ID};g" \
+          codebuild/artifacts/taskdefinitions.json
+artifacts:
+    files: 
+        - codebuild/artifacts/*

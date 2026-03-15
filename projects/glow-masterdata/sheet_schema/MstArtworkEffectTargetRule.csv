@@ -1,0 +1,3 @@
+memo
+TABLE,MstArtworkEffectTargetRule,MstArtworkEffectTargetRule,MstArtworkEffectTargetRule,MstArtworkEffectTargetRule,MstArtworkEffectTargetRule
+ENABLE,id,mst_artwork_effect_id,condition_type,condition_value,release_key

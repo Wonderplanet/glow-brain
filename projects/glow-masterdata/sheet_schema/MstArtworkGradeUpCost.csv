@@ -1,0 +1,3 @@
+memo
+TABLE,MstArtworkGradeUpCost,MstArtworkGradeUpCost,MstArtworkGradeUpCost,MstArtworkGradeUpCost,MstArtworkGradeUpCost,MstArtworkGradeUpCost
+ENABLE,id,mst_artwork_grade_up_id,resource_type,resource_id,resource_amount,release_key

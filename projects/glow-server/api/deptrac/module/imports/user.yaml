@@ -1,0 +1,37 @@
+deptrac:
+  layers:
+    - name: User UseCase
+      collectors:
+        - type: directory
+          value: ./app/Domain/User/UseCases/.*
+    - name: User Entity
+      collectors:
+        - type: directory
+          value: ./app/Domain/User/Entities/.*
+        - type: directory
+          value: ./app/Domain/User/Eloquent/Models/.*
+    - name: User Service
+      collectors:
+        - type: directory
+          value: ./app/Domain/User/Services/.*
+        - type: directory
+          value: ./app/Domain/User/Eloquent/Services/.*
+
+  ruleset:
+    User UseCase:
+      - User Service
+      - User Entity
+      - Common Entity
+    User Service:
+      - User Entity
+      - Common Entity
+    User Entity:
+      - Common Entity
+
+  formatters:
+    graphviz:
+      groups:
+        User:
+          - User UseCase
+          - User Service
+          - User Entity

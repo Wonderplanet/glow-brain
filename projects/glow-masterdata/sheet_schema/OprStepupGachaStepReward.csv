@@ -1,0 +1,3 @@
+memo
+TABLE,OprStepupGachaStepReward,OprStepupGachaStepReward,OprStepupGachaStepReward,OprStepupGachaStepReward,OprStepupGachaStepReward,OprStepupGachaStepReward,OprStepupGachaStepReward,OprStepupGachaStepReward
+ENABLE,release_key,id,opr_gacha_id,step_number,loop_count_target,resource_type,resource_id,resource_amount

@@ -1,0 +1,105 @@
+data:
+  - name: UsrParty
+    obscure: true
+    impl_entity: true
+    params:
+      - name: partyNo
+        type: int
+      - name: partyName
+        type: string
+      - name: usrUnitId1
+        type: string
+      - name: usrUnitId2
+        type: string
+      - name: usrUnitId3
+        type: string
+      - name: usrUnitId4
+        type: string
+      - name: usrUnitId5
+        type: string
+      - name: usrUnitId6
+        type: string
+      - name: usrUnitId7
+        type: string
+      - name: usrUnitId8
+        type: string
+      - name: usrUnitId9
+        type: string
+      - name: usrUnitId10
+        type: string
+
+  - name: UsrArtworkParty
+    obscure: true
+    impl_entity: true
+    params:
+      - name: mstArtworkId1
+        type: string
+      - name: mstArtworkId2
+        type: string
+      - name: mstArtworkId3
+        type: string
+      - name: mstArtworkId4
+        type: string
+      - name: mstArtworkId5
+        type: string
+      - name: mstArtworkId6
+        type: string
+      - name: mstArtworkId7
+        type: string
+      - name: mstArtworkId8
+        type: string
+      - name: mstArtworkId9
+        type: string
+      - name: mstArtworkId10
+        type: string
+
+  - name: MstPartyUnitCount
+    obscure: true
+    impl_entity: true
+    params:
+      - name: id
+        type: string
+      - name: mstStageId
+        type: string
+      - name: maxCount
+        type: int
+
+  - name: PartySaveRequest
+    obscure: true
+    params:
+      - name: partyNo
+        type: int
+      - name: partyName
+        type: string
+      - name: units
+        type: string[]
+
+  - name: PartySaveResult
+    obscure: true
+    params:
+      - name: usrParties
+        type: UsrPartyData[]
+
+  - name: ArtworkPartySaveResult
+    obscure: true
+    params:
+      - name: usrArtworkParty
+        type: UsrArtworkPartyData
+
+api:
+  - name: Party
+    actions:
+      - name: Save
+        path: "/api/party/save"
+        params:
+          - name: parties
+            type: PartySaveRequestData[]
+        method: POST
+        response: PartySaveResultData
+      - name: ArtworkSave
+        path: "/api/party/artwork/save"
+        params:
+          - name: mstArtworkIds
+            type: string[]
+        method: POST
+        response: ArtworkPartySaveResultData

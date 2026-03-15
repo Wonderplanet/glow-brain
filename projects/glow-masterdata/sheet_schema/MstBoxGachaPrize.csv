@@ -1,0 +1,3 @@
+memo,,,,,,,アイテム名参照
+TABLE,MstBoxGachaPrize,MstBoxGachaPrize,MstBoxGachaPrize,MstBoxGachaPrize,MstBoxGachaPrize,MstBoxGachaPrize,,MstBoxGachaPrize,MstBoxGachaPrize
+ENABLE,release_key,id,mst_box_gacha_group_id,is_pickup,resource_type,resource_id,,resource_amount,stock

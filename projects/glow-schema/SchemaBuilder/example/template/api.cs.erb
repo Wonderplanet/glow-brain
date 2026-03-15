@@ -1,0 +1,58 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UniRx;
+
+namespace Data
+{
+	public interface I<%= schema["name"] %>Api
+	{
+		<%- schema["actions"].each do |action| -%>
+		IObservable<<%= action["response"] %>> <%= action["name"] %>(<%= action["all_params"].map{|p| "#{p["type"]} #{p["name"].camelize(:lower)}"}.join(", ") %>);
+		<%- end -%>
+	}
+
+	public class <%= schema["name"] %>Api : ServerApi, I<%= schema["name"] %>Api
+	{
+		<%- schema["actions"].each do |action| -%>
+		public IObservable<<%= action["response"] %>> <%= action["name"] %>(<%= action["all_params"].map{|p| "#{p["type"]} #{p["name"].camelize(:lower)}"}.join(", ") %>)
+		{
+			<%- # パラメータのRendering -%>
+			<%- unless action["params"].empty? -%>
+			var formParams = new WWWForm();
+				<%- action["params"].each do |p| -%>
+					<%- # next if action["resource_ids"].include?(p) -%>
+					<%- if p["type"] == "bool" -%>
+			formParams.AddField("<%= p["name"].underscore %>", <%= p["name"] %> ? "true" : "false");
+					<%- elsif p["type"].include?("?") -%>
+			if(<%= p["name"] %>.HasValue) formParams.AddField("<%= p["name"].underscore %>", <%= p["name"] %>.Value);
+					<%- elsif p["type"].include?("[]") -%>
+			foreach(var p in <%= p["name"] %>) formParams.AddField("<%= p["name"].underscore %>[]", p);
+					<%- elsif p["enum"] == true -%>
+			formParams.AddField("<%= p["name"].underscore %>", (int)<%= p["name"] %>);
+					<%- # elsif p["type"].include?("Entity") -%>
+			<%- # PENDING =================== シリアライズするものはBodyによる送信にしたい -%>
+					<%- else -%>
+			formParams.AddField("<%= p["name"].underscore %>", <%= p["name"] %>);
+					<%- end -%>
+				<%- end -%>
+			<%- end -%>
+			<%- if action["resource_ids"].empty? -%>
+				<%- if action["params"].empty? -%>
+			return <%= action["method"].capitalize %><<%= action["response"] %>>("<%= action["path"] %>");
+				<%- else -%>
+			return <%= action["method"].capitalize %><<%= action["response"] %>>("<%= action["path"] %>", formParams);
+				<%- end -%>
+			<%- else %>
+				<%- if action["params"].empty? -%>
+			return <%= action["method"].capitalize %><<%= action["response"] %>>(string.Format("<%= action["placeholder_path"] %>", <%= action["resource_ids"].map{|p| p["name"].camelize(:lower)}.join(", ") %>));
+				<%- else -%>
+			return <%= action["method"].capitalize %><<%= action["response"] %>>(string.Format("<%= action["placeholder_path"] %>", <%= action["resource_ids"].map{|p| p["name"].camelize(:lower)}.join(", ") %>), formParams);
+			 	<%- end -%>
+			<%- end -%>
+		}
+
+		<%- end -%>
+	}
+}
